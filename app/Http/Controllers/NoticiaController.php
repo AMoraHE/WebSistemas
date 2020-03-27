@@ -1,8 +1,8 @@
 <?php
 
-namespace WebSistemas\Http\Controllers;
-use WebSistemas\Noticia;
-use WebSistemas\Http\Requests\StoreNoticiaRequest;
+namespace App\Http\Controllers;
+use App\Noticia;
+use App\Http\Requests\StoreNoticiaRequest;
 use Illuminate\Http\Request;
 
 class NoticiaController extends Controller

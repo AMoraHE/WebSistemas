@@ -1,11 +1,11 @@
 <?php
 
-namespace WebSistemas\Http\Controllers;
+namespace App\Http\Controllers;
 
-use WebSistemas\Noticia;
-use WebSistemas\Slider;
+use App\Noticia;
+use App\Slider;
 use Illuminate\Http\Request;
-use WebSistemas\Http\Requests\StoreNoticiaRequest;
+use App\Http\Requests\StoreNoticiaRequest;
 
 class InicioController extends Controller
 {

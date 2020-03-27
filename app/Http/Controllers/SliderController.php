@@ -1,7 +1,7 @@
 <?php
 
-namespace WebSistemas\Http\Controllers;
-use WebSistemas\Slider;
+namespace App\Http\Controllers;
+use App\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
