@@ -1,4 +1,4 @@
-@extends('layouts.administrador')
+@extends('layouts.administration')
 
 @section('title', 'Editar Noticia')
 
@@ -21,7 +21,7 @@
 
       <div class="contenedor-img-noticia">
 
-        <img src="../img/slider/{{$slider->image}}">
+        <img src="../images/slider/{{$slider->image}}">
 
       </div>
 

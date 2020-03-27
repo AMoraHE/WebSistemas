@@ -1,6 +1,7 @@
-@extends('layouts.administrador')
+@extends('layouts.administration')
 
 @section('title', 'Noticias')
+
 
 @section('content')
 
@@ -10,37 +11,29 @@
 
 		<div class="contenedor-boton-CE">
 
-			<a href="/eliminar-masivo-noticia/"><button class="btn"><span>Eliminación Anual</span></button></a>
-			<a href="/noticias-admin/nueva"><button class="btn"><span>Agregar Noticia</span></button></a>
+		<a href="/eliminacion-anual/">	<button class="btn"><span>Eliminación Anual</span></button></a>
+		<a href="/noticias-admin/nueva">	<button class="btn"><span>Agregar Noticia</span></button></a>
 
-					
+
 		</div>
-
-      	<form class="form-goup"  files = "true" method="GET" action="/buscador-noticias/" enctype="multipart/form-data">
-        	@csrf
 
 		<div class="contenedor-buscador-noticia">
 
 			<div class="buscador">
 
-				<form action="/noticias-admin/buscador" method="GET">
-
-					<div class="formulario">
+        <form  files = "true" method="GET" action="/buscador-noticias/" enctype="multipart/form-data">
+          @csrf
 						<input type="search" name="key" placeholder="Noticia">
-					</div>
 
-				</form>		    
-							   	
-				<button type="submit" class="btn-buscar"><span><i class="icono izquierda fas fa-search"></i></span></button>
+            <button type="submit" class="btn-buscar"><span><i class="icono izquierda fas fa-search"></i></span></button>
 
-				
-				
+				</form>
+
+
 			</div>
 
 		</div>
 
-		</form>
-			
 <!----------------------------------------------------------------- NOTICIA---------------------------------------------------------->
 
 	@foreach ($noticias as $noticia)
@@ -55,29 +48,31 @@
 
 				<div class="contenedor-img-noticia">
 
-					<img src="/img/noticias/{{$noticia->newimage}}">
-					
+					<img src="/images/news/{{$noticia->newimage}}">
+
 				</div>
 
 				<div class="contenedor-texto">
 
 					<p>{{$noticia->redaccion}}</p>
-					
+
 				</div>
 
 		</div>
 
 		<div class="contenedor-botones">
-
-
-		<a href="noticias-admin/{{$noticia->slug}}"><button type="submit" class="btn"><span>Eliminar</span></button></a>
-		<a href="/noticias-admin/{{$noticia->slug}}/editar"><button class="btn"><span>Editar</span></button></a>
+      <form method="POST" action="/noticias-admin/{{$noticia->slug}}" enctype="multipart/form-data">
+        @method('DELETE')
+        @csrf
+		<button type="submit" class="btn"><span>Eliminar</span></button>
+  </form>
+	  <a href="/noticias-admin/{{$noticia->slug}}/editar">	<button class="btn"><span>Editar</span></button></a>
 
 
 		</div>
 
 	@endforeach
-		
+
 	</div>
 
 @endsection

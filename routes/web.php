@@ -15,8 +15,25 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('layouts/administrador');
-    //return view('admin/menu-conocenos/informacion-carrera/view-informacion-carrera');
 });
+
+Auth::routes();
+
+Route::get('admin', 'InicioController@index');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('noticias-admin','NoticiaController')->parameters(['noticias-admin' => 'noticia']);
+
+Route::resource('slider','SliderController')->parameters(['slider' => 'slider']);
+
+////////////////////////Buscador de noticias///////////////////////////
+Route::get('noticias-admin/paginacion', 'NoticiaController@paginacion');
+
+Route::get('buscador-noticias', 'NoticiaController@buscador');
+
+////////////////////Eliminacion Anual/////////////////////////////
+Route::get('/eliminacion-anual', 'NoticiaController@eliminaranual');
 
 //Rutas-perfil-ingreso
 Route::get('Perfil-Ingreso', 'PerfilIngresoController@index')->name('perfil-ingreso');
@@ -88,13 +105,3 @@ Route::get('CampoLaboral-Editar', 'CampoLaboralController@edit')->name('CampoLab
 Route::resource('CampoLaboral', 'CampoLaboralController');
 
 Route::get('Campo-Laboral-Eliminar/{slug}', 'CampoLaboralController@destroy')->name('CampoLaboralEliminar');
-
-
-
-
-Auth::routes();
-
-Route::get('admin', 'InicioController@index');
-
-Route::get('/home', 'HomeController@index')->name('home');
-

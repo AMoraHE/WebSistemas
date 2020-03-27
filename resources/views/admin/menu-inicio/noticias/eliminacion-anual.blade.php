@@ -1,6 +1,6 @@
-@extends('layouts.administrador')
+@extends('layouts.administration')
 
-@section('title', 'Eliminar Anual Noticia')
+@section('title', 'Editar Noticia')
 
 @section('content')
 
@@ -14,13 +14,8 @@
 
 			<div class="contenedor-select-seccion">
 
-				<div class="formulario">
-					
 					<input type="month">
 
-				</div>
-					
-							
 			</div>
 
 		</div>
@@ -28,7 +23,7 @@
 
 		<!----------------------------------------------------------------- NOTICIA N1 ---------------------------------------------------------->
 
-	@foreach ($noticias as $noticia
+	@foreach ($noticias as $noticia)
 
 		<div class="contenedor-titulo-seccion">
 
@@ -40,14 +35,14 @@
 
 				<div class="contenedor-img-noticia">
 
-					<img src="/img/noticias/{{$noticia->newimage}}">
-					
+					<img src="/images/news/{{$noticia->newimage}}">
+
 				</div>
 
 				<div class="contenedor-texto">
 
 					<p>{{$noticia->redaccion}}</p>
-					
+
 				</div>
 
 		</div>
@@ -58,6 +53,7 @@
 	<!------------------------------------------------------------- BOTON ELIMINAR MASIVO ---------------------------------------------------------->
 
 		<div class="contenedor-botones">
+
 			<a><button class="btn"><span>Eliminar</span></button></a>
 
 		</div>

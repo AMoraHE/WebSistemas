@@ -1,4 +1,4 @@
-@extends('layouts.administrador')
+@extends('layouts.administration')
 
 @section('title', 'Editar Slider')
 
@@ -66,7 +66,7 @@
 
 				<div class="contenedor-img-seccion">
 
-					<img src="/img/slider/{{$slider->image}}">
+					<img src="/images/slider/{{$slider->image}}">
 
 				</div>
 
@@ -100,7 +100,7 @@
 
 			<div class="contenedor-seccion-preliminar">
 
-				<img src="/img/slider/{{$sliderG->image}}">
+				<img src="/images/slider/{{$sliderG->image}}">
 				<h2>{{$sliderG->contenido}}</h2>
 
 			</div>
