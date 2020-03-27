@@ -1,6 +1,6 @@
 @extends('layouts.administrador')
 
-@section('title', 'Editar Noticia')
+@section('title', 'Eliminar Anual Noticia')
 
 @section('content')
 
@@ -13,8 +13,13 @@
 				<h3>Eliminación de Noticias</h3>
 
 			<div class="contenedor-select-seccion">
-							
+
+				<div class="formulario">
+					
 					<input type="month">
+
+				</div>
+					
 							
 			</div>
 
@@ -27,7 +32,7 @@
 
 		<div class="contenedor-titulo-seccion">
 
-				<h3>Joven estudiante se gradua, como maestro pokemon</h3>
+				<h3>{{$noticia->titulo}}</h3>
 
 		</div>
 
@@ -35,13 +40,13 @@
 
 				<div class="contenedor-img-noticia">
 
-					<img src="img/QRoo.png">
+					<img src="/img/noticias/{{$noticia->newimage}}">
 					
 				</div>
 
 				<div class="contenedor-texto">
 
-					<p>Jafet ramsel se gradua como maestro pokemon de pueblo paleta al haber capturado al legendario pokemon ossielnorlax, es un acontecimiento impresionante ... </p>
+					<p>{{$noticia->redaccion}}</p>
 					
 				</div>
 
@@ -53,7 +58,7 @@
 	<!------------------------------------------------------------- BOTON ELIMINAR MASIVO ---------------------------------------------------------->
 
 		<div class="contenedor-botones">
-			<button class="btn"><span>Eliminar</span></button>
+			<a><button class="btn"><span>Eliminar</span></button></a>
 
 		</div>
 

@@ -10,25 +10,36 @@
 
 		<div class="contenedor-boton-CE">
 
-			<button class="btn"><span>Eliminación Anual</span></button>
-			<button class="btn"><span>Agregar Noticia</span></button>
+			<a href="/eliminar-masivo-noticia/"><button class="btn"><span>Eliminación Anual</span></button></a>
+			<a href="/noticias-admin/nueva"><button class="btn"><span>Agregar Noticia</span></button></a>
 
 					
 		</div>
+
+      	<form class="form-goup"  files = "true" method="GET" action="/buscador-noticias/" enctype="multipart/form-data">
+        	@csrf
 
 		<div class="contenedor-buscador-noticia">
 
 			<div class="buscador">
 
-				<form action="" method="">		    
-						<input type="search" placeholder="Noticia">	   	
-				</form>
+				<form action="/noticias-admin/buscador" method="GET">
 
-				<button type="" class="btn-buscar"><span><i class="icono izquierda fas fa-search"></i></span></button>
+					<div class="formulario">
+						<input type="search" name="key" placeholder="Noticia">
+					</div>
+
+				</form>		    
+							   	
+				<button type="submit" class="btn-buscar"><span><i class="icono izquierda fas fa-search"></i></span></button>
+
+				
 				
 			</div>
 
 		</div>
+
+		</form>
 			
 <!----------------------------------------------------------------- NOTICIA---------------------------------------------------------->
 
@@ -36,7 +47,7 @@
 
 		<div class="contenedor-titulo-seccion">
 
-				<h3>Joven estudiante se gradua, como maestro pokemon</h3>
+				<h3>{{$noticia->titulo}}</h3>
 
 		</div>
 
@@ -44,13 +55,13 @@
 
 				<div class="contenedor-img-noticia">
 
-					<img src="img/QRoo.png">
+					<img src="/img/noticias/{{$noticia->newimage}}">
 					
 				</div>
 
 				<div class="contenedor-texto">
 
-					<p>Jafet ramsel se gradua como maestro pokemon de pueblo paleta al haber capturado al legendario pokemon ossielnorlax, es un acontecimiento impresionante ... </p>
+					<p>{{$noticia->redaccion}}</p>
 					
 				</div>
 
@@ -58,8 +69,9 @@
 
 		<div class="contenedor-botones">
 
-		<button class="btn"><span>Eliminar</span></button>
-		<button class="btn"><span>Editar</span></button>
+
+		<a href="noticias-admin/{{$noticia->slug}}"><button type="submit" class="btn"><span>Eliminar</span></button></a>
+		<a href="/noticias-admin/{{$noticia->slug}}/editar"><button class="btn"><span>Editar</span></button></a>
 
 
 		</div>

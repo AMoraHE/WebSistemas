@@ -14,11 +14,15 @@
 
 		</div>
 
+		<form class="form-goup" files="true" method="POST" action="/noticias-admin/{{$noticia->slug}}" enctype="multipart/form-data">
+            @method('PUT')
+            @csrf
+		
 
 		<div class="formulario">
-			
+
 			<label for="">Titulo</label>
-			<input type="text" name="" id="titulo" value="" placeholder="Inserte Titulo Deseado" class="form-control">
+			<input type="text" name="titulo" id="titulo" value="{{$noticia->titulo}}" placeholder="Inserte Titulo Deseado" class="form-control">
 
 		</div>
 
@@ -35,8 +39,10 @@
 					<label for="file-upload" class="subir">
 						<i class="fas fa-cloud-upload-alt"></i> Subir Archivo
 					</label>
-						
-					<input id="file-upload" onchange='cambiar()' type="file" style='display: none;'/>
+
+					<!--  <input type="file" >-->
+
+					<input id="file-upload" onchange='cambiar()' name="image" type="file" style='display: none;'/>
 
 					<div id="info-img">No se Eligió Archivo</div>
 					
@@ -46,7 +52,7 @@
 
 				<div class="contenedor-img-seccion">
 					
-					<img src="Img/sistemas.png">
+					<img src="/img/noticias/{{$noticia->newimage}}">
 
 				</div>
 					
@@ -56,16 +62,18 @@
 		<div class="formulario">
 			
 			<label for="">Descripción Noticia</label>
-			<textarea placeholder="Inserte Descripción Deseada ... "></textarea>
+			<textarea placeholder="Inserte Descripción Deseada ... " name="redaccion">{{$noticia->redaccion}}</textarea>
 			
 		</div>
 
 		<div class="contenedor-botones">
 					
-			<button class="btn"><span>Guardar</span></button>
+			<button class="btn" type="submit"><span>Guardar</span></button>
 			<button class="btn"><span>Cancelar</span></button>
 
 		</div>
+
+		</form>
 
 	</div>
 
