@@ -53,7 +53,13 @@
 								<td>{{$cuerpo->grado}}</td>
 								<td>{{$cuerpo->idCA}}</td>
 								<td>{{$cuerpo->clave}}</td>
-								<td>{{$cuerpo->integrantes}}</td>
+								<td>
+									<ul>
+										@foreach (explode(', ', $cuerpo->integrantes) as $integrantes)
+										<li>{{$integrantes}}</li>
+										@endforeach
+									</ul>
+								</td>
 								<form action="/CuerposAcademicos/{{$cuerpo->slug}}" method="POST">
 								@csrf
 								@method('DELETE')
