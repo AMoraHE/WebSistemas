@@ -30,7 +30,7 @@
 				
 				<label for="">Información</label>
 				
-				<textarea type="text" name="descripcion">{{$informacion->descripcion}}</textarea> 
+				<textarea type="text" name="descripcion" required>{{$informacion->descripcion}}</textarea> 
 				
 			</div>
 
