@@ -20,27 +20,27 @@
 
           <div class="formulario"> 
                 <label for="">Nombre del CA</label>
-                <input type="text" name="nombre" id ="informacion-perfil" value="{{$CuerposAcademico->nombre}}" placeholder="Nombre del CA" class="form-control">
+                <input type="text" name="nombre" id ="informacion-perfil" value="{{$CuerposAcademico->nombre}}" placeholder="Nombre del CA" class="form-control" required>
           </div>
       
           <div class="formulario"> 
                 <label for="">Grado del CA</label>
-                <input type="text" name="grado" id ="informacion-perfil" value="{{$CuerposAcademico->grado}}" placeholder="Grado del CA" class="form-control">
+                <input type="text" name="grado" id ="informacion-perfil" value="{{$CuerposAcademico->grado}}" placeholder="Grado del CA" class="form-control" required>
           </div>
       
           <div class="formulario"> 
                 <label for="">ID CA</label>
-                <input type="text" name="idCA" id ="informacion-perfil" value="{{$CuerposAcademico->idCA}}" placeholder="ID CA" class="form-control">
+                <input type="text" name="idCA" id ="informacion-perfil" value="{{$CuerposAcademico->idCA}}" placeholder="ID CA" class="form-control" required>
           </div>
       
           <div class="formulario"> 
                 <label for="">Clave CA</label>
-                <input type="text" name="clave" id ="informacion-perfil" value="{{$CuerposAcademico->clave}}" placeholder="Clave CA" class="form-control">
+                <input type="text" name="clave" id ="informacion-perfil" value="{{$CuerposAcademico->clave}}" placeholder="Clave CA" class="form-control" readonly>
           </div>
       
           <div class="formulario"> 
                 <label for="">Integrantes</label>
-                <input type="text" name="integrantes" id ="informacion-perfil" value="{{$CuerposAcademico->integrantes}}" placeholder="Nombre del Integrante" class="form-control">
+                <input type="text" name="integrantes" id ="informacion-perfil" value="{{$CuerposAcademico->integrantes}}" placeholder="Nombre de los integrantes eg: Eduardo, Maria, Carlos" class="form-control" required>
           </div>
       
           <div class="contenedor-botones">
