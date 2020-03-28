@@ -17,13 +17,14 @@ class InicioController extends Controller
     public function index()
     {
         //
+
         $sliders = Slider::all();
         $noticias = Noticia::latest()->take(4)->get();
 
 
       //  echo $ultimo;
     //notica1 = Noticia::->where('id', $)
-        return view('admin.inicio', compact('noticias','sliders'));
+        return view('admin/menu-inicio/inicio', compact('noticias','sliders'));
     }
 
     /**

@@ -64,18 +64,18 @@
 
 		<div class="contenedor-menu">
 
-			<a href="#" class="btn-menu">Menu<i class="icono fa fa-bars"></i></a> 
-						
+			<a href="#" class="btn-menu">Menu<i class="icono fa fa-bars"></i></a>
+
 			<ul class="menu">
 
-				<li><a href="#"><i class="icono izquierda fa fa-home"></i>Inicio<i class=" icono derecha fa fa-chevron-down"></i></a>
+				<li><a href="{{route('slider')}}"><i class="icono izquierda fa fa-home"></i>Inicio<i class=" icono derecha fa fa-chevron-down"></i></a>
 					<ul>
-						<li><a href="#"><i class="icono izquierda fab fa-slideshare"></i>Slider</a></li>
-						<li><a href="#"><i class="icono izquierda far fa-newspaper"></i>Noticias</a></li>
-						<li><a href="#"><i class="icono izquierda far fa-calendar-alt"></i>Calendario</a></li>
+						<li><a href="{{route('slider')}}"><i class="icono izquierda fab fa-slideshare"></i>Slider</a></li>
+						<li><a href="{{route('noticias-admin')}}"><i class="icono izquierda far fa-newspaper"></i>Noticias</a></li>
+						<li><a href="{{route('noticias-admin')}}"><i class="icono izquierda far fa-calendar-alt"></i>Calendario</a></li>
 					</ul>
 				</li>
-							
+
 				<li><a href="#"><i class="icono izquierda far fa-handshake"></i>Conócenos<i class=" icono derecha fa fa-chevron-down"></i></a>
 					<ul>
 						<li><a href="/informacion"><i class="icono izquierda fas fa-book"></i>Misión, Visión Y Objetivos</a></li>
@@ -118,7 +118,7 @@
 					</ul>
 
 				</li>
-							
+
 			</ul>
 
 
@@ -132,8 +132,8 @@
 
 			<!--------------------------------------------------------- SLIDER --------------------------------------------------------->
 
-				@yield('content-slider')										
- 
+				@yield('content-slider')
+
 
 			<!--------------------------------------------------------- INFOR --------------------------------------------------------->
 

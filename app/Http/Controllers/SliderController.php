@@ -15,7 +15,7 @@ class SliderController extends Controller
     public function index()
     {
         $sliders = Slider::all();
-        return view('admin.slider.slider', compact('sliders'));
+        return view('admin.menu-inicio.slider.slider', compact('sliders'));
     }
 
     /**
@@ -27,7 +27,7 @@ class SliderController extends Controller
     {
       $sliders = Slider::all();
 
-        return view('admin.slider.crear',compact('sliders'));
+        return view('admin.menu-inicio.slider.crear',compact('sliders'));
     }
 
     /**
@@ -66,7 +66,7 @@ class SliderController extends Controller
      */
     public function show(Slider $slider)
     {
-      return view('admin.slider.show', compact('slider'));
+      return view('admin.menu-inicio.slider.show', compact('slider'));
     }
 
     /**
@@ -81,7 +81,7 @@ class SliderController extends Controller
         $slidersG = Slider::all();
     //    $ids  = DB::table('sliders')->select('id')->get();
     //  return $slider;
-        return view('admin.slider.editar2', compact('slidersG','slider' ));
+        return view('admin.menu-inicio.slider.editar', compact('slidersG','slider' ));
     }
 
     /**
@@ -114,7 +114,7 @@ class SliderController extends Controller
       $slider->slug = $dashSlug;
       $slider->save();
 
-    return redirect()->route('slider.index');
+    return redirect()->route('slider');
     }
 
     /**

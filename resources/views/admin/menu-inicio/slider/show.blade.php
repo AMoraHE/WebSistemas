@@ -1,4 +1,4 @@
-@extends('layouts.administration')
+@extends('layouts.administrador')
 
 @section('title', 'Show Slider')
 

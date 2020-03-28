@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Noticia;
+use App\Slider;
 use App\Http\Requests\StoreNoticiaRequest;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,7 @@ class NoticiaController extends Controller
     //      $noticias = Noticia::all();
       //  echo $ultimo;
       //notica1 = Noticia::->where('id', $)
-        return view('admin.news.noticias', compact('noticias'));
+        return view('admin.menu-inicio.noticias.noticias', compact('noticias'));
     }
 
     /**
@@ -28,7 +29,7 @@ class NoticiaController extends Controller
      */
     public function create()
     {
-        return view('admin.news.crear');
+        return view('admin.menu-inicio.noticias.crear');
     }
 
     /**
@@ -59,7 +60,7 @@ class NoticiaController extends Controller
     $noticia->redaccion = $request->input('redaccion');
 
     $noticia->save();
-      return redirect()->route('noticias-admin.index');
+      return redirect()->route('noticias-admin');
     }
 
     /**
@@ -74,7 +75,7 @@ class NoticiaController extends Controller
 
       //  $noticia =Noticia::find($id);
     //  $noticia =Noticia::where('slug','=',$slug)->firstOrFail();
-        return view('admin.news.show', compact('noticia'));
+        return view('admin.menu-inicio.noticias.show', compact('noticia'));
     }
 
     /**
@@ -86,7 +87,7 @@ class NoticiaController extends Controller
     public function edit(Noticia $noticia)
     {
       //  return $noticia;
-          return view('admin.news.editar', compact('noticia'));
+          return view('admin.menu-inicio.noticias.editar', compact('noticia'));
     }
 
     /**
@@ -117,7 +118,7 @@ class NoticiaController extends Controller
       $noticia->slug = $dashSlug;
       $noticia->save();
 
-    return redirect()->route('noticias-admin.index');
+    return redirect()->route('noticias-admin');
       //  return $noticia;
     }
 
@@ -132,7 +133,7 @@ class NoticiaController extends Controller
       $file_path =public_path().'/images/news/'.$noticia->newimage;
     \File::delete($file_path);
     $noticia->delete();
-    return redirect()->route('noticias-admin.index')  ;
+    return redirect()->route('noticias-admin')  ;
     }
 
 
@@ -143,7 +144,7 @@ class NoticiaController extends Controller
 
     //  $noticias = Noticia::where('titulo', 'like',"%".$request->key."%")->take(10)->get();
         $noticias = Noticia::orderBy('id', 'desc')->where('titulo', 'like',"%".$request->key."%")->take(10)->get();
-      return view('admin.news.noticias',compact('noticias'));
+      return view('admin.menu-inicio.noticias.noticias',compact('noticias'));
 
     }
 
@@ -151,7 +152,7 @@ class NoticiaController extends Controller
     public function eliminaranual()
     {
       $noticias = Noticia::orderBy('id', 'desc')->paginate(10);
-      return view('admin.news.eliminacion-anual',compact('noticias'));
+      return view('admin.menu-inicio.noticias.eliminacion-anual',compact('noticias'));
     }
 
     public function eliminacion(Request $request)
@@ -160,7 +161,7 @@ class NoticiaController extends Controller
       ///// DELETE from noticias WHERE created_at BETWEEN '2012-01-01' AND '2012-12-31'
       $noticias = Noticias::where('created_at', $fecha)->delete();
 
-      return view('admin.news.eliminacion-anual',compact('noticias'));
+      return view('admin.menu-inicio.noticias.eliminacion-anual',compact('noticias'));
     }
 
 

@@ -1,4 +1,4 @@
-@extends('layouts.administration')
+@extends('layouts.administrador')
 
 @section('title', 'Editar Noticia')
 
@@ -34,7 +34,7 @@
   </div>
 
   <div class="contenedor-botones">
-  <a href="/slider/{{$slider->slug}}/editar">
+  <a href="/slider/{{$slider->slug}}/edit">
   <button class="btn"  ><span>editar</span></button>
 </a>
 

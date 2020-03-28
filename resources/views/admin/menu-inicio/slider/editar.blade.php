@@ -1,4 +1,4 @@
-@extends('layouts.administration')
+@extends('layouts.administrador')
 
 @section('title', 'Editar Noticia')
 
@@ -52,7 +52,7 @@
   					</label>
 
   					<input id="file-upload" name="image" value="/images/slider/{{$slider->image}}" onchange='cambiar()' type="file" style='display: none;'/>
-          
+
   					<div id="info-img">No se Eligió Archivo</div>
 
 

@@ -1,4 +1,4 @@
-@extends('layouts.administration')
+@extends('layouts.administrador')
 
 @section('title', 'Noticias')
 
@@ -12,7 +12,7 @@
 		<div class="contenedor-boton-CE">
 
 		<a href="/eliminacion-anual/">	<button class="btn"><span>Eliminación Anual</span></button></a>
-		<a href="/noticias-admin/nueva">	<button class="btn"><span>Agregar Noticia</span></button></a>
+		<a href="/noticias-admin/create">	<button class="btn"><span>Agregar Noticia</span></button></a>
 
 
 		</div>
@@ -66,7 +66,7 @@
         @csrf
 		<button type="submit" class="btn"><span>Eliminar</span></button>
   </form>
-	  <a href="/noticias-admin/{{$noticia->slug}}/editar">	<button class="btn"><span>Editar</span></button></a>
+	  <a href="/noticias-admin/{{$noticia->slug}}/edit">	<button class="btn"><span>Editar</span></button></a>
 
 
 		</div>

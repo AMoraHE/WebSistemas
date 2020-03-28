@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+////////Rutas de Menu-inicio///////////
 Route::get('admin', 'InicioController@index');
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -26,6 +26,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('noticias-admin','NoticiaController')->parameters(['noticias-admin' => 'noticia']);
 
 Route::resource('slider','SliderController')->parameters(['slider' => 'slider']);
+
+/////Redirecionamiento del menu
+
+Route::get('slider', 'SliderController@index')->name('slider');
+Route::get('noticias-admin', 'NoticiaController@index')->name('noticias-admin');
+//Route::get('calendario', 'SliderController@index')->name('calendario');
 
 ////////////////////////Buscador de noticias///////////////////////////
 Route::get('noticias-admin/paginacion', 'NoticiaController@paginacion');
