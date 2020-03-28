@@ -14,7 +14,7 @@
 
   			<label for="">Titulo</label>
 
-  			<input type="text" name="contenido" id="titulo" value="" placeholder="Inserte Titulo Deseado" class="form-control">
+  			<input type="text" name="contenido" id="titulo" value="" placeholder="Inserte Titulo Deseado" class="form-control" required>
 
   		</div>
 
@@ -42,7 +42,7 @@
 
   				<div class="contenedor-img-seccion">
 
-  					<img src="img/sistemas.png">
+  					<img src="/img/sistemas.png">
 
   				</div>
 
@@ -51,12 +51,13 @@
 
   		<div class="contenedor-botones">
 
-  			<button class="btn" type="submit"><span>Guardar</span></button>
+  			<a onclick="return confirm('¿Desea guardar el nuevo elemento?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
 
   		</div>
 
 </form>
-
+  
+  <a onclick="return confirm('¿Desea cancelar la creación del nuevo elemento?')" href="{{url()->previous()}}"><button class="btn" type="submit"><span>Cancelar</span></button></a>
 
   <!------------------------------------------------------------- PREVISUALIZACIÓN ---------------------------------------------------------->
 
@@ -74,15 +75,11 @@
 
   			<div class="contenedor-seccion-preliminar">
 
-  				<img src="/img/slider/{{$slider->image}}">
+  				<img src="/images/slider/{{$slider->image}}">
   				<h2>{{$slider->contenido}}</h2>
 
   			</div>
       @endforeach
-
-
-        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-        <script src="js/select.js"></script>
 
   		</div>
 

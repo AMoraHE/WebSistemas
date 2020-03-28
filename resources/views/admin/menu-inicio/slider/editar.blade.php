@@ -33,7 +33,7 @@
 
   			<label for="">Titulo</label>
 
-  			<input type="text" name="contenido" id="titulo" value="{{$slider->contenido}}" placeholder="Inserte Titulo Deseado" class="form-control">
+  			<input type="text" name="contenido" id="titulo" value="{{$slider->contenido}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
 
   		</div>
 
@@ -61,7 +61,7 @@
 
   				<div class="contenedor-img-seccion">
 
-  					<img src="Img/sistemas.png">
+  					<img src="/img/sistemas.png">
 
   				</div>
 
@@ -70,13 +70,14 @@
 
   		<div class="contenedor-botones">
 
-  			<button class="btn" type="submit"><span>Guardar</span></button>
+  			<a onclick="return confirm('¿Desea guardar los cambios realizados?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
+
 
   		</div>
 
 </form>
 
-
+<a onclick="return confirm('¿Desea regresar al menú anterior?')" href="{{url()->previous()}}"><button class="btn" ><span>Regresar</span></button></a>
   <!------------------------------------------------------------- PREVISUALIZACIÓN ---------------------------------------------------------->
 
 

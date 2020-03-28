@@ -4,79 +4,74 @@
 
 @section('content')
 
+<div class="seccion-principal">
 
-        <div class="seccion-principal">
+	<div class="contenedor-titulo-seccion">
 
-  					<div class="contenedor-titulo-seccion">
+		<h3>Crear Noticias</h3>
 
-  							<h3>Crear Noticias</h3>
+	</div>
 
-  					</div>
+  <form class="form-goup"  files = "true" method="POST" action="/noticias-admin/" enctype="multipart/form-data">
 
-            <form class="form-goup"  files = "true" method="POST" action="/noticias-admin/" enctype="multipart/form-data">
-              @csrf
-  					<div class="formulario">
+    @csrf
 
-  						<label for="">Titulo</label>
-  						<input type="text" name="titulo" id="titulo" value="" placeholder="Inserte Titulo Deseado" class="form-control">
+		<div class="formulario">
 
-  					</div>
+			<label for="">Titulo</label>
 
-  					<div class="contenedor-cargar-img">
+			<input type="text" name="titulo" id="titulo" value="" placeholder="Inserte Titulo Deseado" class="form-control" required>
 
-  							<div class="contenedor-txt-seccion">
+		</div>
 
-  								<label for="">Cargar IMG</label>
+		<div class="contenedor-cargar-img">
 
-  							</div>
+			<div class="contenedor-txt-seccion">
 
-  							<div class="contenedor-boton-cargar">
+				<label for="">Cargar IMG</label>
 
-  								<label for="file-upload" class="subir">
-  									<i class="fas fa-cloud-upload-alt"></i> Subir Archivo
-  								</label>
+			</div>
 
-  								<input id="file-upload" onchange='cambiar()' name="image" type="file" style='display: none;' />
+			<div class="contenedor-boton-cargar">
 
-  								<div id="info-img">No se Eligió Archivo</div>
+			<label for="file-upload" class="subir"><i class="fas fa-cloud-upload-alt"></i>Subir Archivo</label>
 
+			<input id="file-upload" onchange='cambiar()' name="image" type="file" style='display: none;'/>
 
-  							</div>
+				<div id="info-img">No se Eligió Archivo</div>
 
+			</div>
 
-  							<div class="contenedor-img-seccion">
+			<div class="contenedor-img-seccion">
 
-  								<img src="Img/sistemas.png">
+ 				<img src="/img/sistemas.png">
 
-  							</div>
+ 			</div>
 
+		</div>
 
-  					</div>
+		<div class="formulario">
 
-  					<div class="formulario">
+			<label for="">Descripción Noticia</label>
 
-  						<label for="">Descripción Noticia</label>
+			<textarea name="redaccion" placeholder="Inserte Descripción Deseada ... " required></textarea>
 
-  						<textarea name="redaccion" placeholder="Inserte Descripción Deseada ... "></textarea>
+		</div>
 
+		<div class="contenedor-botones">
 
-  					</div>
+ 			<a onclick="return confirm('¿Desea guardar la nueva noticia?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
+              
+		</div>
 
-  					<div class="contenedor-botones">
+  </form>
 
-  						<button class="btn" type="submit"><span>Guardar</span></button>
-  						      <a href="/noticias-admin/"><button class="btn"><span>Cancelar</span></button></a>
+  <div class="contenedor-botones">
+              
+   <a onclick="return confirm('¿Desea cancelar la creación de la noticia?')" href="/noticias-admin/"><button class="btn"><span>Cancelar</span></button></a>
 
-  					</div>
+  </div>
 
-          </form>
-
-  				</div>
-
-<!------------------------------------------->
-
-
-
-
+</div>
 
 @endsection
