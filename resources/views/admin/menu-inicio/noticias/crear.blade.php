@@ -12,7 +12,7 @@
 
 	</div>
 
-  <form class="form-goup"  files = "true" method="POST" action="/noticias-admin/" enctype="multipart/form-data">
+  <form class="form-goup"  files = "true" method="POST" action="/noticias-admin" enctype="multipart/form-data">
 
     @csrf
 

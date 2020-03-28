@@ -8,7 +8,7 @@
 
   	<!----------------------------------------------------------------- FORMULARIO - CARGAR IMG ---------------------------------------------------------->
 
-    <form class="form-goup" files="true" method="POST" action="/slider/" enctype="multipart/form-data">
+    <form class="form-goup" files="true" method="POST" action="/slider" enctype="multipart/form-data">
           @csrf
   		<div class="formulario">
 
