@@ -81,7 +81,8 @@
 	display: block;
 }
 
-input{
+.formulario input{
+	font-family: 'Roboto', sans-serif;
 	display: block;
 	text-align: center;
     width: 100%;
@@ -98,18 +99,18 @@ input{
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-label{
+.formulario label{
 	display: inline-block;
     margin-bottom: .5rem;
     text-align: center;
 }
 
-textarea{
+.formulario textarea{
 	font-family: 'Roboto', sans-serif;
 	display: block;
 	text-align: justify;
     width: 100%;
-    height: 500px;
+    height: 250px;
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -147,22 +148,22 @@ textarea{
 }
 
 
-table{
+.tabla-informacion-escolar table{
 	background: #fff;
 	text-align: left;
 	border-collapse: collapse;
 	width: 100%; 
 }
 
-th, td{
+.tabla-informacion-escolar th, td{
 	padding: 20px;
 }
 
-td{
+.tabla-informacion-escolar td{
 	text-align: justify;
 }
 
-thead{
+.tabla-informacion-escolar thead{
 	text-transform: uppercase;
 	text-align: center;
 	background: #1B396A;
@@ -170,11 +171,11 @@ thead{
 	color: #fff;
 }
 
-tr:nth-child(even){
+.tabla-informacion-escolar tr:nth-child(even){
 	background-color: #ddd; 
 }
 
-tr:hover td{
+.tabla-informacion-escolar tr:hover td{
 	background-color: #369681;
 	color: #fff;
 }
