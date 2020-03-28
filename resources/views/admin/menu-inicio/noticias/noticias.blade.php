@@ -11,9 +11,9 @@
 
 		<div class="contenedor-boton-CE">
 
-		<a href="/eliminacion-anual/">	<button class="btn"><span>Eliminación Anual</span></button></a>
-		<a href="/noticias-admin/create">	<button class="btn"><span>Agregar Noticia</span></button></a>
+		<a onclick="return confirm('¿Desea acceder a la eliminacion anual?')" href="/eliminacion-anual/"><button class="btn"><span>Eliminación Anual</span></button></a>
 
+		<a onclick="return confirm('¿Desea registrar una nueva noticia?')" href="/noticias-admin/create"><button class="btn"><span>Agregar Noticia</span></button></a>
 
 		</div>
 
@@ -21,11 +21,11 @@
 
 			<div class="buscador">
 
-        <form  files = "true" method="GET" action="/buscador-noticias/" enctype="multipart/form-data">
-          @csrf
-						<input type="search" name="key" placeholder="Noticia">
+        		<form  files = "true" method="GET" action="/buscador-noticias/" enctype="multipart/form-data">
+          			@csrf
+					<input type="search" name="key" placeholder="Noticia">
 
-            <button type="submit" class="btn-buscar"><span><i class="icono izquierda fas fa-search"></i></span></button>
+            		<button type="submit" class="btn-buscar"><span><i class="icono izquierda fas fa-search"></i></span></button>
 
 				</form>
 
@@ -61,13 +61,15 @@
 		</div>
 
 		<div class="contenedor-botones">
-      <form method="POST" action="/noticias-admin/{{$noticia->slug}}" enctype="multipart/form-data">
-        @method('DELETE')
-        @csrf
-		<button type="submit" class="btn"><span>Eliminar</span></button>
-  </form>
-	  <a href="/noticias-admin/{{$noticia->slug}}/edit">	<button class="btn"><span>Editar</span></button></a>
+      	<form method="POST" action="/noticias-admin/{{$noticia->slug}}" enctype="multipart/form-data">
+        	@method('DELETE')
+        	@csrf
 
+			<a onclick="return confirm('¿Desea eliminar la noticia seleccionada?')"><button type="submit" class="btn"><span>Eliminar</span></button></a>
+
+  		</form>
+	  		
+	  		<a onclick="return confirm('¿Desea editar la noticia seleccionada?')" href="/noticias-admin/{{$noticia->slug}}/edit">	<button class="btn"><span>Editar</span></button></a>
 
 		</div>
 

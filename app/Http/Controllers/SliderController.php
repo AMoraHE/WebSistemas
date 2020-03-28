@@ -15,6 +15,7 @@ class SliderController extends Controller
     public function index()
     {
         $sliders = Slider::all();
+
         return view('admin.menu-inicio.slider.slider', compact('sliders'));
     }
 
@@ -25,7 +26,7 @@ class SliderController extends Controller
      */
     public function create()
     {
-      $sliders = Slider::all();
+        $sliders = Slider::all();
 
         return view('admin.menu-inicio.slider.crear',compact('sliders'));
     }
@@ -38,24 +39,22 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
-      $slider = new Slider();
+        $slider = new Slider();
 
-      if ($request->hasFile('image')) {
-        $file = $request->file('image');
-        $name2 = time().$file->getClientOriginalName();
-        $file->move(public_path().'/images/slider/',$name2);
-      //  return $name;
-    }
+        if ($request->hasFile('image'))
+        {
+            $file = $request->file('image');
+            $name2 = time().$file->getClientOriginalName();
+            $file->move(public_path().'/images/slider/',$name2);
+            $slider->image = $name2;
+        }
 
-    $slider->contenido = $request->input('contenido');
-    $slider->image = $name2;
-    $dashSlug= strtolower($request->input('contenido'));
-    $dashSlug = str_replace(" ","-",$dashSlug);
+        $slider->contenido = $request->input('contenido');
+        
+        $slider->slug = time();
 
-    $slider->slug = $dashSlug;
-
-    $slider->save();
-      return redirect()->route('slider.index');
+        $slider->save();
+        return redirect()->route('slider');
     }
 
     /**
@@ -66,7 +65,7 @@ class SliderController extends Controller
      */
     public function show(Slider $slider)
     {
-      return view('admin.menu-inicio.slider.show', compact('slider'));
+        return view('admin.menu-inicio.slider.show', compact('slider'));
     }
 
     /**
@@ -79,8 +78,7 @@ class SliderController extends Controller
     {
 
         $slidersG = Slider::all();
-    //    $ids  = DB::table('sliders')->select('id')->get();
-    //  return $slider;
+
         return view('admin.menu-inicio.slider.editar', compact('slidersG','slider' ));
     }
 
@@ -93,28 +91,25 @@ class SliderController extends Controller
      */
     public function update(Request $request, Slider $slider)
     {
-    //   return $request;
+        if ($request->hasFile('image'))
+        {
+            $file_path =public_path().'/images/slider/'.$slider->image;
+            if(file_exists($file_path))
+            {
+                unlink($file_path);
+            }
+            
+            $file = $request->file('image');
+            $name2 = time().$file->getClientOriginalName();
+            $file->move(public_path().'/images/slider/',$name2);
+            $slider->image = $name2;
+        }
 
-      if ($request->hasFile('image')) {
-        $file = $request->file('image');
-        $name2 = time().$file->getClientOriginalName();
-        $file->move(public_path().'/images/slider/',$name2);
-        $file_path =public_path().'/images/slider/'.$slider->image;
-           \File::delete($file_path);
-        $slider->image = $name2;
+        $slider->contenido =$request->input('contenido');
+        $slider->slug = time();
+        $slider->save();
 
-    // return $name2;
-    }
-
-      $slider->contenido =$request->input('contenido');
-      $dashSlug= strtolower($request->input('contenido'));
-      $dashSlug = str_replace(" ","-",$dashSlug);
-      //return $dashSlug;
-    //  return $dashSlug;
-      $slider->slug = $dashSlug;
-      $slider->save();
-
-    return redirect()->route('slider');
+        return redirect()->route('slider');
     }
 
     /**

@@ -8,8 +8,11 @@
 </div>
 
 <div class="contenedor-noticia">
+  
+  <div class="contenedor-botones">
+    <a onclick="return confirm('¿Desea agregar un nuevo elemento?')" href="slider/create"><button class="btn"><span>Agregar</span></button></a>
+  </div>
   @foreach ($sliders as $slider)
-
 
   <div class="contenedor-titulo-noticia">
 
@@ -34,8 +37,7 @@
   </div>
 
   <div class="contenedor-botones">
-  <a href="/slider/{{$slider->slug}}/edit">
-  <button class="btn"  ><span>editar</span></button>
+  <a onclick="return confirm('¿Desea editar el elemento seleccionado?')" href="/slider/{{$slider->slug}}/edit"><button class="btn"  ><span>editar</span></button>
 </a>
 
 
