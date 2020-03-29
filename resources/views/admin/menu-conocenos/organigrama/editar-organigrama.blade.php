@@ -4,7 +4,7 @@
 
 @section('content')
 
-	  <!--------------------------------------------------------------- EDITAR ORGANIGRAMA ----------------------------------------------------------> 
+<!--------------------------------------------------------------- EDITAR ELEMENTOS ORGANIGRAMA ----------------------------------------------------------> 
 
   <div class="seccion-principal">
     
@@ -15,13 +15,27 @@
     </div>
 
     <div class="formulario"> 
-          <label for="">Cargo / Departamento</label>
-          <input type="text" name="" id ="informacion-perfil" value="" placeholder="Cargo / Departamento" class="form-control">
+          <label for="">Área</label>
+          <input type="text" name="" id ="area" value="id_area" disabled="" class="form-control">
+    </div>
+
+    <div class="formulario"> 
+          <label for="">Puesto</label>
+          <input type="text" name="" id ="puesto" value="id_puesto" disabled="" class="form-control">
     </div>
 
     <div class="formulario"> 
           <label for="">Nombre</label>
-          <input type="text" name="" id ="informacion-perfil" value="" placeholder="Nombre Completo" class="form-control">
+          <input type="text" name="" id ="informacion-integrante" value="" placeholder="Nombre del Integrante" class="form-control">
+    </div>
+
+    <div class="formulario"> 
+      <div><label for="">Género del Integrante</label></div>
+          <select name="genero_id" id ="genero" class="genero">     <!------------- Select de Género utilizando option ------------------>
+                          <option value="">--Elija el genéro--</option>
+                          <option>Hombre</option>
+                          <option>Mujer</option>
+                        </select>
     </div>
 
     <div class="contenedor-botones">
@@ -32,5 +46,6 @@
     </div>
 
   </div>
+
 
 @endsection

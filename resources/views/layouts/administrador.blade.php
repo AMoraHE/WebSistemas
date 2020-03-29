@@ -8,12 +8,38 @@
 	<title> Sistemas - @yield('title')</title>
 		<script src="https://kit.fontawesome.com/13b3d85bca.js" crossorigin="anonymous"></script>
 		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos.css')}}">
+
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/estilos.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-contenedores.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-noticias.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-formularios.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/organigrama.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/alertas.css')}}">
+
+		<link rel="stylesheet" type="text/css" href="{{ asset('ccss/flexslider.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css')}}">
+
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/organigrama.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/alertas.css')}}">
+
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/modal.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/calendario.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/fullcalendar.css')}}">
+
+	<!-- Calendario -->
+
+		<script src="{{ asset('js/jquery.min.js')}}"></script>
+		<script src="{{ asset('js/moment.min.js')}}"></script>
+
+		<script src="{{ asset('js/fullcalendar.min.js')}}"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/fullcalendar.css">
+		<script src="{{ asset('js/es.js')}}js/es.js"></script>
+
+	<!-- estilos Boostrap-->
+
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
 
 
 </head>
@@ -166,6 +192,11 @@
 	<script src="{{ asset('js/select.js')}}"></script>
 
 	<script src="{{ asset('btn-cargar.js')}}"></script>
+
+	<script src="{{ asset('js/jquery-3.1.0.min.js')}}"></script>
+	<script src="{{ asset('js/jquery.flexslider.js')}}"></script>
+	<script src="{{ asset('js/slider.js')}}"></script>
+
 </body>
 
 </html>

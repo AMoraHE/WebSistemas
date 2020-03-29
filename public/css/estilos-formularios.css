@@ -21,8 +21,17 @@
 	margin-top: 3px;
 }
 
+.contenedor-select-seccion select{ /*Quitamos la flecha por defecto¨*/
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
 
-.btn-seleccionar{
+.contenedor-select-seccion select::-ms-expand { /*Quitamos la flecha por defecto¨*/
+    display: none;
+}
+
+.contenedor-select-seccion select.seleccion{			/* clase de los Items de Seleccion del Área*/
 	position: relative;
 	width: 100%;
 	height: 50px;
@@ -35,42 +44,24 @@
 	color: #fff;
 	border: 1px solid #8cc63e;
 	font-size: 18px;
-
+	cursor: pointer;
 }
 
-.contenedor-select-seccion ul{
-	position: absolute;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	background: #ccc;
-	transform-origin: top;
-	transform: perspective(1000px) rotateX(-90deg);
-	transition: 0.5s;
-}
-
-.contenedor-select-seccion ul.active{
-	transform: perspective(1000px) rotateX(0deg);
-}
-
-.contenedor-select-seccion ul li{
-	list-style: none;
-}
-
-.contenedor-select-seccion ul li a{
-	display: block;
-	padding: 10px;
-	text-align: center;
-	text-decoration: none;
-	background: #262626;
+.contenedor-select-seccion select.genero{				/* clase de los Items de Seleccion del Género*/
+	position: relative;
+	width: 25%;
+	height: 50px;
+	font-size: 20px;
+	background: #1B396A;
+	border: none;
+	box-shadow: none;
+	outline: none;
+	cursor: pointer;
 	color: #fff;
-	border-bottom: 1px solid rgba(0,0,0,.2);
+	border: 1px solid #8cc63e;
+	font-size: 18px;
+	border-radius: 15px;
 }
-
-.contenedor-select-seccion ul li a:hover{
-	background: #0d7ad0;
-}
-
 
 /*****************************FORMULARIOS**********************************/
 
@@ -81,7 +72,8 @@
 	display: block;
 }
 
-input{
+.formulario input{
+	font-family: 'Roboto', sans-serif;
 	display: block;
 	text-align: center;
     width: 100%;
@@ -98,13 +90,13 @@ input{
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-label{
+.formulario label{
 	display: inline-block;
     margin-bottom: .5rem;
     text-align: center;
 }
 
-textarea{
+.formulario textarea{
 	font-family: 'Roboto', sans-serif;
 	display: block;
 	text-align: justify;
@@ -122,6 +114,27 @@ textarea{
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 
 }
+
+.formulario select{
+	font-family: 'Roboto', sans-serif;
+	display: block;
+	text-align: center;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #8cc63e;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    cursor: pointer;
+}
+
+/********************************************************************Fin Formulario*********************************************/
 
 .tabla-informacion-escolar{
 	margin: auto;
@@ -147,22 +160,22 @@ textarea{
 }
 
 
-table{
+.tabla-informacion-escolar table{
 	background: #fff;
 	text-align: left;
 	border-collapse: collapse;
 	width: 100%; 
 }
 
-th, td{
+.tabla-informacion-escolar th, td{
 	padding: 20px;
 }
 
-td{
-	text-align: justify;
+.tabla-informacion-escolar td{
+	text-align: center;
 }
 
-thead{
+.tabla-informacion-escolar thead{
 	text-transform: uppercase;
 	text-align: center;
 	background: #1B396A;
@@ -170,11 +183,11 @@ thead{
 	color: #fff;
 }
 
-tr:nth-child(even){
+.tabla-informacion-escolar tr:nth-child(even){
 	background-color: #ddd; 
 }
 
-tr:hover td{
+.tabla-informacion-escolar tr:hover td{
 	background-color: #369681;
 	color: #fff;
 }

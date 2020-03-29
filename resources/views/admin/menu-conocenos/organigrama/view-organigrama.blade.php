@@ -4,279 +4,230 @@
 
 @section('content')
 
-	<div class="seccion-principal">
+	
+  <!----------------------------------------------------------------- SELECT ---------------------------------------------------------->
 
-    <div class="contenedor-organigrama">
+  <div class="seccion-principal">
 
-    <div id="organigrama" name="organigrama" class="organigrama">
-        <ul id="ul1" name="ul1">
-          <li>
+    <div class="contenedor-titulo-seccion-select">
 
-            <a href="#">
-              <label>
-              <p id="titulo-organigrama">Dirección General</p>
-              <p>Diego Briseño</p>
-              <button class="btn centrado"><span>Editar</span></button>
-            </label>
-          </a>
+        <h3>Editar Organigrama</h3>
 
-            <ul>
-              <li>
-                <a href="#">
-                    <label>
-                    <p id="titulo-organigrama">Dirección Académica y de vinculación</p>
-                    <p>M.C Cesar I. Flota Perez</p>
-                    <button class="btn centrado"><span>Editar</span></button>
-                    </label>
-                  </a>
-
-                <ul>
-                  <li>
-                    <a href="#">
-                      <label>
-                      <p id="titulo-organigrama">Subdirección Académica y vinculación académica</p>
-                      <p>MC. Anabel Pinzon de la O</p>
-                      <button class="btn centrado"><span>Editar</span></button>
-                      </label>
-                    </a>
-
-
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <label>
-                          <p id="titulo-organigrama">División de ISC</p>
-                          <p>Luis Salinas</p>
-                          <button class="btn centrado"><span>Editar</span></button>
-                          </label>
-                        </a>
-
-<!---------------------------------------------------------------------------LABORATORIOS--------------------------------------------------------------------------->                              
-
-
-                        <ul>
-                          <li>
-                            <a href="#">
-                              <label>
-                              <p id="titulo-organigrama">Laboratorios</p>
-                              </label>
-                            </a>
-
-                            <ul>
-                              <li>
-                                <a href="#">
-                                  <label>
-                                    <p id="titulo-organigrama">Laboratorio de Sistemas Computacionales</p>
-                                    <p>ING. Eduardo Mejía Flota</p>
-                                    <button class="btn centrado"><span>Editar</span></button>
-                                  </label>
-                                </a>
-
-                                <ul>
-                                  <li>
-                                <a href="#">
-                                  <label>
-                                    <p id="titulo-organigrama">Laboratorio de Cisco System</p>
-                                    <p>MTE. Noemí G. Castillo Sosa</p>
-                                    <button class="btn centrado"><span>Editar</span></button>
-                                  </label>
-                                </a>
-
-                                <ul>
-                                  <li>
-                                <a href="#">
-                                  <label>
-                                    <p id="titulo-organigrama">Laboratorio de Microprocesadores</p>
-                                    <p>Sin Encargado</p>
-                                    <button class="btn centrado"><span>Editar</span></button>
-                                  </label>
-                                </a>
-
-                                <!-----------------------------------------Seccion creacion ------------------------------------------------------------------>
-
-                                <ul>
-                                  <li>
-                                    <a href="#">
-                                      <label>
-                                        <p id="titulo-organigrama">Nombre Laboratorio</p>
-                                        <p>Nombre del Encargado</p>
-                                        <button class="btn centrado"><span>Agregar</span></button>
-                                      </label>
-                                    </a>
-
-                                      <!--------------------------------Aqui debe de ir la siguiente sección---------------------------------------------->
-
-                                  </li>
-                                </ul>
-                              <!-----------------------------------------Seccion creacion ------------------------------------------------------------------>
-
-                              </li>
-                                </ul>
-                              </li>
-                                </ul>
-                              </li>
-<!---------------------------------------------------------------------------DOCENTES--------------------------------------------------------------------------->                              
-                      </li>
-                      <li>
-                        <a href="#">
-                          <label>
-                            <p id="titulo-organigrama">Docentes</p>
-                          </label>
-                        </a>
-
-                        <ul>
-                              <li>
-                                <a href="#">
-                                  <label>
-                                    <p id="titulo-organigrama">Presidenta</p>
-                                    <p>MC. Arizbé del Socorro Arana Kantún</p>
-                                    <button class="btn centrado"><span>Editar</span></button>
-                                  </label>
-                                </a>
-
-                                <ul>
-                                  <li>
-                                <a href="#">
-                                  <label>
-                                    <p id="titulo-organigrama">Docente</p>
-                                    <p>DR. Niels Henryk Aranda Cuevas</p>
-                                    <button class="btn centrado"><span>Editar</span></button>
-                                  </label>
-                                </a>
-
-                                <ul>
-                                  <li>
-                                <a href="#">
-                                  <label>
-                                    <p id="titulo-organigrama">Docente</p>
-                                    <p>ING. Cintia Isabel Arceo Fuentes</p>
-                                    <button class="btn centrado"><span>Editar</span></button>
-                                  </label>
-                                </a>
-
-                                <ul>
-                                  <li>
-                                <a href="#">
-                                  <label>
-                                    <p id="titulo-organigrama">Docente</p>
-                                    <p>MTE. Noemí G. Castillo Sosa</p>
-                                    <button class="btn centrado"><span>Editar</span></button>
-                                  </label>
-                                </a>
-
-                                <ul>
-                                  <li>
-                                <a href="#">
-                                  <label>
-                                    <p id="titulo-organigrama">Docente</p>
-                                    <p>ING. Carolina Montalvo Espinosa</p>
-                                    <button class="btn centrado"><span>Editar</span></button>
-                                  </label>
-                                </a>
-
-                                <ul>
-                                  <li>
-                                <a href="#">
-                                  <label>
-                                    <p id="titulo-organigrama">Docente</p>
-                                    <p>MTI. Gabriel Eduardo Balam Pool</p>
-                                    <button class="btn centrado"><span>Editar</span></button>
-                                  </label>
-                                </a>
-
-                                <ul>
-                                  <li>
-                                <a href="#">
-                                  <label>
-                                    <p id="titulo-organigrama">Docente</p>
-                                    <p>MTI. Marcos Gaspar Pech Cruz</p>
-                                    <button class="btn centrado"><span>Editar</span></button>
-                                  </label>
-                                </a>
-
-                                <ul>
-                                  <li>
-                                <a href="#">
-                                  <label>
-                                    <p id="titulo-organigrama">Docente</p>
-                                    <p>ING. Eduardo Castillo Moo</p>
-                                    <button class="btn centrado"><span>Editar</span></button>
-                                  </label>
-                                </a>
-
-                                <ul>
-                                  <li>
-                                <a href="#">
-                                  <label>
-                                    <p id="titulo-organigrama">Docente</p>
-                                    <p>ING. Paloma Góngora Sabido</p>
-                                    <button class="btn centrado"><span>Editar</span></button>
-                                  </label>
-                                </a>
-
-                                <ul>
-                                  <li>
-                                <a href="#">
-                                  <label>
-                                    <p id="titulo-organigrama">Docente</p>
-                                    <p>ING. Plácido Balam Can</p>
-                                    <button class="btn centrado"><span>Editar</span></button>
-                                  </label>
-                                </a>
-
-                              <!-----------------------------------------Seccion creacion ------------------------------------------------------------------>
-
-                                <ul>
-                                  <li>
-                                    <a href="#">
-                                      <label>
-                                        <p id="titulo-organigrama">Cargo</p>
-                                        <p>Nombre del Docente</p>
-                                        <button class="btn centrado"><span>Agregar</span></button>
-                                      </label>
-                                    </a>
-
-                                      <!--------------------------------Aqui debe de ir la siguiente sección---------------------------------------------->
-
-                                  </li>
-                                </ul>
-                              <!-----------------------------------------Seccion creacion ------------------------------------------------------------------>
-
-                              </li>
-                                </ul>
-                              </li>
-                                </ul>
-                              </li>
-                                </ul>
-                              </li>
-                                </ul>
-                              </li>
-                                </ul>
-                              </li>
-                                </ul>
-                              </li>
-                                </ul>
-                              </li>
-                                </ul>
-                              </li>
-                                </ul>
-                              </li>   
-                        </ul>
-                      </li>
-                    </ul>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      </div>
+        <div class="contenedor-select-seccion">
+            
+          <select name="area_id" id ="area" class="seleccion"> <!------------- Select de Área utilizando option ------------------>
+                  <option value="">--Elija el area--</option>
+                  <option>Dirección General</option>
+                  <option>Dirección Académica y de vinculación</option>
+                  <option>Subdirección Académica</option>
+                  <option>División de ISC</option>
+                  <option>Laboratorios</option>
+                  <option>Docentes</option>
+                </select>
+                <i></i>
   
+      </div>
+
+      
+
+    </div>
+
+  <!----------------------------------------------------------------- FORMULARIO - CARGAR IMG ---------------------------------------------------------->
+<div class="formulario">
+      
+      <button class="btn" ><span>Agregar</span></button>
+      
+    </div>
+
+    <div class="contenedor-cuerpo-noticia">
+
+        <div class="contenedor-texto-conocenos">
+          <div class="tabla-informacion-escolar">
+
+            <table>
+              
+              <thead>
+                <tr>
+                  <th>Área</th>
+                  <th>Puesto</th>
+                  <th>Integrantes</th>
+                  <th>Género</th>
+                  <th>Eliminar</th>
+                  <th>Editar</th>
+                </tr>
+              </thead>
+
+              <tr>
+                <td>Dirección General</td>
+                <td>Director General</td>
+                <td>Diego Briseño</td>
+                <td>Hombre</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>Dirección Académica y de vinculación</td>
+                <td>Director del area Académica y de vinculación</td>
+                <td>M.C Cesar I. Flota Perez</td>
+                <td>Hombre</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>Subdirección Académica</td>
+                <td>Subdirector del area Académica y de vinculación</td>
+                <td>MC. Anabel Pinzon de la O</td>
+                <td>Mujer</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>División de ISC</td>
+                <td>Área de División</td>
+                <td>Luis Salinas</td>
+                <td>Hombre</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>Laboratorios</td>
+                <td>Área de Laboratorio de Sistemas Computacionales</td>
+                <td>ING. Eduardo Mejía Flota</td>
+                <td>Hombre</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>Laboratorios</td>
+                <td>Área de Laboratorio de Cisco System</td>
+                <td>MTE. Noemí G. Castillo Sosa</td>
+                <td>Mujer</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>Laboratorios</td>
+                <td>Área de Laboratorio de Microprocesadores</td>
+                <td>Sin Encargado</td>
+                <td></td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>Docentes</td>
+                <td>Presidenta</td>
+                <td>MC. Arizbé del Socorro Arana Kantún</td>
+                <td>Mujer</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>Docentes</td>
+                <td>Docente</td>
+                <td>DR. Niels Henryk Aranda Cuevas</td>
+                <td>Hombre</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>Docentes</td>
+                <td>Docente</td>
+                <td>ING. Cintia Isabel Arceo Fuentes</td>
+                <td>Mujer</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>Docentes</td>
+                <td>Docente</td>
+                <td>MTE. Noemí G. Castillo Sosa</td>
+                <td>Mujer</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>Docentes</td>
+                <td>Docente</td>
+                <td>ING. Carolina Montalvo Espinosa</td>
+                <td>Mujer</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>Docentes</td>
+                <td>Docente</td>
+                <td>MTI. Gabriel Eduardo Balam Pool</td>
+                <td>Hombre</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>Docentes</td>
+                <td>Docente</td>
+                <td>MTI. Marcos Gaspar Pech Cruz</td>
+                <td>Hombre</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>Docentes</td>
+                <td>Docente</td>
+                <td>ING. Eduardo Castillo Moo</td>
+                <td>Hombre</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>Docentes</td>
+                <td>Docente</td>
+                <td>ING. Paloma Góngora Sabido</td>
+                <td>Mujer</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+              <tr>
+                <td>Docentes</td>
+                <td>Docente</td>
+                <td>ING. Plácido Balam Can</td>
+                <td>Hombre</td>
+                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
+                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+              </tr>
+
+            </table>    
+
+          </div>
+
+        </div>
+
+    </div>
+
+<div class="contenedor-botones">
+
+    <button class="btn"><span>Guardar</span></button>
+    <button class="btn"><span>Cancelar</span></button>
+
+
+    </div>
+    
   </div>
-  
+
 
 
 @endsection
