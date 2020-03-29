@@ -48,7 +48,7 @@ class CalendarioController extends Controller
           $evento->end = $request->input('end');
           $evento->save();
 
-          return 'hola';
+          return $evento;
 
     }
 
@@ -81,9 +81,22 @@ class CalendarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+    //    $evento = new Evento();
+    $id = $request->input('id');
+    $title = $request->input('title');
+    $descripcion = $request->input('descripcion');
+    $color = $request->input('color');
+    $textColor = $request->input('textColor');
+    $start = $request->input('start');
+    $end = $request->input('end');
+
+   $datos = array('title'=>$title,'descripcion'=>$descripcion,
+   'color'=>$color,'textColor'=>$textColor,'start'=>$start,'end'=>$end);
+   $evento = Evento::updateData($id, $datos);
+         echo 'Update successfully.';
+    return   $evento;
     }
 
     /**
@@ -92,9 +105,14 @@ class CalendarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+
+        $evento=false;
+        $id = $request->input('id');
+        $evento = Evento::deleteData($id);
+        return true;
+
     }
 
     public function eventos(Request $request)
@@ -118,18 +136,28 @@ class CalendarioController extends Controller
 
         break;
 
-      case 'eliminar':
-
-        break;
-
-      case 'modificar':
-
-        break;
-
-
       default:
       return $eventos;
         break;
     }
   }
+
+/* public function actualizacion(Request $request)
+ {
+   $id = $request->input('id');
+   $title = $request->input('title');
+   $descripcion = $request->input('descripcion');
+   $color = $request->input('color');
+   $textColor = $request->input('textColor');
+   $start = $request->input('start');
+   $end = $request->input('end');
+
+  $datos = array('title'=>$title,'descripcion'=>$descripcion,
+  'color'=>$color,'textColor'=>$textColor,'start'=>$start,'end'=>$end);
+  $evento = Evento::updateData($id, $datos);
+        echo 'Update successfully.';
+   return   $evento;
+
+ }*/
+
 }
