@@ -31,7 +31,7 @@ Route::resource('slider','SliderController')->parameters(['slider' => 'slider'])
 
 Route::get('slider', 'SliderController@index')->name('slider');
 Route::get('noticias-admin', 'NoticiaController@index')->name('noticias-admin');
-Route::get('calendario', 'calendarioController@index')->name('calendario');
+Route::get('calendario', 'CalendarioController@index')->name('calendario');
 //Route::get('calendario', 'SliderController@index')->name('calendario');
 //Calendario, ruta de eventos del calendario
 Route::get('calendarioeventos', 'CalendarioController@eventos');
@@ -118,3 +118,6 @@ Route::get('CampoLaboral-Editar', 'CampoLaboralController@edit')->name('CampoLab
 Route::resource('CampoLaboral', 'CampoLaboralController');
 
 Route::get('Campo-Laboral-Eliminar/{slug}', 'CampoLaboralController@destroy')->name('CampoLaboralEliminar');
+
+//Rutas Organigrama
+Route::resource('Organigrama', 'OrganigramaController');

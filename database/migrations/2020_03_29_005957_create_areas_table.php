@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddSlugFieldToCuerposAcademicos extends Migration
+class CreateAreasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,13 @@ class AddSlugFieldToCuerposAcademicos extends Migration
      */
     public function up()
     {
-        Schema::table('cuerpos_academicos', function (Blueprint $table) {
-            $table->text('slug');
+        Schema::create('areas', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+            $table->text('nombre');
+
+            
+            
         });
     }
 
@@ -25,8 +30,6 @@ class AddSlugFieldToCuerposAcademicos extends Migration
      */
     public function down()
     {
-        Schema::table('cuerpos_academicos', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('areas');
     }
 }
