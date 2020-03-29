@@ -118,3 +118,6 @@ Route::get('CampoLaboral-Editar', 'CampoLaboralController@edit')->name('CampoLab
 Route::resource('CampoLaboral', 'CampoLaboralController');
 
 Route::get('Campo-Laboral-Eliminar/{slug}', 'CampoLaboralController@destroy')->name('CampoLaboralEliminar');
+
+//Rutas Organigrama
+Route::resource('Organigrama', 'OrganigramaController');
