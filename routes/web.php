@@ -31,6 +31,7 @@ Route::resource('slider','SliderController')->parameters(['slider' => 'slider'])
 
 Route::get('slider', 'SliderController@index')->name('slider');
 Route::get('noticias-admin', 'NoticiaController@index')->name('noticias-admin');
+Route::get('calendario', 'calendarioController@index')->name('calendario');
 //Route::get('calendario', 'SliderController@index')->name('calendario');
 
 ////////////////////////Buscador de noticias///////////////////////////

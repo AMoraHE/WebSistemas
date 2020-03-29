@@ -72,7 +72,7 @@
 					<ul>
 						<li><a href="{{route('slider')}}"><i class="icono izquierda fab fa-slideshare"></i>Slider</a></li>
 						<li><a href="{{route('noticias-admin')}}"><i class="icono izquierda far fa-newspaper"></i>Noticias</a></li>
-						<li><a href="{{route('noticias-admin')}}"><i class="icono izquierda far fa-calendar-alt"></i>Calendario</a></li>
+						<li><a href="{{route('calendario')}}"><i class="icono izquierda far fa-calendar-alt"></i>Calendario</a></li>
 					</ul>
 				</li>
 
