@@ -21,7 +21,7 @@
 
 			<div class="buscador">
 
-        		<form  files = "true" method="GET" action="/buscador-noticias/" enctype="multipart/form-data">
+        		<form  files = "true" method="GET" action="/buscador-noticias" enctype="multipart/form-data">
           			@csrf
 					<input type="search" name="key" placeholder="Noticia">
 
@@ -68,7 +68,7 @@
 			<a onclick="return confirm('¿Desea eliminar la noticia seleccionada?')"><button type="submit" class="btn"><span>Eliminar</span></button></a>
 
   		</form>
-	  		
+
 	  		<a onclick="return confirm('¿Desea editar la noticia seleccionada?')" href="/noticias-admin/{{$noticia->slug}}/edit">	<button class="btn"><span>Editar</span></button></a>
 
 		</div>

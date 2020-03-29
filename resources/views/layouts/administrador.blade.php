@@ -31,8 +31,7 @@
 
 		<script src="{{ asset('js/fullcalendar.min.js')}}"></script>
 
-		<link rel="stylesheet" type="text/css" href="css/fullcalendar.css">
-		<script src="{{ asset('js/es.js')}}js/es.js"></script>
+		<script src="{{ asset('js/es.js')}}"></script>
 
 	<!-- estilos Boostrap-->
 
@@ -185,17 +184,19 @@
 
 </div>
 
-	<script src="{{ asset('js/jquery.js')}}"></script>
-	<script src="{{ asset('js/main.js')}}"></script>
 
-	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="{{ asset('js/main.js')}}"></script>
+<!--<script src="{{ asset('js/jquery.js')}}"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
 	<script src="{{ asset('js/select.js')}}"></script>
 
 	<script src="{{ asset('btn-cargar.js')}}"></script>
-
-	<script src="{{ asset('js/jquery-3.1.0.min.js')}}"></script>
+<!---
+	<script src="{{ asset('js/jquery-3.1.0.min.js')}}"></script>-->
 	<script src="{{ asset('js/jquery.flexslider.js')}}"></script>
+
 	<script src="{{ asset('js/slider.js')}}"></script>
+
 
 </body>
 

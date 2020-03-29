@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Evento;
 
 class CalendarioController extends Controller
 {
@@ -13,6 +14,8 @@ class CalendarioController extends Controller
      */
     public function index()
     {
+
+
 
 
         return view('admin.menu-inicio.calendario.calendario');
@@ -36,7 +39,17 @@ class CalendarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+          $evento = new Evento();
+          $evento->title = $request->input('title');
+          $evento->descripcion = $request->input('descripcion');
+          $evento->color = $request->input('color');
+          $evento->textColor = $request->input('textColor');
+          $evento->start = $request->input('start');
+          $evento->end = $request->input('end');
+          $evento->save();
+
+          return 'hola';
+
     }
 
     /**
@@ -83,4 +96,40 @@ class CalendarioController extends Controller
     {
         //
     }
+
+    public function eventos(Request $request)
+  {
+    $eventos = Evento::all();
+      //return $eventos;
+    // code...
+    $accion = $request->input('accion');
+    switch ($accion) {
+      case 'agregar':
+      $evento = new Evento();
+      $evento->title = $request->input('title');
+      $evento->descripcion = $request->input('descripcion');
+      $evento->color = $request->input('color');
+      $evento->textColor = $request->input('textColor');
+      $evento->start = $request->input('start');
+      $evento->end = $request->input('end');
+      $evento->save();
+
+      return $evento;
+
+        break;
+
+      case 'eliminar':
+
+        break;
+
+      case 'modificar':
+
+        break;
+
+
+      default:
+      return $eventos;
+        break;
+    }
+  }
 }

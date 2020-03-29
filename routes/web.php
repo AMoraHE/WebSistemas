@@ -33,6 +33,12 @@ Route::get('slider', 'SliderController@index')->name('slider');
 Route::get('noticias-admin', 'NoticiaController@index')->name('noticias-admin');
 Route::get('calendario', 'calendarioController@index')->name('calendario');
 //Route::get('calendario', 'SliderController@index')->name('calendario');
+//Calendario, ruta de eventos del calendario
+Route::get('calendarioeventos', 'CalendarioController@eventos');
+Route::post('calendarioagregar', 'CalendarioController@store');
+Route::post('calendarioeliminar', 'CalendarioController@destroy');
+Route::post('calendariomodificar', 'CalendarioController@update');
+/////Route::post('calendarioeventos?acction=agregar', 'CalendarioController@eventos');
 
 ////////////////////////Buscador de noticias///////////////////////////
 Route::get('noticias-admin/paginacion', 'NoticiaController@paginacion');
