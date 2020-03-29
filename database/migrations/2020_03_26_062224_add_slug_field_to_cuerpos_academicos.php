@@ -14,7 +14,7 @@ class AddSlugFieldToCuerposAcademicos extends Migration
     public function up()
     {
         Schema::table('cuerpos_academicos', function (Blueprint $table) {
-            $table->text('slug')->unique();
+            $table->text('slug');
         });
     }
 
