@@ -17,12 +17,12 @@
             
           <select name="area_id" id ="area" class="seleccion"> <!------------- Select de Área utilizando option ------------------>
                   <option value="">--Elija el area--</option>
-                  <option>Dirección General</option>
-                  <option>Dirección Académica y de vinculación</option>
-                  <option>Subdirección Académica</option>
-                  <option>División de ISC</option>
-                  <option>Laboratorios</option>
-                  <option>Docentes</option>
+
+                  @foreach ($areas as $area)
+
+                  <option>{{$area->nombre}}</option>
+
+                  @endforeach
                 </select>
                 <i></i>
   
@@ -61,7 +61,7 @@
               @foreach ($organigramas as $organigrama)
 
               <tr>
-                <td>Dirección General</td>
+                <td>{{$organigrama->nombre}}</td>
                 <td>{{$organigrama->puesto}}</td>
                 <td>{{$organigrama->integrante}}</td>
                 <td>

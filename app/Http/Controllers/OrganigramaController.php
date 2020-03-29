@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Organigrama;
+use App\Area;
 
 class OrganigramaController extends Controller
 {
@@ -14,9 +16,12 @@ class OrganigramaController extends Controller
      */
     public function index()
     {
-        $organigramas = Organigrama::all();
+        //$organigramas = Organigrama::all();
+        $organigramas = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.*')->get();
+
+        $areas = Area::all();
         
-        return view('admin.menu-conocenos.organigrama.view-organigrama', compact('organigramas'));
+        return view('admin.menu-conocenos.organigrama.view-organigrama', compact('organigramas', 'areas'));
     }
 
     /**
