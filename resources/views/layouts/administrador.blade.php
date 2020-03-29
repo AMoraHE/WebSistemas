@@ -14,7 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-noticias.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-formularios.css')}}">
 
-		<link rel="stylesheet" type="text/css" href="{{ asset('ccss/flexslider.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/flexslider.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css')}}">
 
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/organigrama.css')}}">
@@ -30,7 +30,7 @@
 		<script src="{{ asset('js/moment.min.js')}}"></script>
 
 		<script src="{{ asset('js/fullcalendar.min.js')}}"></script>
-		
+
 		<link rel="stylesheet" type="text/css" href="css/fullcalendar.css">
 		<script src="{{ asset('js/es.js')}}js/es.js"></script>
 
