@@ -16,10 +16,20 @@ class OrganigramaController extends Controller
      */
     public function index()
     {
-        //$organigramas = Organigrama::all();
+         
+        //unir ambas tablas
         $organigramas = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.*')->get();
 
-        $areas = Area::all();
+        $areas=Area::all();
+        
+        return view('admin.menu-conocenos.organigrama.view-organigrama', compact('organigramas', 'areas'));
+    }
+
+    public function filtrar($nombre)
+    {
+        $organigramas = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.*')->where('areas.nombre', '=', $nombre)->get();
+
+        $areas=Area::all();
         
         return view('admin.menu-conocenos.organigrama.view-organigrama', compact('organigramas', 'areas'));
     }
@@ -31,7 +41,8 @@ class OrganigramaController extends Controller
      */
     public function create()
     {
-        //
+        $areas = Area::all();
+        return view('admin.menu-conocenos.organigrama.agregar-organigrama', compact('areas'));
     }
 
     /**
@@ -42,7 +53,17 @@ class OrganigramaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $orga = new Organigrama;
+        $orga->area_id = $request->get('area_id');
+        $orga->puesto = $request->input('puesto');
+        $orga->integrante = $request->input('nombre');
+        $orga->genero = $request->get('genero_id');
+        $orga->slug = time().$request->input('nombre');
+        $orga->save();
+
+        return redirect()->route('Organigrama.index')->with('status','Inserción Exitosa');
+        //return $orga;
+        
     }
 
     /**
@@ -62,9 +83,13 @@ class OrganigramaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Organigrama $Organigrama)
     {
-        //
+
+        
+        $areas = Area::where('id', '=', $Organigrama->area_id)->firstOrFail();
+        return view('admin.menu-conocenos.organigrama.editar-organigrama', compact('Organigrama', 'areas'));
+        //return $Organigrama;
     }
 
     /**
@@ -74,9 +99,14 @@ class OrganigramaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Organigrama $Organigrama)
     {
-        //
+        $Organigrama->fill($request->all());
+        $Organigrama->save();
+
+        //return $request;
+
+        return redirect()->route('Organigrama.index')->with('status','Actualización Exitosa');
     }
 
     /**
@@ -85,8 +115,9 @@ class OrganigramaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Organigrama $Organigrama)
     {
-        //
+        $Organigrama->delete();
+        return redirect()->route('Organigrama.index')->with('status','Eliminación exitosa');
     }
 }

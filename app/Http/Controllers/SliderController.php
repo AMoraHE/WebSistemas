@@ -19,6 +19,14 @@ class SliderController extends Controller
         return view('admin.menu-inicio.slider.slider', compact('sliders'));
     }
 
+    public function filtrar($id)
+    {
+        $slidersG = Slider::all();
+        $slider = Slider::where('id', '=', $id)->firstOrFail();
+
+        return view('admin.menu-inicio.slider.editar', compact('slidersG','slider'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
