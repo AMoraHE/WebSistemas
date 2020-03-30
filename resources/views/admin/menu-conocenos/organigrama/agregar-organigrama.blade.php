@@ -16,7 +16,7 @@
   
   <!---------------------- AGREGAR IMG -------------------------> 
 
-    <form class="form-group" method="POST" action="/Organigrama">
+    <form class="form-group" method="POST" action="/Organigrama" enctype="multipart/form-data">
       @csrf
 
     <div class="contenedor-cargar-img">
@@ -33,7 +33,7 @@
             <i class="fas fa-cloud-upload-alt"></i> Subir Archivo
           </label>
             
-          <input id="file-upload" onchange='cambiar()' type="file" style='display: none;'/>
+          <input required id="file-upload" name="imgOrg" onchange='cambiar()' type="file" style='display: none;'/>
 
           <div id="info-img">No se Eligió Archivo</div>
           
@@ -54,7 +54,7 @@
 
     <div class="formulario"> 
       <div><label for="">Área</label></div>
-          <select name="area_id" id ="area" class="genero">     <!------------- Select de Área utilizando option ------------------>
+          <select name="area_id" id ="area" class="genero" required>     <!------------- Select de Área utilizando option ------------------>
                           <option value="">--Elija el Área--</option>
                           @foreach ($areas as $area)
 
@@ -69,17 +69,17 @@
 
       <div class="formulario"> 
             <label for="">Puesto</label>
-            <input type="text" name="puesto" id ="puesto" value="" placeholder="Puesto del Integrante" class="form-control">
+            <input type="text" name="puesto" id ="puesto" value="" placeholder="Puesto del Integrante" class="form-control" required>
       </div>
 
       <div class="formulario"> 
             <label for="">Nombre</label>
-            <input type="text" name="nombre" id ="informacion-integrante" value="" placeholder="Nombre del Integrante" class="form-control">
+            <input type="text" name="nombre" id ="informacion-integrante" value="" placeholder="Nombre del Integrante" class="form-control" required>
       </div>
 
       <div class="formulario"> 
         <div><label for="">Género del Integrante</label></div>
-            <select name="genero_id" id ="genero" class="genero"> <!------------- Select de Género utilizando option ------------------>
+            <select name="genero_id" id ="genero" class="genero" required> <!------------- Select de Género utilizando option ------------------>
                             <option value="">--Elija el genéro--</option>
                             <option value="H">Hombre <i class="fas fa-male"></i></option>
                             <option value="M">Mujer <i class="fas fa-female"></i></option>
@@ -89,7 +89,7 @@
       <div class="formulario">
 
         <label for="">Correo Electrónico</label>
-        <input type="email" name="correo" id="correo" placeholder="Ej: usuario@servidor.com">
+        <input type="email" name="correo" id="correo" placeholder="Ej: usuario@servidor.com" required>
         
       </div>
 

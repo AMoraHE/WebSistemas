@@ -34,7 +34,7 @@
                 <i class="fas fa-cloud-upload-alt"></i> Subir Archivo
               </label>
                 
-              <input id="file-upload" onchange='cambiar()' type="file" style='display: none;'/>
+              <input id="file-upload" onchange='cambiar()' name="imgOrg" type="file" style='display: none;'/>
 
               <div id="info-img">No se Eligió Archivo</div>
               
@@ -44,7 +44,7 @@
 
             <div class="contenedor-img-seccion">
               
-              <img src="img/sistemas.png">
+              <img src="../images/organigrama/{{$Organigrama->foto}}">
 
             </div>
               
@@ -65,12 +65,12 @@
 
         <div class="formulario"> 
               <label for="">Nombre</label>
-              <input type="text" name="integrante" id ="informacion-integrante" value="{{$Organigrama->integrante}}" placeholder="Nombre del Integrante" class="form-control">
+              <input type="text" name="integrante" id ="informacion-integrante" value="{{$Organigrama->integrante}}" placeholder="Nombre del Integrante" class="form-control" required>
         </div>
 
         <div class="formulario"> 
           <div><label for="">Género del Integrante</label></div>
-              <select name="genero" id ="genero" class="genero">     <!------------- Select de Género utilizando option ------------------>
+              <select name="genero_id" id ="genero" class="genero" required>     <!------------- Select de Género utilizando option ------------------>
                               @if($Organigrama->genero === 'H')
                               <option value="H">Hombre</option>
                               <option value="M">Mujer</option>
@@ -84,7 +84,7 @@
         <div class="formulario">
 
           <label for="">Correo Electrónico</label>
-          <input type="email" name="correo" id="correo" placeholder="Ej: usuario@servidor.com">
+          <input type="email" name="correo" id="correo" value="{{$Organigrama->correo}}" placeholder="Ej: usuario@servidor.com" required>
         
         </div>
 

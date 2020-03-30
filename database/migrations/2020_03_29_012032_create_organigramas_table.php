@@ -20,7 +20,8 @@ class CreateOrganigramasTable extends Migration
             $table->text('puesto');
             $table->text('integrante');
             $table->enum('genero', ['H', 'M']);
-
+            $table->text('foto');
+            $table->text('correo');
             $table->foreign('area_id')->references('id')->on('areas');
         });
     }
