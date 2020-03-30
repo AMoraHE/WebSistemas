@@ -44,7 +44,7 @@
 
             <div class="contenedor-img-seccion">
               
-              <img src="../images/organigrama/{{$Organigrama->foto}}">
+              <img src="/images/organigrama/{{$Organigrama->foto}}">
 
             </div>
               

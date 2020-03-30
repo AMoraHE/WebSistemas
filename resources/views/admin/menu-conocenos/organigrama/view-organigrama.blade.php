@@ -75,7 +75,7 @@
               @foreach ($organigramas as $organigrama)
 
               <tr>
-                <td><img src="../images/organigrama/{{$organigrama->foto}}"></td>
+                <td><img src="/images/organigrama/{{$organigrama->foto}}"></td>
                 <td>{{$organigrama->nombre}}</td>
                 <td>{{$organigrama->puesto}}</td>
                 <td>{{$organigrama->integrante}}</td>
