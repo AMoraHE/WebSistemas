@@ -75,7 +75,7 @@
               @foreach ($organigramas as $organigrama)
 
               <tr>
-                <td></td>
+                <td><img src="../images/organigrama/{{$organigrama->foto}}"></td>
                 <td>{{$organigrama->nombre}}</td>
                 <td>{{$organigrama->puesto}}</td>
                 <td>{{$organigrama->integrante}}</td>
@@ -90,7 +90,7 @@
 
                   @endif
                 </td>
-                <td></td>
+                <td>{{$organigrama->correo}}</td>
                 <form action="/Organigrama/{{$organigrama->slug}}" method="POST">
 								@csrf
 								@method('DELETE')

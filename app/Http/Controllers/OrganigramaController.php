@@ -54,11 +54,21 @@ class OrganigramaController extends Controller
     public function store(Request $request)
     {
         $orga = new Organigrama;
+
+        if ($request->hasFile('imgOrg'))
+        {
+            $file = $request->file('imgOrg');
+            $name = time().$file->getClientOriginalName();
+            $file->move(public_path().'/images/organigrama/',$name);
+            $orga->foto = $name;
+        }
+
         $orga->area_id = $request->get('area_id');
         $orga->puesto = $request->input('puesto');
         $orga->integrante = $request->input('nombre');
         $orga->genero = $request->get('genero_id');
         $orga->slug = time().$request->input('nombre');
+        $orga->correo = $request->input('correo');
         $orga->save();
 
         return redirect()->route('Organigrama.index')->with('status','Inserción Exitosa');
@@ -101,7 +111,25 @@ class OrganigramaController extends Controller
      */
     public function update(Request $request, Organigrama $Organigrama)
     {
-        $Organigrama->fill($request->all());
+        //$Organigrama->fill($request->all());
+        if ($request->hasFile('imgOrg'))
+        {
+            $oldFile = public_path().'/images/organigrama/'.$Organigrama->foto;
+            if(file_exists($oldFile))
+            {
+                unlink($oldFile);
+            }
+
+            $file = $request->file('imgOrg');
+            $name = time().'-'.$file->getClientOriginalName();
+            $file->move(public_path().'/images/organigrama/',$name);
+            $Organigrama->foto = $name;
+        }
+
+        $Organigrama->integrante = $request->input('integrante');
+        $Organigrama->genero = $request->get('genero_id');
+        $Organigrama->correo = $request->input('correo');
+
         $Organigrama->save();
 
         //return $request;
@@ -117,6 +145,12 @@ class OrganigramaController extends Controller
      */
     public function destroy(Organigrama $Organigrama)
     {
+        $oldFile = public_path().'/images/organigrama/'.$Organigrama->foto;
+        if(file_exists($oldFile))
+        {
+            unlink($oldFile);
+        }
+
         $Organigrama->delete();
         return redirect()->route('Organigrama.index')->with('status','Eliminación exitosa');
     }
