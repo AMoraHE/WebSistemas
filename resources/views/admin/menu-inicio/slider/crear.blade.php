@@ -1,6 +1,6 @@
 @extends('layouts.administrador')
 
-@section('title', 'Editar Noticia')
+@section('title', 'Agregar Noticia')
 
 @section('content')
 		<div class="seccion-principal">
@@ -18,6 +18,12 @@
   			<input type="text" name="contenido" id="titulo" value="" placeholder="Inserte Titulo Deseado" class="form-control" required>
 
   		</div>
+
+      <div class="formulario">
+
+        <label for="">Tamaño de imagen recomendado: 1000px de ancho y 250px de alto</label>
+        
+      </div>
 
   		<div class="contenedor-cargar-img">
 
@@ -60,9 +66,8 @@
 @else
 
 	<div class="alert alert-danger" role="alert" >Se alcanzo limite de 4 Sliders, por favor edite los slider existentes </div>
-@endif
 
-  <a onclick="return confirm('¿Desea cancelar la creación del nuevo elemento?')" href="{{url()->previous()}}"><button class="btn" type="submit"><span>Cancelar</span></button></a>
+@endif
 
   <!------------------------------------------------------------- PREVISUALIZACIÓN ---------------------------------------------------------->
 
@@ -80,7 +85,13 @@
 
   			<div class="contenedor-seccion-preliminar">
 
-  				<img src="/images/slider/{{$slider->image}}">
+          <div class="contenedor-seccion-preliminar-slider-img">
+
+  				  <img src="/images/slider/{{$slider->image}}">
+
+          </div>
+
+
   				<h2>{{$slider->contenido}}</h2>
 
   			</div>
@@ -88,8 +99,12 @@
 
   		</div>
 
+      <div class="contenedor-botones">
+
+      <a onclick="return confirm('¿Desea cancelar la creación del nuevo elemento?')" href="{{url()->previous()}}"><button class="btn" type="submit"><span>Cancelar</span></button></a>
+    
+      </div>
+
 
 </div>
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<script src="{{asset('js/select.js')}}""></script>
 @endsection

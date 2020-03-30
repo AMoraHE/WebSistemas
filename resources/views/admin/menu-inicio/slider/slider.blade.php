@@ -1,6 +1,6 @@
 @extends('layouts.administrador')
 
-@section('title', 'Editar Noticia')
+@section('title', 'Lista de Sliders')
 
 @section('content')
 <div class="container">
@@ -14,7 +14,7 @@
   </div>
   @foreach ($sliders as $slider)
 
-  <div class="contenedor-titulo-noticia">
+  <div class="contenedor-titulo-seccion">
 
       <h3>{{$slider->contenido}}</h3>
 
@@ -22,24 +22,17 @@
 
   <div class="contenedor-cuerpo-noticia">
 
-      <div class="contenedor-img-noticia">
+      <div class="contenedor-img-slider">
 
         <img src="../images/slider/{{$slider->image}}">
-
-      </div>
-
-      <div class="contenedor-texto">
-
-        <p> </p>
 
       </div>
 
   </div>
 
   <div class="contenedor-botones">
-  <a onclick="return confirm('¿Desea editar el elemento seleccionado?')" href="/slider/{{$slider->slug}}/edit"><button class="btn"  ><span>editar</span></button>
-</a>
-
+  <a onclick="return confirm('¿Desea editar el elemento seleccionado?')" href="/slider/{{$slider->slug}}/edit"><button class="btn"  ><span>Editar</span></button></a>
+  <button class="btn"  ><span>Eliminar</span></button>
 
 
   </div>

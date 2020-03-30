@@ -1,6 +1,6 @@
 @extends('layouts.administrador')
 
-@section('title', 'Principal')
+@section('title', 'Inicio')
 
 
 @section('content-slider')
@@ -10,6 +10,7 @@
 
 
 				<!------------------------------------------------------- Slider ---------------------------------------------------->
+			<div class="contenedor-slider">
 
 				<div class="seccion-principal">
 
@@ -39,6 +40,8 @@
 					</div>
 
 				</div>
+
+			</div>
 
 
 
@@ -103,7 +106,12 @@
 			@foreach ($noticias as $noticia)
 				<div class="contenedor-seccion-preliminar">
 
-					<img src="/images/news/{{$noticia->newimage}}">
+					<div class="contenedor-seccion-preliminar-noticia-img">
+
+						<img src="/images/news/{{$noticia->newimage}}">
+
+					</div>
+
 					<h2>{{$noticia->titulo}}</h2>
 
 				</div>

@@ -3,26 +3,33 @@
 @section('title', 'Editar Noticia')
 
 @section('content')
-		<div class="seccion-principal">  		
+		<div class="seccion-principal">
 
-      <div class="contenedor-select-seccion">
-            
-          <select name="slider_id" id ="slider" class="seleccion" onchange="top.location.href = this.options[this.selectedIndex].value">
-            <!------------- Select de Área utilizando option ------------------>
-                  <option value="">--Elija el slider--</option> 
+      <div class="contenedor-titulo-seccion-select">
 
-                  @foreach ($slidersG as $sliderG)
+        <h3>Editar Slider</h3>
 
-                  @php
-                  $var = $sliderG->id
-                  @endphp
 
-                  <option value="{{route('filtrarslider', ['id' => $var])}}">{{$sliderG->id}}</option>
+        <div class="contenedor-select-seccion">
+              
+            <select name="slider_id" id ="slider" class="seleccion" onchange="top.location.href = this.options[this.selectedIndex].value">
+              <!------------- Select de Área utilizando option ------------------>
+                    <option value="">--Elija el slider--</option> 
 
-                  @endforeach
-                </select>
-                <i></i>
-  
+                    @foreach ($slidersG as $sliderG)
+
+                    @php
+                    $var = $sliderG->id
+                    @endphp
+
+                    <option value="{{route('filtrarslider', ['id' => $var])}}">{{$sliderG->id}}</option>
+
+                    @endforeach
+                  </select>
+                  <i></i>
+    
+        </div>
+
       </div>
 
   	<!----------------------------------------------------------------- FORMULARIO - CARGAR IMG ---------------------------------------------------------->
@@ -39,11 +46,17 @@
 
   		</div>
 
+      <div class="formulario">
+
+        <label for="">Tamaño de imagen recomendado: 1000px de ancho y 250px de alto</label>
+        
+      </div>
+
   		<div class="contenedor-cargar-img">
 
   				<div class="contenedor-txt-seccion">
 
-  					<label for="">Cargar IMG</label>
+  					<label for="">Cargar IMG:</label>
 
   				</div>
 
@@ -74,12 +87,9 @@
 
   			<a onclick="return confirm('¿Desea guardar los cambios realizados?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
 
-
   		</div>
 
 </form>
-
-<a onclick="return confirm('¿Desea regresar al menú anterior?')" href="{{url()->previous()}}"><button class="btn" ><span>Regresar</span></button></a>
   <!------------------------------------------------------------- PREVISUALIZACIÓN ---------------------------------------------------------->
 
 
@@ -96,20 +106,26 @@
 
   			<div class="contenedor-seccion-preliminar">
 
-  				<img src="/images/slider/{{$sliderG->image}}">
+          <div class="contenedor-seccion-preliminar-slider-img">
+
+  				  <img src="/images/slider/{{$sliderG->image}}">
+
+          </div>
+
+
   				<h2>{{$sliderG->contenido}}</h2>
 
   			</div>
       @endforeach
 
-
-        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-        <script src="js/select.js"></script>
-
   		</div>
 
+      <div class="contenedor-botones">
+
+        <a onclick="return confirm('¿Desea regresar al menú anterior?')" href="{{url()->previous()}}"><button class="btn" ><span>Cancelar</span></button></a>
+
+      </div>
 
 </div>
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<script src="{{asset('js/select.js')}}""></script>
+
 @endsection
