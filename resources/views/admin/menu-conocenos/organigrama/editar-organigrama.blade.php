@@ -14,9 +14,44 @@
 
     </div>
 
+    <!---------------------- AGREGAR IMG -------------------------> 
+
     <form method="POST" action="/Organigrama/{{$Organigrama->slug}}" enctype="multipart/form-data">
         @method('PUT')
         @csrf
+
+        <div class="contenedor-cargar-img">
+
+            <div class="contenedor-txt-seccion">
+              
+              <label for="">Subir Foto del Personal</label>
+
+            </div>
+
+            <div class="contenedor-boton-cargar">
+
+              <label for="file-upload" class="subir">
+                <i class="fas fa-cloud-upload-alt"></i> Subir Archivo
+              </label>
+                
+              <input id="file-upload" onchange='cambiar()' type="file" style='display: none;'/>
+
+              <div id="info-img">No se Eligió Archivo</div>
+              
+              
+            </div>
+              
+
+            <div class="contenedor-img-seccion">
+              
+              <img src="img/sistemas.png">
+
+            </div>
+              
+
+        </div>
+
+      <!---------------------- AGREGAR DATOS ------------------------->
 
         <div class="formulario"> 
               <label for="">Área</label>
@@ -45,6 +80,15 @@
                               @endif
                             </select>
         </div>
+
+        <div class="formulario">
+
+          <label for="">Correo Electrónico</label>
+          <input type="email" name="correo" id="correo" placeholder="Ej: usuario@servidor.com">
+        
+        </div>
+
+        <!---------------------- BOTONES -------------------------> 
 
         <div class="contenedor-botones">
                     

@@ -60,10 +60,12 @@
               
               <thead>
                 <tr>
+                  <th>Foto</th>
                   <th>Área</th>
                   <th>Puesto</th>
                   <th>Integrantes</th>
                   <th>Género</th>
+                  <th>Email</th>
                   <th>Eliminar</th>
                   <th>Editar</th>
                 </tr>
@@ -73,6 +75,7 @@
               @foreach ($organigramas as $organigrama)
 
               <tr>
+                <td></td>
                 <td>{{$organigrama->nombre}}</td>
                 <td>{{$organigrama->puesto}}</td>
                 <td>{{$organigrama->integrante}}</td>
@@ -87,6 +90,7 @@
 
                   @endif
                 </td>
+                <td></td>
                 <form action="/Organigrama/{{$organigrama->slug}}" method="POST">
 								@csrf
 								@method('DELETE')

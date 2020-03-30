@@ -205,7 +205,7 @@
 
 .contenedor-img-seccion{
 	width: 20%;
-	min-width: 200px;
+	/*min-width: 200px;*/
     margin: 0px 20px;
     padding: 10px;
     display: flex;
@@ -222,7 +222,7 @@
 
 
 .contenedor-txt-seccion{
-	min-height: 200px;
+	/*min-height: 200px;*/
     margin: 0px 20px;
     padding: 10px;
     display: flex;
@@ -257,7 +257,7 @@
 }
 
 #info-img{
-	min-width: 200px;
+	/*min-width: 200px;*/
 	text-align: center;
 	max-width: 350px;
 	overflow: auto;
@@ -265,7 +265,7 @@
 
 
 .contenedor-boton-cargar button{
-	min-width: 250px;
+	/*min-width: 250px;*/
 }
 
 .contenedor-boton-CE{
@@ -275,7 +275,7 @@
 }
 
 .contenedor-boton-CE button{
-	min-width: 250px;
+	/*min-width: 250px;*/
 }
 
 /***********************************************************************************SELECTOR FECHA************************************************************/
