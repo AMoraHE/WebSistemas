@@ -25,6 +25,15 @@ class OrganigramaController extends Controller
         return view('admin.menu-conocenos.organigrama.view-organigrama', compact('organigramas', 'areas'));
     }
 
+    public function filtrar($nombre)
+    {
+        $organigramas = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.*')->where('areas.nombre', '=', $nombre)->get();
+
+        $areas=Area::all();
+        
+        return view('admin.menu-conocenos.organigrama.view-organigrama', compact('organigramas', 'areas'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

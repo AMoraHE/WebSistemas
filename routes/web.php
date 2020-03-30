@@ -121,3 +121,5 @@ Route::get('Campo-Laboral-Eliminar/{slug}', 'CampoLaboralController@destroy')->n
 
 //Rutas Organigrama
 Route::resource('Organigrama', 'OrganigramaController');
+
+Route::get('Organigrama/filtrar/{nombre}', 'OrganigramaController@filtrar')->name('filtrar');

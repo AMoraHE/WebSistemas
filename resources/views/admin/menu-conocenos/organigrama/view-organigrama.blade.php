@@ -21,12 +21,18 @@
 
         <div class="contenedor-select-seccion">
             
-          <select name="area_id" id ="area" class="seleccion"> <!------------- Select de Área utilizando option ------------------>
+          <select name="area_id" id ="area" class="seleccion" onchange="top.location.href = this.options[this.selectedIndex].value">
+            <!------------- Select de Área utilizando option ------------------>
                   <option value="">--Elija el area--</option> 
+                  <option value="/Organigrama">TODOS</option> 
 
                   @foreach ($areas as $area)
 
-                  <a href="Organigrama.index"><option value="{{$area->nombre}}">{{$area->nombre}}</option></a>
+                  @php
+                  $var = $area->nombre
+                  @endphp
+
+                  <option value="{{route('filtrar', ['nombre' => $var])}}">{{$area->nombre}}</option>
 
                   @endforeach
                 </select>
