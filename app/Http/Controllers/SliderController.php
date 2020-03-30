@@ -136,9 +136,17 @@ class SliderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Slider $slider)
     {
-        //
+        $file_path =public_path().'/images/slider/'.$slider->image;
+        if(file_exists($file_path))
+        {
+            unlink($file_path);
+        }
+
+        $slider->delete();
+
+        return redirect()->route('slider')->with('status','Eliminación exitosa');
     }
 
     public function confirmarslider(Request $request)

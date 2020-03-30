@@ -3,6 +3,13 @@
 @section('title', 'Lista de Sliders')
 
 @section('content')
+
+@if(session('status'))
+    <div class="alert alert-success">
+        {{session('status')}}
+    </div>
+@endif
+
 <div class="container">
 
 </div>
@@ -24,7 +31,7 @@
 
       <div class="contenedor-img-slider">
 
-        <img src="../images/slider/{{$slider->image}}">
+        <img src="/images/slider/{{$slider->image}}">
 
       </div>
 
@@ -32,7 +39,13 @@
 
   <div class="contenedor-botones">
   <a onclick="return confirm('¿Desea editar el elemento seleccionado?')" href="/slider/{{$slider->slug}}/edit"><button class="btn"  ><span>Editar</span></button></a>
-  <button class="btn"  ><span>Eliminar</span></button>
+  <form action="/slider/{{$slider->slug}}" method="POST">
+    @csrf
+    @method('DELETE')
+
+    <a onclick="return confirm('¿Seguro que desea eliminar este elemento?')"><button class="btn" type="submit"><span>Eliminar</span></button></a>
+
+  </form>
 
 
   </div>
