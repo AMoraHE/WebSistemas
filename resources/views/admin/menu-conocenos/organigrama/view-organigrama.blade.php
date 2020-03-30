@@ -47,7 +47,7 @@
   <!----------------------------------------------------------------- FORMULARIO - CARGAR IMG ---------------------------------------------------------->
 <div class="formulario">
       
-      <a href="Organigrama/create"><button class="btn" ><span>Agregar</span></button></a>
+      <a href="{{route('OrganigramaCrear')}}"><button class="btn" ><span>Agregar</span></button></a>
       
     </div>
 
