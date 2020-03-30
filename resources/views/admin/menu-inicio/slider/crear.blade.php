@@ -8,7 +8,8 @@
 
   	<!----------------------------------------------------------------- FORMULARIO - CARGAR IMG ---------------------------------------------------------->
 
-    <form class="form-goup" files="true" method="POST" action="/slider" enctype="multipart/form-data">
+@if(count($sliders) <=3  )
+		<form class="form-goup" files="true" method="POST" action="/slider" enctype="multipart/form-data">
           @csrf
   		<div class="formulario">
 
@@ -56,7 +57,11 @@
   		</div>
 
 </form>
-  
+@else
+
+	<div class="alert alert-danger" role="alert" >Se alcanzo limite de 4 Sliders, por favor edite los slider existentes </div>
+@endif
+
   <a onclick="return confirm('¿Desea cancelar la creación del nuevo elemento?')" href="{{url()->previous()}}"><button class="btn" type="submit"><span>Cancelar</span></button></a>
 
   <!------------------------------------------------------------- PREVISUALIZACIÓN ---------------------------------------------------------->

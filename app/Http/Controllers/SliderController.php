@@ -28,6 +28,7 @@ class SliderController extends Controller
     {
         $sliders = Slider::all();
 
+
         return view('admin.menu-inicio.slider.crear',compact('sliders'));
     }
 
@@ -39,7 +40,12 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
+
+
         $slider = new Slider();
+        $sliders = Slider::all();
+
+        if(count($sliders) <=3){
 
         if ($request->hasFile('image'))
         {
@@ -50,10 +56,13 @@ class SliderController extends Controller
         }
 
         $slider->contenido = $request->input('contenido');
-        
+
         $slider->slug = time();
 
         $slider->save();
+      }else{
+        return 'Error limite de siliders';
+      }
         return redirect()->route('slider');
     }
 
@@ -79,7 +88,8 @@ class SliderController extends Controller
 
         $slidersG = Slider::all();
 
-        return view('admin.menu-inicio.slider.editar', compact('slidersG','slider' ));
+
+        return view('admin.menu-inicio.slider.editar', compact('slidersG','slider'));
     }
 
     /**
@@ -98,7 +108,7 @@ class SliderController extends Controller
             {
                 unlink($file_path);
             }
-            
+
             $file = $request->file('image');
             $name2 = time().$file->getClientOriginalName();
             $file->move(public_path().'/images/slider/',$name2);
@@ -121,5 +131,12 @@ class SliderController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function confirmarslider(Request $request)
+    {
+
+      return false;
+
     }
 }
