@@ -76,7 +76,7 @@
 
   				<div class="contenedor-img-seccion">
 
-  					<img src="/img/sistemas.png">
+  					<img src="/images/slider/{{$slider->image}}">
 
   				</div>
 
