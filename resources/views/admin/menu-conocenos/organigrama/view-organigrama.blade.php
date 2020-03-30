@@ -4,6 +4,12 @@
 
 @section('content')
 
+@if(session('status'))
+    <div class="alert alert-success">
+        {{session('status')}}
+    </div>
+@endif
+
 	
   <!----------------------------------------------------------------- SELECT ---------------------------------------------------------->
 
@@ -16,11 +22,11 @@
         <div class="contenedor-select-seccion">
             
           <select name="area_id" id ="area" class="seleccion"> <!------------- Select de Área utilizando option ------------------>
-                  <option value="">--Elija el area--</option>
+                  <option value="">--Elija el area--</option> 
 
                   @foreach ($areas as $area)
 
-                  <option>{{$area->nombre}}</option>
+                  <a href="Organigrama.index"><option value="{{$area->nombre}}">{{$area->nombre}}</option></a>
 
                   @endforeach
                 </select>
@@ -35,7 +41,7 @@
   <!----------------------------------------------------------------- FORMULARIO - CARGAR IMG ---------------------------------------------------------->
 <div class="formulario">
       
-      <button class="btn" ><span>Agregar</span></button>
+      <a href="Organigrama/create"><button class="btn" ><span>Agregar</span></button></a>
       
     </div>
 
@@ -75,8 +81,15 @@
 
                   @endif
                 </td>
-                <td><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></td>
-                <td><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></td> 
+                <form action="/Organigrama/{{$organigrama->slug}}" method="POST">
+								@csrf
+								@method('DELETE')
+								<td>
+								<a onclick="return confirm('¿Seguro que desea eliminar este elemento?')"><button class="btn-tabla" type="submit"><i class="far fa-trash-alt"></i></button></a>
+								</td>
+								</form>
+
+                <td><a href="/Organigrama/{{$organigrama->slug}}/edit"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a></td>
               </tr>
 
               @endforeach
@@ -89,13 +102,6 @@
 
     </div>
 
-<div class="contenedor-botones">
-
-    <button class="btn"><span>Guardar</span></button>
-    <button class="btn"><span>Cancelar</span></button>
-
-
-    </div>
     
   </div>
 
