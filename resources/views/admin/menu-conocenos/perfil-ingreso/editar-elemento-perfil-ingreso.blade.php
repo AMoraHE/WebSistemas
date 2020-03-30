@@ -21,7 +21,7 @@
 		    <div class="formulario"> 
 		      
 		          <label for="">Viñeta</label>
-		          <input type="text" name="vineta" id ="viñeta" value="{{$perfilingreso->vineta}}" placeholder="Inserte Viñeta" class="form-control" required>
+		          <input type="text" maxlength="2" name="vineta" id ="viñeta" value="{{$perfilingreso->vineta}}" placeholder="Máximo 2 viñetas: 1-@-*-3-." class="form-control" required>
 		    </div>
 
 		    <div class="formulario"> 
@@ -32,12 +32,12 @@
 		    <div class="contenedor-botones">
 		                
 		        <a onclick="return confirm('¿Desea guardar los cambios?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
+
+		        <a onclick="return confirm('¿Desea bandonar sin guardar?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
 		        
 		    </div>
 
 		</form>
-
-	    <a onclick="return confirm('¿Desea cancelar los cambios realizados?')" href="{{route('editar-perfil-ingreso')}}"><button class="btn"><span>Cancelar</span></button></a>
 
 	  </div>
 

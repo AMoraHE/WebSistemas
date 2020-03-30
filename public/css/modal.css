@@ -28,6 +28,10 @@
 	box-shadow: 0 0 6px 0 rgba(0,0,0,.4);
 	animation-name: modal;
 	animation-duration: 1s;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 2px solid #8cc63e;
 }
 
 @keyframes modal{
@@ -53,6 +57,20 @@
 	color: #7f8c8d;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+.modal-encabezado{
+	border-radius: 10px 10px 0px 0px;
+	-moz-border-radius: 10px 10px 0px 0px;
+	-webkit-border-radius: 10px 10px 0px 0px;
+	border: 2px solid #8cc63e;
+}
+
+.modal-pie{
+	border-radius: 0px 0px 10px 10px;
+	-moz-border-radius: 0px 0px 10px 10px;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	border: 2px solid #8cc63e;
 }
 
 .modal-encabezado, .modal-pie{

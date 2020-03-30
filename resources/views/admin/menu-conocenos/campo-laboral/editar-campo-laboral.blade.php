@@ -67,7 +67,7 @@
 
 		<div class="contenedor-botones">
 
-		<a href="{{route('CampoLaboralIndex')}}"><button class="btn"><span>Regresar</span></button></a>
+		<a href="{{route('CampoLaboralIndex')}}"><button class="btn"><span>Volver</span></button></a>
 
 		</div>
 		

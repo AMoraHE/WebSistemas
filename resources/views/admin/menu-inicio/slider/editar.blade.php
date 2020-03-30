@@ -1,6 +1,6 @@
 @extends('layouts.administrador')
 
-@section('title', 'Editar Noticia')
+@section('title', 'Editar Slider')
 
 @section('content')
 		<div class="seccion-principal">
@@ -122,7 +122,7 @@
 
       <div class="contenedor-botones">
 
-        <a onclick="return confirm('¿Desea regresar al menú anterior?')" href="{{route('slider')}}"><button class="btn" ><span>Cancelar</span></button></a>
+        <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
 
       </div>
 

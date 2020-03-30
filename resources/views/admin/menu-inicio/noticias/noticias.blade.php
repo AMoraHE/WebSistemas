@@ -23,12 +23,16 @@
 
         		<form  files = "true" method="GET" action="/buscador-noticias" enctype="multipart/form-data">
           			@csrf
-					<input type="search" name="key" placeholder="Noticia">
 
-            		<button type="submit" class="btn-buscar"><span><i class="icono izquierda fas fa-search"></i></span></button>
+          			<div class="formulario">
 
+						<input type="search" name="key" placeholder="Noticia">
+						<button type="submit" class="btn-buscar"><span><i class="icono izquierda fas fa-search"></i></span></button>
+
+					
+					</div>
+					
 				</form>
-
 
 			</div>
 

@@ -20,7 +20,7 @@
 
       <div class="formulario"> 
             <label for="">Viñetas</label>
-            <input type="text" name="vineta" id ="informacion-perfil" value="{{$campolaboral->vineta}}" placeholder="1-@-*-3-." class="form-control" required>
+            <input type="text" maxlength="2" name="vineta" id ="informacion-perfil" value="{{$campolaboral->vineta}}" placeholder="Máximo 2 viñetas: 1-@-*-3-." class="form-control" required>
       </div>
 
       <div class="formulario"> 
@@ -32,11 +32,12 @@
                   
           <a onclick="return confirm('¿Desea guardar los cambios?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
 
+          <a onclick="return confirm('¿Desea bandonar sin guardar?')" href="{{route('CampoLaboralLista')}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
+
+
       </div>
 
     </form>
-
-      <a onclick="return confirm('¿Desea cancelar los cambios realizados?')" href="{{route('CampoLaboralLista')}}"><button class="btn"><span>Cancelar</span></button></a>
 
   </div>
 

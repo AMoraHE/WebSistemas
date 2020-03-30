@@ -61,16 +61,11 @@
 		<div class="contenedor-botones">
 
  			<a onclick="return confirm('¿Desea guardar la nueva noticia?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
+ 			<a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
               
 		</div>
 
   </form>
-
-  <div class="contenedor-botones">
-              
-   <a onclick="return confirm('¿Desea cancelar la creación de la noticia?')" href="/noticias-admin/"><button class="btn"><span>Cancelar</span></button></a>
-
-  </div>
 
 </div>
 

@@ -101,7 +101,7 @@
 
       <div class="contenedor-botones">
 
-      <a onclick="return confirm('¿Desea cancelar la creación del nuevo elemento?')" href="{{url()->previous()}}"><button class="btn" type="submit"><span>Cancelar</span></button></a>
+      <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
     
       </div>
 

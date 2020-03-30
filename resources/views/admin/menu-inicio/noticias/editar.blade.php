@@ -26,6 +26,12 @@
 
  		</div>
 
+ 		<div class="formulario">
+
+ 			<label for="">Tamaño de imagen recomendado: 220px de ancho y 200px de alto</label>
+
+ 		</div>
+
  		<div class="contenedor-cargar-img">
 
  			<div class="contenedor-txt-seccion">
@@ -63,15 +69,12 @@
 			<div class="contenedor-botones">
 
 				<a onclick="return confirm('¿Desea guardar los cambios realizados?')"><button class="btn" type="submit" ><span>Guardar</span></button></a>
+				<a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
   						
-		  </div>
+		  	</div>
 
   </form>
 
-  <a onclick="return confirm('¿Desea cancelar los cambios realizados?')" href="{{url()->previous()}}"><button class="btn"><span>Cancelar</span></button></a>
-
 </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<script src="{{asset('js/select.js')}}"></script>
 @endsection

@@ -41,11 +41,12 @@
                 
         <a onclick="return confirm('¿Desea guardar los cambios?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
 
+        <a onclick="return confirm('¿Desea bandonar sin guardar?')" href="{{route('LineasInvestigacion')}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
+
+
       </div>
 
     </form>
-
-    <a onclick="return confirm('¿Desea cancelar los cambios realizados?')" href="{{route('LineasInvestigacion')}}"><button class="btn"><span>Cancelar</span></button></a>
 
   </div>
 

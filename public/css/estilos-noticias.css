@@ -20,8 +20,7 @@
 
 .contenedor-img-noticia img{
 	width: 100%;
-	height: 100%; /*Ajusta la img del alto para que no se salga*/
-	display: block;
+	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -196,7 +195,7 @@
 }
 
 .btn-buscar {
-	width: 15%;
+	width: 100%;
 	background: #fff;
 	border: none;
 	border-radius: 6px;
@@ -204,9 +203,9 @@
 	cursor: pointer;
 	font-size: 16px;
 	padding: 10px 10px;
+	display: flex;
+	justify-content: center;
 	text-align: center;
-	margin-left: 5px;
-
 }
 
 .btn-buscar span{
@@ -222,7 +221,7 @@
 
 .btn-buscar:hover span::after{
 	opacity: 1;
-	margin-left: 3px;
+	margin-left: 5px;
 }
 
 .contenedor-buscador-noticia .icono {
