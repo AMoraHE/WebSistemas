@@ -122,7 +122,7 @@
 
       <div class="contenedor-botones">
 
-        <a onclick="return confirm('¿Desea regresar al menú anterior?')" href="{{url()->previous()}}"><button class="btn" ><span>Cancelar</span></button></a>
+        <a onclick="return confirm('¿Desea regresar al menú anterior?')" href="{{route('slider')}}"><button class="btn" ><span>Cancelar</span></button></a>
 
       </div>
 
