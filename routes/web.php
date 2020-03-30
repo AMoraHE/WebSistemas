@@ -27,6 +27,8 @@ Route::resource('noticias-admin','NoticiaController')->parameters(['noticias-adm
 
 Route::resource('slider','SliderController')->parameters(['slider' => 'slider']);
 
+Route::get('slider/filtrar/{id}', 'SliderController@filtrar')->name('filtrarslider');
+
 /////Redirecionamiento del menu
 
 Route::get('slider', 'SliderController@index')->name('slider');

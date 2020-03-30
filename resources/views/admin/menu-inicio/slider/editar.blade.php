@@ -3,25 +3,27 @@
 @section('title', 'Editar Noticia')
 
 @section('content')
-		<div class="seccion-principal">
-  		<div class="contenedor-titulo-seccion-select">
+		<div class="seccion-principal">  		
 
-  				<h3>Editar elementos del Slider</h3>
+      <div class="contenedor-select-seccion">
+            
+          <select name="slider_id" id ="slider" class="seleccion" onchange="top.location.href = this.options[this.selectedIndex].value">
+            <!------------- Select de Área utilizando option ------------------>
+                  <option value="">--Elija el slider--</option> 
 
-  			<div class="contenedor-select-seccion">
+                  @foreach ($slidersG as $sliderG)
 
-  				<button class="btn-seleccionar">Seleccionar IMG</button>
-  					<ul>
-              @foreach ($slidersG as $sliderG)
-                <li><a href="/slider/{{$sliderG->slug}}/editar/">{{$sliderG->id}}</a></li>
-              @endforeach
+                  @php
+                  $var = $sliderG->id
+                  @endphp
 
-  					</ul>
-  					<i></i>
+                  <option value="{{route('filtrarslider', ['id' => $var])}}">{{$sliderG->id}}</option>
 
-  			</div>
-
-  		</div>
+                  @endforeach
+                </select>
+                <i></i>
+  
+      </div>
 
   	<!----------------------------------------------------------------- FORMULARIO - CARGAR IMG ---------------------------------------------------------->
 
