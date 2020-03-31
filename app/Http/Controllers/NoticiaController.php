@@ -15,7 +15,7 @@ class NoticiaController extends Controller
   */
   public function index()
  {
-    $noticias = Noticia::orderBy('id', 'desc')->paginate(4);
+    $noticias = Noticia::orderBy('id', 'desc')->paginate(15);
     return view('admin.menu-inicio.noticias.noticias', compact('noticias'));
   }
 
@@ -140,9 +140,26 @@ class NoticiaController extends Controller
     return view('admin.menu-inicio.noticias.eliminacion-anual',compact('noticias'));
   }
 
-  public function eliminacion(Request $request)
+  public function eliminacionmultiple(Request $request)
   {
-    $noticias = Noticias::where('created_at', $fecha)->delete();
-    return view('admin.menu-inicio.noticias.eliminacion-anual',compact('noticias'));
+
+
+    /////
+
+    $year =$request->year;
+  //  $noticias = Noticia::purgeYear($year);
+    $photos= Noticia::whereYear('created_at',$year)->get();
+
+
+    foreach ($photos as $photo) {
+    
+      if (file_exists(public_path('/images/news/'.$photo->newimage))) {
+        unlink(public_path('/images/news/'.$photo->newimage));
+      }
+    //  $photo->delete();
+    }
+  $noticias = Noticia::purgeYear($year);
+
+      return   'Eliminados';
   }
 }
