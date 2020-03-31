@@ -5,6 +5,15 @@
 @section('content')
 
 		<!----------------------------------------------------------------- FORMULARIO - CARGAR RETICULA ---------------------------------------------------------->
+		
+	<div class="seccion-principal">
+
+		<div class="contenedor-titulo-seccion">
+
+	        <h3>Actualizar Reticula</h3>
+
+	    </div>
+
 		<form class="form-group" method="POST" action="/VerReticula/{{$reticula->slug}}" enctype="multipart/form-data">
 			@method('PUT')
 	    	@csrf
@@ -51,7 +60,7 @@
 							<i class="fas fa-cloud-upload-alt"></i> Subir Archivo
 						</label>
 							
-						<input id="file-upload"  onchange='cambiar()' name="doc" type="file" style='display: none;'/>
+						<input id="file-upload"  onchange='cambiar()' name="doc" type="file" accept="application/pdf" style='display: none;'/>
 
 						<div class="cargar-doc-pdf">
 
@@ -75,6 +84,8 @@
 
 
 		</form>
+
+	</div>
 
 
 @endsection

@@ -66,7 +66,7 @@
   						<i class="fas fa-cloud-upload-alt"></i> Subir Archivo
   					</label>
 
-  					<input id="file-upload" name="image" value="/images/slider/{{$slider->image}}" onchange='cambiar()' type="file" style='display: none;'/>
+  					<input id="file-upload" name="image" value="/images/slider/{{$slider->image}}" onchange='cambiar()' type="file" accept="image/gif, image/jpeg, image/png" style='display: none;'/>
 
   					<div id="info-img">No se Eligió Archivo</div>
 
@@ -76,7 +76,7 @@
 
   				<div class="contenedor-img-seccion">
 
-  					<img src="/images/slider/{{$slider->image}}">
+  					<img id="img-pre" src="/images/slider/{{$slider->image}}">
 
   				</div>
 

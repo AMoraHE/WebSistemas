@@ -24,7 +24,7 @@
 	position: relative;
 	background: #fefefe;
 	margin: auto;
-	width: 30%;
+	width: 35%; /*Regresar a 30%*/
 	box-shadow: 0 0 6px 0 rgba(0,0,0,.4);
 	animation-name: modal;
 	animation-duration: 1s;
@@ -104,7 +104,7 @@
   	display: inline-block;
   	border: 2px solid #fff;
   	padding: 10px 0px;
-	margin-left: 15px; 
+	margin: 0px 2%; 
 	background: #fff;
 	transition: color 0.5s, background 0.5s;
 	font-size: 1em;

@@ -13,7 +13,7 @@
 
 				<h3>Editar Información de la Carrera</h3>
 						
-				<h3>{{$informacion->categoria}}</h3>
+				<h4>{{$informacion->categoria}}</h4>
 									
 
 		</div> 
@@ -43,10 +43,6 @@
 			</div> 
 		
 		</form>  
-
-		
-
-		
 
 	</div> 
 

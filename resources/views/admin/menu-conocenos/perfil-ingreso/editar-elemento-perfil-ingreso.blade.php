@@ -8,7 +8,7 @@
 
 	  <div class="seccion-principal">
 	    
-	      <div class="contenedor-titulo-seccion">
+	    <div class="contenedor-titulo-seccion">
 
 	        <h3>Actualizar Datos</h3>
 

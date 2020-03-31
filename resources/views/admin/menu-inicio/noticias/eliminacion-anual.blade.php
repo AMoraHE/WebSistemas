@@ -10,15 +10,31 @@
 
 		<div class="contenedor-titulo-seccion-select">
 
-				<h3>Eliminación de Noticias</h3>
+				<h3>Eliminación Anual</h3>
 
 			<div class="contenedor-select-seccion">
 
-				<div class="formulario">
+					<!----------------------------------------------------------------- SELECTOR DE AÑO ---------------------------------------------------------->
 
-					<input type="month">
+					<?php
+					$cont = date('Y');
+					?>
 
-				</div>
+					<select name="year" id="year" class="seleccion">
+
+						<option value="">--Elija un Año--</option>
+
+						<?php while ($cont >= 2019) { ?>
+
+						  <option value="<?php echo($cont); ?>"><?php echo($cont); ?></option>
+
+						<?php $cont = ($cont-1); } ?>
+
+					</select>
+
+					<i></i>
+
+					<!----------------------------------------------------------------- FIN SELECTOR DE AÑO ---------------------------------------------------------->
 
 			</div>
 

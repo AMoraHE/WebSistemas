@@ -1,6 +1,6 @@
 @extends('layouts.administrador')
 
-@section('title', 'Cuerpo Académico')
+@section('title', 'Calendario')
 
 @section('content')
 
@@ -97,7 +97,7 @@
               		$('#txtHoraFinal').val(fechaHora[1]);
 
               		RecolectarDatosGUI();
-  					EnviarInformacion('modificar',NuevoEvento,true);
+                  EnviarInformacion('modificar',NuevoEvento,true);
 
 
               	}
@@ -257,7 +257,7 @@
               $('#txtTitulo').val('');
               $('#txtColor').val('');
               $('#txtDescripcion').val('');
-
+              $('#tituloEvento').html('Agregar Evento');
   		}
 
   	</script>

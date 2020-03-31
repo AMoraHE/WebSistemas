@@ -33,7 +33,7 @@
             <i class="fas fa-cloud-upload-alt"></i> Subir Archivo
           </label>
             
-          <input required id="file-upload" name="imgOrg" onchange='cambiar()' type="file" style='display: none;'/>
+          <input required id="file-upload" name="imgOrg" onchange='cambiar()' type="file" accept="image/gif, image/jpeg, image/png" style='display: none;'/>
 
           <div id="info-img">No se Eligió Archivo</div>
           
@@ -43,7 +43,7 @@
 
         <div class="contenedor-img-seccion">
           
-          <img src="img/sistemas.png">
+          <img id="img-pre" src="img/sistemas.png">
 
         </div>
           

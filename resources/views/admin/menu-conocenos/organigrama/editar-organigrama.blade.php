@@ -34,7 +34,7 @@
                 <i class="fas fa-cloud-upload-alt"></i> Subir Archivo
               </label>
                 
-              <input id="file-upload" onchange='cambiar()' name="imgOrg" type="file" style='display: none;'/>
+              <input id="file-upload" onchange='cambiar()' name="imgOrg" type="file" accept="image/gif, image/jpeg, image/png" style='display: none;'/>
 
               <div id="info-img">No se Eligió Archivo</div>
               
@@ -44,7 +44,7 @@
 
             <div class="contenedor-img-seccion">
               
-              <img src="/images/organigrama/{{$Organigrama->foto}}">
+              <img id="img-pre" src="/images/organigrama/{{$Organigrama->foto}}">
 
             </div>
               
