@@ -99,7 +99,7 @@
 								</td>
 								</form>
 
-                <td><a href="/Organigrama/{{$organigrama->slug}}/edit"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a></td>
+                <td><a href="/Organigrama/{{$organigrama->slug}}/edit" onclick="return confirm('¿Seguro que desea editar este elemento?')"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a></td>
               </tr>
 
               @endforeach
