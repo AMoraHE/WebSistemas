@@ -22,10 +22,14 @@ Auth::routes();
 Route::get('admin', 'InicioController@index');
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::resource('noticias-admin','NoticiaController')->parameters(['noticias-admin' => 'noticia']);
+//////Rutas y sub rutas de Noticias
+  Route::get('noticias-admin/eliminacion-anual', 'NoticiaController@eliminaranual');
+  Route::post('noticias-admin/eliminacion-anual','NoticiaController@eliminacionmultiple');
+    Route::resource('noticias-admin','NoticiaController')->parameters(['noticias-admin' => 'noticia']);
 
 Route::resource('slider','SliderController')->parameters(['slider' => 'slider']);
+
+
 
 Route::get('slider/filtrar/{id}', 'SliderController@filtrar')->name('filtrarslider');
 
@@ -46,9 +50,6 @@ Route::post('calendariomodificar', 'CalendarioController@update');
 Route::get('noticias-admin/paginacion', 'NoticiaController@paginacion');
 
 Route::get('buscador-noticias', 'NoticiaController@buscador');
-
-////////////////////Eliminacion Anual/////////////////////////////
-Route::get('/eliminacion-anual', 'NoticiaController@eliminaranual');
 
 //Rutas-perfil-ingreso
 Route::get('Perfil-Ingreso', 'PerfilIngresoController@index')->name('perfil-ingreso');

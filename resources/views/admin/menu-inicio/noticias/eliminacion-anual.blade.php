@@ -19,6 +19,8 @@
 					<?php
 					$cont = date('Y');
 					?>
+					<form class="form-goup" method="POST" action="/noticias-admin/eliminacion-anual" enctype="multipart/form-data">
+			          @csrf
 
 					<select name="year" id="year" class="seleccion">
 
@@ -26,12 +28,15 @@
 
 						<?php while ($cont >= 2019) { ?>
 
-						  <option value="<?php echo($cont); ?>"><?php echo($cont); ?></option>
+						  <option  value="<?php echo($cont); ?>"><?php echo($cont); ?></option>
 
 						<?php $cont = ($cont-1); } ?>
 
 					</select>
-
+					<button onclick="return confirm('¿Desea realizar la eliminacion anual?')" class="btn">
+						<span>Eliminar</span>
+					</button>
+				</form>
 					<i></i>
 
 					<!----------------------------------------------------------------- FIN SELECTOR DE AÑO ---------------------------------------------------------->
