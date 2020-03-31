@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 
 class Noticia extends Model
@@ -14,4 +15,12 @@ class Noticia extends Model
     {
       return 'slug';
     }
+
+    public static function purgeYear($year){
+        DB::table('noticias')->whereYear('created_at', $year)->delete();
+
+    }
+
+  
+
 }

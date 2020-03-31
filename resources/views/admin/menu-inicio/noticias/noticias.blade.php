@@ -11,7 +11,7 @@
 
 		<div class="contenedor-boton-CE">
 
-		<a onclick="return confirm('¿Desea acceder a la eliminacion anual?')" href="/eliminacion-anual/"><button class="btn"><span>Eliminación Anual</span></button></a>
+		<a onclick="return confirm('¿Desea acceder a la eliminacion anual?')" href="/noticias-admin/eliminacion-anual/"><button class="btn"><span>Eliminación Anual</span></button></a>
 
 		<a onclick="return confirm('¿Desea registrar una nueva noticia?')" href="/noticias-admin/create"><button class="btn"><span>Agregar Noticia</span></button></a>
 
@@ -29,9 +29,9 @@
 						<input type="search" name="key" placeholder="Noticia">
 						<button type="submit" class="btn-buscar"><span><i class="icono izquierda fas fa-search"></i></span></button>
 
-					
+
 					</div>
-					
+
 				</form>
 
 			</div>
