@@ -160,6 +160,6 @@ class NoticiaController extends Controller
     }
   $noticias = Noticia::purgeYear($year);
 
-      return view('admin.menu-inicio.noticias.noticias')->with('status','Eliminación anual exitosa');;
+      return redirect('/noticias-admin')->with('status','Eliminación anual exitosa');;
   }
 }
