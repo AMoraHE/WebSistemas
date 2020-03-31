@@ -1,6 +1,6 @@
 @extends('layouts.administrador')
 
-@section('title', 'Tariners Create')
+@section('title', 'Agregar Noticia')
 
 @section('content')
 
@@ -23,6 +23,12 @@
 			<input type="text" name="titulo" id="titulo" value="" placeholder="Inserte Titulo Deseado" class="form-control" required>
 
 		</div>
+
+		<div class="formulario">
+
+ 			<label for="">Tamaño de imagen recomendado: 220px de ancho y 200px de alto</label>
+
+ 		</div>
 
 		<div class="contenedor-cargar-img">
 

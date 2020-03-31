@@ -12,7 +12,6 @@
 .flexslider{
 	width: 100% ;
 	/*width: 70%;*/
-	height: 250px;
 	margin: auto;
 	border: 5px solid #1B396A;
 	border-radius: 8px;
@@ -28,6 +27,10 @@
 	width: 100%;
 	height: 100%;
 	display: block;
+	/*Centrar Elementos del Slider y delimitandolo*/
+	max-height: 250px;
+	display: flex;
+	align-items: center;
 }
 
 .slides li{
@@ -154,7 +157,7 @@
 	font-size: 18px;
 	margin-left: 20px;
 	color: #fff;
-	padding: 15px;
+	padding: 1%; /*Tamaño de padding del fondo del texto*/
 	background: rgba(27,57,106,0.8);
 	text-shadow: 3px 3px 2px rgba(000, 000, 000, 0.70);
 	margin-bottom: 35px;
@@ -178,7 +181,6 @@
 
 	.flex-direction-nav a{
 	width: 30px;
-	height: 30px;
 	border: 1px solid rgba(255,255,255,.3);
 	border-radius: 5px;
 	margin-top: -15px;
@@ -192,7 +194,6 @@
 	.flex-control-nav li a{
 	display: block;
 	width: 10px;
-	height: 10px;
 	}
 
 }
@@ -213,12 +214,11 @@
 
 	.flex-direction-nav a{
 		width: 20px;
-		height: 20px;
 		margin-top: -10px;
 		background-color: transparent;
 		border: transparent;/* eliminar para visualizar flechas ========== */
-	border-radius: 5px;
-	box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.0);/* eliminar para visualizar flechas ========== */
+		border-radius: 5px;
+		box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.0);/* eliminar para visualizar flechas ========== */
 	}
 	.flex-direction-nav a::before{
 		color: transparent; /* eliminar para visualizar flechas ========== */
