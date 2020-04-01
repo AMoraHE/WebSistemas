@@ -33,7 +33,7 @@
 
 		<script src="{{ asset('js/es.js')}}"></script>
 
-	<!-- estilos Boostrap-->
+	<!-- script Boostrap-->
 
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -61,11 +61,18 @@
 
 			</div>
 
-			<div class="contenedor">
+			<div class="divisor"></div>
+
+
+			<div class="seccion-cerrar">
 
 				<form method="POST" action="{{ route('logout') }}">
   				@csrf
-  					<button class="btn">CERRAR SESIÓN</button>
+  				
+	  				<div class="contenedor-boton-CE">
+	  					<button class="btn"><span>Cerrar Sesión</span></button>
+	  				</div>
+
 				</form>
 
 			</div>

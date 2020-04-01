@@ -1,25 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<div id="seccion-login">
+                <div class="titulo-seccion-loggin">Dashboard</div>
 
-                <div class="card-body">
+                <div class="cuerpo-seccion-loggin">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
-                    You are logged in!
-                </div>
+                    Usted está conectado!
 
-                <div class="card-body"><a href="/admin"><button class="btn btn-success">ACCEDER AL PANEL</button></a></div>
-            </div>
-        </div>
-    </div>
+                
+                    <div class="contenedor-boton-CE">
+
+                        <a href="/admin"><button class="btn"><span>Acceder al Panel</span></button></a>
+
+                    </div>  
+
+                </div>
 </div>
 @endsection
