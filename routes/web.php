@@ -16,8 +16,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
-    //return view('layouts/administrador');
-    return redirect('/home');
+    return view('welcome');
 });
 
 ////////Rutas de Menu-inicio///////////

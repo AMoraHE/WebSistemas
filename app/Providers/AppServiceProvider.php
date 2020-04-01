@@ -23,8 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('path.public',function(){
-        return'/home2/webdbtes/public_html';
-        });
+        
+        
     }
 }
