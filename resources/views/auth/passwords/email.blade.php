@@ -3,7 +3,7 @@
 @section('content')
 <div id="seccion-login">
 
-                <div class="titulo-seccion-loggin">{{ __('Reset Password') }}</div>
+                <div class="titulo-seccion-loggin">{{ __('Restablecer contraseña') }}</div>
 
                 <div class="cuerpo-seccion-loggin">
                     @if (session('status'))
@@ -16,7 +16,7 @@
                         @csrf
 
                         <div class="formulario">
-                            <label for="email">{{ __('E-Mail Address') }}</label>
+                            <label for="email">{{ __('Dirección de correo electrónico') }}</label>
                             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
 
                                 @if ($errors->has('email'))
@@ -28,7 +28,7 @@
 
                         <div class="contenedor-boton-CE">
                                 <button type="submit" class="btn">
-                                    <span>{{ __('Send Password Reset Link') }}</span>
+                                    <span>{{ __('Enviar enlace de restablecimiento de contraseña') }}</span>
                                 </button>
                         </div>
                     </form>

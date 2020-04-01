@@ -39,7 +39,7 @@
             <i class="fas fa-cloud-upload-alt"></i> Subir Archivo
           </label>
             
-          <input required id="file-upload" name="imgOrg" onchange='cambiar()' type="file" accept="image/gif, image/jpeg, image/png" style='display: none;'/>
+          <input required id="file-upload" name="imgOrg" onchange='cambiar()' type="file" accept="image/gif, image/jpeg, image/png" style='display: none;' required />
 
           <div id="info-img">No se Eligió Archivo</div>
           

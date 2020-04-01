@@ -2,7 +2,7 @@
 
 @section('content')
 <div id="seccion-login">
-                <div class="titulo-seccion-loggin">Dashboard</div>
+                <div class="titulo-seccion-loggin">REDIRIGIR</div>
 
                 <div class="cuerpo-seccion-loggin">
                     @if (session('status'))
@@ -11,7 +11,7 @@
                         </div>
                     @endif
 
-                    Usted está conectado!
+                    Inicio de sesión correcto !
 
                 
                     <div class="contenedor-boton-CE">

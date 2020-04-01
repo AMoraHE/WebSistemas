@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Iniciar Sesión') }}</title>
+    <title>{{ config('Iniciar sesión', 'Iniciar Sesión') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -38,8 +38,8 @@
 
                             <!-- Authentication Links -->
                             @guest
-                                    <a href="{{ route('login') }}"><button class="btn"><span>{{ __('Login') }}</span></button></a>
-                                    <a href="{{ route('register') }}"><button class="btn"><span>{{ __('Register') }}</span></button></a>
+                                    <a href="{{ route('login') }}"><button class="btn"><span>{{ __('INICIAR SESIÓN') }}</span></button></a>
+                                    <a href="{{ route('register') }}"><button class="btn"><span>{{ __('REGISTRARSE') }}</span></button></a>
                             @else
 
                             <div id="usuario">
@@ -50,7 +50,7 @@
                             </div>
 
                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                <button class="btn"><span>{{ __('Logout') }}</span></button>
+                                <button class="btn"><span>{{ __('CERRAR SESIÓN') }}</span></button>
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST">

@@ -70,6 +70,7 @@
   				@csrf
   				
 	  				<div class="contenedor-boton-CE">
+	  					<label>{{ Auth::user()->name }}</label>
 	  					<button class="btn"><span>Cerrar Sesión</span></button>
 	  				</div>
 

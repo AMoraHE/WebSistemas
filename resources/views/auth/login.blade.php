@@ -3,14 +3,14 @@
 @section('content')
 <div id="seccion-login">
 
-                <div class="titulo-seccion-loggin">{{ __('Login') }}</div>
+                <div class="titulo-seccion-loggin">{{ __('INICIO DE SESIÓN') }}</div>
 
                 <div class="cuerpo-seccion-loggin">
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
                         @csrf
 
                         <div class="formulario">
-                            <label for="email">{{ __('E-Mail Address') }}</label>
+                            <label for="email">{{ __('Dirección de correo electrónico') }}</label>
                             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
@@ -21,7 +21,7 @@
                         </div>
 
                         <div class="formulario">
-                            <label for="password">{{ __('Password') }}</label>
+                            <label for="password">{{ __('Contraseña') }}</label>
                             <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
@@ -37,14 +37,14 @@
                                     <input  type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label  for="remember">
-                                        <span></span> {{ __('Remember Me') }}
+                                        <span></span> {{ __('Recuerdame') }}
                                     </label>
                         </div>
 
                         <div class="contenedor-boton-CE">
                                 
                                 <button type="submit" class="btn">
-                                    <span>{{ __('Login') }}</span>
+                                    <span>{{ __('Iniciar sesión') }}</span>
                                 </button>
 
                         </div>
@@ -56,7 +56,7 @@
 
 
                         <a href="{{ route('password.request') }}">
-                            <button class="btn centrado"><span>{{ __('Forgot Your Password?') }}</span></button>
+                            <button class="btn centrado"><span>{{ __('¿Olvidó su contraseña?') }}</span></button>
                         </a>
 
 
