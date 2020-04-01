@@ -1,0 +1,144 @@
+/****************************Modal*************************/
+
+.flex{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal{
+	display: none;
+	position: fixed;
+	z-index: 6;
+	overflow: auto;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(0,0,0,0.452);
+}
+
+.contenido-modal{
+	position: relative;
+	background: #fefefe;
+	margin: auto;
+	width: 35%; /*Regresar a 30%*/
+	box-shadow: 0 0 6px 0 rgba(0,0,0,.4);
+	animation-name: modal;
+	animation-duration: 1s;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 2px solid #8cc63e;
+}
+
+@keyframes modal{
+	from{
+		top: -330px; 
+		opacity: 0;
+	}
+
+	to{
+		top: 0;
+		opacity: 1;
+	}
+}
+
+.close{
+	color: #fff;
+	float: right;
+	font-size: 18px;
+
+}
+
+.close:hover{
+	color: #7f8c8d;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-encabezado{
+	border-radius: 10px 10px 0px 0px;
+	-moz-border-radius: 10px 10px 0px 0px;
+	-webkit-border-radius: 10px 10px 0px 0px;
+	border: 2px solid #8cc63e;
+}
+
+.modal-pie{
+	border-radius: 0px 0px 10px 10px;
+	-moz-border-radius: 0px 0px 10px 10px;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	border: 2px solid #8cc63e;
+}
+
+.modal-encabezado, .modal-pie{
+	padding: 8px 16px;
+	background: #1B396A;
+	color: #fff;
+	overflow: hidden;
+}
+
+.modal-encabezado h5{
+	float: left;
+	font-size: 18px;
+}
+
+.modal-encabezado p{
+	text-align: justify;
+}
+
+.modal-cuerpo{
+	padding: 20px 16px;
+}
+
+.contenedor-botones-modal{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-modal{
+  	display: inline-block;
+  	border: 2px solid #fff;
+  	padding: 10px 0px;
+	margin: 0px 2%; 
+	background: #fff;
+	transition: color 0.5s, background 0.5s;
+	font-size: 1em;
+	min-width: 100px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 2px solid #8cc63e;
+}
+
+/*************************************Responsivo***************************************/
+
+@media screen and (max-width: 900px){
+
+	.contenido-modal{
+		width: 70%;
+	}
+
+	.textos{
+		padding: 150px;
+	}
+
+}
+
+@media screen and (max-width: 500px){
+
+	.contenido-modal{
+		width: 70%;
+	}
+
+	.textos{
+		padding: 50px;
+	}
+
+}
