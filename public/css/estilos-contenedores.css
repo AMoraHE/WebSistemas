@@ -92,14 +92,14 @@
 
 .contenedor-seccion-preliminar-noticia-img{
 	width: 100%;
-	height: 100px;
+	height: 100px; /*Checar Responsivo*/
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
 .contenedor-seccion-preliminar-noticia-img img{
-	width: 100%;
+	width: 60%;
 	height: 100%;
 }
 
