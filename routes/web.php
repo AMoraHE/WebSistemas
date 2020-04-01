@@ -128,3 +128,7 @@ Route::resource('Organigrama', 'OrganigramaController')->middleware('auth');
 Route::get('Organigrama/filtrar/{nombre}', 'OrganigramaController@filtrar')->name('filtrar')->middleware('auth');
 
 Route::get('Agregar nuveo elemento', 'OrganigramaController@create')->name('OrganigramaCrear')->middleware('auth');
+
+//Rutas Infraestructura
+
+Route::get('/Lab-Celula', 'CelulaController@index');
