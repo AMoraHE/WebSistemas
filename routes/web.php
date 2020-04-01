@@ -129,3 +129,7 @@ Route::resource('Organigrama', 'OrganigramaController');
 Route::get('Organigrama/filtrar/{nombre}', 'OrganigramaController@filtrar')->name('filtrar');
 
 Route::get('Agregar nuveo elemento', 'OrganigramaController@create')->name('OrganigramaCrear');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
