@@ -14,7 +14,7 @@ class CreateLineasInvestigacionsTable extends Migration
     public function up()
     {
         Schema::create('lineas_investigacions', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('programa');
             $table->string('linea');
             $table->string('clave');

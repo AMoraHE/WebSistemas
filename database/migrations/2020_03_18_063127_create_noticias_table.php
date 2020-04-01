@@ -14,7 +14,7 @@ class CreateNoticiasTable extends Migration
     public function up()
     {
         Schema::create('noticias', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('titulo')->unique();
             $table->string('newimage');
             $table->string('slug')->unique()->nullable($value = true);

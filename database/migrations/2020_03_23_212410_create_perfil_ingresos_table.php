@@ -14,7 +14,7 @@ class CreatePerfilIngresosTable extends Migration
     public function up()
     {
         Schema::create('perfil_ingresos', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('vineta', 2);
             $table->text('elemento');
             $table->timestamps();

@@ -14,7 +14,7 @@ class Reticula extends Migration
     public function up()
     {
         Schema::create('reticulas', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('titulo');
             $table->string('programa');
             $table->string('plan');

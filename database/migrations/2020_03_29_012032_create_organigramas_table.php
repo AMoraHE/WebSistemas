@@ -14,7 +14,7 @@ class CreateOrganigramasTable extends Migration
     public function up()
     {
         Schema::create('organigramas', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
             $table->unsignedbigInteger('area_id');
             $table->text('puesto');

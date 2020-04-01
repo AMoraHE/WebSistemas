@@ -14,7 +14,7 @@ class CreateInformacionsTable extends Migration
     public function up()
     {
         Schema::create('informacion-carrera', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
             $table->text('categoria');
             $table->text('descripcion');

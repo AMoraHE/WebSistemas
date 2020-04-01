@@ -14,7 +14,7 @@ class CreateCuerposAcademicosTable extends Migration
     public function up()
     {
         Schema::create('cuerpos_academicos', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
             $table->text('nombre');
             $table->text('grado');
