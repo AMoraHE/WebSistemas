@@ -51,7 +51,7 @@
       
     </div>
 
-    <div class="contenedor-cuerpo-noticia">
+    <div class="contenedor-cuerpo-seccion">
 
         <div class="contenedor-texto-conocenos">
           <div class="tabla-informacion-escolar">
@@ -65,7 +65,6 @@
                   <th>Puesto</th>
                   <th>Integrantes</th>
                   <th>Género</th>
-                  <th>Email</th>
                   <th>Eliminar</th>
                   <th>Editar</th>
                 </tr>
@@ -90,7 +89,7 @@
 
                   @endif
                 </td>
-                <td>{{$organigrama->correo}}</td>
+                
                 <form action="/Organigrama/{{$organigrama->slug}}" method="POST">
 								@csrf
 								@method('DELETE')
@@ -100,6 +99,10 @@
 								</form>
 
                 <td><a href="/Organigrama/{{$organigrama->slug}}/edit" onclick="return confirm('¿Seguro que desea editar este elemento?')"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a></td>
+              </tr>
+              
+              <tr>
+                <td colspan="7">{{$organigrama->correo}}</td>
               </tr>
 
               @endforeach

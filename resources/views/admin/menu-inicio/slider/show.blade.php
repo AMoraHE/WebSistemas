@@ -11,7 +11,7 @@
 
       </div>
 
-      <div class="contenedor-cuerpo-noticia">
+      <div class="contenedor-cuerpo-seccion">
 
           <div class="contenedor-img-noticia">
 

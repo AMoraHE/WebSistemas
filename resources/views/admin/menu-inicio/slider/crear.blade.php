@@ -21,7 +21,7 @@
 
       <div class="formulario">
 
-        <label for="">Tamaño de imagen recomendado: 1000px de ancho y 250px de alto</label>
+        <label for="">Tamaño de imagen recomendado: 1100px de ancho y 450px de alto</label>
         
       </div>
 
@@ -49,7 +49,7 @@
 
   				<div class="contenedor-img-seccion">
 
-  					<img id="img-pre" src="/img/sistemas.png">
+  					<img id="img-pre" src="/img/LogoNuevaImagen.png">
 
   				</div>
 

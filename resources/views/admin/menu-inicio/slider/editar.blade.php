@@ -25,7 +25,7 @@
                     <option value="{{route('filtrarslider', ['id' => $var])}}">{{$sliderG->id}}</option>
 
                     @endforeach
-                  </select>
+            </select>
                   <i></i>
     
         </div>
@@ -48,7 +48,7 @@
 
       <div class="formulario">
 
-        <label for="">Tamaño de imagen recomendado: 1000px de ancho y 250px de alto</label>
+        <label for="">Tamaño de imagen recomendado: 1100px de ancho y 450px de alto</label>
         
       </div>
 

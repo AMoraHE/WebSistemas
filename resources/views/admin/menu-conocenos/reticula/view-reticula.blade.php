@@ -22,7 +22,7 @@
 
 		</div>
 
-		<div class="contenedor-cuerpo-noticia">
+		<div class="contenedor-cuerpo-seccion">
 
 				<div class="contenedor-texto-conocenos-reticula">
 

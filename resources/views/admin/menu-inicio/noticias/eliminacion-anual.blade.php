@@ -19,24 +19,30 @@
 					<?php
 					$cont = date('Y');
 					?>
-					<form class="form-goup" method="POST" action="/noticias-admin/eliminacion-anual" enctype="multipart/form-data">
+				<form class="form-goup" method="POST" action="/noticias-admin/eliminacion-anual" enctype="multipart/form-data">
 			          @csrf
 
-					<select name="year" id="year" class="seleccion">
+						<select name="year" id="year" class="seleccion">
 
-						<option value="">--Elija un Año--</option>
+							<option value="">--Elija un Año--</option>
 
-						<?php while ($cont >= 2019) { ?>
+							<?php while ($cont >= 2019) { ?>
 
-						  <option  value="<?php echo($cont); ?>"><?php echo($cont); ?></option>
+							  <option  value="<?php echo($cont); ?>"><?php echo($cont); ?></option>
 
-						<?php $cont = ($cont-1); } ?>
+							<?php $cont = ($cont-1); } ?>
 
-					</select>
-					<button onclick="return confirm('¿Desea realizar la eliminacion anual?')" class="btn">
-						<span>Eliminar</span>
-					</button>
+						</select>
+
+						<div class="btn-eliminacion-anual">
+
+							<button onclick="return confirm('¿Desea realizar la eliminacion anual?')" class="btn"><span>Eliminar</span></button>
+
+						</div>
+
+
 				</form>
+
 					<i></i>
 
 					<!----------------------------------------------------------------- FIN SELECTOR DE AÑO ---------------------------------------------------------->
@@ -78,8 +84,6 @@
 	<!------------------------------------------------------------- BOTON ELIMINAR MASIVO ---------------------------------------------------------->
 
 		<div class="contenedor-botones">
-
-			<a onclick="return confirm('¿Desea realizar la eliminacion anual?')"><button class="btn"><span>Eliminar</span></button></a>
 
 			<a onclick="return confirm('¿Desea cancelar la eliminacion anual?')" href="{{url()->previous()}}"><button class="btn"><span>Cancelar</span></button></a>
 

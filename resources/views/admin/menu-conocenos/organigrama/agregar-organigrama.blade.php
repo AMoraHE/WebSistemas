@@ -16,6 +16,12 @@
   
   <!---------------------- AGREGAR IMG -------------------------> 
 
+      <div class="formulario">
+
+        <label for="">Tamaño de imagen recomendado: 200px de ancho y 200px de alto</label>
+          
+      </div>
+
     <form class="form-group" method="POST" action="/Organigrama" enctype="multipart/form-data">
       @csrf
 
@@ -43,7 +49,7 @@
 
         <div class="contenedor-img-seccion">
           
-          <img id="img-pre" src="img/sistemas.png">
+          <img id="img-pre" src="img/LogoNuevaImagen.png">
 
         </div>
           

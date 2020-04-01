@@ -14,6 +14,12 @@
 
     </div>
 
+      <div class="formulario">
+
+        <label for="">Tamaño de imagen recomendado: 200px de ancho y 200px de alto</label>
+          
+      </div>
+
     <!---------------------- AGREGAR IMG -------------------------> 
 
     <form method="POST" action="/Organigrama/{{$Organigrama->slug}}" enctype="multipart/form-data">
