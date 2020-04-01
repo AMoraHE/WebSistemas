@@ -22,7 +22,7 @@ class CreateOrganigramasTable extends Migration
             $table->enum('genero', ['H', 'M']);
             $table->text('foto');
             $table->text('correo');
-            $table->foreign('area_id')->references('id')->on('areas');
+            
         });
     }
 
