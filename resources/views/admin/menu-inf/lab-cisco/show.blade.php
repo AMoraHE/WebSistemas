@@ -41,7 +41,7 @@
 			</tr>
 		</table>
 
-		<button>Editar</button> <!-- Editar Todo -->
+		<a href="{{route('LabCiscoE')}}"><button>Editar</button></a> <!-- Editar Todo -->
 
 
 	</div>

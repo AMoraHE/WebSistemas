@@ -132,3 +132,31 @@ Route::get('Agregar nuveo elemento', 'OrganigramaController@create')->name('Orga
 //Rutas Infraestructura
 
 Route::get('/Lab-Celula', 'CelulaController@index');
+
+Route::get('/Lab-Celula-Edit', function () {
+    return view('.admin.menu-inf.lab-celula.edit');
+})->name('LabCelulaE');
+
+Route::get('/Lab-Cisco', function () {
+    return view('.admin.menu-inf.lab-cisco.show');
+})->name('LabCisco');
+
+Route::get('/Lab-Cisco-Edit', function () {
+    return view('.admin.menu-inf.lab-cisco.edit');
+})->name('LabCiscoE');
+
+Route::get('/Lab-Sistemas', function () {
+    return view('.admin.menu-inf.lab-sistemas.show');
+})->name('LabSistemas');
+
+Route::get('/Lab-Sistemas-Edit', function () {
+    return view('.admin.menu-inf.lab-sistemas.edit');
+})->name('LabSistemasE');
+
+Route::get('/Lab-Micro', function () {
+    return view('.admin.menu-inf.lab-micro.show');
+})->name('LabMicro');
+
+Route::get('/Lab-Micro-Edit', function () {
+    return view('.admin.menu-inf.lab-micro.edit');
+})->name('LabMicroE');

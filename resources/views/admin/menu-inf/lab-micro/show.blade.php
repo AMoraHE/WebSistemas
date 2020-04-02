@@ -41,7 +41,7 @@
 			</tr>
 		</table>
 
-		<button>Editar</button> <!-- Editar Todo -->
+		<a href="{{route('LabMicroE')}}"><button>Editar</button></a> <!-- Editar Todo -->
 
 
 	</div>
