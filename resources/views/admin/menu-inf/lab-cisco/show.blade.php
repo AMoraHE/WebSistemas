@@ -1,49 +1,88 @@
 @extends('layouts.administrador')
 
-@section('title', 'Campo Laboral')
+@section('title', 'Lab. Cisco')
 
 @section('content')
 
-		<div class="seccion-principal">
+<div class="seccion-principal">
 
 <!----------------------------------------------------------------- Lab Celula---------------------------------------------------------->
+
+		<div class="contenedor-titulo-seccion">
 	
-	<h1>Celula de Desarrollo de Software</h1>
+			<h3>Laboratorio de Cisco</h3>
 
-	<div>
+		</div>
 
-		<img src="https://i.blogs.es/902d35/ios/1366_2000.jpg" width="950px" height="300px">
+		<div class="contenedor-botones">
 
+			<a href="#"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
+			<a href="#"><button class="btn"><span>Cancelar</span></button></a>
+		</div>
 
-		<h3>Descripcion: </h3>
-		<p>Aqui va una descripcion bien mamalona</p>
-		<h3>Responsable: </h3>
-		<p>Aqui va un nombre bien mamalon de alguien</p>
-		<h3>Correo: </h3>
-		<p>Aqui va un correro bien mamalon de alguien</p>
+		<div class="contenedor-cuerpo-seccion">
 
+			<div class="contenedor-img-slider">
+
+				<img src="/img/LogoNuevaImagenGrande.png">
+
+			</div>
+
+		</div>
+
+		<div class="formulario">
 		
-		<br>
-		<br>
-		<hr>
+		<label for="">Responsable</label>
+		<input type="text" name="" id ="" value="" class="form-control" readonly>
 
-		<table>
-			<tr>
-				<td><img src="https://cdn.discordapp.com/attachments/334533281674690560/694983754967679036/The_nigger.jpg"></td>
-				<td><img src="https://cdn.discordapp.com/attachments/334533281674690560/694983754967679036/The_nigger.jpg"></td>
-				<td><img src="https://cdn.discordapp.com/attachments/334533281674690560/694983754967679036/The_nigger.jpg"></td>
-			</tr>
+		</div>
 
-			<tr>
-				<td><img src="https://cdn.discordapp.com/attachments/334533281674690560/694983754967679036/The_nigger.jpg"></td>
-				<td><img src="https://cdn.discordapp.com/attachments/334533281674690560/694983754967679036/The_nigger.jpg"></td>
-				<td><img src="https://cdn.discordapp.com/attachments/334533281674690560/694983754967679036/The_nigger.jpg"></td>
-			</tr>
-		</table>
+		<div class="formulario">
 
-		<a href="{{route('LabCiscoE')}}"><button>Editar</button></a> <!-- Editar Todo -->
+		<label for="">Correo Electrónico</label>
+		<input type="email" name="correo" id="correo" readonly>
 
+		</div>
+
+
+		<div class="formulario">
+
+		<label for="">Descripción:</label>
+		<textarea name="" readonly></textarea>
+
+		</div>
+
+		<div class="formulario">
+
+		<label for="">Mini Galería: </label>
+
+		</div>
+
+		<div class="seccion-mini-galeria">
+
+			<img src="/img/LogoNuevaImagen.png">
+
+			<img src="/img/LogoNuevaImagen.png">
+
+			<img src="/img/LogoNuevaImagen.png">
+
+			<img src="/img/LogoNuevaImagen.png">
+
+			<img src="/img/LogoNuevaImagen.png">
+
+			<img src="/img/LogoNuevaImagen.png">
+
+			<!---------------Boton agregar mas img a la mini galeria-------------------------->
+
+			<div class="contenedores-botones">
+
+				<button class="btn"><span>Agregar</span></button>
+				
+			</div>
+			
+		</div>
 
 	</div>
+
 
 @endsection

@@ -1,49 +1,75 @@
 @extends('layouts.administrador')
 
-@section('title', 'Campo Laboral')
+@section('title', 'Celula de Desarrollo')
 
 @section('content')
 
-		<div class="seccion-principal">
+	<div class="seccion-principal">
 
 <!----------------------------------------------------------------- Lab Celula---------------------------------------------------------->
+
+		<div class="contenedor-titulo-seccion">
 	
-	<h1>Celula de Desarrollo de Software</h1>
+			<h3>Celula de Desarrollo de Software</h3>
 
-	<div>
+		</div>
 
-		<img src="https://i.blogs.es/902d35/ios/1366_2000.jpg" width="950px" height="300px">
+		<div class="contenedor-cuerpo-seccion">
+
+			<div class="contenedor-img-slider">
+
+				<img src="/img/LogoNuevaImagenGrande.png">
+
+			</div>
+
+		</div>
+
+		<div class="formulario">
 
 
-		<h3>Descripcion: </h3>
-		<p>Aqui va una descripcion bien mamalona</p>
-		<h3>Responsable: </h3>
-		<p>Aqui va un nombre bien mamalon de alguien</p>
-		<h3>Correo: </h3>
-		<p>Aqui va un correro bien mamalon de alguien</p>
+		<label>Descripcion: </label>
+		<textarea></textarea>
 
+		</div>
+
+		<div class="formulario">
 		
-		<br>
-		<br>
-		<hr>
+		<label>Responsable: </label>
+		<input></input>
 
-		<table>
-			<tr>
-				<td><img src="https://cdn.discordapp.com/attachments/334533281674690560/694983754967679036/The_nigger.jpg"></td>
-				<td><img src="https://cdn.discordapp.com/attachments/334533281674690560/694983754967679036/The_nigger.jpg"></td>
-				<td><img src="https://cdn.discordapp.com/attachments/334533281674690560/694983754967679036/The_nigger.jpg"></td>
-			</tr>
+		</div>
 
-			<tr>
-				<td><img src="https://cdn.discordapp.com/attachments/334533281674690560/694983754967679036/The_nigger.jpg"></td>
-				<td><img src="https://cdn.discordapp.com/attachments/334533281674690560/694983754967679036/The_nigger.jpg"></td>
-				<td><img src="https://cdn.discordapp.com/attachments/334533281674690560/694983754967679036/The_nigger.jpg"></td>
-			</tr>
-		</table>
+		<div class="formulario">
 
-		<a href="{{route('LabCelulaE')}}"><button>Editar</button></a> <!-- Editar Todo -->
+		<label>Correo: </label>
+		<input></input>
+
+		</div>
+
+		<div class="seccion-mini-galeria">
+
+			<img src="/img/LogoNuevaImagen.png">
+
+			<img src="/img/LogoNuevaImagen.png">
+
+			<img src="/img/LogoNuevaImagen.png">
+
+			<img src="/img/LogoNuevaImagen.png">
+
+			<img src="/img/LogoNuevaImagen.png">
+
+			<img src="/img/LogoNuevaImagen.png">
+			
+		</div>
+
+		<div class="contenedor-botones">
+
+			<a href="{{route('LabCelulaE')}}"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
+
+		</div>
 
 
 	</div>
+
 
 @endsection

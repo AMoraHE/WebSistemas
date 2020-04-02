@@ -10,11 +10,8 @@
     </div>
 @endif
 
-<div class="container">
 
-</div>
-
-<div class="contenedor-noticia">
+<div class="seccion-principal">
   
   <div class="contenedor-botones">
     <a onclick="return confirm('¿Desea agregar un nuevo elemento?')" href="slider/create"><button class="btn"><span>Agregar</span></button></a>
