@@ -134,3 +134,32 @@ Route::get('Agregar nuveo elemento', 'OrganigramaController@create')->name('Orga
 //Route::get('/Lab-Celula', 'CelulaController@create');
 Route::resource('Lab-Celula', 'CelulaController')->middleware('auth');
 Route::get('/Lab-Celula/create', 'CelulaController@create');
+Route::get('/Lab-Celula', 'CelulaController@index')->middleware('auth');
+
+Route::get('/Lab-Celula-Edit', function () {
+    return view('.admin.menu-inf.lab-celula.edit');
+})->name('LabCelulaE')->middleware('auth');
+
+Route::get('/Lab-Cisco', function () {
+    return view('.admin.menu-inf.lab-cisco.show');
+})->name('LabCisco')->middleware('auth');
+
+Route::get('/Lab-Cisco-Edit', function () {
+    return view('.admin.menu-inf.lab-cisco.edit');
+})->name('LabCiscoE')->middleware('auth');
+
+Route::get('/Lab-Sistemas', function () {
+    return view('.admin.menu-inf.lab-sistemas.show');
+})->name('LabSistemas')->middleware('auth');
+
+Route::get('/Lab-Sistemas-Edit', function () {
+    return view('.admin.menu-inf.lab-sistemas.edit');
+})->name('LabSistemasE')->middleware('auth');
+
+Route::get('/Lab-Micro', function () {
+    return view('.admin.menu-inf.lab-micro.show');
+})->name('LabMicro')->middleware('auth');
+
+Route::get('/Lab-Micro-Edit', function () {
+    return view('.admin.menu-inf.lab-micro.edit');
+})->name('LabMicroE')->middleware('auth');

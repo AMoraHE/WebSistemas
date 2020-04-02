@@ -42,11 +42,40 @@ a {
 }
 
 /**************************************************************************************************
+Boton srcoll ir arriba****************************************************************************************/
+
+.ir-arriba{
+    display:none;
+    padding:20px;
+    background:#1B396A;
+    font-size:20px;
+    color:#fff;
+    cursor:pointer;
+    position: fixed;
+    bottom:50px;
+    left: 20px;
+}
+
+/**************************************************************************************************
 Boton Cerrar Sesión****************************************************************************************/
 
 .seccion-cerrar{
     width: 20%;
     float: right;
+}
+
+.nombre-usuario{
+    display: flex;
+    background: #1B396A;
+    text-align: justify;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px 0px 0px 5px;
+    -moz-border-radius: 5px 0px 0px 5px;
+    -webkit-border-radius: 5px 0px 0px 5px;
+    border-top: 2px solid #8cc63e;
+    border-bottom: 2px solid #8cc63e;
+    border-left: 2px solid #8cc63e; 
 }
 
 .divisor{
@@ -89,7 +118,6 @@ TITULO********************************************/
 .contenedor-titulo{
     width: 80%;
     min-width: 350px;
-    overflow: hidden;
     display: flex;
     align-items: center;
 }
@@ -135,7 +163,7 @@ BODY****************************************************************************
     margin-right: auto;
     margin-left: auto;
     overflow: hidden;
-    float: left;
+    float: right;
     margin-bottom: 50px;
 }
 
@@ -156,7 +184,6 @@ MENU**********************************************/
     display: inline-block;
     font-family: 'Roboto', sans-serif;
     line-height: 18px;
-    float: left;
 }
 .contenedor-menu .menu {
     width: 100%;
@@ -198,11 +225,6 @@ MENU**********************************************/
 }
 
 /**************************************************************************************CONTENEDOR INFORMACION*************************************/
-
-/*.contenedor-informacion{
-    background: -webkit-linear-gradient(to right, #49a09d, #5f2c82); 
-    background: linear-gradient(to right, #49a09d, #5f2c82); 
-}*/
 
 
 /**************************************************

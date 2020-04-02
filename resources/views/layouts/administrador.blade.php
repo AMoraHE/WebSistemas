@@ -66,11 +66,17 @@
 
 			<div class="seccion-cerrar">
 
+
+				<div class="nombre-usuario">
+
+					<label>{{ Auth::user()->name }}</label>
+
+				</div>
+
 				<form method="POST" action="{{ route('logout') }}">
   				@csrf
-  				
+
 	  				<div class="contenedor-boton-CE">
-	  					<label>{{ Auth::user()->name }}</label>
 	  					<button class="btn"><span>Cerrar Sesión</span></button>
 	  				</div>
 
@@ -135,10 +141,10 @@
 				<li><a href="#"><i class="icono izquierda fas fa-school"></i>Infraestructura<i class=" icono derecha fa fa-chevron-down"></i></a>
 
 					<ul>
-						<li><a href="#"><i class="icono izquierda fas fa-hdd"></i>Lab. Cisco</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-desktop"></i>Lab. Sistemas</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-microchip"></i>Lab. Microprocesadores</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-laptop-code"></i>Celula de Desarrollo</a></li>
+						<li><a href="{{route('LabCisco')}}"><i class="icono izquierda fas fa-hdd"></i>Lab. Cisco</a></li>
+						<li><a href="{{route('LabSistemas')}}"><i class="icono izquierda fas fa-desktop"></i>Lab. Sistemas</a></li>
+						<li><a href="{{route('LabMicro')}}"><i class="icono izquierda fas fa-microchip"></i>Lab. Microprocesadores</a></li>
+						<li><a href="/Lab-Celula"><i class="icono izquierda fas fa-laptop-code"></i>Celula de Desarrollo</a></li>
 					</ul>
 				</li>
 
@@ -187,6 +193,12 @@
 
 
 			</div>
+
+		</div>
+
+		<div class="ir-arriba">
+			
+			<i class="fas fa-arrow-up"></i>
 
 		</div>
 

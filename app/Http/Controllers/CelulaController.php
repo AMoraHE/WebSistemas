@@ -121,7 +121,7 @@ class CelulaController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('/admin/menu-inf/lab-celula/edit');
     }
 
     /**

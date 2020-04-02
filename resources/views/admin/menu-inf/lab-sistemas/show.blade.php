@@ -41,7 +41,7 @@
 			</tr>
 		</table>
 
-		<button>Editar</button> <!-- Editar Todo -->
+		<a href="{{route('LabSistemasE')}}"><button>Editar</button> <!-- Editar Todo -->
 
 
 	</div>
