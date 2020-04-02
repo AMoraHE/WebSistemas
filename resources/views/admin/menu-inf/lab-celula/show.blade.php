@@ -5,6 +5,8 @@
 @section('content')
 
 	<div class="seccion-principal">
+@foreach ($infras as $infra)
+	
 
 <!----------------------------------------------------------------- Lab Celula---------------------------------------------------------->
 
@@ -16,11 +18,11 @@
 
 		<div class="contenedor-botones">
 
-			<a href="#"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
+		<a href="/Lab-Celula/{{$infra->slug}}/edit"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
 			
 		</div>
 
 		@include('admin.menu-inf.formShow')
-
+		@endforeach
 
 @endsection
