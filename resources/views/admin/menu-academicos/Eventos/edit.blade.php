@@ -9,23 +9,19 @@
 <div class="seccion-principal">
 
 	
-	<h1>Eventos</h1>
+	<div class="contenedor-titulo-seccion">
 
-
-		<br>
-		<br>
-
-	<div>
-
-	
-		<table>
-			
-		</table>
-
-
-	<a href="{{route('AgregarEventos')}}"><button>Agregar</button></a> <!-- Agregar Nuevo -->
-	<a href="{{route('EventosAcademicos')}}"><button>Regresar</button></a> <!-- Regresar -->
+		<h3>Eventos</h3>
 
 	</div>
+
+	<div class="contenedor-botones">
+
+		<a href="{{route('AgregarEventos')}}"><button class="btn"><span>Agregar</span></button></a> <!-- Agregar Nuevo -->
+		<a href="{{route('EventosAcademicos')}}"><button class="btn"><span>Regresar</span></button></a> <!-- Regresar -->
+
+	</div>
+
+</div>
 
 @endsection

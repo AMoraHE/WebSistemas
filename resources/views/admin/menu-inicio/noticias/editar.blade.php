@@ -62,7 +62,7 @@
 
 				<label for="">Descripción Noticia</label>
 
-				<textarea placeholder="Inserte Descripción Deseada..." name="redaccion" required>{{$noticia->redaccion}}</textarea>
+				<textarea style="height: 500px;" placeholder="Inserte Descripción Deseada..." name="redaccion" required>{{$noticia->redaccion}}</textarea>
 
 			</div>
 

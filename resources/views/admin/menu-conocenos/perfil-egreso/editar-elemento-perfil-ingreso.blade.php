@@ -26,7 +26,7 @@
 
 		    <div class="formulario"> 
 		          <label for="">Información</label>
-		          <input type="text" name="elemento" id ="informacion-perfil" value="{{$perfilegreso->elemento}}" placeholder="Ingrese Información Deseada" class="form-control" required>
+		          <textarea type="text" name="elemento" id ="informacion-perfil" placeholder="Ingrese Información Deseada" class="form-control" required>{{$perfilegreso->elemento}}</textarea>
 		    </div>
 
 		    <div class="contenedor-botones">

@@ -9,23 +9,21 @@
 <div class="seccion-principal">
 
 	
-	<h1>Proyectos</h1>
+	<div class="contenedor-titulo-seccion">
 
-
-		<br>
-		<br>
-
-	<div>
-
-	
-		<table>
-			
-		</table>
-
-
-	<a href="{{route('AgregarProyectos')}}"><button>Agregar</button></a> <!-- Agregar Nuevo -->
-	<a href="{{route('ProyectosAcademicos')}}"><button>Regresar</button></a> <!-- Regresar -->
+		<h3>Proyectos</h3>
 
 	</div>
+
+
+	<div class="contenedor-botones">
+
+
+	<a href="{{route('AgregarProyectos')}}"><button class="btn"><span>Agregar</span></button></a> <!-- Agregar Nuevo -->
+	<a href="{{route('ProyectosAcademicos')}}"><button class="btn"><span>Regresar</span></button></a> <!-- Regresar -->
+
+	</div>
+
+</div>
 
 @endsection

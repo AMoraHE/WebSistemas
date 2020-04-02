@@ -4,26 +4,23 @@
 
 @section('content')
 
-		<div class="seccion-principal">
+<div class="seccion-principal">
 
 	
-	<h1>Eventos</h1>
+	<div class="contenedor-titulo-seccion">
 
-
-		<br>
-		<br>
-
-	<div>
-
-	
-		<table>
-			
-		</table>
-
-		<a href="{{route('EditarEventos')}}"><button>Editar</button></a> <!-- Editar Todo -->
-		<a href="{{route('AgregarEventos')}}"><button>Agregar</button></a> <!-- Agregar Nuevo -->
-
+		<h3>Eventos</h3>
 
 	</div>
+
+
+	<div class="contenedor-botones">
+
+		<a href="{{route('EditarEventos')}}"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
+		<a href="{{route('AgregarEventos')}}"><button class="btn"><span>Agregar</span></button></a> <!-- Agregar Nuevo -->
+
+	</div>
+
+</div>
 
 @endsection
