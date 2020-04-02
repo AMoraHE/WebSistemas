@@ -147,6 +147,12 @@ Route::get('/Lab-cisco', 'LabCiscoController@index')->middleware('auth');
 Route::get('/Lab-Micro/create', 'LabMicroController@create');
 Route::get('/Lab-Micro', 'LabMicroController@index')->middleware('auth');
 
+Route::get('/editar-proyecto', function () {
+    return view('.admin.menu-academicos.proyectos.edit');
+})->name('EditarProyectos')->middleware('auth');
+Route::get('/agregar-proyecto', function () {
+    return view('.admin.menu-academicos.proyectos.create');
+})->name('AgregarProyectos')->middleware('auth');
 
 //Ruta Eventos-academicos
 
