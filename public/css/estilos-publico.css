@@ -138,20 +138,16 @@ img#isc {
 BODY**********************************************************************************************/
 
 .contenedor-cuerpo{
-    width: 100%;
+    width: calc(100% - 40px);
     overflow: hidden;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
 }
 
 .contenedor-informacion{
-    width: 100%;
+    width: calc(100% - 40px);
     padding-bottom: 15PX;
-    margin-right: auto;
-    margin-left: auto;
+    margin:0px auto 50px auto;
     overflow: hidden;
-    float: right;
-    margin-bottom: 50px;
 }
 
 /**************************************************
@@ -166,62 +162,82 @@ MENU**********************************************/
 .btn-menu .icono {
     float: right;
 }
-.contenedor-menu-pub {
-    min-width: 25%;
-    padding-left: 20%;
-    display: block;
-    font-family: 'Roboto', sans-serif;
-    line-height: 18px;
-    margin-bottom: 7%;
+.navegacion{
+    width: calc(100% - 80px);
+    margin: 10px auto;
+    background: #1B396A;
 }
 
-.contenedor-menu-pub .menu {
-    /*width: 100%;*/
-   /*posicion cambiada*/
-    position: absolute;
-}
-.contenedor-menu-pub ul {
+.navegacion ul{
     list-style: none;
-    display: flex;
     z-index: 3;
-
 }
-.contenedor-menu-pub .menu li a {
-    color: #494949;
+
+.menu > li{
+    position: relative;
+    display: inline-block;
+}
+
+.menu > li > a{
     display: block;
     padding: 15px 20px;
-    background: #e9e9e9;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
 }
-.contenedor-menu-pub .menu li a:hover {
-    background: #1a95d5;
+
+.menu li a:hover{
+    color: #CE7D35;
+    transition: all .3s;
 }
-.contenedor-menu-pub .menu .icono {
+
+.navegacion .menu .icono {
     font-size: 12px;
     line-height: 18px;
 }
-.contenedor-menu-pub .menu .icono.izquierda {
+.navegacion .menu .icono.izquierda {
     float: left;
     margin-right: 10px; 
 }
-.contenedor-menu-pub .menu .icono.derecha {
+.navegacion .menu .icono.derecha {
     float: right;
     margin-left: 10px; 
 }
-.contenedor-menu-pub .menu ul {
-    display: none;
-}
-.contenedor-menu-pub .menu ul li a {
-    background: #424242;
-    color: #e9e9e9;
+
 
 }
-/*submenu hover
-.contenedor-menu-pub .menu li:hover > ul {
+/*submenu hover*/
+.contenedor-menu .menu li:hover > ul {
     display: block;
     background: #1a95d5; 
     color: #fff;
 
-}*/
+}
+
+/* Submenu*/
+
+.submenu{
+    position: absolute;
+    background: #333333;
+    width: 120%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Open sans';
+    text-decoration: none;
+}
+
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
 
 /**************************************************************************************CONTENEDOR INFORMACION*************************************/
 

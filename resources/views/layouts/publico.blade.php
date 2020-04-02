@@ -77,22 +77,19 @@
 		<!----------------------------------------------------------- MENU ---------------------------------------------------------->	
 
 
-		<div class="contenedor-menu-pub">
-
-			<a href="#" class="btn-menu">Menu<i class="icono fa fa-bars"></i></a> 
-						
+		<nav class="navegacion">
+			
 			<ul class="menu">
-
 				<li><a href="#"><i class="icono izquierda fa fa-home"></i>Inicio<i class=" icono derecha fa fa-chevron-down"></i></a>
-					<ul>
-						<li><a href="#"><i class="icono izquierda fab fa-slideshare"></i>Slider</a></li>
+					<ul class="submenu">
+						<li><a href="#"><i class="icono izquierda fa fa-home"></i>Inicio</a></li>
 						<li><a href="#"><i class="icono izquierda far fa-newspaper"></i>Noticias</a></li>
 						<li><a href="#"><i class="icono izquierda far fa-calendar-alt"></i>Calendario</a></li>
 					</ul>
 				</li>
 							
 				<li><a href="#"><i class="icono izquierda far fa-handshake"></i>Conócenos<i class=" icono derecha fa fa-chevron-down"></i></a>
-					<ul>
+					<ul class="submenu">
 						<li><a href="#"><i class="icono izquierda fas fa-book"></i>Misión, Visión Y Objetivos</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-user-tie"></i>Perfil Ingreso</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-user-graduate"></i>Perfil Egreso</a></li>
@@ -107,7 +104,7 @@
 
 				<li><a href="#"><i class="icono izquierda fas fa-school"></i>Infraestructura<i class=" icono derecha fa fa-chevron-down"></i></a>
 
-					<ul>
+					<ul class="submenu">
 						<li><a href="#"><i class="icono izquierda fas fa-hdd"></i>Lab. Cisco</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-desktop"></i>Lab. Sistemas</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-microchip"></i>Lab. Microprocesadores</a></li>
@@ -117,7 +114,7 @@
 
 				<li><a href="#"><i class="icono izquierda fas fa-chalkboard-teacher"></i>Académicos<i class=" icono derecha fa fa-chevron-down"></i></a>
 
-					<ul>
+					<ul class="submenu">
 						<li><a href="#"><i class="icono izquierda fab fas fa-rocket"></i>Proyectos</a></li>
 						<li><a href="#"><i class="icono izquierda far fa-calendar-check"></i>Eventos</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-file-invoice"></i>Convocatorias</a></li>
@@ -128,16 +125,13 @@
 
 				<li><a href="#"><i class="icono izquierda far fa-image"></i>Galería<i class=" icono derecha fa fa-chevron-down"></i></a>
 
-					<ul>
+					<ul class="submenu">
 						<li><a href="#"><i class="icono izquierda far fa-images"></i>Fotos</a></li>
 					</ul>
 
 				</li>
-							
 			</ul>
-
-						
-		</div>
+		</nav>
 
 		<!----------------------------------------------------------- CONTENEDOR ------------------------------------------------------->
 
