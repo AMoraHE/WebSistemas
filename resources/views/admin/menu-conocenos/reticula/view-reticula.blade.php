@@ -12,6 +12,13 @@
 
 		<div class="seccion-principal">
 
+			<div class="formulario">
+			
+				<a onclick="return confirm('¿Desea registrar una nueva retícula?')" href="{{route('crear-reticula')}}"><button class="btn"><span>Agregar</span></button></a>
+
+			
+			</div>
+
 <!----------------------------------------------------------------- RETICULA 1 ---------------------------------------------------------->
 
 		@foreach ($reticulas as $reticula)
@@ -49,6 +56,8 @@
 			<a href="{{route('descargar', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
 
 			<a onclick="return confirm('¿Desea modificar esta retícula?')" href="/VerReticula/{{$reticula->slug}}/edit"><button class="btn"><span>Editar</span></button></a>
+
+			<a onclick="return confirm('¿Desea eliminar esta retícula?')" href="Reticula-Eliminar/{{$reticula->slug}}"><button class="btn"><span>Eliminar</span></button></a>
 
 		</div>
 

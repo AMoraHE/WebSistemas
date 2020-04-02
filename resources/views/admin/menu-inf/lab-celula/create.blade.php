@@ -28,4 +28,13 @@
 	<a onclick="return confirm('¿Desea bandonar sin guardar?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
 </div
 
+
+  
+  <div class="contenedor-botones">
+                      
+    <button type="submit" class="btn"><span>Guardar</span></button>
+    <a onclick="return confirm('¿Desea bandonar sin guardar?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
+      
+  </div>
+
 @endsection

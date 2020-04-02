@@ -8,11 +8,11 @@
 
 <!----------------------------------------------------------------- Lab Cisco---------------------------------------------------------->
 
-		<div class="contenedor-titulo-seccion">
+	<div class="contenedor-titulo-seccion">
 	
-			<h3>Laboratorio de Cisco</h3>
+		<h3>Laboratorio de Cisco</h3>
 
-		</div>
+	</div>
 
 		<div class="contenedor-botones">
 

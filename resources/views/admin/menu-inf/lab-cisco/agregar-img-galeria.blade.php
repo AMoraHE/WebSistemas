@@ -14,13 +14,13 @@
 
   <!------------------------------------------------------------- INFORMACIÓN ---------------------------------------------------------->
 
-  		@include('admin.menu-inf.formImg')
+  	@include('admin.menu-inf.formImg')
       
-      <div class="contenedor-botones">
+    <div class="contenedor-botones">
 
-      <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
+    	<a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
     
-      </div>
+     </div>
 
 
 </div>	
