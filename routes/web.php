@@ -135,16 +135,16 @@ Route::resource('Lab-Sistemas', 'LabSistemasController')->middleware('auth');
 Route::resource('Lab-Cisco', 'LabCiscoController')->middleware('auth');
 Route::resource('Lab-Micro', 'LabMicroController')->middleware('auth');
 
-Route::get('/Lab-Celula/create', 'CelulaController@create');
+Route::get('/Lab-Celula/create', 'CelulaController@create')->middleware('auth');
 Route::get('/Lab-Celula', 'CelulaController@index')->middleware('auth');
 
-Route::get('/Lab-Sistemas/create', 'LabSistemasController@create');
+Route::get('/Lab-Sistemas/create', 'LabSistemasController@create')->middleware('auth');
 Route::get('/Lab-Sistemas', 'LabSistemasController@index')->middleware('auth');
 
-Route::get('/Lab-Cisco/create', 'LabCiscoController@create');
+Route::get('/Lab-Cisco/create', 'LabCiscoController@create')->middleware('auth');
 Route::get('/Lab-cisco', 'LabCiscoController@index')->middleware('auth');
 
-Route::get('/Lab-Micro/create', 'LabMicroController@create');
+Route::get('/Lab-Micro/create', 'LabMicroController@create')->middleware('auth');
 Route::get('/Lab-Micro', 'LabMicroController@index')->middleware('auth');
 
 Route::get('/editar-proyecto', function () {
@@ -180,34 +180,6 @@ Route::get('/agregar-proyecto', function () {
 Route::resource('Lab-Celula', 'CelulaController')->middleware('auth');
 Route::get('/Lab-Celula/create', 'CelulaController@create');
 Route::get('/Lab-Celula', 'CelulaController@index')->middleware('auth');
-
-Route::get('/Lab-Celula-Edit', function () {
-    return view('.admin.menu-inf.lab-celula.edit');
-})->name('LabCelulaE')->middleware('auth');
-
-Route::get('/Lab-Cisco', function () {
-    return view('.admin.menu-inf.lab-cisco.show');
-})->name('LabCisco')->middleware('auth');
-
-Route::get('/Lab-Cisco-Edit', function () {
-    return view('.admin.menu-inf.lab-cisco.edit');
-})->name('LabCiscoE')->middleware('auth');
-
-Route::get('/Lab-Sistemas', function () {
-    return view('.admin.menu-inf.lab-sistemas.show');
-})->name('LabSistemas')->middleware('auth');
-
-Route::get('/Lab-Sistemas-Edit', function () {
-    return view('.admin.menu-inf.lab-sistemas.edit');
-})->name('LabSistemasE')->middleware('auth');
-
-Route::get('/Lab-Micro', function () {
-    return view('.admin.menu-inf.lab-micro.show');
-})->name('LabMicro')->middleware('auth');
-
-Route::get('/Lab-Micro-Edit', function () {
-    return view('.admin.menu-inf.lab-micro.edit');
-})->name('LabMicroE')->middleware('auth');
 
 
 //Rutas Proyectos-academicos
