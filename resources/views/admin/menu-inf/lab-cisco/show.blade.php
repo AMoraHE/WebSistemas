@@ -1,12 +1,12 @@
 @extends('layouts.administrador')
 
-@section('title', 'Lab. Cisco')
+@section('title', 'Laboratorio de Cisco')
 
 @section('content')
 
 <div class="seccion-principal">
 
-<!----------------------------------------------------------------- Lab Celula---------------------------------------------------------->
+<!----------------------------------------------------------------- Lab Cisco---------------------------------------------------------->
 
 		<div class="contenedor-titulo-seccion">
 	
@@ -17,7 +17,7 @@
 		<div class="contenedor-botones">
 
 			<a href="#"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
-			<a href="#"><button class="btn"><span>Cancelar</span></button></a>
+
 		</div>
 
 		<div class="contenedor-cuerpo-seccion">

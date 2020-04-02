@@ -118,6 +118,7 @@
 
 				<li><a href="{{route('slider')}}"><i class="icono izquierda fa fa-home"></i>Inicio<i class=" icono derecha fa fa-chevron-down"></i></a>
 					<ul>
+						<li><a href="/admin"><i class="icono izquierda fa fa-home"></i>Home</a></li>
 						<li><a href="{{route('slider')}}"><i class="icono izquierda fab fa-slideshare"></i>Slider</a></li>
 						<li><a href="{{route('noticias-admin')}}"><i class="icono izquierda far fa-newspaper"></i>Noticias</a></li>
 						<li><a href="{{route('calendario')}}"><i class="icono izquierda far fa-calendar-alt"></i>Calendario</a></li>

@@ -1,6 +1,6 @@
 @extends('layouts.administrador')
 
-@section('title', 'Celula de Desarrollo')
+@section('title', 'Celula de Desarrollo de Software')
 
 @section('content')
 
@@ -14,6 +14,12 @@
 
 		</div>
 
+		<div class="contenedor-botones">
+
+			<a href="#"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
+			
+		</div>
+
 		<div class="contenedor-cuerpo-seccion">
 
 			<div class="contenedor-img-slider">
@@ -25,24 +31,30 @@
 		</div>
 
 		<div class="formulario">
-
-
-		<label>Descripcion: </label>
-		<textarea></textarea>
-
-		</div>
-
-		<div class="formulario">
 		
-		<label>Responsable: </label>
-		<input></input>
+		<label for="">Responsable</label>
+		<input type="text" name="" id ="" value="" class="form-control" readonly>
 
 		</div>
 
 		<div class="formulario">
 
-		<label>Correo: </label>
-		<input></input>
+		<label for="">Correo Electrónico</label>
+		<input type="email" name="correo" id="correo" readonly>
+
+		</div>
+
+
+		<div class="formulario">
+
+		<label for="">Descripción:</label>
+		<textarea name="" readonly></textarea>
+
+		</div>
+
+		<div class="formulario">
+
+		<label for="">Mini Galería: </label>
 
 		</div>
 
@@ -59,15 +71,16 @@
 			<img src="/img/LogoNuevaImagen.png">
 
 			<img src="/img/LogoNuevaImagen.png">
+
+			<!---------------Boton agregar mas img a la mini galeria-------------------------->
+
+			<div class="contenedores-botones">
+
+				<button class="btn"><span>Agregar</span></button>
+				
+			</div>
 			
 		</div>
-
-		<div class="contenedor-botones">
-
-			<a href="{{route('LabCelulaE')}}"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
-
-		</div>
-
 
 	</div>
 
