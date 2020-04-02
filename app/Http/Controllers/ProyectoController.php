@@ -13,7 +13,7 @@ class ProyectoController extends Controller
      */
     public function index()
     {
-        return ('que hay');
+        //
     }
 
     /**
