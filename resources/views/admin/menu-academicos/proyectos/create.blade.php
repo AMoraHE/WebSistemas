@@ -4,26 +4,23 @@
 
 @section('content')
 
-	<div class="seccion-principal">
+<div class="seccion-principal">
 
-	
-	<h1>Proyectos</h1>
+	<div class="contenedor-titulo-seccion">
 
+		<h3>Proyectos</h3>
 
-		<br>
-		<br>
-
-	<div>
-
-	
-		<table>
-			
-		</table>
-
-		<a href="{{route('ProyectosAcademicos')}}"><button>Cancelar</button></a> <!-- Editar Todo -->
-		<a href="{{route('ProyectosAcademicos')}}"><button>Guardar</button></a> <!-- Agregar Nuevo -->
-
-		
 	</div>
+
+	<!----------------------------------------------- INFORMACIÓN------------------------------------------------>
+
+	<div class="contenedor-botones">
+
+		<a href="{{route('ProyectosAcademicos')}}"><button class="btn"><span>Cancelar</span></button></a> <!-- Editar Todo -->
+		<a href="{{route('ProyectosAcademicos')}}"><button class="btn"><span>Guardar</span></button></a> <!-- Agregar Nuevo -->
+
+	</div>
+
+</div>
 	
 @endsection

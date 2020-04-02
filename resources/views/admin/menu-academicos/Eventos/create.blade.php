@@ -7,22 +7,16 @@
 	<div class="seccion-principal">
 
 	
-	<h1>Eventos</h1>
+	<div class="contenedor-titulo-seccion">
 
+		<h3>Eventos</h3>
 
-		<br>
-		<br>
+	</div>
 
-	<div>
+	<div class="contenedor-botones">
 
-	
-		<table>
-			
-		</table>
-
-		<a href="{{route('EventosAcademicos')}}"><button>Cancelar</button></a> <!-- Editar Todo -->
-		<a href="{{route('EventosAcademicos')}}"><button>Guardar</button></a> <!-- Agregar Nuevo -->
-
+		<a href="{{route('EventosAcademicos')}}"><button class="btn"><span>Cancelar</span></button></a> <!-- Editar Todo -->
+		<a href="{{route('EventosAcademicos')}}"><button class="btn"><span>Guardar</span></button></a> <!-- Agregar Nuevo -->
 		
 	</div>
 	
