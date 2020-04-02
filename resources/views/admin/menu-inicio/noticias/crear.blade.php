@@ -60,7 +60,7 @@
 
 			<label for="">Descripción Noticia</label>
 
-			<textarea name="redaccion" placeholder="Inserte Descripción Deseada ... " required></textarea>
+			<textarea style="height: 500px;" name="redaccion" placeholder="Inserte Descripción Deseada ... " required></textarea>
 
 		</div>
 
