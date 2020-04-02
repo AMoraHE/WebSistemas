@@ -130,6 +130,44 @@ Route::get('Organigrama/filtrar/{nombre}', 'OrganigramaController@filtrar')->nam
 Route::get('Agregar nuveo elemento', 'OrganigramaController@create')->name('OrganigramaCrear')->middleware('auth');
 
 //Rutas Infraestructura
+Route::resource('Lab-Celula', 'CelulaController')->middleware('auth');
+Route::resource('Lab-Sistemas', 'LabSistemasController')->middleware('auth');
+Route::resource('Lab-Cisco', 'LabCiscoController')->middleware('auth');
+Route::resource('Lab-Micro', 'LabMicroController')->middleware('auth');
+
+Route::get('/Lab-Celula/create', 'CelulaController@create');
+Route::get('/Lab-Celula', 'CelulaController@index')->middleware('auth');
+
+Route::get('/Lab-Sistemas/create', 'LabSistemasController@create');
+Route::get('/Lab-Sistemas', 'LabSistemasController@index')->middleware('auth');
+
+Route::get('/Lab-Cisco/create', 'LabCiscoController@create');
+Route::get('/Lab-cisco', 'LabCiscoController@index')->middleware('auth');
+
+Route::get('/Lab-Micro/create', 'LabMicroController@create');
+Route::get('/Lab-Micro', 'LabMicroController@index')->middleware('auth');
+Route::get('/editar-proyecto', function () {
+    return view('.admin.menu-academicos.proyectos.edit');
+})->name('EditarProyectos')->middleware('auth');
+Route::get('/agregar-proyecto', function () {
+    return view('.admin.menu-academicos.proyectos.create');
+})->name('AgregarProyectos')->middleware('auth');
+
+//Ruta Eventos-academicos
+
+Route::resource('eventos', 'EventosController')->middleware('auth');
+
+Route::get('/EventosAcademicos', function () {
+    return view('.admin.menu-academicos.Eventos.view');
+})->name('EventosAcademicos')->middleware('auth');
+
+Route::get('/editar-eventos', function () {
+    return view('.admin.menu-academicos.Eventos.edit');
+})->name('EditarEventos')->middleware('auth');
+Route::get('/agregar-evento', function () {
+    return view('.admin.menu-academicos.Eventos.create');
+})->name('AgregarEventos')->middleware('auth');
+
 
 //Route::get('/Lab-Celula', 'CelulaController@create');
 Route::resource('Lab-Celula', 'CelulaController')->middleware('auth');
@@ -163,3 +201,14 @@ Route::get('/Lab-Micro', function () {
 Route::get('/Lab-Micro-Edit', function () {
     return view('.admin.menu-inf.lab-micro.edit');
 })->name('LabMicroE')->middleware('auth');
+
+
+//Rutas Proyectos-academicos
+
+Route::resource('proyectos', 'ProyectoController')->middleware('auth');
+
+Route::get('/ProyectosAcademicos', function () {
+    return view('.admin.menu-academicos.proyectos.view-proyectos-academicos');
+})->name('ProyectosAcademicos')->middleware('auth');
+
+
