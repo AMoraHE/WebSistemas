@@ -26,7 +26,7 @@ class ReticulaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.menu-conocenos.reticula.agregar-reticula');
     }
 
     /**
@@ -54,7 +54,7 @@ class ReticulaController extends Controller
         $reticula->slug = time();
         $reticula->save();
 
-        return redirect()->route('reticula');
+        return redirect()->route('reticula')->with('status','Registro Exitoso');
     }
 
     /**
@@ -143,6 +143,16 @@ class ReticulaController extends Controller
      */
     public function destroy($slug)
     {
-        //
+        $reticula = reticula::where('slug', '=', $slug)->firstOrFail();
+
+        $oldFile = public_path().'/docs/ret/'.$reticula->documento;
+        if(file_exists($oldFile))
+        {
+            unlink($oldFile);
+        }
+
+        $reticula->delete();
+        
+        return redirect()->route('reticula')->with('status','Eliminación Exitosa');
     }
 }

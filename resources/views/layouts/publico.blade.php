@@ -51,6 +51,19 @@
 
 				</div>
 
+
+			</div>
+
+			<div class="seccion-cerrar">
+				@if (Route::has('login'))
+                <div class="nombre-usuario">
+                @auth
+                    <a href="{{ url('/home') }}"><label>ACCESO ADMINISTRADOR</label></a>
+                @else
+                        
+                @endauth
+                </div>
+            	@endif
 			</div>
 
 	</header>

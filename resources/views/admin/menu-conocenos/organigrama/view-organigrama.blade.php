@@ -23,8 +23,8 @@
             
           <select name="area_id" id ="area" class="seleccion" onchange="top.location.href = this.options[this.selectedIndex].value">
             <!------------- Select de Área utilizando option ------------------>
-                  <option value="">--Elija el area--</option> 
-                  <option value="/Organigrama">TODOS</option> 
+                  <option value="">--Elija el Área--</option> 
+                  <option value="/Organigrama">Mostrar Todos</option> 
 
                   @foreach ($areas as $area)
 
