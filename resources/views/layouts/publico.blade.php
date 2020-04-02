@@ -34,7 +34,21 @@
 
 			</div>
 
-			<div class="divisor"></div>
+			<div class="divisor">
+				
+
+					@if (Route::has('login'))
+	                <div class="acceso-admin">
+	                @auth
+	                    <a href="{{ url('/home') }}"><label>Acceso Administrador</label></a>
+	                @else
+	                        
+	                @endauth
+	                </div>
+	            	@endif
+
+
+			</div>
 			
 
 			<div class="contenedor-titulo">
@@ -52,18 +66,6 @@
 				</div>
 
 
-			</div>
-
-			<div class="seccion-cerrar">
-				@if (Route::has('login'))
-                <div class="nombre-usuario">
-                @auth
-                    <a href="{{ url('/home') }}"><label>ACCESO ADMINISTRADOR</label></a>
-                @else
-                        
-                @endauth
-                </div>
-            	@endif
 			</div>
 
 	</header>
