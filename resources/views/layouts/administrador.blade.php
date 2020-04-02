@@ -61,17 +61,18 @@
 
 			</div>
 
-			<div class="divisor"></div>
-
-
-			<div class="seccion-cerrar">
-
-
+			<div class="divisor">
+				
 				<div class="nombre-usuario">
 
 					<label>{{ Auth::user()->name }}</label>
 
 				</div>
+
+			</div>
+
+
+			<div class="seccion-cerrar">
 
 				<form method="POST" action="{{ route('logout') }}">
   				@csrf

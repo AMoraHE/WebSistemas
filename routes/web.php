@@ -16,7 +16,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.publico');
 });
 
 ////////Rutas de Menu-inicio///////////
@@ -87,7 +87,7 @@ Route::get('Editar reticula', 'ReticulaController@edit')->name('editar-reticula'
 
 Route::resource('VerReticula', 'ReticulaController')->middleware('auth');
 
-Route::get('eliminar-reticula/{slug}', 'ReticulaController@destroy')->name('eliminar-reticula')->middleware('auth');
+Route::get('Reticula-Eliminar/{slug}', 'ReticulaController@destroy')->name('eliminar-elemento-reticula')->middleware('auth');
 
 Route::get('/reticula/descargar/{slug}', 'ReticulaController@download')->name('descargar')->middleware('auth');
 
@@ -146,12 +146,7 @@ Route::get('/Lab-cisco', 'LabCiscoController@index')->middleware('auth');
 
 Route::get('/Lab-Micro/create', 'LabMicroController@create');
 Route::get('/Lab-Micro', 'LabMicroController@index')->middleware('auth');
-Route::get('/editar-proyecto', function () {
-    return view('.admin.menu-academicos.proyectos.edit');
-})->name('EditarProyectos')->middleware('auth');
-Route::get('/agregar-proyecto', function () {
-    return view('.admin.menu-academicos.proyectos.create');
-})->name('AgregarProyectos')->middleware('auth');
+
 
 //Ruta Eventos-academicos
 
@@ -168,6 +163,12 @@ Route::get('/agregar-evento', function () {
     return view('.admin.menu-academicos.Eventos.create');
 })->name('AgregarEventos')->middleware('auth');
 
+Route::get('/editar-proyecto', function () {
+    return view('.admin.menu-academicos.proyectos.edit');
+})->name('EditarProyectos')->middleware('auth');
+Route::get('/agregar-proyecto', function () {
+    return view('.admin.menu-academicos.proyectos.create');
+})->name('AgregarProyectos')->middleware('auth');
 
 //Route::get('/Lab-Celula', 'CelulaController@create');
 Route::resource('Lab-Celula', 'CelulaController')->middleware('auth');

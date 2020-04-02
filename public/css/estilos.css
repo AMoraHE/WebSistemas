@@ -66,16 +66,9 @@ Boton Cerrar Sesión************************************************************
 
 .nombre-usuario{
     display: flex;
-    background: #1B396A;
-    text-align: justify;
-    color: #fff;
+    justify-content: flex-end;
     padding: 5px;
-    border-radius: 5px 0px 0px 5px;
-    -moz-border-radius: 5px 0px 0px 5px;
-    -webkit-border-radius: 5px 0px 0px 5px;
-    border-top: 2px solid #8cc63e;
-    border-bottom: 2px solid #8cc63e;
-    border-left: 2px solid #8cc63e; 
+    color: #fff;
 }
 
 .divisor{
