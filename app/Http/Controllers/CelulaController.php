@@ -135,7 +135,10 @@ class CelulaController extends Controller
      */
     public function update(Request $request, Infraestructura $infra)
     {
-        return $infra;
+        $infra->fill($request->all());
+        $infra->save();
+
+        return 'uppdated';
     }
 
     /**
