@@ -15,7 +15,7 @@ class CelulaController extends Controller
     public function index()
     {
         //
-        return view('/admin/menu-inf/lab-celula/edit');
+        //return view('/admin/menu-inf/lab-celula/edit');
     }
 
     /**
@@ -25,7 +25,7 @@ class CelulaController extends Controller
      */
     public function create()
     {
-        //
+        return view('/admin/menu-inf/lab-celula/create');
     }
 
     /**
@@ -36,7 +36,70 @@ class CelulaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $infra = new Infraestructura();
+
+        if($request->hasFile('imgInicio')){
+            $file = $request->file('imgInicio');
+            $name = time().$file->getClientOriginalName();
+            $infra->imgInicio = $name; 
+            $file->move(public_path().'/images/',$name);
+        }
+    
+            $infra->descripcion = $request->input('descripcion');
+            $infra->responsable = $request->input('responsable');
+            $infra->correo = $request->input('correo');
+            $infra->slug = $request->input('slug');
+            
+
+            if($request->hasFile('img1')){
+                $file = $request->file('img1');
+                $name = time().$file->getClientOriginalName();
+                $infra->img1 = $name; 
+                $file->move(public_path().'/images/', $name);
+            }
+
+            if($request->hasFile('img2')){
+                $file = $request->file('img2');
+                $name = time().$file->getClientOriginalName();
+                $infra->img2 = $name; 
+                $file->move(public_path().'/images/', $name);
+            }
+
+            if($request->hasFile('img3')){
+                $file = $request->file('img3');
+                $name = time().$file->getClientOriginalName();
+                $infra->img3 = $name; 
+                $file->move(public_path().'/images/', $name);
+            }
+
+            if($request->hasFile('img4')){
+                $file = $request->file('img4');
+                $name = time().$file->getClientOriginalName();
+                $infra->img4 = $name; 
+                $file->move(public_path().'/images/', $name);
+            }
+
+            if($request->hasFile('img5')){
+                $file = $request->file('img5');
+                $name = time().$file->getClientOriginalName();
+                $infra->img5 = $name; 
+                $file->move(public_path().'/images/', $name);
+            }
+            
+            if($request->hasFile('img6')){
+                $file = $request->file('img6');
+                $name = time().$file->getClientOriginalName();
+                $infra->img6 = $name; 
+                $file->move(public_path().'/images/', $name);
+            }
+            
+
+            $infra->save();
+                
+            //return redirect()->route('trainers.index')->with('status', 'Entrenador creado correctamente');
+            return 'Saved';
+            
+            //return $request->all();
     }
 
     /**

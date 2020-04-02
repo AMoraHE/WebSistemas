@@ -131,4 +131,6 @@ Route::get('Agregar nuveo elemento', 'OrganigramaController@create')->name('Orga
 
 //Rutas Infraestructura
 
-Route::get('/Lab-Celula', 'CelulaController@index');
+//Route::get('/Lab-Celula', 'CelulaController@create');
+Route::resource('Lab-Celula', 'CelulaController')->middleware('auth');
+Route::get('/Lab-Celula/create', 'CelulaController@create');
