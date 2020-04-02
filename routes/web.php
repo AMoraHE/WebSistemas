@@ -131,6 +131,16 @@ Route::get('Agregar nuveo elemento', 'OrganigramaController@create')->name('Orga
 
 //Rutas Infraestructura
 
+
+
+//Rutas Proyectos-academicos
+
+Route::resource('proyectos', 'ProyectoController')->middleware('auth');
+
+Route::get('/ProyectosAcademicos', function () {
+    return view('.admin.menu-academicos.proyectos.view-proyectos-academicos');
+})->name('ProyectosAcademicos')->middleware('auth');
+
 //Route::get('/Lab-Celula', 'CelulaController@create');
 Route::resource('Lab-Celula', 'CelulaController')->middleware('auth');
 Route::get('/Lab-Celula/create', 'CelulaController@create');

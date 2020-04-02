@@ -151,7 +151,7 @@
 				<li><a href="#"><i class="icono izquierda fas fa-chalkboard-teacher"></i>Académicos<i class=" icono derecha fa fa-chevron-down"></i></a>
 
 					<ul>
-						<li><a href="#"><i class="icono izquierda fab fas fa-rocket"></i>Proyectos</a></li>
+						<li><a href="{{route('ProyectosAcademicos')}}"><i class="icono izquierda fab fas fa-rocket"></i>Proyectos</a></li>
 						<li><a href="#"><i class="icono izquierda far fa-calendar-check"></i>Eventos</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-file-invoice"></i>Convocatorias</a></li>
 						<li><a href="#"><i class="icono izquierda fas fas fa-window-restore"></i>Programas</a></li>
