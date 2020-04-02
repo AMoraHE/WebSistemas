@@ -15,7 +15,7 @@ class CelulaController extends Controller
     public function index()
     {
         //
-        //return view('/admin/menu-inf/lab-celula/edit');
+        return view('/admin/menu-inf/lab-celula/show');
     }
 
     /**
