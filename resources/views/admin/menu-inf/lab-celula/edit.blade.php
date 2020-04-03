@@ -7,7 +7,7 @@
 
 
 <!----------------------------------------------------------------- Lab Celula---------------------------------------------------------->
-<form class="form-group" files="true" method="POST" action="/Lab-Celula/{{$infra->slug}}">
+<form class="form-group" files="true" method="POST" action="/Lab-Celula/{{$infra->slug}}" enctype="multipart/form-data">
   @method('PUT')
   @csrf
     @include('admin.menu-inf.formEdit')

@@ -97,7 +97,7 @@ class CelulaController extends Controller
             $infra->save();
                 
             //return redirect()->route('trainers.index')->with('status', 'Entrenador creado correctamente');
-            return 'Saved';
+            return redirect()->route('celulaIndex')->with('status', 'Registro exitosa');
             
             //return $request->all();
     }
@@ -230,7 +230,7 @@ class CelulaController extends Controller
         }
         $infra->save();
 
-        return redirect()->route('Lab-Celula.index')->with('status', 'Entrenador actualizado correctamente');
+        return redirect()->route('celulaIndex')->with('status', 'Actualización exitosa');
     }
 
     /**

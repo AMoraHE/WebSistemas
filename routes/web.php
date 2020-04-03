@@ -17,9 +17,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('Perfil-Usuario', 'UserController@index')->name('perfil-usuario')->middleware('auth');
 
-Route::get('users/{user}',  ['as' => 'users.edit', 'uses' => 'UserController@edit']);
+Route::get('users/{user}',  ['as' => 'users.edit', 'uses' => 'UserController@edit'])->middleware('auth');
 
-Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'UserController@update']);
+Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'UserController@update'])->middleware('auth');
 
 Route::get('/', function () {
     return view('layouts.publico');
@@ -142,7 +142,7 @@ Route::resource('Lab-Cisco', 'LabCiscoController')->middleware('auth');
 Route::resource('Lab-Micro', 'LabMicroController')->middleware('auth');
 
 Route::get('/Lab-Celula/create', 'CelulaController@create')->middleware('auth');
-Route::get('/Lab-Celula', 'CelulaController@index')->middleware('auth');
+Route::get('/Lab-Celula-Index', 'CelulaController@index')->name('celulaIndex')->middleware('auth');
 Route::get('/Lab-Celula/{infra}/edit', 'CelulaController@edit')->middleware('auth');
 
 Route::get('/Lab-Sistemas/create', 'LabSistemasController@create')->middleware('auth');
