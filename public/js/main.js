@@ -56,4 +56,15 @@ $(document).ready(function(){
 		}
 	});
 
+	/********************************************Select - Usuario*****************************/
+
+
+	  $('.btn-seleccionar').click(function(){
+
+	    $('ul').toggleClass('active');
+
+	  });
+
+
+
 });

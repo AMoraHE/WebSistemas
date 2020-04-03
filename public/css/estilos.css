@@ -67,14 +67,94 @@ Boton Cerrar Sesión************************************************************
 .nombre-usuario{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     padding: 5px;
     color: #fff;
+}
+
+.nombre-usuario img{
+    width: 10%;
+    margin-right: 10px;
 }
 
 .divisor{
     background: #1B396A;
     padding: 2%;
     margin: 10px auto;
+}
+
+/*****************************************************BOTON USUARIO**************************************************/
+
+.btn-seleccionar{
+    position: relative;
+    width: 100%;
+    padding: 2%;
+    background: #1B396A;
+    border: none;
+    border-bottom: 2px solid #8cc63e;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+
+}
+
+.contenedor-select-seccion ul{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #ccc;
+    transform-origin: top;
+    transform: perspective(1000px) rotateX(-90deg);
+    transition: 0.5s;
+}
+
+.contenedor-select-seccion ul.active{
+    transform: perspective(1000px) rotateX(0deg);
+}
+
+.contenedor-select-seccion ul li{
+    list-style: none;
+}
+
+.contenedor-select-seccion ul li a{
+    display: block;
+    /*padding: 10px;*/
+    text-align: center;
+    text-decoration: none;
+    background: #262626;
+    color: #fff;
+}
+
+.contenedor-select-seccion ul li a:hover{
+    background: #0d7ad0;
+}
+
+.btn-user{
+    cursor: pointer;
+    background: transparent;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid rgba(0,0,0,.2);
+
+}
+
+.btn-user img{
+    width: 5%;
 }
 
 /**************************************************************************************************

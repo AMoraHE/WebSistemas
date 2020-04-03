@@ -21,6 +21,9 @@
 	margin-top: 3px;
 }
 
+/************************************************************************************************************************************/
+
+
 .contenedor-select-seccion select{ /*Quitamos la flecha por defecto¨*/
 	appearance: none;
 	-webkit-appearance: none;
@@ -331,4 +334,22 @@
 	position: absolute;
 	top: -15px;
 	left: -200px;
+}
+
+ /*********************************************************MODIFICAR PERFIL USUARIO**************************************************************/
+
+.seccion-avatar{
+	width: calc(100% - 40px);
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2%;
+	border-top: 1px solid #8cc63e;
+}
+
+.avatar{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
 }

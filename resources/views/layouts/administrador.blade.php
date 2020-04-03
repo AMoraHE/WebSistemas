@@ -23,6 +23,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/modal.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/calendario.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/fullcalendar.css')}}">
+		
 
 	<!-- Calendario -->
 
@@ -65,16 +66,44 @@
 
 				<div class="nombre-usuario">
 
-					<label>{{ Auth::user()->name }}</label>
 
-					<a href="{{route('perfil-usuario')}}"><button>Perfil</button></a>
+					<div class="contenedor-select-seccion">
+
+						<!--<label>{{ Auth::user()->name }}</label>-->
+
+						<button class="btn-seleccionar"><img src="/img/UsuarioLo.png">{{ Auth::user()->name }}</button>
+
+							<ul>
+								<li>
+
+									<a href="{{route('perfil-usuario')}}"><button class="btn-user"><img src="/img/Usuario.png">Perfil</button></a>
+
+								</li>
+
+								<li>
+
+									<form method="POST" action="{{ route('logout') }}">
+					  				@csrf
+
+						  				<a href="#"><button class="btn-user"><img src="/img/Logout.png">Cerrar Sesión</button></a>
+
+									</form>
+
+								</li>
+							</ul>
+
+							<i></i>
+
+					</div>
+
+					
 
 				</div>
 
 			</div>
 
 
-			<div class="seccion-cerrar">
+			<!--<div class="seccion-cerrar">
 
 				<form method="POST" action="{{ route('logout') }}">
   				@csrf
@@ -85,7 +114,7 @@
 
 				</form>
 
-			</div>
+			</div>-->
 
 
 			<div class="contenedor-titulo">

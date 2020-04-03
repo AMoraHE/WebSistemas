@@ -10,29 +10,45 @@
     </div>
 @endif
 
-		<div class="seccion-principal">
+<div class="seccion-principal">
 
-			<div class="formulario">
+		<div class="contenedor-titulo-seccion">
+
+			<h3>Perfil - {{$user->name}}</h3> 
+
+		</div>
+
+		<div class="contenedor-botones">
 			
-				<a onclick="return confirm('¿Desea modificar su perfil?')" href="{{route('users.edit', $user)}}"><button class="btn"><span>Editar</span></button></a>
+			<a onclick="return confirm('¿Desea modificar su perfil?')" href="{{route('users.edit', $user)}}"><button class="btn"><span>Editar</span></button></a>
+	
+		</div>
 
-			
-			</div>
-
-<!----------------------------------------------------------------- RETICULA 1 ---------------------------------------------------------->
-
-		
+<!----------------------------------------------------------------- Perfil ---------------------------------------------------------->
 
 		<div class="contenedor-cuerpo-seccion">
 
-				<div class="contenedor-texto-conocenos-reticula">
+			<div class="seccion-avatar">
 
-					<label>Usuario:</label>
-					<label>{{$user->name}}</label>
-					<label>Correo electrónico:</label>
-					<label>{{$user->email}}</label>
+		        <img class="avatar" src="/img/UsuarioFoto.png">
+
+		    </div>
+
+		</div>
+
+
+
+		<div class="formulario">
+
+			<label for="">Usuario</label>
+			<input type="text" name="" value="{{$user->name}}" id="" readonly>
 					
-				</div>
+		</div>
+
+		<div class="formulario">
+					
+			<label for="">Correo electrónico</label>
+			<input type="email" name="" value="{{$user->email}}" id="" readonly>
 
 		</div>
 
@@ -44,6 +60,6 @@
 
 		
 				
-	</div>
+</div>
 
 @endsection

@@ -62,7 +62,9 @@ Boton Cerrar Sesión************************************************************
 .acceso-admin{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     padding: 5px;
+    color: #fff;
 }
 
 .divisor{
