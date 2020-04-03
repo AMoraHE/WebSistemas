@@ -36,7 +36,7 @@
 
 						<div class="btn-eliminacion-anual">
 
-							<button onclick="return confirm('¿Desea realizar la eliminacion anual?')" class="btn"><span>Eliminar</span></button>
+							<button onclick="return confirm('¿Desea realizar la eliminación anual?')" class="btn"><span>Eliminar</span></button>
 
 						</div>
 
@@ -85,7 +85,7 @@
 
 		<div class="contenedor-botones">
 
-			<a onclick="return confirm('¿Desea cancelar la eliminacion anual?')" href="{{url()->previous()}}"><button class="btn"><span>Cancelar</span></button></a>
+			<a onclick="return confirm('¿Desea cancelar la eliminacion anual?')" href="/noticias-admin"><button class="btn"><span>Cancelar</span></button></a>
 
 		</div>
 

@@ -13,7 +13,7 @@
           @csrf
   		<div class="formulario">
 
-  			<label for="">Titulo</label>
+  			<label for="">Título</label>
 
   			<input type="text" name="contenido" id="titulo" value="" placeholder="Inserte Titulo Deseado" class="form-control" required>
 
@@ -101,7 +101,7 @@
 
       <div class="contenedor-botones">
 
-      <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
+      <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/slider"><button type="button" class="btn"><span>Cancelar</span></button></a>
     
       </div>
 

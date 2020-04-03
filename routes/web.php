@@ -15,6 +15,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('Perfil-Usuario', 'UserController@index')->name('perfil-usuario')->middleware('auth');
+
+Route::get('users/{user}',  ['as' => 'users.edit', 'uses' => 'UserController@edit']);
+
+Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'UserController@update']);
+
 Route::get('/', function () {
     return view('layouts.publico');
 });

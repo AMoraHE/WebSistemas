@@ -16,7 +16,7 @@
 
 		<div class="contenedor-boton-CE">
 
-		<a onclick="return confirm('¿Desea acceder a la eliminacion anual?')" href="/noticias-admin/eliminacion-anual/"><button class="btn"><span>Eliminación Anual</span></button></a>
+		<a onclick="return confirm('¿Desea acceder a la eliminación anual?')" href="/noticias-admin/eliminacion-anual/"><button class="btn"><span>Eliminación Anual</span></button></a>
 
 		<a onclick="return confirm('¿Desea registrar una nueva noticia?')" href="/noticias-admin/create"><button class="btn"><span>Agregar Noticia</span></button></a>
 

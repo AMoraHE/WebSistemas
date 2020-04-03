@@ -40,7 +40,7 @@
   		<div class="formulario">
 
 
-  			<label for="">Titulo</label>
+  			<label for="">Título</label>
 
   			<input type="text" name="contenido" id="titulo" value="{{$slider->contenido}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
 

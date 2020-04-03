@@ -31,9 +31,9 @@
           <form method="POST" action="/noticias-admin/{{$slider->slug}}" enctype="multipart/form-data">
               @csrf
               @method('DELETE')
-              <button class="btn"><span>Eliminar</span></button>
+              <a onclick="return confirm('¿Desea eliminar este elemento?')"><button class="btn"><span>Eliminar</span></button></a>
           </form>
-          <a href="/slider/{{$slider->slug}}/editar">
+          <a onclick="return confirm('Desea editar este elemento?')" href="/slider/{{$slider->slug}}/editar">
               <button class="btn"><span>Editar</span></button>
           </a>
 

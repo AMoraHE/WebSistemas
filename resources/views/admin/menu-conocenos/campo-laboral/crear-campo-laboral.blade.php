@@ -35,7 +35,7 @@
                   
           <a onclick="return confirm('¿Desea guardar el nuevo elemento?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
 
-          <a onclick="return confirm('¿Desea bandonar sin guardar?')" href="{{route('CampoLaboralLista')}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
+          <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="{{route('CampoLaboralLista')}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
 
 
       </div>

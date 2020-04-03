@@ -33,7 +33,7 @@
 		                
 		        <a onclick="return confirm('¿Desea guardar los cambios?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
 
-		        <a onclick="return confirm('¿Desea bandonar sin guardar?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
+		        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Perfil-Egreso-Lista"><button type="button" class="btn"><span>Cancelar</span></button></a>
 		        
 		    </div>
 

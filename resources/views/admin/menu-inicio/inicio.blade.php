@@ -35,7 +35,7 @@
 
 					<div class="contenedor-botones">
 
-				<a href="/slider">		<button class="btn"><span>Editar</span></button></a>
+				<a onclick="return confirm('¿Desea editar el slider?')" href="/slider"><button class="btn"><span>Editar</span></button></a>
 
 					</div>
 
@@ -82,8 +82,8 @@
 
 		<div class="contenedor-botones">
 
-		<button class="btn"><span>Eliminar</span></button>
-		<button class="btn"><span>Editar</span></button>
+		<a onclick="return confirm('¿Desea eliminar esta noticia?')"><button class="btn"><span>Eliminar</span></button></a>
+		<a onclick="return confirm('¿Desea eeditar esta noticia?')"><button class="btn"><span>Editar</span></button></a>
 
 
 		</div>
@@ -121,7 +121,7 @@
 
 			<div class="contenedor-botones-ver">
 
-		<a href="/noticias-admin">
+		<a onclick="return confirm('¿Desea ver más noticias?')" href="/noticias-admin">
 			<button class="btn centrado">
 				<span>Ver Más...</span>
 			</button>
