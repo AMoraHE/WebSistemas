@@ -65,14 +65,21 @@
 
 				<div class="nombre-usuario">
 
-					<label>{{ Auth::user()->name }}</label>
+					<!--<label>{{ Auth::user()->name }}</label>-->
+
+					<select>
+						<option value="">{{ Auth::user()->name }}</option>
+						<option>Perfil</option>
+						<option>Cerrar Sesión</option>
+
+					</select>
 
 				</div>
 
 			</div>
 
 
-			<div class="seccion-cerrar">
+			<!--<div class="seccion-cerrar">
 
 				<form method="POST" action="{{ route('logout') }}">
   				@csrf
@@ -83,7 +90,7 @@
 
 				</form>
 
-			</div>
+			</div>-->
 
 
 			<div class="contenedor-titulo">
