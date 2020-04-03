@@ -10,6 +10,38 @@
                         @csrf
 
                         <div class="formulario">
+
+                            <label for="">Tamaño de imagen recomendado: 200px de ancho y 200px de alto</label>
+
+                        </div>
+
+                        <div class="contenedor-cargar-img">
+
+                            <div class="contenedor-txt-seccion">
+
+                                <label for="">Cargar IMG</label>
+
+                            </div>
+
+                            <div class="contenedor-boton-cargar">
+
+                            <label for="file-upload" class="subir"><i class="fas fa-cloud-upload-alt"></i>Subir Archivo</label>
+
+                            <input id="file-upload" onchange='cambiar()' name="image" type="file" accept="image/gif, image/jpeg, image/png" style='display: none;' required />
+
+                                <div id="info-img">No se Eligió Archivo</div>
+
+                            </div>
+
+                            <div class="contenedor-img-seccion">
+
+                                <img id="img-pre" src="/img/LogoNuevaImagen.png">
+
+                            </div>
+
+                        </div>
+
+                        <div class="formulario">
                             <label for="name">{{ __('Nombre') }}</label>
                             <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
 
