@@ -59,7 +59,7 @@
 							<i class="fas fa-cloud-upload-alt"></i> Subir Archivo
 						</label>
 							
-						<input id="file-upload"  onchange='cambiar()' name="doc" type="file" accept="application/pdf" style='display: none;'/>
+						<input id="file-upload"  onchange='cambiar()' name="doc" type="file" accept="application/pdf" style='display: none;' required />
 
 						<div class="cargar-doc-pdf">
 
@@ -76,7 +76,7 @@
 		                
 		        <a onclick="return confirm('¿Desea registrar la nueva retícula?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
 
-		        <a onclick="return confirm('¿Desea bandonar sin guardar?')" href="{{route('reticula')}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
+		        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="{{route('reticula')}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
 
 		        
 		    </div>

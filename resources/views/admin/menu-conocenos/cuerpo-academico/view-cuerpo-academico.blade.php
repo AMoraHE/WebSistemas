@@ -68,7 +68,7 @@
 								</td>
 								</form>
 
-								<td><a href="/CuerposAcademicos/{{$cuerpo->slug}}/edit"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a></td>	
+								<td><a onclick="return confirm('¿Desea editar este elemento?')" href="/CuerposAcademicos/{{$cuerpo->slug}}/edit"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a></td>	
 							</tr>
 
 							@endforeach

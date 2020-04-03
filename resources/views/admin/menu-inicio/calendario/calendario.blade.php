@@ -125,7 +125,7 @@
 
   									<div class="formulario">
   										<label>Titulo:</label>
-  										<input type="text" id="txtTitulo" class="form-control" placeholder="Titulo del Evento">
+  										<input type="text" id="txtTitulo" class="form-control" placeholder="Titulo del Evento" required>
   									</div>
 
   									<div class="formulario">
@@ -135,30 +135,30 @@
 
   									<div class="formulario">
   										<label>Hora Incio:</label>
-  										<input type="time" id="txtHoraInicio" value="08:30" class="form-control" />
+  										<input type="time" id="txtHoraInicio" value="08:30" class="form-control" required />
   									</div class="formulario">
 
   									<div class="formulario">
   										<label>Fecha Final:</label>
-  										<input type="date" id="txtFechaFinal" class="form-control" name="texFechaFinal">
+  										<input type="date" id="txtFechaFinal" class="form-control" name="texFechaFinal" required>
   									</div>
 
   									<div class="formulario">
   										<label>Hora Final:</label>
-  										<input type="time" id="txtHoraFinal" value="12:30" class="form-control" />
+  										<input type="time" id="txtHoraFinal" value="12:30" class="form-control" required />
   									</div>
 
   								<div class="formulario">
 
   									<label>Descripción:</label>
-  									<textarea id="txtDescripcion" rows="3" class="form-control"></textarea>
+  									<textarea id="txtDescripcion" rows="3" class="form-control" required></textarea>
 
   								</div>
 
   								<div class="formulario">
 
   									<label>Color:</label>
-  									<input type="color" value="#ff0000" id="txtColor" class="form-control" style="height:36px">
+  									<input type="color" value="#ff0000" id="txtColor" class="form-control" style="height:36px" required>
 
   								</div>
 
@@ -168,10 +168,10 @@
 
   								<div class="contenedor-botones-modal">
 
-  								<button type="button" id="btnAgregar" class="btn-modal"><span>Agregar</span></button>
-  	        					<button type="button" id="btnModificar" class="btn-modal"><span>Modificar</span></button>
-  						        <button type="button" id="btnEliminar" class="btn-modal"><span>Borrar</span></button>
-  						        <button type="button" class="btn-modal" data-dismiss="modal"><span>Cancelar</span></button>
+  								<a onclick="return confirm('¿Desea registrar el nuevo evento?')"><button type="button" id="btnAgregar" class="btn-modal"><span>Agregar</span></button></a>
+  	        					<a onclick="return confirm('¿Desea modificar este evento?')"><button type="button" id="btnModificar" class="btn-modal"><span>Modificar</span></button></a>
+  						        <a onclick="return confirm('¿Desea eliminar este evento?')"><button type="button" id="btnEliminar" class="btn-modal"><span>Borrar</span></button></a>
+  						        <a onclick="return confirm('¿Desea anular esta acción?')"><button type="button" class="btn-modal" data-dismiss="modal"><span>Cancelar</span></button></a>
 
   						        </div>
 

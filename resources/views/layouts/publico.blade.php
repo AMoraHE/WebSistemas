@@ -93,7 +93,7 @@
 						<li><a href="#"><i class="icono izquierda fas fa-book"></i>Misión, Visión Y Objetivos</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-user-tie"></i>Perfil Ingreso</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-user-graduate"></i>Perfil Egreso</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-table"></i>Reticula</a></li>
+						<li><a href="#"><i class="icono izquierda fas fa-table"></i>Retícula</a></li>
 						<li><a href="#"><i class="icono izquierda fab fa-searchengin"></i>Líneas de Investigación</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-chalkboard-teacher"></i>Cuerpos Académicos</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-sitemap"></i>Organigrama</a></li>
@@ -108,7 +108,7 @@
 						<li><a href="#"><i class="icono izquierda fas fa-hdd"></i>Lab. Cisco</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-desktop"></i>Lab. Sistemas</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-microchip"></i>Lab. Microprocesadores</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-laptop-code"></i>Celula de Desarrollo</a></li>
+						<li><a href="#"><i class="icono izquierda fas fa-laptop-code"></i>Célula de Desarrollo</a></li>
 					</ul>
 				</li>
 

@@ -20,7 +20,7 @@
 
  		<div class="formulario">
 
- 			<label for="">Titulo</label>
+ 			<label for="">Título</label>
 
  			<input type="text" name="titulo" id="titulo" value="{{$noticia->titulo}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
 
@@ -69,7 +69,7 @@
 			<div class="contenedor-botones">
 
 				<a onclick="return confirm('¿Desea guardar los cambios realizados?')"><button class="btn" type="submit" ><span>Guardar</span></button></a>
-				<a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
+				<a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/noticias-admin"><button type="button" class="btn"><span>Cancelar</span></button></a>
   						
 		  	</div>
 

@@ -61,17 +61,17 @@
 
         <div class="formulario"> 
               <label for="">Área</label>
-              <input type="text" name="" id ="area" value="{{$areas->nombre}}" disabled="" class="form-control">
+              <input type="text" name="" id ="area" value="{{$areas->nombre}}" disabled="" class="form-control" required>
         </div>
 
         <div class="formulario"> 
               <label for="">Puesto</label>
-              <input type="text" name="" id ="puesto" value="{{$Organigrama->puesto}}" disabled="" class="form-control">
+              <input type="text" name="" id ="puesto" value="{{$Organigrama->puesto}}" disabled="" class="form-control" required>
         </div>
 
         <div class="formulario"> 
               <label for="">Nombre</label>
-              <input type="text" name="integrante" id ="informacion-integrante" value="{{$Organigrama->integrante}}" placeholder="Nombre del Integrante" class="form-control" required>
+              <input type="text" name="integrante" id ="informacion-integrante" value="{{$Organigrama->integrante}}" placeholder="Nombre del Integrante" class="form-control" required required>
         </div>
 
         <div class="formulario"> 
@@ -99,7 +99,7 @@
         <div class="contenedor-botones">
                     
               <a onclick="return confirm('¿Seguro que desea actualizar?')"><button type="submit" class="btn"><span>Guardar</span></button></a>
-              <a onclick="return confirm('¿Desea bandonar sin guardar?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
+              <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Organigrama"><button type="button" class="btn"><span>Cancelar</span></button></a>
 
       </div>
 

@@ -1,6 +1,6 @@
 @extends('layouts.administrador')
 
-@section('title', 'Campo Laboral')
+@section('title', 'Infra Edit')
 
 @section('content')
 @include('common.errors')
