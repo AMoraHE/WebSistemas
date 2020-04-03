@@ -137,6 +137,7 @@ Route::resource('Lab-Micro', 'LabMicroController')->middleware('auth');
 
 Route::get('/Lab-Celula/create', 'CelulaController@create')->middleware('auth');
 Route::get('/Lab-Celula', 'CelulaController@index')->middleware('auth');
+Route::get('/Lab-Celula/{infra}/edit', 'CelulaController@edit')->middleware('auth');
 
 Route::get('/Lab-Sistemas/create', 'LabSistemasController@create')->middleware('auth');
 Route::get('/Lab-Sistemas', 'LabSistemasController@index')->middleware('auth');

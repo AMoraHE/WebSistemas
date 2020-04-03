@@ -121,8 +121,9 @@ class CelulaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Infraestructura $infra)
+    public function edit($infras)
     {
+        $infra = Infraestructura::where('slug', '=', $infras)->firstOrFail();
         return view('/admin/menu-inf/lab-celula/edit', compact('infra'));
     }
 
@@ -133,9 +134,61 @@ class CelulaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Infraestructura $infra)
+    public function update(Request $request,  $infras)
     {
-        return $infra;
+        $infra = Infraestructura::where('slug', '=', $infras)->firstOrFail();
+        $infra->fill($request->except('imgInicio','img1','img2','img3','img4','img5','img6'));
+
+        if($request->hasFile('imgInicio')){
+            $file = $request->file('imgInicio');
+            $name = time().$file->getClientOriginalName();
+            $infra->imgInicio = $name; 
+            $file->move(public_path().'/images/',$name);
+        }
+        if($request->hasFile('img1')){
+            $file = $request->file('img1');
+            $name = time().$file->getClientOriginalName();
+            $infra->img1 = $name; 
+            $file->move(public_path().'/images/', $name);
+        }
+
+        if($request->hasFile('img2')){
+            $file = $request->file('img2');
+            $name = time().$file->getClientOriginalName();
+            $infra->img2 = $name; 
+            $file->move(public_path().'/images/', $name);
+        }
+
+        if($request->hasFile('img3')){
+            $file = $request->file('img3');
+            $name = time().$file->getClientOriginalName();
+            $infra->img3 = $name; 
+            $file->move(public_path().'/images/', $name);
+        }
+
+        if($request->hasFile('img4')){
+            $file = $request->file('img4');
+            $name = time().$file->getClientOriginalName();
+            $infra->img4 = $name; 
+            $file->move(public_path().'/images/', $name);
+        }
+
+        if($request->hasFile('img5')){
+            $file = $request->file('img5');
+            $name = time().$file->getClientOriginalName();
+            $infra->img5 = $name; 
+            $file->move(public_path().'/images/', $name);
+        }
+        
+        if($request->hasFile('img6')){
+            $file = $request->file('img6');
+            $name = time().$file->getClientOriginalName();
+            $infra->img6 = $name; 
+            $file->move(public_path().'/images/', $name);
+        }
+        $infra->save();
+
+        return redirect()->route('Lab-Celula.index')->with('status', 'Entrenador actualizado correctamente');
     }
 
     /**
