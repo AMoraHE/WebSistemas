@@ -97,7 +97,7 @@ class CelulaController extends Controller
             $infra->save();
                 
             //return redirect()->route('trainers.index')->with('status', 'Entrenador creado correctamente');
-            return redirect()->route('celulaIndex')->with('status', 'Registro exitosa');
+            return redirect()->route('celulaIndex')->with('status', 'Registro exitoso');
             
             //return $request->all();
     }
