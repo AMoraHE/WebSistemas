@@ -28,33 +28,81 @@ class UserController extends Controller
 
     public function update(User $user)
     {
-    	if(Auth::user()->email == request('email')) 
-    	{
-        
-    		$this->validate(request(), ['name' => 'required', 'password' => 'required|min:6|confirmed']);
+        $request = app('request');
+        if($request->hasFile('imgPerfil'))
+        {
+            $oldFile = public_path().'/images/perfil/'.$user->perfil_img;
+            if(file_exists($oldFile) && ($user->perfil_img != 'UsuarioFoto.png'))
+            {
+                unlink($oldFile);
+            }
 
-        	$user->name = request('name');
-        	$user->password = Hash::make(request('password'));
+            $file = $request->file('imgPerfil');
+            $namei = time().$file->getClientOriginalName();
+            $file->move(public_path().'/images/perfil/',$namei);
 
-        	$user->save();
+            if(Auth::user()->email == request('email')) 
+            {
+            
+                $this->validate(request(), ['name' => 'required', 'password' => 'required|min:6|confirmed']);
 
-        	return redirect()->route('perfil-usuario')->with('status','Actualización Exitosa');
-        
-    	}
+                $user->name = request('name');
+                $user->password = Hash::make(request('password'));
+                $user->perfil_img = $namei;
 
-    	else
-    	{
-        
-    		$this->validate(request(), ['name' => 'required', 'email' => 'required|email|unique:users', 'password' => 'required|min:6|confirmed']);
+                $user->save();
 
-	        $user->name = request('name');
-	        $user->email = request('email');
-	        $user->password = Hash::make(request('password'));
+                return redirect()->route('perfil-usuario')->with('status','Actualización Exitosa');
+            
+            }
 
-	        $user->save();
+            else
+            {
+            
+                $this->validate(request(), ['name' => 'required', 'email' => 'required|email|unique:users', 'password' => 'required|min:6|confirmed']);
 
-	        return redirect()->route('perfil-usuario')->with('status','Actualización Exitosa');
-	        
-	    }
+                $user->name = request('name');
+                $user->email = request('email');
+                $user->password = Hash::make(request('password'));
+                $user->perfil_img = $namei;
+
+                $user->save();
+
+                return redirect()->route('perfil-usuario')->with('status','Actualización Exitosa');
+                
+            }
+        }
+
+        else
+        {
+            if(Auth::user()->email == request('email')) 
+            {
+            
+                $this->validate(request(), ['name' => 'required', 'password' => 'required|min:6|confirmed']);
+
+                $user->name = request('name');
+                $user->password = Hash::make(request('password'));
+
+                $user->save();
+
+                return redirect()->route('perfil-usuario')->with('status','Actualización Exitosa');
+            
+            }
+
+            else
+            {
+            
+                $this->validate(request(), ['name' => 'required', 'email' => 'required|email|unique:users', 'password' => 'required|min:6|confirmed']);
+
+                $user->name = request('name');
+                $user->email = request('email');
+                $user->password = Hash::make(request('password'));
+
+                $user->save();
+
+                return redirect()->route('perfil-usuario')->with('status','Actualización Exitosa');
+                
+            }
+        }
     }
 }

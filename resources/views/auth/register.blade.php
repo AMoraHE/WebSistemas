@@ -6,7 +6,7 @@
                 <div class="titulo-seccion-loggin">{{ __('Registro') }}</div>
 
                 <div class="cuerpo-seccion-loggin">
-                    <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
+                    <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="formulario">
@@ -27,7 +27,7 @@
 
                             <label for="file-upload" class="subir"><i class="fas fa-cloud-upload-alt"></i>Subir Archivo</label>
 
-                            <input id="file-upload" onchange='cambiar()' name="image" type="file" accept="image/gif, image/jpeg, image/png" style='display: none;' required />
+                            <input id="file-upload" onchange='cambiar()' name="imgPerfil" type="file" accept="image/gif, image/jpeg, image/png" style='display: none;' />
 
                                 <div id="info-img">No se Eligió Archivo</div>
 

@@ -71,7 +71,7 @@
 
 						<!--<label>{{ Auth::user()->name }}</label>-->
 
-						<button class="btn-seleccionar"><img src="/img/UsuarioLo.png">{{ Auth::user()->name }}</button>
+						<button class="btn-seleccionar"><img src="/images/perfil/{{Auth::user()->perfil_img}}">{{ Auth::user()->name }}</button>
 
 							<ul>
 								<li>

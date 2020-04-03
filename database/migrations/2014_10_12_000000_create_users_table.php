@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->text('perfil_img')->default('UsuarioFoto.png');
         });
     }
 

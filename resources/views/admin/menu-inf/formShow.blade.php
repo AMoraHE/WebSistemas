@@ -2,7 +2,7 @@
 
 			<div class="contenedor-img-slider">
 
-				<img src="/images/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}">
+				<img src="/images/infra/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}">
 
 			</div>
 
@@ -38,17 +38,17 @@
 
 		<div class="seccion-mini-galeria">
 
-			<img src="/images/{{$infra->img1}}">
+			<img src="/images/infra/{{$infra->img1}}">
 
-			<img src="/images/{{$infra->img2}}">
+			<img src="/images/infra/{{$infra->img2}}">
 
-			<img src="/images/{{$infra->img3}}">
+			<img src="/images/infra/{{$infra->img3}}">
 
-			<img src="/images/{{$infra->img4}}">
+			<img src="/images/infra/{{$infra->img4}}">
 
-			<img src="/images/{{$infra->img5}}">
+			<img src="/images/infra/{{$infra->img5}}">
 
-			<img src="/images/{{$infra->img6}}">
+			<img src="/images/infra/{{$infra->img6}}">
 
 			<!---------------Boton agregar mas img a la mini galeria-------------------------->
 

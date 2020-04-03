@@ -30,7 +30,7 @@
 
 			<div class="seccion-avatar">
 
-		        <img class="avatar" src="/img/UsuarioFoto.png">
+		        <img class="avatar" src="/images/perfil/{{$user->perfil_img}}">
 
 		    </div>
 

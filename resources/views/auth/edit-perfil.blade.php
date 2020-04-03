@@ -15,42 +15,42 @@
 	    </div>
 
 	    <!----------------------------------------------------------------- Perfil ---------------------------------------------------------->
-		
-		<div class="formulario">
 
- 			<label for="">Tamaño de imagen recomendado: 200px de ancho y 200px de alto</label>
-
- 		</div>
-
-		<div class="contenedor-cargar-img">
-
-			<div class="contenedor-txt-seccion">
-
-				<label for="">Cargar IMG</label>
-
-			</div>
-
-			<div class="contenedor-boton-cargar">
-
-			<label for="file-upload" class="subir"><i class="fas fa-cloud-upload-alt"></i>Subir Archivo</label>
-
-			<input id="file-upload" onchange='cambiar()' name="image" type="file" accept="image/gif, image/jpeg, image/png" style='display: none;' required />
-
-				<div id="info-img">No se Eligió Archivo</div>
-
-			</div>
-
-			<div class="contenedor-img-seccion">
-
- 				<img id="img-pre" src="/img/LogoNuevaImagen.png">
-
- 			</div>
-
-		</div>
-
-	    <form class="form-group" method="POST" action="{{route('users.update', $user)}}">
+	    <form class="form-group" method="POST" action="{{route('users.update', $user)}}" enctype="multipart/form-data">
 	    {{ csrf_field() }}
     	{{ method_field('patch') }}
+
+	    	<div class="formulario">
+
+	 			<label for="">Tamaño de imagen recomendado: 200px de ancho y 200px de alto</label>
+
+	 		</div>
+
+			<div class="contenedor-cargar-img">
+
+				<div class="contenedor-txt-seccion">
+
+					<label for="">Cargar IMG</label>
+
+				</div>
+
+				<div class="contenedor-boton-cargar">
+
+				<label for="file-upload" class="subir"><i class="fas fa-cloud-upload-alt"></i>Subir Archivo</label>
+
+				<input id="file-upload" onchange='cambiar()' name="imgPerfil" type="file" accept="image/gif, image/jpeg, image/png" style='display: none;' />
+
+					<div id="info-img">No se Eligió Archivo</div>
+
+				</div>
+
+				<div class="contenedor-img-seccion">
+
+	 				<img id="img-pre" src="/images/perfil/{{$user->perfil_img}}">
+
+	 			</div>
+
+			</div>
 
 		    <div class="formulario"> 
 		      
