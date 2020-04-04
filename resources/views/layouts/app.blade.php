@@ -44,7 +44,7 @@
 
                             <div id="usuario">
                                     
-                                    <img src="/img/UsuarioLo.png">
+                                    <img src="/images/perfil/{{Auth::user()->perfil_img}}">
                                     <a>{{ Auth::user()->name }}</a>
 
                             </div>

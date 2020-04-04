@@ -51,12 +51,6 @@
 			<img src="/images/infra/{{$infra->img6}}">
 
 			<!---------------Boton agregar mas img a la mini galeria-------------------------->
-
-			<div class="contenedores-botones">
-
-				<button class="btn"><span>Agregar</span></button>
-				
-			</div>
 			
 		</div>
 
