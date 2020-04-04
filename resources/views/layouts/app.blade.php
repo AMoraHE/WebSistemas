@@ -66,10 +66,16 @@
 
             </div>
 
-            <main class="contenedor-loggin">
-                @yield('content')
-            </main>
+
     </div>
+
+    <main class="contenedor-loggin">
+        @yield('content')
+    </main>
+
+
+    <script src="{{ asset('js/select.js')}}"></script>
+
 
 </body>
 </html>
