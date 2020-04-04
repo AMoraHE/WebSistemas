@@ -154,12 +154,10 @@ Route::get('/Lab-cisco', 'LabCiscoController@index')->middleware('auth');
 Route::get('/Lab-Micro/create', 'LabMicroController@create')->middleware('auth');
 Route::get('/Lab-Micro', 'LabMicroController@index')->middleware('auth');
 
-Route::get('/editar-proyecto', function () {
-    return view('.admin.menu-academicos.proyectos.edit');
-})->name('EditarProyectos')->middleware('auth');
-Route::get('/agregar-proyecto', function () {
-    return view('.admin.menu-academicos.proyectos.create');
-})->name('AgregarProyectos')->middleware('auth');
+//Route::get('/Lab-Celula', 'CelulaController@create');
+Route::resource('Lab-Celula', 'CelulaController')->middleware('auth');
+Route::get('/Lab-Celula/create', 'CelulaController@create');
+Route::get('/Lab-Celula', 'CelulaController@index')->middleware('auth');
 
 //Ruta Eventos-academicos
 
@@ -176,6 +174,20 @@ Route::get('/agregar-evento', function () {
     return view('.admin.menu-academicos.Eventos.create');
 })->name('AgregarEventos')->middleware('auth');
 
+Route::get('/editar-proyecto', function () {
+    return view('.admin.menu-academicos.proyectos.edit');
+})->name('EditarProyectos')->middleware('auth');
+Route::get('/agregar-proyecto', function () {
+    return view('.admin.menu-academicos.proyectos.create');
+})->name('AgregarProyectos')->middleware('auth');
+
+//Rutas Proyectos-academicos
+
+Route::resource('proyectos', 'ProyectoController')->middleware('auth');
+
+Route::get('/ProyectosAcademicos', function () {
+    return view('.admin.menu-academicos.proyectos.view-proyectos-academicos');
+})->name('ProyectosAcademicos')->middleware('auth');
 Route::get('/editar-proyecto', function () {
     return view('.admin.menu-academicos.proyectos.edit');
 })->name('EditarProyectos')->middleware('auth');
@@ -211,16 +223,6 @@ Route::get('/agregar-programas', function () {
 })->name('AgregarProgramas')->middleware('auth');
 
 
-//Route::get('/Lab-Celula', 'CelulaController@create');
-Route::resource('Lab-Celula', 'CelulaController')->middleware('auth');
-Route::get('/Lab-Celula/create', 'CelulaController@create');
-Route::get('/Lab-Celula', 'CelulaController@index')->middleware('auth');
 
 
-//Rutas Proyectos-academicos
 
-Route::resource('proyectos', 'ProyectoController')->middleware('auth');
-
-Route::get('/ProyectosAcademicos', function () {
-    return view('.admin.menu-academicos.proyectos.view-proyectos-academicos');
-})->name('ProyectosAcademicos')->middleware('auth');
