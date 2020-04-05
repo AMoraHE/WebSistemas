@@ -15,7 +15,7 @@ class CelulaController extends Controller
      */
     public function index()
     {
-        $infras = Infraestructura::all();
+        $infras = Infraestructura::where('slug', 'celula')->get();
         return view('/admin/menu-inf/lab-celula/show', compact('infras'));
     }
 
@@ -177,7 +177,7 @@ class CelulaController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect('/Lab-Celula/create')
+            return redirect('/Lab-Celula/'.$infras.'/edit')
                         ->withErrors($validator)
                         ->withInput($request->all());
         }

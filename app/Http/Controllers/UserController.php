@@ -44,7 +44,7 @@ class UserController extends Controller
             if(Auth::user()->email == request('email')) 
             {
             
-                $this->validate(request(), ['name' => 'required', 'password' => 'required|min:6|confirmed', 'imgPerfil' => 'mimes:jpeg,png,bmp,tiff,gif']);
+                $this->validate(request(), ['name' => 'required', 'password' => 'required|min:6|confirmed']);
 
                 $user->name = request('name');
                 $user->password = Hash::make(request('password'));
@@ -59,7 +59,7 @@ class UserController extends Controller
             else
             {
             
-                $this->validate(request(), ['name' => 'required', 'email' => 'required|email|unique:users', 'password' => 'required|min:6|confirmed', 'imgPerfil' => 'mimes:jpeg,png,bmp,tiff,gif']);
+                $this->validate(request(), ['name' => 'required', 'email' => 'required|email|unique:users', 'password' => 'required|min:6|confirmed']);
 
                 $user->name = request('name');
                 $user->email = request('email');
@@ -78,7 +78,7 @@ class UserController extends Controller
             if(Auth::user()->email == request('email')) 
             {
             
-                $this->validate(request(), ['name' => 'required', 'password' => 'required|min:6|confirmed', 'imgPerfil' => 'mimes:jpeg,png,bmp,tiff,gif']);
+                $this->validate(request(), ['name' => 'required', 'password' => 'required|min:6|confirmed']);
 
                 $user->name = request('name');
                 $user->password = Hash::make(request('password'));
@@ -92,7 +92,7 @@ class UserController extends Controller
             else
             {
             
-                $this->validate(request(), ['name' => 'required', 'email' => 'required|email|unique:users', 'password' => 'required|min:6|confirmed', 'imgPerfil' => 'mimes:jpeg,png,bmp,tiff,gif']);
+                $this->validate(request(), ['name' => 'required', 'email' => 'required|email|unique:users', 'password' => 'required|min:6|confirmed']);
 
                 $user->name = request('name');
                 $user->email = request('email');

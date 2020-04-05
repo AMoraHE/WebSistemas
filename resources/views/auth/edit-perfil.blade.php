@@ -52,7 +52,7 @@
 
 			</div>
 
-			@if ($errors->has('imagPerfil'))
+			@if ($errors->has('imgPerfil'))
       			<span class="invalid-feedback" role="alert">
         			<strong>{{ $errors->first('imgPerfil') }}</strong>
       			</span>

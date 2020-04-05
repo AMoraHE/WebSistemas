@@ -9,7 +9,7 @@
 
 		<div class="contenedor-titulo-seccion">
 	
-			<h3>Editar - Laboratorio de Cisco</h3>
+			<h3>Agregar - Laboratorio de Cisco</h3>
 
 		</div>
 
@@ -19,12 +19,12 @@
 	
 
 	<!----------------------------------------------------------------- Cargar Imagen ---------------------------------------------------------->
-	@include('admin.menu-inf.formEdit')
+	@include('admin.menu-inf.form')
 
 	<div class="contenedor-botones">
                       
     	<a onclick="return confirm('¿Seguro que desea actualizar?')"><button type="submit" class="btn"><span>Guardar</span></button></a>
-        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
+        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Lab-Cisco"><button type="button" class="btn"><span>Cancelar</span></button></a>
       
     </div>
 </form>

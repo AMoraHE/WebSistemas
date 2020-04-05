@@ -9,7 +9,7 @@
 
 		<div class="contenedor-titulo-seccion">
 	
-			<h3>Editar - Laboratorio de Sistemas</h3>
+			<h3>Agregar - Laboratorio de Sistemas</h3>
 
 		</div>
 
@@ -20,16 +20,12 @@
 	
 
 	<!----------------------------------------------------------------- Cargar Imagen ---------------------------------------------------------->
-
-	<form class="form-group" files = "true" method="POST" action="/Lab-Sistemas/{{$infra->slug}}" enctype="multipart/form-data">
-  
- 	@method('PUT')
-	@include('admin.menu-inf.formEdit')
+	@include('admin.menu-inf.form')
 
 	<div class="contenedor-botones">
                       
-        <a onclick="return confirm('¿Seguro que desea actualizar?')"><button type="submit" class="btn"><span>Guardar</span></button></a>
-        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
+        <a onclick="return confirm('¿Seguro que desea guardar?')"><button type="submit" class="btn"><span>Guardar</span></button></a>
+        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Lab-Sistemas"><button type="button" class="btn"><span>Cancelar</span></button></a>
       
     </div>
 </form>

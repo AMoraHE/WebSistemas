@@ -10,7 +10,7 @@
 
 	<div class="contenedor-titulo-seccion">
 	
-			<h3>Crear - Celula de Desarrollo de Software</h3>
+			<h3>Agregar - Celula de Desarrollo de Software</h3>
 
 	 </div>
 

@@ -11,6 +11,9 @@
 @endif
 
 	<div class="seccion-principal">
+
+		<a href="/Lab-Celula/create"><button class="btn"><span>Agregar</span></button></a>
+		
 @foreach ($infras as $infra)
 	
 
@@ -24,7 +27,7 @@
 
 		<div class="contenedor-botones">
 
-		<a href="/Lab-Celula/{{$infra->slug}}/edit"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
+			<a href="/Lab-Celula/{{$infra->slug}}/edit"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
 			
 		</div>
 

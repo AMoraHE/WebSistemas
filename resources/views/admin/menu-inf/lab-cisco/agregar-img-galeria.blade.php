@@ -18,7 +18,7 @@
       
     <div class="contenedor-botones">
 
-    	<a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
+    	<a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/Lab-Cisco"><button type="button" class="btn"><span>Cancelar</span></button></a>
     
      </div>
 
