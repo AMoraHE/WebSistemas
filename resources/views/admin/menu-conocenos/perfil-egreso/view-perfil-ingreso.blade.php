@@ -4,42 +4,46 @@
 
 @section('content')
 
-	<div class="seccion-principal">
+<div class="seccion-principal">
 
 <!----------------------------------------------------------------- PERFIL EGRESO ---------------------------------------------------------->
 
-		<div class="contenedor-titulo-seccion">
+	<div class="contenedor-titulo-seccion">
 
-				<h3>Perfil Egreso</h3> 
+		<h3>Perfil Egreso</h3> 
+
+	</div>
+
+<!----------------------------------------------------------------- CUERPO PERFIL EGRESO ---------------------------------------------------------->
+
+
+	<div class="contenedor-cuerpo-seccion">
+
+		<div class="contenedor-texto-completo">
+
+			<ul>
+
+				@foreach ($perfilegreso as $perfilegres)
+
+				<li>{{$perfilegres->elemento}}</li>
+
+				@endforeach
+
+			</ul>
 
 		</div>
 
-		<div class="contenedor-cuerpo-seccion">
+	</div>
 
-			<div class="contenedor-texto-conocenos">
+<!----------------------------------------------------------------- BOTONES PERFIL EGRESO ---------------------------------------------------------->
 
-				<ul>
-
-					@foreach ($perfilegreso as $perfilegres)
-
-					<li>{{$perfilegres->elemento}}</li>
-
-					@endforeach
-
-				</ul>
-
-			</div>
-
-		</div>
-
-		<div class="contenedor-botones">
+	<div class="contenedor-botones">
 
 		<a onclick="return confirm('¿Desea editar la lista del perfil de egreso?')" href="{{route('editar-perfil-egreso')}}"><button class="btn"><span>Editar</span></button> </a>
 
-
-		</div>
-		
 	</div>
+		
+</div>
 
 
 @endsection

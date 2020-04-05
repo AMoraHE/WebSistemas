@@ -10,18 +10,16 @@
 		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" type="text/css" href="{{ asset('css/estilos.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-contenedores.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-noticias.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-formularios.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/elementos.css')}}">
+
+		<!--------------------------------SLIDER---------------------------------------->
 
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/flexslider.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css')}}">
 
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/organigrama.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/alertas.css')}}">
+		<!--------------------------------CALENDARIO---------------------------------------->
 
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/modal.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/calendario.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/fullcalendar.css')}}">
 		
 
@@ -71,12 +69,12 @@
 
 						<!--<label>{{ Auth::user()->name }}</label>-->
 
-						<button class="btn-seleccionar"><img src="/images/perfil/{{Auth::user()->perfil_img}}">{{ Auth::user()->name }}</button>
+						<button class="btn-seleccionar"><img class="foto-perfil-user" src="/images/perfil/{{Auth::user()->perfil_img}}">{{ Auth::user()->name }}</button>
 
 							<ul>
 								<li>
 
-									<a href="{{route('perfil-usuario')}}"><button class="btn-user"><img src="/img/Usuario.png">Perfil</button></a>
+									<a href="{{route('perfil-usuario')}}"><button class="btn-user"><img class="icono-menu-user" src="/img/Usuario.png">Perfil</button></a>
 
 								</li>
 
@@ -85,7 +83,7 @@
 									<form method="POST" action="{{ route('logout') }}">
 					  				@csrf
 
-						  				<a href="#"><button class="btn-user"><img src="/img/Logout.png">Cerrar Sesión</button></a>
+						  				<a href="#"><button class="btn-user"><img class="icono-menu-user" src="/img/Logout.png">Cerrar Sesión</button></a>
 
 									</form>
 

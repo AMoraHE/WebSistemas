@@ -14,7 +14,7 @@
                     Inicio de sesión correcto !
 
                 
-                    <div class="contenedor-boton-CE">
+                    <div class="contenedor-botones">
 
                         <a href="/admin"><button class="btn"><span>Acceder al Panel</span></button></a>
 

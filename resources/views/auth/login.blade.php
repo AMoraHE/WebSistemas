@@ -3,11 +3,26 @@
 @section('content')
 <div id="seccion-login">
 
-                <div class="titulo-seccion-loggin">{{ __('INICIO DE SESIÓN') }}</div>
+                <div class="titulo-seccion-loggin">{{ __('Inicio de Sesión') }}</div>
 
                 <div class="cuerpo-seccion-loggin">
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
                         @csrf
+
+<!----------------------------------------------------------------------------------------IMG Perfil------------------------------------------------------------------------------------>
+
+                        <div class="contenedor-cuerpo-seccion">
+
+                            <div class="seccion-avatar">
+
+                                <img class="avatar" src="/img/UsuarioFoto.png">
+
+                            </div>
+
+                        </div>
+
+<!------------------------------------------------------------------------------------Formulario Perfil---------------------------------------------------------------------------------->
+
 
                         <div class="formulario">
                             <label for="email">{{ __('Dirección de correo electrónico') }}</label>
@@ -41,24 +56,26 @@
                                     </label>
                         </div>
 
-                        <div class="contenedor-boton-CE">
+<!-----------------------------------------------------------------------------------Botones Perfil-------------------------------------------------------------------------------------->
+
+
+                        <div class="contenedor-botones">
                                 
                                 <button type="submit" class="btn">
                                     <span>{{ __('Iniciar sesión') }}</span>
                                 </button>
 
                         </div>
+
                     </form>
 
                 </div>
 
                 <div class="contenedor-seccion-botones-inicio-sesion">
 
-
-                        <a href="{{ route('password.request') }}">
-                            <button class="btn centrado"><span>{{ __('¿Olvidó su contraseña?') }}</span></button>
-                        </a>
-
+                    <a href="{{ route('password.request') }}">
+                        <button class="btn centrado"><span>{{ __('¿Olvidó su contraseña?') }}</span></button>
+                    </a>
 
                 </div>
 

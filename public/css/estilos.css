@@ -59,11 +59,6 @@ Boton srcoll ir arriba**********************************************************
 /**************************************************************************************************
 Boton Cerrar Sesión****************************************************************************************/
 
-.seccion-cerrar{
-    width: 20%;
-    float: right;
-}
-
 .nombre-usuario{
     display: flex;
     justify-content: flex-end;
@@ -72,8 +67,9 @@ Boton Cerrar Sesión************************************************************
     color: #fff;
 }
 
-.nombre-usuario img{
+.foto-perfil-user{
     width: 10%;
+    max-height: 45px;
     margin-right: 10px;
 }
 
@@ -81,6 +77,11 @@ Boton Cerrar Sesión************************************************************
     background: #1B396A;
     padding: 2%;
     margin: 10px auto;
+    position: relative;
+    min-height: 60px;
+
+    display: flex;
+    align-items: center;
 }
 
 /*****************************************************BOTON USUARIO**************************************************/
@@ -153,8 +154,9 @@ Boton Cerrar Sesión************************************************************
 
 }
 
-.btn-user img{
+.icono-menu-user{
     width: 5%;
+   margin-right: 10px;
 }
 
 /**************************************************************************************************

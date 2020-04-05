@@ -37,9 +37,9 @@
                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                         </div>
 
-                        <div class="contenedor-boton-CE">
+                        <div class="contenedor-botones">
                                 <button type="submit" class="btn">
-                                    <span>{{ __('Restablecer contraseña') }}</span>
+                                    <span>{{ __('Restablecer') }}</span>
                                 </button>
                         </div>
                     </form>

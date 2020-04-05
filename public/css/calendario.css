@@ -1,9 +1,0 @@
-.contenedor-calendario{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-#CalendarioWeb {
-		max-width: 800px;
-	}

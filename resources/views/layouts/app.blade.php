@@ -19,10 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/inicio-sesion.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/estilos.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/estilos-contenedores.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/estilos-formularios.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/estilos-noticias.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/elementos.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -38,8 +35,8 @@
 
                             <!-- Authentication Links -->
                             @guest
-                                    <a href="{{ route('login') }}"><button class="btn"><span>{{ __('INICIAR SESIÓN') }}</span></button></a>
-                                    <a href="{{ route('register') }}"><button class="btn"><span>{{ __('REGISTRARSE') }}</span></button></a>
+                                    <a href="{{ route('login') }}"><button class="btn"><span>{{ __('Iniciar Sesión') }}</span></button></a>
+                                    <a href="{{ route('register') }}"><button class="btn"><span>{{ __('Registrarse') }}</span></button></a>
                             @else
 
                             <div id="usuario">
@@ -50,7 +47,7 @@
                             </div>
 
                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                <button class="btn"><span>{{ __('CERRAR SESIÓN') }}</span></button>
+                                <button class="btn"><span>{{ __('Cerrar Sesión') }}</span></button>
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST">

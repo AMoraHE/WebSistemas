@@ -3,85 +3,89 @@
 @section('title', 'Editar Slider')
 
 @section('content')
-		<div class="seccion-principal">
 
-      <div class="contenedor-titulo-seccion-select">
+<div class="seccion-principal">
 
-        <h3>Editar Slider</h3>
+<!----------------------------------------------------------------- SLIDER ---------------------------------------------------------->
 
 
-        <div class="contenedor-select-seccion">
+  <div class="contenedor-titulo-seccion-select">
+
+    <h3>Editar Slider</h3>
+
+<!----------------------------------------------------- SELECT SLIDER -------------------------------------------------------------->
+
+    <div class="contenedor-select-seccion">
               
-            <select name="slider_id" id ="slider" class="seleccion" onchange="top.location.href = this.options[this.selectedIndex].value">
-              <!------------- Select de Área utilizando option ------------------>
-                    <option value="">--Elija el slider--</option> 
+      <select name="slider_id" id ="slider" class="seleccion" onchange="top.location.href = this.options[this.selectedIndex].value">
 
-                    @foreach ($slidersG as $sliderG)
+        <option value="">--Elija el slider--</option> 
 
-                    @php
-                    $var = $sliderG->id
-                    @endphp
+        @foreach ($slidersG as $sliderG)
 
-                    <option value="{{route('filtrarslider', ['id' => $var])}}">{{$sliderG->id}}</option>
+        @php
+        $var = $sliderG->id
+        @endphp
 
-                    @endforeach
-            </select>
-                  <i></i>
+        <option value="{{route('filtrarslider', ['id' => $var])}}">{{$sliderG->id}}</option>
+
+        @endforeach
+
+      </select>
+      <i></i>
     
-        </div>
+    </div>
 
-      </div>
+  </div>
 
-  	<!----------------------------------------------------------------- FORMULARIO - CARGAR IMG ---------------------------------------------------------->
+<!----------------------------------------------------------------- FORMULARIO SLIDER ---------------------------------------------------------->
 
-    <form class="form-goup" files="true" method="POST" action="/slider/{{$slider->slug}}" enctype="multipart/form-data">
-        @method('PUT')
-        @csrf
-  		<div class="formulario">
+  <form class="form-goup" files="true" method="POST" action="/slider/{{$slider->slug}}" enctype="multipart/form-data">
+      @method('PUT')
+      @csrf
 
+  	<div class="formulario">
 
-  			<label for="">Título</label>
+  		<label for="">Título</label>
+  		<input type="text" name="contenido" id="titulo" value="{{$slider->contenido}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
 
-  			<input type="text" name="contenido" id="titulo" value="{{$slider->contenido}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
+  	</div>
 
-  		</div>
+<!----------------------------------------------------------------- IMG SLIDER ------------------------------------------------------------------>
 
-      <div class="formulario">
+    <div class="formulario">
 
-        <label for="">Tamaño de imagen recomendado: 1100px de ancho y 450px de alto</label>
+      <label for="">Tamaño de imagen recomendado: 1100px de ancho y 450px de alto</label>
         
-      </div>
+    </div>
 
-  		<div class="contenedor-cargar-img">
+  	<div class="contenedor-cargar-img">
 
-  				<div class="contenedor-txt-seccion">
+  		<div class="contenedor-txt-seccion">
 
-  					<label for="">Cargar IMG:</label>
-
-  				</div>
-
-  				<div class="contenedor-boton-cargar">
-
-  					<label for="file-upload" class="subir">
-  						<i class="fas fa-cloud-upload-alt"></i> Subir Archivo
-  					</label>
-
-  					<input id="file-upload" name="image" value="/images/slider/{{$slider->image}}" onchange='cambiar()' type="file" accept="image/gif, image/jpeg, image/png" style='display: none;'/>
-
-  					<div id="info-img">No se Eligió Archivo</div>
-
-
-  				</div>
-
-
-  				<div class="contenedor-img-seccion">
-
-  					<img id="img-pre" src="/images/slider/{{$slider->image}}">
-
-  				</div>
-
+  			<label for="">Cargar IMG:</label>
 
   		</div>
+
+  		<div class="contenedor-boton-cargar">
+
+  			<label for="file-upload" class="subir"><i class="icono-izquierda fas fa-cloud-upload-alt"></i> Subir Archivo</label>
+  			<input id="file-upload" name="image" value="/images/slider/{{$slider->image}}" onchange='cambiar()' type="file" accept="image/gif, image/jpeg, image/png" style='display: none;'/>
+
+  		</div>
+
+
+  		<div class="contenedor-img-seccion">
+
+  			<img id="img-pre" src="/images/slider/{{$slider->image}}">
+
+  		</div>
+
+  	</div>
+
+    <div id="info-img">No se Eligió Archivo</div>
+
+<!----------------------------------------------------------------- BOTONES SLIDER ---------------------------------------------------------->
 
   		<div class="contenedor-botones">
 
@@ -89,43 +93,45 @@
 
   		</div>
 
-</form>
-  <!------------------------------------------------------------- PREVISUALIZACIÓN ---------------------------------------------------------->
+  </form>
+
+<!------------------------------------------------------------- PREVISUALIZACIÓN SLIDER ---------------------------------------------------------->
 
 
-  		<div class="contenedor-previsualizar-seccion">
+  <div class="contenedor-previsualizar-seccion">
 
-  			<div class="contenedor-titulo-seccion">
+  	<div class="contenedor-titulo-seccion">
 
-  				<h3>Previsualización</h3>
+  		<h3>Previsualización</h3>
 
-  			</div>
+  	</div>
 
-        @foreach ($slidersG as $sliderG)
+    @foreach ($slidersG as $sliderG)
 
+  	<div class="contenedor-seccion-preliminar">
 
-  			<div class="contenedor-seccion-preliminar">
+      <div class="contenedor-seccion-preliminar-img-redimensionales">
 
-          <div class="contenedor-seccion-preliminar-slider-img">
-
-  				  <img src="/images/slider/{{$sliderG->image}}">
-
-          </div>
-
-
-  				<h2>{{$sliderG->contenido}}</h2>
-
-  			</div>
-      @endforeach
-
-  		</div>
-
-      <div class="contenedor-botones">
-
-        <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/slider"><button type="button" class="btn"><span>Cancelar</span></button></a>
+  			<img src="/images/slider/{{$sliderG->image}}">
 
       </div>
 
+  		<h2>{{$sliderG->contenido}}</h2>
+
+  	</div>
+
+    @endforeach
+
+  </div>
+
+<!----------------------------------------------------------------- BOTONES SLIDER ---------------------------------------------------------->
+
+  <div class="contenedor-botones">
+
+    <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/slider"><button type="button" class="btn"><span>Cancelar</span></button></a>
+
+  </div>
+  
 </div>
 
 @endsection

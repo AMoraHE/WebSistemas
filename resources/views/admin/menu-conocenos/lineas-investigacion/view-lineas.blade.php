@@ -5,65 +5,74 @@
 @section('content')
 
 @if(session('status'))
+
     <div class="alert alert-success">
         {{session('status')}}
     </div>
+
 @endif
 
-			<div class="seccion-principal">
+<div class="seccion-principal">
 
-		<!----------------------------------------------------------------- VER LINEAS INVESTIGACIÓN---------------------------------------->
+<!----------------------------------------------------------------- TABLA LINEAS INVESTIGACIÓN---------------------------------------->
 
-				<div class="contenedor-titulo-seccion">
+	<div class="contenedor-titulo-seccion">
 
-						<h3>Líneas de Investigación</h3>
+		<h3>Líneas de Investigación</h3>
 
-				</div>
+	</div>
 
-				<div class="contenedor-botones">
+	<div class="contenedor-botones">
 
-					<a onclick="return confirm('¿Desea agregar un nuevo elemento?')" href="{{route('crear-Linea-Investigacion')}}"><button class="btn"><span>Agregar</span></button></a>
+		<a onclick="return confirm('¿Desea agregar un nuevo elemento?')" href="{{route('crear-Linea-Investigacion')}}"><button class="btn"><span>Agregar</span></button></a>
 
-				</div>
+	</div>
 					
-				<div class="contenedor-cuerpo-seccion">
+	<div class="contenedor-cuerpo-seccion">
 
-						<div class="contenedor-texto-conocenos">
+		<div class="contenedor-texto-completo">
 
-							<div class="tabla-informacion-escolar">
+			<div class="tabla-informacion-escolar">
 
-								<table>
+				<table>
 									
-									<thead>
-										<tr>
-											<th>Programa</th>
-											<th>Líneas de Investigación</th>
-											<th>CLave LI TECNM</th>
-											<th>Eliminar</th>
-											<th>Editar</th>
-										</tr>
-									</thead>
+					<thead>
+						<tr>
+							<th>Programa</th>
+							<th>Líneas de Investigación</th>
+							<th>CLave LI TECNM</th>
+							<th>Eliminar</th>
+							<th>Editar</th>
+						</tr>
+					</thead>
 
-									@foreach ($lineainvestigacion as $lineainvestigacio)
+					@foreach ($lineainvestigacion as $lineainvestigacio)
 
-									<tr>
-										<td>{{$lineainvestigacio->programa}}</td>
-										<td>{{$lineainvestigacio->linea}}</td>
-										<td>{{$lineainvestigacio->clave}}</td>
-										<td><a onclick="return confirm('¿Desea eliminar este elemento?')" href="Eliminar-Linea-Investigacion/{{$lineainvestigacio->slug}}"><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></a></td>
-										<td><a onclick="return confirm('¿Desea editar este elemento?')" href="/Lineas-Investigacion/{{$lineainvestigacio->slug}}/edit"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a></td>	
-									</tr>
+						<tr>
+							<td>{{$lineainvestigacio->programa}}</td>
+							<td>{{$lineainvestigacio->linea}}</td>
+							<td>{{$lineainvestigacio->clave}}</td>
+							
+							<td>
+								<a onclick="return confirm('¿Desea eliminar este elemento?')" href="Eliminar-Linea-Investigacion/{{$lineainvestigacio->slug}}"><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></a>
+							</td>
 
-									@endforeach
+							<td>
+								<a onclick="return confirm('¿Desea editar este elemento?')" href="/Lineas-Investigacion/{{$lineainvestigacio->slug}}/edit"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a>
+							</td>	
 
-								</table>		
+						</tr>
 
-							</div>
+					@endforeach
 
-						</div>
+				</table>		
 
-				</div>
-				
 			</div>
+
+		</div>
+
+	</div>
+				
+</div>
 
 @endsection

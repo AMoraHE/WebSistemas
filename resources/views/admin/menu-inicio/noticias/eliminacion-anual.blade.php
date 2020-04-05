@@ -4,91 +4,91 @@
 
 @section('content')
 
-	<!----------------------------------------------------------------- SELECT FECHA ---------------------------------------------------------->
+<!----------------------------------------------------------------- NOTICIAS --------------------------------------------------------------------------->
 
-	<div class="seccion-principal">
+<div class="seccion-principal">
 
-		<div class="contenedor-titulo-seccion-select">
+	<div class="contenedor-titulo-seccion-select">
 
-				<h3>Eliminación Anual</h3>
+		<h3>Eliminación Anual</h3>
 
-			<div class="contenedor-select-seccion">
+<!---------------------------------------------------------------------- SELECTOR DE AÑO -------------------------------------------------------------->
 
-					<!----------------------------------------------------------------- SELECTOR DE AÑO ---------------------------------------------------------->
+		<div class="contenedor-select-seccion">
 
-					<?php
-					$cont = date('Y');
-					?>
-				<form class="form-goup" method="POST" action="/noticias-admin/eliminacion-anual" enctype="multipart/form-data">
-			          @csrf
+		<?php
+		$cont = date('Y');
+		?>
+		<form class="form-goup" method="POST" action="/noticias-admin/eliminacion-anual" enctype="multipart/form-data">
+			@csrf
 
-						<select name="year" id="year" class="seleccion">
+		<select name="year" id="year" class="seleccion">
 
-							<option value="">--Elija un Año--</option>
+			<option value="">--Elija un Año--</option>
 
-							<?php while ($cont >= 2019) { ?>
+				<?php while ($cont >= 2019) { ?>
 
-							  <option  value="<?php echo($cont); ?>"><?php echo($cont); ?></option>
+			<option  value="<?php echo($cont); ?>"><?php echo($cont); ?></option>
 
-							<?php $cont = ($cont-1); } ?>
+				<?php $cont = ($cont-1); } ?>
 
-						</select>
+		</select>
 
-						<div class="btn-eliminacion-anual">
+<!---------------------------------------------------------------------- boton ELIMINACION ANUAL -------------------------------------------------------------->
 
-							<button onclick="return confirm('¿Desea realizar la eliminación anual?')" class="btn"><span>Eliminar</span></button>
+		<div class="btn-eliminacion-anual">
 
-						</div>
-
-
-				</form>
-
-					<i></i>
-
-					<!----------------------------------------------------------------- FIN SELECTOR DE AÑO ---------------------------------------------------------->
-
-			</div>
+			<button onclick="return confirm('¿Desea realizar la eliminación anual?')" class="btn"><span>Eliminar</span></button>
 
 		</div>
 
 
-		<!----------------------------------------------------------------- NOTICIA N1 ---------------------------------------------------------->
+		</form>
 
-	@foreach ($noticias as $noticia)
-
-		<div class="contenedor-titulo-seccion">
-
-				<h3>{{$noticia->titulo}}</h3>
-
-		</div>
-
-		<div class="contenedor-cuerpo-noticia">
-
-				<div class="contenedor-img-noticia">
-
-					<img src="/images/news/{{$noticia->newimage}}">
-
-				</div>
-
-				<div class="contenedor-texto">
-
-					<p>{{$noticia->redaccion}}</p>
-
-				</div>
-
-		</div>
-
-	@endforeach
-
-
-	<!------------------------------------------------------------- BOTON ELIMINAR MASIVO ---------------------------------------------------------->
-
-		<div class="contenedor-botones">
-
-			<a onclick="return confirm('¿Desea cancelar la eliminacion anual?')" href="/noticias-admin"><button class="btn"><span>Cancelar</span></button></a>
+		<i></i>
 
 		</div>
 
 	</div>
+
+
+<!-------------------------------------------------------------------------- NOTICIAS -------------------------------------------------------------------------->
+
+	@foreach ($noticias as $noticia)
+
+	<div class="contenedor-titulo-seccion">
+
+		<h3>{{$noticia->titulo}}</h3>
+
+	</div>
+
+	<div class="contenedor-cuerpo-dividido">
+
+		<div class="contenedor-img-dividido">
+
+			<img src="/images/news/{{$noticia->newimage}}">
+
+		</div>
+
+		<div class="contenedor-texto-dividido">
+
+			<p>{{$noticia->redaccion}}</p>
+
+		</div>
+
+	</div>
+
+	@endforeach
+
+
+	<!------------------------------------------------------------- BOTONES NOTICIA CANCELAR ---------------------------------------------------------->
+
+	<div class="contenedor-botones">
+
+		<a onclick="return confirm('¿Desea cancelar la eliminacion anual?')" href="/noticias-admin"><button class="btn"><span>Cancelar</span></button></a>
+
+	</div>
+
+</div>
 
 @endsection

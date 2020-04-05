@@ -5,132 +5,136 @@
 
 @section('content-slider')
 
-	<!----------------------------------------------------------------- SLIDER ---------------------------------------------------------->
+<!----------------------------------------------------------------- SLIDER ---------------------------------------------------------->
+
+<div class="contenedor-slider">
+
+	<div class="seccion-principal">
+
+		<div class="flexslider">
+
+			<ul class="slides">
+
+			@foreach ($sliders as $slider)
 
 
+				<li>
+					<img src="/images/slider/{{$slider->image}}" alt="">
+					
+					<section class="caption">
 
-				<!------------------------------------------------------- Slider ---------------------------------------------------->
-			<div class="contenedor-slider">
+						<h2>{{$slider->contenido}}</h2>
 
-				<div class="seccion-principal">
-
-					<div class="flexslider">
-
-						<ul class="slides">
-
-							@foreach ($sliders as $slider)
-
-
-							<li>
-								<img src="/images/slider/{{$slider->image}}" alt="">
-								<section class="caption">
-									<h2>{{$slider->contenido}}</h2>
-								</section>
-							</li>
-						@endforeach
+					</section>
+				</li>
+			
+			@endforeach
 
 
-						</ul>
-					</div>
+			</ul>
+		
+		</div>
 
-					<div class="contenedor-botones">
+		<div class="contenedor-botones">
 
-				<a onclick="return confirm('¿Desea editar el slider?')" href="/slider"><button class="btn"><span>Editar</span></button></a>
+			<a onclick="return confirm('¿Desea editar el slider?')" href="/slider"><button class="btn"><span>Editar</span></button></a>
 
-					</div>
+		</div>
 
-				</div>
+	</div>
 
-			</div>
-
-
-
+</div>
 
 @endsection
 
 
 @section('content')
 
-	<!----------------------------------------------------------------- NOTICIA N1 ---------------------------------------------------------->
+<!----------------------------------------------------------------- NOTICIA ---------------------------------------------------------->
 
 
-	<div class="seccion-principal">
-	@foreach ($noticias as $noticia)
-		@if($loop->first)
+<div class="seccion-principal">
 
-		<div class="contenedor-titulo-seccion">
+@foreach ($noticias as $noticia)
+	
+	@if($loop->first)
 
-				<h3>{{$noticia->titulo}}</h3>
+	<div class="contenedor-titulo-seccion">
 
-		</div>
+		<h3>{{$noticia->titulo}}</h3>
 
-		<div class="contenedor-cuerpo-noticia">
+	</div>
 
-				<div class="contenedor-img-noticia">
+	<div class="contenedor-cuerpo-dividido">
 
-					<img src="/images/news/{{$noticia->newimage}}">
+		<div class="contenedor-img-dividido">
 
-				</div>
-
-				<div class="contenedor-texto">
-
-					<p>{{$noticia->redaccion}}</p>
-
-				</div>
+			<img src="/images/news/{{$noticia->newimage}}">
 
 		</div>
 
-		<div class="contenedor-botones">
+		<div class="contenedor-texto-dividido">
+
+			<p>{{$noticia->redaccion}}</p>
+
+		</div>
+
+	</div>
+
+<!----------------------------------------------------------------- BOTONES NOTICIAS ---------------------------------------------------------->
+
+	<div class="contenedor-botones">
 
 		<a onclick="return confirm('¿Desea eliminar esta noticia?')"><button class="btn"><span>Eliminar</span></button></a>
 		<a onclick="return confirm('¿Desea eeditar esta noticia?')"><button class="btn"><span>Editar</span></button></a>
 
 
-		</div>
+	</div>
+
 	@endif
-	@endforeach
+
+@endforeach
 
 
 
-<!------------------------------------------------------------- NOTICIAS MÁS ---------------------------------------------------------->
+<!------------------------------------------------------------- PREVISUALIZACIÓN ---------------------------------------------------------->
 
 
-		<div class="contenedor-previsualizar-seccion">
+	<div class="contenedor-previsualizar-seccion">
 
-			<div class="contenedor-titulo-seccion">
+		<div class="contenedor-titulo-seccion">
 
-				<h3>Más Noticias</h3>
+			<h3>Más Noticias</h3>
+
+		</div>
+
+		@foreach ($noticias as $noticia)
+				
+		<div class="contenedor-seccion-preliminar">
+
+			<div class="contenedor-seccion-preliminar-img-ajustable">
+
+				<img src="/images/news/{{$noticia->newimage}}">
 
 			</div>
 
-			@foreach ($noticias as $noticia)
-				<div class="contenedor-seccion-preliminar">
+			<h2>{{$noticia->titulo}}</h2>
 
-					<div class="contenedor-seccion-preliminar-noticia-img">
+		</div>
+		
+		@endforeach
 
-						<img src="/images/news/{{$noticia->newimage}}">
+<!----------------------------------------------------------------- BOTONES VER MAS ---------------------------------------------------------->
 
-					</div>
+		<div class="contenedor-botones">
 
-					<h2>{{$noticia->titulo}}</h2>
-
-				</div>
-			@endforeach
-
-
-
-			<div class="contenedor-botones-ver">
-
-		<a onclick="return confirm('¿Desea ver más noticias?')" href="/noticias-admin">
-			<button class="btn centrado">
-				<span>Ver Más...</span>
-			</button>
-		</a>
-			</div>
-
+			<a onclick="return confirm('¿Desea ver más noticias?')" href="/noticias-admin"><button class="btn"><span>Ver Más...</span></button></a>
+		
 		</div>
 
 	</div>
+
+</div>
 
 
 @endsection

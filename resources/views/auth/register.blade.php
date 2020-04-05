@@ -9,6 +9,8 @@
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}" enctype="multipart/form-data">
                         @csrf
 
+<!---------------------------------------------------------------------------------Foto Perfil-------------------------------------------------------------------------------------->                        
+
                         <div class="formulario">
 
                             <label for="">Tamaño de imagen recomendado: 200px de ancho y 200px de alto</label>
@@ -29,8 +31,6 @@
 
                             <input id="file-upload" onchange='cambiar()' name="imgPerfil" type="file" accept="image/gif, image/jpeg, image/png" style='display: none;' />
 
-                                <div id="info-img">No se Eligió Archivo</div>
-
                             </div>
 
                             <div class="contenedor-img-seccion">
@@ -40,6 +40,13 @@
                             </div>
 
                         </div>
+
+                            
+                        <div id="info-img">No se Eligió Archivo</div>
+
+
+<!---------------------------------------------------------------------------------Formulario Perfil-------------------------------------------------------------------------------------->
+
 
                         <div class="formulario">
                             <label for="name">{{ __('Nombre') }}</label>
@@ -79,7 +86,9 @@
                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                         </div>
 
-                        <div class="contenedor-boton-CE">
+<!---------------------------------------------------------------------------------Botones Perfil-------------------------------------------------------------------------------------->
+
+                        <div class="contenedor-botones">
                                 <button type="submit" class="btn">
                                     <span>{{ __('Registrarse') }}</span>
                                 </button>

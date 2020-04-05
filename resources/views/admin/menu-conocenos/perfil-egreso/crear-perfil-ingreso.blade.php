@@ -4,41 +4,45 @@
 
 @section('content')
 
-	<!--------------------------------------------------------------- CREAR SECCION CONOCENOS PERFIL ----------------------------------------------------------> 
+<!--------------------------------------------------------------- CREAR SECCION CONOCENOS PERFIL ----------------------------------------------------------> 
 
-	  <div class="seccion-principal">
+<div class="seccion-principal">
 	    
-	      <div class="contenedor-titulo-seccion">
+	<div class="contenedor-titulo-seccion">
 
-	        <h3>Agregar Datos</h3>
+	    <h3>Agregar Datos</h3>
 
-	    </div>
+	</div>
 
-	    <form class="form-group" method="POST" action="/PerfilEgreso">
-	    	@csrf
+<!-------------------------------------------------------- FORMULARIO CREAR SECCION CONOCENOS PERFIL ----------------------------------------------------------> 
 
-		    <div class="formulario"> 
+	<form class="form-group" method="POST" action="/PerfilEgreso">
+	    @csrf
+
+		<div class="formulario"> 
 		      
-		          <label for="">Viñeta</label>
-		          <input type="text" maxlength="2" name="vineta" id ="viñeta" value="" placeholder="Máximo 2 viñetas: 1-@-*-3-." class="form-control" required>
-		    </div>
+			<label>Viñeta</label>
+			<input type="text" maxlength="2" name="vineta" id ="viñeta" value="" placeholder="Máximo 2 viñetas: 1-@-*-3-." class="form-control" required>
+		   
+		</div>
 
-		    <div class="formulario"> 
-		          <label for="">Información</label>
-		          <textarea type="text" name="elemento" id ="informacion-perfil" placeholder="Ingrese Información Deseada" class="form-control" required></textarea>
+		<div class="formulario"> 
+		    <label>Información</label>
+		    <textarea type="text" name="elemento" id ="informacion-perfil" placeholder="Ingrese Información Deseada" class="form-control" required></textarea>
 		          
-		    </div>
+		</div>
 
-		    <div class="contenedor-botones">
+<!--------------------------------------------------------------- BOTONES CREAR SECCION CONOCENOS PERFIL ----------------------------------------------------------> 
+
+		<div class="contenedor-botones">
 		                
-		        <a onclick="return confirm('¿Desea guardar el nuevo elemento?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
+		    <a onclick="return confirm('¿Desea guardar el nuevo elemento?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
+		    <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Perfil-Egreso-Lista"><button type="button" class="btn"><span>Cancelar</span></button></a>
 
-		        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Perfil-Egreso-Lista"><button type="button" class="btn"><span>Cancelar</span></button></a>
+		</div>
 
-		    </div>
+	</form>
 
-		</form>
-
-	  </div>
+</div>
 
 @endsection

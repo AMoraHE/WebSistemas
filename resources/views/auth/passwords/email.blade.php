@@ -26,9 +26,9 @@
                                 @endif
                         </div>
 
-                        <div class="contenedor-boton-CE">
+                        <div class="contenedor-botones">
                                 <button type="submit" class="btn">
-                                    <span>{{ __('Enviar enlace de restablecimiento de contraseña') }}</span>
+                                    <span>{{ __('Enviar enlace') }}</span>
                                 </button>
                         </div>
                     </form>

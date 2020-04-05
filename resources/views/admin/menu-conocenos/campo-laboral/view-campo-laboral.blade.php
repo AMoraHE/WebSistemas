@@ -4,42 +4,45 @@
 
 @section('content')
 
-		<div class="seccion-principal">
-
 <!----------------------------------------------------------------- CAMPO LABORAL ---------------------------------------------------------->
 
-		<div class="contenedor-titulo-seccion">
+<div class="seccion-principal">
 
-				<h3>Campo Laboral</h3>
+	<div class="contenedor-titulo-seccion">
+
+		<h3>Campo Laboral</h3>
+
+	</div>
+
+<!----------------------------------------------------------------- CUERPO CAMPO LABORAL ---------------------------------------------------------->
+
+	<div class="contenedor-cuerpo-seccion">
+
+		<div class="contenedor-texto-completo">
+
+			<ul>
+
+				@foreach ($campolaboral as $campolabora)
+						
+				<li>{{$campolabora->elemento}}</li>
+						
+				@endforeach
+						
+			</ul>
 
 		</div>
 
-		<div class="contenedor-cuerpo-seccion">
+	</div>
 
-				<div class="contenedor-texto-conocenos">
+<!----------------------------------------------------------------- BOTONES CAMPO LABORAL ---------------------------------------------------------->
 
-					<ul>
-
-						@foreach ($campolaboral as $campolabora)
-						
-						<li>{{$campolabora->elemento}}</li>
-						
-						@endforeach
-						
-					</ul>
-
-				</div>
-
-		</div>
-
-		<div class="contenedor-botones">
+	<div class="contenedor-botones">
 
 		<a onclick="return confirm('¿Desea editar la lista del campo laboral?')" href="{{route('CampoLaboralLista')}}"><button class="btn"><span>Editar</span></button></a>
 
-
-		</div>
-		
 	</div>
+		
+</div>
 
 
 @endsection

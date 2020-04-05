@@ -5,39 +5,47 @@
 @section('content')
 
 @if(session('status'))
+
     <div class="alert alert-success">
         {{session('status')}}
     </div>
+
 @endif
 
-	<div class="seccion-principal">
-		@foreach($informaciones as $informacion)
+<!----------------------------------------------------------------- INFORMACIÓN DE LA CARRERA --------------------------------------------------------------------------->
+
+<div class="seccion-principal">
+
+	@foreach($informaciones as $informacion)
 	
+	<div class="contenedor-titulo-seccion">
 
-			<div class="contenedor-titulo-seccion">
+		<h3>{{$informacion->categoria}}</h3>
 
-					<h3>{{$informacion->categoria}}</h3>
+	</div>
 
-			</div>
+<!----------------------------------------------------------------- CUERPO INFORMACIÓN DE LA CARRERA --------------------------------------------------------------------------->
 
-			<div class="contenedor-cuerpo-seccion">
+	<div class="contenedor-cuerpo-seccion">
 
-					<div class="contenedor-texto-conocenos">
+		<div class="contenedor-texto-completo">
 
-						<p>{{$informacion->descripcion}} </p>
+			<p>{{$informacion->descripcion}} </p>
 						
-					</div>
+		</div>
 
-			</div>
+	</div>
 
-			<div class="contenedor-botones">
+<!----------------------------------------------------------------- BOTONES INFORMACIÓN DE LA CARRERA --------------------------------------------------------------------------->
 
-			<a onclick="return confirm('¿Desea editar este elemento?')" href="/informacion/{{$informacion->slug}}/edit">
-			<button class="btn"><span>Editar</span></button>
-			</a>
+	<div class="contenedor-botones">
+
+		<a onclick="return confirm('¿Desea editar este elemento?')" href="/informacion/{{$informacion->slug}}/edit"><button class="btn"><span>Editar</span></button></a>
 			
-			</div>
+	</div>
+
 	@endforeach
+
 </div>
 
 @endsection

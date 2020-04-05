@@ -5,17 +5,25 @@
 @section('content')
 
 @if(session('status'))
+
     <div class="alert alert-success">
         {{session('status')}}
     </div>
+
 @endif
 
+<!----------------------------------------------------------------- SLIDER ---------------------------------------------------------->
 
 <div class="seccion-principal">
   
   <div class="contenedor-botones">
+
     <a onclick="return confirm('¿Desea agregar un nuevo elemento?')" href="slider/create"><button class="btn"><span>Agregar</span></button></a>
+
   </div>
+
+<!----------------------------------------------------------------- IMG SLIDER ---------------------------------------------------------->
+
   @foreach ($sliders as $slider)
 
   <div class="contenedor-titulo-seccion">
@@ -26,7 +34,7 @@
 
   <div class="contenedor-cuerpo-seccion">
 
-      <div class="contenedor-img-slider">
+      <div class="contenedor-img-grande">
 
         <img src="/images/slider/{{$slider->image}}">
 
@@ -34,9 +42,14 @@
 
   </div>
 
+<!----------------------------------------------------------------- BOTONES SLIDER ---------------------------------------------------------->
+
   <div class="contenedor-botones">
-  <a onclick="return confirm('¿Desea editar el elemento seleccionado?')" href="/slider/{{$slider->slug}}/edit"><button class="btn"  ><span>Editar</span></button></a>
+
+    <a onclick="return confirm('¿Desea editar el elemento seleccionado?')" href="/slider/{{$slider->slug}}/edit"><button class="btn"  ><span>Editar</span></button></a>
+
   <form action="/slider/{{$slider->slug}}" method="POST">
+
     @csrf
     @method('DELETE')
 
@@ -47,8 +60,8 @@
 
   </div>
 
-@endforeach
-</div>
+    @endforeach
 
+</div>
 
 @endsection
