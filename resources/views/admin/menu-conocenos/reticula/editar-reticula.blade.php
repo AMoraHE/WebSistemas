@@ -23,30 +23,70 @@
 		<div class="formulario">
 				
 			<label>Título</label>
+			@if ($errors->has('doc'))
+			<input type="text" name="titulo" id="titulo-ret" value="{{old('titulo')}}" placeholder="Inserte Título Deseado" class="form-control" required>
+			@else
 			<input type="text" name="titulo" id="titulo-ret" value="{{$reticula->titulo}}" placeholder="Inserte Título Deseado" class="form-control" required>
+			@endif
 
 		</div>
+
+		@if ($errors->has('titulo'))
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $errors->first('titulo') }}</strong>
+            </span>
+        @endif
 
 		<div class="formulario">
 				
 			<label>Programa</label>
+			@if ($errors->has('doc'))
+			<input type="text" name="programa" id="programa-ret" value="{{old('programa')}}" placeholder="Inserte Nombre Programa Educativo" class="form-control" required>
+			@else
 			<input type="text" name="programa" id="programa-ret" value="{{$reticula->programa}}" placeholder="Inserte Nombre Programa Educativo" class="form-control" required>
+			@endif
 
 		</div>
+
+		@if ($errors->has('programa'))
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $errors->first('programa') }}</strong>
+            </span>
+        @endif
 
 		<div class="formulario">
 				
 			<label>Plan</label>
+			@if ($errors->has('doc'))
+			<input type="text" name="plan" id="plan-ret" value="{{old('plan')}}" placeholder="Inserte Plan Estudio" class="form-control" required>
+			@else
 			<input type="text" name="plan" id="plan-ret" value="{{$reticula->plan}}" placeholder="Inserte Plan Estudio" class="form-control" required>
+			@endif
 
 		</div>
+
+		@if ($errors->has('plan'))
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $errors->first('plan') }}</strong>
+            </span>
+        @endif
 
 		<div class="formulario">
 				
 			<label>Especialidad</label>
+			@if ($errors->has('doc'))
+			<input type="text" name="especialidad" id="especialidad-ret" value="{{old('especialidad')}}" placeholder="Inserte Especialidad" class="form-control" required>
+			@else
 			<input type="text" name="especialidad" id="especialidad-ret" value="{{$reticula->especialidad}}" placeholder="Inserte Especialidad" class="form-control" required>
+			@endif
 
 		</div>
+
+		@if ($errors->has('especialidad'))
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $errors->first('especialidad') }}</strong>
+            </span>
+        @endif
 
 <!----------------------------------------------------------------- FORMULARIO CARGAR PDF - RETICULA ---------------------------------------------------------->
 
@@ -73,6 +113,12 @@
 			<div id="info-img">No se seleccionó archivo</div>
 							
 		</div>
+
+		@if ($errors->has('doc'))
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $errors->first('doc') }}</strong>
+            </span>
+        @endif
 
 <!----------------------------------------------------------------- BOTONES - RETICULA ---------------------------------------------------------->
 

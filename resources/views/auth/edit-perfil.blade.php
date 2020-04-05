@@ -52,6 +52,12 @@
 
 			</div>
 
+			@if ($errors->has('imagPerfil'))
+      			<span class="invalid-feedback" role="alert">
+        			<strong>{{ $errors->first('imgPerfil') }}</strong>
+      			</span>
+    		@endif
+
 		    <div class="formulario"> 
 		      
 		          <label for="">Usuario</label>

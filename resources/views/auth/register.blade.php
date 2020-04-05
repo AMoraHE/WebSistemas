@@ -40,9 +40,14 @@
                             </div>
 
                         </div>
-
                             
                         <div id="info-img">No se Eligió Archivo</div>
+
+                        @if ($errors->has('imgPerfil'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('imgPerfil') }}</strong>
+                            </span>
+                        @endif
 
 
 <!---------------------------------------------------------------------------------Formulario Perfil-------------------------------------------------------------------------------------->

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Validator;
 use App\Infraestructura;
 use Illuminate\Http\Request;
 
@@ -36,14 +37,37 @@ class CelulaController extends Controller
      */
     public function store(Request $request)
     {
-        $infra = new Infraestructura();
+        $validator = Validator::make($request->all(), [
+        'imgInicio' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+        'descripcion' => 'required|string',
+        'responsable' => 'required|string',
+        'correo' => 'required|string|email',
+        'slug' => 'required|string',
+        'img1' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+        'img2' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+        'img3' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+        'img4' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+        'img5' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+        'img6' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+        ]);
 
-        if($request->hasFile('imgInicio')){
-            $file = $request->file('imgInicio');
-            $name = time().$file->getClientOriginalName();
-            $infra->imgInicio = $name; 
-            $file->move(public_path().'/images/infra/',$name);
+        if ($validator->fails()) {
+            return redirect('/Lab-Celula/create')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
         }
+
+        else
+        {
+            $infra = new Infraestructura();
+
+            if($request->hasFile('imgInicio'))
+            {
+                $file = $request->file('imgInicio');
+                $name = time().$file->getClientOriginalName();
+                $infra->imgInicio = $name; 
+                $file->move(public_path().'/images/infra/',$name);
+            }
     
             $infra->descripcion = $request->input('descripcion');
             $infra->responsable = $request->input('responsable');
@@ -51,55 +75,58 @@ class CelulaController extends Controller
             $infra->slug = $request->input('slug');
             
 
-            if($request->hasFile('img1')){
+            if($request->hasFile('img1'))
+            {
                 $file = $request->file('img1');
                 $name = time().$file->getClientOriginalName();
                 $infra->img1 = $name; 
                 $file->move(public_path().'/images/infra/', $name);
             }
 
-            if($request->hasFile('img2')){
+            if($request->hasFile('img2'))
+            {
                 $file = $request->file('img2');
                 $name = time().$file->getClientOriginalName();
                 $infra->img2 = $name; 
                 $file->move(public_path().'/images/infra/', $name);
             }
 
-            if($request->hasFile('img3')){
+            if($request->hasFile('img3'))
+            {
                 $file = $request->file('img3');
                 $name = time().$file->getClientOriginalName();
                 $infra->img3 = $name; 
                 $file->move(public_path().'/images/infra/', $name);
             }
 
-            if($request->hasFile('img4')){
+            if($request->hasFile('img4'))
+            {
                 $file = $request->file('img4');
                 $name = time().$file->getClientOriginalName();
                 $infra->img4 = $name; 
                 $file->move(public_path().'/images/infra/', $name);
             }
 
-            if($request->hasFile('img5')){
+            if($request->hasFile('img5'))
+            {
                 $file = $request->file('img5');
                 $name = time().$file->getClientOriginalName();
                 $infra->img5 = $name; 
                 $file->move(public_path().'/images/infra/', $name);
             }
             
-            if($request->hasFile('img6')){
+            if($request->hasFile('img6'))
+            {
                 $file = $request->file('img6');
                 $name = time().$file->getClientOriginalName();
                 $infra->img6 = $name; 
                 $file->move(public_path().'/images/infra/', $name);
             }
-            
 
             $infra->save();
                 
-            //return redirect()->route('trainers.index')->with('status', 'Entrenador creado correctamente');
             return redirect()->route('celulaIndex')->with('status', 'Registro exitoso');
-            
-            //return $request->all();
+        }
     }
 
     /**
@@ -136,101 +163,123 @@ class CelulaController extends Controller
      */
     public function update(Request $request,  $infras)
     {
-        $infra = Infraestructura::where('slug', '=', $infras)->firstOrFail();
-        $infra->fill($request->except('imgInicio','img1','img2','img3','img4','img5','img6'));
+        $validator = Validator::make($request->all(), [
+        'imgInicio' => 'mimes:jpeg,png,bmp,tiff,gif',
+        'descripcion' => 'required|string',
+        'responsable' => 'required|string',
+        'correo' => 'required|string|email',
+        'img1' => 'mimes:jpeg,png,bmp,tiff,gif',
+        'img2' => 'mimes:jpeg,png,bmp,tiff,gif',
+        'img3' => 'mimes:jpeg,png,bmp,tiff,gif',
+        'img4' => 'mimes:jpeg,png,bmp,tiff,gif',
+        'img5' => 'mimes:jpeg,png,bmp,tiff,gif',
+        'img6' => 'mimes:jpeg,png,bmp,tiff,gif',
+        ]);
 
-        if($request->hasFile('imgInicio')){
-            $oldFile = public_path().'/images/infra/'.$infra->imgInicio;
-            if(file_exists($oldFile))
-            {
-                unlink($oldFile);
-            }
-
-            $file = $request->file('imgInicio');
-            $name = time().$file->getClientOriginalName();
-            $infra->imgInicio = $name; 
-            $file->move(public_path().'/images/infra/',$name);
-        }
-        if($request->hasFile('img1')){
-            $oldFile = public_path().'/images/infra/'.$infra->img1;
-            if(file_exists($oldFile))
-            {
-                unlink($oldFile);
-            }
-
-            $file = $request->file('img1');
-            $name = time().$file->getClientOriginalName();
-            $infra->img1 = $name; 
-            $file->move(public_path().'/images/infra/', $name);
+        if ($validator->fails()) {
+            return redirect('/Lab-Celula/create')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
         }
 
-        if($request->hasFile('img2')){
-            $oldFile = public_path().'/images/infra/'.$infra->img2;
-            if(file_exists($oldFile))
-            {
-                unlink($oldFile);
+        else
+        {
+            $infra = Infraestructura::where('slug', '=', $infras)->firstOrFail();
+            $infra->fill($request->except('imgInicio','img1','img2','img3','img4','img5','img6'));
+
+            if($request->hasFile('imgInicio')){
+                $oldFile = public_path().'/images/infra/'.$infra->imgInicio;
+                if(file_exists($oldFile))
+                {
+                    unlink($oldFile);
+                }
+
+                $file = $request->file('imgInicio');
+                $name = time().$file->getClientOriginalName();
+                $infra->imgInicio = $name; 
+                $file->move(public_path().'/images/infra/',$name);
+            }
+            if($request->hasFile('img1')){
+                $oldFile = public_path().'/images/infra/'.$infra->img1;
+                if(file_exists($oldFile))
+                {
+                    unlink($oldFile);
+                }
+
+                $file = $request->file('img1');
+                $name = time().$file->getClientOriginalName();
+                $infra->img1 = $name; 
+                $file->move(public_path().'/images/infra/', $name);
             }
 
-            $file = $request->file('img2');
-            $name = time().$file->getClientOriginalName();
-            $infra->img2 = $name; 
-            $file->move(public_path().'/images/infra/', $name);
-        }
+            if($request->hasFile('img2')){
+                $oldFile = public_path().'/images/infra/'.$infra->img2;
+                if(file_exists($oldFile))
+                {
+                    unlink($oldFile);
+                }
 
-        if($request->hasFile('img3')){
-            $oldFile = public_path().'/images/infra/'.$infra->img3;
-            if(file_exists($oldFile))
-            {
-                unlink($oldFile);
+                $file = $request->file('img2');
+                $name = time().$file->getClientOriginalName();
+                $infra->img2 = $name; 
+                $file->move(public_path().'/images/infra/', $name);
             }
 
-            $file = $request->file('img3');
-            $name = time().$file->getClientOriginalName();
-            $infra->img3 = $name; 
-            $file->move(public_path().'/images/infra/', $name);
-        }
+            if($request->hasFile('img3')){
+                $oldFile = public_path().'/images/infra/'.$infra->img3;
+                if(file_exists($oldFile))
+                {
+                    unlink($oldFile);
+                }
 
-        if($request->hasFile('img4')){
-            $oldFile = public_path().'/images/infra/'.$infra->img4;
-            if(file_exists($oldFile))
-            {
-                unlink($oldFile);
+                $file = $request->file('img3');
+                $name = time().$file->getClientOriginalName();
+                $infra->img3 = $name; 
+                $file->move(public_path().'/images/infra/', $name);
             }
 
-            $file = $request->file('img4');
-            $name = time().$file->getClientOriginalName();
-            $infra->img4 = $name; 
-            $file->move(public_path().'/images/infra/', $name);
-        }
+            if($request->hasFile('img4')){
+                $oldFile = public_path().'/images/infra/'.$infra->img4;
+                if(file_exists($oldFile))
+                {
+                    unlink($oldFile);
+                }
 
-        if($request->hasFile('img5')){
-            $oldFile = public_path().'/images/infra/'.$infra->img5;
-            if(file_exists($oldFile))
-            {
-                unlink($oldFile);
+                $file = $request->file('img4');
+                $name = time().$file->getClientOriginalName();
+                $infra->img4 = $name; 
+                $file->move(public_path().'/images/infra/', $name);
             }
 
-            $file = $request->file('img5');
-            $name = time().$file->getClientOriginalName();
-            $infra->img5 = $name; 
-            $file->move(public_path().'/images/infra/', $name);
-        }
-        
-        if($request->hasFile('img6')){
-            $oldFile = public_path().'/images/infra/'.$infra->img6;
-            if(file_exists($oldFile))
-            {
-                unlink($oldFile);
+            if($request->hasFile('img5')){
+                $oldFile = public_path().'/images/infra/'.$infra->img5;
+                if(file_exists($oldFile))
+                {
+                    unlink($oldFile);
+                }
+
+                $file = $request->file('img5');
+                $name = time().$file->getClientOriginalName();
+                $infra->img5 = $name; 
+                $file->move(public_path().'/images/infra/', $name);
             }
+            
+            if($request->hasFile('img6')){
+                $oldFile = public_path().'/images/infra/'.$infra->img6;
+                if(file_exists($oldFile))
+                {
+                    unlink($oldFile);
+                }
 
-            $file = $request->file('img6');
-            $name = time().$file->getClientOriginalName();
-            $infra->img6 = $name; 
-            $file->move(public_path().'/images/infra/', $name);
+                $file = $request->file('img6');
+                $name = time().$file->getClientOriginalName();
+                $infra->img6 = $name; 
+                $file->move(public_path().'/images/infra/', $name);
+            }
+            $infra->save();
+
+            return redirect()->route('celulaIndex')->with('status', 'Actualización exitosa');
         }
-        $infra->save();
-
-        return redirect()->route('celulaIndex')->with('status', 'Actualización exitosa');
     }
 
     /**

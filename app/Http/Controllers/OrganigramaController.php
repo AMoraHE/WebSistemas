@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Validator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Organigrama;
@@ -53,27 +54,43 @@ class OrganigramaController extends Controller
      */
     public function store(Request $request)
     {
-        $orga = new Organigrama;
+        $validator = Validator::make($request->all(), [
+            'imgOrg' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+            'area_id' => 'required|string',
+            'puesto' => 'required|string',
+            'nombre' => 'required|string',
+            'genero_id' => 'required|string',
+            'correo' => 'required|string|email',
+        ]);
 
-        if ($request->hasFile('imgOrg'))
-        {
-            $file = $request->file('imgOrg');
-            $name = time().$file->getClientOriginalName();
-            $file->move(public_path().'/images/organigrama/',$name);
-            $orga->foto = $name;
+        if ($validator->fails()) {
+            return redirect('/Agregar nuveo elemento')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
         }
 
-        $orga->area_id = $request->get('area_id');
-        $orga->puesto = $request->input('puesto');
-        $orga->integrante = $request->input('nombre');
-        $orga->genero = $request->get('genero_id');
-        $orga->slug = time().$request->input('nombre');
-        $orga->correo = $request->input('correo');
-        $orga->save();
+        else
+        {
+            $orga = new Organigrama;
 
-        return redirect()->route('Organigrama.index')->with('status','Inserción Exitosa');
-        //return $orga;
-        
+            if ($request->hasFile('imgOrg'))
+            {
+                $file = $request->file('imgOrg');
+                $name = time().$file->getClientOriginalName();
+                $file->move(public_path().'/images/organigrama/',$name);
+                $orga->foto = $name;
+            }
+
+            $orga->area_id = $request->get('area_id');
+            $orga->puesto = $request->input('puesto');
+            $orga->integrante = $request->input('nombre');
+            $orga->genero = $request->get('genero_id');
+            $orga->slug = time().$request->input('nombre');
+            $orga->correo = $request->input('correo');
+            $orga->save();
+
+            return redirect()->route('Organigrama.index')->with('status','Inserción Exitosa');
+        }
     }
 
     /**
@@ -111,30 +128,46 @@ class OrganigramaController extends Controller
      */
     public function update(Request $request, Organigrama $Organigrama)
     {
-        //$Organigrama->fill($request->all());
-        if ($request->hasFile('imgOrg'))
-        {
-            $oldFile = public_path().'/images/organigrama/'.$Organigrama->foto;
-            if(file_exists($oldFile))
-            {
-                unlink($oldFile);
-            }
+        $validator = Validator::make($request->all(), [
+            'imgOrg' => 'mimes:jpeg,png,bmp,tiff,gif',
+            'area_id' => 'required|string',
+            'puesto' => 'required|string',
+            'nombre' => 'required|string',
+            'genero_id' => 'required|string',
+            'correo' => 'required|string|email',
+        ]);
 
-            $file = $request->file('imgOrg');
-            $name = time().'-'.$file->getClientOriginalName();
-            $file->move(public_path().'/images/organigrama/',$name);
-            $Organigrama->foto = $name;
+        if ($validator->fails()) {
+            return redirect('/Organigrama/'.$Organigrama->slug.'/edit')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
         }
 
-        $Organigrama->integrante = $request->input('integrante');
-        $Organigrama->genero = $request->get('genero_id');
-        $Organigrama->correo = $request->input('correo');
+        else
+        {
+            if ($request->hasFile('imgOrg'))
+            {
+                $oldFile = public_path().'/images/organigrama/'.$Organigrama->foto;
+                if(file_exists($oldFile))
+                {
+                    unlink($oldFile);
+                }
 
-        $Organigrama->save();
+                $file = $request->file('imgOrg');
+                $name = time().'-'.$file->getClientOriginalName();
+                $file->move(public_path().'/images/organigrama/',$name);
+                $Organigrama->foto = $name;
+            }
 
-        //return $request;
+            $Organigrama->integrante = $request->input('integrante');
+            $organigrama->puesto = $request->input('puesto');
+            $Organigrama->genero = $request->get('genero_id');
+            $Organigrama->correo = $request->input('correo');
 
-        return redirect()->route('Organigrama.index')->with('status','Actualización Exitosa');
+            $Organigrama->save();
+
+            return redirect()->route('Organigrama.index')->with('status','Actualización Exitosa');
+        }
     }
 
     /**

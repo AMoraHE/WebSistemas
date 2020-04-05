@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers; 
 
+use Validator;
 use App\reticula;
 use Illuminate\Http\Request;
 
@@ -37,24 +38,41 @@ class ReticulaController extends Controller
      */
     public function store(Request $request)
     {
-        $reticula = new reticula();
+        $validator = Validator::make($request->all(), [
+            'titulo' => 'required|string',
+            'programa' => 'required|string',
+            'plan' => 'required|string',
+            'especialidad' => 'required|string',
+            'doc' => 'required|mimetypes:application/pdf',
+        ]);
 
-        if ($request->hasFile('doc'))
-        {
-            $file = $request->file('doc');
-            $name = time().$file->getClientOriginalName();
-            $file->move(public_path().'/docs/ret/',$name);
-            $reticula->documento = $name;
+        if ($validator->fails()) {
+            return redirect('/Crear Reticula')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
         }
 
-        $reticula->titulo = $request->input('titulo');
-        $reticula->programa = $request->input('programa');
-        $reticula->plan = $request->input('plan');
-        $reticula->especialidad = $request->input('especialidad');
-        $reticula->slug = time();
-        $reticula->save();
+        else
+        {
+            $reticula = new reticula();
 
-        return redirect()->route('reticula')->with('status','Registro Exitoso');
+            if ($request->hasFile('doc'))
+            {
+                $file = $request->file('doc');
+                $name = time().$file->getClientOriginalName();
+                $file->move(public_path().'/docs/ret/',$name);
+                $reticula->documento = $name;
+            }
+
+            $reticula->titulo = $request->input('titulo');
+            $reticula->programa = $request->input('programa');
+            $reticula->plan = $request->input('plan');
+            $reticula->especialidad = $request->input('especialidad');
+            $reticula->slug = time();
+            $reticula->save();
+
+            return redirect()->route('reticula')->with('status','Registro Exitoso');
+        }
     }
 
     /**
@@ -109,30 +127,47 @@ class ReticulaController extends Controller
      */
     public function update(Request $request, $slug)
     {
-        $reticula = reticula::where('slug', '=', $slug)->firstOrFail();
+        $validator = Validator::make($request->all(), [
+            'titulo' => 'required|string',
+            'programa' => 'required|string',
+            'plan' => 'required|string',
+            'especialidad' => 'required|string',
+            'doc' => 'mimetypes:application/pdf',
+        ]);
 
-        if ($request->hasFile('doc'))
-        {
-            $oldFile = public_path().'/docs/ret/'.$reticula->documento;
-            if(file_exists($oldFile))
-            {
-                unlink($oldFile);
-            }
-
-            $file = $request->file('doc');
-            $name = time().'-'.$file->getClientOriginalName();
-            $file->move(public_path().'/docs/ret/',$name);
-            $reticula->documento = $name;
+        if ($validator->fails()) {
+            return redirect('/VerReticula/'.$slug.'/edit')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
         }
 
-        $reticula->titulo = $request->input('titulo');
-        $reticula->programa = $request->input('programa');
-        $reticula->plan = $request->input('plan');
-        $reticula->especialidad = $request->input('especialidad');
-        $reticula->slug = time();
-        $reticula->save();
+        else
+        {
+            $reticula = reticula::where('slug', '=', $slug)->firstOrFail();
 
-        return redirect()->route('reticula')->with('status','Actualización Exitosa');
+            if ($request->hasFile('doc'))
+            {
+                $oldFile = public_path().'/docs/ret/'.$reticula->documento;
+                if(file_exists($oldFile))
+                {
+                    unlink($oldFile);
+                }
+
+                $file = $request->file('doc');
+                $name = time().'-'.$file->getClientOriginalName();
+                $file->move(public_path().'/docs/ret/',$name);
+                $reticula->documento = $name;
+            }
+
+            $reticula->titulo = $request->input('titulo');
+            $reticula->programa = $request->input('programa');
+            $reticula->plan = $request->input('plan');
+            $reticula->especialidad = $request->input('especialidad');
+            $reticula->slug = time();
+            $reticula->save();
+
+            return redirect()->route('reticula')->with('status','Actualización Exitosa');
+        }
     }
 
     /**

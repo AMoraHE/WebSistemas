@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use Validator;
 use App\Noticia;
 use App\Slider;
 use App\Http\Requests\StoreNoticiaRequest;
@@ -37,22 +39,37 @@ class NoticiaController extends Controller
   */
   public function store(Request $request)
   {
-    $noticia = new Noticia();
+    $validator = Validator::make($request->all(), [
+    'titulo' => 'required|string',
+    'image' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+    'redaccion' => 'required|string',
+    ]);
 
-    if ($request->hasFile('image'))
-    {
-      $file = $request->file('image');
-      $name2 = time().$file->getClientOriginalName();
-      $file->move(public_path().'/images/news/',$name2);
-      $noticia->newimage = $name2;
+    if ($validator->fails()) {
+        return redirect('/noticias-admin/create')
+                    ->withErrors($validator)
+                    ->withInput($request->all());
     }
 
-    $noticia->titulo = $request->input('titulo');
-    $noticia->slug = time();
-    $noticia->redaccion = $request->input('redaccion');
-    $noticia->save();
+    else
+    {
+      $noticia = new Noticia();
 
-    return redirect()->route('noticias-admin');
+      if ($request->hasFile('image'))
+      {
+        $file = $request->file('image');
+        $name2 = time().$file->getClientOriginalName();
+        $file->move(public_path().'/images/news/',$name2);
+        $noticia->newimage = $name2;
+      }
+
+      $noticia->titulo = $request->input('titulo');
+      $noticia->slug = time();
+      $noticia->redaccion = $request->input('redaccion');
+      $noticia->save();
+
+      return redirect()->route('noticias-admin')->with('status','Inserción Exitosa');
+    }
   }
 
   /**
@@ -86,25 +103,40 @@ class NoticiaController extends Controller
   */
   public function update(Request $request,Noticia $noticia)
   {
-    if ($request->hasFile('image'))
-    {
-      $file_path =public_path().'/images/news/'.$noticia->newimage;
-      if(file_exists($file_path))
-      {
-        unlink($file_path);
-      }
+    $validator = Validator::make($request->all(), [
+    'titulo' => 'required|string',
+    'image' => 'mimes:jpeg,png,bmp,tiff,gif',
+    'redaccion' => 'required|string',
+    ]);
 
-      $file = $request->file('image');
-      $name2 = time().$file->getClientOriginalName();
-      $file->move(public_path().'/images/news/',$name2);
-      $noticia->newimage = $name2;
+    if ($validator->fails()) {
+        return redirect('/noticias-admin/'.$noticia->slug.'/edit')
+                    ->withErrors($validator)
+                    ->withInput($request->all());
     }
 
-    $noticia->fill($request->all());
-    $noticia->slug = time();
-    $noticia->save();
+    else
+    {
+      if ($request->hasFile('image'))
+      {
+        $file_path =public_path().'/images/news/'.$noticia->newimage;
+        if(file_exists($file_path))
+        {
+          unlink($file_path);
+        }
 
-    return redirect()->route('noticias-admin');
+        $file = $request->file('image');
+        $name2 = time().$file->getClientOriginalName();
+        $file->move(public_path().'/images/news/',$name2);
+        $noticia->newimage = $name2;
+      }
+
+      $noticia->fill($request->all());
+      $noticia->slug = time();
+      $noticia->save();
+
+      return redirect()->route('noticias-admin')->with('status','Actualización Exitosa');
+    }
   }
 
   /**
@@ -122,7 +154,7 @@ class NoticiaController extends Controller
     }
 
     $noticia->delete();
-    return redirect()->route('noticias-admin')  ;
+    return redirect()->route('noticias-admin')->with('status','Eliminacion Exitosa');;
   }
 
 

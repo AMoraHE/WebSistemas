@@ -17,9 +17,15 @@
   <div class="formulario">
 
   	<label for="">Título</label>
-  	<input type="text" name="contenido" id="titulo" value="" placeholder="Inserte Titulo Deseado" class="form-control" required>
+  	<input type="text" name="contenido" id="titulo" value="{{old('contenido')}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
 
   </div>
+
+  @if ($errors->has('contenido'))
+    <span class="invalid-feedback" role="alert">
+      <strong>{{ $errors->first('contenido') }}</strong>
+    </span>
+  @endif
 
 <!----------------------------------------------------------------- IMG SLIDER ---------------------------------------------------------->
 
@@ -56,6 +62,12 @@
 
   <div id="info-img">No se Eligió Archivo</div>
 
+  @if ($errors->has('image'))
+      <span class="invalid-feedback" role="alert">
+        <strong>{{ $errors->first('image') }}</strong>
+      </span>
+    @endif
+
 <!----------------------------------------------------------------- BOTONES SLIDER ---------------------------------------------------------->
 
   <div class="contenedor-botones">
@@ -68,7 +80,7 @@
 
 @else
 
-	<div class="alert alert-danger" role="alert" >Se alcanzo limite de 4 Sliders, por favor edite los slider existentes </div>
+	<div class="alert alert-danger" role="alert" >Se alcanzo limite de 4 Sliders, por favor edite o elimine los slider existentes </div>
 
 @endif
 

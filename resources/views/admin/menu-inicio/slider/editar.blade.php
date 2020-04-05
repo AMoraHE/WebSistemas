@@ -27,7 +27,7 @@
         $var = $sliderG->id
         @endphp
 
-        <option value="{{route('filtrarslider', ['id' => $var])}}">{{$sliderG->id}}</option>
+        <option value="{{route('filtrarslider', ['id' => $var])}}">Slider - {{$sliderG->id}}</option>
 
         @endforeach
 
@@ -47,9 +47,19 @@
   	<div class="formulario">
 
   		<label for="">Título</label>
-  		<input type="text" name="contenido" id="titulo" value="{{$slider->contenido}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
+      @if ($errors->has('image'))
+  		<input type="text" name="contenido" id="titulo" value="{{old('contenido')}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
+      @else
+      <input type="text" name="contenido" id="titulo" value="{{$slider->contenido}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
+      @endif
 
   	</div>
+
+    @if ($errors->has('contenido'))
+      <span class="invalid-feedback" role="alert">
+        <strong>{{ $errors->first('contenido') }}</strong>
+      </span>
+    @endif
 
 <!----------------------------------------------------------------- IMG SLIDER ------------------------------------------------------------------>
 
@@ -84,6 +94,12 @@
   	</div>
 
     <div id="info-img">No se Eligió Archivo</div>
+
+    @if ($errors->has('image'))
+      <span class="invalid-feedback" role="alert">
+        <strong>{{ $errors->first('image') }}</strong>
+      </span>
+    @endif
 
 <!----------------------------------------------------------------- BOTONES SLIDER ---------------------------------------------------------->
 

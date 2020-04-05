@@ -23,9 +23,19 @@
  	<div class="formulario">
 
  		<label>Título</label>
+ 		@if ($errors->has('image'))
+ 		<input type="text" name="titulo" id="titulo" value="{{old('titulo')}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
+ 		@else
  		<input type="text" name="titulo" id="titulo" value="{{$noticia->titulo}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
+ 		@endif
 
  	</div>
+
+ 	@if ($errors->has('titulo'))
+      <span class="invalid-feedback" role="alert">
+        <strong>{{ $errors->first('titulo') }}</strong>
+      </span>
+    @endif
 
 <!----------------------------------------------------------------- IMG NOTICIAS----------------------------------------------------------------------------->
 
@@ -60,14 +70,30 @@
 
 	<div id="info-img">No se Eligió Archivo</div>
 
+	@if ($errors->has('image'))
+      <span class="invalid-feedback" role="alert">
+        <strong>{{ $errors->first('image') }}</strong>
+      </span>
+    @endif
+
 <!----------------------------------------------------------------- FORMULARIO NOTICIAS----------------------------------------------------------------------------->
 
 	<div class="formulario">
 
 		<label for="">Descripción Noticia</label>
+		@if ($errors->has('image'))
+		<textarea style="height: 500px;" placeholder="Inserte Descripción Deseada..." name="redaccion" required>{{old('redaccion')}}</textarea>
+		@else
 		<textarea style="height: 500px;" placeholder="Inserte Descripción Deseada..." name="redaccion" required>{{$noticia->redaccion}}</textarea>
+		@endif
 
 	</div>
+
+	@if ($errors->has('redaccion'))
+      <span class="invalid-feedback" role="alert">
+        <strong>{{ $errors->first('redaccion') }}</strong>
+      </span>
+    @endif
 
 <!----------------------------------------------------------------- BOTONES NOTICIAS----------------------------------------------------------------------------->
 

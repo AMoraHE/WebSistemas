@@ -10,7 +10,7 @@
 
 	<div class="contenedor-titulo-seccion">
 	
-			<h3>Editar - Celula de Desarrollo de Software</h3>
+			<h3>Crear - Celula de Desarrollo de Software</h3>
 
 	 </div>
 
@@ -25,7 +25,7 @@
 
   <div class="contenedor-botones">     
 	<button type="submit" class="btn"><span>Guardar</span></button>
-	<a onclick="return confirm('¿Desea abandonar sin guardar?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
+	<a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Lab-Celula"><button type="button" class="btn"><span>Cancelar</span></button></a>
 </div
 
 

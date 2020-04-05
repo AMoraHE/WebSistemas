@@ -22,9 +22,15 @@
 	<div class="formulario">
 
 		<label>Título</label>
-		<input type="text" name="titulo" id="titulo" value="" placeholder="Inserte Titulo Deseado" class="form-control" required>
+		<input type="text" name="titulo" id="titulo" value="{{old('titulo')}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
 
 	</div>
+
+	@if ($errors->has('titulo'))
+      <span class="invalid-feedback" role="alert">
+        <strong>{{ $errors->first('titulo') }}</strong>
+      </span>
+    @endif
 
 <!----------------------------------------------------------------- IMG NOTICIAS----------------------------------------------------------------------------->
 
@@ -60,14 +66,26 @@
 
 	<div id="info-img">No se Eligió Archivo</div>
 
+	@if ($errors->has('image'))
+      <span class="invalid-feedback" role="alert">
+        <strong>{{ $errors->first('image') }}</strong>
+      </span>
+    @endif
+
 <!----------------------------------------------------------------- FORMULARIO NOTICIAS----------------------------------------------------------------------------->
 
 	<div class="formulario">
 
 		<label>Descripción Noticia</label>
-		<textarea style="height: 500px;" name="redaccion" placeholder="Inserte Descripción Deseada ... " required></textarea>
+		<textarea style="height: 500px;" name="redaccion" placeholder="Inserte Descripción Deseada ... " required>{{old('redaccion')}}</textarea>
 
 	</div>
+
+	@if ($errors->has('redaccion'))
+      <span class="invalid-feedback" role="alert">
+        <strong>{{ $errors->first('redaccion') }}</strong>
+      </span>
+    @endif
 
 <!----------------------------------------------------------------- BOTONES NOTICIAS----------------------------------------------------------------------------->
 

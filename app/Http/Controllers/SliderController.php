@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use Validator;
 use App\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -48,30 +50,47 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
-
-
         $slider = new Slider();
         $sliders = Slider::all();
 
-        if(count($sliders) <=3){
-
-        if ($request->hasFile('image'))
+        if(count($sliders) <=3)
         {
-            $file = $request->file('image');
-            $name2 = time().$file->getClientOriginalName();
-            $file->move(public_path().'/images/slider/',$name2);
-            $slider->image = $name2;
+            $validator = Validator::make($request->all(), [
+            'image' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+            'contenido' => 'required|string',
+            ]);
+
+            if ($validator->fails()) {
+                return redirect('/slider/create')
+                            ->withErrors($validator)
+                            ->withInput($request->all());
+            }
+
+            else
+            {
+                if ($request->hasFile('image'))
+                {
+                    $file = $request->file('image');
+                    $name2 = time().$file->getClientOriginalName();
+                    $file->move(public_path().'/images/slider/',$name2);
+                    $slider->image = $name2;
+                }
+
+                $slider->contenido = $request->input('contenido');
+                $slider->slug = time();
+
+                $slider->save();
+
+                return redirect()->route('slider')->with('status','Inserción Exitosa');
+            }
         }
 
-        $slider->contenido = $request->input('contenido');
+        else
+        {
+            return 'Error limite de siliders';
+        }
+        
 
-        $slider->slug = time();
-
-        $slider->save();
-      }else{
-        return 'Error limite de siliders';
-      }
-        return redirect()->route('slider');
     }
 
     /**
@@ -109,25 +128,39 @@ class SliderController extends Controller
      */
     public function update(Request $request, Slider $slider)
     {
-        if ($request->hasFile('image'))
-        {
-            $file_path =public_path().'/images/slider/'.$slider->image;
-            if(file_exists($file_path))
-            {
-                unlink($file_path);
-            }
+        $validator = Validator::make($request->all(), [
+        'image' => 'mimes:jpeg,png,bmp,tiff,gif',
+        'contenido' => 'required|string',
+        ]);
 
-            $file = $request->file('image');
-            $name2 = time().$file->getClientOriginalName();
-            $file->move(public_path().'/images/slider/',$name2);
-            $slider->image = $name2;
+        if ($validator->fails()) {
+            return redirect('/slider/'.$slider->slug.'/edit')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
         }
 
-        $slider->contenido =$request->input('contenido');
-        $slider->slug = time();
-        $slider->save();
+        else
+        {
+            if ($request->hasFile('image'))
+            {
+                $file_path =public_path().'/images/slider/'.$slider->image;
+                if(file_exists($file_path))
+                {
+                    unlink($file_path);
+                }
 
-        return redirect()->route('slider');
+                $file = $request->file('image');
+                $name2 = time().$file->getClientOriginalName();
+                $file->move(public_path().'/images/slider/',$name2);
+                $slider->image = $name2;
+            }
+
+            $slider->contenido =$request->input('contenido');
+            $slider->slug = time();
+            $slider->save();
+
+            return redirect()->route('slider')->with('status', 'Actualización Exitosa');
+        }
     }
 
     /**
