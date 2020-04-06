@@ -163,6 +163,7 @@ Route::get('/Lab-Celula', 'CelulaController@index')->middleware('auth');
 
 Route::resource('eventos', 'EventosController')->middleware('auth');
 
+
 Route::get('/EventosAcademicos', function () {
     return view('.admin.menu-academicos.Eventos.view');
 })->name('EventosAcademicos')->middleware('auth');
@@ -183,17 +184,15 @@ Route::get('/agregar-proyecto', function () {
 
 //Rutas Proyectos-academicos
 
-Route::resource('proyectos', 'ProyectoController')->middleware('auth');
+Route::resource('ProyectosAcademicos', 'ProyectoController')->middleware('auth');
 
-Route::get('/ProyectosAcademicos', function () {
-    return view('.admin.menu-academicos.proyectos.view-proyectos-academicos');
-})->name('ProyectosAcademicos')->middleware('auth');
-Route::get('/editar-proyecto', function () {
-    return view('.admin.menu-academicos.proyectos.edit');
-})->name('EditarProyectos')->middleware('auth');
-Route::get('/agregar-proyecto', function () {
-    return view('.admin.menu-academicos.proyectos.create');
-})->name('AgregarProyectos')->middleware('auth');
+Route::get('/ProyectosAcademicos', 'ProyectoController@index')->name('ProyectosAcademicos')->middleware('auth');
+
+Route::get('/ProyectosAcademicos/create', 'ProyectoController@create')->name('AgregarProyectos')->middleware('auth');
+
+
+Route::get('/ProyectosAcademicos/edit', 'ProyectoController@edit')->name('EditarProyectos')->middleware('auth');
+
 
 
 //Ruta convocatorias-acdemicos
