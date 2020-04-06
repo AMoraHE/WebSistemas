@@ -1,27 +1,142 @@
 @extends('layouts.administrador')
 
-@section('title', 'Convocatorias')
+@section('title', 'Editar convocatoria')
 
 @section('content')
 
+<!----------------------------------------------------------------- EDITAR PROYECTOS ---------------------------------------------------------->
 
 
 <div class="seccion-principal">
-
-
 	<div class="contenedor-titulo-seccion">
-
-		<h3>Convocatorias</h3>
-
+		<h3>Edita convocatoria</h3>
 	</div>
+
+<!---------------------------PROYECTOS------------------------>
+ <form class="form-goup" files="true" method="POST" action="/ConvocatoriasAcademicos/{{$convocatorias->slug}}" enctype="multipart/form-data">
+    @method('PUT')
+    {{csrf_field()}}
+
+<!----------------------------IMAGEN------------------------->
+	<div class="formulario">
+
+    <label>Tamaño de imagen recomendado: 1100px de ancho y 450px de alto</label>
+
+  </div>
+
+  <div class="contenedor-cargar-img">
+
+    <div class="contenedor-txt-seccion">
+
+      <label>Cargar IMG</label>
+
+    </div>
+
+
+    <div class="contenedor-boton-cargar">
+
+      <label for="file-upload" class="subir"><i class="icono-izquierda fas fa-cloud-upload-alt"></i>Subir Imágen</label>
+
+      <input id="file-upload" onchange='cambiar()' name="image" type="file" accept="image/gif, image/jpeg, image/png" style='display: none;' required />
+
+    </div>
+
+    <div class="contenedor-img-seccion">
+
+      <img id="img-pre" src="/images/convocatoria/{{$convocatorias->newimage}}">
+
+    </div>
+
+  </div>
+
+  <div id="info-img">No se Eligió Archivo</div>
+
+  @if ($errors->has('image'))
+
+    <span class="invalid-feedback" role="alert">
+
+      <strong>{{ $errors->first('image') }}</strong>
+
+    </span>
+
+  @endif
+
+<!----------------------------------------------------------------- FORMULARIO convocatoria ---------------------------------------------------------->
+
+<!--------------------APLICACION------------------------------>
+  <div class="formulario">
+
+    <label>Aplicacion</label>
+    @if ($errors->has('image'))
+    <input type="text" name="aplicacion" id="aplicacion" value="{{old('aplicacion')}}" placeholder="Reescriba la aplicación seleccionada" class="form-control" required>
+    @else
+    <input type="text" name="aplicacion" id="aplicacion" value="{{$convocatorias->aplicacion}}" placeholder="Reescriba la aplicación seleccionada" class="form-control" required>
+    @endif
+
+  </div>
+
+  @if ($errors->has('aplicacion'))
+
+    <span class="invalid-feedback" role="alert">
+
+      <strong>{{ $errors->first('aplicacion') }}</strong>
+
+    </span>
+
+  @endif
+
+<!--------------------------convocatoria---------------------------->
+  <div class="formulario">
+
+    <label>Convocatoria</label>
+    @if ($errors->has('image'))
+    <input type="text" name="convocatoria" id="convocatoria" value="{{old('convocatoria')}}" placeholder="Reescriba la convocatoria seleccionada" class="form-control" required>
+    @else
+    <input type="text" name="convocatoria" id="convocatoria" value="{{$convocatorias->convocatoria}}" placeholder="Reescriba la convocatoria seleccionada" class="form-control" required>
+    @endif
+
+  </div>
+
+  @if ($errors->has('convocatoria'))
+
+    <span class="invalid-feedback" role="alert">
+
+      <strong>{{ $errors->first('convocatoria') }}</strong>
+
+    </span>
+
+  @endif
+
+
+<!---------------------------DESCRIPCION---------------------------------------------------->
+  <div class="formulario">
+
+    <label>Descripción</label>
+    @if ($errors->has('image'))
+    <textarea placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{old('descripcion')}}</textarea>
+    @else
+    <textarea placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{$convocatorias->descripcion}}</textarea>
+    @endif
+
+  </div>
+
+  @if ($errors->has('descripcion'))
+
+    <span class="invalid-feedback" role="alert">
+
+      <strong>{{ $errors->first('descripcion') }}</strong>
+
+    </span>
+
+  @endif
+<!----------------------------------------------------------------- BOTONES PROYECTOS ---------------------------------------------------------->
 
 	<div class="contenedor-botones">
-
-		<a href="{{route('AgregarConvocatorias')}}"><button class="btn"><span>Agregar</span></button></a> <!-- Agregar Nuevo -->
-		<a href="{{route('ConvocatoriasAcademicos')}}"><button class="btn"><span>Regresar</span></button></a> <!-- Regresar -->
+		<a onclick="return confirm('¿Desea guardar los cambios realizados?')"><button class="btn" type="submit" ><span>Guardar</span></button></a>
+    <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/ProyectosAcademicos"><button type="button" class="btn"><span>Cancelar</span></button></a>
 
 	</div>
-
+</form>
 </div>
 
 @endsection

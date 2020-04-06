@@ -53,7 +53,7 @@
 			<div class="tabla-informacion-escolar">
 
 				<table>
-									
+
 					<thead>
 						<tr>
 							<th>Proyecto</th>
@@ -82,7 +82,7 @@
 							<td colspan="4">{{$proyecto->descripcion}}</td>
 						</tr>	-->
 
-				</table>		
+				</table>
 
 			</div>
 

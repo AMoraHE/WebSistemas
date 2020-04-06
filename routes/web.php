@@ -196,17 +196,17 @@ Route::get('/ProyectosAcademicos/edit', 'ProyectoController@edit')->name('Editar
 
 
 //Ruta convocatorias-acdemicos
-Route::resource('convocatorias', 'ConvocatoriasController')->middleware('auth');
+Route::resource('ConvocatoriasAcademicos', 'ConvocatoriasController')->middleware('auth');
 
-Route::get('/ConvocatoriasAcademicos', function () {
-    return view('.admin.menu-academicos.convocatorias.view');})->name('ConvocatoriasAcademicos')->middleware('auth');
+Route::get('/ConvocatoriasAcademicos', 'ConvocatoriasController@index')->name('ConvocatoriasAcademicos')->middleware('auth');
 
-Route::get('/editar-convocatorias', function () {
-    return view('.admin.menu-academicos.convocatorias.edit');
-})->name('EditarConvocatorias')->middleware('auth');
-Route::get('/agregar-convocatorias', function () {
-    return view('.admin.menu-academicos.convocatorias.create');
-})->name('AgregarConvocatorias')->middleware('auth');
+Route::get('/ConvocatoriasAcademicos/create', 'ConvocatoriasController@create')->name('AgregarConvocatorias')->middleware('auth');
+
+
+Route::get('/ConvocatoriasAcademicos/edit', 'ConvocatoriasController@edit')->name('EditarConvocatorias')->middleware('auth');
+
+
+
 
 //Ruta programas-acdemicos
 Route::resource('programas', 'ProgramasController')->middleware('auth');
@@ -220,8 +220,3 @@ Route::get('/editar-programas', function () {
 Route::get('/agregar-programas', function () {
     return view('.admin.menu-academicos.programas.create');
 })->name('AgregarProgramas')->middleware('auth');
-
-
-
-
-
