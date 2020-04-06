@@ -420,12 +420,12 @@
 	padding: 1%;
 	display: inline-block;
 	text-align: center;
-
-	border-top: 2px solid var(--verde);
+	border-top: 1px solid var(--verde);
 }
 
-.seccion-mini-galeria img{
-	max-width: 25%;
+.seccion-mini-galeria img{ /**********Hacerlo Responsivo***********/
+	width: 250px;
+	height: 250px;
 	margin: 2%;
 	border: 2px solid var(--verde);
 }
@@ -638,6 +638,15 @@
 	width: calc(100% - 40px);
 	margin: 0 auto;
 	/*min-width: 200px;*/
+	text-align: center;
+	overflow: auto;
+	padding: 10px;
+	border-bottom: 1px solid var(--verde);
+}
+
+.info-img-infraestructura{
+	width: calc(100% - 40px);
+	margin: 0 auto;
 	text-align: center;
 	overflow: auto;
 	padding: 10px;

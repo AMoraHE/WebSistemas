@@ -12,7 +12,11 @@
 
 	<div class="seccion-principal">
 
-		<a href="/Lab-Celula/create"><button class="btn"><span>Agregar</span></button></a>
+		<div class="contenedor-botones">
+
+			<a href="/Lab-Celula/create"><button class="btn"><span>Agregar</span></button></a>
+
+		</div>
 		
 @foreach ($infras as $infra)
 	
@@ -25,13 +29,15 @@
 
 		</div>
 
+
+		@include('admin.menu-inf.formShow')
+
 		<div class="contenedor-botones">
 
 			<a href="/Lab-Celula/{{$infra->slug}}/edit"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
 			
 		</div>
 
-		@include('admin.menu-inf.formShow')
 		@endforeach
 
 @endsection

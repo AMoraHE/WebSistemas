@@ -10,9 +10,13 @@
     </div>
 @endif
 
-	<div class="seccion-principal">
+<div class="seccion-principal">
+
+	<div class="contenedor-botones">
 
 		<a href="/Lab-Cisco/create"><button class="btn"><span>Agregar</span></button></a>
+
+	</div>
 		
 @foreach ($infras as $infra)
 
@@ -24,14 +28,14 @@
 
 	</div>
 
-		<div class="contenedor-botones">
+	@include('admin.menu-inf.formShow')
 
-			<a href="/Lab-Cisco/{{$infra->slug}}/edit"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
+	<div class="contenedor-botones">
 
-		</div>
+		<a href="/Lab-Cisco/{{$infra->slug}}/edit"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
 
-		@include('admin.menu-inf.formShow')
-		@endforeach
-
-
+	</div>
+	
+	@endforeach
+	
 @endsection

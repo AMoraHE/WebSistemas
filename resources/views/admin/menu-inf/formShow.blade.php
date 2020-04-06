@@ -1,57 +1,56 @@
-<div class="contenedor-cuerpo-seccion">
 
-			<div class="contenedor-img-slider">
+<!----------------------------------------------------------------- VISTA LABORATORIOS -------------------------------------------------------->
 
-				<img src="/images/infra/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}">
+	<div class="contenedor-cuerpo-seccion">
 
-			</div>
+		<div class="contenedor-img-grande">
+
+			<img src="/images/infra/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}">
 
 		</div>
 
-		<div class="formulario">
+	</div>
+
+	<div class="formulario">
 		
-		<label for="">Responsable</label>
+		<label>Responsable</label>
 		<input type="text" name="" id ="" value="{{$infra->responsable}}" class="form-control" readonly>
 
-		</div>
+	</div>
 
-		<div class="formulario">
+	<div class="formulario">
 
-		<label for="">Correo Electrónico</label>
+		<label>Correo Electrónico</label>
 		<input type="email" name="correo" value="{{$infra->correo}}" id="correo" readonly>
 
-		</div>
+	</div>
 
 
-		<div class="formulario">
+	<div class="formulario">
 
-		<label for="">Descripción:</label>
+		<label>Descripción:</label>
 		<textarea name="" readonly>{{$infra->descripcion}}</textarea>
 
-		</div>
+	</div>
 
-		<div class="formulario">
+	<div class="formulario">
 
-		<label for="">Mini Galería: </label>
+		<label>Mini Galería: </label>
 
-		</div>
+	</div>
 
-		<div class="seccion-mini-galeria">
+	<div class="seccion-mini-galeria">
 
-			<img src="/images/infra/{{$infra->img1}}">
+		<img src="/images/infra/{{$infra->img1}}">
 
-			<img src="/images/infra/{{$infra->img2}}">
+		<img src="/images/infra/{{$infra->img2}}">
 
-			<img src="/images/infra/{{$infra->img3}}">
+		<img src="/images/infra/{{$infra->img3}}">
 
-			<img src="/images/infra/{{$infra->img4}}">
+		<img src="/images/infra/{{$infra->img4}}">
 
-			<img src="/images/infra/{{$infra->img5}}">
+		<img src="/images/infra/{{$infra->img5}}">
 
-			<img src="/images/infra/{{$infra->img6}}">
-
-			<!---------------Boton agregar mas img a la mini galeria-------------------------->
+		<img src="/images/infra/{{$infra->img6}}">
 			
-		</div>
-
 	</div>

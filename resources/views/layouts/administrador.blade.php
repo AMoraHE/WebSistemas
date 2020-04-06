@@ -249,6 +249,8 @@
 <!--<script src="{{ asset('js/jquery.js')}}"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
 	<script src="{{ asset('js/select.js')}}"></script>
+	<script src="{{ asset('js/select-img.js')}}"></script>
+
 <!---
 	<script src="{{ asset('js/jquery-3.1.0.min.js')}}"></script>-->
 	<script src="{{ asset('js/jquery.flexslider.js')}}"></script>
