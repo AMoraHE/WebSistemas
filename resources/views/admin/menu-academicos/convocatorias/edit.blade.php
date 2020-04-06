@@ -4,7 +4,7 @@
 
 @section('content')
 
-<!----------------------------------------------------------------- EDITAR PROYECTOS ---------------------------------------------------------->
+<!----------------------------------------------------------------- EDITAR convocatorias ---------------------------------------------------------->
 
 
 <div class="seccion-principal">
@@ -12,7 +12,7 @@
 		<h3>Edita convocatoria</h3>
 	</div>
 
-<!---------------------------PROYECTOS------------------------>
+<!---------------------------convocatorias------------------------>
  <form class="form-goup" files="true" method="POST" action="/ConvocatoriasAcademicos/{{$convocatorias->slug}}" enctype="multipart/form-data">
     @method('PUT')
     {{csrf_field()}}
@@ -63,7 +63,7 @@
 
 <!----------------------------------------------------------------- FORMULARIO convocatoria ---------------------------------------------------------->
 
-<!--------------------APLICACION------------------------------>
+<!-------------------------------------------------->
   <div class="formulario">
 
     <label>Aplicacion</label>
@@ -129,7 +129,7 @@
     </span>
 
   @endif
-<!----------------------------------------------------------------- BOTONES PROYECTOS ---------------------------------------------------------->
+<!----------------------------------------------------------------- BOTONES convocatorias ---------------------------------------------------------->
 
 	<div class="contenedor-botones">
 		<a onclick="return confirm('¿Desea guardar los cambios realizados?')"><button class="btn" type="submit" ><span>Guardar</span></button></a>
