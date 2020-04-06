@@ -14,7 +14,7 @@
 
 	<div class="contenedor-botones">
 
-		<a href="/Lab-Cisco/create"><button class="btn"><span>Agregar</span></button></a>
+		<a onclick="return confirm('¿Desea registrar nueva información?')" href="/Lab-Cisco/create"><button class="btn"><span>Agregar</span></button></a>
 
 	</div>
 		
@@ -32,7 +32,7 @@
 
 	<div class="contenedor-botones">
 
-		<a href="/Lab-Cisco/{{$infra->slug}}/edit"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
+		<a onclick="return confirm('¿Desea modificar la información del laboratorio?')" href="/Lab-Cisco/{{$infra->slug}}/edit"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
 
 	</div>
 	

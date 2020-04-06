@@ -99,8 +99,8 @@
 
 <div class="formulario">
 
-  <label>Slug</label>
-  <input type="text" name="slug" value="{{old('slug')}}">
+  <label>Identificador</label>
+  <input type="text" name="slug" value="{{$identificador}}" readonly>
 
   @if ($errors->has('slug'))
             

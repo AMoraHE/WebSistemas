@@ -54,7 +54,7 @@
 
 		<div class="contenedor-botones">
 
-			<a onclick="return confirm('¿Desea regresar al menú anterior?')" href="/admin"><button class="btn"><span>Regresar</span></button></a>
+			<a onclick="return confirm('¿Desea regresar al menú principal?')" href="/admin"><button class="btn"><span>Regresar</span></button></a>
 
 		</div>
 

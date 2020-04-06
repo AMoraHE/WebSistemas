@@ -26,7 +26,18 @@ class LabMicroController extends Controller
      */
     public function create()
     {
-        return view('/admin/menu-inf/lab-micro/create');
+        $infras = Infraestructura::where('slug', 'micro')->get();
+
+        if(count($infras) > 0)
+        {
+            return redirect('/Lab-Micro')->with('status','Ya se ha registrado información del laboratorio de microprocesadores, modifique el registro actual');
+        }
+
+        else
+        {
+            $identificador = 'micro';
+            return view('/admin/menu-inf/lab-micro/create', compact('identificador'));
+        }
     }
 
     /**

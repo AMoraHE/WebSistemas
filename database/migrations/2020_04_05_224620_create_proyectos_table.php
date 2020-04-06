@@ -15,13 +15,13 @@ class CreateProyectosTable extends Migration
     {
         Schema::create('proyectos', function (Blueprint $table) {
             $table->increments('id');
-            $table->String('aplicacion')->unique();
-            $table->String('proyecto');
-            $table->String('desarrolladores');
-            $table->String('objetivo');
-            $table->String('descripcion');
-            $table->String('resultados');
-            $table->String('newimage');
+            $table->text('aplicacion')->unique();
+            $table->text('proyecto');
+            $table->text('desarrolladores');
+            $table->text('objetivo');
+            $table->text('descripcion');
+            $table->text('resultados');
+            $table->text('newimage');
             $table->string('slug')->unique();
             $table->timestamps();
         });

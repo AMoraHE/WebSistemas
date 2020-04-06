@@ -26,7 +26,17 @@ class LabSistemasController extends Controller
      */
     public function create()
     {
-        return view('/admin/menu-inf/lab-sistemas/create');
+        $infras = Infraestructura::where('slug', 'sistemas')->get();
+
+        if(count($infras) > 0)
+        {
+            return redirect('/Lab-Sistemas')->with('status','Ya se ha registrado información del laboratorio de sistemas, modifique el registro actual');
+        }
+        else
+        {
+            $identificador = 'sistemas';
+            return view('/admin/menu-inf/lab-sistemas/create', compact('identificador'));
+        }
     }
 
     /**

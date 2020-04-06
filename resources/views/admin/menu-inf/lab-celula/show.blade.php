@@ -14,7 +14,7 @@
 
 		<div class="contenedor-botones">
 
-			<a href="/Lab-Celula/create"><button class="btn"><span>Agregar</span></button></a>
+			<a onclick="return confirm('¿Desea registrar nueva información?')" href="/Lab-Celula/create"><button class="btn"><span>Agregar</span></button></a>
 
 		</div>
 		
@@ -34,7 +34,7 @@
 
 		<div class="contenedor-botones">
 
-			<a href="/Lab-Celula/{{$infra->slug}}/edit"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
+			<a onclick="return confirm('¿Desea modificar la información del laboratorio?')" href="/Lab-Celula/{{$infra->slug}}/edit"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
 			
 		</div>
 
