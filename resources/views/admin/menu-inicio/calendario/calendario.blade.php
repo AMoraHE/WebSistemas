@@ -108,7 +108,7 @@
 
   	<!-- Modal Modificar , Agregar, Eliminar-->
 
-  		        <div id="ModalEventos" class="modal">
+  		  <div id="ModalEventos" class="modal">
   					<div class="flex" id="flex">
   						<div class="contenido-modal">
 
@@ -128,25 +128,55 @@
   										<input type="text" id="txtTitulo" class="form-control" placeholder="Titulo del Evento" required>
   									</div>
 
-  									<div class="formulario">
-  										<label>Fecha Inicio:</label>
-  										<input  type="date" id="txtFechaInicio" class="form-control" name="txtFechaInicio" readonly/>
-  									</div>
+    <!-- Apartado Dividido-->
 
-  									<div class="formulario">
-  										<label>Hora Incio:</label>
-  										<input type="time" id="txtHoraInicio" value="08:30" class="form-control" required />
-  									</div class="formulario">
+                  <div class="contenedor-formulario-dividido">
 
-  									<div class="formulario">
-  										<label>Fecha Final:</label>
-  										<input type="date" id="txtFechaFinal" class="form-control" name="texFechaFinal" required>
-  									</div>
+                    <div class="columna-de-dos">
 
-  									<div class="formulario">
-  										<label>Hora Final:</label>
-  										<input type="time" id="txtHoraFinal" value="12:30" class="form-control" required />
-  									</div>
+    									<div class="formulario">
+    										<label>Fecha Inicio:</label>
+    										<input  type="date" id="txtFechaInicio" class="form-control" name="txtFechaInicio" readonly/>
+    									</div>
+
+                    </div>
+
+                    <div class="columna-de-dos">
+
+    									<div class="formulario">
+    										<label>Hora Incio:</label>
+    										<input type="time" id="txtHoraInicio" value="08:30" class="form-control" required />
+    									</div>
+
+                    </div>
+
+                  </div>
+
+    <!-- Apartado Dividido-->
+
+                  <div class="contenedor-formulario-dividido">
+
+                    <div class="columna-de-dos">
+
+    									<div class="formulario">
+    										<label>Fecha Final:</label>
+    										<input type="date" id="txtFechaFinal" class="form-control" name="texFechaFinal" required>
+    									</div>
+
+                    </div>
+
+                    <div class="columna-de-dos">
+
+    									<div class="formulario">
+    										<label>Hora Final:</label>
+    										<input type="time" id="txtHoraFinal" value="12:30" class="form-control" required />
+    									</div>
+
+                    </div>
+
+                  </div>
+
+    <!-- FIN Apartado Dividido-->
 
   								<div class="formulario">
 
@@ -168,12 +198,12 @@
 
   								<div class="contenedor-botones-modal">
 
-  								<a onclick="return confirm('¿Desea registrar el nuevo evento?')"><button type="button" id="btnAgregar" class="btn-modal"><span>Agregar</span></button></a>
+  								    <a onclick="return confirm('¿Desea registrar el nuevo evento?')"><button type="button" id="btnAgregar" class="btn-modal"><span>Agregar</span></button></a>
   	        					<a onclick="return confirm('¿Desea modificar este evento?')"><button type="button" id="btnModificar" class="btn-modal"><span>Modificar</span></button></a>
   						        <a onclick="return confirm('¿Desea eliminar este evento?')"><button type="button" id="btnEliminar" class="btn-modal"><span>Borrar</span></button></a>
   						        <a onclick="return confirm('¿Desea anular esta acción?')"><button type="button" class="btn-modal" data-dismiss="modal"><span>Cancelar</span></button></a>
 
-  						        </div>
+  						    </div>
 
   							</div>
 
@@ -183,7 +213,7 @@
 
   					</div>
 
-  				</div>
+  			</div>
 
 
 

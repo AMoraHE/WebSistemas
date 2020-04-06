@@ -4,6 +4,7 @@
 
 @section('content')
 
+<!----------------------------------------------------------------- EDITAR PROYECTOS ---------------------------------------------------------->
 
 
 <div class="seccion-principal">
@@ -19,11 +20,18 @@
 <!----------------------------IMAGEN------------------------->
 	<div class="formulario">
 
-    <label>Tamaño de imagen recomendado: 250px de ancho y 250px de alto</label>
+    <label>Tamaño de imagen recomendado: 1100px de ancho y 450px de alto</label>
 
   </div>
 
   <div class="contenedor-cargar-img">
+
+    <div class="contenedor-txt-seccion">
+            
+      <label>Cargar IMG</label>
+
+    </div>
+
 
     <div class="contenedor-boton-cargar">
 
@@ -44,13 +52,19 @@
   <div id="info-img">No se Eligió Archivo</div>
 
   @if ($errors->has('image'))
-      <span class="invalid-feedback" role="alert">
-        <strong>{{ $errors->first('image') }}</strong>
-      </span>
-    @endif
+
+    <span class="invalid-feedback" role="alert">
+
+      <strong>{{ $errors->first('image') }}</strong>
+
+    </span>
+
+  @endif
+
+<!----------------------------------------------------------------- FORMULARIO PROYECTOS ---------------------------------------------------------->
 
 <!--------------------APLICACION------------------------------>
-<div class="formulario">
+  <div class="formulario">
 
     <label>Aplicacion</label>
     @if ($errors->has('image'))
@@ -62,13 +76,17 @@
   </div>
 
   @if ($errors->has('aplicacion'))
-      <span class="invalid-feedback" role="alert">
-        <strong>{{ $errors->first('aplicacion') }}</strong>
-      </span>
-    @endif
+
+    <span class="invalid-feedback" role="alert">
+
+      <strong>{{ $errors->first('aplicacion') }}</strong>
+
+    </span>
+
+  @endif
 
 <!--------------------------PROYECTO---------------------------->
-<div class="formulario">
+  <div class="formulario">
 
     <label>Proyecto</label>
     @if ($errors->has('image'))
@@ -80,82 +98,102 @@
   </div>
 
   @if ($errors->has('proyecto'))
-      <span class="invalid-feedback" role="alert">
-        <strong>{{ $errors->first('proyecto') }}</strong>
-      </span>
-    @endif
+
+    <span class="invalid-feedback" role="alert">
+
+      <strong>{{ $errors->first('proyecto') }}</strong>
+
+    </span>
+
+  @endif
 
 <!------------------------------DESARROLLADORES-------------------------->
-<div class="formulario">
+  <div class="formulario">
 
-    <label for="">Desarrolladores</label>
+    <label>Desarrolladores</label>
     @if ($errors->has('image'))
-    <textarea style="height: 100px;" placeholder="Reescriba los desarrolladores seleccionados" name="desarrolladores" required>{{old('desarrolladores')}}</textarea>
+    <textarea placeholder="Reescriba los desarrolladores seleccionados" name="desarrolladores" required>{{old('desarrolladores')}}</textarea>
     @else
-    <textarea style="height: 100px;" placeholder="Reescriba los desarrolladores seleccionados" name="desarrolladores" required>{{$proyecto->desarrolladores}}</textarea>
+    <textarea placeholder="Reescriba los desarrolladores seleccionados" name="desarrolladores" required>{{$proyecto->desarrolladores}}</textarea>
     @endif
 
   </div>
 
   @if ($errors->has('desarrolladores'))
-      <span class="invalid-feedback" role="alert">
-        <strong>{{ $errors->first('desarrolladores') }}</strong>
-      </span>
-    @endif
+
+    <span class="invalid-feedback" role="alert">
+
+      <strong>{{ $errors->first('desarrolladores') }}</strong>
+
+    </span>
+
+  @endif
 
 <!--------------------------------OBEJTIVO-------------------------->
 
-<div class="formulario">
+  <div class="formulario">
 
-    <label for="">Objetivo</label>
+    <label>Objetivo</label>
     @if ($errors->has('image'))
-    <textarea style="height: 100px;" placeholder="Reescriba los objetivos seleccionados" name="objetivo" required>{{old('objetivo')}}</textarea>
+    <textarea placeholder="Reescriba los objetivos seleccionados" name="objetivo" required>{{old('objetivo')}}</textarea>
     @else
-    <textarea style="height: 100px;" placeholder="Reescriba los objetivos seleccionados" name="objetivo" required>{{$proyecto->objetivo}}</textarea>
+    <textarea placeholder="Reescriba los objetivos seleccionados" name="objetivo" required>{{$proyecto->objetivo}}</textarea>
     @endif
 
   </div>
 
   @if ($errors->has('objetivo'))
-      <span class="invalid-feedback" role="alert">
-        <strong>{{ $errors->first('objetivo') }}</strong>
-      </span>
-    @endif
-<!---------------------------DESCRIPCION---------------------------------------------------->
-<div class="formulario">
 
-    <label for="">Descripción</label>
+    <span class="invalid-feedback" role="alert">
+
+      <strong>{{ $errors->first('objetivo') }}</strong>
+
+    </span>
+
+  @endif
+<!---------------------------DESCRIPCION---------------------------------------------------->
+  <div class="formulario">
+
+    <label>Descripción</label>
     @if ($errors->has('image'))
-    <textarea style="height: 100px;" placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{old('descripcion')}}</textarea>
+    <textarea placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{old('descripcion')}}</textarea>
     @else
-    <textarea style="height: 100px;" placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{$proyecto->descripcion}}</textarea>
+    <textarea placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{$proyecto->descripcion}}</textarea>
     @endif
 
   </div>
 
   @if ($errors->has('descripcion'))
-      <span class="invalid-feedback" role="alert">
-        <strong>{{ $errors->first('descripcion') }}</strong>
-      </span>
-    @endif
-<!------------------------------RESULTADOS---------------------------------->
-<div class="formulario">
 
-    <label for="">Resultados</label>
+    <span class="invalid-feedback" role="alert">
+
+      <strong>{{ $errors->first('descripcion') }}</strong>
+
+    </span>
+
+  @endif
+<!------------------------------RESULTADOS---------------------------------->
+  <div class="formulario">
+
+    <label>Resultados</label>
     @if ($errors->has('image'))
-    <textarea style="height: 100px;" placeholder="Reescriba los resultados seleccionados" name="resultados" required>{{old('resultados')}}</textarea>
+    <textarea placeholder="Reescriba los resultados seleccionados" name="resultados" required>{{old('resultados')}}</textarea>
     @else
-    <textarea style="height: 100px;" placeholder="Reescriba los resultados seleccionados" name="resultados" required>{{$proyecto->resultados}}</textarea>
+    <textarea placeholder="Reescriba los resultados seleccionados" name="resultados" required>{{$proyecto->resultados}}</textarea>
     @endif
 
   </div>
 
   @if ($errors->has('resultados'))
-      <span class="invalid-feedback" role="alert">
-        <strong>{{ $errors->first('resultados') }}</strong>
-      </span>
-    @endif
-<!--------------------------BOTONES---------------------------->
+
+    <span class="invalid-feedback" role="alert">
+
+      <strong>{{ $errors->first('resultados') }}</strong>
+
+    </span>
+
+  @endif
+<!----------------------------------------------------------------- BOTONES PROYECTOS ---------------------------------------------------------->
 
 	<div class="contenedor-botones">
 		<a onclick="return confirm('¿Desea guardar los cambios realizados?')"><button class="btn" type="submit" ><span>Guardar</span></button></a>

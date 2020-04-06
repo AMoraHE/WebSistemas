@@ -19,7 +19,7 @@
 
   <div class="contenedor-titulo-seccion-select">
 
-    <h3>Editar Organigrama</h3>
+    <h3>Organigrama</h3>
 
     <div class="contenedor-select-seccion">
             

@@ -30,19 +30,19 @@
 
   </div>
 
-  @if ($errors->has('imgInicio'))
-            
-    <span class="invalid-feedback" role="alert">
-        
-        <strong>{{ $errors->first('imgInicio') }}</strong>
-    
-    </span>
-
-  @endif
-
 </div>
 
 <div id="info-img">No se Eligió Archivo</div>
+
+@if ($errors->has('imgInicio'))
+            
+  <span class="invalid-feedback" role="alert">
+        
+    <strong>{{ $errors->first('imgInicio') }}</strong>
+    
+  </span>
+
+@endif
       
 <!----------------------------------------------------------------- FORMULARIO LABORATORIOS ---------------------------------------------------------->
 
@@ -151,19 +151,19 @@
 
     </div>
 
-    @if ($errors->has('img1'))
-
-      <span class="invalid-feedback" role="alert">
-
-        <strong>{{ $errors->first('img1') }}</strong>
-
-      </span>
-
-    @endif
-
 </div>
 
 <div id="info-img1" class="info-img-infraestructura">No se Eligió Archivo</div>
+
+  @if ($errors->has('img1'))
+
+    <span class="invalid-feedback" role="alert">
+
+      <strong>{{ $errors->first('img1') }}</strong>
+
+    </span>
+
+  @endif
 
 <!-------------------------------- MINI GALERIA LABORATORIOS - Imagen 2 ----------------------------->
 
@@ -194,6 +194,10 @@
 
     </div>
 
+  </div>
+
+  <div id="info-img2" class="info-img-infraestructura">No se Eligió Archivo</div>
+
   @if ($errors->has('img2'))
 
     <span class="invalid-feedback" role="alert">
@@ -203,10 +207,6 @@
     </span>
 
   @endif
-
-  </div>
-
-  <div id="info-img2" class="info-img-infraestructura">No se Eligió Archivo</div>
 
 <!-------------------------------- MINI GALERIA LABORATORIOS - Imagen 3 ----------------------------->
 
@@ -237,6 +237,10 @@
 
     </div>
 
+  </div>
+
+  <div id="info-img3" class="info-img-infraestructura">No se Eligió Archivo</div>
+
   @if ($errors->has('img3'))
 
     <span class="invalid-feedback" role="alert">
@@ -245,11 +249,7 @@
 
     </span>
 
-  @endif
-
-  </div>
-
-  <div id="info-img3" class="info-img-infraestructura">No se Eligió Archivo</div>
+  @endif  
 
 <!-------------------------------- MINI GALERIA LABORATORIOS - Imagen 4 ----------------------------->
 
@@ -280,6 +280,10 @@
 
     </div>
 
+  </div>
+
+  <div id="info-img4" class="info-img-infraestructura">No se Eligió Archivo</div>
+
   @if ($errors->has('img4'))
 
     <span class="invalid-feedback" role="alert">
@@ -288,11 +292,7 @@
 
     </span>
 
-  @endif
-
-  </div>
-
-  <div id="info-img4" class="info-img-infraestructura">No se Eligió Archivo</div>
+  @endif  
 
 <!-------------------------------- MINI GALERIA LABORATORIOS - Imagen 5 ----------------------------->
 
@@ -323,6 +323,10 @@
 
     </div>
 
+  </div>
+
+  <div id="info-img5" class="info-img-infraestructura">No se Eligió Archivo</div>
+
   @if ($errors->has('img5'))
 
     <span class="invalid-feedback" role="alert">
@@ -332,10 +336,6 @@
     </span>
 
   @endif
-
-  </div>
-
-  <div id="info-img5" class="info-img-infraestructura">No se Eligió Archivo</div>
 
 <!-------------------------------- MINI GALERIA LABORATORIOS - Imagen 6 ----------------------------->
 
@@ -365,7 +365,10 @@
       <img id="img-pre-img6" src="/img/LogoNuevaImagen.png">
 
     </div>
+  
+  </div>
 
+  <div id="info-img6" class="info-img-infraestructura">No se Eligió Archivo</div>
 
   @if ($errors->has('img6'))
 
@@ -375,8 +378,4 @@
 
     </span>
 
-  @endif
-  
-  </div>
-
-  <div id="info-img6" class="info-img-infraestructura">No se Eligió Archivo</div>
+  @endif  

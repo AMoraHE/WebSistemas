@@ -36,11 +36,9 @@
 
 				<div class="contenedor-boton-cargar">
 
-				<label for="file-upload" class="subir"><i class="fas fa-cloud-upload-alt"></i>Subir Archivo</label>
+				<label for="file-upload" class="subir"><i class="icono-izquierda fas fa-cloud-upload-alt"></i>Subir Archivo</label>
 
 				<input id="file-upload" onchange='cambiar()' name="imgPerfil" type="file" accept="image/gif, image/jpeg, image/png" style='display: none;' />
-
-					<div id="info-img">No se Eligió Archivo</div>
 
 				</div>
 
@@ -51,6 +49,8 @@
 	 			</div>
 
 			</div>
+
+			<div id="info-img">No se Eligió Archivo</div>
 
 			@if ($errors->has('imgPerfil'))
       			<span class="invalid-feedback" role="alert">

@@ -12,63 +12,79 @@
 
 @endif
 
-<!---------------titulo index----------->
+<!----------------------------------------------------------------- PROYECTOS ---------------------------------------------------------->
+
 
 <div class="seccion-principal">
 
-		<div class="contenedor-titulo-seccion">
+	<!-----------------Botones--------->
 
-			<h3>Proyectos</h3>
-		</div>
+	<div class="contenedor-botones">
 
+		<a onclick="return confirm('¿Desea agregar un nuevo Proyecto?')" href="/ProyectosAcademicos/create"><button class="btn"><span>Agregar</span></button></a>
 
-<!-----------------Botones--------->
-	
-
-		<div class="contenedor-botones">
-			<a onclick="return confirm('¿Desea agregar un nuevo Proyecto?')" href="/ProyectosAcademicos/create"><button class="btn"><span>Agregar Proyecto</span></button>
-			</a>
-		</div>
+	</div>
 
 	@foreach ($proyectos as $proyecto)
 
-		<div class="contenedor-titulo-seccion">
+	<div class="contenedor-titulo-seccion">
 
 		<h3>{{$proyecto->aplicacion}}</h3>
 
 	</div>
 
-	<div class="contenedor-cuerpo-dividido">
+	<div class="contenedor-img-grande">
 
-		<div class="contenedor-img-dividido">
+		<img src="/images/proyectos/{{$proyecto->newimage}}">
 
-			<img src="/images/proyectos/{{$proyecto->newimage}}">
+	</div>
 
-		</div>
+	<!----------------------------------------------------------------- DIVISOR ---------------------------------------------------------->
 
-		<div class="contenedor-texto-dividido">
+	<div class="divisor-contenido"></div>
 
-			<p>{{$proyecto->proyecto}}</p>
+	<!----------------------------------------------------------------- TABLA ---------------------------------------------------------->
 
-		</div>
-		<div class="contenedor-texto-dividido">
 
-			<p>{{$proyecto->desarrolladores}}</p>
+	<div class="contenedor-cuerpo-seccion">
 
-		</div>
-		<div class="contenedor-texto-dividido">
+		<div class="contenedor-texto-completo">
 
-			<p>{{$proyecto->objetivo}}</p>
+			<div class="tabla-informacion-escolar">
 
-		</div>
-		<div class="contenedor-texto-dividido">
+				<table>
+									
+					<thead>
+						<tr>
+							<th>Proyecto</th>
+							<th>Desarrolladores</th>
+							<th>Objetivo</th>
+							<th>Descripción</th><!--Comentar-->
+							<th>Resultados</th>
+						</tr>
+					</thead>
 
-			<p>{{$proyecto->descripcion}}</p>
+						<tr>
+							<td>{{$proyecto->proyecto}}</td>
+							<td>{{$proyecto->desarrolladores}}</td>
+							<td>{{$proyecto->objetivo}}</td>
+							<td>{{$proyecto->descripcion}}</td><!--Comentar-->
+							<td>{{$proyecto->resultados}}</td>
+						</tr>
 
-		</div>
-		<div class="contenedor-texto-dividido">
+<!--					<thead>
+						<tr>
+							<th colspan="4">Descripción</th>
+						</tr>
+					</thead>
 
-			<p>{{$proyecto->resultados}}</p>
+						<tr>
+							<td colspan="4">{{$proyecto->descripcion}}</td>
+						</tr>	-->
+
+				</table>		
+
+			</div>
 
 		</div>
 

@@ -104,7 +104,7 @@
   	display: inline-block;
   	border: 2px solid #fff;
   	padding: 10px 0px;
-	margin: 0px 2%; 
+	margin: 0px 10px; 
 	background: #fff;
 	transition: color 0.5s, background 0.5s;
 	font-size: 1em;
