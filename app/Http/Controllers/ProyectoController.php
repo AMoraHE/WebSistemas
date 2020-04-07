@@ -113,7 +113,7 @@ class ProyectoController extends Controller
     {
           $validator = Validator::make($request->all(), [
     'aplicacion' => 'required|string',
-    'image' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+    'image' => 'mimes:jpeg,png,bmp,tiff,gif',
     'proyecto' => 'required|string',
     'desarrolladores' => 'required|string',
     'objetivo' => 'required|string',

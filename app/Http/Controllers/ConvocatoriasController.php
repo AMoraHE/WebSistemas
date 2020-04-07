@@ -107,7 +107,7 @@ class ConvocatoriasController extends Controller
   {
         $validator = Validator::make($request->all(), [
   'aplicacion' => 'required|string',
-  'image' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+  'image' => 'mimes:jpeg,png,bmp,tiff,gif',
   'convocatorias' => 'required|string',
   'descripcion' => 'required|string',
   ]);
