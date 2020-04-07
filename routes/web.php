@@ -237,3 +237,4 @@ Route::get('/Album/create', 'AlbumController@create')->middleware('auth');
 Route::get('/Album/{slug}/edit', 'AlbumController@edit')->middleware('auth');
 Route::get('/Album/agregar/{slug}', 'AlbumController@agregar')->middleware('auth');
 Route::get('/Album-Delete/{slug}', 'AlbumController@destroy')->middleware('auth');
+Route::get('/Album-Galeria-Delete/{id}', 'AlbumGaleriaController@destroy')->middleware('auth');

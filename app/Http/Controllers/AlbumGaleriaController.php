@@ -110,6 +110,16 @@ class AlbumGaleriaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $imagen = albumGaleria::where('id', '=', $id)->firstOrFail();
+
+        $oldFile = public_path().'/images/galeria/'.$imagen->imagen;
+        if(file_exists($oldFile))
+        {
+            unlink($oldFile);
+        }
+
+        $imagen->delete();
+
+        return redirect('/Album-Index')->with('status','Eliminación Exitosa');
     }
 }

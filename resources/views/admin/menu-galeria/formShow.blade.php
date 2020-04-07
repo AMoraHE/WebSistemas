@@ -31,7 +31,7 @@
 
 		@if($imagen->albumSlug == $album->slug)
 		<img src="/images/galeria/{{$imagen->imagen}}">
-		<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Album-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
+		<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Album-Galeria-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
 		@endif
 
 		@endforeach

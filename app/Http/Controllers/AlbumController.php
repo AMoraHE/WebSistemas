@@ -159,17 +159,28 @@ class AlbumController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($slug)
     {
-        $imagen = albumGaleria::where('id', '=', $id)->firstOrFail();
+        $imagen = albumGaleria::where('albumSlug', '=', $slug)->get();
+        $album = album::where('slug', '=', $slug)->firstOrFail();
 
-        $oldFile = public_path().'/images/galeria/'.$imagen->imagen;
+        foreach ($imagen as $image )
+        {
+            $oldFile = public_path().'/images/galeria/'.$image->imagen;
+            if(file_exists($oldFile))
+            {
+                unlink($oldFile);
+            }
+        }
+
+        $oldFile = public_path().'/images/galeria/album/'.$album->imgPrin;
         if(file_exists($oldFile))
         {
             unlink($oldFile);
         }
 
-        $imagen->delete();
+        albumGaleria::where('albumSlug', '=', $slug)->delete();
+        $album->delete();
 
         return redirect('/Album-Index')->with('status','Eliminación Exitosa');
     }
