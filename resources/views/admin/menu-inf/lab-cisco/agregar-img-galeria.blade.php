@@ -88,14 +88,14 @@
         </div>
 
         @foreach ($imagenes as $imagen)
+
         <div class="contenedor-seccion-preliminar">
 
-          <div class="contenedor-seccion-preliminar-slider-img">
+          <div class="contenedor-seccion-preliminar-img-ajustable">
 
             <img src="/images/infra/{{$imagen->imagen}}">
 
           </div>
-
 
         </div>
 
