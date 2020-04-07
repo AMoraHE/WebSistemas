@@ -66,8 +66,13 @@
 
 						<tr>
 							<td>{{$proyecto->proyecto}}</td>
-							<td>{{$proyecto->desarrolladores}}</td>
-							<!---<td>{{$proyecto->objetivo}}</td>---->
+							<td>
+							<ul>
+								@foreach (explode(', ', $proyecto->desarrolladores) as $desarrolladores)
+								<li>{{$desarrolladores}}</li>
+								@endforeach
+							</ul>
+						</td>
 							<td>{{$proyecto->descripcion}}</td><!--Comentar-->
 							<!----<td>{{$proyecto->resultados}}</td>---->
 						</tr>
