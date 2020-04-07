@@ -193,7 +193,7 @@
 				<li><a href="#"><i class="icono izquierda far fa-image"></i>Galería<i class=" icono derecha fa fa-chevron-down"></i></a>
 
 					<ul>
-						<li><a href="#"><i class="icono izquierda far fa-images"></i>Fotos</a></li>
+						<li><a href="/Album-Index"><i class="icono izquierda far fa-images"></i>Fotos</a></li>
 					</ul>
 
 				</li>

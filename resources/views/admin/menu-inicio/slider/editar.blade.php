@@ -47,7 +47,7 @@
   	<div class="formulario">
 
   		<label for="">Título</label>
-      @if ($errors->has('image'))
+      @if ($errors->any())
   		<input type="text" name="contenido" id="titulo" value="{{old('contenido')}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
       @else
       <input type="text" name="contenido" id="titulo" value="{{$slider->contenido}}" placeholder="Inserte Titulo Deseado" class="form-control" required>

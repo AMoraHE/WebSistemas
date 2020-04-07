@@ -23,7 +23,7 @@
 		<div class="formulario">
 				
 			<label>Título</label>
-			@if ($errors->has('doc'))
+			@if ($errors->any())
 			<input type="text" name="titulo" id="titulo-ret" value="{{old('titulo')}}" placeholder="Inserte Título Deseado" class="form-control" required>
 			@else
 			<input type="text" name="titulo" id="titulo-ret" value="{{$reticula->titulo}}" placeholder="Inserte Título Deseado" class="form-control" required>
@@ -40,7 +40,7 @@
 		<div class="formulario">
 				
 			<label>Programa</label>
-			@if ($errors->has('doc'))
+			@if ($errors->any())
 			<input type="text" name="programa" id="programa-ret" value="{{old('programa')}}" placeholder="Inserte Nombre Programa Educativo" class="form-control" required>
 			@else
 			<input type="text" name="programa" id="programa-ret" value="{{$reticula->programa}}" placeholder="Inserte Nombre Programa Educativo" class="form-control" required>
@@ -57,7 +57,7 @@
 		<div class="formulario">
 				
 			<label>Plan</label>
-			@if ($errors->has('doc'))
+			@if ($errors->any())
 			<input type="text" name="plan" id="plan-ret" value="{{old('plan')}}" placeholder="Inserte Plan Estudio" class="form-control" required>
 			@else
 			<input type="text" name="plan" id="plan-ret" value="{{$reticula->plan}}" placeholder="Inserte Plan Estudio" class="form-control" required>
@@ -74,7 +74,7 @@
 		<div class="formulario">
 				
 			<label>Especialidad</label>
-			@if ($errors->has('doc'))
+			@if ($errors->any())
 			<input type="text" name="especialidad" id="especialidad-ret" value="{{old('especialidad')}}" placeholder="Inserte Especialidad" class="form-control" required>
 			@else
 			<input type="text" name="especialidad" id="especialidad-ret" value="{{$reticula->especialidad}}" placeholder="Inserte Especialidad" class="form-control" required>

@@ -67,7 +67,7 @@
   <div class="formulario">
 
     <label>Aplicacion</label>
-    @if ($errors->has('image'))
+    @if ($errors->any())
     <input type="text" name="aplicacion" id="aplicacion" value="{{old('aplicacion')}}" placeholder="Reescriba la aplicación seleccionada" class="form-control" required>
     @else
     <input type="text" name="aplicacion" id="aplicacion" value="{{$convocatorias->aplicacion}}" placeholder="Reescriba la aplicación seleccionada" class="form-control" required>
@@ -89,7 +89,7 @@
   <div class="formulario">
 
     <label>Convocatoria</label>
-    @if ($errors->has('image'))
+    @if ($errors->any())
     <input type="text" name="convocatoria" id="convocatoria" value="{{old('convocatoria')}}" placeholder="Reescriba la convocatoria seleccionada" class="form-control" required>
     @else
     <input type="text" name="convocatoria" id="convocatoria" value="{{$convocatorias->convocatoria}}" placeholder="Reescriba la convocatoria seleccionada" class="form-control" required>
@@ -112,7 +112,7 @@
   <div class="formulario">
 
     <label>Descripción</label>
-    @if ($errors->has('image'))
+    @if ($errors->any())
     <textarea placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{old('descripcion')}}</textarea>
     @else
     <textarea placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{$convocatorias->descripcion}}</textarea>

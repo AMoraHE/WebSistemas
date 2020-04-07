@@ -67,7 +67,7 @@
   <div class="formulario">
 
     <label>Aplicacion</label>
-    @if ($errors->has('image'))
+    @if ($errors->any())
     <input type="text" name="aplicacion" id="aplicacion" value="{{old('aplicacion')}}" placeholder="Reescriba la aplicación seleccionada" class="form-control" required>
     @else
     <input type="text" name="aplicacion" id="aplicacion" value="{{$proyecto->aplicacion}}" placeholder="Reescriba la aplicación seleccionada" class="form-control" required>
@@ -89,7 +89,7 @@
   <div class="formulario">
 
     <label>Proyecto</label>
-    @if ($errors->has('image'))
+    @if ($errors->any())
     <input type="text" name="proyecto" id="proyecto" value="{{old('proyecto')}}" placeholder="Reescriba el proyecto seleccionado" class="form-control" required>
     @else
     <input type="text" name="proyecto" id="proyecto" value="{{$proyecto->proyecto}}" placeholder="Reescriba el proyecto seleccionado" class="form-control" required>
@@ -111,7 +111,7 @@
   <div class="formulario">
 
     <label>Desarrolladores</label>
-    @if ($errors->has('image'))
+    @if ($errors->any())
     <textarea placeholder="Reescriba los desarrolladores seleccionados" name="desarrolladores" required>{{old('desarrolladores')}}</textarea>
     @else
     <textarea placeholder="Reescriba los desarrolladores seleccionados" name="desarrolladores" required>{{$proyecto->desarrolladores}}</textarea>
@@ -134,7 +134,7 @@
   <div class="formulario">
 
     <label>Objetivo</label>
-    @if ($errors->has('image'))
+    @if ($errors->any())
     <textarea placeholder="Reescriba los objetivos seleccionados" name="objetivo" required>{{old('objetivo')}}</textarea>
     @else
     <textarea placeholder="Reescriba los objetivos seleccionados" name="objetivo" required>{{$proyecto->objetivo}}</textarea>
@@ -155,7 +155,7 @@
   <div class="formulario">
 
     <label>Descripción</label>
-    @if ($errors->has('image'))
+    @if ($errors->any())
     <textarea placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{old('descripcion')}}</textarea>
     @else
     <textarea placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{$proyecto->descripcion}}</textarea>
@@ -176,7 +176,7 @@
   <div class="formulario">
 
     <label>Resultados</label>
-    @if ($errors->has('image'))
+    @if ($errors->any())
     <textarea placeholder="Reescriba los resultados seleccionados" name="resultados" required>{{old('resultados')}}</textarea>
     @else
     <textarea placeholder="Reescriba los resultados seleccionados" name="resultados" required>{{$proyecto->resultados}}</textarea>

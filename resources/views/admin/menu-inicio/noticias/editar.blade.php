@@ -23,7 +23,7 @@
  	<div class="formulario">
 
  		<label>Título</label>
- 		@if ($errors->has('image'))
+ 		@if ($errors->any())
  		<input type="text" name="titulo" id="titulo" value="{{old('titulo')}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
  		@else
  		<input type="text" name="titulo" id="titulo" value="{{$noticia->titulo}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
@@ -81,7 +81,7 @@
 	<div class="formulario">
 
 		<label for="">Descripción Noticia</label>
-		@if ($errors->has('image'))
+		@if ($errors->any())
 		<textarea style="height: 500px;" placeholder="Inserte Descripción Deseada..." name="redaccion" required>{{old('redaccion')}}</textarea>
 		@else
 		<textarea style="height: 500px;" placeholder="Inserte Descripción Deseada..." name="redaccion" required>{{$noticia->redaccion}}</textarea>

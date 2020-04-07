@@ -227,3 +227,13 @@ Route::get('/editar-programas', function () {
 Route::get('/agregar-programas', function () {
     return view('.admin.menu-academicos.programas.create');
 })->name('AgregarProgramas')->middleware('auth');
+
+//Rutas Galeria
+Route::resource('Album', 'AlbumController')->middleware('auth');
+Route::resource('AlbumGaleria', 'AlbumGaleriaController')->middleware('auth');
+
+Route::get('/Album-Index', 'AlbumController@index')->middleware('auth');
+Route::get('/Album/create', 'AlbumController@create')->middleware('auth');
+Route::get('/Album/{slug}/edit', 'AlbumController@edit')->middleware('auth');
+Route::get('/Album/agregar/{slug}', 'AlbumController@agregar')->middleware('auth');
+Route::get('/Album-Delete/{slug}', 'AlbumController@destroy')->middleware('auth');
