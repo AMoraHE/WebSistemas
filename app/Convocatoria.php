@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Convocatoria extends Model
 {
-    protected $fillable = ['aplicacion', 'convocatoria',  'descripcion', 'newimage', 'slug'];
+    protected $fillable = ['convocatoria',  'descripcion', 'newimage', 'slug'];
 
        public function getRouteKeyName()
     {

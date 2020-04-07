@@ -38,7 +38,7 @@ class ConvocatoriasController extends Controller
   public function store(Request $request)
   {
       $validator = Validator::make($request->all(), [
-  'aplicacion' => 'required|string',
+
   'imagen' => 'required|mimes:jpeg,png,bmp,tiff,gif',
   'convocatoria' => 'required|string',
   'descripcion' => 'required|string',
@@ -63,7 +63,7 @@ class ConvocatoriasController extends Controller
       $convocatorias->newimage = $name2;
     }
 
-    $convocatorias->aplicacion = $request->input('aplicacion');
+
     $convocatorias->convocatoria = $request->input('convocatoria');
     $convocatorias->descripcion = $request->input('descripcion');
     $convocatorias->slug = time();
@@ -106,7 +106,7 @@ class ConvocatoriasController extends Controller
   public function update(Request $request, $convocatorias)
   {
         $validator = Validator::make($request->all(), [
-  'aplicacion' => 'required|string',
+
   'image' => 'mimes:jpeg,png,bmp,tiff,gif',
   'convocatorias' => 'required|string',
   'descripcion' => 'required|string',
@@ -120,11 +120,11 @@ class ConvocatoriasController extends Controller
 
   else
   {
-      $convocatorias = Convocatoria::where('slug', '=', $convocatorias)->firstOrFail();
-          $convocatorias->fill($request->except('image'));
+    $convocatorias = Convocatoria::where('slug', '=', $convocatorias)->firstOrFail();
+          $proyecto->fill($request->except('image'));
     if ($request->hasFile('image'))
     {
-      $file_path =public_path().'/images/convocatorias/'.$convocatorias->newimage;
+      $file_path =public_path().'/images/convocatoria/'.$convocatorias->newimage;
       if(file_exists($file_path))
       {
         unlink($file_path);
@@ -132,19 +132,22 @@ class ConvocatoriasController extends Controller
 
       $file = $request->file('image');
       $name2 = time().$file->getClientOriginalName();
-      $file->move(public_path().'/images/convocatorias/',$name2);
-      $convocatorias->newimage = $name2;
+      $file->move(public_path().'/images/proyectos/',$name2);
+    $convocatorias->newimage = $name2;
     }
 
-    $convocatorias->aplicacion = $request->input('aplicacion');
-    $convocatorias->convocatoria = $request->input('convocatoria');
-    $convocatorias->descripcion = $request->input('descripcion');
+  
+  $convocatorias->convocatoria = $request->input('Convocatoria');
+
+  $convocatorias->descripcion = $request->input('descripcion');
+
     $convocatorias->slug = time();
     $convocatorias->save();
 
     return redirect()->route('ConvocatoriasAcademicos')->with('status','Actualización Exitosa');
       }
   }
+
 
 
   /**

@@ -64,26 +64,7 @@
 <!----------------------------------------------------------------- FORMULARIO convocatoria ---------------------------------------------------------->
 
 <!-------------------------------------------------->
-  <div class="formulario">
-
-    <label>Aplicacion</label>
-    @if ($errors->any())
-    <input type="text" name="aplicacion" id="aplicacion" value="{{old('aplicacion')}}" placeholder="Reescriba la aplicación seleccionada" class="form-control" required>
-    @else
-    <input type="text" name="aplicacion" id="aplicacion" value="{{$convocatorias->aplicacion}}" placeholder="Reescriba la aplicación seleccionada" class="form-control" required>
-    @endif
-
-  </div>
-
-  @if ($errors->has('aplicacion'))
-
-    <span class="invalid-feedback" role="alert">
-
-      <strong>{{ $errors->first('aplicacion') }}</strong>
-
-    </span>
-
-  @endif
+  
 
 <!--------------------------convocatoria---------------------------->
   <div class="formulario">

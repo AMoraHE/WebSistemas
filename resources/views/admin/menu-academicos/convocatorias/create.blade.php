@@ -63,25 +63,7 @@
 
 		<!----------------------------------------------------------------- FORMULARIO Convocatorias ---------------------------------------------------------->
 
-			<!-----------------------------Aplicación------------------------>
-
-			<div class="formulario">
-
-				<label>Aplicación</label>
-				<input type="text" name="aplicacion" id="aplicacion" value="{{old('aplicacion')}}" placeholder="Nombre de la convocatoria" class="form-control" required>
-
-				@if ($errors->has('aplicacion'))
-
-		      		<span class="invalid-feedback" role="alert">
-
-		        		<strong>{{ $errors->first('aplicacion') }}</strong>
-
-		      		</span>
-
-		    	@endif
-
-			</div>
-
+		
 
 
 		   <!-----------------------------Convocatoria------------------------>
