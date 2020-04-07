@@ -130,9 +130,8 @@ class OrganigramaController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'imgOrg' => 'mimes:jpeg,png,bmp,tiff,gif',
-            'area_id' => 'required|string',
             'puesto' => 'required|string',
-            'nombre' => 'required|string',
+            'integrante' => 'required|string',
             'genero_id' => 'required|string',
             'correo' => 'required|string|email',
         ]);
@@ -160,7 +159,7 @@ class OrganigramaController extends Controller
             }
 
             $Organigrama->integrante = $request->input('integrante');
-            $organigrama->puesto = $request->input('puesto');
+            $Organigrama->puesto = $request->input('puesto');
             $Organigrama->genero = $request->get('genero_id');
             $Organigrama->correo = $request->input('correo');
 

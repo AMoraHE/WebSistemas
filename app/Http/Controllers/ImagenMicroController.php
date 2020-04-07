@@ -26,7 +26,9 @@ class ImagenMicroController extends Controller
      */
     public function create()
     {
-        return view('/admin/menu-inf/lab-micro/agregar-img-galeria');
+        $imagenes = imagenLab::where('lab_id', 'micro')->get();
+
+        return view('/admin/menu-inf/lab-micro/agregar-img-galeria', compact('imagenes'));
     }
 
     /**
@@ -62,7 +64,7 @@ class ImagenMicroController extends Controller
 
             $imagen->save();
                 
-            return redirect('/Lab-Micro')->with('status', 'Imagen agregada con éxito');
+            return redirect('/Img-Lab-Micro/create')->with('status', 'Imagen agregada con éxito');
         }
     }
 

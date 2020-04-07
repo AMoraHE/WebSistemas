@@ -4,6 +4,12 @@
 
 @section('content')
 
+@if(session('status'))
+    <div class="alert alert-success">
+        {{session('status')}}
+    </div>
+@endif
+
 <div class="seccion-principal">
 
   <div class="contenedor-titulo-seccion">
@@ -64,12 +70,43 @@
 
   			<a onclick="return confirm('¿Desea guardar el nuevo elemento?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
 
-        <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/Lab-Cisco"><button type="button" class="btn"><span>Cancelar</span></button></a>
-
   		</div>
 
     </form>
 
-</div>	
+    </div>
+
+      <!------------------------------------------------------------- PREVISUALIZACIÓN ---------------------------------------------------------->
+
+
+      <div class="contenedor-previsualizar-seccion">
+
+        <div class="contenedor-titulo-seccion">
+
+          <h3>Previsualización</h3>
+
+        </div>
+
+        @foreach ($imagenes as $imagen)
+        <div class="contenedor-seccion-preliminar">
+
+          <div class="contenedor-seccion-preliminar-slider-img">
+
+            <img src="/images/infra/{{$imagen->imagen}}">
+
+          </div>
+
+
+        </div>
+
+        @endforeach
+
+      </div>
+
+       <div class="contenedor-botones">
+
+      <a onclick="return confirm('¿Desea regresar al menú anterior?')" href="/Lab-Cisco"><button type="button" class="btn"><span>Finalizar</span></button></a>
+    
+      </div>
 
 @endsection

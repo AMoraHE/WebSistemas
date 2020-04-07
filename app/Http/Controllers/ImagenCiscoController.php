@@ -26,7 +26,9 @@ class ImagenCiscoController extends Controller
      */
     public function create()
     {
-        return view('/admin/menu-inf/lab-cisco/agregar-img-galeria');
+        $imagenes = imagenLab::where('lab_id', 'cisco')->get();
+
+        return view('/admin/menu-inf/lab-cisco/agregar-img-galeria', compact('imagenes'));
     }
 
     /**
@@ -62,7 +64,7 @@ class ImagenCiscoController extends Controller
 
             $imagen->save();
                 
-            return redirect('/Lab-Cisco')->with('status', 'Imagen agregada con éxito');
+            return redirect('/Img-Lab-Cisco/create')->with('status', 'Imagen agregada con éxito');
         }
     }
 

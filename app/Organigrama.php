@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Organigrama extends Model
 {
 
-    Protected $fillable = ['integrante', 'genero', 'foto', 'correo'];
+    Protected $fillable = ['integrante', 'genero', 'foto', 'correo', 'puesto'];
     public function area()
     {
         return $this->belongsTo('App\Area');

@@ -26,7 +26,9 @@ class ImagenSistemasController extends Controller
      */
     public function create()
     {
-        return view('/admin/menu-inf/lab-sistemas/agregar-img-galeria');
+        $imagenes = imagenLab::where('lab_id', 'sistemas')->get();
+
+        return view('/admin/menu-inf/lab-sistemas/agregar-img-galeria', compact('imagenes'));
     }
 
     /**
@@ -62,7 +64,7 @@ class ImagenSistemasController extends Controller
 
             $imagen->save();
                 
-            return redirect('/Lab-Sistemas')->with('status', 'Imagen agregada con éxito');
+            return redirect('/Img-Lab-Sistemas/create')->with('status', 'Imagen agregada con éxito');
         }
     }
 

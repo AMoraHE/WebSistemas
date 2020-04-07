@@ -26,7 +26,9 @@ class ImagenCelulaController extends Controller
      */
     public function create()
     {
-        return view('/admin/menu-inf/lab-celula/agregar-img-galeria');
+        $imagenes = imagenLab::where('lab_id', 'celula')->get();
+
+        return view('/admin/menu-inf/lab-celula/agregar-img-galeria', compact('imagenes'));
     }
 
     /**
@@ -62,7 +64,7 @@ class ImagenCelulaController extends Controller
 
             $imagen->save();
                 
-            return redirect()->route('celulaIndex')->with('status', 'Imagen agregada con éxito');
+            return redirect('/Img-Lab-Celula/create')->with('status', 'Imagen agregada con éxito');
         }
     }
 

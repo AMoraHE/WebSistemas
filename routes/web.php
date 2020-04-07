@@ -154,7 +154,7 @@ Route::get('/Img-Lab-Celula/create', 'ImagenCelulaController@create')->middlewar
 Route::get('/Lab-Sistemas/create', 'LabSistemasController@create')->middleware('auth');
 Route::get('/Lab-Sistemas', 'LabSistemasController@index')->middleware('auth');
 Route::get('/Lab-Sistemas-Delete/{id}', 'LabSistemasController@destroy')->middleware('auth');
-Route::get('/Img-Lab-Celula/create', 'ImagenSistemasController@create')->middleware('auth');
+Route::get('/Img-Lab-Sistemas/create', 'ImagenSistemasController@create')->middleware('auth');
 
 Route::get('/Lab-Cisco/create', 'LabCiscoController@create')->middleware('auth');
 Route::get('/Lab-cisco', 'LabCiscoController@index')->middleware('auth');
@@ -202,10 +202,7 @@ Route::get('/ProyectosAcademicos', 'ProyectoController@index')->name('ProyectosA
 
 Route::get('/ProyectosAcademicos/create', 'ProyectoController@create')->name('AgregarProyectos')->middleware('auth');
 
-
 Route::get('/ProyectosAcademicos/edit', 'ProyectoController@edit')->name('EditarProyectos')->middleware('auth');
-
-
 
 //Ruta convocatorias-acdemicos
 Route::resource('ConvocatoriasAcademicos', 'ConvocatoriasController')->middleware('auth');
@@ -216,8 +213,6 @@ Route::get('/ConvocatoriasAcademicos/create', 'ConvocatoriasController@create')-
 
 
 Route::get('/ConvocatoriasAcademicos/edit', 'ConvocatoriasController@edit')->name('EditarConvocatorias')->middleware('auth');
-
-
 
 
 //Ruta programas-acdemicos

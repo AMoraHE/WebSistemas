@@ -63,7 +63,7 @@
   <div class="formulario">
 
     <label>Área</label>
-    <input type="text" name="area_id" id ="area" value="{{$areas->nombre}}" disabled="" class="form-control" required>
+    <input type="text" name="area_id" id ="area" value="{{$areas->nombre}}" disabled class="form-control" required>
   
   </div>
 
@@ -76,7 +76,7 @@
   <div class="formulario"> 
 
     <label>Puesto</label>
-    @if ($errors->has('imgOrg'))
+    @if ($errors->any())
     <input type="text" name="puesto" id ="puesto" value="{{old('puesto')}}" class="form-control" required>
     @else
     <input type="text" name="puesto" id ="puesto" value="{{$Organigrama->puesto}}" class="form-control" required>
@@ -93,7 +93,7 @@
   <div class="formulario">
 
     <label>Nombre</label>
-    @if ($errors->has('imgOrg'))
+    @if ($errors->any())
     <input type="text" name="integrante" id ="informacion-integrante" value="{{old('integrante')}}" placeholder="Nombre del Integrante" class="form-control" required>
     @else
     <input type="text" name="integrante" id ="informacion-integrante" value="{{$Organigrama->integrante}}" placeholder="Nombre del Integrante" class="form-control" required>
@@ -136,7 +136,7 @@
   <div class="formulario">
 
     <label>Correo Electrónico</label>
-    @if ($errors->has('imgOrg'))
+    @if ($errors->any())
     <input type="email" name="correo" id="correo" value="{{old('correo')}}" placeholder="Ej: usuario@servidor.com" required>
     @else
     <input type="email" name="correo" id="correo" value="{{$Organigrama->correo}}" placeholder="Ej: usuario@servidor.com" required>
