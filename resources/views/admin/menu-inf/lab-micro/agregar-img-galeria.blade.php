@@ -14,7 +14,7 @@
 
   <div class="contenedor-titulo-seccion">
   
-      <h3>Celula de Desarrollo de Software</h3>
+      <h3>Laboratorio de Microprocesadores</h3>
 
   </div>
 
