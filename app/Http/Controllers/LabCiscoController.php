@@ -26,18 +26,8 @@ class LabCiscoController extends Controller
      */
     public function create()
     {
-        $infras = Infraestructura::where('slug', 'cisco')->get();
-
-        if(count($infras) > 0)
-        {
-            return redirect('/Lab-cisco')->with('status','Ya se ha registrado información del laboratorio de cisco, modifique el registro actual');
-        }
-
-        else
-        {
-            $identificador = 'cisco';
-            return view('/admin/menu-inf/lab-cisco/create', compact('identificador'));
-        }
+        $identificador = 'cisco';
+        return view('/admin/menu-inf/lab-cisco/create', compact('identificador'));
     }
 
     /**

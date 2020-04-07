@@ -12,11 +12,15 @@
 
 	<div class="seccion-principal">
 
+		@if(count($infras) > 0)
+
+		@else
 		<div class="contenedor-botones">
 
 			<a onclick="return confirm('¿Desea registrar nueva información?')" href="/Lab-Celula/create"><button class="btn"><span>Agregar</span></button></a>
 
 		</div>
+		@endif
 		
 @foreach ($infras as $infra)
 	

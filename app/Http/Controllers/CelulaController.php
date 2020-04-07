@@ -26,18 +26,8 @@ class CelulaController extends Controller
      */
     public function create()
     {
-        $infras = Infraestructura::where('slug', 'celula')->get();
-
-        if(count($infras) > 0)
-        {
-            return redirect('/Lab-Celula-Index')->with('status','Ya se ha registrado información del laboratorio de célula de desarrollo, modifique el registro actual');
-        }
-
-        else
-        {
-            $identificador = 'celula';
-            return view('/admin/menu-inf/lab-celula/create', compact('identificador'));
-        }
+        $identificador = 'celula';
+        return view('/admin/menu-inf/lab-celula/create', compact('identificador'));
     }
 
     /**
