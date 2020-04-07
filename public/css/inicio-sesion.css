@@ -61,6 +61,7 @@ a {
 #usuario img{
 	width: 5%;
 	margin: 0px 10px;
+	border-radius: 10px;
 }
 
 .foto-usuario{

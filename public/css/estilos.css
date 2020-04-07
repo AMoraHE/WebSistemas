@@ -68,9 +68,10 @@ Boton Cerrar Sesión************************************************************
 }
 
 .foto-perfil-user{
-    width: 10%;
+    max-width: 10%;
     max-height: 45px;
     margin-right: 10px;
+    border-radius: 10px;
 }
 
 .divisor{
