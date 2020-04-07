@@ -131,6 +131,7 @@
     margin: 0px 20px;
     padding: 10px;
 	border: 2px solid var(--verde);
+	border-radius: 10px;
 }
 
 .contenedor-texto-completo p{
@@ -174,6 +175,7 @@
 
 .contenedor-img-dividido img{
 	border: 2px solid var(--verde);
+	border-radius: 10px;
 	width: 100%;
 	max-height: 100%;
 	margin-left: auto;
@@ -189,6 +191,7 @@
    	margin: 0px 20px;
     padding: 10px;
 	border: 2px solid var(--verde);
+	border-radius: 10px;
 	overflow: auto; /* Aplica Scroll automatico ---> Modificar que cuando supere la catidad maxima de 200px el texto puede ver todo el contenido en un MODAL*/
 
 }
@@ -212,6 +215,7 @@
 	border: 2px solid var(--verde);
 	display: flex;
 	align-items: center;
+	border-radius: 10px;
 }
 
 .contenedor-titulo-seccion h3{
@@ -273,8 +277,10 @@
 	cursor: pointer;
 	color: var(--blanco);
 	border: 1px solid var(--verde);
+	border-radius: 10px;
 	font-size: 18px;
 	cursor: pointer;
+	padding: 10px; /****deja un espacio interno el select****/
 }
 
 .contenedor-select-seccion select.genero{				/* clase de los Items de Seleccion del Género*/
@@ -310,6 +316,7 @@
 	position: relative;
 	display: flex;
 	align-items: center;
+	border-radius: 10px;
 }
 
 .contenedor-titulo-seccion-select h3{
@@ -349,6 +356,7 @@
 	text-align: justify;
 	margin: 10px;
 	border: 2px solid var(--verde);
+	border-radius: 10px;
 	padding: 10px;
 }
 
@@ -409,12 +417,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 2px solid var(--verde);
 }
 
 .contenedor-img-grande img{
 	width: 100%;
 	max-height: 450px;
+	border: 2px solid var(--verde);
+	border-radius: 10px;
 }
 
 /************************************************************************************************SECCIÓN MINI GALERIA***********************************************************************/
@@ -436,8 +445,9 @@
 	justify-content: center;
 	align-items: center;
 	margin: 10px;
-	border: 2px solid var(--verde);
 	padding: 10px;
+	border: 2px solid var(--verde);
+	border-radius: 10px;
 }
 
 .contenedor-img-mini-galeria-img{
@@ -451,6 +461,7 @@
 .contenedor-img-mini-galeria-img img{
 	max-width: 100%;
 	max-height: 100%;
+	border-radius: 10px;
 }
 
 .contenedor-img-mini-galeria button{
@@ -594,7 +605,7 @@
 }
 
 .tabla-informacion-escolar td{
-	text-align: center;
+	text-align: justify;
 }
 
 .tabla-informacion-escolar td img{
@@ -712,6 +723,7 @@
     align-items: center;
     justify-content: center;
 	border: 2px solid var(--verde);
+	border-radius: 10px;
 }
 
 .contenedor-texto-centrado p{
@@ -900,11 +912,60 @@
 	font-size: 38px;
 }
 
-/************************************************************************************************DIVISORES***********************************************************************/
+/************************************************************************************************ELEMENTOS VARIADOS***********************************************************************/
+
+/***************************DIVISORES**************************************/
 
 .divisor-contenido{
 	margin: 2% auto;
 }	
+
+/***************************COLORES**************************************/
+
+.eliminar{
+	background: #E74C3C ;
+}
+
+.guardar{
+	background: #229954;
+}
+
+.cancelar{
+	background: #F39C12;
+}
+
+.editar{
+	background: #34495E;
+}
+
+/************************************************************************************************PAGINACIÓN**************************************************************************/
+
+#paginas {
+    text-align: center; 
+}
+
+#paginas ul{
+    margin: 10px 0;
+    padding: 0;
+}
+#paginas li{
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+}
+
+#paginas li a{
+    background: rgb(228, 228, 228);
+    border-radius: 3px;
+    color: rgb(50, 50, 50);
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.actual{
+    background: rgb(20, 69, 124) !important;
+    color: rgb(255, 255, 255) !important;
+}
 
 /************************************************************************************************SCROLL**************************************************************************/
 
@@ -927,10 +988,10 @@ body::-webkit-scrollbar-thumb{
 /*****************************SCROLL CONTENIDO**********************/
 
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 0.5px;
 }
 ::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--verde);
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--verde);

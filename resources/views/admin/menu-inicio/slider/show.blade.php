@@ -37,9 +37,6 @@
               <button class="btn"><span>Editar</span></button>
           </a>
 
-
-
-
       </div>
 
 
