@@ -29,7 +29,7 @@
 
 	<div class="contenedor-titulo-seccion">
 
-		<h3>{{$proyecto->aplicacion}}</h3>
+		<h3>{{$proyecto->proyecto}}</h3>
 
 	</div>
 
@@ -58,18 +58,18 @@
 						<tr>
 							<th>Proyecto</th>
 							<th>Desarrolladores</th>
-							<th>Objetivo</th>
+							<!--th>Objetivo</th>--->
 							<th>Descripción</th><!--Comentar-->
-							<th>Resultados</th>
+							<!----th>Resultados</th--->
 						</tr>
 					</thead>
 
 						<tr>
 							<td>{{$proyecto->proyecto}}</td>
 							<td>{{$proyecto->desarrolladores}}</td>
-							<td>{{$proyecto->objetivo}}</td>
+							<!---<td>{{$proyecto->objetivo}}</td>---->
 							<td>{{$proyecto->descripcion}}</td><!--Comentar-->
-							<td>{{$proyecto->resultados}}</td>
+							<!----<td>{{$proyecto->resultados}}</td>---->
 						</tr>
 
 <!--					<thead>
@@ -98,11 +98,11 @@
         @method('DELETE')
         @csrf
 
-		<a onclick="return confirm('¿Desea eliminar la noticia seleccionada?')"><button type="submit" class="btn"><span>Eliminar</span></button></a>
+		<a onclick="return confirm('¿Desea eliminar el proyecto {{$proyecto->proyecto}}?')"><button type="submit" class="btn"><span>Eliminar</span></button></a>
 
   	</form>
 
-	  	<a onclick="return confirm('¿Desea editar la noticia seleccionada?')" href="/ProyectosAcademicos/{{$proyecto->slug}}/edit">	<button class="btn"><span>Editar</span></button></a>
+	  	<a onclick="return confirm('¿Desea editar el proyecto {{$proyecto->proyecto}}?')" href="/ProyectosAcademicos/{{$proyecto->slug}}/edit">	<button class="btn"><span>Editar</span></button></a>
 
 	</div>
 

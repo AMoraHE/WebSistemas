@@ -38,14 +38,11 @@ class ProyectoController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-    'aplicacion' => 'required|string',
+    
     'imagen' => 'required|mimes:jpeg,png,bmp,tiff,gif',
     'proyecto' => 'required|string',
     'desarrolladores' => 'required|string',
-    'objetivo' => 'required|string',
-    'descripcion' => 'required|string',
-    'resultados' => 'required|string',
-    
+    'descripcion' => 'required|string', 
     ]);
 
     if ($validator->fails()) {
@@ -66,12 +63,9 @@ class ProyectoController extends Controller
         $proyecto->newimage = $name2;
       }
 
-      $proyecto->aplicacion = $request->input('aplicacion');
       $proyecto->proyecto = $request->input('proyecto');
       $proyecto->desarrolladores = $request->input('desarrolladores');
-      $proyecto->objetivo = $request->input('objetivo');
       $proyecto->descripcion = $request->input('descripcion');
-      $proyecto->resultados = $request->input('resultados');
       $proyecto->slug = time();
       $proyecto->save();
 
@@ -112,13 +106,11 @@ class ProyectoController extends Controller
     public function update(Request $request, $proyectos)
     {
           $validator = Validator::make($request->all(), [
-    'aplicacion' => 'required|string',
-    'image' => 'mimes:jpeg,png,bmp,tiff,gif',
+    
     'proyecto' => 'required|string',
     'desarrolladores' => 'required|string',
-    'objetivo' => 'required|string',
     'descripcion' => 'required|string',
-    'resultados' => 'required|string',
+   
     ]);
 
     if ($validator->fails()) {
@@ -145,12 +137,10 @@ class ProyectoController extends Controller
         $proyecto->newimage = $name2;
       }
 
-      $proyecto->aplicacion = $request->input('aplicacion');
+     
       $proyecto->proyecto = $request->input('proyecto');
       $proyecto->desarrolladores = $request->input('desarrolladores');
-      $proyecto->objetivo = $request->input('objetivo');
       $proyecto->descripcion = $request->input('descripcion');
-      $proyecto->resultados = $request->input('resultados');
       $proyecto->slug = time();
       $proyecto->save();
 
