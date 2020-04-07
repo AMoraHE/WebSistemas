@@ -17,16 +17,22 @@
 
 <!----------------------------------------------------------------- Lab Celula---------------------------------------------------------->
 
-<form class="form-group" files = "true" method="POST" action="/Lab-Celula" enctype="multipart/form-data">
- 
+	<form class="form-group" files = "true" method="POST" action="/Lab-Celula" enctype="multipart/form-data">
+	 
 
-  <!----------------------------------------------------------------- Cargar Imagen ---------------------------------------------------------->
-  @include('admin.menu-inf.form')
+	  <!----------------------------------------------------------------- Cargar Imagen ---------------------------------------------------------->
+	  @include('admin.menu-inf.form')
 
-  <div class="contenedor-botones">     
-	<a onclick="return confirm('¿Desea guardar la información ingresada?')"><button type="submit" class="btn"><span>Guardar</span></button></a>
-	<a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Lab-Celula"><button type="button" class="btn"><span>Cancelar</span></button></a>
-</div
+	  	<div class="contenedor-botones">     
+
+			<a onclick="return confirm('¿Desea guardar la información ingresada?')"><button type="submit" class="btn"><span>Guardar</span></button></a>
+			<a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Lab-Celula"><button type="button" class="btn"><span>Cancelar</span></button></a>
+
+		</div>
+		
+	</form>
+
+</div>
 
 
 @endsection

@@ -7,27 +7,27 @@
 
 <div class="seccion-principal">
 
-		<div class="contenedor-titulo-seccion">
+	<div class="contenedor-titulo-seccion">
 	
-			<h3>Agregar - Laboratorio de Cisco</h3>
+		<h3>Agregar - Laboratorio de Cisco</h3>
 
-		</div>
+	</div>
 
 <!----------------------------------------------------------------- Lab Cisco---------------------------------------------------------->
 
-<form class="form-group" files = "true" method="POST" action="/Lab-Cisco" enctype="multipart/form-data">
-	
+	<form class="form-group" files = "true" method="POST" action="/Lab-Cisco" enctype="multipart/form-data">
+		
 
-	<!----------------------------------------------------------------- Cargar Imagen ---------------------------------------------------------->
-	@include('admin.menu-inf.form')
+		<!----------------------------------------------------------------- Cargar Imagen ---------------------------------------------------------->
+		@include('admin.menu-inf.form')
 
-	<div class="contenedor-botones">
-                      
-    	<a onclick="return confirm('¿Desea guardar la información ingresada?')"><button type="submit" class="btn"><span>Guardar</span></button></a>
-        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Lab-Cisco"><button type="button" class="btn"><span>Cancelar</span></button></a>
-      
-    </div>
-</form>
+		<div class="contenedor-botones">
+	                      
+	    	<a onclick="return confirm('¿Desea guardar la información ingresada?')"><button type="submit" class="btn"><span>Guardar</span></button></a>
+	        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Lab-Cisco"><button type="button" class="btn"><span>Cancelar</span></button></a>
+	      
+	    </div>
+	</form>
 
 </div>
 

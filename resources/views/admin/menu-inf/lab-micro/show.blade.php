@@ -25,7 +25,12 @@
 @foreach ($infras as $infra)
 
 <!----------------------------------------------------------------- Lab micro---------------------------------------------------------->
+		<div class="contenedor-botones">
 
+			<a onclick="return confirm('¿Desea modificar la información del laboratorio?')" href="/Lab-Micro/{{$infra->slug}}/edit"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
+
+		</div>
+		
 		<div class="contenedor-titulo-seccion">
 	
 			<h3>Laboratorio de Microprocesadores</h3>
@@ -35,8 +40,8 @@
 		@include('admin.menu-inf.formShow')
 
 		<div class="contenedor-botones">
-
-			<a onclick="return confirm('¿Desea modificar la información del laboratorio?')" href="/Lab-Micro/{{$infra->slug}}/edit"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
+			
+			<button class="btn"><span>Agregar</span></button>
 
 		</div>
 

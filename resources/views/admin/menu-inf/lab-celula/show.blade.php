@@ -26,6 +26,11 @@
 	
 
 <!----------------------------------------------------------------- Lab Celula---------------------------------------------------------->
+		<div class="contenedor-botones">
+
+			<a onclick="return confirm('¿Desea modificar la información del laboratorio?')" href="/Lab-Celula/{{$infra->slug}}/edit"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
+			
+		</div>
 
 		<div class="contenedor-titulo-seccion">
 	
@@ -36,10 +41,12 @@
 
 		@include('admin.menu-inf.formShow')
 
-		<div class="contenedor-botones">
+<!----------------------------------------------------------------- Agregar IMG a la Mini Galeria Lab Celula---------------------------------------------------------->
 
-			<a onclick="return confirm('¿Desea modificar la información del laboratorio?')" href="/Lab-Celula/{{$infra->slug}}/edit"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
+		<div class="contenedor-botones">
 			
+			<button class="btn"><span>Agregar</span></button>
+
 		</div>
 
 		@endforeach
