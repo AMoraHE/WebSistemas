@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Proyecto extends Model
 {
-    protected $fillable = ['aplicacion', 'proyecto', 'desarrolladores', 'objetivo', 'descripcion', 'resultados', 'newimage', 'slug'];
+    protected $fillable = [ 'proyecto', 'desarrolladores',  'descripcion', 'newimage', 'slug'];
 
        public function getRouteKeyName()
     {

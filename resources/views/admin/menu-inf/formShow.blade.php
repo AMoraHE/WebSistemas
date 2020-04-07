@@ -42,18 +42,29 @@
 
 	<div class="seccion-mini-galeria">
 
+
 		@foreach ($imagenes as $imagen)
 
-		<img src="/images/infra/{{$imagen->imagen}}">
-		@if($infra->slug == 'cisco')
-		<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Cisco-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
-		@elseif($infra->slug == 'celula')
-		<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Celula-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
-		@elseif($infra->slug == 'sistemas')
-		<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Sistemas-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
-		@elseif($infra->slug == 'micro')
-		<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Micro-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
-		@endif
+		<div class="contenedor-img-mini-galeria">
+
+			<div class="contenedor-img-mini-galeria-img">
+
+				<img src="/images/infra/{{$imagen->imagen}}">
+
+			</div>
+
+			@if($infra->slug == 'cisco')
+
+			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Cisco-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
+			@elseif($infra->slug == 'celula')
+			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Celula-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
+			@elseif($infra->slug == 'sistemas')
+			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Sistemas-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
+			@elseif($infra->slug == 'micro')
+			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Micro-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
+			@endif
+
+		</div>
 
 		@endforeach
 			

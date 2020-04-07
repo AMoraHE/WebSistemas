@@ -112,7 +112,7 @@
 				
 		<div class="contenedor-seccion-preliminar">
 
-			<div class="contenedor-seccion-preliminar-img-ajustable">
+			<div class="contenedor-seccion-preliminar-img-redimensionales">
 
 				<img src="/images/news/{{$noticia->newimage}}">
 

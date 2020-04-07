@@ -30,9 +30,19 @@
 		@foreach ($imagenes as $imagen)
 
 		@if($imagen->albumSlug == $album->slug)
-		<img src="/images/galeria/{{$imagen->imagen}}">
-		<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Album-Galeria-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
+
+		<div class="contenedor-img-mini-galeria">
+
+			<div class="contenedor-img-mini-galeria-img">
+
+				<img src="/images/galeria/{{$imagen->imagen}}">
+
+			</div>
+
+			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Album-Galeria-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
+
 		@endif
+		</div>
 
 		@endforeach
 			
