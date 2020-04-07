@@ -45,7 +45,7 @@
 
 		<div class="contenedor-botones">
 			
-			<button class="btn"><span>Agregar</span></button>
+			<a onclick="return confirm('¿Desea agregar una imagen?')" href="/Img-Lab-Celula/create"><button class="btn"><span>Agregar</span></button></a>
 
 		</div>
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInfraestructurasTable extends Migration
+class CreateImagenLabsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateInfraestructurasTable extends Migration
      */
     public function up()
     {
-        Schema::create('infraestructuras', function (Blueprint $table) {
+        Schema::create('imagen_labs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('imgInicio');
-            $table->text('descripcion');
-            $table->string('responsable');
-            $table->string('correo');
+            $table->text('lab_id');
+            $table->text('imagen');
             $table->timestamps();
-            $table->string('slug')->unique();
         });
     }
 
@@ -31,6 +28,6 @@ class CreateInfraestructurasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('infraestructuras');
+        Schema::dropIfExists('imagen_labs');
     }
 }

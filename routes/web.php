@@ -137,22 +137,34 @@ Route::get('Agregar nuveo elemento', 'OrganigramaController@create')->name('Orga
 
 //Rutas Infraestructura
 Route::resource('Lab-Celula', 'CelulaController')->middleware('auth');
+Route::resource('Img-Lab-Celula', 'ImagenCelulaController')->middleware('auth');
 Route::resource('Lab-Sistemas', 'LabSistemasController')->middleware('auth');
+Route::resource('Img-Lab-Sistemas', 'ImagenSistemasController')->middleware('auth');
 Route::resource('Lab-Cisco', 'LabCiscoController')->middleware('auth');
+Route::resource('Img-Lab-Cisco', 'ImagenCiscoController')->middleware('auth');
 Route::resource('Lab-Micro', 'LabMicroController')->middleware('auth');
+Route::resource('Img-Lab-Micro', 'ImagenMicroController')->middleware('auth');
 
 Route::get('/Lab-Celula/create', 'CelulaController@create')->middleware('auth');
 Route::get('/Lab-Celula-Index', 'CelulaController@index')->name('celulaIndex')->middleware('auth');
 Route::get('/Lab-Celula/{infra}/edit', 'CelulaController@edit')->middleware('auth');
+Route::get('/Lab-Celula-Delete/{id}', 'CelulaController@destroy')->middleware('auth');
+Route::get('/Img-Lab-Celula/create', 'ImagenCelulaController@create')->middleware('auth');
 
 Route::get('/Lab-Sistemas/create', 'LabSistemasController@create')->middleware('auth');
 Route::get('/Lab-Sistemas', 'LabSistemasController@index')->middleware('auth');
+Route::get('/Lab-Sistemas-Delete/{id}', 'LabSistemasController@destroy')->middleware('auth');
+Route::get('/Img-Lab-Celula/create', 'ImagenSistemasController@create')->middleware('auth');
 
 Route::get('/Lab-Cisco/create', 'LabCiscoController@create')->middleware('auth');
 Route::get('/Lab-cisco', 'LabCiscoController@index')->middleware('auth');
+Route::get('/Lab-Cisco-Delete/{id}', 'LabCiscoController@destroy')->middleware('auth');
+Route::get('/Img-Lab-Cisco/create', 'ImagenCiscoController@create')->middleware('auth');
 
 Route::get('/Lab-Micro/create', 'LabMicroController@create')->middleware('auth');
 Route::get('/Lab-Micro', 'LabMicroController@index')->middleware('auth');
+Route::get('/Lab-Micro-Delete/{id}', 'LabMicroController@destroy')->middleware('auth');
+Route::get('/Img-Lab-Micro/create', 'ImagenMicroController@create')->middleware('auth');
 
 //Route::get('/Lab-Celula', 'CelulaController@create');
 Route::resource('Lab-Celula', 'CelulaController')->middleware('auth');

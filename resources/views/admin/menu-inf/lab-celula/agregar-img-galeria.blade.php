@@ -14,6 +14,8 @@
 
   <!------------------------------------------------------------- INFORMACIÓN ---------------------------------------------------------->
 
+      <form class="form-group" files = "true" method="POST" action="/Img-Lab-Celula" enctype="multipart/form-data">
+        @csrf
       <div class="formulario">
 
         <label for="">Tamaño de imagen recomendado: 250px de ancho y 250px de alto</label>
@@ -50,45 +52,21 @@
 
       <div id="info-img">No se Eligió Archivo</div>
 
+      @if ($errors->has('image'))
+        <span class="invalid-feedback" role="alert">
+          <strong>{{ $errors->first('image') }}</strong>
+        </span>
+      @endif
 
   		<div class="contenedor-botones">
 
   			<a onclick="return confirm('¿Desea guardar el nuevo elemento?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
 
-  		</div>
-
-  		<!------------------------------------------------------------- PREVISUALIZACIÓN ---------------------------------------------------------->
-
-
-  		<div class="contenedor-previsualizar-seccion">
-
-  			<div class="contenedor-titulo-seccion">
-
-  				<h3>Previsualización</h3>
-
-  			</div>
-
-
-
-  			<div class="contenedor-seccion-preliminar">
-
-          <div class="contenedor-seccion-preliminar-slider-img">
-
-  				  <img src="">
-
-          </div>
-
-
-  			</div>
+        <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/Lab-Celula"><button type="button" class="btn"><span>Cancelar</span></button></a>
 
   		</div>
 
-      <div class="contenedor-botones">
-
-      <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="{{url()->previous()}}"><button type="button" class="btn"><span>Cancelar</span></button></a>
-    
-      </div>
-
+    </form>
 
 </div>	
 

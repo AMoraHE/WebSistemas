@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Validator;
 use App\Infraestructura;
+use App\imagenLab;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LabSistemasController extends Controller
 {
@@ -16,7 +18,10 @@ class LabSistemasController extends Controller
     public function index()
     {
         $infras = Infraestructura::where('slug', 'sistemas')->get();
-        return view('/admin/menu-inf/lab-sistemas/show', compact('infras'));
+
+        $imagenes = DB::table('imagen_labs')->join('infraestructuras', 'imagen_labs.lab_id', '=', 'infraestructuras.slug')->where('infraestructuras.slug', 'sistemas')->select('imagen_labs.*')->get();
+
+        return view('/admin/menu-inf/lab-sistemas/show', compact('infras', 'imagenes'));
     }
 
     /**
@@ -44,12 +49,6 @@ class LabSistemasController extends Controller
         'responsable' => 'required|string',
         'correo' => 'required|string|email',
         'slug' => 'required|string',
-        'img1' => 'required|mimes:jpeg,png,bmp,tiff,gif',
-        'img2' => 'required|mimes:jpeg,png,bmp,tiff,gif',
-        'img3' => 'required|mimes:jpeg,png,bmp,tiff,gif',
-        'img4' => 'required|mimes:jpeg,png,bmp,tiff,gif',
-        'img5' => 'required|mimes:jpeg,png,bmp,tiff,gif',
-        'img6' => 'required|mimes:jpeg,png,bmp,tiff,gif',
         ]);
 
         if ($validator->fails()) {
@@ -74,55 +73,6 @@ class LabSistemasController extends Controller
             $infra->responsable = $request->input('responsable');
             $infra->correo = $request->input('correo');
             $infra->slug = $request->input('slug');
-            
-
-            if($request->hasFile('img1'))
-            {
-                $file = $request->file('img1');
-                $name = time().$file->getClientOriginalName();
-                $infra->img1 = $name; 
-                $file->move(public_path().'/images/infra/', $name);
-            }
-
-            if($request->hasFile('img2'))
-            {
-                $file = $request->file('img2');
-                $name = time().$file->getClientOriginalName();
-                $infra->img2 = $name; 
-                $file->move(public_path().'/images/infra/', $name);
-            }
-
-            if($request->hasFile('img3'))
-            {
-                $file = $request->file('img3');
-                $name = time().$file->getClientOriginalName();
-                $infra->img3 = $name; 
-                $file->move(public_path().'/images/infra/', $name);
-            }
-
-            if($request->hasFile('img4'))
-            {
-                $file = $request->file('img4');
-                $name = time().$file->getClientOriginalName();
-                $infra->img4 = $name; 
-                $file->move(public_path().'/images/infra/', $name);
-            }
-
-            if($request->hasFile('img5'))
-            {
-                $file = $request->file('img5');
-                $name = time().$file->getClientOriginalName();
-                $infra->img5 = $name; 
-                $file->move(public_path().'/images/infra/', $name);
-            }
-            
-            if($request->hasFile('img6'))
-            {
-                $file = $request->file('img6');
-                $name = time().$file->getClientOriginalName();
-                $infra->img6 = $name; 
-                $file->move(public_path().'/images/infra/', $name);
-            }
 
             $infra->save();
                 
@@ -167,12 +117,6 @@ class LabSistemasController extends Controller
         'descripcion' => 'required|string',
         'responsable' => 'required|string',
         'correo' => 'required|string|email',
-        'img1' => 'mimes:jpeg,png,bmp,tiff,gif',
-        'img2' => 'mimes:jpeg,png,bmp,tiff,gif',
-        'img3' => 'mimes:jpeg,png,bmp,tiff,gif',
-        'img4' => 'mimes:jpeg,png,bmp,tiff,gif',
-        'img5' => 'mimes:jpeg,png,bmp,tiff,gif',
-        'img6' => 'mimes:jpeg,png,bmp,tiff,gif',
         ]);
 
         if ($validator->fails()) {
@@ -184,7 +128,7 @@ class LabSistemasController extends Controller
         else
         {
             $infra = Infraestructura::where('slug', '=', $infras)->firstOrFail();
-            $infra->fill($request->except('imgInicio','img1','img2','img3','img4','img5','img6'));
+            $infra->fill($request->except('imgInicio'));
 
             if($request->hasFile('imgInicio')){
                 $oldFile = public_path().'/images/infra/'.$infra->imgInicio;
@@ -198,83 +142,7 @@ class LabSistemasController extends Controller
                 $infra->imgInicio = $name; 
                 $file->move(public_path().'/images/infra/',$name);
             }
-            if($request->hasFile('img1')){
-                $oldFile = public_path().'/images/infra/'.$infra->img1;
-                if(file_exists($oldFile))
-                {
-                    unlink($oldFile);
-                }
-
-                $file = $request->file('img1');
-                $name = time().$file->getClientOriginalName();
-                $infra->img1 = $name; 
-                $file->move(public_path().'/images/infra/', $name);
-            }
-
-            if($request->hasFile('img2')){
-                $oldFile = public_path().'/images/infra/'.$infra->img2;
-                if(file_exists($oldFile))
-                {
-                    unlink($oldFile);
-                }
-
-                $file = $request->file('img2');
-                $name = time().$file->getClientOriginalName();
-                $infra->img2 = $name; 
-                $file->move(public_path().'/images/infra/', $name);
-            }
-
-            if($request->hasFile('img3')){
-                $oldFile = public_path().'/images/infra/'.$infra->img3;
-                if(file_exists($oldFile))
-                {
-                    unlink($oldFile);
-                }
-
-                $file = $request->file('img3');
-                $name = time().$file->getClientOriginalName();
-                $infra->img3 = $name; 
-                $file->move(public_path().'/images/infra/', $name);
-            }
-
-            if($request->hasFile('img4')){
-                $oldFile = public_path().'/images/infra/'.$infra->img4;
-                if(file_exists($oldFile))
-                {
-                    unlink($oldFile);
-                }
-
-                $file = $request->file('img4');
-                $name = time().$file->getClientOriginalName();
-                $infra->img4 = $name; 
-                $file->move(public_path().'/images/infra/', $name);
-            }
-
-            if($request->hasFile('img5')){
-                $oldFile = public_path().'/images/infra/'.$infra->img5;
-                if(file_exists($oldFile))
-                {
-                    unlink($oldFile);
-                }
-
-                $file = $request->file('img5');
-                $name = time().$file->getClientOriginalName();
-                $infra->img5 = $name; 
-                $file->move(public_path().'/images/infra/', $name);
-            }
             
-            if($request->hasFile('img6')){
-                $oldFile = public_path().'/images/infra/'.$infra->img6;
-                if(file_exists($oldFile))
-                {
-                    unlink($oldFile);
-                }
-
-                $file = $request->file('img6');
-                $name = time().$file->getClientOriginalName();
-                $infra->img6 = $name; 
-                $file->move(public_path().'/images/infra/', $name);
-            }
             $infra->save();
 
             return redirect('/Lab-Sistemas')->with('status', 'Actualización exitosa');
@@ -289,6 +157,16 @@ class LabSistemasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $imagen = imagenLab::where('id', '=', $id)->firstOrFail();
+
+        $oldFile = public_path().'/images/infra/'.$imagen->imagen;
+        if(file_exists($oldFile))
+        {
+            unlink($oldFile);
+        }
+
+        $imagen->delete();
+
+        return redirect('/Lab-Sistemas')->with('status','Eliminación Exitosa');
     }
 }
