@@ -15,7 +15,7 @@
 <!---------------------------convocatorias------------------------>
  <form class="form-goup" files="true" method="POST" action="/ConvocatoriasAcademicos/{{$convocatorias->slug}}" enctype="multipart/form-data">
     @method('PUT')
-    {{csrf_field()}}
+    @csrf
 
 <!----------------------------IMAGEN------------------------->
 	<div class="formulario">
@@ -112,9 +112,16 @@
   @endif
 <!----------------------------------------------------------------- BOTONES convocatorias ---------------------------------------------------------->
 
+  <div class="formulario">
+
+    <label>Convocatoria</label>
+    <input type="text" name="slug" id="slug" value="{{$convocatorias->slug}}" placeholder="" class="form-control" readonly>
+
+  </div>
+
 	<div class="contenedor-botones">
 		<a onclick="return confirm('¿Desea guardar los cambios realizados?')"><button class="btn" type="submit" ><span>Guardar</span></button></a>
-    <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/ConvocatoriaAcademicos"><button type="button" class="btn"><span>Cancelar</span></button></a>
+    <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/ConvocatoriasAcademicos"><button type="button" class="btn"><span>Cancelar</span></button></a>
 
 	</div>
 </form>

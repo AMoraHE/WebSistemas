@@ -108,12 +108,12 @@ class ConvocatoriasController extends Controller
         $validator = Validator::make($request->all(), [
 
   'image' => 'mimes:jpeg,png,bmp,tiff,gif',
-  'convocatorias' => 'required|string',
+  'convocatoria' => 'required|string',
   'descripcion' => 'required|string',
   ]);
-
+        $identificador = $request->input('slug');
   if ($validator->fails()) {
-      return redirect('/ConvocatoriasAcademicos/'.$convocatorias->slug.'/edit')
+      return redirect('/ConvocatoriasAcademicos/'.$identificador.'/edit')
                   ->withErrors($validator)
                   ->withInput($request->all());
   }
@@ -121,7 +121,7 @@ class ConvocatoriasController extends Controller
   else
   {
     $convocatorias = Convocatoria::where('slug', '=', $convocatorias)->firstOrFail();
-          $proyecto->fill($request->except('image'));
+          $convocatorias->fill($request->except('image'));
     if ($request->hasFile('image'))
     {
       $file_path =public_path().'/images/convocatoria/'.$convocatorias->newimage;
@@ -137,14 +137,14 @@ class ConvocatoriasController extends Controller
     }
 
   
-  $convocatorias->convocatoria = $request->input('Convocatoria');
+  $convocatorias->convocatoria = $request->input('convocatoria');
 
   $convocatorias->descripcion = $request->input('descripcion');
 
     $convocatorias->slug = time();
     $convocatorias->save();
 
-    return redirect()->route('ConvocatoriasAcademicos')->with('status','Actualización Exitosa');
+    return redirect('/ConvocatoriasAcademicos')->with('status','Actualización Exitosa');
       }
   }
 
