@@ -1,15 +1,15 @@
 
 <!----------------------------------------------------------------- VISTA LABORATORIOS -------------------------------------------------------->
 
-	<div class="contenedor-cuerpo-seccion">
+<div class="contenedor-cuerpo-seccion">
 
-		<div class="contenedor-img-grande">
+	<div class="contenedor-img-grande">
 
-			<img src="/images/galeria/album/{{$album->imgPrin}}" alt="{{$album->imgPrin}}">
-
-		</div>
+		<img src="/images/galeria/album/{{$album->imgPrin}}" alt="{{$album->imgPrin}}">
 
 	</div>
+
+</div>
 
 	<div class="formulario">
 
@@ -20,7 +20,7 @@
 
 	<div class="formulario">
 
-		<label>Galería: </label>
+		<label>Galería:</label>
 
 	</div>
 
@@ -40,10 +40,10 @@
 			</div>
 
 			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Album-Galeria-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
-
-		@endif
+			
 		</div>
 
+		@endif
 		@endforeach
 			
 	</div>

@@ -5,12 +5,16 @@
 @section('content')
 
 @if(session('status'))
+
     <div class="alert alert-success">
+
         {{session('status')}}
+
     </div>
+
 @endif
 
-	<div class="seccion-principal">
+<div class="seccion-principal">
 
 		<div class="contenedor-titulo-seccion">
 
@@ -24,9 +28,8 @@
 
 		</div>
 		
-@foreach ($albums as $album)
+	@foreach ($albums as $album)
 	
-
 <!----------------------------------------------------------------- GALERÍA ---------------------------------------------------------->
 
 		<div class="contenedor-titulo-seccion">
@@ -48,6 +51,8 @@
 
 		</div>
 
-		@endforeach
+	@endforeach
+
+</div>
 
 @endsection
