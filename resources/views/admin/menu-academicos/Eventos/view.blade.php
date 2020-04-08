@@ -16,7 +16,7 @@
 
 	<div class="contenedor-botones">
 			
-		<a onclick="return confirm('¿Agregar un nuevo evento?')" href="/EventosAcademicos/create"><button class="btn"><span>Agregar</span></button></a>
+		<a onclick="return confirm('¿Agregar un nuevo evento?')" href="/EventosAcademicos/create"><button class="btn agregar"><span>Agregar</span></button></a>
 			
 	</div>
 
@@ -26,17 +26,20 @@
 
 	<div class="contenedor-titulo-seccion">
 
-		<h1>Título</h1>
 		<h3>{{$evento->titulo}}</h3>
 
 	</div>
 
-	<div class="contenedor-titulo-seccion">
+	<div class="contenedor-cuerpo-seccion">
+		
+		<div class="contenedor-texto-completo">
+			
+			<p>{{$evento->descripcion}}</p>
 
-		<h1>Descripción</h1>
-		<h3>{{$evento->descripcion}}</h3>
+		</div>
 
 	</div>
+
 
 	<div class="contenedor-enlaces">
 			
@@ -53,8 +56,8 @@
 	<div class="contenedor-botones">
 			
 		<a href="{{route('descargar', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
-		<a onclick="return confirm('¿Editar el evento {{$evento->titulo}}?')" href="/EventosAcademicos/{{$evento->slug}}/edit"><button class="btn"><span>Editar</span></button></a>
-		<a onclick="return confirm('¿Eliminar el evento {{$evento->titulo}}?')" href="/EventosAcademicos/eliminar/{{$evento->slug}}"><button class="btn"><span>Eliminar</span></button></a>
+		<a onclick="return confirm('¿Editar el evento {{$evento->titulo}}?')" href="/EventosAcademicos/{{$evento->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
+		<a onclick="return confirm('¿Eliminar el evento {{$evento->titulo}}?')" href="/EventosAcademicos/eliminar/{{$evento->slug}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
 
 	</div>
 

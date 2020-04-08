@@ -39,7 +39,7 @@
 
 			</div>
 
-			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Album-Galeria-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
+			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Album-Galeria-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
 
 		@endif
 		</div>

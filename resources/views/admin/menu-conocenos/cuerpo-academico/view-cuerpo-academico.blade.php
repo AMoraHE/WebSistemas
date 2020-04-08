@@ -22,7 +22,7 @@
 
 	<div class="contenedor-botones">
 
-		<a href="CuerposAcademicos/create"><button class="btn"><span>Agregar</span></button></a>
+		<a href="CuerposAcademicos/create"><button class="btn agregar"><span>Agregar</span></button></a>
 
 	</div>
 
@@ -67,13 +67,13 @@
 							@csrf
 							@method('DELETE')
 						<td>
-							<a onclick="return confirm('¿Seguro que desea eliminar este elemento?')"><button class="btn-tabla" type="submit"><i class="far fa-trash-alt"></i></button></a>
+							<a onclick="return confirm('¿Seguro que desea eliminar este elemento?')"><button class="btn-tabla eliminar" type="submit"><i class="far fa-trash-alt"></i></button></a>
 						</td>
 
 					</form>
 
 						<td>
-							<a onclick="return confirm('¿Desea editar este elemento?')" href="/CuerposAcademicos/{{$cuerpo->slug}}/edit"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a>
+							<a onclick="return confirm('¿Desea editar este elemento?')" href="/CuerposAcademicos/{{$cuerpo->slug}}/edit"><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a>
 						</td>	
 
 					</tr>

@@ -151,7 +151,7 @@
 }
 
 .contenedor-texto-completo ul li{
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 /******************************SECCIONES PRINCIPALES PARTIDO EN 2 COLUMNAS************************************/
@@ -418,11 +418,16 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	/*border: 2px solid var(--verde);
+	background: var(--azul);
+	border-radius: 10px;*/
 }
 
 .contenedor-img-grande img{
-	width: 100%;
+	width: 100%; /***MAX HEIGTH***/
 	max-height: 450px;
+
 	border: 2px solid var(--verde);
 	border-radius: 10px;
 }
@@ -596,7 +601,6 @@
 
 .tabla-informacion-escolar table{
 	background: var(--blanco);
-	text-align: left;
 	border-collapse: collapse;
 	width: 100%; 
 }
@@ -616,7 +620,7 @@
 
 .tabla-informacion-escolar thead{
 	text-transform: uppercase;
-	text-align: center;
+	text-align: justify;
 	background: var(--azul);
 	border-bottom: solid 5px var(--verde);
 	color: var(--blanco);
@@ -629,6 +633,10 @@
 .tabla-informacion-escolar tr:hover td{
 	background-color: var(--verde-azulado);
 	color: var(--blanco);
+}
+
+.tabla-informacion-escolar p{
+	text-align: center;
 }
 
 /************************************************************************************************SECCIÓN CARGAR ARCHIVOS IMG***********************************************************************/
@@ -937,7 +945,23 @@
 }
 
 .editar{
+	background: #0b231e;
+}
+
+.agregar{
+	background: #229954;
+}
+
+.ver{
 	background: #34495E;
+}
+
+.volver{
+	background: #34495E;
+}
+
+.finalizar{
+	background: #0174DF;
 }
 
 /************************************************************************************************PAGINACIÓN**************************************************************************/

@@ -17,7 +17,7 @@
 		@else
 		<div class="contenedor-botones">
 
-			<a onclick="return confirm('¿Desea registrar nueva información?')" href="/Lab-Celula/create"><button class="btn"><span>Agregar</span></button></a>
+			<a onclick="return confirm('¿Desea registrar nueva información?')" href="/Lab-Celula/create"><button class="btn agregar"><span>Agregar</span></button></a>
 
 		</div>
 		@endif
@@ -28,7 +28,7 @@
 <!----------------------------------------------------------------- Lab Celula---------------------------------------------------------->
 		<div class="contenedor-botones">
 
-			<a onclick="return confirm('¿Desea modificar la información del laboratorio?')" href="/Lab-Celula/{{$infra->slug}}/edit"><button class="btn"><span>Editar</span></button></a> <!-- Editar Todo -->
+			<a onclick="return confirm('¿Desea modificar la información del laboratorio?')" href="/Lab-Celula/{{$infra->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a> <!-- Editar Todo -->
 			
 		</div>
 
@@ -45,7 +45,7 @@
 
 		<div class="contenedor-botones">
 			
-			<a onclick="return confirm('¿Desea agregar una imagen?')" href="/Img-Lab-Celula/create"><button class="btn"><span>Agregar</span></button></a>
+			<a onclick="return confirm('¿Desea agregar una imagen?')" href="/Img-Lab-Celula/create"><button class="btn agregar"><span>Agregar Imágenes</span></button></a>
 
 		</div>
 

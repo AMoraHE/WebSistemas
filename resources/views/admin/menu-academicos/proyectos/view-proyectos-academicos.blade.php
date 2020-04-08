@@ -21,7 +21,7 @@
 
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea agregar un nuevo Proyecto?')" href="/ProyectosAcademicos/create"><button class="btn"><span>Agregar</span></button></a>
+		<a onclick="return confirm('¿Desea agregar un nuevo Proyecto?')" href="/ProyectosAcademicos/create"><button class="btn agregar"><span>Agregar</span></button></a>
 
 	</div>
 
@@ -58,21 +58,22 @@
 						<tr>
 							<th>Proyecto</th>
 							<th>Desarrolladores</th>
-							<!--th>Objetivo</th>--->
 							<th>Descripción</th><!--Comentar-->
-							<!----th>Resultados</th--->
 						</tr>
 					</thead>
 
 						<tr>
 							<td>{{$proyecto->proyecto}}</td>
 							<td>
+
 							<ul>
 								@foreach (explode(', ', $proyecto->desarrolladores) as $desarrolladores)
 								<li>{{$desarrolladores}}</li>
 								@endforeach
 							</ul>
-						</td>
+
+							</td>
+
 							<td>{{$proyecto->descripcion}}</td><!--Comentar-->
 							<!----<td>{{$proyecto->resultados}}</td>---->
 						</tr>
@@ -103,11 +104,11 @@
         @method('DELETE')
         @csrf
 
-		<a onclick="return confirm('¿Desea eliminar el proyecto {{$proyecto->proyecto}}?')"><button type="submit" class="btn"><span>Eliminar</span></button></a>
+		<a onclick="return confirm('¿Desea eliminar el proyecto {{$proyecto->proyecto}}?')"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
 
   	</form>
 
-	  	<a onclick="return confirm('¿Desea editar el proyecto {{$proyecto->proyecto}}?')" href="/ProyectosAcademicos/{{$proyecto->slug}}/edit">	<button class="btn"><span>Editar</span></button></a>
+	  	<a onclick="return confirm('¿Desea editar el proyecto {{$proyecto->proyecto}}?')" href="/ProyectosAcademicos/{{$proyecto->slug}}/edit">	<button class="btn editar"><span>Editar</span></button></a>
 
 	</div>
 

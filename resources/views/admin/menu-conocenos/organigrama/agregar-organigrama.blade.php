@@ -152,8 +152,8 @@
 
     <div class="contenedor-botones">
                     
-      <a onclick="return confirm('¿Desea guardar el nuevo elemento?')"><button type="submit" class="btn"><span>Agregar</span></button></a>
-      <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Organigrama"><button type="button" class="btn"><span>Cancelar</span></button></a>
+      <a onclick="return confirm('¿Desea guardar el nuevo elemento?')"><button type="submit" class="btn agregar"><span>Agregar</span></button></a>
+      <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Organigrama"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 
     </div>
 

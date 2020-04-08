@@ -23,8 +23,8 @@
 
 		<div class="contenedor-botones">
 	                      
-	    	<a onclick="return confirm('¿Desea guardar la información ingresada?')"><button type="submit" class="btn"><span>Guardar</span></button></a>
-	        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Lab-Cisco"><button type="button" class="btn"><span>Cancelar</span></button></a>
+	    	<a onclick="return confirm('¿Desea guardar la información ingresada?')"><button type="submit" class="btn guardar"><span>Guardar</span></button></a>
+	        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Lab-Cisco"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 	      
 	    </div>
 	</form>

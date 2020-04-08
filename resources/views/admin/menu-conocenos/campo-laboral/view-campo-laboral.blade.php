@@ -38,7 +38,7 @@
 
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea editar la lista del campo laboral?')" href="{{route('CampoLaboralLista')}}"><button class="btn"><span>Editar</span></button></a>
+		<a onclick="return confirm('¿Desea editar la lista del campo laboral?')" href="{{route('CampoLaboralLista')}}"><button class="btn editar"><span>Editar</span></button></a>
 
 	</div>
 		

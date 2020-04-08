@@ -40,7 +40,7 @@
 
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea editar este elemento?')" href="/informacion/{{$informacion->slug}}/edit"><button class="btn"><span>Editar</span></button></a>
+		<a onclick="return confirm('¿Desea editar este elemento?')" href="/informacion/{{$informacion->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
 			
 	</div>
 

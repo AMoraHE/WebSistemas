@@ -18,7 +18,7 @@
   
   <div class="contenedor-botones">
 
-    <a onclick="return confirm('¿Desea agregar un nuevo elemento?')" href="slider/create"><button class="btn"><span>Agregar</span></button></a>
+    <a onclick="return confirm('¿Desea agregar un nuevo elemento?')" href="slider/create"><button class="btn agregar"><span>Agregar</span></button></a>
 
   </div>
 

@@ -27,7 +27,7 @@
 	<div class="formulario">
 			
 		<label>Descripción Campo Laboral</label>
-		<a onclick="return confirm('¿Desea agregar un nuevo elemento?')" href="{{route('CampoLaboralCrear')}}"><button class="btn"><span>Agregar</span></button></a>
+		<a onclick="return confirm('¿Desea agregar un nuevo elemento?')" href="{{route('CampoLaboralCrear')}}"><button class="btn agregar"><span>Agregar</span></button></a>
 
 	</div>
 
@@ -54,8 +54,8 @@
 
 						<td>{{$campolabora->vineta}}</td>
 						<td>{{$campolabora->elemento}}</td>
-						<td><a onclick="return confirm('¿Desea eliminar este elemento?')" href="Campo-Laboral-Eliminar/{{$campolabora->slug}}"><button class="btn-tabla"><i class="far fa-trash-alt"></i></button></a></td>
-						<td><a onclick="return confirm('¿Desea editar este elemento?')" href="/CampoLaboral/{{$campolabora->slug}}/edit"><button class="btn-tabla"><i class="fas fa-pencil-alt"></i></button></a></td>	
+						<td><a onclick="return confirm('¿Desea eliminar este elemento?')" href="Campo-Laboral-Eliminar/{{$campolabora->slug}}"><button class="btn-tabla eliminar"><i class="far fa-trash-alt"></i></button></a></td>
+						<td><a onclick="return confirm('¿Desea editar este elemento?')" href="/CampoLaboral/{{$campolabora->slug}}/edit"><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a></td>	
 					</tr>
 
 					@endforeach
@@ -72,7 +72,7 @@
 
 	<div class="contenedor-botones">
 
-		<a href="{{route('CampoLaboralIndex')}}"><button class="btn"><span>Volver</span></button></a>
+		<a href="{{route('CampoLaboralIndex')}}"><button class="btn volver"><span>Volver</span></button></a>
 
 	</div>
 		

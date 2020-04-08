@@ -61,7 +61,7 @@
 
   		<div class="contenedor-botones">
 
-  			<a onclick="return confirm('¿Desea guardar el nuevo elemento?')"><button class="btn" type="submit"><span>Guardar</span></button></a>
+  			<a onclick="return confirm('¿Desea guardar el nuevo elemento?')"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
 
   		</div>
     </form>
@@ -95,7 +95,7 @@
 
        <div class="contenedor-botones">
 
-      <a onclick="return confirm('¿Desea regresar al menú anterior?')" href="/Lab-Sistemas"><button type="button" class="btn"><span>Finalizar</span></button></a>
+      <a onclick="return confirm('¿Desea regresar al menú anterior?')" href="/Lab-Sistemas"><button type="button finalizar" class="btn"><span>Finalizar</span></button></a>
     
       </div>
 

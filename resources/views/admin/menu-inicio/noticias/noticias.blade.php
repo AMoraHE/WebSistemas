@@ -18,8 +18,8 @@
 
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea acceder a la eliminación anual?')" href="/noticias-admin/eliminacion-anual/"><button class="btn"><span>Eliminación Anual</span></button></a>
-		<a onclick="return confirm('¿Desea registrar una nueva noticia?')" href="/noticias-admin/create"><button class="btn"><span>Agregar Noticia</span></button></a>
+		<a onclick="return confirm('¿Desea acceder a la eliminación anual?')" href="/noticias-admin/eliminacion-anual/"><button class="btn eliminar"><span>Eliminación Anual</span></button></a>
+		<a onclick="return confirm('¿Desea registrar una nueva noticia?')" href="/noticias-admin/create"><button class="btn agregar"><span>Agregar Noticia</span></button></a>
 
 	</div>
 
@@ -80,11 +80,11 @@
         @method('DELETE')
         @csrf
 
-		<a onclick="return confirm('¿Desea eliminar la noticia seleccionada?')"><button type="submit" class="btn"><span>Eliminar</span></button></a>
+		<a onclick="return confirm('¿Desea eliminar la noticia seleccionada?')"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
 
   	</form>
 
-	  	<a onclick="return confirm('¿Desea editar la noticia seleccionada?')" href="/noticias-admin/{{$noticia->slug}}/edit">	<button class="btn"><span>Editar</span></button></a>
+	  	<a onclick="return confirm('¿Desea editar la noticia seleccionada?')" href="/noticias-admin/{{$noticia->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
 
 	</div>
 

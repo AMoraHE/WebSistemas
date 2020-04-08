@@ -21,7 +21,7 @@
 
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea agregar una nueva convocatoria?')" href="/ConvocatoriasAcademicos/create"><button class="btn"><span>Agregar</span></button></a>
+		<a onclick="return confirm('¿Desea agregar una nueva convocatoria?')" href="/ConvocatoriasAcademicos/create"><button class="btn agregar"><span>Agregar</span></button></a>
 
 	</div>
 
@@ -57,7 +57,7 @@
 					<thead>
 						<tr>
 							<th>Convocatoria</th>
-							<th>Descripcion</th>
+							<th>Descripción</th>
 
 						</tr>
 					</thead>
@@ -95,11 +95,11 @@
         @method('DELETE')
         @csrf
 
-		<a onclick="return confirm('¿Desea eliminar la convocatoria seleccionada?')"><button type="submit" class="btn"><span>Eliminar</span></button></a>
+		<a onclick="return confirm('¿Desea eliminar la convocatoria seleccionada?')"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
 
   	</form>
 
-	  	<a onclick="return confirm('¿Desea editar la convocatoria seleccionada?')" href="/ConvocatoriasAcademicos/{{$convocatoria->slug}}/edit">	<button class="btn"><span>Editar</span></button></a>
+	  	<a onclick="return confirm('¿Desea editar la convocatoria seleccionada?')" href="/ConvocatoriasAcademicos/{{$convocatoria->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
 
 	</div>
 

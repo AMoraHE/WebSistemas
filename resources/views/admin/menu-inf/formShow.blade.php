@@ -55,13 +55,13 @@
 
 			@if($infra->slug == 'cisco')
 
-			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Cisco-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
+			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Cisco-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
 			@elseif($infra->slug == 'celula')
-			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Celula-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
+			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Celula-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
 			@elseif($infra->slug == 'sistemas')
-			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Sistemas-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
+			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Sistemas-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
 			@elseif($infra->slug == 'micro')
-			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Micro-Delete/{{$imagen->id}}"><button class="btn"><span>Eliminar</span></button></a>
+			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/Lab-Micro-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
 			@endif
 
 		</div>
