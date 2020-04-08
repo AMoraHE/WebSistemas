@@ -110,13 +110,13 @@
   @endif
 
 <!------------------------------DESARROLLADORES-------------------------->
-  <div class="formulario">
+ <div class="formulario">
 
     <label>Desarrolladores</label>
     @if ($errors->any())
-    <textarea placeholder="Reescriba los desarrolladores seleccionados" name="desarrolladores" required>{{old('desarrolladores')}}</textarea>
+    <input type="text" name="desarrolladores" id="desarrolladores" value="{{old('desarrolladores')}}" placeholder="Ingrese los desarrolladores, Ejem: osiel canul, erick herrera, etc, etc" class="form-control" required>
     @else
-    <textarea placeholder="Reescriba los desarrolladores seleccionados" name="desarrolladores" required>{{$proyecto->desarrolladores}}</textarea>
+    <input type="text" name="desarrolladores" id="desarrolladores" value="{{$proyecto->desarrolladores}}" placeholder="Ingrese los desarrolladores, Ejem: osiel canul, erick herrera, etc, etc" class="form-control" required>
     @endif
 
   </div>
@@ -130,7 +130,6 @@
     </span>
 
   @endif
-
 <!--------------------------------OBEJTIVO-------------------------
 
   <div class="formulario">

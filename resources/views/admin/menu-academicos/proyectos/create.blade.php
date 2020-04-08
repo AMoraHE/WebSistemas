@@ -108,7 +108,7 @@
    <div class="formulario">
 
 		<label>Desarrolladores</label>
-		<textarea name="desarrolladores" placeholder="Ingrese los desarrolladores, Ejem: osiel canul, erick herrera, etc, etc" required>{{old('desarrolladores')}}</textarea>
+		<input type="text" name="desarrolladores" placeholder="Ingrese los desarrolladores, Ejem: osiel canul, erick herrera, etc, etc" required>{{old('desarrolladores')}}</input>
 
 		@if ($errors->has('desarrolladores'))
 
