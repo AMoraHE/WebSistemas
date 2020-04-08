@@ -109,9 +109,11 @@ class CalendarioController extends Controller
     {
 
         $evento=false;
+        $evento = new Evento();
         $id = $request->input('id');
         $evento = Evento::deleteData($id);
-        return true;
+        $eventos = Evento::all();
+        return   $eventos;
 
     }
 
