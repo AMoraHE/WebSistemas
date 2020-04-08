@@ -62,7 +62,8 @@
 						<tr>
 							<th>Convocatoria</th>
 							<th>Descripción</th>
-
+							<th>Fecha Inicio</th>
+							<th>Fecha Final</th>
 						</tr>
 					</thead>
 
@@ -70,6 +71,9 @@
 							<td>{{$convocatoria->convocatoria}}</td>
 
 							<td>{{$convocatoria->descripcion}}</td><!--Comentar-->
+
+							<td>dd/mm/aaa</td>
+							<td>dd/mm/aaa</td>
 
 						</tr>
 
@@ -95,16 +99,17 @@
 
 	<div class="contenedor-botones">
 
-    <form method="POST" action="/ConvocatoriasAcademicos/{{$convocatoria->slug}}" enctype="multipart/form-data">
-        @method('DELETE')
-        @csrf
+		<a href="{{route('descargar-convocatoria', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
 
-		<a onclick="return confirm('¿Desea eliminar la convocatoria seleccionada?')"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
+		 <a onclick="return confirm('¿Desea editar la convocatoria seleccionada?')" href="/ConvocatoriasAcademicos/{{$convocatoria->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
+		  	
+	    <form method="POST" action="/ConvocatoriasAcademicos/{{$convocatoria->slug}}" enctype="multipart/form-data">
+	        @method('DELETE')
+	        @csrf
 
-  	</form>
+			<a onclick="return confirm('¿Desea eliminar la convocatoria seleccionada?')"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
 
-	  	<a onclick="return confirm('¿Desea editar la convocatoria seleccionada?')" href="/ConvocatoriasAcademicos/{{$convocatoria->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
-	  	<a href="{{route('descargar-convocatoria', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
+	  	</form>
 
 	</div>
 

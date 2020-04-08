@@ -1,6 +1,6 @@
 @extends('layouts.administrador')
 
-@section('title', 'Convocatorias')
+@section('title', 'Crear Convocatorias')
 
 @section('content')
 
@@ -9,7 +9,7 @@
 
 	<div class="contenedor-titulo-seccion">
 
-		<h3>Convocatorias</h3>
+		<h3>Agregar Convocatorias</h3>
 
 
 			</div>
@@ -71,6 +71,56 @@
 		      		</span>
 
 		    	@endif
+
+			</div>
+
+			<div class="contenedor-formulario-dividido">
+
+			<!-----------------------------Fecha Inicio------------------------>
+
+				<div class="columna-de-dos">
+
+					<div class="formulario">
+
+						<label>Fecha Inicio</label>
+						<input  type="date" id="" class="form-control" name="" required/>
+
+						@if ($errors->has('convocatoria'))
+
+				      		<span class="invalid-feedback" role="alert">
+
+				        		<strong>{{ $errors->first('convocatoria') }}</strong>
+
+				      		</span>
+
+				    	@endif
+
+					</div>
+
+				</div>
+
+					<!-----------------------------Fecha Final------------------------>
+
+				<div class="columna-de-dos">
+
+					<div class="formulario">
+
+						<label>Fecha Final</label>
+						<input  type="date" id="" class="form-control" name="" required/>
+
+						@if ($errors->has('convocatoria'))
+
+				      		<span class="invalid-feedback" role="alert">
+
+				        		<strong>{{ $errors->first('convocatoria') }}</strong>
+
+				      		</span>
+
+				    	@endif
+
+					</div>
+
+				</div>
 
 			</div>
 
