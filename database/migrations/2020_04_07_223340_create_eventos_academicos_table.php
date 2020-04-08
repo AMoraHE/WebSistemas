@@ -15,10 +15,10 @@ class CreateEventosAcademicosTable extends Migration
     {
         Schema::create('eventos_academicos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo');
-            $table->string('descripcion');
-            $table->string('documento');
-            $table->string('slug')->unique();
+            $table->text('titulo');
+            $table->text('descripcion');
+            $table->text('documento');
+            $table->string('slug');
             $table->timestamps();
         });
     }
