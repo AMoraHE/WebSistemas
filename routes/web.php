@@ -177,7 +177,7 @@ Route::resource('EventosAcademicos', 'EventosAcademicosController')->middleware(
 Route::get('/EventosAcademicos', 'EventosAcademicosController@index')->name('EventosAcademicos')->middleware('auth');
 Route::get('/EventosAcademicos/create', 'EventosAcademicosController@create')->name('AgregarEventos')->middleware('auth');
 Route::get('/EventosAcademicos/edit', 'EventosAcademicosController@edit')->name('EditarEventos')->middleware('auth');
-Route::get('/EventosAcademicos/descargar/{slug}', 'EventosAcademicosController@download')->name('descargar')->middleware('auth');
+Route::get('/EventosAcademicos/descargar/{slug}', 'EventosAcademicosController@download')->name('descargar-evento')->middleware('auth');
 Route::get('/EventosAcademicos/eliminar/{slug}', 'EventosAcademicosController@destroy')->name('EliminarEvento')->middleware('auth');
 
 //Rutas Proyectos-academicos
@@ -196,6 +196,8 @@ Route::get('/ConvocatoriasAcademicos/create', 'ConvocatoriasController@create')-
 
 
 Route::get('/ConvocatoriasAcademicos/edit', 'ConvocatoriasController@edit')->name('EditarConvocatorias')->middleware('auth');
+
+Route::get('/ConvocatoriasAcademicos/descargar/{slug}', 'ConvocatoriasController@download')->name('descargar-convocatoria')->middleware('auth');
 
 
 //Ruta programas-acdemicos

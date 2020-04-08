@@ -18,48 +18,35 @@
     @csrf
 
 <!----------------------------IMAGEN------------------------->
-	<div class="formulario">
+	<div class="contenedor-cargar-img">
 
-    <label>Tamaño de imagen recomendado: 1100px de ancho y 450px de alto</label>
+      <div class="contenedor-txt-seccion">
+            
+        <label for="">Cargar Archivo</label>
 
-  </div>
+      </div>
 
-  <div class="contenedor-cargar-img">
+      <div class="contenedor-boton-cargar">
 
-    <div class="contenedor-txt-seccion">
-
-      <label>Cargar IMG</label>
-
-    </div>
-
-
-    <div class="contenedor-boton-cargar">
-
-      <label for="file-upload" class="subir"><i class="icono-izquierda fas fa-cloud-upload-alt"></i>Subir Imágen</label>
-
-      <input id="file-upload" onchange='cambiar()' name="image" type="file" accept="image/gif, image/jpeg, image/png" style='display: none;' />
+        <label for="file-upload" class="subir"><i class="fas fa-cloud-upload-alt"></i> Subir Archivo</label>  
+        <input id="file-upload"  onchange='cambiar()' name="doc" type="file" accept="application/pdf" style='display: none;'/>
+            
+      </div>
 
     </div>
 
-    <div class="contenedor-img-seccion">
+    <div class="cargar-doc-pdf">
 
-      <img id="img-pre" src="/images/convocatoria/{{$convocatorias->newimage}}">
-
+      <i class="icono-pdf fas fa-file-pdf"></i>
+      <div id="info-img">No se seleccionó archivo</div>
+              
     </div>
 
-  </div>
-
-  <div id="info-img">No se Eligió Archivo</div>
-
-  @if ($errors->has('image'))
-
-    <span class="invalid-feedback" role="alert">
-
-      <strong>{{ $errors->first('image') }}</strong>
-
-    </span>
-
-  @endif
+    @if ($errors->has('doc'))
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $errors->first('doc') }}</strong>
+            </span>
+        @endif
 
 <!----------------------------------------------------------------- FORMULARIO convocatoria ---------------------------------------------------------->
 

@@ -55,7 +55,7 @@
 
 	<div class="contenedor-botones">
 			
-		<a href="{{route('descargar', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
+		<a href="{{route('descargar-evento', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
 		<a onclick="return confirm('¿Editar el evento {{$evento->titulo}}?')" href="/EventosAcademicos/{{$evento->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
 		<a onclick="return confirm('¿Eliminar el evento {{$evento->titulo}}?')" href="/EventosAcademicos/eliminar/{{$evento->slug}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
 

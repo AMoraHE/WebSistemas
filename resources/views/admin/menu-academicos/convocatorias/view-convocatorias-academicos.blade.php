@@ -33,11 +33,15 @@
 
 	</div>
 
-	<div class="contenedor-img-grande">
-
-		<img src="/images/convocatoria/{{$convocatoria->newimage}}">
+	<div class="contenedor-enlaces">
+			
+		<a target="_blank" rel="noopener noreferrer" href="/ConvocatoriasAcademicos/{{$convocatoria->slug}}">{{$convocatoria->doc}}</a>
 
 	</div>
+
+	@php
+	$var = $convocatoria->slug
+	@endphp
 
 	<!----------------------------------------------------------------- DIVISOR ---------------------------------------------------------->
 
@@ -100,6 +104,7 @@
   	</form>
 
 	  	<a onclick="return confirm('¿Desea editar la convocatoria seleccionada?')" href="/ConvocatoriasAcademicos/{{$convocatoria->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
+	  	<a href="{{route('descargar-convocatoria', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
 
 	</div>
 

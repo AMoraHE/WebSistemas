@@ -39,7 +39,7 @@ class ConvocatoriasController extends Controller
   {
       $validator = Validator::make($request->all(), [
 
-  'imagen' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+  'doc' => 'required|mimetypes:application/pdf',
   'convocatoria' => 'required|string',
   'descripcion' => 'required|string',
 
@@ -55,12 +55,12 @@ class ConvocatoriasController extends Controller
   {
     $convocatorias = new Convocatoria();
 
-    if ($request->hasFile('imagen'))
+    if ($request->hasFile('doc'))
     {
-      $file = $request->file('imagen');
+      $file = $request->file('doc');
       $name2 = time().$file->getClientOriginalName();
-      $file->move(public_path().'/images/convocatoria/',$name2);
-      $convocatorias->newimage = $name2;
+      $file->move(public_path().'/docs/convocatorias/',$name2);
+      $convocatorias->doc = $name2;
     }
 
 
@@ -79,10 +79,29 @@ class ConvocatoriasController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function show(Convocatoria $convocatorias)
-  {
-      return view('/admin/menu-academicos/convocatorias/view-convocatorias-academicos', compact('convocatorias'));
-  }
+  public function show($slug)
+    {
+        $convocatorias = Convocatoria::where('slug', '=', $slug)->firstOrFail();
+
+        $name = $convocatorias->doc;
+
+        return response()->file('docs/convocatorias/'.$name);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function download($slug)
+    {
+        $convocatorias = Convocatoria::where('slug', '=', $slug)->firstOrFail();
+
+        $name = $convocatorias->doc;
+
+        return response()->download('docs/convocatorias/'.$name);
+    }
 
   /**
    * Show the form for editing the specified resource.
@@ -105,12 +124,11 @@ class ConvocatoriasController extends Controller
    */
   public function update(Request $request, $convocatorias)
   {
-        $validator = Validator::make($request->all(), [
-
-  'image' => 'mimes:jpeg,png,bmp,tiff,gif',
-  'convocatoria' => 'required|string',
-  'descripcion' => 'required|string',
-  ]);
+    $validator = Validator::make($request->all(), [
+    'doc' => 'mimetypes:application/pdf',
+    'convocatoria' => 'required|string',
+    'descripcion' => 'required|string',
+    ]);
         
   if ($validator->fails()) {
       return redirect('/ConvocatoriasAcademicos/'.$convocatorias.'/edit')
@@ -121,25 +139,26 @@ class ConvocatoriasController extends Controller
   else
   {
     $convocatorias = Convocatoria::where('slug', '=', $convocatorias)->firstOrFail();
-          $convocatorias->fill($request->except('image'));
-    if ($request->hasFile('image'))
+    $convocatorias->fill($request->except('doc'));
+
+    if ($request->hasFile('doc'))
     {
-      $file_path =public_path().'/images/convocatoria/'.$convocatorias->newimage;
+      $file_path =public_path().'/docs/convocatorias/'.$convocatorias->doc;
       if(file_exists($file_path))
       {
         unlink($file_path);
       }
 
-      $file = $request->file('image');
+      $file = $request->file('doc');
       $name2 = time().$file->getClientOriginalName();
-      $file->move(public_path().'/images/proyectos/',$name2);
-    $convocatorias->newimage = $name2;
+      $file->move(public_path().'/docs/convocatorias/',$name2);
+      $convocatorias->doc = $name2;
     }
 
   
-  $convocatorias->convocatoria = $request->input('convocatoria');
+    $convocatorias->convocatoria = $request->input('convocatoria');
 
-  $convocatorias->descripcion = $request->input('descripcion');
+    $convocatorias->descripcion = $request->input('descripcion');
 
     $convocatorias->slug = time();
     $convocatorias->save();
@@ -158,14 +177,15 @@ class ConvocatoriasController extends Controller
    */
   public function destroy($slug)
   {
- $convocatorias = Convocatoria::where('slug', '=', $slug)->firstOrFail();
- $file_path =public_path().'/images/convocatorias/'.$convocatorias->newimage;
-  if(file_exists($file_path))
-  {
-    unlink($file_path);
-  }
-  $convocatorias->delete();
+    $convocatorias = Convocatoria::where('slug', '=', $slug)->firstOrFail();
 
-      return redirect()->route('ConvocatoriasAcademicos')->with('status','Eliminación Exitosa');
+    $file_path =public_path().'/docs/convocatorias/'.$convocatorias->doc;
+    if(file_exists($file_path))
+    {
+      unlink($file_path);
+    }
+    $convocatorias->delete();
+
+    return redirect()->route('ConvocatoriasAcademicos')->with('status','Eliminación Exitosa');
 }
 }

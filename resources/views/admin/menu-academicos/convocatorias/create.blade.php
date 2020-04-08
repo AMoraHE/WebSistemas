@@ -19,47 +19,36 @@
 			<form class="form-goup"  files = "true" method="POST" action="/ConvocatoriasAcademicos" enctype="multipart/form-data" >
 			@csrf
 
-			<div class="formulario">
-
-		 		<label>Tamaño de imagen recomendado: 1100px de ancho y 450px de alto</label>
-
-		 	</div>
-
 			<div class="contenedor-cargar-img">
 
-				<div class="contenedor-txt-seccion">
-
-		        	<label>Cargar IMG</label>
-
-		      	</div>
-
-				<div class="contenedor-boton-cargar">
-
-					<label for="file-upload" class="subir"><i class="icono-izquierda fas fa-cloud-upload-alt"></i>Subir Imágen</label>
-
-					<input id="file-upload" onchange='cambiar()' name="imagen" type="file" accept="image/gif, image/jpeg, image/png" style='display: none;' required />
-
-				</div>
-
-				<div class="contenedor-img-seccion">
-
-		 			<img id="img-pre" src="/img/LogoNuevaImagen.png">
-
-		 		</div>
+			<div class="contenedor-txt-seccion">
+						
+				<label>Cargar Archivo</label>
 
 			</div>
 
-			<div id="info-img">No se Eligió Archivo</div>
+			<div class="contenedor-boton-cargar">
 
-			@if ($errors->has('imagen'))
+				<label for="file-upload" class="subir"><i class="icono-izquierda fas fa-cloud-upload-alt"></i> Subir Archivo</label>	
+				<input id="file-upload"  onchange='cambiar()' name="doc" type="file" accept="application/pdf" style='display: none;' required />
+						
+			</div>
 
-		      <span class="invalid-feedback" role="alert">
+		</div>
 
-		        <strong>{{ $errors->first('imagen') }}</strong>
 
-		      </span>
+		<div class="cargar-doc-pdf">
 
-		    @endif
+			<i class="icono-pdf fas fa-file-pdf"></i>
+			<div id="info-img">No se seleccionó archivo</div>
+							
+		</div>
+
+		@if ($errors->has('doc'))
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $errors->first('doc') }}</strong>
+            </span>
+        @endif
 
 		<!----------------------------------------------------------------- FORMULARIO Convocatorias ---------------------------------------------------------->
 
