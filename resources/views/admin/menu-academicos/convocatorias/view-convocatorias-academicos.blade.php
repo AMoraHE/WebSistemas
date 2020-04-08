@@ -29,7 +29,7 @@
 
 	<div class="contenedor-titulo-seccion">
 
-		<h3>{{$convocatoria->aplicacion}}</h3>
+		<h3>{{$convocatoria->convocatoria}}</h3>
 
 	</div>
 
