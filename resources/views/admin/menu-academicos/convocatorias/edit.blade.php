@@ -112,11 +112,7 @@
   @endif
 <!----------------------------------------------------------------- BOTONES convocatorias ---------------------------------------------------------->
 
-  <div class="formulario">
-
-    <input type="text" name="slug" id="slug" value="{{$convocatorias->slug}}" placeholder="" class="form-control" readonly>
-
-  </div>
+  
 
 	<div class="contenedor-botones">
 		<a onclick="return confirm('¿Desea guardar los cambios realizados?')"><button class="btn" type="submit" ><span>Guardar</span></button></a>

@@ -111,9 +111,9 @@ class ConvocatoriasController extends Controller
   'convocatoria' => 'required|string',
   'descripcion' => 'required|string',
   ]);
-        $identificador = $request->input('slug');
+        
   if ($validator->fails()) {
-      return redirect('/ConvocatoriasAcademicos/'.$identificador.'/edit')
+      return redirect('/ConvocatoriasAcademicos/'.$convocatorias.'/edit')
                   ->withErrors($validator)
                   ->withInput($request->all());
   }
