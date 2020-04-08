@@ -114,7 +114,6 @@
 
   <div class="formulario">
 
-    <label>Convocatoria</label>
     <input type="text" name="slug" id="slug" value="{{$convocatorias->slug}}" placeholder="" class="form-control" readonly>
 
   </div>
