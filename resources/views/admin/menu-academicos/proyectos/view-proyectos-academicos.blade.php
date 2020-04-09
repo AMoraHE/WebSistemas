@@ -56,14 +56,12 @@
 
 					<thead>
 						<tr>
-							<th>Proyecto</th>
 							<th>Desarrolladores</th>
 							<th>Descripción</th><!--Comentar-->
 						</tr>
 					</thead>
 
 						<tr>
-							<td>{{$proyecto->proyecto}}</td>
 							<td>
 
 							<ul>
@@ -96,19 +94,45 @@
 
 	</div>
 
+<!----------------------------------------------------------------- GALERÍA ---------------------------------------------------------->
+	<div class="formulario">
+
+		<label>Mini Galería: </label>
+
+	</div>
+
+	<div class="seccion-mini-galeria">
+
+		<div class="contenedor-img-mini-galeria">
+
+			<div class="contenedor-img-mini-galeria-img">
+
+				<img src="/img/LogoNuevaImagen.png">
+
+			</div>
+
+			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href=""><button class="btn eliminar"><span>Eliminar</span></button></a>
+			
+		</div>
+
+	</div>
+
 <!---------------BOTONES PROYECTOS------------------------------------->
 
 	<div class="contenedor-botones">
 
-    <form method="POST" action="/ProyectosAcademicos/{{$proyecto->slug}}" enctype="multipart/form-data">
-        @method('DELETE')
-        @csrf
+	    <form method="POST" action="/ProyectosAcademicos/{{$proyecto->slug}}" enctype="multipart/form-data">
+	        @method('DELETE')
+	        @csrf
 
-		<a onclick="return confirm('¿Desea eliminar el proyecto {{$proyecto->proyecto}}?')"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
+			<a onclick="return confirm('¿Desea eliminar el proyecto {{$proyecto->proyecto}}?')"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
 
-  	</form>
+	  	</form>
 
-	  	<a onclick="return confirm('¿Desea editar el proyecto {{$proyecto->proyecto}}?')" href="/ProyectosAcademicos/{{$proyecto->slug}}/edit">	<button class="btn editar"><span>Editar</span></button></a>
+		  	<a onclick="return confirm('¿Desea editar el proyecto {{$proyecto->proyecto}}?')" href="/ProyectosAcademicos/{{$proyecto->slug}}/edit">	<button class="btn editar"><span>Editar</span></button></a>
+
+		 	<a onclick="return confirm('¿Desea agregar una imagen?')" href=""><button class="btn agregar"><span>Agregar Imágenes</span></button></a>
+
 
 	</div>
 

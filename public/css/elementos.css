@@ -607,6 +607,7 @@
 
 .tabla-informacion-escolar th, td{
 	padding: 20px;
+	max-width: 700px; /***TAMAÑO MÁXIMO DE LAS CELDAS***/
 }
 
 .tabla-informacion-escolar td{
