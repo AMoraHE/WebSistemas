@@ -49,8 +49,7 @@
 .close{
 	color: #fff;
 	float: right;
-	font-size: 18px;
-
+	font-size: 20px;
 }
 
 .close:hover{
@@ -83,6 +82,7 @@
 .modal-encabezado h5{
 	float: left;
 	font-size: 18px;
+	width: 95%;
 }
 
 .modal-encabezado p{
@@ -102,19 +102,30 @@
 
 .btn-modal{
   	display: inline-block;
-  	border: 2px solid #fff;
-  	padding: 10px 0px;
+  	padding: 10px;
 	margin: 0px 10px; 
-	background: #fff;
-	transition: color 0.5s, background 0.5s;
-	font-size: 1em;
 	min-width: 100px;
-	text-align: center;
 	cursor: pointer;
-	border-radius: 10px 10px 10px 10px;
-	-moz-border-radius: 10px 10px 10px 10px;
-	-webkit-border-radius: 10px 10px 10px 10px;
-	border: 2px solid #8cc63e;
+	border-radius: 10px;
+	border: none;
+}
+
+.btn-modal span{
+	color: var(--blanco);
+	font-size: 16px;
+	transition: .7s;
+	text-align: center;
+}
+
+.btn-modal span::after{
+	opacity: 0;
+	content: "\00bb";
+	transition: .7s;
+}
+
+.btn-modal:hover span::after{
+	opacity: 1;
+	margin-left: 5px;
 }
 
 /*************************************Responsivo***************************************/
