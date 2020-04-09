@@ -61,7 +61,7 @@
 
                         <div class="contenedor-botones">
                                 
-                                <button type="submit" class="btn">
+                                <button type="submit" class="btn finalizar">
                                     <span>{{ __('Iniciar sesión') }}</span>
                                 </button>
 

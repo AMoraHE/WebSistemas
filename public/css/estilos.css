@@ -21,7 +21,6 @@ html {
 
 body {
     position: relative;
-    margin: 0;
     width: 1920px;
     min-width: 320px;
     min-height: 100%;
@@ -71,7 +70,7 @@ Boton Cerrar Sesión************************************************************
     max-width: 10%;
     max-height: 45px;
     margin-right: 10px;
-    border-radius: 10px;
+    border-radius: 50%;
 }
 
 .divisor{

@@ -26,8 +26,6 @@
     <div id="app">
             <div class="seccion-principal">
 
-                <div class="contenedor-seccion-botones-inicio-sesion">
-
                     <div class="contenedor-botones">
 
                         <!-- Right Side Of Navbar -->
@@ -35,8 +33,8 @@
 
                             <!-- Authentication Links -->
                             @guest
-                                    <a href="{{ route('login') }}"><button class="btn"><span>{{ __('Iniciar Sesión') }}</span></button></a>
-                                    <a href="{{ route('register') }}"><button class="btn"><span>{{ __('Registrarse') }}</span></button></a>
+                                    <a href="{{ route('login') }}"><button class="btn finalizar"><span>{{ __('Iniciar Sesión') }}</span></button></a>
+                                    <a href="{{ route('register') }}"><button class="btn agregar"><span>{{ __('Registrarse') }}</span></button></a>
                             @else
 
                             <div id="usuario">
@@ -47,7 +45,7 @@
                             </div>
 
                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                <button class="btn"><span>{{ __('Cerrar Sesión') }}</span></button>
+                                <button class="btn cancelar"><span>{{ __('Cerrar Sesión') }}</span></button>
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST">
@@ -56,10 +54,6 @@
                             @endguest
 
                     </div>
-
-                </div>
-
-
 
             </div>
 

@@ -20,7 +20,7 @@
 
 		<div class="contenedor-botones">
 			
-			<a onclick="return confirm('¿Desea modificar su perfil?')" href="{{route('users.edit', $user)}}"><button class="btn"><span>Editar</span></button></a>
+			<a onclick="return confirm('¿Desea modificar su perfil?')" href="{{route('users.edit', $user)}}"><button class="btn editar"><span>Editar</span></button></a>
 	
 		</div>
 
@@ -54,7 +54,7 @@
 
 		<div class="contenedor-botones">
 
-			<a onclick="return confirm('¿Desea regresar al menú principal?')" href="/admin"><button class="btn"><span>Regresar</span></button></a>
+			<a onclick="return confirm('¿Desea regresar al menú principal?')" href="/admin"><button class="btn volver"><span>Volver</span></button></a>
 
 		</div>
 

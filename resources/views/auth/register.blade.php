@@ -35,7 +35,7 @@
 
                             <div class="contenedor-img-seccion">
 
-                                <img id="img-pre" class="foto-usuario" src="/img/LogoNuevaImagen.png"">
+                                <img id="img-pre" src="/img/LogoNuevaImagen.png">
 
                             </div>
 
@@ -94,7 +94,7 @@
 <!---------------------------------------------------------------------------------Botones Perfil-------------------------------------------------------------------------------------->
 
                         <div class="contenedor-botones">
-                                <button type="submit" class="btn">
+                                <button type="submit" class="btn guardar">
                                     <span>{{ __('Registrarse') }}</span>
                                 </button>
                         </div>
