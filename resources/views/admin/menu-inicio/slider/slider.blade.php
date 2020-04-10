@@ -18,7 +18,7 @@
   
   <div class="contenedor-botones">
 
-    <a onclick="return confirm('¿Desea agregar un nuevo elemento?')" href="slider/create"><button class="btn agregar"><span>Agregar</span></button></a>
+    <a onclick="alert('slider/create');"><button class="btn agregar"><span>Agregar</span></button></a>
 
   </div>
 
@@ -46,14 +46,14 @@
 
   <div class="contenedor-botones">
 
-    <a onclick="return confirm('¿Desea editar el elemento seleccionado?')" href="/slider/{{$slider->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
+    <a onclick="alert('/slider/{{$slider->slug}}/edit');"><button class="btn editar"><span>Editar</span></button></a>
 
   <form action="/slider/{{$slider->slug}}" method="POST">
 
     @csrf
     @method('DELETE')
 
-    <a onclick="return confirm('¿Seguro que desea eliminar este elemento?')"><button class="btn eliminar" type="submit"><span>Eliminar</span></button></a>
+    <a onclick="alert('');"><button class="btn eliminar" type="submit"><span>Eliminar</span></button></a>
 
   </form>
 

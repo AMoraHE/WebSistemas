@@ -25,7 +25,7 @@
 	<div class="formulario">
 			
 		<label>Descripción Perfil Ingreso</label>
-		<a onclick="return confirm('¿Desea agregar un nuevo elemento?')" href="{{route('crear-perfil-ingreso')}}"><button class="btn agregar"><span>Agregar</span></button></a>
+		<a onclick="alert('{{route('crear-perfil-ingreso')}}');"><button class="btn agregar"><span>Agregar</span></button></a>
 	
 	</div>
 
@@ -51,8 +51,8 @@
 					<tr>
 						<td>{{$perfilingres->vineta}}</td>
 						<td>{{$perfilingres->elemento}}</td>
-						<td><a onclick="return confirm('¿Desea eliminar este elemento?')" href="Perfil-Ingreso-Eliminar/{{$perfilingres->slug}}"><button class="btn-tabla eliminar"><i class="far fa-trash-alt"></i></button></a></td>
-						<td><a onclick="return confirm('¿Desea editar este elemento?')" href="/PerfilIngreso/{{$perfilingres->slug}}/edit"><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a></td>	
+						<td><a onclick="alert('Perfil-Ingreso-Eliminar/{{$perfilingres->slug}}');"><button class="btn-tabla eliminar"><i class="far fa-trash-alt"></i></button></a></td>
+						<td><a onclick="alert('/PerfilIngreso/{{$perfilingres->slug}}/edit');"><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a></td>	
 					</tr>
 
 					@endforeach
@@ -69,7 +69,7 @@
 
 	<div class="contenedor-botones">
 
-		<a href="{{route('perfil-ingreso')}}"> <button class="btn volver"><span>Volver</span></button> </a>
+		<a onclick="alert('{{route('perfil-ingreso')}}');"> <button class="btn volver"><span>Volver</span></button> </a>
 
 	</div>
 		

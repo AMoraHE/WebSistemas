@@ -37,8 +37,10 @@
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-
-
+	<!-- Alertas de Alertifyjs-->
+		<script src="{{ asset('js/alertify.min.js')}}"></script>
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/alertify.core.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/alertify.default.css')}}">
 
 </head>
 
@@ -246,6 +248,9 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
 	<script src="{{ asset('js/select.js')}}"></script>
 	<script src="{{ asset('js/select-img.js')}}"></script>
+
+	<script src="{{ asset('js/modal.js')}}"></script>
+	<script src="{{ asset('js/msj-confirmacion.js')}}"></script>
 
 <!---
 	<script src="{{ asset('js/jquery-3.1.0.min.js')}}"></script>-->
