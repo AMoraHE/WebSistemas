@@ -205,17 +205,17 @@ Route::get('/ConvocatoriasAcademicos/descargar/{slug}', 'ConvocatoriasController
 
 
 //Ruta programas-acdemicos
-Route::resource('programas', 'ProgramasController')->middleware('auth');
+Route::resource('ProgramasAcademicos', 'ProgramasController')->middleware('auth');
 
-Route::get('/ProgramasAcademicos', function () {
-    return view('.admin.menu-academicos.programas.view');})->name('ProgramasAcademicos')->middleware('auth');
+Route::get('/ProgramasAcademicos', 'ProgramasController@index')->name('ProgramasAcademicos')->middleware('auth');
 
-Route::get('/editar-programas', function () {
-    return view('.admin.menu-academicos.programas.edit');
-})->name('EditarProgramas')->middleware('auth');
-Route::get('/agregar-programas', function () {
-    return view('.admin.menu-academicos.programas.create');
-})->name('AgregarProgramas')->middleware('auth');
+Route::get('/ProgramasAcademicos/create', 'ProgramasController@create')->name('AgregarPrograma')->middleware('auth');
+
+
+Route::get('/ProgramasAcademicos/edit', 'ProgramasController@edit')->name('EditarPrograma')->middleware('auth');
+
+Route::get('/ProgramasAcademicos/descargar/{slug}', 'ProgramasController@download')->name('descargar-programa')->middleware('auth');
+
 
 //Rutas Galeria
 Route::resource('Album', 'AlbumController')->middleware('auth');
