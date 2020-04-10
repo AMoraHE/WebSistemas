@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use App\Proyecto;
+use Illuminate\Support\Facades\DB;
+use App\ProyectoGaleria;
 
 class ProyectoController extends Controller
 {
@@ -16,7 +18,10 @@ class ProyectoController extends Controller
     public function index()
     {
         $proyectos = Proyecto::all();
-        return view('/admin/menu-academicos/proyectos/view-proyectos-academicos', compact('proyectos'));
+
+        $imagenes = DB::table('proyecto_galerias')->join('proyectos', 'proyecto_galerias.proySlug', '=', 'proyectos.slug')->select('proyecto_galerias.*')->get();
+
+        return view('/admin/menu-academicos/proyectos/view-proyectos-academicos', compact('proyectos', 'imagenes'));
     }
 
     /**
@@ -27,6 +32,14 @@ class ProyectoController extends Controller
     public function create()
     {
             return view('/admin/menu-academicos/proyectos/create');
+    }
+
+    public function agregar($slug)
+    {
+        $identificador = $slug;
+        $imagenes = ProyectoGaleria::where('proySlug', '=', $slug)->get();
+
+        return view('/admin/menu-academicos/proyectos/agregar-img-galeria', compact('imagenes', 'identificador'));
     }
 
     /**
@@ -106,7 +119,7 @@ class ProyectoController extends Controller
     public function update(Request $request, $proyectos)
     {
           $validator = Validator::make($request->all(), [
-    
+    'imagen' => 'mimes:jpeg,png,bmp,tiff,gif',
     'proyecto' => 'required|string',
     'desarrolladores' => 'required|string',
     'descripcion' => 'required|string',
@@ -141,7 +154,7 @@ class ProyectoController extends Controller
       $proyecto->proyecto = $request->input('proyecto');
       $proyecto->desarrolladores = $request->input('desarrolladores');
       $proyecto->descripcion = $request->input('descripcion');
-      $proyecto->slug = time();
+      //$proyecto->slug = time();
       $proyecto->save();
 
       return redirect()->route('ProyectosAcademicos')->with('status','Actualización Exitosa');
@@ -157,13 +170,26 @@ class ProyectoController extends Controller
      */
     public function destroy($slug)
     {
-   $proyecto = Proyecto::where('slug', '=', $slug)->firstOrFail();
-   $file_path =public_path().'/images/proyectos/'.$proyecto->newimage;
-    if(file_exists($file_path))
-    {
-      unlink($file_path);
-    }
-    $proyecto->delete();
+        $proyecto = Proyecto::where('slug', '=', $slug)->firstOrFail();
+        $imagen = ProyectoGaleria::where('proySlug', '=', $slug)->get();
+
+        foreach ($imagen as $image )
+        {
+            $oldFile = public_path().'/images/proyectos/'.$image->imagen;
+            if(file_exists($oldFile))
+            {
+                unlink($oldFile);
+            }
+        }
+
+        $file_path =public_path().'/images/proyectos/'.$proyecto->newimage;
+        if(file_exists($file_path))
+        {
+            unlink($file_path);
+        }
+
+        ProyectoGaleria::where('proySlug', '=', $slug)->delete();
+        $proyecto->delete();
 
         return redirect()->route('ProyectosAcademicos')->with('status','Eliminación Exitosa');
 }

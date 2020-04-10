@@ -33,11 +33,48 @@
             </span>
         @endif
 
+        <div class="contenedor-formulario-dividido">
+
+		    <div class="columna-de-dos">
+
+		    	<div class="formulario">
+
+			        <label>Fecha Inicio</label>
+			        <input  type="date" id="FInicio" class="form-control" name="FInicio" value="{{old('FInicio')}}" required />
+
+		      	</div>
+
+		 	</div>
+
+		 	@if ($errors->has('FInicio'))
+            	<span class="invalid-feedback" role="alert">
+                	<strong>{{ $errors->first('FInicio') }}</strong>
+            	</span>
+        	@endif
+
+		    <div class="columna-de-dos">
+
+		     	<div class="formulario">
+
+			        <label>Fecha Cierre</label>
+			        <input  type="date" id="FCierre" class="form-control" name="FCierre" value="{{old('FCierre')}}" required />
+
+		     	</div>
+
+			</div>
+
+			@if ($errors->has('FCierre'))
+	            <span class="invalid-feedback" role="alert">
+	                <strong>{{ $errors->first('FCierre') }}</strong>
+	            </span>
+        	@endif
+
+		</div>
 
 	    <div class="formulario">
 				
 			<label>Descripción</label>
-			<input type="text" name="descripcion" id="titulo-ret" value="{{old('descripcion')}}" placeholder="Agrege una descripción del evento" class="form-control" required>
+			<textarea name="descripcion" placeholder="Descripcion" required>{{old('descripcion')}}</textarea>
 
 		</div>
 

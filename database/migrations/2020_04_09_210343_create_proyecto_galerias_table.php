@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateConvocatoriasTable extends Migration
+class CreateProyectoGaleriasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreateConvocatoriasTable extends Migration
      */
     public function up()
     {
-        Schema::create('convocatorias', function (Blueprint $table) {
+        Schema::create('proyecto_galerias', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('convocatoria');
-            $table->text('descripcion');
-            $table->text('doc');
-            $table->string('FInicio');
-            $table->string('FFin');
-            $table->string('slug');
+            $table->text('proySlug');
+            $table->text('imagen');
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ class CreateConvocatoriasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('convocatorias');
+        Schema::dropIfExists('proyecto_galerias');
     }
 }

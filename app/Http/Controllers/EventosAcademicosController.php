@@ -41,6 +41,8 @@ class EventosAcademicosController extends Controller
             'titulo' => 'required|string',
             'descripcion' => 'required|string',
             'doc' => 'required|mimetypes:application/pdf',
+            'FInicio' => 'required|date',
+            'FCierre' => 'required|date',
         ]);
 
         if ($validator->fails()) {
@@ -63,6 +65,8 @@ class EventosAcademicosController extends Controller
 
             $evento->titulo = $request->input('titulo');
             $evento->descripcion = $request->input('descripcion');
+            $evento->FInicio = $request->input('FInicio');
+            $evento->FCierre = $request->input('FCierre');
             $evento->slug = time();
             $evento->save();
 
@@ -127,9 +131,11 @@ class EventosAcademicosController extends Controller
     public function update(Request $request, $slug)
     {
         $validator = Validator::make($request->all(), [
-              'titulo' => 'required|string',
+            'titulo' => 'required|string',
             'descripcion' => 'required|string',
-            'doc' => 'required|mimetypes:application/pdf',
+            'doc' => 'mimetypes:application/pdf',
+            'FInicio' => 'required|date',
+            'FCierre' => 'required|date',
         ]);
 
         if ($validator->fails()) {
@@ -158,6 +164,8 @@ class EventosAcademicosController extends Controller
 
             $evento->titulo = $request->input('titulo');
             $evento->descripcion = $request->input('descripcion');
+            $evento->FInicio = $request->input('FInicio');
+            $evento->FCierre = $request->input('FCierre');
             $evento->slug = time();
             $evento->save();
 

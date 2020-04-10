@@ -83,13 +83,13 @@
 					<div class="formulario">
 
 						<label>Fecha Inicio</label>
-						<input  type="date" id="" class="form-control" name="" required/>
+						<input  type="date" id="FInicio" class="form-control" name="FInicio" value="{{old('FInicio')}}" required/>
 
-						@if ($errors->has('convocatoria'))
+						@if ($errors->has('FInicio'))
 
 				      		<span class="invalid-feedback" role="alert">
 
-				        		<strong>{{ $errors->first('convocatoria') }}</strong>
+				        		<strong>{{ $errors->first('FInicio') }}</strong>
 
 				      		</span>
 
@@ -106,13 +106,13 @@
 					<div class="formulario">
 
 						<label>Fecha Final</label>
-						<input  type="date" id="" class="form-control" name="" required/>
+						<input  type="date" id="FFin" class="form-control" name="FFin" value="{{old('FFin')}}" required/>
 
-						@if ($errors->has('convocatoria'))
+						@if ($errors->has('FFin'))
 
 				      		<span class="invalid-feedback" role="alert">
 
-				        		<strong>{{ $errors->first('convocatoria') }}</strong>
+				        		<strong>{{ $errors->first('FFin') }}</strong>
 
 				      		</span>
 
