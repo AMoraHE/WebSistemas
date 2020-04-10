@@ -30,6 +30,32 @@
 
 	</div>
 
+	<div class="contenedor-formulario-dividido">
+
+    <div class="columna-de-dos">
+
+      <div class="formulario">
+
+        <label>Fecha Inicio</label>
+        <input  type="date" id="FInicio" class="form-control" name="FInicio" value="{{$evento->FInicio}}" readonly />
+
+      </div>
+
+    </div>
+
+    <div class="columna-de-dos">
+
+      <div class="formulario">
+
+        <label>Fecha Cierre</label>
+        <input  type="date" id="FFin" class="form-control" name="FCierre" value="{{$evento->FCierre}}" readonly />
+
+      </div>
+
+    </div>
+
+  </div>
+
 	<div class="contenedor-cuerpo-seccion">
 		
 		<div class="contenedor-texto-completo">

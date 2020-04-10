@@ -183,9 +183,13 @@ Route::get('/EventosAcademicos/eliminar/{slug}', 'EventosAcademicosController@de
 //Rutas Proyectos-academicos
 
 Route::resource('ProyectosAcademicos', 'ProyectoController')->middleware('auth');
+Route::resource('ProyectosAcademicosGaleria', 'ProyectoGaleriaController')->middleware('auth');
+
 Route::get('/ProyectosAcademicos', 'ProyectoController@index')->name('ProyectosAcademicos')->middleware('auth');
 Route::get('/ProyectosAcademicos/create', 'ProyectoController@create')->name('AgregarProyectos')->middleware('auth');
 Route::get('/ProyectosAcademicos/edit', 'ProyectoController@edit')->name('EditarProyectos')->middleware('auth');
+Route::get('/ProyectosAcademicosGaleria-Delete/{id}', 'ProyectoGaleriaController@destroy')->middleware('auth');
+Route::get('/ProyectosAcademicos/agregar/{slug}', 'ProyectoController@agregar')->middleware('auth');
 
 //Ruta convocatorias-acdemicos
 Route::resource('ConvocatoriasAcademicos', 'ConvocatoriasController')->middleware('auth');

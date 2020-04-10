@@ -42,7 +42,8 @@ class ConvocatoriasController extends Controller
   'doc' => 'required|mimetypes:application/pdf',
   'convocatoria' => 'required|string',
   'descripcion' => 'required|string',
-
+  'FInicio' => 'required|date',
+  'FFin' => 'required|date',
   ]);
 
   if ($validator->fails()) {
@@ -67,6 +68,8 @@ class ConvocatoriasController extends Controller
     $convocatorias->convocatoria = $request->input('convocatoria');
     $convocatorias->descripcion = $request->input('descripcion');
     $convocatorias->slug = time();
+    $convocatorias->FInicio = $request->input('FInicio');
+    $convocatorias->FFin = $request->input('FFin');
     $convocatorias->save();
 
     return redirect()->route('ConvocatoriasAcademicos')->with('status','Inserción Exitosa');
@@ -128,6 +131,8 @@ class ConvocatoriasController extends Controller
     'doc' => 'mimetypes:application/pdf',
     'convocatoria' => 'required|string',
     'descripcion' => 'required|string',
+    'FInicio' => 'required|date',
+  'FFin' => 'required|date',
     ]);
         
   if ($validator->fails()) {
@@ -157,9 +162,9 @@ class ConvocatoriasController extends Controller
 
   
     $convocatorias->convocatoria = $request->input('convocatoria');
-
     $convocatorias->descripcion = $request->input('descripcion');
-
+    $convocatorias->FInicio = $request->input('FInicio');
+    $convocatorias->FFin = $request->input('FFin');
     $convocatorias->slug = time();
     $convocatorias->save();
 
