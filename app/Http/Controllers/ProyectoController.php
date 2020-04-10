@@ -119,7 +119,7 @@ class ProyectoController extends Controller
     public function update(Request $request, $proyectos)
     {
           $validator = Validator::make($request->all(), [
-    
+    'imagen' => 'mimes:jpeg,png,bmp,tiff,gif',
     'proyecto' => 'required|string',
     'desarrolladores' => 'required|string',
     'descripcion' => 'required|string',
