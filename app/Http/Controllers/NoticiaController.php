@@ -145,8 +145,9 @@ class NoticiaController extends Controller
   * @param  int  $id
   * @return \Illuminate\Http\Response
   */
-  public function destroy(Noticia $noticia)
+  public function destroy($slug)
   {
+    $noticia = Noticia::where('slug', '=', $slug)->firstOrFail();
     $file_path =public_path().'/images/news/'.$noticia->newimage;
     if(file_exists($file_path))
     {

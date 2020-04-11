@@ -132,7 +132,7 @@ class ConvocatoriasController extends Controller
     'convocatoria' => 'required|string',
     'descripcion' => 'required|string',
     'FInicio' => 'required|date',
-  'FFin' => 'required|date',
+    'FFin' => 'required|date',
     ]);
         
   if ($validator->fails()) {

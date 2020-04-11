@@ -147,7 +147,7 @@
 
 		<div class="contenedor-botones">
 
-			<a onclick="return confirm('¿Desea guardar el nuevo programa?')"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+			<a onclick="return confirm('¿Desea guardar el nuevo programa?')" href="/ProgramasAcademicos-Registar"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
 			<a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/ProgramasAcademicos"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 
 

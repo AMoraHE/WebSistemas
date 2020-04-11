@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Programa extends Model
 {
     protected $fillable = ['programa',  'descripcion', 'doc', 'slug', 'FInicio', 'FFin'];
-    protected $table = 'programa';
+    protected $table = 'programas';
 
        public function getRouteKeyName()
     {

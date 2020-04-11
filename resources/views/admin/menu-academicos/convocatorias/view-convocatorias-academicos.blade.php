@@ -107,14 +107,8 @@
 		<a href="{{route('descargar-convocatoria', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
 
 		 <a onclick="return confirm('¿Desea editar la convocatoria seleccionada?')" href="/ConvocatoriasAcademicos/{{$convocatoria->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
-		  	
-	    <form method="POST" action="/ConvocatoriasAcademicos/{{$convocatoria->slug}}" enctype="multipart/form-data">
-	        @method('DELETE')
-	        @csrf
 
-			<a onclick="return confirm('¿Desea eliminar la convocatoria seleccionada?')"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
-
-	  	</form>
+		 <a onclick="return confirm('¿Desea eliminar la convocatoria seleccionada?')" href="/ConvocatoriasAcademicos-Eliminar/{{$convocatoria->slug}}"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a> 	
 
 	</div>
 

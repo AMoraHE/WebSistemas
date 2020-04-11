@@ -15,7 +15,7 @@
 
           <div class="contenedor-img-noticia">
 
-              <img src="../images/slider/{{$slider->image}}">
+              <img src="/images/slider/{{$slider->image}}">
 
           </div>
 
@@ -28,11 +28,7 @@
       </div>
 
       <div class="contenedor-botones">
-          <form method="POST" action="/noticias-admin/{{$slider->slug}}" enctype="multipart/form-data">
-              @csrf
-              @method('DELETE')
-              <a onclick="return confirm('¿Desea eliminar este elemento?')"><button class="btn"><span>Eliminar</span></button></a>
-          </form>
+          <a onclick="return confirm('¿Desea eliminar este elemento?')" href="/slider-eliminar/{{$slider->slug}}"><button class="btn"><span>Eliminar</span></button></a>
           <a onclick="return confirm('Desea editar este elemento?')" href="/slider/{{$slider->slug}}/editar">
               <button class="btn"><span>Editar</span></button>
           </a>

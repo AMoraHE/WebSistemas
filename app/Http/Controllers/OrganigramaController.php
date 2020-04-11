@@ -110,9 +110,9 @@ class OrganigramaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Organigrama $Organigrama)
+    public function edit($slug)
     {
-
+        $Organigrama = Organigrama::where('slug', '=', $slug)->firstOrFail();
         
         $areas = Area::where('id', '=', $Organigrama->area_id)->firstOrFail();
         return view('admin.menu-conocenos.organigrama.editar-organigrama', compact('Organigrama', 'areas'));
@@ -175,8 +175,9 @@ class OrganigramaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Organigrama $Organigrama)
+    public function destroy($slug)
     {
+        $Organigrama = Organigrama::where('slug', '=', $slug)->firstOrFail();
         $oldFile = public_path().'/images/organigrama/'.$Organigrama->foto;
         if(file_exists($oldFile))
         {

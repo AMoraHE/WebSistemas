@@ -23,7 +23,7 @@
     <div class="formulario"> 
           
       <label>Programa</label>
-      <input type="text" name="programa" id ="viñeta" value="" placeholder="Nombre del Programa" class="form-control" required>
+      <input type="text" name="programa" id ="viñeta" value="Ingeniería en Sistemas Computacionales" placeholder="Nombre del Programa" class="form-control" required>
 
     </div>
 
@@ -45,7 +45,7 @@
 
     <div class="contenedor-botones">
                     
-      <a onclick="return confirm('¿Desea guardar el nuevo elemento?')"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+      <a onclick="return confirm('¿Desea guardar el nuevo elemento?')" href="/Registrar-Linea-Investigacion"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
       <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="{{route('LineasInvestigacion')}}"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 
     </div>

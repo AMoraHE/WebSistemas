@@ -106,15 +106,9 @@
 
 		<a href="{{route('descargar-programa', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
 
-		 <a onclick="return confirm('¿Desea editar la convocatoria seleccionada?')" href="/ProgramasAcademicos/{{$programa->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
+		<a onclick="return confirm('¿Desea editar la convocatoria seleccionada?')" href="/ProgramasAcademicos/{{$programa->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
 
-	    <form method="POST" action="/ProgramasAcademicos/{{$programa->slug}}" enctype="multipart/form-data">
-	        @method('DELETE')
-	        @csrf
-
-			<a onclick="return confirm('¿Desea eliminar el programa seleccionado?')"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
-
-	  	</form>
+		<a onclick="return confirm('¿Desea eliminar el programa seleccionado?')" href="/ProgramasAcademicos-Eliminar/{{$programa->slug}}"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
 
 	</div>
 

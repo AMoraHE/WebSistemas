@@ -12,15 +12,11 @@
 */
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('Perfil-Usuario', 'UserController@index')->name('perfil-usuario')->middleware('auth');
-
 Route::get('users/{user}',  ['as' => 'users.edit', 'uses' => 'UserController@edit'])->middleware('auth');
-
 Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'UserController@update'])->middleware('auth');
 
+Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', function () {
     return view('layouts.publico');
 });
@@ -29,14 +25,11 @@ Route::get('/', function () {
 Route::get('admin', 'InicioController@index')->middleware('auth');
 
 //////Rutas y sub rutas de Noticias
-  Route::get('noticias-admin/eliminacion-anual', 'NoticiaController@eliminaranual')->middleware('auth');
-  Route::post('noticias-admin/eliminacion-anual','NoticiaController@eliminacionmultiple')->middleware('auth');
-    Route::resource('noticias-admin','NoticiaController')->parameters(['noticias-admin' => 'noticia'])->middleware('auth');
+Route::get('noticias-admin/eliminacion-anual', 'NoticiaController@eliminaranual')->middleware('auth');
+Route::post('noticias-admin/eliminacion-multiple','NoticiaController@eliminacionmultiple')->middleware('auth');
+Route::resource('noticias-admin','NoticiaController')->parameters(['noticias-admin' => 'noticia'])->middleware('auth');
 
 Route::resource('slider','SliderController')->parameters(['slider' => 'slider'])->middleware('auth');
-
-
-
 Route::get('slider/filtrar/{id}', 'SliderController@filtrar')->name('filtrarslider')->middleware('auth');
 
 /////Redirecionamiento del menu
@@ -54,87 +47,78 @@ Route::post('calendariomodificar', 'CalendarioController@update')->middleware('a
 
 ////////////////////////Buscador de noticias///////////////////////////
 Route::get('noticias-admin/paginacion', 'NoticiaController@paginacion')->middleware('auth');
-
 Route::get('buscador-noticias', 'NoticiaController@buscador')->middleware('auth');
+
+//Rutas store
+Route::get('/noticias-admin-registrar', 'NoticiaController@store')->middleware('auth');
+Route::get('/noticias-admin-eliminar/{slug}', 'NoticiaController@destroy')->middleware('auth');
+Route::get('/slider-registrar', 'SliderController@store')->middleware('auth');
+Route::get('/slider-eliminar/{slug}', 'SliderController@destroy')->middleware('auth');
 
 //Rutas-perfil-ingreso
 Route::get('Perfil-Ingreso', 'PerfilIngresoController@index')->name('perfil-ingreso')->middleware('auth');
-
 Route::get('Perfil-Ingreso-Lista', 'PerfilIngresoController@list')->name('editar-perfil-ingreso')->middleware('auth');
-
 Route::get('Perfil-Ingreso-Crear', 'PerfilIngresoController@create')->name('crear-perfil-ingreso')->middleware('auth');
-
 Route::get('Perfil-Ingreso-Editar', 'PerfilIngresoController@edit')->name('editar-elemento')->middleware('auth');
-
 Route::resource('PerfilIngreso', 'PerfilIngresoController')->middleware('auth');
-
 Route::get('Perfil-Ingreso-Eliminar/{slug}', 'PerfilIngresoController@destroy')->name('eliminar-elemento')->middleware('auth');
+Route::get('/Perfil-Ingreso-Registrar', 'PerfilIngresoController@store')->middleware('auth');
 
 //Rutas-perfil-egreso
 Route::get('Perfil-Egreso', 'PerfilEgresoController@index')->name('perfil-egreso')->middleware('auth');
-
 Route::get('Perfil-Egreso-Lista', 'PerfilEgresoController@list')->name('editar-perfil-egreso')->middleware('auth');
-
 Route::get('Perfil-Egreso-Crear', 'PerfilEgresoController@create')->name('crear-perfil-egreso')->middleware('auth');
-
 Route::get('Perfil-Egreso-Editar', 'PerfilEgresoController@edit')->name('editar-elemento-eg')->middleware('auth');
-
 Route::resource('PerfilEgreso', 'PerfilEgresoController')->middleware('auth');
-
 Route::get('Perfil-Egreso-Eliminar/{slug}', 'PerfilEgresoController@destroy')->name('eliminar-elemento-eg')->middleware('auth');
+Route::get('/Perfil-Egreso-Registrar', 'PerfilEgresoController@store')->middleware('auth');
+
 
 
 //Rutas-reticula
 Route::get('reticula', 'ReticulaController@index')->name('reticula')->middleware('auth');
-
 Route::get('Crear Reticula', 'ReticulaController@create')->name('crear-reticula')->middleware('auth');
-
 Route::get('Editar reticula', 'ReticulaController@edit')->name('editar-reticula')->middleware('auth');
-
 Route::resource('VerReticula', 'ReticulaController')->middleware('auth');
-
 Route::get('Reticula-Eliminar/{slug}', 'ReticulaController@destroy')->name('eliminar-elemento-reticula')->middleware('auth');
-
 Route::get('/reticula/descargar/{slug}', 'ReticulaController@download')->name('descargar')->middleware('auth');
+Route::get('/Reticula-Registrar', 'ReticulaController@store')->middleware('auth');
 
 //Rutas Mision, Vision y objetivos
 
 Route::resource('informacion', 'InformacionCarreraController')->middleware('auth');
+Route::get('/informacion/{slug}/edit', 'InformacionCarreraController@edit')->middleware('auth');
 
 //Rutas Lineas Investigación
 Route::get('LineasInvestigacion', 'LineasInvestigacionController@index')->name('LineasInvestigacion')->middleware('auth');
-
 Route::get('CrearLineaInvestigacion', 'LineasInvestigacionController@create')->name('crear-Linea-Investigacion')->middleware('auth');
-
 Route::get('EditarLineaInvestigacion', 'LineasInvestigacionController@edit')->name('editar-Linea-Investigacion')->middleware('auth');
-
 Route::resource('Lineas-Investigacion', 'LineasInvestigacionController')->middleware('auth');
-
 Route::get('Eliminar-Linea-Investigacion/{slug}', 'LineasInvestigacionController@destroy')->name('eliminar-Linea-Investigacion')->middleware('auth');
+Route::get('/Registrar-Linea-Investigacion', 'LineasInvestigacionController@store')->middleware('auth');
 
 //Rutas Cuerpos academicos
 Route::resource('CuerposAcademicos', 'CuerposAcademicosController')->middleware('auth');
+Route::get('/CuerposAcademicosRegistrar', 'CuerposAcademicosController@store')->middleware('auth');
+Route::get('/CuerposAcademicosEliminar/{slug}', 'CuerposAcademicosController@destroy')->middleware('auth');
+Route::get('/CuerposAcademicos/{slug}/edit', 'CuerposAcademicosController@edit')->middleware('auth');
 
 //Rutas Campo Laboral
 Route::get('Campo-Laboral', 'CampoLaboralController@index')->name('CampoLaboralIndex')->middleware('auth');
-
 Route::get('Campo-Laboral-Lista', 'CampoLaboralController@list')->name('CampoLaboralLista')->middleware('auth');
-
 Route::get('Campo-Laboral-Crear', 'CampoLaboralController@create')->name('CampoLaboralCrear')->middleware('auth');
-
 Route::get('CampoLaboral-Editar', 'CampoLaboralController@edit')->name('CampoLaboralEditar')->middleware('auth');
-
 Route::resource('CampoLaboral', 'CampoLaboralController')->middleware('auth');
-
 Route::get('Campo-Laboral-Eliminar/{slug}', 'CampoLaboralController@destroy')->name('CampoLaboralEliminar')->middleware('auth');
+Route::get('/CampoLaboralRegistrar', 'CampoLaboralController@store')->middleware('auth');
 
 //Rutas Organigrama
 Route::resource('Organigrama', 'OrganigramaController')->middleware('auth');
-
 Route::get('Organigrama/filtrar/{nombre}', 'OrganigramaController@filtrar')->name('filtrar')->middleware('auth');
-
 Route::get('Agregar nuveo elemento', 'OrganigramaController@create')->name('OrganigramaCrear')->middleware('auth');
-
+Route::get('/Organigrama/{slug}/edit', 'OrganigramaController@edit')->middleware('auth');
+Route::get('/Organigrama-Eliminar/{slug}', 'OrganigramaController@destroy')->middleware('auth');
+Route::get('/Organigrama-Registrar', 'OrganigramaController@store')->middleware('auth');
 //Rutas Infraestructura
 Route::resource('Lab-Celula', 'CelulaController')->middleware('auth');
 Route::resource('Img-Lab-Celula', 'ImagenCelulaController')->middleware('auth');
@@ -150,21 +134,29 @@ Route::get('/Lab-Celula-Index', 'CelulaController@index')->name('celulaIndex')->
 Route::get('/Lab-Celula/{infra}/edit', 'CelulaController@edit')->middleware('auth');
 Route::get('/Lab-Celula-Delete/{id}', 'CelulaController@destroy')->middleware('auth');
 Route::get('/Img-Lab-Celula/create', 'ImagenCelulaController@create')->middleware('auth');
+Route::get('/Lab-Celula-Registrar', 'CelulaController@store')->middleware('auth');
+Route::get('/Img-Lab-Celula-Registrar', 'ImagenCelulaController@store')->middleware('auth');
 
 Route::get('/Lab-Sistemas/create', 'LabSistemasController@create')->middleware('auth');
 Route::get('/Lab-Sistemas', 'LabSistemasController@index')->middleware('auth');
 Route::get('/Lab-Sistemas-Delete/{id}', 'LabSistemasController@destroy')->middleware('auth');
 Route::get('/Img-Lab-Sistemas/create', 'ImagenSistemasController@create')->middleware('auth');
+Route::get('/Lab-Sistemas-Registrar', 'LabSistemasController@store')->middleware('auth');
+Route::get('/Img-Lab-Sistemas-Registrar', 'ImagenSistemasController@store')->middleware('auth');
 
 Route::get('/Lab-Cisco/create', 'LabCiscoController@create')->middleware('auth');
 Route::get('/Lab-cisco', 'LabCiscoController@index')->middleware('auth');
 Route::get('/Lab-Cisco-Delete/{id}', 'LabCiscoController@destroy')->middleware('auth');
 Route::get('/Img-Lab-Cisco/create', 'ImagenCiscoController@create')->middleware('auth');
+Route::get('/Lab-Cisco-Registrar', 'LabCiscoController@store')->middleware('auth');
+Route::get('/Img-Lab-Cisco-Registrar', 'ImagenCiscoController@store')->middleware('auth');
 
 Route::get('/Lab-Micro/create', 'LabMicroController@create')->middleware('auth');
 Route::get('/Lab-Micro', 'LabMicroController@index')->middleware('auth');
 Route::get('/Lab-Micro-Delete/{id}', 'LabMicroController@destroy')->middleware('auth');
 Route::get('/Img-Lab-Micro/create', 'ImagenMicroController@create')->middleware('auth');
+Route::get('/Lab-Micro-Registrar', 'LabMicroController@store')->middleware('auth');
+Route::get('/Img-Lab-Micro-Registrar', 'ImagenMicroController@store')->middleware('auth');
 
 //Route::get('/Lab-Celula', 'CelulaController@create');
 Route::resource('Lab-Celula', 'CelulaController')->middleware('auth');
@@ -179,6 +171,7 @@ Route::get('/EventosAcademicos/create', 'EventosAcademicosController@create')->n
 Route::get('/EventosAcademicos/edit', 'EventosAcademicosController@edit')->name('EditarEventos')->middleware('auth');
 Route::get('/EventosAcademicos/descargar/{slug}', 'EventosAcademicosController@download')->name('descargar-evento')->middleware('auth');
 Route::get('/EventosAcademicos/eliminar/{slug}', 'EventosAcademicosController@destroy')->name('EliminarEvento')->middleware('auth');
+Route::get('/EventosAcademicos-Registrar', 'EventosAcademicosController@store')->middleware('auth');
 
 //Rutas Proyectos-academicos
 
@@ -189,32 +182,28 @@ Route::get('/ProyectosAcademicos', 'ProyectoController@index')->name('ProyectosA
 Route::get('/ProyectosAcademicos/create', 'ProyectoController@create')->name('AgregarProyectos')->middleware('auth');
 Route::get('/ProyectosAcademicos/edit', 'ProyectoController@edit')->name('EditarProyectos')->middleware('auth');
 Route::get('/ProyectosAcademicosGaleria-Delete/{id}', 'ProyectoGaleriaController@destroy')->middleware('auth');
+Route::get('ProyectosAcademicos-Eliminar/{slug}', 'ProyectoController@destroy')->middleware('auth');
 Route::get('/ProyectosAcademicos/agregar/{slug}', 'ProyectoController@agregar')->middleware('auth');
+Route::get('/ProyectosAcademicos-Registrar', 'ProyectoController@store')->middleware('auth');
+Route::get('/ProyectosAcademicosGaleria-Registrar', 'ProyectoGaleriaController@store')->middleware('auth');
 
 //Ruta convocatorias-acdemicos
 Route::resource('ConvocatoriasAcademicos', 'ConvocatoriasController')->middleware('auth');
-
 Route::get('/ConvocatoriasAcademicos', 'ConvocatoriasController@index')->name('ConvocatoriasAcademicos')->middleware('auth');
-
 Route::get('/ConvocatoriasAcademicos/create', 'ConvocatoriasController@create')->name('AgregarConvocatorias')->middleware('auth');
-
-
 Route::get('/ConvocatoriasAcademicos/edit', 'ConvocatoriasController@edit')->name('EditarConvocatorias')->middleware('auth');
-
 Route::get('/ConvocatoriasAcademicos/descargar/{slug}', 'ConvocatoriasController@download')->name('descargar-convocatoria')->middleware('auth');
-
+Route::get('/ConvocatoriasAcademicos-Registrar', 'ConvocatoriasController@store')->middleware('auth');
+Route::get('/ConvocatoriasAcademicos-Eliminar/{slug}', 'ConvocatoriasController@destroy')->middleware('auth');
 
 //Ruta programas-acdemicos
 Route::resource('ProgramasAcademicos', 'ProgramasController')->middleware('auth');
-
 Route::get('/ProgramasAcademicos', 'ProgramasController@index')->name('ProgramasAcademicos')->middleware('auth');
-
 Route::get('/ProgramasAcademicos/create', 'ProgramasController@create')->name('AgregarPrograma')->middleware('auth');
-
-
 Route::get('/ProgramasAcademicos/edit', 'ProgramasController@edit')->name('EditarPrograma')->middleware('auth');
-
 Route::get('/ProgramasAcademicos/descargar/{slug}', 'ProgramasController@download')->name('descargar-programa')->middleware('auth');
+Route::get('/ProgramasAcademicos-Registrar', 'ProgramasController@store')->middleware('auth');
+Route::get('/ProgramasAcademicos-Eliminar/{slug}', 'ProgramasController@destroy')->middleware('auth');
 
 
 //Rutas Galeria
@@ -227,3 +216,5 @@ Route::get('/Album/{slug}/edit', 'AlbumController@edit')->middleware('auth');
 Route::get('/Album/agregar/{slug}', 'AlbumController@agregar')->middleware('auth');
 Route::get('/Album-Delete/{slug}', 'AlbumController@destroy')->middleware('auth');
 Route::get('/Album-Galeria-Delete/{id}', 'AlbumGaleriaController@destroy')->middleware('auth');
+Route::get('/Album-Registrar', 'AlbumController@store')->middleware('auth');
+Route::get('/Album-Galeria-Registrar', 'AlbumGaleriaController@store')->middleware('auth');

@@ -47,16 +47,7 @@
   <div class="contenedor-botones">
 
     <a onclick="alert('/slider/{{$slider->slug}}/edit');"><button class="btn editar"><span>Editar</span></button></a>
-
-  <form action="/slider/{{$slider->slug}}" method="POST">
-
-    @csrf
-    @method('DELETE')
-
-    <a onclick="alert('');"><button class="btn eliminar" type="submit"><span>Eliminar</span></button></a>
-
-  </form>
-
+    <a onclick="alert('/slider-eliminar/{{$slider->slug}}');"><button class="btn eliminar" type="submit"><span>Eliminar</span></button></a>
 
   </div>
 

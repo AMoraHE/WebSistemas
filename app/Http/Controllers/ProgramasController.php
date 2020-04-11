@@ -128,10 +128,10 @@ class ProgramasController extends Controller
   {
     $validator = Validator::make($request->all(), [
     'doc' => 'mimetypes:application/pdf',
-    'programas' => 'required|string',
+    'programa' => 'required|string',
     'descripcion' => 'required|string',
     'FInicio' => 'required|date',
-  'FFin' => 'required|date',
+    'FFin' => 'required|date',
     ]);
 
   if ($validator->fails()) {
@@ -181,7 +181,7 @@ class ProgramasController extends Controller
    */
   public function destroy($slug)
   {
-    $programas = Convocatoria::where('slug', '=', $slug)->firstOrFail();
+    $programas = Programa::where('slug', '=', $slug)->firstOrFail();
 
     $file_path =public_path().'/docs/programas/'.$programas->doc;
     if(file_exists($file_path))

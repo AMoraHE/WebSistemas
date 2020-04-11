@@ -105,7 +105,7 @@
 
 		    <div class="contenedor-botones">
 		                
-		        <a onclick="return confirm('¿Desea guardar los cambios?')"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+		        <a onclick="return confirm('¿Desea guardar los cambios?')" href="/user/{{$user}}/update"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
 
 		        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="{{route('perfil-usuario')}}"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 		        

@@ -19,7 +19,7 @@
 		<?php
 		$cont = date('Y');
 		?>
-		<form class="form-goup" method="POST" action="/noticias-admin/eliminacion-anual" enctype="multipart/form-data">
+		<form class="form-goup" method="POST" action="/noticias-admin/eliminacion-multiple" enctype="multipart/form-data">
 			@csrf
 
 		<select name="year" id="year" class="seleccion">
@@ -38,7 +38,7 @@
 
 		<div class="btn-eliminacion-anual">
 
-			<button onclick="return confirm('¿Desea realizar la eliminación anual?')" class="btn"><span>Eliminar</span></button>
+			<a onclick="return confirm('¿Desea realizar la eliminación anual?')" href="/noticias-admin/eliminacion-multiple"><button class="btn"><span>Eliminar</span></button></a>
 
 		</div>
 

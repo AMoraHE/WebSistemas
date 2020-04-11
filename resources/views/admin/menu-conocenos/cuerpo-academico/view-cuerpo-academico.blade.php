@@ -63,14 +63,9 @@
 							</ul>
 						</td>
 								
-					<form action="/CuerposAcademicos/{{$cuerpo->slug}}" method="POST">
-							@csrf
-							@method('DELETE')
 						<td>
-							<a onclick="return confirm('¿Seguro que desea eliminar este elemento?')"><button class="btn-tabla eliminar" type="submit"><i class="far fa-trash-alt"></i></button></a>
+							<a onclick="return confirm('¿Seguro que desea eliminar este elemento?')" href="/CuerposAcademicosEliminar/{{$cuerpo->slug}}"><button class="btn-tabla eliminar"><i class="far fa-trash-alt"></i></button></a>
 						</td>
-
-					</form>
 
 						<td>
 							<a onclick="return confirm('¿Desea editar este elemento?')" href="/CuerposAcademicos/{{$cuerpo->slug}}/edit"><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a>

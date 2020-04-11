@@ -57,9 +57,9 @@ class InformacionCarreraController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(informacion $informacion)
+    public function edit($slug)
     {
-        
+        $informacion = informacion::where('slug', '=', $slug)->firstOrFail();
         return view('admin.menu-conocenos.informacion-carrera.editar-informacion-carrera', compact('informacion'));
         //return $informacion;
     }

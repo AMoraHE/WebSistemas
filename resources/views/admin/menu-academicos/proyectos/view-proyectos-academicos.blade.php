@@ -127,13 +127,7 @@
 
 	<div class="contenedor-botones">
 
-	    <form method="POST" action="/ProyectosAcademicos/{{$proyecto->slug}}" enctype="multipart/form-data">
-	        @method('DELETE')
-	        @csrf
-
-			<a onclick="return confirm('¿Desea eliminar el proyecto: {{$proyecto->proyecto}}?')"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
-
-	  	</form>
+	    	<a onclick="return confirm('¿Desea eliminar el proyecto: {{$proyecto->proyecto}}?')" href="/ProyectosAcademicos-Eliminar/{{$proyecto->slug}}"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
 
 		  	<a onclick="return confirm('¿Desea editar el proyecto: {{$proyecto->proyecto}}?')" href="/ProyectosAcademicos/{{$proyecto->slug}}/edit">	<button class="btn editar"><span>Editar</span></button></a>
 

@@ -56,9 +56,9 @@
 <!--------------------------programa---------------------------->
   <div class="formulario">
 
-    <label>Convocatoria</label>
+    <label>Programa</label>
     @if ($errors->any())
-    <input type="text" name="programa" id="programa" value="{{old('programas')}}" placeholder="Reescriba el programa seleccionado" class="form-control" required>
+    <input type="text" name="programa" id="programa" value="{{old('programa')}}" placeholder="Reescriba el programa seleccionado" class="form-control" required>
     @else
     <input type="text" name="programa" id="programa" value="{{$programas->programa}}" placeholder="Reescriba el programa seleccionado" class="form-control" required>
     @endif
@@ -155,6 +155,17 @@
 
     </span>
 
+  @endif
+
+
+  @if ($errors->any())
+  <span class="invalid-feedback" role="alert">
+
+    @foreach($errors->all() as $error)
+      <strong>{{ $error }}</strong>
+      @endforeach
+
+    </span>
   @endif
 <!----------------------------------------------------------------- BOTONES  ---------------------------------------------------------->
 

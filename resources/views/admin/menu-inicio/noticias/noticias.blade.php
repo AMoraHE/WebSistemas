@@ -75,15 +75,7 @@
 <!-------------------------------------------------------------- BOTONES NOTICIAS----------------------------------------------------------------------------->
 
 	<div class="contenedor-botones">
-
-    <form method="POST" action="/noticias-admin/{{$noticia->slug}}" enctype="multipart/form-data">
-        @method('DELETE')
-        @csrf
-
-		<a onclick="return confirm('¿Desea eliminar la noticia seleccionada?')"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
-
-  	</form>
-
+		<a onclick="return confirm('¿Desea eliminar la noticia seleccionada?')" href="/noticias-admin-eliminar/{{$noticia->slug}}"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
 	  	<a onclick="return confirm('¿Desea editar la noticia seleccionada?')" href="/noticias-admin/{{$noticia->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
 
 	</div>

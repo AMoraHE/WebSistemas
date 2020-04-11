@@ -91,7 +91,7 @@
 
 	<div class="contenedor-botones">
 
- 		<a onclick="return confirm('¿Desea guardar la nueva noticia?')"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+ 		<a onclick="return confirm('¿Desea guardar la nueva noticia?')" href="/noticias-admin-registrar"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
  		<a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/noticias-admin"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
               
 	</div>

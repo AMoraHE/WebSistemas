@@ -121,7 +121,7 @@
 
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea guardar el nuevo evento?')"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+		<a onclick="return confirm('¿Desea guardar el nuevo evento?')" href="/EventosAcademicos-Registrar"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
  		<a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/EventosAcademicos"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 	
 

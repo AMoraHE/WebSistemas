@@ -148,7 +148,7 @@
 
 			<div class="contenedor-botones">
 
-				<a onclick="return confirm('¿Desea guardar la nueva convocatoria?')"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+				<a onclick="return confirm('¿Desea guardar la nueva convocatoria?')" href="/ConvocatoriasAcademicos-Registrar"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
 		 		<a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/ConvocatoriasAcademicos"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 
 

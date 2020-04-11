@@ -169,8 +169,9 @@ class SliderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Slider $slider)
+    public function destroy($slug)
     {
+        $slider = Slider::where('slug', '=', $slug)->firstOrFail();
         $file_path =public_path().'/images/slider/'.$slider->image;
         if(file_exists($file_path))
         {
