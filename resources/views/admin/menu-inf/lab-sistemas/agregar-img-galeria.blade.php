@@ -61,7 +61,7 @@
 
   		<div class="contenedor-botones">
 
-  			<a onclick="return confirm('¿Desea guardar el nuevo elemento?')"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+  			<a onclick="return confirm('¿Desea guardar el nuevo elemento?')" href="/Img-Lab-Sistemas-Registrar"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
 
   		</div>
     </form>

@@ -66,8 +66,9 @@ class CuerposAcademicosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(CuerposAcademico $CuerposAcademico)
+    public function edit($slug)
     {
+        $CuerposAcademico = CuerposAcademico::where('slug', '=', $slug)->firstOrFail();
         return view('admin.menu-conocenos.cuerpo-academico.editar-cuerpo-academico', compact('CuerposAcademico'));
         //return $CuerposAcademico;
     }
@@ -79,8 +80,9 @@ class CuerposAcademicosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CuerposAcademico $CuerposAcademico)
+    public function update(Request $request, $slug)
     {
+        $CuerposAcademico = CuerposAcademico::where('slug', '=', $slug)->firstOrFail();
         $CuerposAcademico->fill($request->all());
         $CuerposAcademico->save();
 
@@ -94,9 +96,9 @@ class CuerposAcademicosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CuerposAcademico $CuerposAcademico)
+    public function destroy($slug)
     {
-        //return $CuerposAcademico;
+        $CuerposAcademico = CuerposAcademico::where('slug', '=', $slug)->firstOrFail();
         $CuerposAcademico->delete();
         return redirect()->route('CuerposAcademicos.index')->with('status','Eliminación exitosa');
         

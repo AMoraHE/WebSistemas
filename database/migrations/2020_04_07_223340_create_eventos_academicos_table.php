@@ -18,6 +18,8 @@ class CreateEventosAcademicosTable extends Migration
             $table->text('titulo');
             $table->text('descripcion');
             $table->text('documento');
+            $table->string('FInicio');
+            $table->string('FCierre');
             $table->string('slug');
             $table->timestamps();
         });

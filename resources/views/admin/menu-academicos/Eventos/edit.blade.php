@@ -37,13 +37,59 @@
             </span>
         @endif
 
+        <div class="contenedor-formulario-dividido">
+
+		    <div class="columna-de-dos">
+
+		    	<div class="formulario">
+
+					<label>Fecha Inicio</label>
+					@if ($errors->any())
+					<input  type="date" id="FInicio" class="form-control" name="FInicio" value="{{old('FInicio')}}" required />
+					@else
+					<input  type="date" id="FInicio" class="form-control" name="FInicio" value="{{$evento->FInicio}}" required />
+					@endif
+
+		      	</div>
+
+		 	</div>
+
+		 	@if ($errors->has('FInicio'))
+            	<span class="invalid-feedback" role="alert">
+                	<strong>{{ $errors->first('FInicio') }}</strong>
+            	</span>
+        	@endif
+
+		    <div class="columna-de-dos">
+
+		     	<div class="formulario">
+
+			        <label>Fecha Cierre</label>
+			        @if ($errors->any())
+			        <input  type="date" id="FCierre" class="form-control" name="FCierre" value="{{old('FCierre')}}" required />
+			        @else
+			        <input  type="date" id="FCierre" class="form-control" name="FCierre" value="{{$evento->FCierre}}" required />
+			        @endif
+
+		     	</div>
+
+			</div>
+
+			@if ($errors->has('FCierre'))
+	            <span class="invalid-feedback" role="alert">
+	                <strong>{{ $errors->first('FCierre') }}</strong>
+	            </span>
+        	@endif
+
+		</div>
+
 		<div class="formulario">
 				
 			<label>Descripción</label>
 			@if ($errors->any())
-			<input type="text" name="descripcion" id="descripcion" value="{{old('descripcion')}}" placeholder="Agrege una descripción del evento" class="form-control" required>
+			<textarea placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{old('descripcion')}}</textarea>
 			@else
-			<input type="text" name="descripcion" id="descripcion" value="{{$evento->descripcion}}" placeholder="Agrege una descripción del evento" class="form-control" required>
+			<textarea placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{$evento->descripcion}}</textarea>
 			@endif
 
 		</div>

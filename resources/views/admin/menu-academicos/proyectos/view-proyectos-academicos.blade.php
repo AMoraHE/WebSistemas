@@ -56,14 +56,12 @@
 
 					<thead>
 						<tr>
-							<th>Proyecto</th>
 							<th>Desarrolladores</th>
 							<th>Descripción</th><!--Comentar-->
 						</tr>
 					</thead>
 
 						<tr>
-							<td>{{$proyecto->proyecto}}</td>
 							<td>
 
 							<ul>
@@ -96,19 +94,45 @@
 
 	</div>
 
+<!----------------------------------------------------------------- GALERÍA ---------------------------------------------------------->
+	<div class="formulario">
+
+		<label>Mini Galería: </label>
+
+	</div>
+
+	<div class="seccion-mini-galeria">
+
+		@foreach ($imagenes as $imagen)
+		@if($imagen->proySlug == $proyecto ->slug)
+
+		<div class="contenedor-img-mini-galeria">
+
+			<div class="contenedor-img-mini-galeria-img">
+
+				<img src="/images/proyectos/{{$imagen->imagen}}">
+
+			</div>
+
+			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/ProyectosAcademicosGaleria-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
+			
+		</div>
+
+		@endif
+		@endforeach
+
+	</div>
+
 <!---------------BOTONES PROYECTOS------------------------------------->
 
 	<div class="contenedor-botones">
 
-    <form method="POST" action="/ProyectosAcademicos/{{$proyecto->slug}}" enctype="multipart/form-data">
-        @method('DELETE')
-        @csrf
+	    	<a onclick="return confirm('¿Desea eliminar el proyecto: {{$proyecto->proyecto}}?')" href="/ProyectosAcademicos-Eliminar/{{$proyecto->slug}}"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
 
-		<a onclick="return confirm('¿Desea eliminar el proyecto {{$proyecto->proyecto}}?')"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
+		  	<a onclick="return confirm('¿Desea editar el proyecto: {{$proyecto->proyecto}}?')" href="/ProyectosAcademicos/{{$proyecto->slug}}/edit">	<button class="btn editar"><span>Editar</span></button></a>
 
-  	</form>
+		 	<a onclick="return confirm('¿Desea agregar imágenes?')" href="/ProyectosAcademicos/agregar/{{$proyecto->slug}}"><button class="btn agregar"><span>Agregar Imágenes</span></button></a>
 
-	  	<a onclick="return confirm('¿Desea editar el proyecto {{$proyecto->proyecto}}?')" href="/ProyectosAcademicos/{{$proyecto->slug}}/edit">	<button class="btn editar"><span>Editar</span></button></a>
 
 	</div>
 

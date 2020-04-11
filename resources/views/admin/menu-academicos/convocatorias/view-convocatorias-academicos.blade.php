@@ -33,16 +33,6 @@
 
 	</div>
 
-	<div class="contenedor-enlaces">
-			
-		<a target="_blank" rel="noopener noreferrer" href="/ConvocatoriasAcademicos/{{$convocatoria->slug}}">{{$convocatoria->doc}}</a>
-
-	</div>
-
-	@php
-	$var = $convocatoria->slug
-	@endphp
-
 	<!----------------------------------------------------------------- DIVISOR ---------------------------------------------------------->
 
 	<div class="divisor-contenido"></div>
@@ -56,40 +46,55 @@
 
 			<div class="tabla-informacion-escolar">
 
-				<table>
+			<div class="contenedor-formulario-dividido">
 
-					<thead>
-						<tr>
-							<th>Convocatoria</th>
-							<th>Descripción</th>
-							<th>Fecha Inicio</th>
-							<th>Fecha Final</th>
-						</tr>
-					</thead>
+			    <div class="columna-de-dos">
 
-						<tr>
-							<td>{{$convocatoria->convocatoria}}</td>
+			      <div class="formulario">
 
-							<td>{{$convocatoria->descripcion}}</td><!--Comentar-->
+			        <label>Fecha Inicio</label>
+			        <input  type="date" id="FInicio" class="form-control" name="FInicio" value="{{$convocatoria->FInicio}}" readonly />
 
-							<td>dd/mm/aaa</td>
-							<td>dd/mm/aaa</td>
+			      </div>
 
-						</tr>
+			    </div>
 
-<!--					<thead>
-						<tr>
-							<th colspan="4">Descripción</th>
-						</tr>
-					</thead>
+			    <div class="columna-de-dos">
 
-						<tr>
-							<td colspan="4">{{$convocatoria->descripcion}}</td>
-						</tr>	-->
+			      <div class="formulario">
 
-				</table>
+			        <label>Fecha Cierre</label>
+			        <input  type="date" id="FFin" class="form-control" name="FFin" value="{{$convocatoria->FFin}}" readonly />
+
+			      </div>
+
+			    </div>
+
+			  </div>
+
+			  <div class="contenedor-cuerpo-seccion">
+		
+					<div class="contenedor-texto-completo">
+						
+						<p>{{$convocatoria->descripcion}}</p>
+
+					</div>
+
+				</div>
+
+				
 
 			</div>
+
+			<div class="contenedor-enlaces">
+			
+				<a target="_blank" rel="noopener noreferrer" href="/ConvocatoriasAcademicos/{{$convocatoria->slug}}">{{$convocatoria->doc}}</a>
+
+			</div>
+
+			@php
+			$var = $convocatoria->slug
+			@endphp
 
 		</div>
 
@@ -102,14 +107,8 @@
 		<a href="{{route('descargar-convocatoria', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
 
 		 <a onclick="return confirm('¿Desea editar la convocatoria seleccionada?')" href="/ConvocatoriasAcademicos/{{$convocatoria->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
-		  	
-	    <form method="POST" action="/ConvocatoriasAcademicos/{{$convocatoria->slug}}" enctype="multipart/form-data">
-	        @method('DELETE')
-	        @csrf
 
-			<a onclick="return confirm('¿Desea eliminar la convocatoria seleccionada?')"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
-
-	  	</form>
+		 <a onclick="return confirm('¿Desea eliminar la convocatoria seleccionada?')" href="/ConvocatoriasAcademicos-Eliminar/{{$convocatoria->slug}}"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a> 	
 
 	</div>
 

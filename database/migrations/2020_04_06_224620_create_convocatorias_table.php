@@ -15,11 +15,12 @@ class CreateConvocatoriasTable extends Migration
     {
         Schema::create('convocatorias', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('aplicacion')->unique();
             $table->text('convocatoria');
             $table->text('descripcion');
-            $table->text('newimage');
-            $table->string('slug')->unique();
+            $table->text('doc');
+            $table->string('FInicio');
+            $table->string('FFin');
+            $table->string('slug');
             $table->timestamps();
         });
     }

@@ -31,11 +31,7 @@
     </div>
 
     <div class="contenedor-botones">
-        <form method="POST" action="/noticias-admin/{{$noticia->slug}}" enctype="multipart/form-data">
-            @csrf
-            @method('DELETE')
-            <a onclick="return confirm('¿Desea eliminar este elemento?')"><button class="btn"><span>Eliminar</span></button></a>
-        </form>
+        <a onclick="return confirm('¿Desea eliminar este elemento?')" href="/noticias-admin-eliminar/{{$noticia->slug}}"><button class="btn"><span>Eliminar</span></button></a>
         <a onclick="return confirm('¿Desea editar este elemento?')" href="/noticias-admin/{{$noticia->slug}}/editar">
             <button class="btn"><span>Editar</span></button>
         </a>

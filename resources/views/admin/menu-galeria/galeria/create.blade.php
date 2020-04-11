@@ -25,7 +25,7 @@
 
 	  	<div class="contenedor-botones">     
 
-			<a onclick="return confirm('¿Desea guardar la información ingresada?')"><button type="submit" class="btn guardar"><span>Guardar</span></button></a>
+			<a onclick="return confirm('¿Desea guardar la información ingresada?')" href="/Album-Registrar"><button type="submit" class="btn guardar"><span>Guardar</span></button></a>
 			<a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Album-Index"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 
 		</div>
