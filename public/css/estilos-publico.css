@@ -19,7 +19,16 @@ html {
 }
 
 
-
+body {
+    position: relative;
+    margin: 0;
+    width: 1920px;
+    min-width: 320px;
+    min-height: 100%;
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    line-height: 18px;
+}
 
 a {
     text-decoration: none;
