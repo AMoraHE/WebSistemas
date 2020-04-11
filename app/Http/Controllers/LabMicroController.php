@@ -46,6 +46,7 @@ class LabMicroController extends Controller
         $validator = Validator::make($request->all(), [
         'imgInicio' => 'required|mimes:jpeg,png,bmp,tiff,gif',
         'descripcion' => 'required|string',
+        'nombre' => 'required|string',
         'responsable' => 'required|string',
         'correo' => 'required|string|email',
         'slug' => 'required|string',
@@ -69,6 +70,7 @@ class LabMicroController extends Controller
                 $file->move(public_path().'/images/infra/',$name);
             }
     
+            $infra->nombre = $request->input('nombre');
             $infra->descripcion = $request->input('descripcion');
             $infra->responsable = $request->input('responsable');
             $infra->correo = $request->input('correo');
@@ -115,6 +117,7 @@ class LabMicroController extends Controller
         $validator = Validator::make($request->all(), [
         'imgInicio' => 'mimes:jpeg,png,bmp,tiff,gif',
         'descripcion' => 'required|string',
+        'nombre' => 'required|string',
         'responsable' => 'required|string',
         'correo' => 'required|string|email',
         ]);

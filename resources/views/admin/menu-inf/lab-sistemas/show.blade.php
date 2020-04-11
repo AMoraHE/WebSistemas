@@ -34,7 +34,7 @@
 		
 		<div class="contenedor-titulo-seccion">
 	
-			<h3>Laboratorio de Sistemas</h3>
+			<h3>{{$infra->nombre}}</h3>
 
 		</div>
 
