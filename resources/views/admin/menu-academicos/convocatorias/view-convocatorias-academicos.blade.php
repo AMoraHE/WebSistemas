@@ -21,7 +21,7 @@
 
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea agregar una nueva convocatoria?')" href="/ConvocatoriasAcademicos/create"><button class="btn agregar"><span>Agregar</span></button></a>
+		<a class="msj" mesanje="agregar una nueva convocatoria?" href="/ConvocatoriasAcademicos/create"><button class="btn agregar"><span>Agregar</span></button></a>
 
 	</div>
 
@@ -70,19 +70,15 @@
 
 			    </div>
 
-			  </div>
+			 </div>
 
-			  <div class="contenedor-cuerpo-seccion">
+			 <div class="contenedor-cuerpo-seccion">
 		
-					<div class="contenedor-texto-completo">
+				<div class="contenedor-texto-completo">
 						
-						<p>{{$convocatoria->descripcion}}</p>
-
-					</div>
+					<p>{{$convocatoria->descripcion}}</p>
 
 				</div>
-
-				
 
 			</div>
 
@@ -96,6 +92,8 @@
 			$var = $convocatoria->slug
 			@endphp
 
+			</div>
+
 		</div>
 
 	</div>
@@ -106,9 +104,9 @@
 
 		<a href="{{route('descargar-convocatoria', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
 
-		 <a onclick="return confirm('¿Desea editar la convocatoria seleccionada?')" href="/ConvocatoriasAcademicos/{{$convocatoria->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
+		 <a class="msj" mesanje="editar esta convocatoria?" href="/ConvocatoriasAcademicos/{{$convocatoria->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
 
-		 <a onclick="return confirm('¿Desea eliminar la convocatoria seleccionada?')" href="/ConvocatoriasAcademicos-Eliminar/{{$convocatoria->slug}}"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a> 	
+		 <a class="msj" mesanje="eliminar esta convocatoria?" href="/ConvocatoriasAcademicos-Eliminar/{{$convocatoria->slug}}"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a> 	
 
 	</div>
 

@@ -16,7 +16,7 @@
 
 <!----------------------------------------------------------------- FORMULARIO - RETICULA ---------------------------------------------------------->
 
-	<form class="form-group" method="POST" action="/VerReticula" enctype="multipart/form-data">
+	<form id="formulario" class="form-group" method="POST" action="/VerReticula" enctype="multipart/form-data">
 	    @csrf
 
 		<div class="formulario">
@@ -108,8 +108,8 @@
 
 		<div class="contenedor-botones">
 		                
-		    <a onclick="return confirm('¿Desea registrar la nueva retícula?')" href="/Reticula-Registrar"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
-		    <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="{{route('reticula')}}"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+		    <a id="save" texto="guardar la nueva retícula?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+		    <a class="msj" mesanje="Cancelar?" href="{{route('reticula')}}"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 
 		</div>
 

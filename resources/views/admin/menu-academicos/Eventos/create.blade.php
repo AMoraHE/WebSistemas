@@ -17,7 +17,7 @@
 
 
 <!------------------------FORMULARIO---------------------------------------------------------->
-<form class="form-group" method="POST" action="/EventosAcademicos" enctype="multipart/form-data">
+<form id="formulario" class="form-group" method="POST" action="/EventosAcademicos" enctype="multipart/form-data">
 	    @csrf
 
 	    <div class="formulario">
@@ -121,8 +121,8 @@
 
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea guardar el nuevo evento?')" href="/EventosAcademicos-Registrar"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
- 		<a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/EventosAcademicos"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+		<a id="save" texto="guardar el nuevo evento?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+ 		<a class="msj" mesanje="Cancelar?" href="/EventosAcademicos"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 	
 
 	</div>

@@ -7,14 +7,18 @@
 
 
 <!----------------------------------------------------------------- Lab Celula---------------------------------------------------------->
-<form class="form-group" files="true" method="POST" action="/Lab-Celula/{{$infra->slug}}" enctype="multipart/form-data">
+<form id="formulario" class="form-group" files="true" method="POST" action="/Lab-Celula/{{$infra->slug}}" enctype="multipart/form-data">
   @method('PUT')
   @csrf
     @include('admin.menu-inf.formEdit')
-	  <div class="contenedor-botones">     
-      <a onclick="return confirm('¿Desea guardar los cambios?')"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
-        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Lab-Celula"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+
+	 <div class="contenedor-botones">   
+
+     	<a id="save" texto="guardar cambios?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+        <a class="msj" mesanje="Cancelar?" href="/Lab-Celula"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+
     </div>
+
 </form>
 
-@endsection;
+@endsection

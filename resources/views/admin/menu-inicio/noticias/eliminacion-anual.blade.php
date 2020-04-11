@@ -19,7 +19,7 @@
 		<?php
 		$cont = date('Y');
 		?>
-		<form class="form-goup" method="POST" action="/noticias-admin/eliminacion-multiple" enctype="multipart/form-data">
+		<form id="formulario" class="form-goup" method="POST" action="/noticias-admin/eliminacion-multiple" enctype="multipart/form-data">
 			@csrf
 
 		<select name="year" id="year" class="seleccion">
@@ -38,7 +38,7 @@
 
 		<div class="btn-eliminacion-anual">
 
-			<a onclick="return confirm('¿Desea realizar la eliminación anual?')" href="/noticias-admin/eliminacion-multiple"><button class="btn"><span>Eliminar</span></button></a>
+			<a id="save" texto="eliminar todas las noticias?"><button class="btn eliminar"><span>Eliminar</span></button></a>
 
 		</div>
 
@@ -85,7 +85,7 @@
 
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea cancelar la eliminacion anual?')" href="/noticias-admin"><button class="btn"><span>Cancelar</span></button></a>
+		<a class="msj" mesanje="Cancelar" href="/noticias-admin"><button class="btn cancelar"><span>Cancelar</span></button></a>
 
 	</div>
 

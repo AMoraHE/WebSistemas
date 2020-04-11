@@ -21,7 +21,7 @@
 
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea agregar un nuevo Proyecto?')" href="/ProyectosAcademicos/create"><button class="btn agregar"><span>Agregar</span></button></a>
+		<a class="msj" mesanje="agregar un nuevo proyecto?" href="/ProyectosAcademicos/create"><button class="btn agregar"><span>Agregar</span></button></a>
 
 	</div>
 
@@ -114,7 +114,7 @@
 
 			</div>
 
-			<a onclick="return confirm('¿Desea eliminar esta imagen?')" href="/ProyectosAcademicosGaleria-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
+			<a class="msj" mesanje="eliminar esta imagen?" href="/ProyectosAcademicosGaleria-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
 			
 		</div>
 
@@ -127,11 +127,11 @@
 
 	<div class="contenedor-botones">
 
-	    	<a onclick="return confirm('¿Desea eliminar el proyecto: {{$proyecto->proyecto}}?')" href="/ProyectosAcademicos-Eliminar/{{$proyecto->slug}}"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
+	    	<a class="msj" mesanje="eliminar el proyecto: {{$proyecto->proyecto}}? ?" href="/ProyectosAcademicos-Eliminar/{{$proyecto->slug}}"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
 
-		  	<a onclick="return confirm('¿Desea editar el proyecto: {{$proyecto->proyecto}}?')" href="/ProyectosAcademicos/{{$proyecto->slug}}/edit">	<button class="btn editar"><span>Editar</span></button></a>
+		  	<a class="msj" mesanje="editar el proyecto: {{$proyecto->proyecto}}?" href="/ProyectosAcademicos/{{$proyecto->slug}}/edit">	<button class="btn editar"><span>Editar</span></button></a>
 
-		 	<a onclick="return confirm('¿Desea agregar imágenes?')" href="/ProyectosAcademicos/agregar/{{$proyecto->slug}}"><button class="btn agregar"><span>Agregar Imágenes</span></button></a>
+		 	<a class="msj" mesanje="agregar imágenes?" href="/ProyectosAcademicos/agregar/{{$proyecto->slug}}"><button class="btn agregar"><span>Agregar Imágenes</span></button></a>
 
 
 	</div>

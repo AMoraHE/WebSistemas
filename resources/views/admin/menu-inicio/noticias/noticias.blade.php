@@ -18,8 +18,8 @@
 
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea acceder a la eliminación anual?')" href="/noticias-admin/eliminacion-anual/"><button class="btn eliminar"><span>Eliminación Anual</span></button></a>
-		<a onclick="return confirm('¿Desea registrar una nueva noticia?')" href="/noticias-admin/create"><button class="btn agregar"><span>Agregar Noticia</span></button></a>
+		<a class="msj" mesanje="entrar a eliminación anual?" href="/noticias-admin/eliminacion-anual/"><button class="btn eliminar"><span>Eliminación Anual</span></button></a>
+		<a class="msj" mesanje="agregar más noticias?" href="/noticias-admin/create"><button class="btn agregar"><span>Agregar Noticia</span></button></a>
 
 	</div>
 
@@ -75,8 +75,8 @@
 <!-------------------------------------------------------------- BOTONES NOTICIAS----------------------------------------------------------------------------->
 
 	<div class="contenedor-botones">
-		<a onclick="return confirm('¿Desea eliminar la noticia seleccionada?')" href="/noticias-admin-eliminar/{{$noticia->slug}}"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
-	  	<a onclick="return confirm('¿Desea editar la noticia seleccionada?')" href="/noticias-admin/{{$noticia->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
+		<a class="msj" mesanje="eliminar la noticia?" href="/noticias-admin-eliminar/{{$noticia->slug}}"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
+	  	<a class="msj" mesanje="editar la noticia?" href="/noticias-admin/{{$noticia->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
 
 	</div>
 

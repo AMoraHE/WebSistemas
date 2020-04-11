@@ -22,7 +22,7 @@
           
   </div>
 
-  <form class="form-group" method="POST" action="/Organigrama" enctype="multipart/form-data">
+  <form id="formulario" class="form-group" method="POST" action="/Organigrama" enctype="multipart/form-data">
     @csrf
 
     <div class="contenedor-cargar-img">
@@ -152,8 +152,8 @@
 
     <div class="contenedor-botones">
                     
-      <a onclick="return confirm('¿Desea guardar el nuevo elemento?')" href="/Organigrama-Registrar"><button type="submit" class="btn agregar"><span>Agregar</span></button></a>
-      <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Organigrama"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+      <a id="save" texto="guardar la información?"><button type="submit" class="btn agregar"><span>Agregar</span></button></a>
+      <a class="msj" mesanje="Cancelar?" href="/Organigrama"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 
     </div>
 

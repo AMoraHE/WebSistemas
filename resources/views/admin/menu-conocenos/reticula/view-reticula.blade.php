@@ -18,7 +18,7 @@
 
 	<div class="contenedor-botones">
 			
-		<a onclick="return confirm('¿Desea registrar una nueva retícula?')" href="{{route('crear-reticula')}}"><button class="btn agregar"><span>Agregar</span></button></a>
+		<a class="msj" mesanje="registrar una nueva retícula?" href="{{route('crear-reticula')}}"><button class="btn agregar"><span>Agregar</span></button></a>
 			
 	</div>
 
@@ -59,8 +59,8 @@
 	<div class="contenedor-botones">
 			
 		<a href="{{route('descargar', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
-		<a onclick="return confirm('¿Desea modificar esta retícula?')" href="/VerReticula/{{$reticula->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
-		<a onclick="return confirm('¿Desea eliminar esta retícula?')" href="Reticula-Eliminar/{{$reticula->slug}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
+		<a class="msj" mesanje="modificar esta retícula?" href="/VerReticula/{{$reticula->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
+		<a class="msj" mesanje="eliminar esta retícula?" href="Reticula-Eliminar/{{$reticula->slug}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
 
 	</div>
 

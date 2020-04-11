@@ -7,14 +7,18 @@
 
 
 <!----------------------------------------------------------------- Lab Celula---------------------------------------------------------->
-<form class="form-group" files="true" method="POST" action="/Album/{{$album->slug}}" enctype="multipart/form-data">
+<form id="formulario" class="form-group" files="true" method="POST" action="/Album/{{$album->slug}}" enctype="multipart/form-data">
   @method('PUT')
   @csrf
     @include('admin.menu-galeria.formEdit')
+
 	  <div class="contenedor-botones">     
-      <a onclick="return confirm('¿Desea guardar los cambios?')"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
-        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Album"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+
+      	<a id="save" texto="guardar cambios?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+        <a class="msj" mesanje="Cancelar?" href="/Album"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+
     </div>
+
 </form>
 
-@endsection;
+@endsection

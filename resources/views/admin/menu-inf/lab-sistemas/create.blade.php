@@ -16,7 +16,7 @@
 
 <!----------------------------------------------------------------- Lab Sistemas---------------------------------------------------------->
 
-	<form class="form-group" files = "true" method="POST" action="/Lab-Sistemas" enctype="multipart/form-data">
+	<form id="formulario" class="form-group" files = "true" method="POST" action="/Lab-Sistemas" enctype="multipart/form-data">
 		
 
 		<!----------------------------------------------------------------- Cargar Imagen ---------------------------------------------------------->
@@ -24,8 +24,8 @@
 
 		<div class="contenedor-botones">
 	                      
-	        <a onclick="return confirm('¿Desea guardar la información ingresada?')" href="/Lab-Sistemas-Registrar"><button type="submit" class="btn guardar"><span>Guardar</span></button></a>
-	        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Lab-Sistemas"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+	        <a id="save" texto="guardar la información?"><button type="submit" class="btn guardar"><span>Guardar</span></button></a>
+	        <a class="msj" mesanje="Cancelar?" href="/Lab-Sistemas"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 	      
 	    </div>
 	    

@@ -19,7 +19,7 @@
 <!--------------------------------------------------- FORMULARIO - EDITAR INFORMACION DE LA CARRERA ---------------------------------------------------------------------->
 
 
-	<form class="form group" method="POST" action="/informacion/{{$informacion->slug}}" enctype="multipart/form-data">
+	<form id="formulario" class="form group" method="POST" action="/informacion/{{$informacion->slug}}" enctype="multipart/form-data">
 		@method('PUT')
 		@csrf
 
@@ -33,8 +33,8 @@
 
 		<div class="contenedor-botones">
 					
-			<a onclick="return confirm('¿Seguro que desea actualizar?')"><button type="submit" class="btn guardar"><span>Guardar</span></button></a>
-			<a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/informacion"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+			<a id="save" texto="guardar cambios?"><button type="submit" class="btn guardar"><span>Guardar</span></button></a>
+			<a class="msj" mesanje="Cancelar" href="/informacion"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 	
 		</div> 
 		

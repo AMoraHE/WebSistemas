@@ -18,7 +18,7 @@
   
   <div class="contenedor-botones">
 
-    <a onclick="alert('slider/create');"><button class="btn agregar"><span>Agregar</span></button></a>
+    <a class="msj" mesanje="agregar más slider" href="slider/create"><button class="btn agregar"><span>Agregar</span></button></a>
 
   </div>
 
@@ -46,8 +46,8 @@
 
   <div class="contenedor-botones">
 
-    <a onclick="alert('/slider/{{$slider->slug}}/edit');"><button class="btn editar"><span>Editar</span></button></a>
-    <a onclick="alert('/slider-eliminar/{{$slider->slug}}');"><button class="btn eliminar" type="submit"><span>Eliminar</span></button></a>
+    <a class="msj" mesanje="editar el slider" href="/slider/{{$slider->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
+    <a class="msj" mesanje="eliminar el slider" href="/slider-eliminar/{{$slider->slug}}"><button class="btn eliminar" type="submit"><span>Eliminar</span></button></a>
 
   </div>
 

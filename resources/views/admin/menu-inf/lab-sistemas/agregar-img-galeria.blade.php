@@ -20,7 +20,7 @@
 
   <!------------------------------------------------------------- INFORMACIÓN ---------------------------------------------------------->
 
-      <form class="form-group" files = "true" method="POST" action="/Img-Lab-Sistemas" enctype="multipart/form-data">
+      <form id="formulario" class="form-group" files = "true" method="POST" action="/Img-Lab-Sistemas" enctype="multipart/form-data">
         @csrf
       <div class="formulario">
 
@@ -61,7 +61,7 @@
 
   		<div class="contenedor-botones">
 
-  			<a onclick="return confirm('¿Desea guardar el nuevo elemento?')" href="/Img-Lab-Sistemas-Registrar"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+  			<a id="save" texto="guardar el nuevo elemento?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
 
   		</div>
     </form>
@@ -95,7 +95,7 @@
 
        <div class="contenedor-botones">
 
-      <a onclick="return confirm('¿Desea regresar al menú anterior?')" href="/Lab-Sistemas"><button type="button finalizar" class="btn"><span>Finalizar</span></button></a>
+      <a class="msj" mesanje="Finalizar?" href="/Lab-Sistemas"><button type="button" class="btn finalizar"><span>Finalizar</span></button></a>
     
       </div>
 

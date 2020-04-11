@@ -16,7 +16,7 @@
 
 <!-------------------------------------------------------- FORMULARIO CREAR SECCION CONOCENOS PERFIL ----------------------------------------------------------> 
 
-	<form class="form-group" method="POST" action="/PerfilEgreso/{{$perfilegreso->slug}}">
+	<form id="formulario" class="form-group" method="POST" action="/PerfilEgreso/{{$perfilegreso->slug}}">
 	    @method('PUT')
 	    @csrf
 
@@ -36,8 +36,8 @@
 
 		<div class="contenedor-botones">
 		                
-		    <a onclick="return confirm('¿Desea guardar los cambios?')"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
-		    <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Perfil-Egreso-Lista"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+		    <a id="save" texto="guardar cambios?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+		    <a class="msj" mesanje="Cancelar?" href="/Perfil-Egreso-Lista"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 		        
 		</div>
 

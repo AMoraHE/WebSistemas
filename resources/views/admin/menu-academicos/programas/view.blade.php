@@ -21,7 +21,7 @@
 
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea agregar un nuevo programa?')" href="/ProgramasAcademicos/create"><button class="btn agregar"><span>Agregar</span></button></a>
+		<a class="msj" mesanje="agregar un nuevo programa?" href="/ProgramasAcademicos/create"><button class="btn agregar"><span>Agregar</span></button></a>
 
 	</div>
 
@@ -106,9 +106,9 @@
 
 		<a href="{{route('descargar-programa', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
 
-		<a onclick="return confirm('¿Desea editar la convocatoria seleccionada?')" href="/ProgramasAcademicos/{{$programa->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
+		<a class="msj" mesanje="editar este programa?" href="/ProgramasAcademicos/{{$programa->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
 
-		<a onclick="return confirm('¿Desea eliminar el programa seleccionado?')" href="/ProgramasAcademicos-Eliminar/{{$programa->slug}}"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
+		<a class="msj" mesanje="eliminar este programa?" href="/ProgramasAcademicos-Eliminar/{{$programa->slug}}"><button type="submit" class="btn eliminar"><span>Eliminar</span></button></a>
 
 	</div>
 

@@ -14,7 +14,7 @@
 
 	</div>
 
-  	<form class="form-goup"  files = "true" method="POST" action="/noticias-admin" enctype="multipart/form-data">
+  	<form id="formulario" class="form-goup"  files = "true" method="POST" action="/noticias-admin" enctype="multipart/form-data">
     @csrf
 
 <!----------------------------------------------------------------- FORMULARIO NOTICIAS ----------------------------------------------------------------------------->
@@ -91,8 +91,8 @@
 
 	<div class="contenedor-botones">
 
- 		<a onclick="return confirm('¿Desea guardar la nueva noticia?')" href="/noticias-admin-registrar"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
- 		<a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/noticias-admin"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+ 		<a id="save" texto="guardar cambios?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+ 		<a class="msj" mesanje="Cancelar?" href="/noticias-admin"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
               
 	</div>
 
