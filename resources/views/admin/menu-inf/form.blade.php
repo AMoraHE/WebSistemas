@@ -48,6 +48,23 @@
 
 <div class="formulario">
 
+  <label>Titulo del Laboratorio</label>
+  <input type="text" name="nombre" value="{{old('nombre')}}" placeholder="Titulo Laboratorio">
+
+  @if ($errors->has('nombre'))
+            
+    <span class="invalid-feedback" role="alert">
+      
+      <strong>{{ $errors->first('nombre') }}</strong>
+    
+    </span>
+
+  @endif
+
+</div>
+
+<div class="formulario">
+
   <label>Descripción</label>
   <textarea name="descripcion" placeholder="Descripcion">{{old('descripcion')}}</textarea>
 

@@ -33,7 +33,7 @@
 	
 	<div class="contenedor-titulo-seccion">
 	
-		<h3>Laboratorio de Cisco</h3>
+		<h3>{{$infra->nombre}}</h3>
 
 	</div>
 

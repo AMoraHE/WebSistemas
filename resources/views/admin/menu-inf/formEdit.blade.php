@@ -48,6 +48,28 @@
 
 <div class="formulario">
 
+  <label>Titulo de Laboratorio</label>
+
+  @if ($errors->any())
+  <input type="text" name="nombre" id ="" value="{{old('nombre')}}"  class="form-control" required>
+  @else
+  <input type="text" name="nombre" id ="" value="{{$infra->nombre}}"  class="form-control" required>
+
+</div>
+
+  @endif
+
+  @if ($errors->has('nombre'))
+  <span class="invalid-feedback" role="alert">
+
+    <strong>{{ $errors->first('nombre') }}</strong>
+
+  </span>
+
+  @endif
+
+<div class="formulario">
+
   <label>Responsable</label>
 
   @if ($errors->any())
