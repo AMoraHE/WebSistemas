@@ -48,7 +48,7 @@
 
   <div class="contenedor-botones">
       
-      <a onclick="return confirm('¿Desea agregar un nuevo elemento?')" href="{{route('OrganigramaCrear')}}"><button class="btn agregar"><span>Agregar</span></button></a>
+      <a class="msj" mesanje="agregar un nuevo elemento?" href="{{route('OrganigramaCrear')}}"><button class="btn agregar"><span>Agregar</span></button></a>
       
   </div>
 
@@ -96,11 +96,11 @@
                 
             <td>
               
-              <a onclick="return confirm('¿Seguro que desea eliminar este elemento?')" href="/Organigrama-Eliminar/{{$organigrama->slug}}"><button class="btn-tabla eliminar" type="submit"><i class="far fa-trash-alt"></i></button></a>
+              <a class="msj" mesanje="eliminar este elemento?" href="/Organigrama-Eliminar/{{$organigrama->slug}}"><button class="btn-tabla eliminar" type="submit"><i class="far fa-trash-alt"></i></button></a>
             
             </td>
 
-            <td><a href="/Organigrama/{{$organigrama->slug}}/edit" onclick="return confirm('¿Seguro que desea editar este elemento?')"><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a></td>
+            <td><a class="msj" mesanje="editar este elemento?" href="/Organigrama/{{$organigrama->slug}}/edit"><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a></td>
           
           </tr>
               

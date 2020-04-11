@@ -9,7 +9,7 @@
 <!----------------------------------------------------------------- SLIDER ---------------------------------------------------------->
 
 @if(count($sliders) <=3  )
-	<form class="form-goup" files="true" method="POST" action="/slider" enctype="multipart/form-data">
+	<form id="formulario" class="form-goup" files="true" method="POST" action="/slider" enctype="multipart/form-data">
   @csrf
 
 <!----------------------------------------------------------------- FORMULARIO SLIDER ---------------------------------------------------------->
@@ -72,7 +72,7 @@
 
   <div class="contenedor-botones">
 
-  	<a onclick="return confirm('¿Desea guardar el nuevo elemento?')" href="/slider-registrar"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+  	<a id="save"  texto="guardar cambios?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
 
   </div>
 
@@ -117,7 +117,7 @@
 
   <div class="contenedor-botones">
 
-    <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/slider"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+    <a class="msj" mesanje="Cancelar" href="/slider"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
     
   </div>
 

@@ -16,7 +16,7 @@
 
   <!---------------------------------------------------------------FORMULARIO AGREGAR SECCION CUERPO ACADEMICO ----------------------------------------------------------> 
 
-  <form class="form-group" method="POST" action="/CuerposAcademicos">
+  <form id="formulario" class="form-group" method="POST" action="/CuerposAcademicos">
     @csrf
 
     <div class="formulario">
@@ -58,8 +58,8 @@
 
     <div class="contenedor-botones">
                       
-      <a onclick="return confirm('¿Desea guardar el nuevo elemento?')" href="/CuerposAcademicosRegistrar"><button type="submit" class="btn agregar"><span>Agregar</span></button></a>
-      <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/CuerposAcademicos"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+      <a id="save" texto="guardar la información?"><button type="submit" class="btn agregar"><span>Agregar</span></button></a>
+      <a class="msj" mesanje="Cancelar?" href="/CuerposAcademicos"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
       
     </div>
 

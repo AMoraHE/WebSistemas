@@ -40,7 +40,7 @@
 
 <!----------------------------------------------------------------- FORMULARIO SLIDER ---------------------------------------------------------->
 
-  <form class="form-goup" files="true" method="POST" action="/slider/{{$slider->slug}}" enctype="multipart/form-data">
+  <form id="formulario" class="form-goup" files="true" method="POST" action="/slider/{{$slider->slug}}" enctype="multipart/form-data">
       @method('PUT')
       @csrf
 
@@ -105,7 +105,7 @@
 
   		<div class="contenedor-botones">
 
-  			<a onclick="return confirm('¿Desea guardar los cambios realizados?')"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+  			<a id="save"  texto="guardar cambios?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
 
   		</div>
 
@@ -144,7 +144,7 @@
 
   <div class="contenedor-botones">
 
-    <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/slider"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+    <a class="msj" mesanje="Cancelar" href="/slider"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 
   </div>
   

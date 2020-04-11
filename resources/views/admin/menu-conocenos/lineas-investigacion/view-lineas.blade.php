@@ -24,7 +24,7 @@
 
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea agregar un nuevo elemento?')" href="{{route('crear-Linea-Investigacion')}}"><button class="btn agregar"><span>Agregar</span></button></a>
+		<a class="msj" mesanje="agregar un nuevo elemento?" href="{{route('crear-Linea-Investigacion')}}"><button class="btn agregar"><span>Agregar</span></button></a>
 
 	</div>
 					
@@ -54,11 +54,11 @@
 							<td>{{$lineainvestigacio->clave}}</td>
 							
 							<td>
-								<a onclick="return confirm('¿Desea eliminar este elemento?')" href="Eliminar-Linea-Investigacion/{{$lineainvestigacio->slug}}"><button class="btn-tabla eliminar"><i class="far fa-trash-alt"></i></button></a>
+								<a class="msj" mesanje="eliminar este elemento?" href="Eliminar-Linea-Investigacion/{{$lineainvestigacio->slug}}"><button class="btn-tabla eliminar"><i class="far fa-trash-alt"></i></button></a>
 							</td>
 
 							<td>
-								<a onclick="return confirm('¿Desea editar este elemento?')" href="/Lineas-Investigacion/{{$lineainvestigacio->slug}}/edit"><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a>
+								<a class="msj" mesanje="editar este elemento?" href="/Lineas-Investigacion/{{$lineainvestigacio->slug}}/edit"><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a>
 							</td>	
 
 						</tr>

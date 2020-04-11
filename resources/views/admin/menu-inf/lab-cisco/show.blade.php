@@ -17,7 +17,7 @@
 	@else
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea registrar nueva información?')" href="/Lab-Cisco/create"><button class="btn agregar"><span>Agregar</span></button></a>
+		<a class="msj" mesanje="registrar nueva información?" href="/Lab-Cisco/create"><button class="btn agregar"><span>Agregar</span></button></a>
 
 	</div>
 	@endif
@@ -27,7 +27,7 @@
 <!----------------------------------------------------------------- Lab Cisco---------------------------------------------------------->
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea modificar la información del laboratorio?')" href="/Lab-Cisco/{{$infra->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a> <!-- Editar Todo -->
+		<a class="msj" mesanje="modificar la información del laboratorio?" href="/Lab-Cisco/{{$infra->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a> <!-- Editar Todo -->
 
 	</div>
 	
@@ -41,7 +41,7 @@
 
 	<div class="contenedor-botones">
 			
-		<a onclick="return confirm('¿Desea agregar una imagen?')" href="/Img-Lab-Cisco/create"><button class="btn agregar"><span>Agregar Imágenes</span></button></a>
+		<a class="msj" mesanje="agregar una imagen?" href="/Img-Lab-Cisco/create"><button class="btn agregar"><span>Agregar Imágenes</span></button></a>
 
 	</div>
 	

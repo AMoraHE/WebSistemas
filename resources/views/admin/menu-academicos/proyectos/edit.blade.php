@@ -13,7 +13,7 @@
 	</div>
 
 <!---------------------------PROYECTOS------------------------>
- <form class="form-goup" files="true" method="POST" action="/ProyectosAcademicos/{{$proyecto->slug}}" enctype="multipart/form-data">
+ <form id="formulario" class="form-goup" files="true" method="POST" action="/ProyectosAcademicos/{{$proyecto->slug}}" enctype="multipart/form-data">
     @method('PUT')
     {{csrf_field()}}
 
@@ -202,8 +202,8 @@
 <!----------------------------------------------------------------- BOTONES PROYECTOS ---------------------------------------------------------->
 
 	<div class="contenedor-botones">
-		<a onclick="return confirm('¿Desea guardar los cambios realizados?')"><button class="btn guardar" type="submit" ><span>Guardar</span></button></a>
-    <a onclick="return confirm('¿Desea Cancelar el Proceso?')" href="/ProyectosAcademicos"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+		<a id="save" texto="guardar cambios?"><button class="btn guardar" type="submit" ><span>Guardar</span></button></a>
+    <a class="msj" mesanje="Cancelar?" href="/ProyectosAcademicos"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 	
 	</div>
 </form>

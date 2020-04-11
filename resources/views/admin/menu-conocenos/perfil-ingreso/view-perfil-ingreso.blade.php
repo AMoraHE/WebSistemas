@@ -38,7 +38,7 @@
 
 	<div class="contenedor-botones">
 
-		<a onclick="alert('{{route('editar-perfil-ingreso')}}');"><button class="btn editar"><span>Editar</span></button></a>
+		<a class="msj" mesanje="editar la lista de información de perfil ingreso?" href="{{route('editar-perfil-ingreso')}}" ><button class="btn editar"><span>Editar</span></button></a>
 
 	</div>
 		

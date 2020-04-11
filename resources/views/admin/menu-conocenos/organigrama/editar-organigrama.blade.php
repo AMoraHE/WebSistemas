@@ -20,7 +20,7 @@
           
   </div>
 
-  <form method="POST" action="/Organigrama/{{$Organigrama->slug}}" enctype="multipart/form-data">
+  <form id="formulario" method="POST" action="/Organigrama/{{$Organigrama->slug}}" enctype="multipart/form-data">
     @method('PUT')
     @csrf
 
@@ -154,8 +154,8 @@
 
         <div class="contenedor-botones">
                     
-              <a onclick="return confirm('¿Seguro que desea actualizar?')"><button type="submit" class="btn guardar"><span>Guardar</span></button></a>
-              <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Organigrama"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+              <a id="save" texto="guardar cambios?"><button type="submit" class="btn guardar"><span>Guardar</span></button></a>
+              <a class="msj" mesanje="Cancelar?" href="/Organigrama"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 
       </div>
 

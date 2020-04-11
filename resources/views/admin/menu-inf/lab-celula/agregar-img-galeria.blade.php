@@ -20,7 +20,7 @@
 
   <!------------------------------------------------------------- INFORMACIÓN ---------------------------------------------------------->
 
-      <form class="form-group" files = "true" method="POST" action="/Img-Lab-Celula" enctype="multipart/form-data">
+      <form id="formulario" class="form-group" files = "true" method="POST" action="/Img-Lab-Celula" enctype="multipart/form-data">
         @csrf
       <div class="formulario">
 
@@ -66,7 +66,7 @@
 
   		<div class="contenedor-botones">
 
-  			<a onclick="return confirm('¿Desea guardar el nuevo elemento?')" href="/Img-Lab-Celula-Registrar"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+  			<a id="save" texto="guardar el nuevo elemento?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
 
   		</div>
 
@@ -101,7 +101,7 @@
 
        <div class="contenedor-botones">
 
-      <a onclick="return confirm('¿Desea regresar al menú anterior?')" href="/Lab-Celula"><button type="button" class="btn finalizar"><span>Finalizar</span></button></a>
+      <a class="msj" mesanje="Finalizar?" href="/Lab-Celula"><button type="button" class="btn finalizar"><span>Finalizar</span></button></a>
     
       </div>
 

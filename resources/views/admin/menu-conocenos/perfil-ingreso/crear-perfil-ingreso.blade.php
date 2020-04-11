@@ -16,7 +16,7 @@
 
 <!-------------------------------------------------------- FORMULARIO CREAR SECCION CONOCENOS PERFIL ----------------------------------------------------------> 
 
-	<form class="form-group" method="POST" action="/PerfilIngreso">
+	<form id="formulario" class="form-group" method="POST" action="/PerfilIngreso">
 	  	@csrf
 
 		<div class="formulario"> 
@@ -37,8 +37,8 @@
 
 		<div class="contenedor-botones">
 		                
-		    <a onclick="return confirm('¿Desea guardar el nuevo elemento?')" href="/Perfil-Ingreso-Registrar"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
-		    <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="/Perfil-Ingreso-Lista"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+		    <a id="save" texto="guardar la información?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
+		    <a class="msj" mesanje="Cancelar?" href="/Perfil-Ingreso-Lista"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 
 		</div>
 

@@ -38,7 +38,7 @@
 
 	<div class="contenedor-botones">
 
-		<a onclick="return confirm('¿Desea editar la lista del campo laboral?')" href="{{route('CampoLaboralLista')}}"><button class="btn editar"><span>Editar</span></button></a>
+		<a class="msj" mesanje="editar la lista de información de campo laboral?" href="{{route('CampoLaboralLista')}}"><button class="btn editar"><span>Editar</span></button></a>
 
 	</div>
 		
