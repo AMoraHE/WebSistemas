@@ -114,10 +114,8 @@
 
 	@endforeach
 
-	<div>
-		<div>
+	<div id="paginas">
 			{{$programas->links()}}
-		</div>
 	</div>
 
 </div>

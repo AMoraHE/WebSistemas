@@ -139,10 +139,8 @@
 
 	@endforeach
 
-	<div>
-		<div>
+	<div id="paginas">
 			{{$proyectos->links()}}
-		</div>
 	</div>
 
 </div>

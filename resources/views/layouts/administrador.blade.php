@@ -80,10 +80,10 @@
 						
 						<li>
 
-							<form id="formulario" method="POST" action="{{ route('logout') }}">
+							<form id="accion" method="POST" action="{{ route('logout') }}">
 
 							  	@csrf
-							  	<button id="save" texto=" Cerrar Sesión?" class="btn-user"><i class="icono izquierda fas fa-sign-out-alt"></i>Cerrar Sesión</button>
+							  	<button id="logout" texto=" Cerrar Sesión?" class="btn-user"><i class="icono izquierda fas fa-sign-out-alt"></i>Cerrar Sesión</button>
 
 							</form>
 
