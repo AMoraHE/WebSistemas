@@ -106,10 +106,8 @@
 
 				@endforeach
 
-	<div>
-		<div>
+	<div id="paginas">
 			{{$eventos->links()}}
-		</div>
 	</div>
 				
 </div>

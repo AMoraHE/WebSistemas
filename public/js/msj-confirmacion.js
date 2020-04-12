@@ -53,3 +53,23 @@ $('#save').click(function(e) {
 
     });
 });
+
+//FUNCION DE CERRAR SESIÓN
+
+$('#logout').click(function(e) {
+
+    e.preventDefault();
+
+    var mensaje = $(this).attr('texto');
+
+    alertify.confirm("¿Desea " + mensaje,function(e){
+
+        if(e) {
+            $('#accion').submit();
+            return true;
+        } else {
+            return false;
+        }
+
+    });
+});

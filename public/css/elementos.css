@@ -982,9 +982,9 @@
 }
 
 #paginas li a{
-    background: rgb(228, 228, 228);
-    border-radius: 3px;
-    color: rgb(50, 50, 50);
+    background: rgb(27, 57, 106);
+    border-radius: 4px;
+    color: rgb(250, 250, 250);
     padding: 10px 15px;
     text-decoration: none;
 }

@@ -82,10 +82,8 @@
 
 	@endforeach
 
-	<div>
-		<div>
+	<div id="paginas">
 			{{$noticias->links()}}
-		</div>
 	</div>
 
 </div>

@@ -53,10 +53,8 @@
 
 	@endforeach
 
-	<div>
-		<div>
+	<div id="paginas"> 
 			{{$albums->links()}}
-		</div>
 	</div>
 
 </div>
