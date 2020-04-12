@@ -15,7 +15,7 @@ class ReticulaController extends Controller
      */
     public function index()
     {
-        $reticulas = reticula::all();
+        $reticulas = reticula::orderBy('id', 'DESC')->paginate(5);
 
         return view('admin.menu-conocenos.reticula.view-reticula', compact('reticulas'));
     }
@@ -43,7 +43,7 @@ class ReticulaController extends Controller
             'programa' => 'required|string',
             'plan' => 'required|string',
             'especialidad' => 'required|string',
-            'doc' => 'required|mimetypes:application/pdf',
+            'doc' => 'required|mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel',
         ]);
 
         if ($validator->fails()) {
@@ -132,7 +132,7 @@ class ReticulaController extends Controller
             'programa' => 'required|string',
             'plan' => 'required|string',
             'especialidad' => 'required|string',
-            'doc' => 'mimetypes:application/pdf',
+            'doc' => 'mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel',
         ]);
 
         if ($validator->fails()) {
@@ -163,7 +163,6 @@ class ReticulaController extends Controller
             $reticula->programa = $request->input('programa');
             $reticula->plan = $request->input('plan');
             $reticula->especialidad = $request->input('especialidad');
-            $reticula->slug = time();
             $reticula->save();
 
             return redirect()->route('reticula')->with('status','Actualización Exitosa');

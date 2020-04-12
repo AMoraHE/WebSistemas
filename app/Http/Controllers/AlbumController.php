@@ -17,7 +17,7 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        $albums = album::all();
+        $albums = album::orderBy('id', 'DESC')->paginate(5);
 
         $imagenes = DB::table('album_galerias')->join('albums', 'album_galerias.albumSlug', '=', 'albums.slug')->select('album_galerias.*')->get();
 

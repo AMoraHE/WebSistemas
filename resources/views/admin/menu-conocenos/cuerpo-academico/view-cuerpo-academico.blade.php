@@ -16,13 +16,13 @@
 
 	<div class="contenedor-titulo-seccion">
 
-		<h3>Cuerpo Académico</h3>
+		<h3>Cuerpos Académicos</h3>
 
 	</div>
 
 	<div class="contenedor-botones">
 
-		<a class="msj" mesanje="agregar un nuevo elemento?" href="CuerposAcademicos/create"><button class="btn agregar"><span>Agregar</span></button></a>
+		<a class="msj" mesanje="agregar un nuevo CA?" href="CuerposAcademicos/create"><button class="btn agregar"><span>Agregar</span></button></a>
 
 	</div>
 
@@ -64,11 +64,11 @@
 						</td>
 								
 						<td>
-							<a class="msj" mesanje="eliminar este elemento?" href="/CuerposAcademicosEliminar/{{$cuerpo->slug}}"><button class="btn-tabla eliminar"><i class="far fa-trash-alt"></i></button></a>
+							<a class="msj" mesanje="eliminar este CA?" href="/CuerposAcademicosEliminar/{{$cuerpo->slug}}"><button class="btn-tabla eliminar"><i class="far fa-trash-alt"></i></button></a>
 						</td>
 
 						<td>
-							<a class="msj" mesanje="editar este elemento?" href="/CuerposAcademicos/{{$cuerpo->slug}}/edit"><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a>
+							<a class="msj" mesanje="editar este CA?" href="/CuerposAcademicos/{{$cuerpo->slug}}/edit"><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a>
 						</td>	
 
 					</tr>

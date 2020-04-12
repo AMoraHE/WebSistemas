@@ -10,7 +10,7 @@
 
 	<div class="contenedor-titulo-seccion">
 	
-			<h3>Agregar - Celula de Desarrollo de Software</h3>
+			<h3>Agregar - Célula de Desarrollo de Software</h3>
 
 	 </div>
 
@@ -26,7 +26,7 @@
 	  	<div class="contenedor-botones">     
 
 			<a id="save" texto="guardar la información?"><button type="submit" class="btn guardar"><span>Guardar</span></button></a>
-			<a class="msj" mesanje="Cancelar?" href="/Lab-Celula"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+			<a class="msj" mesanje="cancelar?" href="/Lab-Celula"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 
 		</div>
 		

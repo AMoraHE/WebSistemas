@@ -17,7 +17,7 @@ class ProyectoController extends Controller
      */
     public function index()
     {
-        $proyectos = Proyecto::all();
+        $proyectos = Proyecto::orderBy('id', 'DESC')->paginate(5);
 
         $imagenes = DB::table('proyecto_galerias')->join('proyectos', 'proyecto_galerias.proySlug', '=', 'proyectos.slug')->select('proyecto_galerias.*')->get();
 
@@ -154,7 +154,6 @@ class ProyectoController extends Controller
       $proyecto->proyecto = $request->input('proyecto');
       $proyecto->desarrolladores = $request->input('desarrolladores');
       $proyecto->descripcion = $request->input('descripcion');
-      //$proyecto->slug = time();
       $proyecto->save();
 
       return redirect()->route('ProyectosAcademicos')->with('status','Actualización Exitosa');

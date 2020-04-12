@@ -34,7 +34,7 @@
 
     <span class="invalid-feedback" role="alert">
 
-      <strong>{{ $errors->first('imgInicio') }}</strong>
+      <strong>El archivo seleccionado no es válido, seleccione un archivo JPG, PNG, GIF, TIFF, BMP</strong>
 
     </span>
 
@@ -48,16 +48,14 @@
 
 <div class="formulario">
 
-  <label>Titulo de Laboratorio</label>
+  <label>Título de Laboratorio</label>
 
   @if ($errors->any())
   <input type="text" name="nombre" id ="" value="{{old('nombre')}}"  class="form-control" required>
   @else
   <input type="text" name="nombre" id ="" value="{{$infra->nombre}}"  class="form-control" required>
-
-</div>
-
   @endif
+</div>
 
   @if ($errors->has('nombre'))
   <span class="invalid-feedback" role="alert">

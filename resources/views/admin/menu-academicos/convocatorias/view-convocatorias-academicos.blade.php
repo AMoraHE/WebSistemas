@@ -110,8 +110,13 @@
 
 	</div>
 
-
 	@endforeach
+
+	<div>
+		<div>
+			{{$convocatorias->links()}}
+		</div>
+	</div>
 
 </div>
 

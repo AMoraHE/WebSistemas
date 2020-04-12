@@ -25,7 +25,7 @@
 		<div class="contenedor-botones">
 	                      
 	        <a id="save" texto="guardar la información?"><button type="submit" class="btn guardar"><span>Guardar</span></button></a>
-	        <a class="msj" mesanje="Cancelar?" href="/Lab-Sistemas"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+	        <a class="msj" mesanje="cancelar?" href="/Lab-Sistemas"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 	      
 	    </div>
 	    

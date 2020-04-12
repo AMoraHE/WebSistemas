@@ -10,7 +10,7 @@
 	    
 	<div class="contenedor-titulo-seccion">
 
-	    <h3>Actualizar Datos</h3>
+	    <h3>Actualizar Datos - Perfil Ingreso</h3>
 
 	</div>
 
@@ -37,7 +37,7 @@
 		<div class="contenedor-botones">
 		                
 		    <a id="save" texto="guardar cambios?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
-		    <a class="msj" mesanje="Cancelar?" href="/Perfil-Ingreso-Lista"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+		    <a class="msj" mesanje="cancelar?" href="/Perfil-Ingreso-Lista"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 		        
 		</div>
 

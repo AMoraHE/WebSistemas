@@ -82,6 +82,12 @@
 
 	@endforeach
 
+	<div>
+		<div>
+			{{$noticias->links()}}
+		</div>
+	</div>
+
 </div>
 
 @endsection

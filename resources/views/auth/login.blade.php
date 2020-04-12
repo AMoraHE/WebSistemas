@@ -52,7 +52,7 @@
                                     <input  type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label  for="remember">
-                                        <span></span> {{ __('Recuerdame') }}
+                                        <span></span> {{ __('Recuérdame') }}
                                     </label>
                         </div>
 

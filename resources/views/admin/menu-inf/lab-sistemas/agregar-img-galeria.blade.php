@@ -58,6 +58,11 @@
 
       <div id="info-img">No se Eligió Archivo</div>
 
+      @if ($errors->has('image'))
+        <span class="invalid-feedback" role="alert">
+          <strong>El archivo seleccionado no es válido, seleccione un archivo JPG, PNG, GIF, TIFF, BMP</strong>
+        </span>
+      @endif
 
   		<div class="contenedor-botones">
 
@@ -95,7 +100,7 @@
 
        <div class="contenedor-botones">
 
-      <a class="msj" mesanje="Finalizar?" href="/Lab-Sistemas"><button type="button" class="btn finalizar"><span>Finalizar</span></button></a>
+      <a class="msj" mesanje="finalizar?" href="/Lab-Sistemas"><button type="button" class="btn finalizar"><span>Finalizar</span></button></a>
     
       </div>
 

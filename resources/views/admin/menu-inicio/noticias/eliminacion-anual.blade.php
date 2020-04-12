@@ -85,7 +85,7 @@
 
 	<div class="contenedor-botones">
 
-		<a class="msj" mesanje="Cancelar" href="/noticias-admin"><button class="btn cancelar"><span>Cancelar</span></button></a>
+		<a class="msj" mesanje="cancelar?" href="/noticias-admin"><button class="btn cancelar"><span>Cancelar</span></button></a>
 
 	</div>
 

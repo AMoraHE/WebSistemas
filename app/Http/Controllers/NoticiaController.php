@@ -17,7 +17,7 @@ class NoticiaController extends Controller
   */
   public function index()
  {
-    $noticias = Noticia::orderBy('id', 'desc')->paginate(15);
+    $noticias = Noticia::orderBy('id', 'desc')->paginate(10);
     return view('admin.menu-inicio.noticias.noticias', compact('noticias'));
   }
 
@@ -132,7 +132,6 @@ class NoticiaController extends Controller
       }
 
       $noticia->fill($request->all());
-      $noticia->slug = time();
       $noticia->save();
 
       return redirect()->route('noticias-admin')->with('status','Actualización Exitosa');

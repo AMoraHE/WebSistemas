@@ -10,7 +10,7 @@
 
 	<div class="contenedor-titulo-seccion">
 
-	    <h3>Editar eventos</h3>
+	    <h3>Editar - Eventos</h3>
 
 	</div>
 
@@ -115,7 +115,7 @@
 			<div class="contenedor-boton-cargar">
 
 				<label for="file-upload" class="subir"><i class="fas fa-cloud-upload-alt"></i> Subir Archivo</label>	
-				<input id="file-upload"  onchange='cambiar()' name="doc" type="file" accept="application/pdf" style='display: none;'/>
+				<input id="file-upload"  onchange='cambiar()' name="doc" type="file" accept="application/pdf, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/msword, application/vnd.openxmlformats-officedocument.presentationml.presentation, application/vnd.ms-powerpoint" style='display: none;'/>
 						
 			</div>
 
@@ -132,7 +132,7 @@
 
 		@if ($errors->has('doc'))
             <span class="invalid-feedback" role="alert">
-                <strong>{{ $errors->first('doc') }}</strong>
+                <strong>El archivo seleccionado no es válido, seleccione un archivo PDF, WORD, EXCEL, POWERPOINT</strong>
             </span>
         @endif
 
@@ -141,7 +141,7 @@
 		<div class="contenedor-botones">
 		                
 		    <a id="save" texto="guardar cambios?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
-		    <a class="msj" mesanje="Cancelar?" href="{{route('EventosAcademicos')}}"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+		    <a class="msj" mesanje="cancelar?" href="{{route('EventosAcademicos')}}"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 		        
 		</div>
 

@@ -14,7 +14,7 @@
 
   <div class="contenedor-titulo-seccion">
   
-      <h3>Agregas Imágenes</h3>
+      <h3>Agregar Imágenes</h3>
 
   </div>
 
@@ -59,7 +59,7 @@
 
       @if ($errors->has('imagen'))
         <span class="invalid-feedback" role="alert">
-          <strong>{{ $errors->first('imagen') }}</strong>
+          <strong>El archivo seleccionado no es válido, seleccione un archivo JPG, PNG, GIF, TIFF, BMP</strong>
         </span>
       @endif
 
@@ -107,7 +107,7 @@
 
        <div class="contenedor-botones">
 
-      <a class="msj" mesanje="Finalizar?" href="/ProyectosAcademicos"><button type="button" class="btn finalizar"><span>Finalizar</span></button></a>
+      <a class="msj" mesanje="finalizar?" href="/ProyectosAcademicos"><button type="button" class="btn finalizar"><span>Finalizar</span></button></a>
     
       </div>
 

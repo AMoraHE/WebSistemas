@@ -34,7 +34,7 @@
 
     <span class="invalid-feedback" role="alert">
 
-      <strong>{{ $errors->first('imgPrin') }}</strong>
+      <strong>El archivo seleccionado no es válido, seleccione un archivo JPG, PNG, GIF, TIFF, BMP</strong>
 
     </span>
 

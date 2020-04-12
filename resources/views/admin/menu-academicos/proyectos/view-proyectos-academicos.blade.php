@@ -139,6 +139,12 @@
 
 	@endforeach
 
+	<div>
+		<div>
+			{{$proyectos->links()}}
+		</div>
+	</div>
+
 </div>
 
 @endsection

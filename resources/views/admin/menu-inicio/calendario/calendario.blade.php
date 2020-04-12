@@ -198,10 +198,10 @@
 
   								<div class="contenedor-botones-modal">
 
-  								    <a onclick="return confirm('¿Desea registrar el nuevo evento?')"><button type="button" id="btnAgregar" class="btn-modal agregar"><span>Agregar</span></button></a>
-  	        					<a onclick="return confirm('¿Desea modificar este evento?')"><button type="button" id="btnModificar" class="btn-modal editar"><span>Modificar</span></button></a>
-  						        <a onclick="return confirm('¿Desea eliminar este evento?')"><button type="button" id="btnEliminar" class="btn-modal eliminar"><span>Borrar</span></button></a>
-  						        <a onclick="return confirm('¿Desea anular esta acción?')"><button type="button" class="btn-modal cancelar" data-dismiss="modal"><span>Cancelar</span></button></a>
+  								    <button type="button" id="btnAgregar" class="btn-modal agregar"><span>Agregar</span></button>
+  	        					<button type="button" id="btnModificar" class="btn-modal editar"><span>Modificar</span></button>
+  						        <button type="button" id="btnEliminar" class="btn-modal eliminar"><span>Borrar</span></button>
+  						        <button type="button" class="btn-modal cancelar" data-dismiss="modal"><span>Cancelar</span></button>
 
   						    </div>
 
