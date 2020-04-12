@@ -16,7 +16,7 @@
 
 	    <!----------------------------------------------------------------- Perfil ---------------------------------------------------------->
 
-	    <form class="form-group" method="POST" action="{{route('users.update', $user)}}" enctype="multipart/form-data">
+	    <form id="formulario" class="form-group" method="POST" action="{{route('users.update', $user)}}" enctype="multipart/form-data">
 	    {{ csrf_field() }}
     	{{ method_field('patch') }}
 
@@ -107,7 +107,7 @@
 		                
 		        <a onclick="return confirm('¿Desea guardar los cambios?')" href="/user/{{$user}}/update"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
 
-		        <a onclick="return confirm('¿Desea abandonar sin guardar?')" href="{{route('perfil-usuario')}}"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+		        <a class="msj" mesanje="Cancelar?" href="{{route('perfil-usuario')}}"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 		        
 		    </div>
 

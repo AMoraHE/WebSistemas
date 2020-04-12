@@ -50,99 +50,50 @@
 
 <!------------------------------------------------------------------ HEADER ---------------------------------------------------------->
 
-	<header>
-
-			<div class="contenedor-logos">
-
-				<img src="{{ asset('img/Gob.png')}}" id="gobierno">
-				<img src="{{ asset('img/Educacion.png')}}" id="educacion">
-				<img src="{{ asset('img/TecNM.jpg')}}" id="tecnm">
-				<img src="{{ asset('img/QRoo.png')}}" id="qroo">
-				<img src="{{ asset('img/TecFCP.png')}}" id="fcp">
-
-			</div>
-
-			<div class="divisor">
-
-				<div class="nombre-usuario">
-
-
-					<div class="contenedor-select-seccion">
-
-						<!--<label>{{ Auth::user()->name }}</label>-->
-
-						<button class="btn-seleccionar"><img class="foto-perfil-user" src="/images/perfil/{{Auth::user()->perfil_img}}">{{ Auth::user()->name }}</button>
-
-							<ul>
-								<li>
-
-									<a href="{{route('perfil-usuario')}}"><button class="btn-user"><img class="icono-menu-user" src="/img/Usuario.png">Perfil</button></a>
-
-								</li>
-
-								<li>
-
-									<form method="POST" action="{{ route('logout') }}">
-					  				@csrf
-
-						  				<a href="#"><button class="btn-user"><img class="icono-menu-user" src="/img/Logout.png">Cerrar Sesión</button></a>
-
-									</form>
-
-								</li>
-							</ul>
-
-							<i></i>
-
-					</div>
-
-					
-
-				</div>
-
-			</div>
-
-
-			<!--<div class="seccion-cerrar">
-				<form method="POST" action="{{ route('logout') }}">
-  				@csrf
-	  				<div class="contenedor-boton-CE">
-	  					<button class="btn"><span>Cerrar Sesión</span></button>
-	  				</div>
-				</form>
-			</div>-->
-
-
-			<div class="contenedor-titulo">
-
-				<div class="contenedor-img">
-
-					<img src="{{ asset('img/Isc.jpg')}}" id="isc">
-
-				</div>
-
-				<div class="contenedor-txt">
-
-					<h1>INGENIERÍA EN SISTEMAS COMPUTACIONALES</h1>
-
-				</div>
-
-			</div>
-
-	</header>
-
 <!------------------------------------------------------------------ CUERPO ---------------------------------------------------------->
 
-	<div class="contenedor-cuerpo">
 
-		<!----------------------------------------------------------- MENU ---------------------------------------------------------->
+		<!----------------------------------------------------------- MENU GRAL ---------------------------------------------------------->
 
 
 		<div class="contenedor-menu">
 
 			<a href="#" class="btn-menu">Menu<i class="icono fa fa-bars"></i></a>
 
+			<div class="contenedor-usuario">
+
+				<img src="/images/perfil/{{Auth::user()->perfil_img}}">
+				<h3>{{ Auth::user()->name }}</h3>
+
+			</div>
+
 			<ul class="menu">
+			
+				<!----------------------------------------------------------- MENU USUARIO ---------------------------------------------------------->
+
+
+				<li><a href="#"><i class="icono izquierda fas fa-user-tie"></i>Perfil de {{ Auth::user()->name }}<i class=" icono derecha fa fa-chevron-down"></i></a>
+
+					<ul>
+						
+						<li><a href="{{route('perfil-usuario')}}"><i class="icono izquierda fas fa-user-edit"></i>Perfil</a></li>
+						
+						<li>
+
+							<form id="formulario" method="POST" action="{{ route('logout') }}">
+
+							  	@csrf
+							  	<button id="save" texto=" Cerrar Sesión?" class="btn-user"><i class="icono izquierda fas fa-sign-out-alt"></i>Cerrar Sesión</button>
+
+							</form>
+
+						</li>
+
+					</ul>
+
+				</li>
+
+				<!----------------------------------------------------------- MENU ---------------------------------------------------------->
 
 				<li><a href="{{route('slider')}}"><i class="icono izquierda fa fa-home"></i>Inicio<i class=" icono derecha fa fa-chevron-down"></i></a>
 					<ul>
@@ -198,7 +149,7 @@
 
 			</ul>
 
-
+			<div class="divisor"></div>
 
 		</div>
 
@@ -206,6 +157,47 @@
 
 
 		<div class="contenedor-informacion">
+
+			<!--------------------------------------------------------- HEADER --------------------------------------------------------->
+			<div class="contenedor-header">
+				
+
+				<div class="contenedor-logos">
+
+					<img src="{{ asset('img/Gob.png')}}" id="gobierno">
+					<img src="{{ asset('img/Educacion.png')}}" id="educacion">
+					<img src="{{ asset('img/TecNM.jpg')}}" id="tecnm">
+					<img src="{{ asset('img/QRoo.png')}}" id="qroo">
+					<img src="{{ asset('img/TecFCP.png')}}" id="fcp">
+
+				</div>
+
+			<!--------------------------------------------------------- DIVISOR --------------------------------------------------------->
+
+
+				<div class="divisor"></div>
+
+			<!--------------------------------------------------------- TITULO ISC --------------------------------------------------------->
+
+				<div class="contenedor-titulo">
+
+					<div class="contenedor-img">
+
+						<img src="{{ asset('img/Isc.jpg')}}" id="isc">
+
+					</div>
+
+					<div class="contenedor-txt">
+
+						<h1>INGENIERÍA EN SISTEMAS COMPUTACIONALES</h1>
+
+					</div>
+
+				</div>
+
+
+			</div>
+			
 
 			<!--------------------------------------------------------- SLIDER --------------------------------------------------------->
 
@@ -231,14 +223,15 @@
 
 		</div>
 
-	</div>
+
+</div>
 
 <!------------------------------------------------------------------ FOOTER ---------------------------------------------------------->
 
 
-	<footer>
+<div class="contenedor-footer">
+		
 		<p>© Copyright 2020, Todos Los Derechos Reservados</p>
-	</footer>
 
 </div>
 

@@ -16,15 +16,19 @@ $(document).ready(function(){
 
 	$('.btn-menu').click(function(){
 		$('.contenedor-menu .menu').slideToggle();
+		$('.contenedor-menu .contenedor-usuario').slideToggle(); //Mostrar Perfil de Usuario
 	});
 
 	$(window).resize(function(){
 		if ($(document).width() > 450){
 			$('.contenedor-menu .menu').css({'display' : 'block'});
+			$('.contenedor-menu .contenedor-usuario').css({'display' : 'block'});//Desplegar Perfil de Usuario
+
 		}
 
 		if ($(document).width() < 450){
 			$('.contenedor-menu .menu').css({'display' : 'none'});
+			$('.contenedor-menu .contenedor-usuario').css({'display' : 'none'});//Esconder Perfil de Usuario
 			$('.menu li ul').slideUp();
 			$('.menu li').removeClass('activado');
 		}

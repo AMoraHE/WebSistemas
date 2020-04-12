@@ -22,7 +22,7 @@ html {
 body {
     position: relative;
     width: 1920px;
-    min-width: 320px;
+    min-width: 350px;
     min-height: 100%;
     background: #fff;
     font-family: 'Roboto', sans-serif;
@@ -35,9 +35,8 @@ a {
 }
 
 .contenedor{
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
+    display: flex;
+    position: relative;
 }
 
 /**************************************************************************************************
@@ -45,38 +44,49 @@ Boton srcoll ir arriba**********************************************************
 
 .ir-arriba{
     display:none;
-    padding:20px;
+    padding:15px;
     background:#1B396A;
-    font-size:20px;
+    font-size:15px;
     color:#fff;
     cursor:pointer;
     position: fixed;
     bottom:50px;
-    left: 20px;
+    right: 0px;
 }
 
 /**************************************************************************************************
-Boton Cerrar Sesión****************************************************************************************/
+USUARIO****************************************************************************************/
 
-.nombre-usuario{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 5px;
-    color: #fff;
+.contenedor-usuario{
+    text-align: center;
 }
 
-.foto-perfil-user{
-    max-width: 10%;
-    max-height: 45px;
-    margin-right: 10px;
+.contenedor-usuario h3{
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contenedor-usuario img{
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
+    margin: 20px auto;
 }
+
+.contenedor-usuario ul li{
+    text-align: justify;
+}
+
+
+/**************************************************************************************************
+Divisor****************************************************************************************/
 
 .divisor{
     background: #1B396A;
     padding: 2%;
-    margin: 10px auto;
+    /*margin: 10px auto;*/
     position: relative;
     min-height: 60px;
 
@@ -84,79 +94,23 @@ Boton Cerrar Sesión************************************************************
     align-items: center;
 }
 
-/*****************************************************BOTON USUARIO**************************************************/
-
-.btn-seleccionar{
-    position: relative;
-    width: 100%;
-    padding: 2%;
-    background: #1B396A;
-    border: none;
-    border-bottom: 2px solid #8cc63e;
-    box-shadow: none;
-    outline: none;
-    cursor: pointer;
-    color: #fff;
-    font-size: 18px;
-
-    display: flex;
-    align-items: center;
-
-}
-
-.contenedor-select-seccion ul{
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background: #ccc;
-    transform-origin: top;
-    transform: perspective(1000px) rotateX(-90deg);
-    transition: 0.5s;
-}
-
-.contenedor-select-seccion ul.active{
-    transform: perspective(1000px) rotateX(0deg);
-}
-
-.contenedor-select-seccion ul li{
-    list-style: none;
-}
-
-.contenedor-select-seccion ul li a{
-    display: block;
-    /*padding: 10px;*/
-    text-align: center;
-    text-decoration: none;
-    background: #262626;
-    color: #fff;
-}
-
-.contenedor-select-seccion ul li a:hover{
-    background: #0d7ad0;
-}
+/*****************************************************BOTON CERRAR SESIÓN**************************************************/
 
 .btn-user{
+    font-family: 'Roboto', sans-serif;
     cursor: pointer;
-    background: transparent;
+    color: #ffffff;
+    display: block;
+    padding: 15px 20px;
+    background: #5DADE2;
+    text-align: justify;
     width: 100%;
-    padding: 10px;
-    text-align: center;
-    color: #fff;
-    font-size: 18px;
     border: none;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-
-    border-bottom: 1px solid rgba(0,0,0,.2);
-
+    font-size: 16px;
 }
 
-.icono-menu-user{
-    width: 5%;
-   margin-right: 10px;
+.btn-user:hover{
+    background: #1a95d5;
 }
 
 /**************************************************************************************************
@@ -191,7 +145,7 @@ img#fcp {
 TITULO********************************************/
 
 .contenedor-titulo{
-    width: 80%;
+    width: 100%;
     min-width: 350px;
     display: flex;
     align-items: center;
@@ -219,33 +173,24 @@ img#isc {
 .contenedor-txt h1 {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-    font-size: 36px;
+    font-size: 30px;
 }
 
 /**************************************************************************************************
 BODY**********************************************************************************************/
 
-.contenedor-cuerpo{
-    width: 100%;
-    overflow: hidden;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 .contenedor-informacion{
-    width: 75%;
-    padding-bottom: 15PX;
-    margin-right: auto;
-    margin-left: auto;
-    overflow: hidden;
-    float: right;
+    width: 100%;
+    padding-bottom: 15px;
+    margin-left: 350px;
     margin-bottom: 50px;
 }
 
 /**************************************************
 MENU**********************************************/
+
 .btn-menu {
-    min-width: 320px;
+    min-width: 350px;
     display:none;
     padding: 20px;
     background: #1B396A;
@@ -255,10 +200,12 @@ MENU**********************************************/
     float: right;
 }
 .contenedor-menu {
-    min-width: 25%;
-    display: inline-block;
-    font-family: 'Roboto', sans-serif;
-    line-height: 18px;
+  width: 350px;  
+  height: 100%;
+  background: #1B396A;
+  padding: 30px 0px;
+  position: fixed;
+  overflow: auto; /*Agrega un scroll si hay mas elementos dentro el MENU*/
 }
 .contenedor-menu .menu {
     width: 100%;
@@ -266,11 +213,18 @@ MENU**********************************************/
 .contenedor-menu ul {
     list-style: none;
 }
+
+.contenedor-menu ul li{
+    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
 .contenedor-menu .menu li a {
-    color: #494949;
+    color: #ffffff;
     display: block;
     padding: 15px 20px;
-    background: #e9e9e9;
+    background: #1B396A;
 }
 .contenedor-menu .menu li a:hover {
     background: #1a95d5;
@@ -291,16 +245,23 @@ MENU**********************************************/
     display: none;
 }
 .contenedor-menu .menu ul li a {
-    background: #424242;
-    color: #e9e9e9;
+    background: #5DADE2;
+    color: #ffffff;
 }
 .contenedor-menu .menu .activado > a {
     background: #1a95d5; 
-    color: #fff;
+    color: #ffffff;
 }
 
 /**************************************************************************************CONTENEDOR INFORMACION*************************************/
 
+/**************************************************
+HEADER********************************************/
+
+.contenedor-header{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e4e8;
+}
 
 /**************************************************
 SLIDER********************************************/
@@ -323,15 +284,11 @@ CONTENIDO*****************************************/
     padding: 10px;
 }
 
-/**************************************************
-CALENDARIO****************************************/
-
-
 
 /**************************************************************************************************
 Pie***********************************************************************************************/
 
-footer{
+.contenedor-footer{
     padding-top: 10px;
     width:100%;
     height:50px;
@@ -339,11 +296,9 @@ footer{
     text-align: center;
     position: absolute;
     bottom: 0;
-
-
 }
 
-footer p{
+.contenedor-footer p{
     color: #fff;
     font-family: 'Roboto', sans-serif;
     line-height: 18px;
@@ -355,11 +310,51 @@ footer p{
 @media screen and (max-width: 1366px) {
 
 /*************************************************************************
+Usuario - 1366px*****************************************/
+
+
+    .contenedor-usuario{
+        text-align: center;
+    }
+
+    .contenedor-usuario h3{
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .contenedor-usuario img{
+        width: 60px;
+        height: 60px;
+    }
+
+/*************************************************************************
 Encabezado - 1366px*******************************************************/
 
     .contenedor-txt h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    
+        font-size: 24px;
+    
+    }
+
+/*************************************************************************
+Contenedor - Información - 1366px*************************************************************/
+
+    .contenedor-informacion{
+        margin-left: 300px;
+    }
+
+/*************************************************************************
+Menu - 1366px*************************************************************/
+
+    .contenedor-menu {
+        width: 300px;
+        font-size: 14px;
+        }
+
+/*******************Boton Cerrar Sesión en el Menu******************************/
+
+    .btn-user{
+        font-size: 14px;
     }
 }
 
@@ -370,12 +365,54 @@ Encabezado - 1366px*******************************************************/
 @media screen and (max-width: 1150px) {
 
 /*************************************************************************
+Usuario - 1150px*****************************************/
+
+
+    .contenedor-usuario{
+        text-align: center;
+    }
+
+    .contenedor-usuario h3{
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .contenedor-usuario img{
+        width: 60px;
+        height: 60px;
+    }
+
+
+/*************************************************************************
 Encabezado - 1150px*******************************************************/
 
     .contenedor-txt h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 26px;
+        
+        font-size: 20px;
+    
     }
+
+/*************************************************************************
+Contenedor - Información - 1150px*************************************************************/
+
+    .contenedor-informacion{
+        margin-left: 250px;
+    }
+
+/*************************************************************************
+Menu - 1150px*************************************************************/
+
+    .contenedor-menu {
+        width: 250px;
+        font-size: 12px;
+        }
+
+/*******************Boton Cerrar Sesión en el Menu******************************/
+
+    .btn-user{
+        font-size: 12px;
+    }
+
 }
 
 
@@ -386,29 +423,49 @@ Encabezado - 1150px*******************************************************/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
 /*************************************************************************
-BODY - 768px and 1024px*****************************************/
+Usuario - 768px and 1024px*****************************************/
 
-    .contenedor-informacion{
-        width: 70%;
+
+    .contenedor-usuario{
+        text-align: center;
     }
 
+    .contenedor-usuario h3{
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .contenedor-usuario img{
+        width: 50px;
+        height: 50px;
+    }
 
 /*************************************************************************
 Encabezado - 768px and 1024px*******************************************************/
 
     .contenedor-txt h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+        font-size: 16px;
+    }
+
+/*************************************************************************
+Contenedor - Información - 768px and 1024px*************************************************************/
+
+    .contenedor-informacion{
+        margin-left: 250px;
     }
 
 /*************************************************************************
 Menu - 768px and 1024px*************************************************************/
 
-.contenedor-menu {
-    min-width: 30%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    line-height: 18px;
+    .contenedor-menu {
+        width: 250px;
+        font-size: 12px;
+        }
+
+/*******************Boton Cerrar Sesión en el Menu******************************/
+
+    .btn-user{
+        font-size: 12px;
     }
 
 /*************************************************************************
@@ -429,8 +486,7 @@ Calendario - 768px and 1024px***************************************************
 /*************************************************************************
 Pie - 768px and 1024px**************************************************************/
 
-    footer p{
-        font-family: 'Roboto', sans-serif;
+    .contenedor-footer p{
         font-size: 12px;
     }
 
@@ -442,60 +498,56 @@ Pie - 768px and 1024px**********************************************************
 @media screen and (max-width: 767px) {
 
 /*************************************************************************
-BODY - 767px*****************************************/
+Usuario - 767px*******************************************************/
 
-    .contenedor-informacion{
-        width: 70%;
+    .contenedor-usuario{
+        text-align: center;
     }
 
+    .contenedor-usuario h3{
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .contenedor-usuario img{
+        width: 50px;
+        height: 50px;
+    }
 
 /*************************************************************************
 Encabezado - 767px*******************************************************/
 
     .contenedor-txt h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 17px;
+
+        font-size: 15px;
+
+        }
+
+/*************************************************************************
+Contenedor - Información - 768px and 1024px*************************************************************/
+
+    .contenedor-informacion{
+        margin-left: 200px;
     }
 
 /*************************************************************************
 Menu - 767px*************************************************************/
 
     .contenedor-menu {
-    min-width: 30%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 10px;
-    line-height: 18px;
-    }
+        width: 200px;
+        font-size: 10px;
+        }
 
-/*************************************************************************
-Slider - 767px***********************************************************/
+/*******************Boton Cerrar Sesión en el Menu******************************/
 
-
-    .contenedor-slider{
-        width: calc(100% - 20px);
-    }
-
-
-/*************************************************************************
-Información - 767px******************************************************/
-
-
-    .contenedor-contenido{
-        margin-left: 10px;;
-    }
-
-/*************************************************************************
-Calendario - 767px*******************************************************/
-
-    .contenedor-calendario{
-        margin-left: 10px;;
+    .btn-user{
+        font-size: 10px;
     }
 
 /*************************************************************************
 Pie - 767px**************************************************************/
 
-    footer p{
-        font-family: 'Roboto', sans-serif;
+    .contenedor-footer p{
         font-size: 12px;
     }
 
@@ -514,11 +566,22 @@ BODY - 600px*****************************************/
         padding-top: 80px;
     }
 
-    .contenedor-informacion{
-        width: 100%;
-        float: none;
+/*************************************************************************
+Usuario - 600px*****************************************/
+
+    .contenedor-usuario{
+        text-align: center;
+        display: none;
     }
 
+    .contenedor-usuario h3{
+      font-size: 12px;
+    }
+
+    .contenedor-usuario img{
+        width: 80px;
+        height: 80px;
+    }
 
 /*************************************************************************
 Encabezado - 600px*******************************************************/
@@ -529,15 +592,24 @@ Encabezado - 600px*******************************************************/
     }
 
 /*************************************************************************
+Contenedor - Información - 600px*************************************************************/
+
+    .contenedor-informacion{
+        margin-left: auto;
+    }
+
+/*************************************************************************
 Menu - 600px*************************************************************/
 
     .contenedor-menu {
         width: 100%;
+        min-width: 350px;
+        height: auto;
         position: fixed;
         top: 0;
         z-index: 1000;
         margin-top: 0px;
-
+        padding: 0px;
     }
     
     .btn-menu {
@@ -548,34 +620,23 @@ Menu - 600px*************************************************************/
         display: none;
     }
 
-/*************************************************************************
-Slider - 600px***********************************************************/
-
-
-    .contenedor-slider{
-        width: 100%;
-    }
-
-
-/*************************************************************************
-Información - 600px******************************************************/
-
-
-    .contenedor-contenido{
-        margin-left: 10px;
+    .contenedor-menu ul {
+        list-style: none;
+        min-width: 350px;
     }
 
 /*************************************************************************
-Calendario - 600px*******************************************************/
+Divisor - 600px*************************************************************/
 
-    .contenedor-calendario{
-        margin-left: 10px;;
+    .divisor{
+    display: none;
     }
+
 
 /*************************************************************************
 Pie - 600px**************************************************************/
 
-    footer p{
+    .contenedor-footer p{
         font-family: 'Roboto', sans-serif;
         font-size: 12px;
     }
@@ -595,9 +656,21 @@ BODY - 320px and 480px*****************************************/
         padding-top: 80px;
     }
 
-    .contenedor-informacion{
-        width: 100%;
-        float: none;
+/*************************************************************************
+Usuario - 320px and 480px*****************************************/
+
+    .contenedor-usuario{
+        text-align: center;
+        display: none;
+    }
+
+    .contenedor-usuario h3{
+      font-size: 12px;
+    }
+
+    .contenedor-usuario img{
+        width: 50px;
+        height: 50px;
     }
 
 /*************************************************************************
@@ -609,15 +682,24 @@ Encabezado - 320px and 480px****************************************************
     }
 
 /*************************************************************************
+Contenedor - Información - 768px and 1024px*************************************************************/
+
+    .contenedor-informacion{
+        margin-left: auto;
+    }
+
+/*************************************************************************
 Menu - 320px and 480px*************************************************************/
 
     .contenedor-menu {
         width: 100%;
+        min-width: 350px;
+        height: auto;
         position: fixed;
         top: 0;
         z-index: 1000;
         margin-top: 0px;
-
+        padding: 0px;
     }
     
     .btn-menu {
@@ -628,36 +710,24 @@ Menu - 320px and 480px**********************************************************
         display: none;
     }
 
+    .contenedor-menu ul {
+        list-style: none;
+        min-width: 350px;
+    }
+
+/*************************************************************************
+Divisor - 320px and 480px*************************************************************/
+
+    .divisor{
+    display: none;
+    }
+
 /*************************************************************************
 Pie - 320px and 480px**************************************************************/
 
-    footer p{
+    .contenedor-footer p{
         font-family: 'Roboto', sans-serif;
         font-size: 10px;
-    }
-
-/*************************************************************************
-Slider - 320px and 480px***********************************************************/
-
-
-    .contenedor-slider{
-    width: 100%;
-    }
-
-
-/*************************************************************************
-Información - 320px and 480px******************************************************/
-
-
-    .contenedor-contenido{
-        margin-left: 7px;;
-    }
-
-/*************************************************************************
-Calendario - 320px and 480px*******************************************************/
-
-    .contenedor-calendario{
-        margin-left: 10px;;
     }
 
 
