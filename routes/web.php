@@ -176,7 +176,7 @@ Route::get('/ConvocatoriasAcademicos/descargar/{slug}', 'ConvocatoriasController
 Route::get('/ConvocatoriasAcademicos-Eliminar/{slug}', 'ConvocatoriasController@destroy')->middleware('auth');
 
 //Ruta programas-acdemicos
-Route::resource('programas', 'ProgramasController')->middleware('auth');
+Route::resource('ProgramasAcademicos', 'ProgramasController')->middleware('auth');
 Route::get('/ProgramasAcademicos', 'ProgramasController@index')->name('ProgramasAcademicos')->middleware('auth');
 Route::get('/ProgramasAcademicos/create', 'ProgramasController@create')->name('AgregarPrograma')->middleware('auth');
 Route::get('/ProgramasAcademicos/edit', 'ProgramasController@edit')->name('EditarPrograma')->middleware('auth');
