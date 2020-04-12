@@ -72,7 +72,7 @@
 				<!----------------------------------------------------------- MENU USUARIO ---------------------------------------------------------->
 
 
-				<li><a href="#"><i class="icono izquierda fas fa-user-tie"></i>Perfil de {{ Auth::user()->name }}<i class=" icono derecha fa fa-chevron-down"></i></a>
+				<li><a href="#"><i class="icono izquierda fas fa-user-tie"></i>Sesión<i class=" icono derecha fa fa-chevron-down"></i></a>
 
 					<ul>
 						
