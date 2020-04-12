@@ -112,8 +112,13 @@
 
 	</div>
 
-
 	@endforeach
+
+	<div>
+		<div>
+			{{$programas->links()}}
+		</div>
+	</div>
 
 </div>
 

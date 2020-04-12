@@ -14,7 +14,7 @@
 
   <div class="contenedor-titulo-seccion">
   
-      <h3>Celula de Desarrollo de Software</h3>
+      <h3>Célula de Desarrollo de Software</h3>
 
   </div>
 
@@ -60,7 +60,7 @@
 
       @if ($errors->has('image'))
         <span class="invalid-feedback" role="alert">
-          <strong>{{ $errors->first('image') }}</strong>
+          <strong>El archivo seleccionado no es válido, seleccione un archivo JPG, PNG, GIF, TIFF, BMP</strong>
         </span>
       @endif
 
@@ -101,7 +101,7 @@
 
        <div class="contenedor-botones">
 
-      <a class="msj" mesanje="Finalizar?" href="/Lab-Celula"><button type="button" class="btn finalizar"><span>Finalizar</span></button></a>
+      <a class="msj" mesanje="finalizar?" href="/Lab-Celula"><button type="button" class="btn finalizar"><span>Finalizar</span></button></a>
     
       </div>
 

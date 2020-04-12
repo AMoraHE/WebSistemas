@@ -65,6 +65,12 @@
 	</div>
 
 	@endforeach
+
+	<div>
+		<div>
+			{{$reticulas->links()}}
+		</div>
+	</div>
 				
 </div>
 

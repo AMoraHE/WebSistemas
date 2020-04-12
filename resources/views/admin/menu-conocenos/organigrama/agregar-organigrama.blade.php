@@ -10,7 +10,7 @@
     
   <div class="contenedor-titulo-seccion">
 
-    <h3>Agregar Datos</h3>
+    <h3>Agregar Datos - Organigrama</h3>
 
   </div>
   
@@ -53,7 +53,7 @@
 
     @if ($errors->has('imgOrg'))
       <span class="invalid-feedback" role="alert">
-          <strong>{{ $errors->first('imgOrg') }}</strong>
+          <strong>El archivo seleccionado no es válido, seleccione un archivo JPG, PNG, GIF, TIFF, BMP</strong>
       </span>
     @endif
 
@@ -153,7 +153,7 @@
     <div class="contenedor-botones">
                     
       <a id="save" texto="guardar la información?"><button type="submit" class="btn agregar"><span>Agregar</span></button></a>
-      <a class="msj" mesanje="Cancelar?" href="/Organigrama"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+      <a class="msj" mesanje="cancelar?" href="/Organigrama"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 
     </div>
 

@@ -54,7 +54,6 @@
 			</div>
 
 			@if($infra->slug == 'cisco')
-
 			<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Cisco-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
 			@elseif($infra->slug == 'celula')
 			<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Celula-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>

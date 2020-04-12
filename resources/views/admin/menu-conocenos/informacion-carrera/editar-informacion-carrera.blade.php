@@ -33,8 +33,8 @@
 
 		<div class="contenedor-botones">
 					
-			<a id="save" texto="guardar cambios?"><button type="submit" class="btn guardar"><span>Guardar</span></button></a>
-			<a class="msj" mesanje="Cancelar" href="/informacion"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+			<a id="save" texto="guardar los cambios?"><button type="submit" class="btn guardar"><span>Guardar</span></button></a>
+			<a class="msj" mesanje="cancelar" href="/informacion"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 	
 		</div> 
 		

@@ -15,7 +15,7 @@ class EventosAcademicosController extends Controller
      */
     public function index()
     {
-         $eventos = EventosAcademico::all();
+         $eventos = EventosAcademico::orderBy('id', 'DESC')->paginate(5);
         return view('/admin/menu-academicos/Eventos/view', compact('eventos'));
     }
 
@@ -40,7 +40,7 @@ class EventosAcademicosController extends Controller
        $validator = Validator::make($request->all(), [
             'titulo' => 'required|string',
             'descripcion' => 'required|string',
-            'doc' => 'required|mimetypes:application/pdf',
+            'doc' => 'required|mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel',
             'FInicio' => 'required|date',
             'FCierre' => 'required|date',
         ]);
@@ -133,7 +133,7 @@ class EventosAcademicosController extends Controller
         $validator = Validator::make($request->all(), [
             'titulo' => 'required|string',
             'descripcion' => 'required|string',
-            'doc' => 'mimetypes:application/pdf',
+            'doc' => 'mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel',
             'FInicio' => 'required|date',
             'FCierre' => 'required|date',
         ]);
@@ -166,7 +166,6 @@ class EventosAcademicosController extends Controller
             $evento->descripcion = $request->input('descripcion');
             $evento->FInicio = $request->input('FInicio');
             $evento->FCierre = $request->input('FCierre');
-            $evento->slug = time();
             $evento->save();
 
             return redirect()->route('EventosAcademicos')->with('status','Actualización Exitosa');

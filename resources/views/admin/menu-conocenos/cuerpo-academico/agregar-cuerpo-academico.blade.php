@@ -10,7 +10,7 @@
     
   <div class="contenedor-titulo-seccion">
 
-    <h3>Crear Cuerpo Académico</h3>
+    <h3>Agregar Cuerpo Académico</h3>
 
   </div>
 
@@ -29,7 +29,7 @@
     <div class="formulario"> 
 
       <label>Grado del CA</label>
-      <input type="text" name="grado" id ="informacion-perfil" value="" placeholder="Grado del CA" class="form-control" required>
+      <input type="text" name="grado" id ="informacion-perfil" value="" placeholder="Grado del CA ej: Formacion, Consolidado" class="form-control" required>
     
     </div>
       
@@ -50,7 +50,7 @@
     <div class="formulario">
 
       <label>Integrantes</label>
-      <input type="text" name="integrantes" id ="informacion-perfil" value="" placeholder="Nombre de los integrantes eg: Eduardo, Maria, Carlos" class="form-control" required>
+      <input type="text" name="integrantes" id ="informacion-perfil" value="" placeholder="Nombre de los integrantes ej: Eduardo, Maria, Carlos" class="form-control" required>
      
     </div>
 
@@ -59,7 +59,7 @@
     <div class="contenedor-botones">
                       
       <a id="save" texto="guardar la información?"><button type="submit" class="btn agregar"><span>Agregar</span></button></a>
-      <a class="msj" mesanje="Cancelar?" href="/CuerposAcademicos"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+      <a class="msj" mesanje="cancelar?" href="/CuerposAcademicos"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
       
     </div>
 

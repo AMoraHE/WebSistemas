@@ -10,7 +10,7 @@
 
 	<div class="contenedor-titulo-seccion">
 
-		<h3>Proyectos</h3>
+		<h3>Agregar - Proyecto</h3>
 
 	</div>
 
@@ -55,7 +55,7 @@
 
       <span class="invalid-feedback" role="alert">
 
-        <strong>{{ $errors->first('imagen') }}</strong>
+        <strong>El archivo seleccionado no es válido, seleccione un archivo JPG, PNG, GIF, TIFF, BMP</strong>
 
       </span>
 
@@ -189,7 +189,7 @@
 	<div class="contenedor-botones">
 
 		<a id="save" texto="guardar el nuevo proyecto?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
- 		<a class="msj" mesanje="Cancelar?" href="/ProyectosAcademicos"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+ 		<a class="msj" mesanje="cancelar?" href="/ProyectosAcademicos"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 	
 
 	</div>

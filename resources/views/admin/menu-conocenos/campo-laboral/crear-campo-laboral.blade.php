@@ -10,7 +10,7 @@
     
   <div class="contenedor-titulo-seccion">
 
-    <h3>Agregar Datos</h3>
+    <h3>Agregar Campo Laboral</h3>
 
   </div>
 
@@ -38,7 +38,7 @@
     <div class="contenedor-botones">
                   
       <a id="save" texto="guardar la información?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
-      <a class="msj" mesanje="Cancelar?" href="{{route('CampoLaboralLista')}}"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+      <a class="msj" mesanje="cancelar?" href="{{route('CampoLaboralLista')}}"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 
     </div>
 

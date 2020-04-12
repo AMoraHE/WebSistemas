@@ -15,7 +15,7 @@
 	<div class="contenedor-botones">     
 
       	<a id="save" texto="guardar cambios?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
-        <a class="msj" mesanje="Cancelar?" href="/Lab-Micro"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+        <a class="msj" mesanje="cancelar?" href="/Lab-Micro"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 
     </div>
 

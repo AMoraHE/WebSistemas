@@ -10,7 +10,7 @@
 
   <div class="contenedor-titulo-seccion">
 
- 		<h3>Editar Noticias</h3>
+ 		<h3>Editar Noticia</h3>
 
  	</div>
 
@@ -72,7 +72,7 @@
 
 	@if ($errors->has('image'))
       <span class="invalid-feedback" role="alert">
-        <strong>{{ $errors->first('image') }}</strong>
+        <strong>El archivo seleccionado no es válido, seleccione un archivo JPG, PNG, GIF, TIFF, BMP</strong>
       </span>
     @endif
 
@@ -100,7 +100,7 @@
 	<div class="contenedor-botones">
 
 		<a id="save" texto="guardar cambios?"><button class="btn guardar" type="submit"><span>Guardar</span></button></a>
-		<a class="msj" mesanje="Cancelar?" href="/noticias-admin"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+		<a class="msj" mesanje="cancelar?" href="/noticias-admin"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
   						
 	</div>
 

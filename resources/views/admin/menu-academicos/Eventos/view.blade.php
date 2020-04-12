@@ -105,6 +105,12 @@
 				</div>
 
 				@endforeach
+
+	<div>
+		<div>
+			{{$eventos->links()}}
+		</div>
+	</div>
 				
 </div>
 

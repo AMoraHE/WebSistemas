@@ -15,7 +15,7 @@ class ConvocatoriasController extends Controller
    */
   public function index()
   {
-      $convocatorias = Convocatoria::all();
+      $convocatorias = Convocatoria::orderBy('id', 'DESC')->paginate(5);
       return view('/admin/menu-academicos/convocatorias/view-convocatorias-academicos', compact('convocatorias'));
   }
 
@@ -39,7 +39,7 @@ class ConvocatoriasController extends Controller
   {
       $validator = Validator::make($request->all(), [
 
-  'doc' => 'required|mimetypes:application/pdf',
+  'doc' => 'required|mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel',
   'convocatoria' => 'required|string',
   'descripcion' => 'required|string',
   'FInicio' => 'required|date',
@@ -128,7 +128,7 @@ class ConvocatoriasController extends Controller
   public function update(Request $request, $convocatorias)
   {
     $validator = Validator::make($request->all(), [
-    'doc' => 'mimetypes:application/pdf',
+    'doc' => 'mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel',
     'convocatoria' => 'required|string',
     'descripcion' => 'required|string',
     'FInicio' => 'required|date',
@@ -165,7 +165,6 @@ class ConvocatoriasController extends Controller
     $convocatorias->descripcion = $request->input('descripcion');
     $convocatorias->FInicio = $request->input('FInicio');
     $convocatorias->FFin = $request->input('FFin');
-    $convocatorias->slug = time();
     $convocatorias->save();
 
     return redirect('/ConvocatoriasAcademicos')->with('status','Actualización Exitosa');

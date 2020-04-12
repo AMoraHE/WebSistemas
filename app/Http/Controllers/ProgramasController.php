@@ -14,7 +14,7 @@ class ProgramasController extends Controller
    */
   public function index()
   {
-      $programas = Programa::all();
+      $programas = Programa::orderBy('id', 'DESC')->paginate(5);
       return view('/admin/menu-academicos/programas/view', compact('programas'));
   }
 
@@ -38,7 +38,7 @@ class ProgramasController extends Controller
   {
       $validator = Validator::make($request->all(), [
 
-  'doc' => 'required|mimetypes:application/pdf',
+  'doc' => 'required|mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel',
   'programa' => 'required|string',
   'descripcion' => 'required|string',
   'FInicio' => 'required|date',
@@ -127,7 +127,7 @@ class ProgramasController extends Controller
   public function update(Request $request, $programas)
   {
     $validator = Validator::make($request->all(), [
-    'doc' => 'mimetypes:application/pdf',
+    'doc' => 'mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel',
     'programa' => 'required|string',
     'descripcion' => 'required|string',
     'FInicio' => 'required|date',
@@ -164,7 +164,6 @@ class ProgramasController extends Controller
     $programas->descripcion = $request->input('descripcion');
     $programas->FInicio = $request->input('FInicio');
     $programas->FFin = $request->input('FFin');
-    $programas->slug = time();
     $programas->save();
 
     return redirect('/ProgramasAcademicos')->with('status','Actualización Exitosa');

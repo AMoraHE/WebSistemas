@@ -85,8 +85,8 @@
 
 	<div class="contenedor-botones">
 
-		<a class="msj" mesanje="eliminar la noticia?" href="#"><button class="btn eliminar"><span>Eliminar</span></button></a>
-		<a class="msj" mesanje="editar la noticia?" href="#"><button class="btn editar"><span>Editar</span></button></a>
+		<a class="msj" mesanje="eliminar la noticia?" href="/noticias-admin-eliminar/{{$noticia->slug}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
+		<a class="msj" mesanje="editar la noticia?" href="/noticias-admin/{{$noticia->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
 
 
 	</div>
@@ -128,7 +128,7 @@
 
 		<div class="contenedor-botones">
 
-			<a class="msj" mesanje="Ver más noticias?" href="/noticias-admin"><button class="btn ver"><span>Ver Más...</span></button></a>
+			<a class="msj" mesanje="ver más noticias?" href="/noticias-admin"><button class="btn ver"><span>Ver Más...</span></button></a>
 		
 		</div>
 

@@ -40,7 +40,7 @@
 
 	<div class="contenedor-botones">
 
-		<a class="msj" mesanje="editar información?" href="/informacion/{{$informacion->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
+		<a class="msj" mesanje="editar información de la carrera?" href="/informacion/{{$informacion->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
 			
 	</div>
 

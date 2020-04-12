@@ -53,6 +53,12 @@
 
 	@endforeach
 
+	<div>
+		<div>
+			{{$albums->links()}}
+		</div>
+	</div>
+
 </div>
 
 @endsection
