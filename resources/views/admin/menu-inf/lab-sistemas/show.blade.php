@@ -48,4 +48,6 @@
 
 		@endforeach
 
+	</div>
+
 @endsection
