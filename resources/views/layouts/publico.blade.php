@@ -142,7 +142,7 @@
 
 			<div class="contenedor-slider">
 
-												
+			@yield('content-slider')						
 										
 			</div>
 
@@ -151,16 +151,8 @@
 
 			<div class="contenedor-contenido">
 
-				<!--------------------------------------------------- NOTICIAS -------------------------------------------------------->
-
+			@yield('content')
 								
-			</div>
-
-			<!------------------------------------------------------ CALENDARIO ------------------------------------------------------->
-
-
-			<div class="contenedor-calendario">
-
 			</div>
 
 
