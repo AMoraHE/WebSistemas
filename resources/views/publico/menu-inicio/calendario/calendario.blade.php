@@ -1,4 +1,4 @@
-@extends('layouts.administrador')
+@extends('layouts.publico')
 
 @section('title', 'Calendario')
 
@@ -48,7 +48,7 @@
 
               	/****Evento de la BD - Conexion**********/
 
-  	            events:'/calendarioeventos',
+  	            events:'/isc-inicio-calendarioEventos',
 
   	            /**** FIN Evento de la BD - Conexion**********/
 

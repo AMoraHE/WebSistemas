@@ -22,7 +22,7 @@
 
 		<div class="buscador">
 
-        	<form  files = "true" method="GET" action="/buscador-noticias" enctype="multipart/form-data">
+        	<form  files = "true" method="GET" action="/isc-inicio-buscadorNoticias" enctype="multipart/form-data">
           		@csrf
 
           		<div class="formulario">

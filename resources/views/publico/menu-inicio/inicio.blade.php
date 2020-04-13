@@ -112,7 +112,7 @@
 
 		<div class="contenedor-botones">
 
-			<a class="msj" mesanje="ver más noticias?" href="/noticias-admin"><button class="btn ver"><span>Ver Más...</span></button></a>
+			<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticias"><button class="btn ver"><span>Ver Más...</span></button></a>
 		
 		</div>
 

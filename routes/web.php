@@ -21,9 +21,12 @@ Route::get('users/{user}',  ['as' => 'users.edit', 'uses' => 'UserController@edi
 
 Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'UserController@update'])->middleware('auth');
 
-Route::get('/', function () {
-    return view('layouts.publico');
-});
+//RUTAS PÚBLICAS - SEGUIR NOMENCLATURA DE ACUERDO A LA SECCIÓN
+Route::get('/', 'PublicController@inicio')->name('ISC-INICIO');
+Route::get('/isc-inicio-noticias', 'PublicController@noticias');
+Route::get('/isc-inicio-buscadorNoticias', 'PublicController@buscadorNoticias');
+Route::get('/isc-inicio-calendario', 'PublicController@calendario');
+Route::get('/isc-inicio-calendarioEventos', 'PublicController@calendarioEventos');
 
 ////////Rutas de Menu-inicio///////////
 Route::get('/admin', 'InicioController@index')->middleware('auth');

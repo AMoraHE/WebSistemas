@@ -82,9 +82,9 @@
 			<ul class="menu">
 				<li><a href="#"><i class="icono izquierda fa fa-home"></i>Inicio<i class=" icono derecha fa fa-chevron-down"></i></a>
 					<ul class="submenu">
-						<li><a href="#"><i class="icono izquierda fa fa-home"></i>Inicio</a></li>
-						<li><a href="#"><i class="icono izquierda far fa-newspaper"></i>Noticias</a></li>
-						<li><a href="#"><i class="icono izquierda far fa-calendar-alt"></i>Calendario</a></li>
+						<li><a href="{{route('ISC-INICIO')}}"><i class="icono izquierda fa fa-home"></i>Inicio</a></li>
+						<li><a href="/isc-inicio-noticias"><i class="icono izquierda far fa-newspaper"></i>Noticias</a></li>
+						<li><a href="/isc-inicio-calendario"><i class="icono izquierda far fa-calendar-alt"></i>Calendario</a></li>
 					</ul>
 				</li>
 							
