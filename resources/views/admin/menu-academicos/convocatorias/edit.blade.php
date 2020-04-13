@@ -55,9 +55,9 @@
 
         <label>Fecha Inicio</label>
         @if ($errors->any())
-        <input  type="date" id="FInicio" class="form-control" name="FInicio" value="{{old('FInicio')}}" required/>
+        <input  class="fecha" data-date-format="l j, F, Y" id="FInicio" name="FInicio" value="{{old('FInicio')}}" required/>
         @else
-        <input  type="date" id="FInicio" class="form-control" name="FInicio" value="{{$convocatorias->FInicio}}" required/>
+        <input  class="fecha" data-date-format="l j, F, Y" id="FInicio" name="FInicio" value="{{$convocatorias->FInicio}}" required/>
         @endif
 
         @if ($errors->has('FInicio'))
@@ -82,9 +82,9 @@
 
         <label>Fecha Final</label>
         @if ($errors->any())
-        <input  type="date" id="FFin" class="form-control" name="FFin" value="{{old('FFin')}}" required/>
+        <input  class="fecha" data-date-format="l j, F, Y" id="FFin" name="FFin" value="{{old('FFin')}}" required/>
         @else
-        <input  type="date" id="FFin" class="form-control" name="FFin" value="{{$convocatorias->FFin}}" required/>
+        <input  class="fecha" data-date-format="l j, F, Y" id="FFin" name="FFin" value="{{$convocatorias->FFin}}" required/>
         @endif
 
         @if ($errors->has('FFin'))
@@ -171,5 +171,27 @@
 	</div>
 </form>
 </div>
+
+<!----------------------------------------------------------------- SCRIPT DE FECHA ---------------------------------------------------------->
+
+    <script>
+  
+      $('.fecha').flatpickr({
+
+        locale: {
+              firstDayOfWeek: 1,
+              weekdays: {
+                shorthand: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+                longhand: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],         
+              }, 
+              months: {
+                shorthand: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Оct', 'Nov', 'Dic'],
+                longhand: ['Enero', 'Febreo', 'Мarzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+              },
+          },
+
+      });
+
+    </script>
 
 @endsection

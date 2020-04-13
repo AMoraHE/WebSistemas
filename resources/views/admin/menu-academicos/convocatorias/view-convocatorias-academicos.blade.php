@@ -53,7 +53,7 @@
 			      <div class="formulario">
 
 			        <label>Fecha Inicio</label>
-			        <input  type="date" id="FInicio" class="form-control" name="FInicio" value="{{$convocatoria->FInicio}}" readonly />
+			        <input  data-date-format="l j, F, Y" id="FInicio" name="FInicio" value="{{$convocatoria->FInicio}}" readonly />
 
 			      </div>
 
@@ -64,7 +64,7 @@
 			      <div class="formulario">
 
 			        <label>Fecha Cierre</label>
-			        <input  type="date" id="FFin" class="form-control" name="FFin" value="{{$convocatoria->FFin}}" readonly />
+			        <input data-date-format="l j, F, Y" id="FFin" name="FFin" value="{{$convocatoria->FFin}}" readonly />
 
 			      </div>
 

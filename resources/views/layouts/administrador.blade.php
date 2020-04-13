@@ -32,6 +32,11 @@
 
 		<script src="{{ asset('js/es.js')}}"></script>
 
+		<!-- Selector Fecha -->
+
+		<script src="{{ asset('js/flatpickr.min.js')}}"></script>
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/flatpickr.min.css')}}">
+
 	<!-- script Boostrap-->
 
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -239,14 +244,13 @@
 	<script src="{{ asset('js/main.js')}}"></script>
 <!--<script src="{{ asset('js/jquery.js')}}"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
-	<script src="{{ asset('js/select.js')}}"></script>
-	<script src="{{ asset('js/select-img.js')}}"></script>
 
-	<script src="{{ asset('js/modal.js')}}"></script>
+	<script src="{{ asset('js/select.js')}}"></script>
+
+	<!--<script src="{{ asset('js/modal.js')}}"></script>-->
 	<script src="{{ asset('js/msj-confirmacion.js')}}"></script>
 
-<!---
-	<script src="{{ asset('js/jquery-3.1.0.min.js')}}"></script>-->
+<!--<script src="{{ asset('js/jquery-3.1.0.min.js')}}"></script>-->
 	<script src="{{ asset('js/jquery.flexslider.js')}}"></script>
 
 	<script src="{{ asset('js/slider.js')}}"></script>
