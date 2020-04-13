@@ -41,8 +41,8 @@ class EventosAcademicosController extends Controller
             'titulo' => 'required|string',
             'descripcion' => 'required|string',
             'doc' => 'required|mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel',
-            'FInicio' => 'required|date',
-            'FCierre' => 'required|date',
+            'FInicio' => 'required|string',
+            'FCierre' => 'required|string',
         ]);
 
         if ($validator->fails()) {
@@ -134,8 +134,8 @@ class EventosAcademicosController extends Controller
             'titulo' => 'required|string',
             'descripcion' => 'required|string',
             'doc' => 'mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel',
-            'FInicio' => 'required|date',
-            'FCierre' => 'required|date',
+            'FInicio' => 'required|string',
+            'FCierre' => 'required|string',
         ]);
 
         if ($validator->fails()) {

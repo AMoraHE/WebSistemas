@@ -41,8 +41,8 @@ class ProgramasController extends Controller
   'doc' => 'required|mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel',
   'programa' => 'required|string',
   'descripcion' => 'required|string',
-  'FInicio' => 'required|date',
-  'FFin' => 'required|date',
+  'FInicio' => 'required|string',
+  'FFin' => 'required|string',
   ]);
 
   if ($validator->fails()) {
@@ -130,8 +130,8 @@ class ProgramasController extends Controller
     'doc' => 'mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel',
     'programa' => 'required|string',
     'descripcion' => 'required|string',
-    'FInicio' => 'required|date',
-    'FFin' => 'required|date',
+    'FInicio' => 'required|string',
+    'FFin' => 'required|string',
     ]);
 
   if ($validator->fails()) {
