@@ -161,7 +161,7 @@ class NoticiaController extends Controller
 
   public function buscador(Request $request)
   {
-    $noticias = Noticia::orderBy('id', 'desc')->where('titulo', 'like',"%".$request->key."%")->take(10)->get();
+    $noticias = Noticia::orderBy('id', 'desc')->where('titulo', 'like',"%".$request->key."%")->paginate(10);
     return view('admin.menu-inicio.noticias.noticias',compact('noticias'));
   }
 
