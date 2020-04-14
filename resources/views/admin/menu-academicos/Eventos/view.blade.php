@@ -30,27 +30,16 @@
 
 	</div>
 
-	<!----------------------------------------------------------------- DIVISOR ---------------------------------------------------------->
+	<!----------------------------------------------------------------- FORMULARIOS ---------------------------------------------------------->
 
-	<div class="divisor-contenido"></div>
-
-	<!----------------------------------------------------------------- TABLA ---------------------------------------------------------->
-
-
-	<div class="contenedor-cuerpo-seccion">
-
-		<div class="contenedor-texto-completo">
-
-			<div class="tabla-informacion-escolar">
-
-				<div class="contenedor-formulario-dividido">
+			<div class="contenedor-formulario-dividido">
 
 			    <div class="columna-de-dos">
 
 			      <div class="formulario">
 
 			        <label>Fecha Inicio</label>
-			        <input  type="date" id="FInicio" class="form-control" name="FInicio" value="{{$evento->FInicio}}" readonly />
+			        <input  data-date-format="l j, F, Y" id="FInicio" name="FInicio" value="{{$evento->FInicio}}" readonly />
 
 			      </div>
 
@@ -61,23 +50,21 @@
 			      <div class="formulario">
 
 			        <label>Fecha Cierre</label>
-			        <input  type="date" id="FFin" class="form-control" name="FCierre" value="{{$evento->FCierre}}" readonly />
+			        <input  data-date-format="l j, F, Y" id="FFin" name="FCierre" value="{{$evento->FCierre}}" readonly />
 
 			      </div>
 
 			    </div>
 
-			  </div>
+			</div>
 
-				<div class="contenedor-cuerpo-seccion">
+			<div class="formulario">
+
+				<label>Descripción</label>
+				<textarea readonly>{{$evento->descripcion}}</textarea>
+				
+			</div>
 					
-					<div class="contenedor-texto-completo">
-						
-						<p>{{$evento->descripcion}}</p>
-
-					</div>
-
-				</div>
 
 
 				<div class="contenedor-enlaces">
@@ -90,9 +77,6 @@
 				$var = $evento->slug
 				@endphp
 
-			</div>
-		</div>
-	</div>
 
 			<!----------------------------------------------------------------- BOTONES EVENTOS ---------------------------------------------------------->
 

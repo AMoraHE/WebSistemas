@@ -251,9 +251,6 @@ SLIDER********************************************/
 .contenedor-slider{
     width: calc(100% - 40px);
     margin: 0px auto 50px auto;
-    border: 2px solid #1B396A;
-    height: 450px;
-
 }
 
 /**************************************************
@@ -261,13 +258,9 @@ CONTENIDO*****************************************/
 
 .contenedor-contenido{
     width: calc(100% - 40px);
-    margin-left: 20px;
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    border: 2px solid #1B396A;
+    margin: 0px auto;
     padding: 10px;
-    height: 500px;
+    border: 2px solid red;
 }
 
 /**************************************************

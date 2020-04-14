@@ -33,18 +33,7 @@
 
 	</div>
 
-	<!----------------------------------------------------------------- DIVISOR ---------------------------------------------------------->
-
-	<div class="divisor-contenido"></div>
-
-	<!----------------------------------------------------------------- TABLA ---------------------------------------------------------->
-
-
-	<div class="contenedor-cuerpo-seccion">
-
-		<div class="contenedor-texto-completo">
-
-			<div class="tabla-informacion-escolar">
+	<!----------------------------------------------------------------- FORMULARIO ---------------------------------------------------------->
 
 			<div class="contenedor-formulario-dividido">
 
@@ -70,16 +59,13 @@
 
 			    </div>
 
-			 </div>
+			</div>
 
-			 <div class="contenedor-cuerpo-seccion">
-		
-				<div class="contenedor-texto-completo">
-						
-					<p>{{$convocatoria->descripcion}}</p>
+			<div class="formulario">
 
-				</div>
-
+				<label>Descripción</label>
+				<textarea readonly>{{$convocatoria->descripcion}}</textarea>
+				
 			</div>
 
 			<div class="contenedor-enlaces">
@@ -92,11 +78,6 @@
 			$var = $convocatoria->slug
 			@endphp
 
-			</div>
-
-		</div>
-
-	</div>
 
 <!---------------BOTONES convocatoria------------------------------------->
 

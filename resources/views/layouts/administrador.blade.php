@@ -32,7 +32,7 @@
 
 		<script src="{{ asset('js/es.js')}}"></script>
 
-		<!-- Selector Fecha -->
+	<!-- Selector Fecha -->
 
 		<script src="{{ asset('js/flatpickr.min.js')}}"></script>
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/flatpickr.min.css')}}">

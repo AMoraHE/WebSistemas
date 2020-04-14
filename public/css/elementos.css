@@ -158,14 +158,12 @@
 
 .contenedor-cuerpo-dividido{ /* --------->Seccion de Noticias*/
 	width: 100%;
-	height: 250px;
 	display: flex;
 	align-items: center;
 }
 
 .contenedor-img-dividido{
 	width: 20%;
-	float: left;
     margin: 0px 20px;
     padding: 10px;
     display: flex;
@@ -178,21 +176,19 @@
 	border-radius: 10px;
 	max-width: 100%;
 	max-height: 250px; /***Hacer Responsivo***/
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0px auto;
 }
 
 /******************************SECCIONES CUERPO PARTIDO EN 2 COLUMNAS************************************/
 
 .contenedor-texto-dividido{
 	width: 80%;
-	height: 100%;
-    float: left;
+	min-height: 250px;
    	margin: 0px 20px;
     padding: 10px;
 	border: 2px solid var(--verde);
 	border-radius: 10px;
-	overflow: auto; /* Aplica Scroll automatico ---> Modificar que cuando supere la catidad maxima de 200px el texto puede ver todo el contenido en un MODAL*/
+	/*overflow: auto; Aplica Scroll automatico ---> Modificar que cuando supere la catidad maxima de 200px el texto puede ver todo el contenido en un MODAL*/
 
 }
 
@@ -231,17 +227,17 @@
 /************************************************************************************************SECCIONES SELECT*************************************************************************************/
 
 .contenedor-select-seccion{
-	width: 26%;
+	width: 50%;
 	position: absolute;
-	left: 73%;
+	left: 50%;
 }
 
 .contenedor-select-seccion i{
 	position: absolute;
 	right: 20px;
 	top: calc(50% - 13px);
-	width: 16px;
-	height: 16px;
+	width: 12px;
+	height: 12px;
 	display: block;
 	border-left:4px solid var(--verde);
 	border-bottom:4px solid var(--verde);
@@ -269,40 +265,16 @@
 	position: relative;
 	width: 100%;
 	height: 50px;
-	font-size: 24px;
 	background: var(--azul);
 	border: none;
 	box-shadow: none;
 	outline: none;
 	cursor: pointer;
 	color: var(--blanco);
-	border: 1px solid var(--verde);
-	border-radius: 10px;
+	border-bottom: 1px solid var(--verde);
 	font-size: 18px;
 	cursor: pointer;
 	padding: 10px; /****deja un espacio interno el select****/
-}
-
-.contenedor-select-seccion select.genero{				/* clase de los Items de Seleccion del Género*/
-	position: relative;
-	width: 25%;
-	height: 50px;
-	font-size: 20px;
-	background: var(--azul);
-	border: none;
-	box-shadow: none;
-	outline: none;
-	cursor: pointer;
-	color: var(--blanco);
-	border: 1px solid var(--verde);
-	font-size: 18px;
-	border-radius: 15px;
-}
-
-.contenedor-select-seccion input{
-	font-family: 'Roboto', sans-serif;
-	width: calc(100% - 40px);
-	margin: 2% auto;
 }
 
 /***************************************SECCIONES PRINCIPALES TITULOS CON SELECT***************************************/
@@ -376,22 +348,6 @@
     line-height: 20px;
 }
 
-/***********************************SECCIONES PRELIMINARES IMG CON TXT*****************************************/
-
-.contenedor-seccion-preliminar-img-redimensionales{
-	width: 100%;
-	height: 100px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.contenedor-seccion-preliminar-img-redimensionales img{
-	max-width: 100%;
-	max-height: 100%;
-	border-radius: 10px;
-}
-
 /***********************************SECCIONES PRELIMINARES IMG SIN TXT*****************************************/
 
 .contenedor-seccion-preliminar-img-ajustable{
@@ -408,7 +364,21 @@
 	max-height: 100%;
 }
 
+/***********************************SECCIONES PRELIMINARES IMG CON TXT*****************************************/
 
+.contenedor-seccion-preliminar-img-redimensionales{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor-seccion-preliminar-img-redimensionales img{
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 10px;
+}
 
 /************************************************************************************************SECCIÓN LISTA DE SLIDER***********************************************************************/
 
@@ -478,14 +448,13 @@
 /************************************************************************************************SECCIÓN BUSCADOR***************************************************************************/
 
 .contenedor-buscador{
-	width: calc(100% - 40px);
-	margin: 0px auto;
+	width: 100%;
 	display: flex;
 	justify-content: flex-end;
 }
 
 .buscador{
-	width: 35%;
+	width: 50%;
 	float: right;
 	display: flex;
     align-items: center;
@@ -640,13 +609,23 @@
 	text-align: center;
 }
 
+.advertencia{
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	border-radius: 4px;
+	background: #E74C3C;
+	color: var(--blanco);
+	display: none;
+}
+
 /************************************************************************************************SECCIÓN CARGAR ARCHIVOS IMG***********************************************************************/
 
 .contenedor-cargar-img{
 	font-family: 'Roboto', sans-serif;
 	width: calc(100% - 40px);
 	height: 250px;
-	margin: 10px auto 0px auto;
+	margin: 0px auto;
 	display: flex;
   	justify-content: center;
   	border-top: 1px solid var(--verde);
@@ -688,15 +667,6 @@
 	width: calc(100% - 40px);
 	margin: 0 auto;
 	/*min-width: 200px;*/
-	text-align: center;
-	overflow: auto;
-	padding: 10px;
-	border-bottom: 1px solid var(--verde);
-}
-
-.info-img-infraestructura{
-	width: calc(100% - 40px);
-	margin: 0 auto;
 	text-align: center;
 	overflow: auto;
 	padding: 10px;
@@ -1023,4 +993,1297 @@ body::-webkit-scrollbar-thumb{
 ::-webkit-scrollbar-thumb {
   background-color: var(--verde);
   background-image:-webkit-linear-gradient(rgba(255,255,255,.3) 20%,transparent 20%,transparent 40%,rgba(255, 255, 255, 0.3) 40%,rgba(255,255,255,.3) 60%,transparent 60%,transparent 80%,rgba(255, 255, 255, 0.3) 80%);
+}
+
+
+/************************************************************************************************RESPONISBO****************************************************************************/
+
+
+@media screen and (max-width: 1366px) { 
+
+	/************************************************************************************************SECCIÓN USUARIO****************************************************************************/
+
+	.seccion-avatar{
+		padding: 2%;
+		border-top: 1px solid var(--verde);
+	}
+
+	.avatar{
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+	}
+
+	/******************************SECCIONES CUERPO PARTIDO EN 1 COLUMNA******************************************/
+
+	.contenedor-texto-completo{
+		min-height: 200px;
+	}
+
+	.contenedor-texto-completo p{
+		font-size: 15px;
+
+	}
+
+	.contenedor-texto-completo ul{
+		font-size: 15px;
+	}
+
+	/******************************SECCIONES PRINCIPALES PARTIDO EN 2 COLUMNAS************************************/
+
+	.contenedor-cuerpo-dividido{ /* --------->Seccion de Noticias*/
+		min-height: 200px;
+	}
+
+	.contenedor-img-dividido{
+		width: 25%;
+	}
+
+	.contenedor-img-dividido img{
+		max-height: 200px; /***Hacer Responsivo***/
+	}
+
+	/******************************SECCIONES CUERPO PARTIDO EN 2 COLUMNAS************************************/
+
+	.contenedor-texto-dividido{
+		width: 75%;
+		min-height: 200px;
+	}
+
+	.contenedor-texto-dividido p{
+		font-size: 15px;
+	}
+
+	/****************************************SECCIONES PRINCIPALES TITULOS*************************************************/
+
+	.contenedor-titulo-seccion h3{
+		font-size: 16px;
+	}
+
+	/***************************************SECCIONES SELECT FORMULARIO ***************************************/
+
+	.contenedor-select-seccion select.seleccion{			/* clase de los Items de Seleccion del Área*/
+		
+		font-size: 15px;
+		height: 40px;
+	}
+
+	/***************************************SECCIONES PRINCIPALES TITULOS CON SELECT***************************************/
+
+	.contenedor-titulo-seccion-select h3{
+		font-size: 16px;
+	}
+
+	.contenedor-titulo-seccion-select h4{
+		font-size: 16px;
+	}
+
+	/************************************************************************************************SECCIÓN PRELIMINAR***********************************************************************/
+
+
+	/************SECCIONES PRELIMINARES IMG NOTICIA**********************/
+
+	.contenedor-seccion-preliminar h2{
+
+	    font-size: 16px;
+
+	}
+
+	/************************************************************************************************SECCIÓN MINI GALERIA***********************************************************************/
+
+	.contenedor-img-mini-galeria{
+		width: 200px;
+	}
+
+	/************************************************************************************************SECCIÓN FORMULARIOS***********************************************************************/
+
+	.formulario input{
+	  
+	    font-size: 15px;
+	  
+	}
+
+	.formulario label{
+		font-size: 15px;
+	}
+
+	.formulario textarea{
+		font-size: 15px;
+
+	}
+
+	.formulario select{
+		font-size: 15px;
+	}
+
+	/***********************************TABLAS*****************************************/
+
+	.tabla-informacion-escolar{
+		font-size: 15px;
+	}
+
+	.tabla-informacion-escolar th, td{
+		padding: 15px;
+	}
+
+	.tabla-informacion-escolar td img{
+		max-width: 100%;
+	}
+
+
+	/************************************************************************************************SECCIÓN CARGAR ARCHIVOS IMG***********************************************************************/
+
+	.contenedor-cargar-img{
+		height: 200px;
+	}
+
+	/***********************************ELEMENTOS SECCION CARGAR IMG*****************************************/
+
+	.contenedor-txt-seccion{
+	    font-size: 14px;
+	}
+
+	#info-img{
+		font-size: 14px;
+	}
+
+
+	/************************************************************************************************SECCIÓN CARGAR ARCHIVOS PDF***********************************************************************/
+
+	.contenedor-enlaces{
+		font-size: 15px;
+	}
+
+	/***********************************SECCION TXT CARGAR ARCHIVO*****************************************/
+
+	.contenedor-texto-centrado p{
+
+		font-size: 15px;
+
+	}
+
+	/************************************************************************************************SECCIÓN CALENDARIO***********************************************************************/
+
+	#CalendarioWeb {
+
+		max-width: 700px;
+
+	}
+
+	/************************************************************************************************SECCIÓN BOTONES***********************************************************************/
+
+	.btn span{
+
+		font-size: 16px;
+
+	}
+
+	/****ELIMINACIÓN ANUAL****/
+
+	.btn-eliminacion-anual{ /****opcional mientras verificamos****/
+		top: -19px;
+		left: -150px;
+	}
+
+	/****BOTONES BUSCADOR****/
+
+	.btn-buscar {
+
+		font-size: 14px;
+
+	}
+
+	/****BOTONES TABLA****/
+
+	.btn-tabla{
+		width: 50px;
+		padding: 10px;
+		margin: 10px;
+	}
+
+
+	/****BOTONES CARGAR ARCHIVO****/
+
+	.subir{
+		width: 150px;
+		font-size: 16px;
+	}
+
+	/************************************************************************************************ICONOS***********************************************************************/
+
+	.icono-pdf {
+
+		font-size: 36px;
+
+	}
+
+}
+
+@media screen and (max-width: 1150px) { 
+
+
+	/******************************SECCIONES CUERPO PARTIDO EN 1 COLUMNA******************************************/
+
+	.contenedor-texto-completo{
+		min-height: 200px;
+	}
+
+	.contenedor-texto-completo p{
+		font-size: 14px;
+
+	}
+
+	.contenedor-texto-completo ul{
+		font-size: 14px;
+	}
+
+	/******************************SECCIONES PRINCIPALES PARTIDO EN 2 COLUMNAS************************************/
+
+	.contenedor-cuerpo-dividido{ /* --------->Seccion de Noticias*/
+		min-height: 200px;
+	}
+
+	.contenedor-img-dividido{
+		width: 25%;
+	}
+
+	.contenedor-img-dividido img{
+		max-height: 200px; /***Hacer Responsivo***/
+	}
+
+	/******************************SECCIONES CUERPO PARTIDO EN 2 COLUMNAS************************************/
+
+	.contenedor-texto-dividido{
+		width: 75%;
+		min-height: 200px;
+	}
+
+	.contenedor-texto-dividido p{
+		font-size: 14px;
+	}
+
+	/****************************************SECCIONES PRINCIPALES TITULOS*************************************************/
+
+	.contenedor-titulo-seccion h3{
+		font-size: 15px;
+	}
+
+	/***************************************SECCIONES SELECT FORMULARIO ***************************************/
+
+	.contenedor-select-seccion select.seleccion{			/* clase de los Items de Seleccion del Área*/
+		
+		font-size: 14px;
+		height: 40px;
+	}
+
+	/***************************************SECCIONES PRINCIPALES TITULOS CON SELECT***************************************/
+
+	.contenedor-titulo-seccion-select h3{
+		font-size: 15px;
+	}
+
+	.contenedor-titulo-seccion-select h4{
+		font-size: 15px;
+	}
+
+	/************************************************************************************************SECCIÓN PRELIMINAR***********************************************************************/
+
+
+	/************SECCIONES PRELIMINARES IMG NOTICIA**********************/
+
+	.contenedor-seccion-preliminar h2{
+
+	    font-size: 15px;
+
+	}
+
+	/************************************************************************************************SECCIÓN MINI GALERIA***********************************************************************/
+
+	.contenedor-img-mini-galeria{
+		width: 200px;
+	}
+
+	/************************************************************************************************SECCIÓN FORMULARIOS***********************************************************************/
+
+	.formulario input{
+	  
+	    font-size: 14px;
+	  
+	}
+
+	.formulario label{
+		font-size: 14px;
+	}
+
+	.formulario textarea{
+		font-size: 14px;
+
+	}
+
+	.formulario select{
+		font-size: 14px;
+	}
+
+	/***********************************TABLAS*****************************************/
+
+	.tabla-informacion-escolar{
+		font-size: 14px;
+	}
+
+	.tabla-informacion-escolar th, td{
+		padding: 10px;
+	}
+
+	.tabla-informacion-escolar td img{
+		max-width: 100%;
+	}
+
+
+	/************************************************************************************************SECCIÓN CARGAR ARCHIVOS IMG***********************************************************************/
+
+	.contenedor-cargar-img{
+		height: 200px;
+	}
+
+	/***********************************ELEMENTOS SECCION CARGAR IMG*****************************************/
+
+	.contenedor-txt-seccion{
+	    font-size: 13px;
+	}
+
+	#info-img{
+		font-size: 13px;
+	}
+
+
+	/************************************************************************************************SECCIÓN CARGAR ARCHIVOS PDF***********************************************************************/
+
+	.contenedor-enlaces{
+		font-size: 14px;
+	}
+
+	/***********************************SECCION TXT CARGAR ARCHIVO*****************************************/
+
+	.contenedor-texto-centrado p{
+
+		font-size: 14px;
+
+	}
+
+	/************************************************************************************************SECCIÓN CALENDARIO***********************************************************************/
+
+	#CalendarioWeb {
+
+		max-width: 600px;
+
+	}
+
+	/************************************************************************************************SECCIÓN BOTONES***********************************************************************/
+
+	.btn span{
+
+		font-size: 15px;
+
+	}
+
+	/****ELIMINACIÓN ANUAL****/
+
+	.btn-eliminacion-anual{ /****opcional mientras verificamos****/
+		top: -19px;
+		left: -150px;
+	}
+
+	/****BOTONES BUSCADOR****/
+
+	.btn-buscar {
+
+		font-size: 14px;
+
+	}
+
+	/****BOTONES TABLA****/
+
+	.btn-tabla{
+		width: 40px;
+		padding: 10px;
+		margin: 10px;
+	}
+
+
+	/****BOTONES CARGAR ARCHIVO****/
+
+	.subir{
+		width: 140px;
+		font-size: 15px;
+	}
+
+	/************************************************************************************************ICONOS***********************************************************************/
+
+	.icono-pdf {
+
+		font-size: 34px;
+
+	}
+
+}
+
+/***************************************************************************************************************************************************
+***************************************************************RESPONSIBO 1024PX********************************************************************/
+
+@media screen and (min-width: 950px) and (max-width: 1024px) {
+
+	/******************************SECCIONES CUERPO PARTIDO EN 1 COLUMNA******************************************/
+
+	.contenedor-texto-completo{
+		min-height: 150px;
+	}
+
+	.contenedor-texto-completo p{
+		font-size: 13px;
+
+	}
+
+	.contenedor-texto-completo ul{
+		font-size: 13px;
+	}
+
+	/******************************SECCIONES PRINCIPALES PARTIDO EN 2 COLUMNAS************************************/
+
+	.contenedor-cuerpo-dividido{ /* --------->Seccion de Noticias*/
+		min-height: 150px;
+		display: inline-block;
+	}
+
+	.contenedor-img-dividido{
+		width: calc(100% - 40px);
+	}
+
+	.contenedor-img-dividido img{
+		max-height: 150px; /***Hacer Responsivo***/
+	}
+
+	/******************************SECCIONES CUERPO PARTIDO EN 2 COLUMNAS************************************/
+
+	.contenedor-texto-dividido{
+		width: calc(100% - 40px);
+		min-height: 150px;
+	}
+
+	.contenedor-texto-dividido p{
+		font-size: 13px;
+	}
+
+	/****************************************SECCIONES PRINCIPALES TITULOS*************************************************/
+
+	.contenedor-titulo-seccion h3{
+		font-size: 14px;
+	}
+
+	/***************************************SECCIONES SELECT FORMULARIO ***************************************/
+
+	.contenedor-select-seccion select.seleccion{			/* clase de los Items de Seleccion del Área*/
+		
+		font-size: 13px;
+		height: 40px;
+	}
+
+	/***************************************SECCIONES PRINCIPALES TITULOS CON SELECT***************************************/
+
+	.contenedor-titulo-seccion-select h3{
+		font-size: 14px;
+	}
+
+	.contenedor-titulo-seccion-select h4{
+		font-size: 14px;
+	}
+
+	/************************************************************************************************SECCIÓN PRELIMINAR***********************************************************************/
+
+
+	/************SECCIONES PRELIMINARES IMG NOTICIA**********************/
+
+	.contenedor-seccion-preliminar h2{
+
+	    font-size: 14px;
+
+	}
+
+	/************************************************************************************************SECCIÓN MINI GALERIA***********************************************************************/
+
+	.contenedor-img-mini-galeria{
+		width: 150px;
+		height: 200px;
+	}
+
+	/************************************************************************************************SECCIÓN FORMULARIOS***********************************************************************/
+
+	.formulario input{
+	  
+	    font-size: 13px;
+	  
+	}
+
+	.formulario label{
+		font-size: 13px;
+	}
+
+	.formulario textarea{
+		font-size: 13px;
+
+	}
+
+	.formulario select{
+		font-size: 13px;
+	}
+
+	/***********************************TABLAS*****************************************/
+
+	.tabla-informacion-escolar{
+		font-size: 13px;
+	}
+
+	.tabla-informacion-escolar th, td{
+		padding: 10px;
+	}
+
+	.tabla-informacion-escolar td img{
+		max-width: 100%;
+	}
+
+
+	/************************************************************************************************SECCIÓN CARGAR ARCHIVOS IMG***********************************************************************/
+
+	.contenedor-cargar-img{
+		height: 200px;
+	}
+
+	/***********************************ELEMENTOS SECCION CARGAR IMG*****************************************/
+
+	.contenedor-txt-seccion{
+	    font-size: 13px;
+	}
+
+	#info-img{
+		font-size: 13px;
+	}
+
+
+	/************************************************************************************************SECCIÓN CARGAR ARCHIVOS PDF***********************************************************************/
+
+	.contenedor-enlaces{
+		font-size: 13px;
+	}
+
+	/***********************************SECCION TXT CARGAR ARCHIVO*****************************************/
+
+	.contenedor-texto-centrado p{
+
+		font-size: 13px;
+
+	}
+
+	/************************************************************************************************SECCIÓN CALENDARIO***********************************************************************/
+
+	#CalendarioWeb {
+
+		max-width: 600px;
+
+	}
+
+	/************************************************************************************************SECCIÓN BOTONES***********************************************************************/
+
+	.btn span{
+
+		font-size: 14px;
+
+	}
+
+	/****ELIMINACIÓN ANUAL****/
+
+	.btn-eliminacion-anual{ /****opcional mientras verificamos****/
+		top: -19px;
+		left: -150px;
+	}
+
+	/****BOTONES BUSCADOR****/
+
+	.btn-buscar {
+
+		font-size: 14px;
+
+	}
+
+	/****BOTONES TABLA****/
+
+	.btn-tabla{
+		width: 40px;
+		padding: 10px;
+		margin: 10px;
+	}
+
+
+	/****BOTONES CARGAR ARCHIVO****/
+
+	.subir{
+		width: 130px;
+		font-size: 14px;
+	}
+
+	/************************************************************************************************ICONOS***********************************************************************/
+
+	.icono-pdf {
+
+		font-size: 32px;
+
+	}
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 949px) {
+
+	
+
+	/******************************SECCIONES CUERPO PARTIDO EN 1 COLUMNA******************************************/
+
+	.contenedor-texto-completo{
+		min-height: 150px;
+	}
+
+	.contenedor-texto-completo p{
+		font-size: 13px;
+
+	}
+
+	.contenedor-texto-completo ul{
+		font-size: 13px;
+	}
+
+	/******************************SECCIONES PRINCIPALES PARTIDO EN 2 COLUMNAS************************************/
+
+	.contenedor-cuerpo-dividido{ /* --------->Seccion de Noticias*/
+		min-height: 150px;
+		display: inline-block;
+	}
+
+	.contenedor-img-dividido{
+		width: calc(100% - 40px);
+	}
+
+	.contenedor-img-dividido img{
+		max-height: 150px; /***Hacer Responsivo***/
+	}
+
+	/******************************SECCIONES CUERPO PARTIDO EN 2 COLUMNAS************************************/
+
+	.contenedor-texto-dividido{
+		width: calc(100% - 40px);
+		min-height: 150px;
+	}
+
+	.contenedor-texto-dividido p{
+		font-size: 13px;
+	}
+
+	/****************************************SECCIONES PRINCIPALES TITULOS*************************************************/
+
+	.contenedor-titulo-seccion h3{
+		font-size: 13px;
+	}
+
+	/***************************************SECCIONES SELECT FORMULARIO ***************************************/
+
+	.contenedor-select-seccion select.seleccion{			/* clase de los Items de Seleccion del Área*/
+		
+		font-size: 12px;
+		height: 40px;
+	}
+
+	.contenedor-select-seccion i{
+		display: none;
+	}
+
+	/***************************************SECCIONES PRINCIPALES TITULOS CON SELECT***************************************/
+
+	.contenedor-titulo-seccion-select h3{
+		font-size: 13px;
+	}
+
+	.contenedor-titulo-seccion-select h4{
+		font-size: 13px;
+	}
+
+	/************************************************************************************************SECCIÓN PRELIMINAR***********************************************************************/
+
+
+	/************SECCIONES PRELIMINARES IMG NOTICIA**********************/
+
+	.contenedor-seccion-preliminar h2{
+
+	    font-size: 13px;
+
+	}
+
+	/************************************************************************************************SECCIÓN MINI GALERIA***********************************************************************/
+
+	.contenedor-img-mini-galeria{
+		width: 150px;
+		height: 200px;
+	}
+
+	/************************************************************************************************SECCIÓN FORMULARIOS***********************************************************************/
+
+	.formulario input{
+	  
+	    font-size: 13px;
+	  
+	}
+
+	.formulario label{
+		font-size: 13px;
+	}
+
+	.formulario textarea{
+		font-size: 13px;
+
+	}
+
+	.formulario select{
+		font-size: 13px;
+	}
+
+	/***********************************TABLAS*****************************************/
+
+	.tabla-informacion-escolar{
+		display: none;
+	}
+
+	.advertencia{
+
+	display: flex;
+	font-size: 12px;
+
+	}
+
+
+	/************************************************************************************************SECCIÓN CARGAR ARCHIVOS IMG***********************************************************************/
+
+	/***********************************ELEMENTOS SECCION CARGAR IMG*****************************************/
+
+	.contenedor-txt-seccion{
+	    font-size: 13px;
+	    justify-content: center;
+	    text-align: center;
+
+	}
+
+	#info-img{
+		font-size: 13px;
+	}
+
+	.contenedor-img-seccion{
+		max-width: 100%;
+		height: 200px;
+	    margin: 0px;
+	}
+
+	.contenedor-boton-cargar{
+		margin: 0px;
+	    justify-content: center;
+	}
+
+	/************************************************************************************************SECCIÓN CARGAR ARCHIVOS PDF***********************************************************************/
+
+	.contenedor-enlaces{
+		font-size: 13px;
+	}
+
+	/***********************************SECCION TXT CARGAR ARCHIVO*****************************************/
+
+	.contenedor-texto-centrado p{
+
+		font-size: 13px;
+
+	}
+
+	/************************************************************************************************SECCIÓN CALENDARIO***********************************************************************/
+
+	#CalendarioWeb {
+
+		display: none;
+
+	}
+
+	/************************************************************************************************SECCIÓN BOTONES***********************************************************************/
+
+	.btn {
+		padding: 10px;
+		margin: 10px 20px;
+	}
+
+	.btn span{
+
+		font-size: 12px;
+
+	}
+
+	/****ELIMINACIÓN ANUAL****/
+
+	.btn-eliminacion-anual{ /****opcional mientras verificamos****/
+		display: none;
+	}
+
+	/****BOTONES BUSCADOR****/
+
+	.btn-buscar {
+
+		font-size: 12px;
+
+	}
+
+
+	/****BOTONES CARGAR ARCHIVO****/
+
+	.subir{
+		width: 130px;
+		font-size: 13px;
+	}
+
+	/************************************************************************************************ICONOS***********************************************************************/
+
+	.icono-pdf {
+
+		font-size: 30px;
+
+	}
+	
+}
+
+@media screen and (max-width: 699px) {
+
+	
+
+	/******************************SECCIONES CUERPO PARTIDO EN 1 COLUMNA******************************************/
+
+	.contenedor-texto-completo{
+		min-height: 150px;
+	}
+
+	.contenedor-texto-completo p{
+		font-size: 12px;
+
+	}
+
+	.contenedor-texto-completo ul{
+		font-size: 12px;
+	}
+
+	/******************************SECCIONES PRINCIPALES PARTIDO EN 2 COLUMNAS************************************/
+
+	.contenedor-cuerpo-dividido{ /* --------->Seccion de Noticias*/
+		min-height: 150px;
+		display: inline-block;
+	}
+
+	.contenedor-img-dividido{
+		width: calc(100% - 40px);
+	}
+
+	.contenedor-img-dividido img{
+		max-height: 150px; /***Hacer Responsivo***/
+	}
+
+	/******************************SECCIONES CUERPO PARTIDO EN 2 COLUMNAS************************************/
+
+	.contenedor-texto-dividido{
+		width: calc(100% - 40px);
+		min-height: 150px;
+	}
+
+	.contenedor-texto-dividido p{
+		font-size: 12px;
+	}
+
+	/****************************************SECCIONES PRINCIPALES TITULOS*************************************************/
+
+	.contenedor-titulo-seccion h3{
+		font-size: 12px;
+	}
+
+	/***************************************SECCIONES SELECT FORMULARIO ***************************************/
+
+	.contenedor-select-seccion select.seleccion{			/* clase de los Items de Seleccion del Área*/
+		
+		font-size: 12px;
+		height: 35px;
+	}
+
+	.contenedor-select-seccion i{
+		display: none;
+	}
+
+	/***************************************SECCIONES PRINCIPALES TITULOS CON SELECT***************************************/
+
+	.contenedor-titulo-seccion-select h3{
+		font-size: 12px;
+	}
+
+	.contenedor-titulo-seccion-select h4{
+		font-size: 12px;
+	}
+
+	/************************************************************************************************SECCIÓN PRELIMINAR***********************************************************************/
+
+
+	/************SECCIONES PRELIMINARES IMG NOTICIA**********************/
+
+	.contenedor-seccion-preliminar h2{
+
+	    font-size: 12px;
+
+	}
+
+	/************************************************************************************************SECCIÓN MINI GALERIA***********************************************************************/
+
+	.contenedor-img-mini-galeria{
+		width: 150px;
+		height: 200px;
+	}
+
+	/************************************************************************************************SECCIÓN FORMULARIOS***********************************************************************/
+
+	.formulario input{
+	  
+	    font-size: 12px;
+	  
+	}
+
+	.formulario label{
+		font-size: 12px;
+	}
+
+	.formulario textarea{
+		font-size: 12px;
+
+	}
+
+	.formulario select{
+		font-size: 12px;
+	}
+
+	/***********************************TABLAS*****************************************/
+
+	.tabla-informacion-escolar{
+		display: none;
+	}
+
+	.advertencia{
+
+	display: flex;
+	font-size: 12px;
+
+	}
+
+
+	/************************************************************************************************SECCIÓN CARGAR ARCHIVOS IMG***********************************************************************/
+
+	/***********************************ELEMENTOS SECCION CARGAR IMG*****************************************/
+
+	.contenedor-txt-seccion{
+	    font-size: 12px;
+	    justify-content: center;
+	    text-align: center;
+
+	}
+
+	#info-img{
+		font-size: 12px;
+	}
+
+	.contenedor-img-seccion{
+		display: none;
+	}
+
+	.contenedor-boton-cargar{
+		margin: 0px;
+	    justify-content: center;
+	}
+
+	/************************************************************************************************SECCIÓN CARGAR ARCHIVOS PDF***********************************************************************/
+
+	.contenedor-enlaces{
+		font-size: 12px;
+	}
+
+	/***********************************SECCION TXT CARGAR ARCHIVO*****************************************/
+
+	.contenedor-texto-centrado p{
+
+		font-size: 12px;
+
+	}
+
+	/************************************************************************************************SECCIÓN CALENDARIO***********************************************************************/
+
+	#CalendarioWeb {
+
+		display: none;
+
+	}
+
+	/************************************************************************************************SECCIÓN BOTONES***********************************************************************/
+
+	.btn {
+		padding: 10px;
+		margin: 10px 20px;
+	}
+
+	.btn span{
+
+		font-size: 12px;
+
+	}
+
+	/****ELIMINACIÓN ANUAL****/
+
+	.btn-eliminacion-anual{ /****opcional mientras verificamos****/
+		display: none;
+	}
+
+	/****BOTONES BUSCADOR****/
+
+	.btn-buscar {
+
+		font-size: 12px;
+
+	}
+
+
+	/****BOTONES CARGAR ARCHIVO****/
+
+	.subir{
+		width: 130px;
+		font-size: 13px;
+	}
+
+	/************************************************************************************************ICONOS***********************************************************************/
+
+	.icono-pdf {
+
+		font-size: 28px;
+
+	}
+	
+}
+
+@media screen and (max-width: 600px) {
+
+	
+
+	/******************************SECCIONES CUERPO PARTIDO EN 1 COLUMNA******************************************/
+
+	.contenedor-texto-completo{
+		min-height: 150px;
+	}
+
+	.contenedor-texto-completo p{
+		font-size: 12px;
+
+	}
+
+	.contenedor-texto-completo ul{
+		font-size: 12px;
+	}
+
+	/******************************SECCIONES PRINCIPALES PARTIDO EN 2 COLUMNAS************************************/
+
+	.contenedor-cuerpo-dividido{ /* --------->Seccion de Noticias*/
+		min-height: 150px;
+		display: flex;
+	}
+
+	.contenedor-img-dividido{
+		display: none;
+	}
+
+	/******************************SECCIONES CUERPO PARTIDO EN 2 COLUMNAS************************************/
+
+	.contenedor-texto-dividido{
+		width: 100%;
+		min-height: 150px;
+	}
+
+	.contenedor-texto-dividido p{
+		font-size: 12px;
+	}
+
+	/****************************************SECCIONES PRINCIPALES TITULOS*************************************************/
+
+	.contenedor-titulo-seccion h3{
+		font-size: 12px;
+	}
+
+	/***************************************SECCIONES SELECT FORMULARIO ***************************************/
+
+	.contenedor-select-seccion select.seleccion{			/* clase de los Items de Seleccion del Área*/
+		
+		font-size: 12px;
+		height: 35px;
+	}
+
+	.contenedor-select-seccion i{
+		display: none;
+	}
+
+	/***************************************SECCIONES PRINCIPALES TITULOS CON SELECT***************************************/
+
+	.contenedor-titulo-seccion-select h3{
+		font-size: 12px;
+	}
+
+	.contenedor-titulo-seccion-select h4{
+		font-size: 12px;
+	}
+
+	/************************************************************************************************SECCIÓN PRELIMINAR***********************************************************************/
+
+
+	/************SECCIONES PRELIMINARES IMG NOTICIA**********************/
+
+	.contenedor-seccion-preliminar h2{
+
+	    font-size: 12px;
+
+	}
+
+	/************************************************************************************************SECCIÓN MINI GALERIA***********************************************************************/
+
+	.contenedor-img-mini-galeria{
+		width: 150px;
+		height: 200px;
+	}
+
+	/************************************************************************************************SECCIÓN FORMULARIOS***********************************************************************/
+
+	.formulario input{
+	  
+	    font-size: 12px;
+	  
+	}
+
+	.formulario label{
+		font-size: 12px;
+	}
+
+	.formulario textarea{
+		font-size: 12px;
+
+	}
+
+	.formulario select{
+		font-size: 12px;
+	}
+
+	/***********************************TABLAS*****************************************/
+
+	.tabla-informacion-escolar{
+		display: none;
+	}
+
+	.advertencia{
+
+	display: flex;
+	font-size: 12px;
+
+	}
+
+
+	/************************************************************************************************SECCIÓN CARGAR ARCHIVOS IMG***********************************************************************/
+
+	/***********************************ELEMENTOS SECCION CARGAR IMG*****************************************/
+
+	.contenedor-txt-seccion{
+	    font-size: 12px;
+	    justify-content: center;
+	    text-align: center;
+
+	}
+
+	#info-img{
+		font-size: 12px;
+	}
+
+	.contenedor-img-seccion{
+		display: none;
+	}
+
+	.contenedor-boton-cargar{
+		margin: 0px;
+	    justify-content: center;
+	}
+
+	/************************************************************************************************SECCIÓN CARGAR ARCHIVOS PDF***********************************************************************/
+
+	.contenedor-enlaces{
+		font-size: 12px;
+	}
+
+	/***********************************SECCION TXT CARGAR ARCHIVO*****************************************/
+
+	.contenedor-texto-centrado p{
+
+		font-size: 12px;
+
+	}
+
+	/************************************************************************************************SECCIÓN CALENDARIO***********************************************************************/
+
+	#CalendarioWeb {
+
+		display: none;
+
+	}
+
+	/************************************************************************************************SECCIÓN BOTONES***********************************************************************/
+
+	.btn {
+		padding: 10px;
+		margin: 10px 20px;
+	}
+
+	.btn span{
+
+		font-size: 12px;
+
+	}
+
+	/****ELIMINACIÓN ANUAL****/
+
+	.btn-eliminacion-anual{ /****opcional mientras verificamos****/
+		display: none;
+	}
+
+	/****BOTONES BUSCADOR****/
+
+	.btn-buscar {
+
+		font-size: 12px;
+
+	}
+
+
+	/****BOTONES CARGAR ARCHIVO****/
+
+	.subir{
+		width: 150px;
+		font-size: 13px;
+	}
+
+	/************************************************************************************************ICONOS***********************************************************************/
+
+	.icono-pdf {
+
+		font-size: 28px;
+
+	}
+	
 }

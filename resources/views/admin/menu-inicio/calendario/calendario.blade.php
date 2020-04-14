@@ -19,6 +19,8 @@
 
   			<div id="CalendarioWeb"></div>
 
+        <p class="advertencia">El Calendario No Es Compatible Con esta Resolución</p>
+
 
   		</div>
 
@@ -97,7 +99,7 @@
               		$('#txtHoraFinal').val(fechaHora[1]);
 
               		RecolectarDatosGUI();
-                  EnviarInformacion('modificar',NuevoEvento,true);
+                  EnviarInformacion('modificar',NuevoEvento, true);
 
 
               	}
@@ -136,7 +138,7 @@
 
     									<div class="formulario">
     										<label>Fecha Inicio:</label>
-    										<input  type="date" id="txtFechaInicio" class="form-control" name="txtFechaInicio" readonly/>
+    										<input  class="fecha" id="txtFechaInicio" name="txtFechaInicio" readonly/>
     									</div>
 
                     </div>
@@ -145,7 +147,7 @@
 
     									<div class="formulario">
     										<label>Hora Incio:</label>
-    										<input type="time" id="txtHoraInicio" value="08:30" class="form-control" required />
+    										<input class="hora" id="txtHoraInicio" value="08:30" required />
     									</div>
 
                     </div>
@@ -160,7 +162,7 @@
 
     									<div class="formulario">
     										<label>Fecha Final:</label>
-    										<input type="date" id="txtFechaFinal" class="form-control" name="texFechaFinal" required>
+    										<input class="fecha" id="txtFechaFinal" name="texFechaFinal" required/>
     									</div>
 
                     </div>
@@ -169,7 +171,7 @@
 
     									<div class="formulario">
     										<label>Hora Final:</label>
-    										<input type="time" id="txtHoraFinal" value="12:30" class="form-control" required />
+    										<input class="hora" id="txtHoraFinal" value="12:30" required />
     									</div>
 
                     </div>
@@ -288,9 +290,42 @@
               $('#txtColor').val('');
               $('#txtDescripcion').val('');
               $('#tituloEvento').html('Agregar Evento');
+              $('#txtHoraInicio').val('08:30');
+              $('#txtHoraFinal').val('12:30');
   		}
 
   	</script>
+
+  <!----------------------------------------------------------------- SCRIPT DE FECHA ---------------------------------------------------------->
+
+    <script>
+  
+      $('.fecha').flatpickr({
+        locale: {
+              firstDayOfWeek: 1,
+              weekdays: {
+                shorthand: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+                longhand: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],         
+              }, 
+              months: {
+                shorthand: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Оct', 'Nov', 'Dic'],
+                longhand: ['Enero', 'Febreo', 'Мarzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+              },
+          },
+
+      });
+
+    </script>
+
+    <script>
+  
+      $('.hora').flatpickr({
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "H:i",
+      });
+
+    </script>
 
 
 @endsection

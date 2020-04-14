@@ -6,13 +6,18 @@
   	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 	<title>Inicio</title>
-
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-publico.css')}}">
   
 	  	<script src="https://kit.fontawesome.com/13b3d85bca.js" crossorigin="anonymous"></script>
 	  	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
-	  	<link rel="stylesheet" type="text/css" href="css/estilos-publico.css">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-publico.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/elementos.css')}}">
+
+		<!--------------------------------SLIDER---------------------------------------->
+
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/flexslider.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css')}}">
+		<script src="{{ asset('js/jquery.min.js')}}"></script>
 		
 </head>
 
@@ -140,12 +145,8 @@
 
 			<!--------------------------------------------------------- SLIDER --------------------------------------------------------->
 
-			<div class="contenedor-slider">
-
 			@yield('content-slider')						
 										
-			</div>
-
 			<!--------------------------------------------------------- INFOR --------------------------------------------------------->
 							
 
@@ -175,8 +176,11 @@
 
 </div>
 
-	<script src="{{ asset('js/jquery.js')}}"></script>
 	<script src="{{ asset('js/main.js')}}"></script>
+
+	<script src="{{ asset('js/jquery.flexslider.js')}}"></script>
+
+	<script src="{{ asset('js/slider.js')}}"></script>
 
 </body>
 

@@ -17,7 +17,6 @@
 
 			@foreach ($sliders as $slider)
 
-
 				<li>
 					<img src="/images/slider/{{$slider->image}}" alt="">
 					

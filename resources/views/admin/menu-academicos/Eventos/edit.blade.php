@@ -24,9 +24,9 @@
 				
 			<label>Título</label>
 			@if ($errors->any())
-			<input type="text" name="titulo" id="titulo" value="{{old('titulo')}}" placeholder="Inserte título del evento" class="form-control" required>
+			<input type="text" name="titulo" id="titulo" value="{{old('titulo')}}" placeholder="Inserte título del evento" required>
 			@else
-			<input type="text" name="titulo" id="titulo-ret" value="{{$evento->titulo}}" placeholder="Inserte Título Deseado" class="form-control" required>
+			<input type="text" name="titulo" id="titulo-ret" value="{{$evento->titulo}}" placeholder="Inserte Título Deseado" required>
 			@endif
 
 		</div>
@@ -45,9 +45,9 @@
 
 					<label>Fecha Inicio</label>
 					@if ($errors->any())
-					<input  type="date" id="FInicio" class="form-control" name="FInicio" value="{{old('FInicio')}}" required />
+					<input  class="fecha" data-date-format="l j, F, Y" id="FInicio" name="FInicio" value="{{old('FInicio')}}" required />
 					@else
-					<input  type="date" id="FInicio" class="form-control" name="FInicio" value="{{$evento->FInicio}}" required />
+					<input  class="fecha" data-date-format="l j, F, Y" id="FInicio" name="FInicio" value="{{$evento->FInicio}}" required />
 					@endif
 
 		      	</div>
@@ -66,9 +66,9 @@
 
 			        <label>Fecha Cierre</label>
 			        @if ($errors->any())
-			        <input  type="date" id="FCierre" class="form-control" name="FCierre" value="{{old('FCierre')}}" required />
+			        <input  class="fecha" data-date-format="l j, F, Y" id="FCierre" name="FCierre" value="{{old('FCierre')}}" required />
 			        @else
-			        <input  type="date" id="FCierre" class="form-control" name="FCierre" value="{{$evento->FCierre}}" required />
+			        <input  class="fecha" data-date-format="l j, F, Y" id="FCierre" name="FCierre" value="{{$evento->FCierre}}" required />
 			        @endif
 
 		     	</div>
@@ -149,5 +149,27 @@
 	</form>
 
 </div>
+
+<!----------------------------------------------------------------- SCRIPT DE FECHA ---------------------------------------------------------->
+
+		<script>
+	
+			$('.fecha').flatpickr({
+
+				locale: {
+			        firstDayOfWeek: 1,
+			        weekdays: {
+			          shorthand: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+			          longhand: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],         
+			        }, 
+			        months: {
+			          shorthand: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Оct', 'Nov', 'Dic'],
+			          longhand: ['Enero', 'Febreo', 'Мarzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+			        },
+		      },
+
+			});
+
+		</script>
 
 @endsection

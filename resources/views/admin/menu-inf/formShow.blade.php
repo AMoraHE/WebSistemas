@@ -29,7 +29,7 @@
 	<div class="formulario">
 
 		<label>Descripción:</label>
-		<textarea name="" readonly>{{$infra->descripcion}}</textarea>
+		<textarea readonly>{{$infra->descripcion}}</textarea>
 
 	</div>
 

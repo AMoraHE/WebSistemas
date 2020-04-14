@@ -33,18 +33,7 @@
 
 	</div>
 
-	<!----------------------------------------------------------------- DIVISOR ---------------------------------------------------------->
-
-	<div class="divisor-contenido"></div>
-
 	<!----------------------------------------------------------------- TABLA ---------------------------------------------------------->
-
-
-	<div class="contenedor-cuerpo-seccion">
-
-		<div class="contenedor-texto-completo">
-
-			<div class="tabla-informacion-escolar">
 
 			<div class="contenedor-formulario-dividido">
 
@@ -53,7 +42,7 @@
 			      <div class="formulario">
 
 			        <label>Fecha Inicio</label>
-			        <input  type="date" id="FInicio" class="form-control" name="FInicio" value="{{$programa->FInicio}}" readonly />
+			        <input  data-date-format="l j, F, Y" id="FInicio" name="FInicio" value="{{$programa->FInicio}}" readonly />
 
 			      </div>
 
@@ -64,7 +53,7 @@
 			      <div class="formulario">
 
 			        <label>Fecha Cierre</label>
-			        <input  type="date" id="FFin" class="form-control" name="FFin" value="{{$programa->FFin}}" readonly />
+			        <input  data-date-format="l j, F, Y" id="FFin" name="FFin" value="{{$programa->FFin}}" readonly />
 
 			      </div>
 
@@ -72,18 +61,11 @@
 
 			  </div>
 
-			  <div class="contenedor-cuerpo-seccion">
+			<div class="formulario">
 
-					<div class="contenedor-texto-completo">
-
-						<p>{{$programa->descripcion}}</p>
-
-					</div>
-
-				</div>
-
-
-
+				<label>Descripción</label>
+				<textarea readonly>{{$programa->descripcion}}</textarea>
+				
 			</div>
 
 			<div class="contenedor-enlaces">
@@ -95,10 +77,6 @@
 			@php
 			$var = $programa->slug
 			@endphp
-
-		</div>
-
-	</div>
 
 <!---------------BOTONES programas------------------------------------->
 

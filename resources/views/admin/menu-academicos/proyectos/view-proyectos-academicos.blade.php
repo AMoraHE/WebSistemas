@@ -90,6 +90,8 @@
 
 			</div>
 
+			<p class="advertencia">La Tabla No Es Compatible Con esta Resolución</p>
+
 		</div>
 
 	</div>
