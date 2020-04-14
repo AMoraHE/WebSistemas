@@ -18,6 +18,25 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/flexslider.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css')}}">
 		<script src="{{ asset('js/jquery.min.js')}}"></script>
+
+		<!--------------------------------CALENDARIO---------------------------------------->
+
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/modal.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/fullcalendar.css')}}">
+
+		<!-- Calendario -->
+
+		<script src="{{ asset('js/jquery.min.js')}}"></script>
+		<script src="{{ asset('js/moment.min.js')}}"></script>
+
+		<script src="{{ asset('js/fullcalendar.min.js')}}"></script>
+
+		<script src="{{ asset('js/es.js')}}"></script>
+
+		<!-- script Boostrap-->
+
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 		
 </head>
 

@@ -34,18 +34,6 @@
               		right:'month,basicWeek,basicDay, agendaWeek,agendaDay'
               	},
 
-              	dayClick:function(date,jsEvent,view){
-
-              		$('#btnAgregar').prop("disabled",false);
-              		$('#btnModificar').prop("disabled",true);
-              		$('#btnEliminar').prop("disabled",true);
-
-              		limpiarFormulario();
-              		$('#txtFechaInicio').val(date.format());
-              		$('#txtFechaFinal').val(date.format());
-              		$("#ModalEventos").modal();
-              	},
-
               	/****Evento de la BD - Conexion**********/
 
   	            events:'/isc-inicio-calendarioEventos',
@@ -55,10 +43,6 @@
 
 
               	eventClick:function(calEvent,jsEvent,view){
-
-              		$('#btnAgregar').prop("disabled",true);
-              		$('#btnModificar').prop("disabled",false);
-              		$('#btnEliminar').prop("disabled",false);
 
               		//H5 Titulo
               		$('#tituloEvento').html(calEvent.title);
@@ -125,7 +109,7 @@
 
   									<div class="formulario">
   										<label>Titulo:</label>
-  										<input type="text" id="txtTitulo" class="form-control" placeholder="Titulo del Evento" required>
+  										<input type="text" id="txtTitulo" class="form-control" placeholder="Titulo del Evento" readonly>
   									</div>
 
     <!-- Apartado Dividido-->
@@ -145,7 +129,7 @@
 
     									<div class="formulario">
     										<label>Hora Incio:</label>
-    										<input type="time" id="txtHoraInicio" value="08:30" class="form-control" required />
+    										<input type="time" id="txtHoraInicio" value="08:30" class="form-control" readonly />
     									</div>
 
                     </div>
@@ -160,7 +144,7 @@
 
     									<div class="formulario">
     										<label>Fecha Final:</label>
-    										<input type="date" id="txtFechaFinal" class="form-control" name="texFechaFinal" required>
+    										<input type="date" id="txtFechaFinal" class="form-control" name="texFechaFinal" readonly>
     									</div>
 
                     </div>
@@ -169,7 +153,7 @@
 
     									<div class="formulario">
     										<label>Hora Final:</label>
-    										<input type="time" id="txtHoraFinal" value="12:30" class="form-control" required />
+    										<input type="time" id="txtHoraFinal" value="12:30" class="form-control" readonly />
     									</div>
 
                     </div>
@@ -181,29 +165,20 @@
   								<div class="formulario">
 
   									<label>Descripción:</label>
-  									<textarea id="txtDescripcion" rows="3" class="form-control" required></textarea>
+  									<textarea id="txtDescripcion" rows="3" class="form-control" readonly></textarea>
 
   								</div>
 
   								<div class="formulario">
 
   									<label>Color:</label>
-  									<input type="color" value="#ff0000" id="txtColor" class="form-control" style="height:36px" required>
+  									<input type="color" value="#ff0000" id="txtColor" class="form-control" style="height:36px" readonly>
 
   								</div>
 
   							</div>
 
   							<div class="modal-pie">
-
-  								<div class="contenedor-botones-modal">
-
-  								    <button type="button" id="btnAgregar" class="btn-modal agregar"><span>Agregar</span></button>
-  	        					<button type="button" id="btnModificar" class="btn-modal editar"><span>Modificar</span></button>
-  						        <button type="button" id="btnEliminar" class="btn-modal eliminar"><span>Borrar</span></button>
-  						        <button type="button" class="btn-modal cancelar" data-dismiss="modal"><span>Cancelar</span></button>
-
-  						    </div>
 
   							</div>
 
