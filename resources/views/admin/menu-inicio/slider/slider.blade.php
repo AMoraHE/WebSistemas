@@ -16,11 +16,14 @@
 
 <div class="seccion-principal">
   
+  @if(count($sliders) >3)
+  @else
   <div class="contenedor-botones">
 
     <a class="msj" mesanje="agregar más slider" href="slider/create"><button class="btn agregar"><span>Agregar</span></button></a>
 
   </div>
+  @endif
 
 <!----------------------------------------------------------------- IMG SLIDER ---------------------------------------------------------->
 
