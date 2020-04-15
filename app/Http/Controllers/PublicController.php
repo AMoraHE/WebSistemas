@@ -34,7 +34,7 @@ class PublicController extends Controller
     	return view('publico.menu-inicio.calendario.calendario');
     }
 
-    public function calendarioEvento(Request $request)
+    public function calendarioEventos(Request $request)
     {
     	$eventos = Evento::all();
 
