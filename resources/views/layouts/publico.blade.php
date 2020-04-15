@@ -11,7 +11,7 @@
 	  	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-publico.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/elementos.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/elementos-publico.css')}}">
 
 		<!--------------------------------SLIDER---------------------------------------->
 
