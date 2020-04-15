@@ -109,6 +109,7 @@
 						<li><a href="{{route('ISC-INICIO')}}"><i class="icono izquierda fa fa-home"></i>Inicio</a></li>
 						<li><a href="/isc-inicio-noticias"><i class="icono izquierda far fa-newspaper"></i>Noticias</a></li>
 						<li><a href="/isc-inicio-calendario"><i class="icono izquierda far fa-calendar-alt"></i>Calendario</a></li>
+						<li><a href="/isc-inicio-contactos"><i class="icono izquierda far fa-calendar-alt"></i>Contacto</a></li>
 					</ul>
 				</li>
 							
