@@ -22,18 +22,13 @@
 
 <!------------------------------------------------------------- TABLA EDITAR PERFIL INGRESO --------------------------------------------------->
 
-	<div class="formulario">
+	<div class="contenedor-botones">
 			
-		<label>Descripción Perfil Ingreso</label>
 		<a class="msj" mesanje="agregar un nuevo elemento?" href="{{route('crear-perfil-ingreso')}}"><button class="btn agregar"><span>Agregar</span></button></a>
 	
 	</div>
 
-	<div class="contenedor-cuerpo-seccion">
-
-		<div class="contenedor-texto-completo">
-
-			<div class="tabla-informacion-escolar">
+	<div class="tabla-informacion-escolar">
 
 				<table>
 							
@@ -59,13 +54,8 @@
 
 				</table>		
 
-			</div>
-
-			<p class="advertencia">La Tabla No Es Compatible Con esta Resolución</p>
-
-		</div>
-
 	</div>
+
 
 <!------------------------------------------------------------- BOTONES EDITAR PERFIL INGRESO --------------------------------------------------->
 

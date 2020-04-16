@@ -27,12 +27,8 @@
 		<a class="msj" mesanje="agregar un nuevo elemento?" href="{{route('crear-Linea-Investigacion')}}"><button class="btn agregar"><span>Agregar</span></button></a>
 
 	</div>
-					
-	<div class="contenedor-cuerpo-seccion">
 
-		<div class="contenedor-texto-completo">
-
-			<div class="tabla-informacion-escolar">
+		<div class="tabla-informacion-escolar">
 
 				<table>
 									
@@ -67,13 +63,8 @@
 
 				</table>		
 
-			</div>
-
-			<p class="advertencia">La Tabla No Es Compatible Con esta Resolución</p>
-
 		</div>
 
-	</div>
 				
 </div>
 

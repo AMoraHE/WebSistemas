@@ -25,7 +25,7 @@
 
       <div class="formulario">
 
-        <label for="">Tamaño de imagen recomendado: 250px de ancho y 250px de alto</label>
+        <label for="">Tamaño de imagen recomendado: 200px de ancho y 150px de alto</label>
         
       </div>
 
@@ -89,7 +89,7 @@
 
         @foreach ($imagenes as $imagen)
 
-        <div class="contenedor-seccion-preliminar">
+        <div class="contenedor-seccion-preliminar-img">
 
           <div class="contenedor-seccion-preliminar-img-ajustable">
 

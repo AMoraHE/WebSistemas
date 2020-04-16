@@ -53,10 +53,6 @@
   </div>
 
 <!------------------------------------------------------------------ TABLA - ORGANIGRAMA ------------------------------------------------------------->
-
-  <div class="contenedor-cuerpo-seccion">
-
-    <div class="contenedor-texto-completo">
     
       <div class="tabla-informacion-escolar">
 
@@ -116,14 +112,6 @@
 
       </div>
 
-      <p class="advertencia">La Tabla No Es Compatible Con esta Resolución</p>
-
-    </div>
-
-  </div>
-
 </div>
-
-
 
 @endsection

@@ -13,14 +13,14 @@
 
 	<div class="formulario">
 
-		<label>Descripción:</label>
+		<label>Descripción</label>
 		<textarea name="descripcion" readonly>{{$album->descripcion}}</textarea>
 
 	</div>
 
 	<div class="formulario">
 
-		<label>Galería:</label>
+		<label>Galería</label>
 
 	</div>
 

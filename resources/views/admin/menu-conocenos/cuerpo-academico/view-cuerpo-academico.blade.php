@@ -27,10 +27,6 @@
 	</div>
 
 <!----------------------------------------------------------------- TABLA - CUERPO ACADÉMICO  ---------------------------------------------------------->
-			
-	<div class="contenedor-cuerpo-seccion">
-
-		<div class="contenedor-texto-completo">
 
 			<div class="tabla-informacion-escolar">
 
@@ -56,11 +52,11 @@
 						<td>{{$cuerpo->idCA}}</td>
 						<td>{{$cuerpo->clave}}</td>
 						<td>
-							<ul>
+							<ol>
 								@foreach (explode(', ', $cuerpo->integrantes) as $integrantes)
 								<li>{{$integrantes}}</li>
 								@endforeach
-							</ul>
+							</ol>
 						</td>
 								
 						<td>
@@ -78,12 +74,6 @@
 				</table>		
 
 			</div>
-
-			<p class="advertencia">La Tabla No Es Compatible Con esta Resolución</p>
-
-		</div>
-
-	</div>
 		
 </div>
 

@@ -17,7 +17,7 @@
 <!----------------------------------------------------------------- CUERPO PERFIL EGRESO ---------------------------------------------------------->
 
 
-	<div class="contenedor-cuerpo-seccion">
+	<div class="contenedor-componentes-principales">
 
 		<div class="contenedor-texto-completo">
 

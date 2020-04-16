@@ -24,16 +24,11 @@
 
 <!----------------------------------------------------------------- TABLA CAMPO LABORAL ---------------------------------------------------------->	
 
-	<div class="formulario">
+	<div class="contenedor-botones">
 			
-		<label>Descripción Campo Laboral</label>
 		<a class="msj" mesanje="agregar un nuevo elemento?" href="{{route('CampoLaboralCrear')}}"><button class="btn agregar"><span>Agregar</span></button></a>
 
 	</div>
-
-	<div class="contenedor-cuerpo-seccion">
-
-		<div class="contenedor-texto-completo">
 
 			<div class="tabla-informacion-escolar">
 
@@ -63,10 +58,6 @@
 				</table>		
 
 			</div>
-
-		</div>
-
-	</div>
 
 <!----------------------------------------------------------------- BOTONES CAMPO LABORAL ---------------------------------------------------------->	
 

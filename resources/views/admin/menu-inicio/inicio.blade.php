@@ -59,23 +59,27 @@
 	
 	@if($loop->first)
 
-	<div class="contenedor-titulo-seccion">
+	<div class="contenedor-componentes-principales">
 
-		<h3>{{$noticia->titulo}}</h3>
+		<div class="contenedor-titulo-seccion">
 
-	</div>
-
-	<div class="contenedor-cuerpo-dividido">
-
-		<div class="contenedor-img-dividido">
-
-			<img src="/images/news/{{$noticia->newimage}}">
+			<h3>{{$noticia->titulo}}</h3>
 
 		</div>
 
-		<div class="contenedor-texto-dividido">
+		<div class="contenedor-cuerpo-dividido">
 
-			<p>{{$noticia->redaccion}}</p>
+			<div class="contenedor-img-dividido">
+
+				<img src="/images/news/{{$noticia->newimage}}">
+
+			</div>
+
+			<div class="contenedor-texto-dividido">
+
+				<p>{{$noticia->redaccion}}</p>
+
+			</div>
 
 		</div>
 

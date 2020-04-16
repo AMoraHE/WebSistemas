@@ -117,10 +117,8 @@
 	width: 100%;
 }
 
-.contenedor-cuerpo-seccion{
-	width: 100%;
-	display: flex;
-	align-items: center;
+.contenedor-componentes-principales{
+	border: 1px solid var(--verde);
 }
 
 /******************************SECCIONES CUERPO PARTIDO EN 1 COLUMNA******************************************/
@@ -128,26 +126,16 @@
 .contenedor-texto-completo{
 	width: 100%;
 	min-height: 250px;
-    margin: 0px 20px;
     padding: 10px;
-	border: 2px solid var(--verde);
-	border-radius: 10px;
 }
 
 .contenedor-texto-completo p{
-	margin: 10px;
-	font-family: 'Roboto', sans-serif;
     text-align: justify;
-    line-height: 20px;
-
 }
 
 .contenedor-texto-completo ul{
-	margin: 10px;
 	list-style: none;
-	font-family: 'Roboto', sans-serif;
     text-align: justify;
-    line-height: 20px;
 }
 
 .contenedor-texto-completo ul li{
@@ -159,36 +147,27 @@
 .contenedor-cuerpo-dividido{ /* --------->Seccion de Noticias*/
 	width: 100%;
 	display: flex;
-	align-items: center;
 }
 
 .contenedor-img-dividido{
-	width: 20%;
-    margin: 0px 20px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
 }
 
 .contenedor-img-dividido img{
-	border: 2px solid var(--verde);
-	border-radius: 10px;
-	max-width: 100%;
-	max-height: 250px; /***Hacer Responsivo***/
-	margin: 0px auto;
+	width: 100%;
+	height: 100%; /***Hacer Responsivo***/
+	object-fit: cover;
+	object-position: center;
 }
 
 /******************************SECCIONES CUERPO PARTIDO EN 2 COLUMNAS************************************/
 
 .contenedor-texto-dividido{
-	width: 80%;
-	min-height: 250px;
-   	margin: 0px 20px;
-    padding: 10px;
-	border: 2px solid var(--verde);
-	border-radius: 10px;
-	/*overflow: auto; Aplica Scroll automatico ---> Modificar que cuando supere la catidad maxima de 200px el texto puede ver todo el contenido en un MODAL*/
+	width: calc(100% - 250px);
+	height: 250px;
+	overflow: auto;
 
 }
 
@@ -204,24 +183,21 @@
 
 
 .contenedor-titulo-seccion{
-	width: calc(100% - 40px);
+	width: 100%;	
 	min-height: 50px;
-	margin: 2% auto;
+	margin: auto;
 	background: var(--azul);
-	border: 2px solid var(--verde);
+	border-bottom: 3px solid var(--verde);
 	display: flex;
 	align-items: center;
-	border-radius: 10px;
 }
 
 .contenedor-titulo-seccion h3{
 	width: 100%;
-	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
     text-transform: uppercase;
     color: var(--blanco);
     padding: 2%;
-    text-align: left;
-
 }
 
 /************************************************************************************************SECCIONES SELECT*************************************************************************************/
@@ -280,33 +256,23 @@
 /***************************************SECCIONES PRINCIPALES TITULOS CON SELECT***************************************/
 
 .contenedor-titulo-seccion-select{
-	width: calc(100% - 40px);
+	width: 100%;	
 	min-height: 50px;
-	margin: 2% auto;
+	margin: auto;
 	background: var(--azul);
-	border: 2px solid var(--verde);
+	border-bottom: 3px solid var(--verde);
+
 	position: relative;
 	display: flex;
 	align-items: center;
-	border-radius: 10px;
 }
 
 .contenedor-titulo-seccion-select h3{
-	width: 70%;
-	font-family: 'Roboto', sans-serif;
+	width: 100%;
+	font-size: 18px;
     text-transform: uppercase;
     color: var(--blanco);
     padding: 2%;
-    text-align: left;
-}
-
-.contenedor-titulo-seccion-select h4{
-	width: 30%;
-	font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    color: var(--blanco);
-    padding: 2%;
-    text-align: center;
 }
 
 /************************************************************************************************SECCIÓN PRELIMINAR***********************************************************************/
@@ -321,31 +287,35 @@
 
 .contenedor-seccion-preliminar{
 	width: 220px;
-	height: 250px;
+	height: 280px;
 	overflow: auto;
 	display: inline-block;
 	vertical-align: top;
 	text-align: justify;
 	margin: 10px;
-	border: 2px solid var(--verde);
-	border-radius: 10px;
+	border: 1px solid var(--verde);
+	border-radius: 4px;
 	padding: 10px;
 }
 
 /************SECCIONES PRELIMINARES IMG NOTICIA**********************/
 
 .contenedor-seccion-preliminar h2{
-	font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-    font-size: 18px;
-    margin: 20px 0px;
-    line-height: 20px;
+    font-size: 16px;
+    margin: 10px 0px;
 }
 
-.contenedor-noticia-preliminar p{
-	font-family: 'Roboto', sans-serif;
-    text-align: justify;
-    line-height: 20px;
+/***********************************SECCIONES PRELIMINARES IMG**************************************/
+
+.contenedor-seccion-preliminar-img{
+	width: 250px;
+	height: 200px;
+	display: inline-block;
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid var(--verde);
+	border-radius: 4px;
 }
 
 /***********************************SECCIONES PRELIMINARES IMG SIN TXT*****************************************/
@@ -353,67 +323,55 @@
 .contenedor-seccion-preliminar-img-ajustable{
 	width: 100%;
 	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	overflow: hidden;
 }
 
 
 .contenedor-seccion-preliminar-img-ajustable img{
-	max-width: 100%;
-	max-height: 100%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 4px;
 }
 
 /***********************************SECCIONES PRELIMINARES IMG CON TXT*****************************************/
 
 .contenedor-seccion-preliminar-img-redimensionales{
 	width: 100%;
-	height: 100px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	height: 150px;
+	overflow: hidden;
 }
 
 .contenedor-seccion-preliminar-img-redimensionales img{
-	max-width: 100%;
-	max-height: 100%;
-	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 4px;
 }
 
 /************************************************************************************************SECCIÓN LISTA DE SLIDER***********************************************************************/
 
 .contenedor-img-grande{
-	width: calc(100% - 40px);
-	margin: 0px auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	/*border: 2px solid var(--verde);
-	background: var(--azul);
-	border-radius: 10px;*/
+	width: 100%;
 }
 
 .contenedor-img-grande img{
 	width: 100%; /***MAX HEIGTH***/
-	max-height: 450px;
-
-	border: 2px solid var(--verde);
-	border-radius: 10px;
+	max-height: 600px;
 }
 
 /************************************************************************************************SECCIÓN MINI GALERIA***********************************************************************/
 
 .seccion-mini-galeria{
-	width: calc(100% - 40px);
-	margin: 0px auto;
+	width: 100%;
 	text-align: center;
-	padding: 10px;
 	border-top: 1px solid var(--verde);
 }
 
 .contenedor-img-mini-galeria{
-	width: 220px;
+	width: 250px;
 	height: 250px;
 	overflow: auto;
 	display: inline-block;
@@ -422,22 +380,22 @@
 	align-items: center;
 	margin: 10px;
 	padding: 10px;
-	border: 2px solid var(--verde);
+	border: 1px solid var(--verde);
 	border-radius: 10px;
 }
 
 .contenedor-img-mini-galeria-img{
 	width: 100%;
 	height: 75%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	overflow: hidden;
 }
 
 .contenedor-img-mini-galeria-img img{
-	max-width: 100%;
-	max-height: 100%;
-	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;	
+	object-fit: cover;
+	object-position: center;
 }
 
 .contenedor-img-mini-galeria button{
@@ -469,9 +427,8 @@
 
 .formulario{
 	font-family: 'Roboto', sans-serif;
-	width: calc(100% - 40px);
+	width: 100%;
 	margin: 2% auto;
-	display: block;
 }
 
 .formulario input{
@@ -502,7 +459,7 @@
 	display: block;
 	text-align: justify;
     width: 100%;
-    height: 250px;
+    height: 350px;
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -564,8 +521,12 @@
 /***********************************TABLAS*****************************************/
 
 .tabla-informacion-escolar{
-	margin: auto;
 	width: 100%;
+	border: 1px solid var(--verde);
+	overflow-x: auto;
+}
+.tabla-informacion-escolar ol li{
+  	padding: 5px;
 }
 
 .tabla-informacion-escolar table{
@@ -584,8 +545,9 @@
 }
 
 .tabla-informacion-escolar td img{
-	max-width: 50%;
+	max-width: 100%;
 	border: 2px solid var(--verde);
+	border-radius: 4px;
 }
 
 .tabla-informacion-escolar thead{
@@ -609,23 +571,11 @@
 	text-align: center;
 }
 
-.advertencia{
-	align-items: center;
-	justify-content: center;
-	padding: 10px;
-	border-radius: 4px;
-	background: #E74C3C;
-	color: var(--blanco);
-	display: none;
-}
-
 /************************************************************************************************SECCIÓN CARGAR ARCHIVOS IMG***********************************************************************/
 
 .contenedor-cargar-img{
-	font-family: 'Roboto', sans-serif;
-	width: calc(100% - 40px);
+	width: 100%;
 	height: 250px;
-	margin: 0px auto;
 	display: flex;
   	justify-content: center;
   	border-top: 1px solid var(--verde);
@@ -656,7 +606,6 @@
 
 
 .contenedor-txt-seccion{
-	/*min-height: 200px;*/
     margin: 0px 20px;
     padding: 10px;
     display: flex;
@@ -664,28 +613,25 @@
 }
 
 #info-img{
-	width: calc(100% - 40px);
-	margin: 0 auto;
-	/*min-width: 200px;*/
+	width: 100%;
 	text-align: center;
-	overflow: auto;
 	padding: 10px;
 	border-bottom: 1px solid var(--verde);
+	overflow: auto;
+
 }
 
 /************************************************************************************************SECCIÓN CARGAR ARCHIVOS PDF***********************************************************************/
 
 .contenedor-enlaces{
-	width: calc(100% - 40px);
-	margin: 2% auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
 .contenedor-enlaces a{
 	color: var(--azul);
-	padding: 2%;
 }
 
 .contenedor-enlaces a:hover{
@@ -697,27 +643,20 @@
 .contenedor-texto-centrado{
 	width: 100%;
 	min-height: 200px;
-    float: left;
-    margin: 0px 20px;
     padding: 10px;
     display: inline-grid;
-    align-items: center;
-    justify-content: center;
-	border: 2px solid var(--verde);
-	border-radius: 10px;
 }
 
 .contenedor-texto-centrado p{
 	margin: 10px;
-	font-family: 'Roboto', sans-serif;
     text-align: center;
-    line-height: 20px;
-
 }
 
 /************************************************************************************************SECCIÓN CALENDARIO***********************************************************************/
 
 .contenedor-calendario{
+	padding: 10px;
+	border: 1px solid var(--verde);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -729,13 +668,13 @@
 
 .contenedor-formulario-dividido{
 	width: 100%;
-	margin: 0px auto;
 	display: flex;
 	align-items: center;
 }
 
 .columna-de-dos{
 	width: 50%;
+	margin: 10px;
 }
 
 /************************************************************************************************SECCIÓN BOTONES***********************************************************************/
@@ -750,7 +689,7 @@
 .btn {
 	max-width: 250px;
 	padding: 10px;
-	margin: 20px;
+	margin:10px 0px 10px 10px;
 	background: var(--azul);
 	border: none;
 	outline-style: none;
@@ -763,7 +702,7 @@
 
 .btn span{
 	color: var(--blanco);
-	font-size: 20px;
+	font-size: 18px;
 	transition: .7s;
 	text-align: center;
 }
@@ -971,6 +910,7 @@
 
 body::-webkit-scrollbar{
     width: 8px;
+    height: 8px;
     background-color: #F5F5F5;
 }
 body::-webkit-scrollbar-track{
@@ -986,6 +926,7 @@ body::-webkit-scrollbar-thumb{
 
 ::-webkit-scrollbar {
   width: 0.5px;
+  height: 0.5px;
 }
 ::-webkit-scrollbar-track {
   background-color: var(--verde);

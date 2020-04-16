@@ -22,18 +22,14 @@
 
 <!----------------------------------------------------------------- TABLA EDITAR PERFIL EGRESO ---------------------------------------------------------->
 
-	<div class="formulario">
+	<div class="contenedor-botones">
 			
-		<label>Descripción Perfil Egreso</label>
 		<a class="msj" mesanje="agregar un nuevo elemento?" href="{{route('crear-perfil-egreso')}}"><button class="btn agregar"><span>Agregar</span></button></a>
 			
 	</div>
 
-	<div class="contenedor-cuerpo-seccion">
 
-		<div class="contenedor-texto-completo">
-
-			<div class="tabla-informacion-escolar">
+	<div class="tabla-informacion-escolar">
 
 				<table>
 							
@@ -58,12 +54,6 @@
 					@endforeach
 
 				</table>		
-
-			</div>
-
-			<p class="advertencia">La Tabla No Es Compatible Con esta Resolución</p>
-
-		</div>
 
 	</div>
 

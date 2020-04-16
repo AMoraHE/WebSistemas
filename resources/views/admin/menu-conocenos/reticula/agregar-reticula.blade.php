@@ -90,14 +90,9 @@
 
 		</div>
 
-
-		<div class="cargar-doc-pdf">
-
-			<i class="icono-pdf fas fa-file-pdf"></i>
-			<div id="info-img">No se seleccionó archivo</div>
+		<i class="icono-pdf fas fa-file-pdf"></i>
+		<div id="info-img">No se seleccionó archivo</div>
 							
-		</div>
-
 		@if ($errors->has('doc'))
             <span class="invalid-feedback" role="alert">
                 <strong>El archivo seleccionado no es válido, seleccione un archivo PDF, WORD, EXCEL, POWERPOINT</strong>

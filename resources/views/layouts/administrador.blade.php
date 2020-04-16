@@ -154,7 +154,7 @@
 
 			</ul>
 
-			<div class="divisor"></div>
+			<!--<div class="divisor"></div>-->
 
 		</div>
 
@@ -234,11 +234,11 @@
 <!------------------------------------------------------------------ FOOTER ---------------------------------------------------------->
 
 
-<div class="contenedor-footer">
+<!--<div class="contenedor-footer">
 		
 		<p>© Copyright 2020, Todos Los Derechos Reservados</p>
 
-</div>
+</div>-->
 
 
 	<script src="{{ asset('js/main.js')}}"></script>

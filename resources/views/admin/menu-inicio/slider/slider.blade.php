@@ -35,13 +35,9 @@
 
   </div>
 
-  <div class="contenedor-cuerpo-seccion">
+  <div class="contenedor-img-grande">
 
-      <div class="contenedor-img-grande">
-
-        <img src="/images/slider/{{$slider->image}}">
-
-      </div>
+    <img src="/images/slider/{{$slider->image}}">
 
   </div>
 

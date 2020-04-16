@@ -46,10 +46,6 @@
 	<!----------------------------------------------------------------- TABLA ---------------------------------------------------------->
 
 
-	<div class="contenedor-cuerpo-seccion">
-
-		<div class="contenedor-texto-completo">
-
 			<div class="tabla-informacion-escolar">
 
 				<table>
@@ -64,7 +60,7 @@
 						<tr>
 							<td>
 
-							<ul>
+							<ol>
 								@foreach (explode(', ', $proyecto->desarrolladores) as $desarrolladores)
 								<li>{{$desarrolladores}}</li>
 								@endforeach
@@ -90,11 +86,6 @@
 
 			</div>
 
-			<p class="advertencia">La Tabla No Es Compatible Con esta Resolución</p>
-
-		</div>
-
-	</div>
 
 <!----------------------------------------------------------------- GALERÍA ---------------------------------------------------------->
 	<div class="formulario">

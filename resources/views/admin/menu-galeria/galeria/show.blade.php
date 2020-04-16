@@ -16,17 +16,13 @@
 
 <div class="seccion-principal">
 
-		<div class="contenedor-titulo-seccion">
+		<div class="contenedor-botones">
 
-			<h3>Galería</h3>
-
-			<div class="contenedor-botones">
-
-				<a class="msj" mesanje="agregar un nuevo álbum?" href="/Album/create"><button class="btn agregar"><span>Agregar Álbum</span></button></a>
+			<a class="msj" mesanje="agregar un nuevo álbum?" href="/Album/create"><button class="btn agregar"><span>Agregar Álbum</span></button></a>
 				
-			</div>
-
 		</div>
+
+
 		
 	@foreach ($albums as $album)
 	
