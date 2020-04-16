@@ -4,16 +4,6 @@
 
 @section('content')
 
-@if(session('status'))
-
-    <div class="alert alert-success">
-
-        {{session('status')}}
-
-    </div>
-
-@endif
-
 <div class="seccion-principal">
 
 
@@ -29,7 +19,7 @@
 		</div>
 
 
-		@include('admin.menu-galeria.formShow')
+		@include('publico.menu-galeria.formShow')
 
 <!----------------------------------------------------------------- BOTONES GALERÍA ---------------------------------------------------------->
 

@@ -4,19 +4,7 @@
 
 @section('content')
 
-@if(session('status'))
-    <div class="alert alert-success">
-        {{session('status')}}
-    </div>
-@endif
-
 	<div class="seccion-principal">
-
-		@if(count($infras) > 0)
-
-		@else
-
-		@endif
 		
 @foreach ($infras as $infra)
 	
@@ -30,7 +18,7 @@
 		</div>
 
 
-		@include('admin.menu-inf.formShow')
+		@include('publico.menu-inf.formShow')
 
 <!----------------------------------------------------------------- Agregar IMG a la Mini Galeria Lab Celula---------------------------------------------------------->
 

@@ -4,12 +4,6 @@
 
 @section('content')
 
-@if(session('status'))
-    <div class="alert alert-success">
-        {{session('status')}}
-    </div>
-@endif
-
 	<div class="seccion-principal">
 
 		
@@ -24,7 +18,7 @@
 
 		</div>
 
-		@include('admin.menu-inf.formShow')
+		@include('publico.menu-inf.formShow')
 
 
 		@endforeach

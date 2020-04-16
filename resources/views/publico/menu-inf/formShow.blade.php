@@ -5,7 +5,7 @@
 
 		<div class="contenedor-img-grande">
 
-			<img src="/images/infra/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}">
+			<a target="_blank" rel="noopener noreferrer" href="/isc-infraestructura-labVerImg/{{$infra->id}}"><img src="/images/infra/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}"></a>
 
 		</div>
 
@@ -49,7 +49,7 @@
 
 			<div class="contenedor-img-mini-galeria-img">
 
-				<img src="/images/infra/{{$imagen->imagen}}">
+				<a target="_blank" rel="noopener noreferrer" href="/isc-infraestructura-labGaleriaVerImg/{{$imagen->id}}"><img src="/images/infra/{{$imagen->imagen}}"></a>
 
 			</div>
 

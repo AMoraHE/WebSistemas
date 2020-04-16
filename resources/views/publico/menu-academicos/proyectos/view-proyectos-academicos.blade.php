@@ -4,14 +4,6 @@
 
 @section('content')
 
-@if(session('status'))
-
-    <div class="alert alert-success">
-        {{session('status')}}
-    </div>
-
-@endif
-
 <!----------------------------------------------------------------- PROYECTOS ---------------------------------------------------------->
 
 
@@ -30,7 +22,7 @@
 
 	<div class="contenedor-img-grande">
 
-		<img src="/images/proyectos/{{$proyecto->newimage}}">
+		<a target="_blank" rel="noopener noreferrer" href="/isc-academicos-proyectosVerImg/{{$proyecto->id}}"><img src="/images/proyectos/{{$proyecto->newimage}}"></a>
 
 	</div>
 
@@ -98,7 +90,7 @@
 
 			<div class="contenedor-img-mini-galeria-img">
 
-				<img src="/images/proyectos/{{$imagen->imagen}}">
+				<a target="_blank" rel="noopener noreferrer" href="/isc-academicos-proyectosGaleriaVerImg/{{$imagen->id}}"><img src="/images/proyectos/{{$imagen->imagen}}"></a>
 
 			</div>
 

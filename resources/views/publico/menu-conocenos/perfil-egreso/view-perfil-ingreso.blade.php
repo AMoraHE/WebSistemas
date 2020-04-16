@@ -25,7 +25,7 @@
 
 				@foreach ($perfilegreso as $perfilegres)
 
-				<li>{{$perfilegres->elemento}}</li>
+				<li>{{$perfilegres->vineta}} {{$perfilegres->elemento}}</li>
 
 				@endforeach
 

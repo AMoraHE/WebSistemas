@@ -24,7 +24,7 @@
 
 				@foreach ($campolaboral as $campolabora)
 						
-				<li>{{$campolabora->elemento}}</li>
+				<li>{{$campolabora->vineta}} {{$campolabora->elemento}}</li>
 						
 				@endforeach
 						

@@ -4,14 +4,6 @@
 
 @section('content')
 
-@if(session('status'))
-
-    <div class="alert alert-success">
-        {{session('status')}}
-    </div>
-
-@endif
-
 <!----------------------------------------------------------------- programas ---------------------------------------------------------->
 
 
@@ -66,7 +58,7 @@
 
 			<div class="contenedor-enlaces">
 
-				<a target="_blank" rel="noopener noreferrer" href="/ProgramasAcademicos/{{$programa->slug}}">{{$programa->doc}}</a>
+				<a target="_blank" rel="noopener noreferrer" href="/isc-academicos-programasVer/{{$programa->slug}}">{{$programa->doc}}</a>
 
 			</div>
 
@@ -78,7 +70,7 @@
 
 	<div class="contenedor-botones">
 
-		<a href="{{route('descargar-programa', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
+		<a href="/isc-academicos-programasDescargar/{{$programa->slug}}"><button class="btn"><span>Descargar</span></button></a>
 
 
 	</div>
