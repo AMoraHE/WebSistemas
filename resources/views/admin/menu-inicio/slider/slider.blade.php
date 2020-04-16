@@ -15,6 +15,12 @@
 <!----------------------------------------------------------------- SLIDER ---------------------------------------------------------->
 
 <div class="seccion-principal">
+
+  <div class="titulos-secciones-principales">
+
+    <h1>LISTA DE SLIDERS</h1>
+    
+  </div>
   
   @if(count($sliders) >3)
   @else

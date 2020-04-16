@@ -8,10 +8,13 @@
 
 <div class="seccion-principal">
 
-	<div class="contenedor-titulo-seccion-select">
+	<div class="titulos-secciones-principales">
 
-		<h3>Eliminación Anual</h3>
+    	<h1>ELIMINACIÓN ANUAL</h1>
+    
+  	</div>
 
+	<div class="contenedor-select">
 <!---------------------------------------------------------------------- SELECTOR DE AÑO -------------------------------------------------------------->
 
 		<div class="contenedor-select-seccion">
@@ -36,23 +39,17 @@
 
 <!---------------------------------------------------------------------- boton ELIMINACION ANUAL -------------------------------------------------------------->
 
-		<div class="btn-eliminacion-anual">
+		<div class="contenedor-botones-centrado">
 
-			<a id="save" texto="eliminar todas las noticias?"><button class="btn eliminar"><span>Eliminar</span></button></a>
+			<a id="save" texto="eliminar todas las noticias?"><button class="btn eliminar centrado"><span>Eliminar</span></button></a>
 
 		</div>
 
-
 		</form>
-
-		<i></i>
 
 		</div>
 
 	</div>
-
-		<p class="advertencia">Eliminación Anual No Esta Permitido Con esta Resolución</p>
-
 
 <!-------------------------------------------------------------------------- NOTICIAS -------------------------------------------------------------------------->
 

@@ -50,7 +50,7 @@ Boton srcoll ir arriba**********************************************************
     color:#fff;
     cursor:pointer;
     position: fixed;
-    bottom:50px;
+    bottom:10px;
     right: 0px;
     border-radius: 4px;
 }

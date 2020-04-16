@@ -55,6 +55,12 @@
 
 <div class="seccion-principal">
 
+	<div class="titulos-secciones-principales">
+
+    	<h1>PÁGINA PRINCIPAL</h1>
+    
+  	</div>
+
 @foreach ($noticias as $noticia)
 	
 	@if($loop->first)

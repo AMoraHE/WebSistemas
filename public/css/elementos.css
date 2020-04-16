@@ -181,6 +181,18 @@
 
 /****************************************SECCIONES PRINCIPALES TITULOS*************************************************/
 
+.titulos-secciones-principales{
+	padding: 10px;
+	margin-bottom: 20px;
+	border-bottom: 3px solid var(--azul);
+}
+
+.titulos-secciones-principales h1{
+	color: var(--azul);
+	font-size: 26px;
+	text-align: center;
+}
+
 
 .contenedor-titulo-seccion{
 	width: 100%;	
@@ -202,16 +214,21 @@
 
 /************************************************************************************************SECCIONES SELECT*************************************************************************************/
 
-.contenedor-select-seccion{
-	width: 50%;
-	position: absolute;
-	left: 50%;
+.contenedor-select{
+	width: 100%;	
+	min-height: 50px;
+	margin-bottom: 20px;
+	background: var(--azul);
+	position: relative;
+	display: inline-block;
+	align-items: center;
+	overflow: hidden;
 }
 
 .contenedor-select-seccion i{
 	position: absolute;
 	right: 20px;
-	top: calc(50% - 13px);
+	top: calc(50% - 12px);
 	width: 12px;
 	height: 12px;
 	display: block;
@@ -251,28 +268,6 @@
 	font-size: 18px;
 	cursor: pointer;
 	padding: 10px; /****deja un espacio interno el select****/
-}
-
-/***************************************SECCIONES PRINCIPALES TITULOS CON SELECT***************************************/
-
-.contenedor-titulo-seccion-select{
-	width: 100%;	
-	min-height: 50px;
-	margin: auto;
-	background: var(--azul);
-	border-bottom: 3px solid var(--verde);
-
-	position: relative;
-	display: flex;
-	align-items: center;
-}
-
-.contenedor-titulo-seccion-select h3{
-	width: 100%;
-	font-size: 18px;
-    text-transform: uppercase;
-    color: var(--blanco);
-    padding: 2%;
 }
 
 /************************************************************************************************SECCIÓN PRELIMINAR***********************************************************************/
@@ -719,20 +714,13 @@
 }
 
 .contenedor-botones-centrado{
+	display: flex;
 	justify-content: center;
   	align-items: center;
 }
 
 .centrado{
 	float: none;
-}
-
-/****ELIMINACIÓN ANUAL****/
-
-.btn-eliminacion-anual{ /****opcional mientras verificamos****/
-	position: absolute;
-	top: -16px;
-	left: -200px;
 }
 
 /****BOTONES BUSCADOR****/

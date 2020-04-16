@@ -16,6 +16,12 @@
 
 <div class="seccion-principal">
 
+	<div class="titulos-secciones-principales">
+
+    	<h1>INFORMACIÓN DE LA CARRERA</h1>
+    
+  	</div>
+
 	@foreach($informaciones as $informacion)
 	
 	<div class="contenedor-titulo-seccion">

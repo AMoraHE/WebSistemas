@@ -18,9 +18,7 @@
 
 
   			<div id="CalendarioWeb"></div>
-
-        <p class="advertencia">El Calendario No Es Compatible Con esta Resolución</p>
-
+        
 
   		</div>
 

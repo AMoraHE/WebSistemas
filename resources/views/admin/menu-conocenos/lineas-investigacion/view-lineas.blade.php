@@ -16,10 +16,10 @@
 
 <!----------------------------------------------------------------- TABLA LINEAS INVESTIGACIÓN---------------------------------------->
 
-	<div class="contenedor-titulo-seccion">
+	<div class="titulos-secciones-principales">
 
-		<h3>Líneas de Investigación</h3>
-
+	    <h1>LÍNEAS DE INVESTIGACIÓN</h1>
+	    
 	</div>
 
 	<div class="contenedor-botones">

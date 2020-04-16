@@ -14,11 +14,11 @@
 
 <div class="seccion-principal">
 
-	<div class="contenedor-titulo-seccion">
+  <div class="titulos-secciones-principales">
 
-		<h3>Perfil Egreso</h3>
-
-	</div>
+    <h1>PERFIL EGRESO</h1>
+    
+  </div>
 
 <!----------------------------------------------------------------- TABLA EDITAR PERFIL EGRESO ---------------------------------------------------------->
 

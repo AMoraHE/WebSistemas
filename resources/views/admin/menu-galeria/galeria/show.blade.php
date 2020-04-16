@@ -16,6 +16,12 @@
 
 <div class="seccion-principal">
 
+		<div class="titulos-secciones-principales">
+
+    		<h1>GALERÍA</h1>
+    
+  		</div>
+
 		<div class="contenedor-botones">
 
 			<a class="msj" mesanje="agregar un nuevo álbum?" href="/Album/create"><button class="btn agregar"><span>Agregar Álbum</span></button></a>

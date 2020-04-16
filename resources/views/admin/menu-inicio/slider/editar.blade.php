@@ -8,10 +8,13 @@
 
 <!----------------------------------------------------------------- SLIDER ---------------------------------------------------------->
 
+<div class="contenedor-titulo-seccion">
 
-  <div class="contenedor-titulo-seccion-select">
+      <h3>Editar Slider</h3>
+  
+</div>
 
-    <h3>Editar Slider</h3>
+  <div class="contenedor-select">
 
 <!----------------------------------------------------- SELECT SLIDER -------------------------------------------------------------->
 

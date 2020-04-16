@@ -16,6 +16,12 @@
 
 <div class="seccion-principal">
 
+	<div class="titulos-secciones-principales">
+
+    	<h1>NOTICIAS</h1>
+    
+  	</div>
+
 	<div class="contenedor-botones">
 
 		<a class="msj" mesanje="entrar a eliminación anual?" href="/noticias-admin/eliminacion-anual/"><button class="btn eliminar"><span>Eliminación Anual</span></button></a>

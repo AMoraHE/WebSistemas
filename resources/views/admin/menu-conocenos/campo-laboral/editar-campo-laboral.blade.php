@@ -16,11 +16,11 @@
 
 <!----------------------------------------------------------------- EDITAR CAMPO LABORAL ---------------------------------------------------------->
 
-	<div class="contenedor-titulo-seccion">
+	<div class="titulos-secciones-principales">
 
-		<h3>Campo Laboral</h3>
-
-	</div>
+    	<h1>CAMPO LABORAL</h1>
+    
+  	</div>
 
 <!----------------------------------------------------------------- TABLA CAMPO LABORAL ---------------------------------------------------------->	
 

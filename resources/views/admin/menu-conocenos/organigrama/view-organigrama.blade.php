@@ -17,9 +17,13 @@
 
 <div class="seccion-principal">
 
-  <div class="contenedor-titulo-seccion-select">
+  <div class="titulos-secciones-principales">
 
-    <h3>Organigrama</h3>
+    <h1>ORGANIGRAMA</h1>
+    
+  </div>
+
+  <div class="contenedor-select">
 
     <div class="contenedor-select-seccion">
             

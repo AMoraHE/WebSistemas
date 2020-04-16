@@ -14,11 +14,11 @@
 
 <!----------------------------------------------------------------- CUERPO ACADÉMICO  ---------------------------------------------------------->
 
-	<div class="contenedor-titulo-seccion">
+  	<div class="titulos-secciones-principales">
 
-		<h3>Cuerpos Académicos</h3>
-
-	</div>
+    	<h1>CUERPOS ACADÉMICOS</h1>
+    
+  	</div>
 
 	<div class="contenedor-botones">
 

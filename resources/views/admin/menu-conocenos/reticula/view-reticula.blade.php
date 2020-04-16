@@ -16,6 +16,12 @@
 
 <div class="seccion-principal">
 
+	<div class="titulos-secciones-principales">
+
+    	<h1>RETÍCULAS</h1>
+    
+  	</div>
+
 	<div class="contenedor-botones">
 			
 		<a class="msj" mesanje="registrar una nueva retícula?" href="{{route('crear-reticula')}}"><button class="btn agregar"><span>Agregar</span></button></a>

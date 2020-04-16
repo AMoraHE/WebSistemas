@@ -17,6 +17,12 @@
 
 <div class="seccion-principal">
 
+	<div class="titulos-secciones-principales">
+
+    	<h1>CONVOCATORIAS</h1>
+    
+  	</div>
+
 	<!-----------------Botones--------->
 
 	<div class="contenedor-botones">

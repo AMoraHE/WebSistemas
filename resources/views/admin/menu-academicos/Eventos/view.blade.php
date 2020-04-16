@@ -14,6 +14,12 @@
 
 <div class="seccion-principal">
 
+	<div class="titulos-secciones-principales">
+
+    	<h1>EVENTOS</h1>
+    
+  	</div>
+
 	<div class="contenedor-botones">
 			
 		<a class="msj" mesanje="agregar un nuevo evento?" href="/EventosAcademicos/create"><button class="btn agregar"><span>Agregar</span></button></a>
