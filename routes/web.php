@@ -27,6 +27,9 @@ Route::get('/isc-inicio-noticias', 'PublicController@noticias');
 Route::get('/isc-inicio-buscadorNoticias', 'PublicController@buscadorNoticias');
 Route::get('/isc-inicio-calendario', 'PublicController@calendario');
 Route::get('/isc-inicio-calendarioEventos', 'PublicController@calendarioEventos');
+Route::get('/isc-inicio-contactos', 'PublicController@contactos');
+Route::get('/isc-inicio-formContacto/{correo}', 'PublicController@formContacto');
+Route::post('/isc-inicio-contactoCorreo', 'PublicController@contactoCorreo');
 
 ////////Rutas de Menu-inicio///////////
 Route::get('/admin', 'InicioController@index')->middleware('auth');
