@@ -6,11 +6,16 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 	<title> Sistemas - @yield('title')</title>
-		<script src="https://kit.fontawesome.com/13b3d85bca.js" crossorigin="anonymous"></script>
-		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<!--<script src="https://kit.fontawesome.com/13b3d85bca.js" crossorigin="anonymous"></script>
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>-->
 
         <link rel="stylesheet" type="text/css" href="{{ asset('css/estilos.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/elementos.css')}}">
+
+		<!--------------------------------ICONOS---------------------------------------->
+
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/iconos.css')}}">
+		<script src="{{ asset('js/iconos.js')}}"></script>
 
 		<!--------------------------------SLIDER---------------------------------------->
 
@@ -21,7 +26,10 @@
 
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/modal.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/fullcalendar.css')}}">
-		
+
+		<!--------------------------------MODAL IMG---------------------------------------->
+
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/modal-img.css')}}">
 
 	<!-- Calendario -->
 

@@ -19,7 +19,7 @@ class OrganigramaController extends Controller
     {
          
         //unir ambas tablas
-        $organigramas = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.*')->get();
+        $organigramas = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->get();
 
         $areas=Area::all();
         
@@ -28,7 +28,7 @@ class OrganigramaController extends Controller
 
     public function filtrar($nombre)
     {
-        $organigramas = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.*')->where('areas.nombre', '=', $nombre)->get();
+        $organigramas = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.nombre', '=', $nombre)->get();
 
         $areas=Area::all();
         

@@ -47,11 +47,27 @@
 
 		<div class="contenedor-img-mini-galeria">
 
-			<div class="contenedor-img-mini-galeria-img">
+			<!---------------------------------- MODAL IMG -------------------------------------------->
 
-				<img src="/images/infra/{{$imagen->imagen}}">
+			<div class="contenedor-img-mini-galeria-img hover-img">
+
+				<a href="#modal-img{{$imagen->id}}">
+
+					<img src="/images/infra/{{$imagen->imagen}}">
+					<span><i class="fas fa-expand"></i></span>
+
+				</a>
 
 			</div>
+
+			    <div class="modal-img" id="modal-img{{$imagen->id}}">
+
+	              <a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
+	              <img src="/images/infra/{{$imagen->imagen}}" />
+
+            	</div>
+
+        <!---------------------------------- FIN MODAL IMG -------------------------------------------->
 
 			@if($infra->slug == 'cisco')
 			<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Cisco-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>

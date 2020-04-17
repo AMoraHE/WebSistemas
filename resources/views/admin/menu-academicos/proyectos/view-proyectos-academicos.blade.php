@@ -107,11 +107,27 @@
 
 		<div class="contenedor-img-mini-galeria">
 
-			<div class="contenedor-img-mini-galeria-img">
+        <!---------------------------------- MODAL IMG -------------------------------------------->
 
-				<img src="/images/proyectos/{{$imagen->imagen}}">
+          <div class="contenedor-seccion-preliminar-img-ajustable hover-img">
 
-			</div>
+            <a href="#modal-img{{$imagen->id}}">
+
+              <img src="/images/proyectos/{{$imagen->imagen}}">
+              <span><i class="fas fa-expand"></i></span>
+
+            </a>
+
+          </div>
+
+            <div class="modal-img" id="modal-img{{$imagen->id}}">
+
+              <a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
+              <img src="/images/proyectos/{{$imagen->imagen}}" />
+
+            </div>
+
+        <!---------------------------------- FIN MODAL IMG -------------------------------------------->
 
 			<a class="msj" mesanje="eliminar esta imagen?" href="/ProyectosAcademicosGaleria-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
 			
