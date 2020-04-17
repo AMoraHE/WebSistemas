@@ -29,7 +29,10 @@
 
     <script>
         new Treant( chart_config );
+        var direc = @json($director, JSON_PRETTY_PRINT);
+        console.log(direc);
     </script>
+
       
 
 </div>

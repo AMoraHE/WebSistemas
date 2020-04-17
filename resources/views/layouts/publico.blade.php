@@ -128,7 +128,7 @@
 						<li><a href="/isc-conocenos-reticula"><i class="icono izquierda fas fa-table"></i>Retícula</a></li>
 						<li><a href="/isc-conocenos-lineasInvestigacion"><i class="icono izquierda fab fa-searchengin"></i>Líneas de Investigación</a></li>
 						<li><a href="/isc-conocenos-cuerposAcademicos"><i class="icono izquierda fas fa-chalkboard-teacher"></i>Cuerpos Académicos</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-sitemap"></i>Organigrama</a></li>
+						<li><a href="/isc-conocenos-organigrama"><i class="icono izquierda fas fa-sitemap"></i>Organigrama</a></li>
 						<li><a href="/isc-conocenos-campoLaboral"><i class="icono izquierda fas fa-city"></i>Campo de Trabajo</a></li>
 
 					</ul>

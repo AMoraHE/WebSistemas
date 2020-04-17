@@ -1,3 +1,6 @@
+var briseño = ["Director General XD", "Diego Ramón Briseño Dominguez", "d.dominguez@gmail.com", "1585724400-bird.png"];
+var direc;
+console.log(direc);
 var config = {
         container: "#organigrama",
 
@@ -10,14 +13,19 @@ var config = {
             HTMLclass: 'nodeExample1'
         }
     },
+
     ceo = {
         HTMLclass: 'yellow',
         text: {
-            name: "Dirección General",
-            title: "Director General",
-            contact: "Diego Briseño",
+            name: briseño[0],
+            title: briseño[0],
+            desc: briseño[1],
+            contact: {
+                val: briseño[2],
+                href: "/isc-inicio-formContacto/"+briseño[2],
+            } 
         },
-        image: "public/images/2.png"
+        image: "/images/organigrama/"+briseño[3]
     },
 
     cto = {
@@ -28,8 +36,9 @@ var config = {
             title: "Director del area Académica y de vinculación",
             contact: "M.C Cesar I. Flota Perez",
         },
-        image: "public/images/2.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
+
     cbo = {
         parent: cto,
         HTMLclass: 'light-skin',
@@ -38,8 +47,9 @@ var config = {
             title: "Subdirector del area Académica y de vinculación",
             contact: "MC. Anabel Pinzon de la O",
         },
-        image: "public/images/2.1.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
+
     cdo = {
         parent: cbo,
         HTMLclass: 'gray',
@@ -49,8 +59,9 @@ var config = {
             title: "Área de División",
             contact: "Luis Salinas",
         },
-        image: "public/images/2.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
+
     cdi = {
         parent: cdo,
         HTMLclass: 'light-gray',
@@ -58,7 +69,7 @@ var config = {
             name: "LABORATORIOS",
             
         },
-        image: "public/images/lap.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
 
     cio = {
@@ -68,8 +79,9 @@ var config = {
             name: "Área de Laboratorio de Sistemas Computacionales",
             title: "ING. Eduardo Mejía Flota"
         },
-        image: "public/images/2.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
+
     ciso = {
         parent: cdi,
         HTMLclass: 'light-gray',
@@ -77,8 +89,9 @@ var config = {
             name: "Área de Laboratorio de Cisco System",
             title: "MTE. Noemí G. Castillo Sosa",
         },
-        image: "public/images/2.1.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
+
     cio2 = {
         parent: cdi,
         HTMLclass: 'light-gray',
@@ -86,16 +99,18 @@ var config = {
             name: "Área de Laboratorio de Microprocesadores",
             title: "Sin Encargado" 
         },
-        image: "public/images/2.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
+
     ciso2 = {
         parent: cdo,
         HTMLclass: 'blue',
         text:{
             name: "DOCENTES"
         },
-        image: "public/images/doc.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
+
     ciso3 = {
         parent: ciso2,
         HTMLclass: 'blue',
@@ -104,8 +119,9 @@ var config = {
             name: "Presidenta",
             title: "MC. Arizbé del Socorro Arana Kantún"
         },
-        image: "public/images/2.1.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
+
     ciso4 = {
         parent: ciso3,
         HTMLclass: 'blue',
@@ -113,8 +129,9 @@ var config = {
             name: "Docente",
             title: "DR. Niels Henryk Aranda Cuevas"
         },
-        image: "public/images/2.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
+
     ciso5 = {
         parent: ciso3,
         HTMLclass: 'blue',
@@ -122,8 +139,9 @@ var config = {
             name: "Docente",
             title: "ING. Cintia Isabel Arceo Fuentes"
         },
-        image: "public/images/2.1.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
+
     ciso6 = {
         parent: ciso3,
         HTMLclass: 'blue',
@@ -131,8 +149,9 @@ var config = {
             name: "Docente",
             title: "MTE. Noemí G. Castillo Sosa"
         },
-        image: "public/images/2.1.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
+
     ciso7 = {
         parent: ciso3,
         HTMLclass: 'blue',
@@ -140,8 +159,9 @@ var config = {
             name: "Docente",
             title: "ING. Carolina Montalvo Espinosas"
         },
-        image: "public/images/2.1.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
+
     ciso8 = {
         parent: ciso3,
         HTMLclass: 'blue',
@@ -149,8 +169,9 @@ var config = {
             name: "Docente",
             title: "MTI. Gabriel Eduardo Balam Pool"
         },
-        image: "public/images/2.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
+
     ciso9 = {
         parent: ciso3,
         HTMLclass: 'blue',
@@ -158,8 +179,9 @@ var config = {
             name: "Docente",
             title: "MTI. Marcos Gaspar Pech Cruz"
         },
-        image: "public/images/2.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
+
     ciso10 = {
         parent: ciso3,
         HTMLclass: 'blue',
@@ -167,8 +189,9 @@ var config = {
             name: "Docente",
             title: "ING. Eduardo Castillo Moo"
         },
-        image: "public/images/2.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
+
     ciso11 = {
         parent: ciso3,
         HTMLclass: 'blue',
@@ -176,15 +199,17 @@ var config = {
             name: "Docente",
             title: "ING. Paloma Góngora Sabido"
         },
-        image: "public/images/2.1.png"
-    },ciso12 = {
+        image: "/images/organigrama/1585724400-bird.png"
+    },
+
+    ciso12 = {
         parent: ciso3,
         HTMLclass: 'blue',
         text:{
             name: "Docente",
             title: "ING. Plácido Balam Can"
         },
-        image: "public/images/2.png"
+        image: "/images/organigrama/1585724400-bird.png"
     },
 
     chart_config = [
@@ -195,5 +220,3 @@ var config = {
         ciso5,ciso6,ciso7,ciso8,
         ciso9,ciso10,ciso11,ciso12,
     ];
-
-   
