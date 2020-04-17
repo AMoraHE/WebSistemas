@@ -4,14 +4,6 @@
 
 @section('content')
 
-@if(session('status'))
-
-    <div class="alert alert-success">
-        {{session('status')}}
-    </div>
-
-@endif
-
 <div class="seccion-principal">
 
 	
@@ -60,26 +52,18 @@
 				<textarea readonly>{{$evento->descripcion}}</textarea>
 				
 			</div>
-					
-
 
 				<div class="contenedor-enlaces">
 						
-					<a target="_blank" rel="" href="/EventosAcademicos/{{$evento->slug}}">{{$evento->documento}}</a>
+					<a target="_blank" rel="" href="/isc-academicos-eventosVer/{{$evento->slug}}">{{$evento->documento}}</a>
 
 				</div>
-
-				@php
-				$var = $evento->slug
-				@endphp
-
 
 			<!----------------------------------------------------------------- BOTONES EVENTOS ---------------------------------------------------------->
 
 				<div class="contenedor-botones">
 						
-					<a href="{{route('descargar-evento', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
-					
+					<a href="/isc-academicos-eventosDescargar/{{$evento->slug}}"><button class="btn"><span>Descargar</span></button></a>
 
 				</div>
 

@@ -5,7 +5,7 @@
 
 	<div class="contenedor-img-grande">
 
-		<img src="/images/galeria/album/{{$album->imgPrin}}" alt="{{$album->imgPrin}}">
+		<a target="_blank" rel="noopener noreferrer" href="/isc-galeria-fotosVerImg/{{$album->id}}"><img src="/images/galeria/album/{{$album->imgPrin}}" alt="{{$album->imgPrin}}"></a>
 
 	</div>
 
@@ -35,7 +35,7 @@
 
 			<div class="contenedor-img-mini-galeria-img">
 
-				<img src="/images/galeria/{{$imagen->imagen}}">
+				<a target="_blank" rel="noopener noreferrer" href="/isc-galeria-fotosGaleriaVerImg/{{$imagen->id}}"><img src="/images/galeria/{{$imagen->imagen}}"></a>
 
 			</div>
 

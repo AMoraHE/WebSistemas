@@ -41,7 +41,7 @@
 
 	<div class="contenedor-enlaces">
 			
-		<a target="_blank" rel="noopener noreferrer" href="/VerReticula/{{$reticula->slug}}">{{$reticula->documento}}</a>
+		<a target="_blank" rel="noopener noreferrer" href="/isc-conocenos-reticulaVer/{{$reticula->slug}}">{{$reticula->documento}}</a>
 
 	</div>
 
@@ -53,7 +53,7 @@
 
 	<div class="contenedor-botones">
 			
-		<a href="{{route('descargar', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
+		<a href="/isc-conocenos-reticulaDescargar/{{$reticula->slug}}"><button class="btn"><span>Descargar</span></button></a>
 
 	</div>
 

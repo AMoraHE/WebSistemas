@@ -19,6 +19,13 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css')}}">
 		<script src="{{ asset('js/jquery.min.js')}}"></script>
 
+		<!--------------------------------ORGANIGRAMA---------------------------------------->
+
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/org-estilos.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/Treant.css')}}">
+		<script src="{{ asset('js/organigrama.js')}}"></script>
+		<script src="{{ asset('js/raphael.js')}}"></script>
+		<script src="{{ asset('js/Treant.js')}}"></script>
 		<!--------------------------------CALENDARIO---------------------------------------->
 
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/modal.css')}}">
@@ -115,14 +122,14 @@
 							
 				<li><a href="#"><i class="icono izquierda far fa-handshake"></i>Conócenos<i class=" icono derecha fa fa-chevron-down"></i></a>
 					<ul class="submenu">
-						<li><a href="#"><i class="icono izquierda fas fa-book"></i>Misión, Visión Y Objetivos</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-user-tie"></i>Perfil Ingreso</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-user-graduate"></i>Perfil Egreso</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-table"></i>Retícula</a></li>
-						<li><a href="#"><i class="icono izquierda fab fa-searchengin"></i>Líneas de Investigación</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-chalkboard-teacher"></i>Cuerpos Académicos</a></li>
+						<li><a href="/isc-conocenos-MVO"><i class="icono izquierda fas fa-book"></i>Misión, Visión Y Objetivos</a></li>
+						<li><a href="/isc-conocenos-perfilIngreso"><i class="icono izquierda fas fa-user-tie"></i>Perfil Ingreso</a></li>
+						<li><a href="/isc-conocenos-perfilEgreso"><i class="icono izquierda fas fa-user-graduate"></i>Perfil Egreso</a></li>
+						<li><a href="/isc-conocenos-reticula"><i class="icono izquierda fas fa-table"></i>Retícula</a></li>
+						<li><a href="/isc-conocenos-lineasInvestigacion"><i class="icono izquierda fab fa-searchengin"></i>Líneas de Investigación</a></li>
+						<li><a href="/isc-conocenos-cuerposAcademicos"><i class="icono izquierda fas fa-chalkboard-teacher"></i>Cuerpos Académicos</a></li>
 						<li><a href="#"><i class="icono izquierda fas fa-sitemap"></i>Organigrama</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-city"></i>Campo de Trabajo</a></li>
+						<li><a href="/isc-conocenos-campoLaboral"><i class="icono izquierda fas fa-city"></i>Campo de Trabajo</a></li>
 
 					</ul>
 				</li>
@@ -130,20 +137,20 @@
 				<li><a href="#"><i class="icono izquierda fas fa-school"></i>Infraestructura<i class=" icono derecha fa fa-chevron-down"></i></a>
 
 					<ul class="submenu">
-						<li><a href="#"><i class="icono izquierda fas fa-hdd"></i>Lab. Cisco</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-desktop"></i>Lab. Sistemas</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-microchip"></i>Lab. Microprocesadores</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-laptop-code"></i>Célula de Desarrollo</a></li>
+						<li><a href="/isc-infraestructura-labCisco"><i class="icono izquierda fas fa-hdd"></i>Lab. Cisco</a></li>
+						<li><a href="/isc-infraestructura-labSistemas"><i class="icono izquierda fas fa-desktop"></i>Lab. Sistemas</a></li>
+						<li><a href="/isc-infraestructura-labMicroprocesadores"><i class="icono izquierda fas fa-microchip"></i>Lab. Microprocesadores</a></li>
+						<li><a href="/isc-infraestructura-labCelula"><i class="icono izquierda fas fa-laptop-code"></i>Célula de Desarrollo</a></li>
 					</ul>
 				</li>
 
 				<li><a href="#"><i class="icono izquierda fas fa-chalkboard-teacher"></i>Académicos<i class=" icono derecha fa fa-chevron-down"></i></a>
 
 					<ul class="submenu">
-						<li><a href="#"><i class="icono izquierda fab fas fa-rocket"></i>Proyectos</a></li>
-						<li><a href="#"><i class="icono izquierda far fa-calendar-check"></i>Eventos</a></li>
-						<li><a href="#"><i class="icono izquierda fas fa-file-invoice"></i>Convocatorias</a></li>
-						<li><a href="#"><i class="icono izquierda fas fas fa-window-restore"></i>Programas</a></li>
+						<li><a href="/isc-academicos-proyectos"><i class="icono izquierda fab fas fa-rocket"></i>Proyectos</a></li>
+						<li><a href="/isc-academicos-eventos"><i class="icono izquierda far fa-calendar-check"></i>Eventos</a></li>
+						<li><a href="/isc-academicos-convocatorias"><i class="icono izquierda fas fa-file-invoice"></i>Convocatorias</a></li>
+						<li><a href="/isc-academicos-programas"><i class="icono izquierda fas fas fa-window-restore"></i>Programas</a></li>
 					</ul>
 				</li>
 
@@ -151,7 +158,7 @@
 				<li><a href="#"><i class="icono izquierda far fa-image"></i>Galería<i class=" icono derecha fa fa-chevron-down"></i></a>
 
 					<ul class="submenu">
-						<li><a href="#"><i class="icono izquierda far fa-images"></i>Fotos</a></li>
+						<li><a href="/isc-galeria-fotos"><i class="icono izquierda far fa-images"></i>Fotos</a></li>
 					</ul>
 
 				</li>

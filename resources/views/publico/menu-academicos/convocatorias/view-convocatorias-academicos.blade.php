@@ -4,14 +4,6 @@
 
 @section('content')
 
-@if(session('status'))
-
-    <div class="alert alert-success">
-        {{session('status')}}
-    </div>
-
-@endif
-
 <!----------------------------------------------------------------- convocatorias ---------------------------------------------------------->
 
 
@@ -65,7 +57,7 @@
 
 			<div class="contenedor-enlaces">
 			
-				<a target="_blank" rel="noopener noreferrer" href="/ConvocatoriasAcademicos/{{$convocatoria->slug}}">{{$convocatoria->doc}}</a>
+				<a target="_blank" rel="noopener noreferrer" href="/isc-academicos-convocatoriasVer/{{$convocatoria->slug}}">{{$convocatoria->doc}}</a>
 
 			</div>
 
@@ -78,7 +70,7 @@
 
 	<div class="contenedor-botones">
 
-		<a href="{{route('descargar-convocatoria', ['slug' => $var])}}"><button class="btn"><span>Descargar</span></button></a>
+		<a href="/isc-academicos-convocatoriasDescargar/{{$convocatoria->slug}}"><button class="btn"><span>Descargar</span></button></a>
 
 
 	</div>
