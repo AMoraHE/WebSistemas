@@ -19,6 +19,13 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css')}}">
 		<script src="{{ asset('js/jquery.min.js')}}"></script>
 
+		<!--------------------------------ORGANIGRAMA---------------------------------------->
+
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/org-estilos.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/Treant.css')}}">
+		<script src="{{ asset('js/organigrama.js')}}"></script>
+		<script src="{{ asset('js/raphael.js')}}"></script>
+		<script src="{{ asset('js/Treant.js')}}"></script>
 		<!--------------------------------CALENDARIO---------------------------------------->
 
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/modal.css')}}">
