@@ -24,7 +24,7 @@
         @csrf
       <div class="formulario">
 
-        <label for="">Tamaño de imagen recomendado: 200px de ancho y 150px de alto</label>
+        <label for="">Tamaño de imagen recomendado minimo: 500px de ancho y 500px de alto</label>
         
       </div>
 
@@ -86,11 +86,27 @@
         @foreach ($imagenes as $imagen)
         <div class="contenedor-seccion-preliminar-img">
 
-          <div class="contenedor-seccion-preliminar-img-ajustable">
+        <!---------------------------------- MODAL IMG -------------------------------------------->
 
-            <img src="/images/infra/{{$imagen->imagen}}">
+          <div class="contenedor-seccion-preliminar-img-ajustable hover-img">
+
+            <a href="#modal-img{{$imagen->id}}">
+
+              <img src="/images/infra/{{$imagen->imagen}}">
+              <span><i class="fas fa-expand"></i></span>
+
+            </a>
 
           </div>
+
+            <div class="modal-img" id="modal-img{{$imagen->id}}">
+
+              <a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
+              <img src="/images/infra/{{$imagen->imagen}}" />
+
+            </div>
+
+        <!---------------------------------- FIN MODAL IMG -------------------------------------------->
 
 
         </div>

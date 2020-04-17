@@ -16,7 +16,7 @@
 
   <div class="formulario">
 
-    <label>Tamaño de imagen recomendado: 200px de ancho y 200px de alto</label>
+    <label>Tamaño de imagen recomendado minimo: 500px de ancho y 500px de alto</label>
           
   </div>
 

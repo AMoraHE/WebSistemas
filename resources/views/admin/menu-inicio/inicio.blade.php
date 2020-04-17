@@ -75,11 +75,29 @@
 
 		<div class="contenedor-cuerpo-dividido">
 
-			<div class="contenedor-img-dividido">
+			<div class="contenedor-img-dividido hover-img">
 
-				<img src="/images/news/{{$noticia->newimage}}">
+			<!---------------------------------- MODAL IMG -------------------------------------------->
+
+				<a href="#modal-img{{$noticia->id}}">
+
+					<img src="/images/news/{{$noticia->newimage}}">
+					<span><i class="fas fa-expand"></i></span>
+				
+				</a>
+
 
 			</div>
+
+				<div class="modal-img" id="modal-img{{$noticia->id}}">
+
+					<a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
+					<img src="/images/news/{{$noticia->newimage}}" />
+
+								
+				</div>
+
+			<!---------------------------------- FIN MODAL IMG -------------------------------------------->
 
 			<div class="contenedor-texto-dividido">
 
@@ -122,11 +140,28 @@
 				
 		<div class="contenedor-seccion-preliminar">
 
-			<div class="contenedor-seccion-preliminar-img-redimensionales">
+			<div class="contenedor-seccion-preliminar-img-redimensionales hover-img">
 
-				<img src="/images/news/{{$noticia->newimage}}">
+			<!---------------------------------- MODAL IMG -------------------------------------------->
+
+				<a href="#modal-img{{$noticia->id}}">
+
+					<img src="/images/news/{{$noticia->newimage}}">
+					<span><i class="fas fa-expand"></i></span>
+				
+				</a>
 
 			</div>
+
+				<div class="modal-img" id="modal-img{{$noticia->id}}">
+
+					<a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
+					<img src="/images/news/{{$noticia->newimage}}" />
+
+							
+				</div>
+
+			<!---------------------------------- FIN MODAL IMG -------------------------------------------->			
 
 			<h2>{{$noticia->titulo}}</h2>
 

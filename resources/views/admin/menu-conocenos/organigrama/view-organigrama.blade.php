@@ -78,7 +78,28 @@
           @foreach ($organigramas as $organigrama)
 
           <tr>
-            <td><img src="/images/organigrama/{{$organigrama->foto}}"></td>
+            <td>
+                <div class="contenedor-img-organigrama hover-img">
+
+                  <a href="#modal-img{{$organigrama->id}}">
+    
+                    <img src="/images/organigrama/{{$organigrama->foto}}">
+                    <span><i class="fas fa-expand"></i></span>
+
+                  </a>
+
+                </div>
+
+                  <div class="modal-img" id="modal-img{{$organigrama->id}}">
+
+                      <a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
+                      <img src="/images/organigrama/{{$organigrama->foto}}" />
+
+                
+                  </div>
+
+            </td>
+
             <td>{{$organigrama->nombre}}</td>
             <td>{{$organigrama->puesto}}</td>
             <td>{{$organigrama->integrante}}</td>
