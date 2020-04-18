@@ -14,9 +14,9 @@
 
 <div class="seccion-principal">
 
-  <div class="titulos-secciones-principales">
+  <div class="contenedor-titulo-seccion">
 
-    <h1>PERFIL EGRESO</h1>
+    <h3>PERFIL EGRESO</h3>
     
   </div>
 

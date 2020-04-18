@@ -16,9 +16,9 @@
 
 <!----------------------------------------------------------------- TABLA LINEAS INVESTIGACIÓN---------------------------------------->
 
-	<div class="titulos-secciones-principales">
+	<div class="contenedor-titulo-seccion">
 
-	    <h1>LÍNEAS DE INVESTIGACIÓN</h1>
+	    <h3>LÍNEAS DE INVESTIGACIÓN</h3>
 	    
 	</div>
 

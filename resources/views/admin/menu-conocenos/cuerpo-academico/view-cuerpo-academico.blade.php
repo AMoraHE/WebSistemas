@@ -14,9 +14,9 @@
 
 <!----------------------------------------------------------------- CUERPO ACADÉMICO  ---------------------------------------------------------->
 
-  	<div class="titulos-secciones-principales">
+  	<div class="contenedor-titulo-seccion">
 
-    	<h1>CUERPOS ACADÉMICOS</h1>
+    	<h3>CUERPOS ACADÉMICOS</h3>
     
   	</div>
 

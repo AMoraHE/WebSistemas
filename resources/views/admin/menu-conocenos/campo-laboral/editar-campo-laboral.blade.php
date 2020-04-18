@@ -16,9 +16,9 @@
 
 <!----------------------------------------------------------------- EDITAR CAMPO LABORAL ---------------------------------------------------------->
 
-	<div class="titulos-secciones-principales">
+	<div class="contenedor-titulo-seccion">
 
-    	<h1>CAMPO LABORAL</h1>
+    	<h3>CAMPO LABORAL</h3>
     
   	</div>
 

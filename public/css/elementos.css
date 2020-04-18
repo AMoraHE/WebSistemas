@@ -216,8 +216,6 @@
 .contenedor-select{
 	width: 100%;	
 	min-height: 50px;
-	margin-bottom: 20px;
-	background: var(--azul);
 	position: relative;
 	display: inline-block;
 	align-items: center;
@@ -267,6 +265,11 @@
 	font-size: 18px;
 	cursor: pointer;
 	padding: 10px; /****deja un espacio interno el select****/
+}
+
+.contenedor-select-seccion option{
+	background: var(--blanco);
+	color: var(--azul);
 }
 
 /************************************************************************************************SECCIÓN PRELIMINAR***********************************************************************/

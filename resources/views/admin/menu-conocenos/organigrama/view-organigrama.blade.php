@@ -17,9 +17,9 @@
 
 <div class="seccion-principal">
 
-  <div class="titulos-secciones-principales">
+  <div class="contenedor-titulo-seccion">
 
-    <h1>ORGANIGRAMA</h1>
+    <h3>ORGANIGRAMA</h3>
     
   </div>
 

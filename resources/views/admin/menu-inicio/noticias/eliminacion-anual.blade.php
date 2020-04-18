@@ -8,9 +8,9 @@
 
 <div class="seccion-principal">
 
-	<div class="titulos-secciones-principales">
+	<div class="contenedor-titulo-seccion">
 
-    	<h1>ELIMINACIÓN ANUAL</h1>
+    	<h3>ELIMINACIÓN ANUAL</h3>
     
   	</div>
 
@@ -37,19 +37,22 @@
 
 		</select>
 
-<!---------------------------------------------------------------------- boton ELIMINACION ANUAL -------------------------------------------------------------->
-
-		<div class="contenedor-botones-centrado">
-
-			<a id="save" texto="eliminar todas las noticias?"><button class="btn eliminar centrado"><span>Eliminar</span></button></a>
-
-		</div>
-
-		</form>
+		<i></i>
 
 		</div>
 
 	</div>
+<!---------------------------------------------------------------------- boton ELIMINACION ANUAL -------------------------------------------------------------->
+
+			<div class="contenedor-botones-centrado">
+
+				<a id="save" texto="eliminar todas las noticias?"><button class="btn eliminar centrado"><span>Eliminar</span></button></a>
+
+			</div>
+
+		</form>
+
+
 
 <!-------------------------------------------------------------------------- NOTICIAS -------------------------------------------------------------------------->
 
