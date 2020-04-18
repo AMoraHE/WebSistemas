@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 	<title> Sistemas - @yield('title')</title>
-		<!--<script src="https://kit.fontawesome.com/13b3d85bca.js" crossorigin="anonymous"></script>-->
+
 		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" type="text/css" href="{{ asset('css/estilos.css')}}">
@@ -31,9 +31,15 @@
 
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/modal-img.css')}}">
 
+		<!----------------------------PANTALLA DE CARGA------------------------------------>
+
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/pantalla-carga.css')}}">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
 	<!-- Calendario -->
 
-		<script src="{{ asset('js/jquery.min.js')}}"></script>
+		<!--<script src="{{ asset('js/jquery.min.js')}}"></script>-->
 		<script src="{{ asset('js/moment.min.js')}}"></script>
 
 		<script src="{{ asset('js/fullcalendar.min.js')}}"></script>
@@ -71,7 +77,7 @@
 
 		<div class="contenedor-menu">
 
-			<a href="#" class="btn-menu">Menu<i class="icono fa fa-bars"></i></a>
+			<a href="#" class="btn-menu">Menu<i class="icono fas fa-bars"></i></a>
 
 			<div class="contenedor-usuario">
 
@@ -108,9 +114,9 @@
 
 				<!----------------------------------------------------------- MENU ---------------------------------------------------------->
 
-				<li><a href="{{route('slider')}}"><i class="icono izquierda fa fa-home"></i>Inicio<i class=" icono derecha fa fa-chevron-down"></i></a>
+				<li><a href="{{route('slider')}}"><i class="icono izquierda fas fa-home"></i>Inicio<i class=" icono derecha fa fa-chevron-down"></i></a>
 					<ul>
-						<li><a href="/admin"><i class="icono izquierda fa fa-home"></i>Home</a></li>
+						<li><a href="/admin"><i class="icono izquierda fas fa-home"></i>Home</a></li>
 						<li><a href="{{route('slider')}}"><i class="icono izquierda fab fa-slideshare"></i>Slider</a></li>
 						<li><a href="{{route('noticias-admin')}}"><i class="icono izquierda far fa-newspaper"></i>Noticias</a></li>
 						<li><a href="{{route('calendario')}}"><i class="icono izquierda far fa-calendar-alt"></i>Calendario</a></li>
@@ -249,6 +255,15 @@
 </div>-->
 
 
+<!----------------------------------------------------------------- LOADER ---------------------------------------------------------->
+
+<div id="contenedor-loader">
+
+	<div class="loader" id="loader">Loading...</div>
+
+</div>
+
+
 	<script src="{{ asset('js/main.js')}}"></script>
 <!--<script src="{{ asset('js/jquery.js')}}"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
@@ -262,7 +277,6 @@
 	<script src="{{ asset('js/jquery.flexslider.js')}}"></script>
 
 	<script src="{{ asset('js/slider.js')}}"></script>
-
 
 </body>
 

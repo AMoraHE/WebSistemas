@@ -60,14 +60,11 @@ $(document).ready(function(){
 		}
 	});
 
-	/********************************************Select - Usuario*****************************/
+	/********************************************Pantalla de Carga*****************************/
 
-
-	  $('.btn-seleccionar').click(function(){
-
-	    $('ul').toggleClass('active');
-
-	  });
+	$(window).load(function() {
+    	$("#contenedor-loader").fadeOut("slow");
+	});
 
 
 
