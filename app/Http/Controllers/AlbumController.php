@@ -51,7 +51,7 @@ class AlbumController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-        'imgPrin' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+        'imgPrin' => 'required|mimes:jpeg,png,bmp,tiff,gif|max:512',
         'descripcion' => 'required|string',
         'titulo' => 'required|string',
         ]);
@@ -117,7 +117,7 @@ class AlbumController extends Controller
     public function update(Request $request, $slug)
     {
         $validator = Validator::make($request->all(), [
-        'imgPrin' => 'mimes:jpeg,png,bmp,tiff,gif',
+        'imgPrin' => 'mimes:jpeg,png,bmp,tiff,gif|max:512',
         'descripcion' => 'required|string',
         'titulo' => 'required|string',
         ]);
