@@ -1,6 +1,6 @@
 @extends('layouts.publico')
 
-@section('title', 'Noticias')
+@section('title', 'Noticia individual')
 
 @section('content')
 
@@ -16,13 +16,21 @@
 
 <div class="seccion-principal">
 
+	<div class="titulos-secciones-principales">
+
+    	<h1>NOTICIA</h1>
+    
+  	</div>
+
+	
+
 <!----------------------------------------------------------------- BUSCADOR NOTICIAS ------------------------------------------------------------------->
 
 	<div class="contenedor-buscador">
 
 		<div class="buscador">
 
-        	<form  files = "true" method="GET" action="/isc-inicio-buscadorNoticias" enctype="multipart/form-data">
+        	<form  files = "true" method="GET" action="/buscador-noticias" enctype="multipart/form-data">
           		@csrf
 
           		<div class="formulario">
@@ -41,40 +49,54 @@
 
 <!----------------------------------------------------------------- NOTICIAS----------------------------------------------------------------------------->
 
-	<div class="contenedor-titulo-seccion">
-			<div class="tlinea"></div>
-
-			<h3>Noticias</h3>
-
-			<div class="tlinea"></div>
-
-		</div>
-
 	@foreach ($noticias as $noticia)
 
+	<div class="contenedor-componentes-principales">
 
-	<div class="contenedor-cuerpo-dividido-noticias">
+		<div class="contenedor-titulo-seccion">
 
 			<h3>{{$noticia->titulo}}</h3>
 
-			<img src="/images/news/{{$noticia->newimage}}">
+		</div>
 
-			<div class="redaccion">
+		<div class="contenedor-cuerpo-dividido">
 
-			<p>{{$noticia->redaccion}}</p>
+			<div class="contenedor-img-dividido hover-img">
+
+			<!---------------------------------- MODAL IMG -------------------------------------------->
+
+				<a href="#modal-img{{$noticia->id}}">
+
+					<img src="/images/news/{{$noticia->newimage}}">
+					<span><i class="fas fa-expand"></i></span>
+				
+				</a>
+
 
 			</div>
 
-		<div class="contenedor-botones-izquierda">
+				<div class="modal-img" id="modal-img{{$noticia->id}}">
 
-			<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticias"><button class="btn ver"><span>Leer Más...</span></button></a>
-		
+					<a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
+					<img src="/images/news/{{$noticia->newimage}}" />
+
+								
+				</div>
+
+			<!---------------------------------- FIN MODAL IMG -------------------------------------------->
+
+			<div class="contenedor-texto-dividido">
+
+				<p>{{$noticia->redaccion}}</p>
+
+			</div>
+
 		</div>
-	
 
 	</div>
 
 <!-------------------------------------------------------------- BOTONES NOTICIAS----------------------------------------------------------------------------->
+
 
 	@endforeach
 

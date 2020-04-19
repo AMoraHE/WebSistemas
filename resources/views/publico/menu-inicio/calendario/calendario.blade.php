@@ -9,8 +9,11 @@
   	<div class="seccion-principal">
 
   		<div class="contenedor-titulo-seccion">
+        <div class="tlinea"></div>
 
   			<h3>Calendario</h3>
+
+        <div class="tlinea"></div>
 
   		</div>
 

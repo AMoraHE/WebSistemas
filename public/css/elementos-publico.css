@@ -156,14 +156,91 @@
 
 /******************************SECCIONES PRINCIPALES PARTIDO EN 2 COLUMNAS************************************/
 
-.contenedor-cuerpo-dividido{ /* --------->Seccion de Noticias*/
+.contenedor-cuerpo-dividido-inicio{ /* --------->Seccion de Noticias inicio*/
+	width: 600px;
+	display: inline-block;
+	align-items: center;
+	margin: 0px 25%;
+}
+
+.contenedor-img-dividido-inicio{
 	width: 100%;
-	display: flex;
+    margin: 0px 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-img-dividido-inicio img{
+	box-shadow: 0 4px 6px #000;
+	border-radius: 10px;
+	max-width: 100%;
+	max-height: 100%; /***Hacer Responsivo***/
+	margin: 0px auto;
+}
+
+.contenedor-img-dividido-inicio img{
+	transition: transform .5s;	
+}
+
+.contenedor-img-dividido-inicio img:hover{
+	transform: scale(1.2);	
+}
+
+.contenedor-cuerpo-dividido-noticias{ /* --------->Seccion de Noticias*/
+	width: 30%;
+	height: 450px;
+	display: inline-block;
+	align-items: center;
+	margin: 1.5%;
+	box-shadow: 0 4px 6px #000;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.contenedor-cuerpo-dividido-noticias h3{
+	width: 250px;	
+	text-align: left;
+	font-size: 14px: 
+	padding: 2%;
+	text-transform: uppercase;
+	margin: 0 auto;
+
+}
+
+.contenedor-cuerpo-dividido-noticias img{
+	box-shadow: 0 4px 6px #000;
+	border-radius: 5px; 
+	max-width: 100%;
+	max-height: 250px; /***Hacer Responsivo***/
+	margin: 0px auto;
+	display: block;
+}
+
+.redaccion p{
+	padding: 10px;
+	height: 70px;
+	max-width: 250px;
+	font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    line-height: 20px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+    border-radius: 5px;
+
+
+}
+
+.contenedor-cuerpo-dividido{ /* --------->Seccion de Noticias vusualización por noticia*/
+	width: 100%;
+	display: inline-block;
 	align-items: center;
 }
 
 .contenedor-img-dividido{
-	width: 20%;
+	width: 100%;
     margin: 0px 20px;
     padding: 10px;
     display: flex;
@@ -172,21 +249,52 @@
 }
 
 .contenedor-img-dividido img{
-	border: 2px solid var(--verde);
+	box-shadow: 0 4px 6px #000;
 	border-radius: 10px;
 	max-width: 100%;
-	max-height: 250px; /***Hacer Responsivo***/
+	max-height: 500px; /***Hacer Responsivo***/
 	margin: 0px auto;
+}
+
+.contenedor-img-dividido img{
+	transition: transform .5s;	
+}
+
+.contenedor-img-dividido img:hover{
+	transform: scale(1.2);	
 }
 
 /******************************SECCIONES CUERPO PARTIDO EN 2 COLUMNAS************************************/
 
-.contenedor-texto-dividido{
+.contenedor-texto-dividido-inicio{/* --------->Seccion de Noticias texto inicio*/
+	width: 100%;
+	max-height: 100px;
+   	margin: 0px 0px;
+    padding: 10px;
+	box-shadow: 0 4px 6px #000;
+	border-radius: 10px;
+	/*overflow: auto; Aplica Scroll automatico ---> Modificar que cuando supere la catidad maxima de 200px el texto puede ver todo el contenido en un MODAL*/
+
+}
+
+.contenedor-texto-dividido-inicio p{ 
+	margin: 10px;
+	max-height: 70px;
+	font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    line-height: 20px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+
+}
+
+.contenedor-texto-dividido{ /* --------->Seccion de Noticias texto seccion noticias*/
 	width: 80%;
 	min-height: 250px;
    	margin: 0px 20px;
     padding: 10px;
-	border: 2px solid var(--verde);
+	box-shadow: 0 4px 6px #000;
 	border-radius: 10px;
 	/*overflow: auto; Aplica Scroll automatico ---> Modificar que cuando supere la catidad maxima de 200px el texto puede ver todo el contenido en un MODAL*/
 
@@ -215,13 +323,22 @@
 }
 
 .contenedor-titulo-seccion h3{
-	width: 100%;
+	min-width: max-content;
 	font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     color: var(--blanco);
     padding: 2%;
-    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
 
+}
+.tlinea{
+	width: 100%;
+	height: 3px;
+	margin-bottom: 10px;
+	background: #fff;
+    margin: 30px;
 }
 
 /************************************************************************************************SECCIONES SELECT*************************************************************************************/
@@ -320,16 +437,16 @@
 
 
 .contenedor-seccion-preliminar{
-	width: 220px;
+	width: 250px;
 	height: 250px;
 	overflow: auto;
 	display: inline-block;
 	vertical-align: top;
 	text-align: justify;
 	margin: 10px;
-	border: 2px solid var(--verde);
+	box-shadow: 2px 4px 6px #000;
 	border-radius: 10px;
-	padding: 10px;
+	position: relative;
 }
 
 /************SECCIONES PRELIMINARES IMG NOTICIA**********************/
@@ -337,9 +454,33 @@
 .contenedor-seccion-preliminar h2{
 	font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
+    text-shadow: 0 1px 1px #000;
+    text-align: center;
     font-size: 18px;
     margin: 20px 0px;
     line-height: 20px;
+    padding: 5px;
+}
+
+.titulo-img{
+	z-index: auto;
+}
+
+.titulo-img h2{
+	font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color:#fff;
+	background-color:#000;
+	padding:2px 10px;
+	opacity:0.5;
+    text-shadow: 0 1px 1px #000;
+    text-align: center;
+    font-size: 15px;
+    margin-top: calc(50% + 44px);
+    line-height: 20px;
+    
+    position: absolute;
+    z-index: 3;
 }
 
 .contenedor-noticia-preliminar p{
@@ -368,16 +509,18 @@
 
 .contenedor-seccion-preliminar-img-redimensionales{
 	width: 100%;
-	height: 100px;
+	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: absolute;
 }
 
 .contenedor-seccion-preliminar-img-redimensionales img{
 	max-width: 100%;
 	max-height: 100%;
 	border-radius: 10px;
+	z-index: 0;
 }
 
 /************************************************************************************************SECCIÓN LISTA DE SLIDER***********************************************************************/
@@ -787,6 +930,19 @@
 .centrado{
 	float: none;
 }
+
+.contenedor-botones-izquierda{
+	justify-content: center;
+  	align-items: center;
+}
+
+.contenedor-botones-izquierda button{
+	float: left;
+	margin-left: 13%
+}
+
+/****BOTONES LEER MAS****/
+
 
 /****ELIMINACIÓN ANUAL****/
 
