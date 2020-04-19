@@ -46,7 +46,7 @@
 
 			<div class="contenedor-botones-centrado">
 
-				<a id="save" texto="eliminar todas las noticias?"><button class="btn eliminar centrado"><span>Eliminar</span></button></a>
+				<a id="save" texto="eliminar todas las noticias?"><button class="btn eliminar centrado"><span>Eliminación Anual</span></button></a>
 
 			</div>
 
@@ -58,34 +58,39 @@
 
 	@foreach ($noticias as $noticia)
 
-	<div class="contenedor-titulo-seccion">
+	<div class="contenedor-componentes-principales">
 
-		<h3>{{$noticia->titulo}}</h3>
+		<div class="contenedor-titulo-seccion">
+
+			<h3>{{$noticia->titulo}}</h3>
+
+		</div>
+
+		<div class="contenedor-cuerpo-dividido">
+
+			<div class="contenedor-img-dividido">
+
+				<img src="/images/news/{{$noticia->newimage}}">
+
+			</div>
+
+			<div class="contenedor-texto-dividido">
+
+				<p>{{$noticia->redaccion}}</p>
+
+			</div>
+
+		</div>
 
 	</div>
 
-	<div class="contenedor-cuerpo-dividido">
+	<div class="contenedor-fecha-noticia">
 
-		<div class="contenedor-img-dividido">
-
-			<img src="/images/news/{{$noticia->newimage}}">
-
-		</div>
-
-		<div class="contenedor-texto-dividido">
-
-			<p>{{$noticia->redaccion}}</p>
-
-		</div>
-
+		<p>12/08/2020</p>
+		
 	</div>
 
 	@endforeach
-
-	<div id="paginas">
-			{{$noticias->links()}}
-	</div>
-
 
 	<!------------------------------------------------------------- BOTONES NOTICIA CANCELAR ---------------------------------------------------------->
 
@@ -93,6 +98,11 @@
 
 		<a class="msj" mesanje="cancelar?" href="/noticias-admin"><button class="btn cancelar"><span>Cancelar</span></button></a>
 
+	</div>
+
+
+	<div id="paginas">
+			{{$noticias->links()}}
 	</div>
 
 </div>

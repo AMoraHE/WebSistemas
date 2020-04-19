@@ -24,7 +24,7 @@
 
   </div>
 
-  <div class="contenedor-img-seccion">
+  <div class="contenedor-img-seccion-rectangular">
 
     <img id="img-pre" src="/images/infra/{{$infra->imgInicio}}">
 

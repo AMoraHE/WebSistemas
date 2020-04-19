@@ -108,6 +108,8 @@
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
+	/*border: 5px solid var(--blanco);
+	box-shadow: 0 15px 10px rgba(0,0,0,0.7);*/
 }
 
 /************************************************************************************************SECCIONES PRINCIPALES********************************************************************************/
@@ -118,6 +120,7 @@
 
 .contenedor-componentes-principales{
 	border: 1px solid var(--verde);
+	/*box-shadow: 0 10px 10px rgba(0,0,0,0.7);*/
 }
 
 /******************************SECCIONES CUERPO PARTIDO EN 1 COLUMNA******************************************/
@@ -159,6 +162,13 @@
 	height: 100%; /***Hacer Responsivo***/
 	object-fit: cover;
 	object-position: center;
+}
+
+/******************************SECCIONES FECHA NOTICIA************************************/
+
+.contenedor-fecha-noticia{
+	padding: 20px;
+	text-align: center;
 }
 
 /******************************SECCIONES CUERPO PARTIDO EN 2 COLUMNAS************************************/
@@ -293,6 +303,7 @@
 	border: 1px solid var(--verde);
 	border-radius: 4px;
 	padding: 10px;
+	/*box-shadow: 0 10px 10px rgba(0,0,0,0.7);*/
 }
 
 /************SECCIONES PRELIMINARES IMG NOTICIA**********************/
@@ -344,17 +355,23 @@
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
+	/*border: 5px solid var(--blanco);*/
 }
 
-/************************************************************************************************SECCIÓN LISTA DE SLIDER***********************************************************************/
+/************************************************************************************************SECCIÓN LISTA DE IMG GRANDES***********************************************************************/
 
 .contenedor-img-grande{
 	width: 100%;
+	height: 600px;
+	overflow: hidden;
+	border: 1px solid var(--verde);
 }
 
 .contenedor-img-grande img{
 	width: 100%; /***MAX HEIGTH***/
-	max-height: 600px;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
 }
 
 /************************************************************************************************SECCIÓN MINI GALERIA***********************************************************************/
@@ -565,6 +582,7 @@
 	width: 150px;
 	height: 150px;
 	overflow: hidden;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.7);
 }
 
 .contenedor-img-organigrama img{
@@ -572,7 +590,7 @@
 	height: 100%; /***Hacer Responsivo***/
 	object-fit: cover;
 	object-position: center;
-	border: 2px solid var(--verde);
+	border: 2px solid var(--blanco);
 }
 
 /************************************************************************************************SECCIÓN CARGAR ARCHIVOS IMG***********************************************************************/
@@ -582,32 +600,42 @@
 	height: 250px;
 	display: flex;
   	justify-content: center;
+  	align-items: center;
   	border-top: 1px solid var(--verde);
   	border-bottom: 1px solid var(--verde);
 }
 
 /***********************************ELEMENTOS SECCION CARGAR IMG*****************************************/
 
-.contenedor-img-seccion{
-	max-width: 20%;
-    margin: 0px 20px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.contenedor-img-seccion-rectangular{
+	width: 275px;
+	height: 115px;
+	overflow: hidden;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.7);
 }
 
-.contenedor-img-seccion img{
-	max-width: 100%;
-	max-height: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	border: 2px solid var(--verde);
-	border-radius: 10px;
+.contenedor-img-seccion-rectangular img{
+	width: 100%;
+	height: 100%; /***Hacer Responsivo***/
+	object-fit: cover;
+	object-position: center;
+	border: 5px solid var(--blanco);
 }
 
+.contenedor-img-seccion-cuadrado{
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.7);
+}
+
+.contenedor-img-seccion-cuadrado img{
+	width: 100%;
+	height: 100%; /***Hacer Responsivo***/
+	object-fit: cover;
+	object-position: center;
+	border: 5px solid var(--blanco);
+}
 
 .contenedor-txt-seccion{
     margin: 0px 20px;

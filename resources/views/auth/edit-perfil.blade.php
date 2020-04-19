@@ -42,7 +42,7 @@
 
 				</div>
 
-				<div class="contenedor-img-seccion">
+				<div class="contenedor-img-seccion-cuadrado">
 
 	 				<img id="img-pre" src="/images/perfil/{{$user->perfil_img}}">
 
