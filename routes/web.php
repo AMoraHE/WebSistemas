@@ -24,6 +24,7 @@ Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'UserCon
 //RUTAS PÚBLICAS - SEGUIR NOMENCLATURA DE ACUERDO A LA SECCIÓN
 Route::get('/', 'PublicController@inicio')->name('ISC-INICIO');
 Route::get('/isc-inicio-noticias', 'PublicController@noticias');
+Route::get('/isc-inicio-noticiasVerInd/{id}', 'PublicController@noticiasVerInd');
 Route::get('/isc-inicio-buscadorNoticias', 'PublicController@buscadorNoticias');
 Route::get('/isc-inicio-calendario', 'PublicController@calendario');
 Route::get('/isc-inicio-calendarioEventos', 'PublicController@calendarioEventos');

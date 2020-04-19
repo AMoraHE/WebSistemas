@@ -4,14 +4,6 @@
 
 @section('content')
 
-@if(session('status'))
-
-    <div class="alert alert-success">
-        {{session('status')}}
-    </div>
-
-@endif
-
 <!----------------------------------------------------------------- NOTICIAS --------------------------------------------------------------------------->
 
 <div class="seccion-principal">
@@ -49,13 +41,12 @@
 
 <!----------------------------------------------------------------- NOTICIAS----------------------------------------------------------------------------->
 
-	@foreach ($noticias as $noticia)
 
 	<div class="contenedor-componentes-principales">
 
 		<div class="contenedor-titulo-seccion">
 
-			<h3>{{$noticia->titulo}}</h3>
+			<h3>{{$noticias->titulo}}</h3>
 
 		</div>
 
@@ -65,9 +56,9 @@
 
 			<!---------------------------------- MODAL IMG -------------------------------------------->
 
-				<a href="#modal-img{{$noticia->id}}">
+				<a href="#modal-img{{$noticias->id}}">
 
-					<img src="/images/news/{{$noticia->newimage}}">
+					<img src="/images/news/{{$noticias->newimage}}">
 					<span><i class="fas fa-expand"></i></span>
 				
 				</a>
@@ -75,10 +66,10 @@
 
 			</div>
 
-				<div class="modal-img" id="modal-img{{$noticia->id}}">
+				<div class="modal-img" id="modal-img{{$noticias->id}}">
 
 					<a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
-					<img src="/images/news/{{$noticia->newimage}}" />
+					<img src="/images/news/{{$noticias->newimage}}" />
 
 								
 				</div>
@@ -87,7 +78,7 @@
 
 			<div class="contenedor-texto-dividido">
 
-				<p>{{$noticia->redaccion}}</p>
+				<p>{{$noticias->redaccion}}</p>
 
 			</div>
 
@@ -96,13 +87,6 @@
 	</div>
 
 <!-------------------------------------------------------------- BOTONES NOTICIAS----------------------------------------------------------------------------->
-
-
-	@endforeach
-
-	<div id="paginas">
-			{{$noticias->links()}}
-	</div>
 
 </div>
 

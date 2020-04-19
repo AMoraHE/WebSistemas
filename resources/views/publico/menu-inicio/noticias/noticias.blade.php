@@ -67,7 +67,7 @@
 
 		<div class="contenedor-botones-izquierda">
 
-			<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticias"><button class="btn ver"><span>Leer Más...</span></button></a>
+			<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticiasVerInd/{{$noticia->id}}"><button class="btn ver"><span>Leer Más...</span></button></a>
 		
 		</div>
 	

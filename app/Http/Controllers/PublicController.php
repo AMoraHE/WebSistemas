@@ -45,6 +45,12 @@ class PublicController extends Controller
     return view('publico.menu-inicio.noticias.noticias', compact('noticias'));
   }
 
+  public function noticiasVerInd($id)
+  {
+    $noticias = Noticia::where("id", '=', $id)->firstOrFail();
+    return view('publico.menu-inicio.noticias.noticia-individual', compact('noticias'));
+  }
+
   public function buscadorNoticias(Request $request)
   {
     $noticias = Noticia::orderBy('id', 'DESC')->where('titulo', 'like',"%".$request->key."%")->paginate(10);
