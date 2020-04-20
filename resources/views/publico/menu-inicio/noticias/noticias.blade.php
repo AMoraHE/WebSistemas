@@ -57,7 +57,11 @@
 
 			<h3>{{$noticia->titulo}}</h3>
 
+			<div class="contenedor-imagen-redimencional">
+
 			<img src="/images/news/{{$noticia->newimage}}">
+
+			</div>
 
 			<div class="redaccion">
 

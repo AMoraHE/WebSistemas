@@ -10,7 +10,7 @@
 
 	<div class="titulos-secciones-principales">
 
-    	<h1>NOTICIA</h1>
+    	<h1></h1>
     
   	</div>
 
@@ -18,26 +18,6 @@
 
 <!----------------------------------------------------------------- BUSCADOR NOTICIAS ------------------------------------------------------------------->
 
-	<div class="contenedor-buscador">
-
-		<div class="buscador">
-
-        	<form  files = "true" method="GET" action="/buscador-noticias" enctype="multipart/form-data">
-          		@csrf
-
-          		<div class="formulario">
-
-					<input type="search" name="key" placeholder="Noticia">
-					<button type="submit" class="btn-buscar"><span><i class="icono izquierda fas fa-search"></i></span></button>
-
-
-				</div>
-
-			</form>
-
-		</div>
-
-	</div>
 
 <!----------------------------------------------------------------- NOTICIAS----------------------------------------------------------------------------->
 
@@ -81,6 +61,12 @@
 				<p>{{$noticias->redaccion}}</p>
 
 			</div>
+
+			<div class="contenedor-botones">
+
+			<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticias"><button class="btn ver"><span>Regresar...</span></button></a>
+		
+		</div>
 
 		</div>
 

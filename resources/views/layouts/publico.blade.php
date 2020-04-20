@@ -19,6 +19,10 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css')}}">
 		<script src="{{ asset('js/jquery.min.js')}}"></script>
 
+		<!--------------------------------MODAL IMG---------------------------------------->
+
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/modal-img.css')}}">
+
 		<!--------------------------------ORGANIGRAMA---------------------------------------->
 
 		<!--------------------------------CALENDARIO---------------------------------------->
