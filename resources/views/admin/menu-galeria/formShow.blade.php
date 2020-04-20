@@ -11,12 +11,12 @@
 
 </div>
 
-	<div class="formulario">
+	<!--<div class="formulario">
 
 		<label>Descripción</label>
 		<textarea name="descripcion" readonly>{{$album->descripcion}}</textarea>
 
-	</div>
+	</div>-->
 
 	<div class="formulario">
 
@@ -27,39 +27,56 @@
 
 	<div class="seccion-mini-galeria">
 
-		@foreach ($imagenes as $imagen)
+		<ul id="carousel{{$album->id}}" class="elastislide-list">
 
-		@if($imagen->albumSlug == $album->slug)
+			@foreach ($imagenes as $imagen)
 
-		<div class="contenedor-img-mini-galeria">
+			@if($imagen->albumSlug == $album->slug)
 
-        <!---------------------------------- MODAL IMG -------------------------------------------->
+	        <!---------------------------------- MODAL IMG -------------------------------------------->
 
-          <div class="contenedor-img-mini-galeria-img hover-img">
+	        	<li>
 
-            <a href="#modal-img{{$imagen->id}}">
+	          		<div class="contenedor-img-mini-galeria">
 
-              <img src="/images/galeria/{{$imagen->imagen}}">
-              <span><i class="fas fa-expand"></i></span>
+		          		<div class="contenedor-img-mini-galeria-img">
 
-            </a>
+				            <a href="#modal-img{{$imagen->id}}"><img src="/images/galeria/{{$imagen->imagen}}"></a>
 
-          </div>
+				           	<div class="contenedor-img-mini-galeria-button">
 
-            <div class="modal-img" id="modal-img{{$imagen->id}}">
+					        	<a class="msj" mesanje="eliminar esta imagen?" href="/Album-Galeria-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
+					        	
+					        </div> 
 
-              <a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
-              <img src="/images/galeria/{{$imagen->imagen}}" />
+				        </div>
 
-            </div>
+					</div>
 
-        <!---------------------------------- FIN MODAL IMG -------------------------------------------->			
+			    </li> 
 
-			<a class="msj" mesanje="eliminar esta imagen?" href="/Album-Galeria-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
+			@endif
+
+			@endforeach
+
+				<script>
 			
-		</div>
-
-		@endif
-		@endforeach
+					$('#carousel{{$album->id}}').elastislide();
 			
+				</script>
+
+			 </ul>
+
+			@foreach ($imagenes as $imagen)
+
+				<div class="modal-img" id="modal-img{{$imagen->id}}">
+
+					<a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
+					<img src="/images/galeria/{{$imagen->imagen}}" />
+
+				</div>  
+				
+			@endforeach
+
+
 	</div>

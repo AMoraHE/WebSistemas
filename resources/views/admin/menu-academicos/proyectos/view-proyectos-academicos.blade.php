@@ -102,39 +102,56 @@
 
 	<div class="seccion-mini-galeria">
 
+		<ul id="carousel{{$proyecto->id}}" class="elastislide-list">
+
 		@foreach ($imagenes as $imagen)
 		@if($imagen->proySlug == $proyecto ->slug)
 
-		<div class="contenedor-img-mini-galeria">
+		<li>
 
-        <!---------------------------------- MODAL IMG -------------------------------------------->
+			<div class="contenedor-img-mini-galeria">
 
-          <div class="contenedor-seccion-preliminar-img-ajustable hover-img">
+	        <!---------------------------------- MODAL IMG -------------------------------------------->
 
-            <a href="#modal-img{{$imagen->id}}">
+	          <div class="contenedor-img-mini-galeria-img">
 
-              <img src="/images/proyectos/{{$imagen->imagen}}">
-              <span><i class="fas fa-expand"></i></span>
+	            <a href="#modal-img{{$imagen->id}}"><img src="/images/proyectos/{{$imagen->imagen}}"></a>
 
-            </a>
+	            <div class="contenedor-img-mini-galeria-button">
 
-          </div>
+	            	<a class="msj" mesanje="eliminar esta imagen?" href="/ProyectosAcademicosGaleria-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
 
-            <div class="modal-img" id="modal-img{{$imagen->id}}">
+	            </div>
+
+	          </div>
+
+	        <!---------------------------------- FIN MODAL IMG -------------------------------------------->
+
+			</div>
+
+		</li>
+
+		@endif
+		@endforeach
+
+			<script>
+			
+				$('#carousel{{$proyecto->id}}').elastislide();
+			
+			</script>
+
+		</ul>
+
+		@foreach ($imagenes as $imagen)
+
+		    <div class="modal-img" id="modal-img{{$imagen->id}}">
 
               <a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
               <img src="/images/proyectos/{{$imagen->imagen}}" />
 
             </div>
 
-        <!---------------------------------- FIN MODAL IMG -------------------------------------------->
-
-			<a class="msj" mesanje="eliminar esta imagen?" href="/ProyectosAcademicosGaleria-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
-			
-		</div>
-
-		@endif
-		@endforeach
+        @endforeach
 
 	</div>
 

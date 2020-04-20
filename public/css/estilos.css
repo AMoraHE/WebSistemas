@@ -13,8 +13,6 @@ html {
     display: flex;
     justify-content: center;
     background: #1B396A;
- /*   background: -webkit-linear-gradient(to right, #49a09d, #1B396A); 
-    background: linear-gradient(to right, #49a09d, #1B396A); */
 
 }
 
@@ -122,7 +120,7 @@ LOGOS*********************************************/
 
 .contenedor-logos{
     width: 50%;
-    min-width: 300px;
+    min-width: 350px;
     padding-top: 10px;
 }
 
@@ -181,7 +179,7 @@ img#isc {
 BODY**********************************************************************************************/
 
 .contenedor-informacion{
-    width: 100%;
+    width: calc(100% - 350px);
     padding-bottom: 15px;
     margin-left: 350px;
     margin-bottom: 50px;
@@ -338,6 +336,7 @@ Encabezado - 1366px*******************************************************/
 Contenedor - Información - 1366px*************************************************************/
 
     .contenedor-informacion{
+        width: calc(100% - 300px);
         margin-left: 300px;
     }
 
@@ -394,6 +393,7 @@ Encabezado - 1150px*******************************************************/
 Contenedor - Información - 1150px*************************************************************/
 
     .contenedor-informacion{
+        width: calc(100% - 250px);
         margin-left: 250px;
     }
 
@@ -449,6 +449,7 @@ Encabezado - 768px and 1024px***************************************************
 Contenedor - Información - 768px and 1024px*************************************************************/
 
     .contenedor-informacion{
+        width: calc(100% - 250px);
         margin-left: 250px;
     }
 
@@ -510,6 +511,7 @@ Encabezado - 767px*******************************************************/
 Contenedor - Información - 768px and 1024px*************************************************************/
 
     .contenedor-informacion{
+        width: calc(100% - 200px);
         margin-left: 200px;
     }
 
@@ -578,6 +580,7 @@ Encabezado - 600px*******************************************************/
 Contenedor - Información - 600px*************************************************************/
 
     .contenedor-informacion{
+        width: 100%;
         margin-left: auto;
     }
 
@@ -658,9 +661,10 @@ Encabezado - 320px and 480px****************************************************
     }
 
 /*************************************************************************
-Contenedor - Información - 768px and 1024px*************************************************************/
+Contenedor - Información - 320px and 480px*************************************************************/
 
     .contenedor-informacion{
+        width: 100%;
         margin-left: auto;
     }
 

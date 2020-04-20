@@ -42,45 +42,66 @@
 
 	<div class="seccion-mini-galeria">
 
+		<ul id="carousel{{$infra->id}}" class="elastislide-list">
+
 
 		@foreach ($imagenes as $imagen)
 
-		<div class="contenedor-img-mini-galeria">
+		<li>
 
-			<!---------------------------------- MODAL IMG -------------------------------------------->
+			<div class="contenedor-img-mini-galeria">
 
-			<div class="contenedor-img-mini-galeria-img hover-img">
+				<!---------------------------------- MODAL IMG -------------------------------------------->
 
-				<a href="#modal-img{{$imagen->id}}">
+				<div class="contenedor-img-mini-galeria-img">
 
-					<img src="/images/infra/{{$imagen->imagen}}">
-					<span><i class="fas fa-expand"></i></span>
+						<a href="#modal-img{{$imagen->id}}"><img src="/images/infra/{{$imagen->imagen}}"></a>
+						
+						<div class="contenedor-img-mini-galeria-button">
 
-				</a>
+
+							@if($infra->slug == 'cisco')
+							<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Cisco-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
+							@elseif($infra->slug == 'celula')
+							<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Celula-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
+							@elseif($infra->slug == 'sistemas')
+							<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Sistemas-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
+							@elseif($infra->slug == 'micro')
+							<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Micro-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
+							@endif
+
+						</div>
+
+					
+
+				</div>
+
+	        <!---------------------------------- FIN MODAL IMG -------------------------------------------->
+
 
 			</div>
 
-			    <div class="modal-img" id="modal-img{{$imagen->id}}">
+		</li>
 
-	              <a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
-	              <img src="/images/infra/{{$imagen->imagen}}" />
+		@endforeach
 
-            	</div>
+				<script>
+			
+					$('#carousel{{$infra->id}}').elastislide();
+			
+				</script>
 
-        <!---------------------------------- FIN MODAL IMG -------------------------------------------->
+		</ul>
 
-			@if($infra->slug == 'cisco')
-			<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Cisco-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
-			@elseif($infra->slug == 'celula')
-			<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Celula-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
-			@elseif($infra->slug == 'sistemas')
-			<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Sistemas-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
-			@elseif($infra->slug == 'micro')
-			<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Micro-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
-			@endif
+		@foreach ($imagenes as $imagen)
 
-		</div>
+			<div class="modal-img" id="modal-img{{$imagen->id}}">
 
+				<a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
+				<img src="/images/infra/{{$imagen->imagen}}" />
+
+			</div>  
+				
 		@endforeach
 			
 	</div>

@@ -36,7 +36,7 @@
 
     <div class="formulario"> 
         
-      <label>CLave LI TECNM</label>
+      <label>Clave LI TECNM</label>
       <input type="text" name="clave" id ="informacion-perfil" value="{{$lineainvestigacion->clave}}" placeholder="Clave Línea de Investigación TECNM" class="form-control" required>
 
     </div>

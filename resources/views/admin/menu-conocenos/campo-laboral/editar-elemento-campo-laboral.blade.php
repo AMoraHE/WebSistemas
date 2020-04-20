@@ -30,7 +30,7 @@
     <div class="formulario"> 
 
       <label>Información</label>
-      <input type="text" name="elemento" id ="informacion-perfil" value="{{$campolaboral->elemento}}" placeholder="Información" class="form-control" required>
+      <textarea type="text" name="elemento" id ="informacion-perfil" placeholder="Información" class="form-control" required>{{$campolaboral->elemento}}</textarea>
         
     </div>
 

@@ -380,12 +380,12 @@
 	width: 100%;
 	text-align: center;
 	border-top: 1px solid var(--verde);
+	padding-top: 20px; 
 }
 
 .contenedor-img-mini-galeria{
-	width: 250px;
-	height: 250px;
-	overflow: auto;
+
+	/*overflow: auto;
 	display: inline-block;
 	text-align: center;
 	justify-content: center;
@@ -393,13 +393,14 @@
 	margin: 10px;
 	padding: 10px;
 	border: 1px solid var(--verde);
-	border-radius: 10px;
+	border-radius: 10px;*/
 }
 
 .contenedor-img-mini-galeria-img{
-	width: 100%;
-	height: 75%;
+	width: 250px;
+	height: 250px;
 	overflow: hidden;
+	position: relative;
 }
 
 .contenedor-img-mini-galeria-img img{
@@ -407,11 +408,28 @@
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
+	border: 2px solid var(--blanco);
 }
 
-.contenedor-img-mini-galeria button{
+.contenedor-img-mini-galeria-button{
 	width: 100%;
+	height: 20%;
+	background: #1B396A;
+    opacity: .8;
+	position: absolute;
+	bottom: 0;
 	margin: 10px 0 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+	border-color: var(--blanco);
+}
+
+.contenedor-img-mini-galeria-button button{
+	width: 200px;
 }
 
 /************************************************************************************************SECCIÓN BUSCADOR***************************************************************************/

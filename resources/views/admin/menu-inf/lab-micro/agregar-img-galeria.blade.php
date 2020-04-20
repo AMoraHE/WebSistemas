@@ -23,7 +23,7 @@
         @csrf
       <div class="formulario">
 
-        <label for="">Tamaño de imagen recomendado minimo: 500px de ancho y 500px de alto</label>
+        <label for="">Tamaño de imagen recomendado minimo: 500px de ancho y 500px de alto - Peso de la Imagen menor a 512kb</label>
         
       </div>
 

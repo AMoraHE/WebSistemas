@@ -29,7 +29,7 @@
     <div class="formulario"> 
 
       <label>Información</label>
-      <input type="text" name="elemento" id ="informacion-perfil" value="" placeholder="Información" class="form-control" required>
+      <textarea type="text" name="elemento" id ="informacion-perfil" placeholder="Ingrese Información Deseada" class="form-control" required></textarea>
 
     </div>
 
