@@ -66,27 +66,6 @@
 
               		$("#ModalEventos").modal();
 
-              	},
-
-              	editable:true,
-              	eventDrop:function(calEvent){
-              		$('#txtID').val(calEvent.id);
-              		$('#txtTitulo').val(calEvent.title);
-              		$('#txtColor').val(calEvent.color);
-              		$('#txtDescripcion').val(calEvent.descripcion);
-
-              		var fechaHora=calEvent.start.format().split("T");
-              		$('#txtFechaInicio').val(fechaHora[0]);
-              		$('#txtHoraIncio').val(fechaHora[1]);
-
-              		var fechaHora=calEvent.end.format().split("T");
-              		$('#txtFechaFinal').val(fechaHora[0]);
-              		$('#txtHoraFinal').val(fechaHora[1]);
-
-              		RecolectarDatosGUI();
-                  EnviarInformacion('modificar',NuevoEvento,true);
-
-
               	}
 
               });
@@ -175,7 +154,7 @@
   								<div class="formulario">
 
   									<label>Color:</label>
-  									<input type="color" value="#ff0000" id="txtColor" class="form-control" style="height:36px" readonly>
+  									<input type="color" value="#ff0000" id="txtColor" class="form-control" style="height:36px" disabled>
 
   								</div>
 

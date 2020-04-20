@@ -83,7 +83,7 @@
 
 		<div class="contenedor-menu">
 
-			<a href="#" class="btn-menu">Menu<i class="icono fas fa-bars"></i></a>
+			<a href="#page" class="btn-menu">Menu<i class="icono fas fa-bars"></i></a>
 
 			<div class="contenedor-usuario">
 
@@ -120,9 +120,10 @@
 
 				<!----------------------------------------------------------- MENU ---------------------------------------------------------->
 
-				<li><a href="{{route('slider')}}"><i class="icono izquierda fas fa-home"></i>Inicio<i class=" icono derecha fa fa-chevron-down"></i></a>
+				<li><a href="/admin"><i class="icono izquierda fas fa-home"></i>Home</a></li>
+
+				<li><a href="{{route('slider')}}"><i class="icono izquierda fas fa-laptop-house"></i>Inicio<i class=" icono derecha fa fa-chevron-down"></i></a>
 					<ul>
-						<li><a href="/admin"><i class="icono izquierda fas fa-home"></i>Home</a></li>
 						<li><a href="{{route('slider')}}"><i class="icono izquierda fab fa-slideshare"></i>Slider</a></li>
 						<li><a href="{{route('noticias-admin')}}"><i class="icono izquierda far fa-newspaper"></i>Noticias</a></li>
 						<li><a href="{{route('calendario')}}"><i class="icono izquierda far fa-calendar-alt"></i>Calendario</a></li>
@@ -208,7 +209,7 @@
 
 					<div class="contenedor-img">
 
-						<img src="{{ asset('img/Isc.jpg')}}" id="isc">
+						<a href="/admin"><img src="{{ asset('img/Isc.jpg')}}" id="isc"></a>
 
 					</div>
 

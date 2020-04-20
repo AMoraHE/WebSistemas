@@ -547,9 +547,9 @@ Pie - 767px**************************************************************/
 BODY - 600px*****************************************/
 
 
-    body{
-        padding-top: 80px;
-    }
+    /*body{
+        padding-top: 50px;
+    }*/
 
 /*************************************************************************
 Usuario - 600px*****************************************/
@@ -582,6 +582,7 @@ Contenedor - Información - 600px***********************************************
     .contenedor-informacion{
         width: 100%;
         margin-left: auto;
+        padding-top: 50px; /***Si se queda el menu en posicion absoluta este se queda si esta en posicion fixed da bugs en las listas ... se elimina este y se pone en body paddin-top: 50px;*/ 
     }
 
 /*************************************************************************
@@ -591,7 +592,8 @@ Menu - 600px*************************************************************/
         width: 100%;
         min-width: 350px;
         height: auto;
-        position: fixed;
+        /*position: fixed;*/
+        position: absolute;
         top: 0;
         z-index: 1000;
         margin-top: 0px;
@@ -631,9 +633,9 @@ Pie - 600px**************************************************************/
 BODY - 320px and 480px*****************************************/
 
 
-    body{
-        padding-top: 80px;
-    }
+   /* body{
+        padding-top: 50px;
+    } */
 
 /*************************************************************************
 Usuario - 320px and 480px*****************************************/
@@ -666,6 +668,7 @@ Contenedor - Información - 320px and 480px*************************************
     .contenedor-informacion{
         width: 100%;
         margin-left: auto;
+        padding-top: 50px;
     }
 
 /*************************************************************************
@@ -675,7 +678,7 @@ Menu - 320px and 480px**********************************************************
         width: 100%;
         min-width: 350px;
         height: auto;
-        position: fixed;
+        position: absolute;
         top: 0;
         z-index: 1000;
         margin-top: 0px;
