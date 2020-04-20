@@ -34,7 +34,8 @@
 
     <span class="invalid-feedback" role="alert">
 
-      <strong>El archivo seleccionado no es válido, seleccione un archivo JPG, PNG, GIF, TIFF, BMP</strong>
+      <strong>{{$errors->first('imgInicio')}}</strong>
+      <!-- <strong>El archivo seleccionado no es válido, seleccione un archivo JPG, PNG, GIF, TIFF, BMP</strong> -->
 
     </span>
 

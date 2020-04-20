@@ -44,7 +44,7 @@ class LabSistemasController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-        'imgInicio' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+        'imgInicio' => 'required|mimes:jpeg,png,bmp,tiff,gif|max:1024',
         'nombre' => 'required|string',
         'descripcion' => 'required|string',
         'responsable' => 'required|string',
@@ -115,7 +115,7 @@ class LabSistemasController extends Controller
     public function update(Request $request,  $infras)
     {
         $validator = Validator::make($request->all(), [
-        'imgInicio' => 'mimes:jpeg,png,bmp,tiff,gif',
+        'imgInicio' => 'mimes:jpeg,png,bmp,tiff,gif|max:1024',
         'nombre' => 'required|string',
         'descripcion' => 'required|string',
         'responsable' => 'required|string',

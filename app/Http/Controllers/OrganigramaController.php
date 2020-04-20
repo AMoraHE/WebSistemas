@@ -55,7 +55,7 @@ class OrganigramaController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'imgOrg' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+            'imgOrg' => 'required|mimes:jpeg,png,bmp,tiff,gif|max:512',
             'area_id' => 'required|string',
             'puesto' => 'required|string',
             'nombre' => 'required|string',
@@ -129,7 +129,7 @@ class OrganigramaController extends Controller
     public function update(Request $request, Organigrama $Organigrama)
     {
         $validator = Validator::make($request->all(), [
-            'imgOrg' => 'mimes:jpeg,png,bmp,tiff,gif',
+            'imgOrg' => 'mimes:jpeg,png,bmp,tiff,gif|max:512',
             'puesto' => 'required|string',
             'integrante' => 'required|string',
             'genero_id' => 'required|string',

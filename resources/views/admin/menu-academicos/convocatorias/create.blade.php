@@ -110,7 +110,7 @@
 <!----------------------------------------------------------------- CARGRA IMG Convocatorias ---------------------------------------------------------->
 			<div class="formulario">
 				
-				<label>Peso del documento menor a 1 Mb</label>
+				<label>Peso del documento menor a 2 Mb</label>
 
 			</div>
 
@@ -142,7 +142,9 @@
 
 			@if ($errors->has('doc'))
 	            <span class="invalid-feedback" role="alert">
-	                <strong>El archivo seleccionado no es válido, seleccione un archivo PDF, WORD, EXCEL, POWERPOINT</strong>
+
+	            	<strong>{{$errors->first('doc')}}</strong>
+	                <!-- <strong>El archivo seleccionado no es válido, seleccione un archivo PDF, WORD, EXCEL, POWERPOINT</strong> -->
 	            </span>
 	        @endif
 

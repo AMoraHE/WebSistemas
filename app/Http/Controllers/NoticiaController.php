@@ -41,7 +41,7 @@ class NoticiaController extends Controller
   {
     $validator = Validator::make($request->all(), [
     'titulo' => 'required|string',
-    'image' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+    'image' => 'required|mimes:jpeg,png,bmp,tiff,gif|max:1024',
     'redaccion' => 'required|string',
     ]);
 
@@ -105,7 +105,7 @@ class NoticiaController extends Controller
   {
     $validator = Validator::make($request->all(), [
     'titulo' => 'required|string',
-    'image' => 'mimes:jpeg,png,bmp,tiff,gif',
+    'image' => 'mimes:jpeg,png,bmp,tiff,gif|max:1024',
     'redaccion' => 'required|string',
     ]);
 
