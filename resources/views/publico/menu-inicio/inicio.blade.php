@@ -55,7 +55,7 @@
 	<div class="contenedor-titulo-seccion">
 		<div class="tlinea"></div>
 
-		<h3>{{$noticia->titulo}}</h3>
+		<h3>Noticia</h3>
 
 		<div class="tlinea"></div>
 
@@ -69,10 +69,20 @@
 
 		</div>
 
+		<div class="titulo-img-n1">
+			<h2>{{$noticia->titulo}}</h2>
+			</div>
+
 		<div class="contenedor-texto-dividido-inicio">
 
 			<p>{{$noticia->redaccion}}</p>
 
+		</div>
+
+		<div class="contenedor-botones">
+
+			<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticiasVerInd/{{$noticia->id}}"><button class="btn ver"><span>Leer Más...</span></button></a>
+		
 		</div>
 
 	</div>

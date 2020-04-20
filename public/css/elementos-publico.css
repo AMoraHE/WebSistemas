@@ -164,22 +164,24 @@
 }
 
 .contenedor-img-dividido-inicio{
-	width: 100%;
-    margin: 0px 0px;
-    padding: 0px;
+	width: 600px;
+	height: 600px;
     display: flex;
+    box-shadow: 0 4px 6px #000;
+	border-radius: 10px;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .contenedor-img-dividido-inicio img{
-	box-shadow: 0 4px 6px #000;
-	border-radius: 10px;
-	max-width: 100%;
-	max-height: 100%; /***Hacer Responsivo***/
+	width: 100%;
+	height: 100%; /***Hacer Responsivo***/
 	margin: 0px auto;
+	object-fit: cover;
+    object-position: center;
 }
-
+/*
 .contenedor-img-dividido-inicio img{
 	transition: transform .5s;	
 }
@@ -187,6 +189,7 @@
 .contenedor-img-dividido-inicio img:hover{
 	transform: scale(1.2);	
 }
+*/
 
 .contenedor-cuerpo-dividido-noticias{ /* --------->Seccion de Noticias*/
 	width: 30%;
@@ -208,14 +211,23 @@
 	margin: 0 auto;
 
 }
+.contenedor-imagen-redimencional{
+	width: 250px;
+	height: 250px;
+	margin: 0px auto;
+	box-shadow: 0 4px 6px #000;
+	border-radius: 10px; 
+	overflow: hidden;
+
+}
 
 .contenedor-cuerpo-dividido-noticias img{
-	box-shadow: 0 4px 6px #000;
-	border-radius: 5px; 
-	max-width: 100%;
-	max-height: 250px; /***Hacer Responsivo***/
-	margin: 0px auto;
+	width: 100%;
+	height: 100%; /***Hacer Responsivo***/
 	display: block;
+	object-fit: cover;
+	object-position: center;
+
 }
 
 .redaccion p{
@@ -240,22 +252,27 @@
 }
 
 .contenedor-img-dividido{
-	width: 100%;
+	width: 250px;
+	height: 250px;
     margin: 0px 20px;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    float: left;
+    overflow: hidden;
 }
 
 .contenedor-img-dividido img{
 	box-shadow: 0 4px 6px #000;
 	border-radius: 10px;
-	max-width: 100%;
-	max-height: 500px; /***Hacer Responsivo***/
+	width: 100%;
+	height: 100%; /***Hacer Responsivo***/
 	margin: 0px auto;
+	object-fit: cover;
+	object-position: center;
 }
-
+/*
 .contenedor-img-dividido img{
 	transition: transform .5s;	
 }
@@ -263,13 +280,15 @@
 .contenedor-img-dividido img:hover{
 	transform: scale(1.2);	
 }
+*/
 
 /******************************SECCIONES CUERPO PARTIDO EN 2 COLUMNAS************************************/
 
 .contenedor-texto-dividido-inicio{/* --------->Seccion de Noticias texto inicio*/
 	width: 100%;
 	max-height: 100px;
-   	margin: 0px 0px;
+   	margin-top: 20px;
+
     padding: 10px;
 	box-shadow: 0 4px 6px #000;
 	border-radius: 10px;
@@ -289,10 +308,10 @@
 
 }
 
-.contenedor-texto-dividido{ /* --------->Seccion de Noticias texto seccion noticias*/
-	width: 80%;
+.contenedor-texto-dividido{ /* --------->Seccion de Noticias texto seccion noticia individual*/
+	width: calc(100% - 40px);
 	min-height: 250px;
-   	margin: 0px 20px;
+   	margin: 0px auto;
     padding: 10px;
 	box-shadow: 0 4px 6px #000;
 	border-radius: 10px;
@@ -478,8 +497,30 @@
     font-size: 15px;
     margin-top: calc(50% + 44px);
     line-height: 20px;
-    
     position: absolute;
+    z-index: 3;
+}
+
+.titulo-img-n1{
+	z-index: auto;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px #000;
+	border-radius: 10px;
+}
+
+.titulo-img-n1 h2{
+	font-family: 'Roboto', sans-serif;
+	line-height: 30px;
+    text-transform: uppercase;
+    color:#fff;
+	background-color:#000;
+	padding:2px 10px;
+	opacity:0.5;
+    text-shadow: 0 1px 1px #000;
+    text-align: center;
+    font-size: 25px;
+    margin-top:-10.5%;
+    position: relative;
     z-index: 3;
 }
 
@@ -508,19 +549,22 @@
 /***********************************SECCIONES PRELIMINARES IMG CON TXT*****************************************/
 
 .contenedor-seccion-preliminar-img-redimensionales{
-	width: 100%;
-	height: 100%;
+	width: 250px;
+	height: 250px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	position: absolute;
+	overflow: hidden;
 }
 
 .contenedor-seccion-preliminar-img-redimensionales img{
-	max-width: 100%;
-	max-height: 100%;
+	width: 100%;
+	height: 100%;
 	border-radius: 10px;
 	z-index: 0;
+	object-fit: cover;
+	object-position: center;
 }
 
 /************************************************************************************************SECCIÓN LISTA DE SLIDER***********************************************************************/
