@@ -56,7 +56,7 @@ class SliderController extends Controller
         if(count($sliders) <=3)
         {
             $validator = Validator::make($request->all(), [
-            'image' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+            'image' => 'required|mimes:jpeg,png,bmp,tiff,gif|max:1024',
             'contenido' => 'required|string',
             ]);
 
@@ -129,7 +129,7 @@ class SliderController extends Controller
     public function update(Request $request, Slider $slider)
     {
         $validator = Validator::make($request->all(), [
-        'image' => 'mimes:jpeg,png,bmp,tiff,gif',
+        'image' => 'mimes:jpeg,png,bmp,tiff,gif|max:1024',
         'contenido' => 'required|string',
         ]);
 

@@ -26,6 +26,7 @@
 
 		<a class="msj" mesanje="entrar a eliminación anual?" href="/noticias-admin/eliminacion-anual/"><button class="btn eliminar"><span>Eliminación Anual</span></button></a>
 		<a class="msj" mesanje="agregar más noticias?" href="/noticias-admin/create"><button class="btn agregar"><span>Agregar Noticia</span></button></a>
+		<!-- <a class="msj" mesanje="regresar al menú de inicio?" href="/admin"><button class="btn cancelar"><span>INICIO</span></button></a> -->
 
 	</div>
 

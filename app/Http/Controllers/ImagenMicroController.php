@@ -40,7 +40,7 @@ class ImagenMicroController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-        'image' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+        'image' => 'required|mimes:jpeg,png,bmp,tiff,gif|max:512',
         ]);
 
         if ($validator->fails()) {

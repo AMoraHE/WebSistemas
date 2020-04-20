@@ -38,7 +38,7 @@ class ProyectoGaleriaController extends Controller
     {
         $identificador = $request->input('slug');
         $validator = Validator::make($request->all(), [
-        'imagen' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+        'imagen' => 'required|mimes:jpeg,png,bmp,tiff,gif|max:512',
         'slug' => 'required|string',
         ]);
 

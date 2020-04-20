@@ -101,7 +101,9 @@
 
     @if ($errors->has('image'))
       <span class="invalid-feedback" role="alert">
-        <strong>El archivo seleccionado no es válido, seleccione un archivo JPG, PNG, GIF, TIFF, BMP</strong>
+
+        <strong>{{$errors->first('imagen')}}</strong>
+        <!-- <strong>El archivo seleccionado no es válido, seleccione un archivo JPG, PNG, GIF, TIFF, BMP</strong> -->
       </span>
     @endif
 

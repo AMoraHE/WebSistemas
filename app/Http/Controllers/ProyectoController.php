@@ -52,7 +52,7 @@ class ProyectoController extends Controller
     {
         $validator = Validator::make($request->all(), [
     
-    'imagen' => 'required|mimes:jpeg,png,bmp,tiff,gif',
+    'imagen' => 'required|mimes:jpeg,png,bmp,tiff,gif|max:1024',
     'proyecto' => 'required|string',
     'desarrolladores' => 'required|string',
     'descripcion' => 'required|string', 
@@ -119,7 +119,7 @@ class ProyectoController extends Controller
     public function update(Request $request, $proyectos)
     {
           $validator = Validator::make($request->all(), [
-    'imagen' => 'mimes:jpeg,png,bmp,tiff,gif',
+    'image' => 'mimes:jpeg,png,bmp,tiff,gif|max:1024',
     'proyecto' => 'required|string',
     'desarrolladores' => 'required|string',
     'descripcion' => 'required|string',
@@ -127,7 +127,7 @@ class ProyectoController extends Controller
     ]);
 
     if ($validator->fails()) {
-        return redirect('/ProyectosAcademicos/'.$proyectos->slug.'/edit')
+        return redirect('/ProyectosAcademicos/'.$proyectos.'/edit')
                     ->withErrors($validator)
                     ->withInput($request->all());
     }

@@ -39,7 +39,7 @@ class ConvocatoriasController extends Controller
   {
       $validator = Validator::make($request->all(), [
 
-  'doc' => 'required|mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel',
+  'doc' => 'required|mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel|max:2048',
   'convocatoria' => 'required|string',
   'descripcion' => 'required|string',
   'FInicio' => 'required|string',
@@ -128,7 +128,7 @@ class ConvocatoriasController extends Controller
   public function update(Request $request, $convocatorias)
   {
     $validator = Validator::make($request->all(), [
-    'doc' => 'mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel',
+    'doc' => 'mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel|max:2048',
     'convocatoria' => 'required|string',
     'descripcion' => 'required|string',
     'FInicio' => 'required|string',
