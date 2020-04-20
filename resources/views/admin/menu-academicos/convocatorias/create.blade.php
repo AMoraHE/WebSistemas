@@ -108,6 +108,11 @@
 			</div>
 
 <!----------------------------------------------------------------- CARGRA IMG Convocatorias ---------------------------------------------------------->
+			<div class="formulario">
+				
+				<label>Peso del documento menor a 1 Mb</label>
+
+			</div>
 
 
 			<div class="contenedor-cargar-img">
