@@ -24,7 +24,7 @@
 
 	<div class="contenedor-componentes-principales">
 
-		<div class="contenedor-titulo-seccion">
+		<div class="contenedor-titulo-seccion-ind">
 
 			<h3>{{$noticias->titulo}}</h3>
 

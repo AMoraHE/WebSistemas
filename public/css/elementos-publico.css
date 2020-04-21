@@ -201,15 +201,23 @@
     border-radius: 25px;
     padding: 10px;
 }
+.contenedor-cuerpo-dividido-noticias{
+	transition: transform .5s;
+}
+
+.contenedor-cuerpo-dividido-noticias:hover{
+	transform: scale(1.05);	
+}
 
 .contenedor-cuerpo-dividido-noticias h3{
-	width: 250px;	
+	width: 250px;
+	height: 44px;	
 	text-align: left;
-	font-size: 14px: 
+	font-size: 14px; 
 	padding: 2%;
 	text-transform: uppercase;
 	margin: 0 auto;
-
+	overflow: hidden;
 }
 .contenedor-imagen-redimencional{
 	width: 250px;
@@ -342,7 +350,7 @@
 }
 
 .contenedor-titulo-seccion h3{
-	min-width: max-content;
+	min-width: fit-content;
 	font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     color: var(--blanco);
@@ -358,6 +366,29 @@
 	margin-bottom: 10px;
 	background: #fff;
     margin: 30px;
+}
+
+.contenedor-titulo-seccion-ind{/******************************** TITULOS NOTICIAS INDIVIDUALES******************************************/
+	width: calc(100% - 40px);
+	min-height: 50px;
+	margin: 2% auto;
+	background: var(--azul);
+	border: 2px solid var(--verde);
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+}
+
+.contenedor-titulo-seccion-ind h3{
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: var(--blanco);
+    padding: 2%;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+
 }
 
 /************************************************************************************************SECCIONES SELECT*************************************************************************************/
@@ -469,7 +500,7 @@
 }
 
 /************SECCIONES PRELIMINARES IMG NOTICIA**********************/
-
+/*
 .contenedor-seccion-preliminar h2{
 	font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
@@ -479,10 +510,16 @@
     margin: 20px 0px;
     line-height: 20px;
     padding: 5px;
-}
+}*/
 
 .titulo-img{
+	width: 250px;
+	height: 44px;
+	margin-top: calc(50% + 44px);
+    line-height: 20px;
+    position: relative;
 	z-index: auto;
+	overflow: hidden;
 }
 
 .titulo-img h2{
@@ -495,10 +532,7 @@
     text-shadow: 0 1px 1px #000;
     text-align: center;
     font-size: 15px;
-    margin-top: calc(50% + 44px);
-    line-height: 20px;
-    position: absolute;
-    z-index: 3;
+    
 }
 
 .titulo-img-n1{
@@ -506,6 +540,8 @@
 	border-radius: 10px;
 	box-shadow: 0 4px 6px #000;
 	border-radius: 10px;
+	margin-top:-5.5%;
+	
 }
 
 .titulo-img-n1 h2{
@@ -519,9 +555,11 @@
     text-shadow: 0 1px 1px #000;
     text-align: center;
     font-size: 25px;
-    margin-top:-10.5%;
     position: relative;
     z-index: 3;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .contenedor-noticia-preliminar p{
