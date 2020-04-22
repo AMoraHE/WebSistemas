@@ -52,8 +52,8 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-            'imgPerfil' => 'mimes:jpeg,png,bmp,tiff,gif',
-            'validar' => 'required|in:AW-txVvwuVDeN%3|min:15|max:15',
+            'imgPerfil' => 'mimes:jpeg,png,bmp,tiff,gif|max:1024',
+            'validar' => 'required|string|in:AW-txVvwuVDeN%3|min:15|max:15',
         ]);
     }
 
