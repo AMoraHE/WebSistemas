@@ -28,6 +28,6 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->from('pepeaguilera137@gmail.com')->subject("Nueva solicitud de contacto - AppWebISC")->view('publico.viewCorreo')->with('data', $this->data);
+        return $this->from('appwebisc.fcp@gmail.com')->subject("Nueva solicitud de contacto - AppWebISC-FCP")->view('publico.viewCorreo')->with('data', $this->data);
     }
 }

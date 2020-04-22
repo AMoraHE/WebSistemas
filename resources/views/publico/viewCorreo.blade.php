@@ -1,3 +1,7 @@
-<p>Remitente: {{$data['remitente']}}</p>
-<p>Hola, mi nombre es: {{$data['nombre']}}</p>
-<p>Mensaje: {{$data['mensaje']}}</p>
+<p>Hola!. Recibió este correo electrónico debido a una solicitud de contacto hacia usted a través de la aplicación web ISC-FCP</p>
+<ul>
+	<li>Remitente: {{$data['remitente']}}</li>
+	<li>Nombre Remitente: {{$data['nombre']}}</li>
+</ul>
+<p>El mensaje enviado es el siguiente:</p>
+<ul>{{$data['mensaje']}}</ul>
