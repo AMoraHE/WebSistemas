@@ -85,10 +85,21 @@
                                     </span>
                                 @endif
                         </div>
-
+                        
                         <div class="formulario">
                             <label for="password-confirm">{{ __('Confirmar contraseña') }}</label>
                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                        </div>
+
+                        <div class="formulario">
+                            <label for="validar">{{ __('Contraseña de validación') }}</label>
+                            <input id="validar" type="password" class="form-control" name="validar" placeholder="Ingrese la contraseña de validación proporcionada por el ADMIN" required>
+
+                                @if ($errors->has('validar'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>La contraseña de validación es incorrecta, solicite la contraseña al administrador</strong>
+                                    </span>
+                                @endif
                         </div>
 
 <!---------------------------------------------------------------------------------Botones Perfil-------------------------------------------------------------------------------------->
