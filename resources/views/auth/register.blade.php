@@ -33,7 +33,7 @@
 
                             </div>
 
-                            <div class="contenedor-img-seccion">
+                            <div class="contenedor-img-seccion-cuadrado">
 
                                 <img id="img-pre" src="/img/LogoNuevaImagen.png">
 

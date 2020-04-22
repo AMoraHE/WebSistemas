@@ -38,8 +38,12 @@
                             @else
 
                             <div id="usuario">
+
+                                <div class="img-usuario">
                                     
                                     <img src="/images/perfil/{{Auth::user()->perfil_img}}">
+
+                                </div>
                                     <a>{{ Auth::user()->name }}</a>
 
                             </div>
