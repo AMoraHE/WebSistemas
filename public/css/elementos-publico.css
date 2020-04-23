@@ -992,6 +992,7 @@
 .contenedor-dir{
 display: inline-block;
 text-align: -webkit-center;
+text-align: -moz-center;
 }
 
 .contenedor-lab-doc{
