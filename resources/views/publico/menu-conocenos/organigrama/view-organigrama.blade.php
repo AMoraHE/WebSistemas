@@ -25,20 +25,22 @@
 
 
 <!------------------------------------------------------------------ VISTA-ORGANIGRAMA ------------------------------------------------------------->
-
-@foreach ($organigramas as $organigrama)
     <div class="contenedor-organigrama">
         <div class="contenedor-dir"><!------------------- CONTENEDOR DIR/SUB/DIV ----------------------------->
+                @foreach($director as $direc)
                 <div class="contenedor-inf">
                     <a href="#">
                         <label>
-                        <p id="titulo-organigrama">Dirección General</p>
-                        <img src="img/1.jpg">
-                        <p>Diego Briseño</p>
+                            <p id="titulo-organigrama">{{$direc->nombre}}</p>
+                            <img src="/images/organigrama/{{$direc->foto}}">
+                            <p>{{$direc->puesto}}</p>
+                            <p>{{$direc->integrante}}</p>
+                            <a href="/isc-inicio-formContacto/{{$direc->correo}}" onclick="return confirm('¿Contactar?')"><p>{{$direc->correo}}</p></a>
                         </label>
                     </a>
                             
                 </div>
+                @endforeach
             <div class="contenedor-lab-doc"><!------------------- CONTENEDOR LAB/DOCENTES ----------------------------->
 
                 <div class="titulo-org1">
@@ -52,37 +54,42 @@
 
                     <div class="contenedor-lab"><!------------------- CONTENEDOR LABORATORIOS ----------------------------->
 
+                        @foreach($laboratorio as $lab)
                         <div class="contenedor-inf">
-                    <a href="#">
-                        <label>
-                        <p id="titulo-organigrama">Laboratorio de Sistemas Computacionales</p>
-                        <img src="img/1.jpg">
-                        <p>Diego Briseño</p>
-                        </label>
-                    </a>
-                            
+                            <a href="#">
+                                <label>
+                                    <p id="titulo-organigrama">{{$lab->nombre}}</p>
+                                    <img src="/images/organigrama/{{$lab->foto}}">
+                                    <p>{{$lab->puesto}}</p>
+                                    <p>{{$lab->integrante}}</p>
+                                    <a href="/isc-inicio-formContacto/{{$lab->correo}}" onclick="return confirm('¿Contactar?')"><p>{{$lab->correo}}</p></a>
+                                </label>
+                            </a>
                         </div>  
+                        @endforeach
+
                     </div>
 
                     <div class="contenedor-doc"> <!------------------- CONTENEDOR DOCENTES ----------------------------->
 
-                    <div class="contenedor-inf">
-                    <a href="#">
-                        <label>
-                        <p id="titulo-organigrama">Docente</p>
-                        <img src="img/1.jpg">
-                        <p>MC. Arizbé del Socorro Arana Kantún</p>
-                        </label>
-                    </a>
-                            
-                    </div>
-
+                        @foreach($docente as $docen)
+                        <div class="contenedor-inf">
+                            <a href="#">
+                                <label>
+                                    <p id="titulo-organigrama">{{$docen->nombre}}</p>
+                                    <img src="/images/organigrama/{{$docen->foto}}">
+                                    <p>{{$docen->puesto}}</p>
+                                    <p>{{$docen->integrante}}</p>
+                                    <a href="/isc-inicio-formContacto/{{$docen->correo}}" onclick="return confirm('¿Contactar?')"><p>{{$docen->correo}}</p></a>
+                                </label>
+                            </a>
+                        </div>
+                        @endforeach
+                        
                     </div>   
             </div>
         </div>
     </div>
-
-    @endforeach
 </div>
 
 @endsection

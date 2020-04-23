@@ -58,7 +58,9 @@
 
 			<div class="contenedor-texto-dividido">
 
-				<p>{{$noticias->redaccion}}</p>
+				@foreach(explode(PHP_EOl, $noticias->redaccion) as $parrafo)
+				<p>{{$parrafo}}</p>
+				@endforeach
 
 			</div>
 

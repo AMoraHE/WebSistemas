@@ -142,6 +142,17 @@ class PublicController extends Controller
     return view('publico.menu-conocenos.cuerpo-academico.view-cuerpo-academico', compact('cuerpos'));
   }
 
+  public function organigrama()
+  {
+    $director = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '<', '5')->orderBy('areas.id', 'ASC')->get();
+
+    $laboratorio = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '5')->get();
+
+    $docente = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '6')->get();
+
+    return view('publico.menu-conocenos.organigrama.view-organigrama', compact('director', 'laboratorio', 'docente'));
+  }
+
   public function campoLaboral()
   {
     $campolaboral = campo_laboral::all();
