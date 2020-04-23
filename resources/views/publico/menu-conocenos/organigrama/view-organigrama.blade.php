@@ -29,13 +29,13 @@
         <div class="contenedor-dir"><!------------------- CONTENEDOR DIR/SUB/DIV ----------------------------->
                 @foreach($director as $direc)
                 <div class="contenedor-inf">
-                    <a href="#">
+                    <a href="/isc-inicio-formContacto/{{$direc->correo}}" onclick="return confirm('¿Contactar?')">
                         <label>
                             <p id="titulo-organigrama">{{$direc->nombre}}</p>
                             <img src="/images/organigrama/{{$direc->foto}}">
                             <p>{{$direc->puesto}}</p>
                             <p>{{$direc->integrante}}</p>
-                            <a href="/isc-inicio-formContacto/{{$direc->correo}}" onclick="return confirm('¿Contactar?')"><p>{{$direc->correo}}</p></a>
+                            <p>{{$direc->correo}}</p>
                         </label>
                     </a>
                             
@@ -56,13 +56,13 @@
 
                         @foreach($laboratorio as $lab)
                         <div class="contenedor-inf">
-                            <a href="#">
+                            <a href="/isc-inicio-formContacto/{{$lab->correo}}" onclick="return confirm('¿Contactar?')">
                                 <label>
                                     <p id="titulo-organigrama">{{$lab->nombre}}</p>
                                     <img src="/images/organigrama/{{$lab->foto}}">
                                     <p>{{$lab->puesto}}</p>
                                     <p>{{$lab->integrante}}</p>
-                                    <a href="/isc-inicio-formContacto/{{$lab->correo}}" onclick="return confirm('¿Contactar?')"><p>{{$lab->correo}}</p></a>
+                                    <p>{{$lab->correo}}</p>
                                 </label>
                             </a>
                         </div>  
@@ -74,18 +74,18 @@
 
                         @foreach($docente as $docen)
                         <div class="contenedor-inf">
-                            <a href="#">
+                            <a href="/isc-inicio-formContacto/{{$docen->correo}}" onclick="return confirm('¿Contactar?')">
                                 <label>
                                     <p id="titulo-organigrama">{{$docen->nombre}}</p>
                                     <img src="/images/organigrama/{{$docen->foto}}">
                                     <p>{{$docen->puesto}}</p>
                                     <p>{{$docen->integrante}}</p>
-                                    <a href="/isc-inicio-formContacto/{{$docen->correo}}" onclick="return confirm('¿Contactar?')"><p>{{$docen->correo}}</p></a>
+                                    <p>{{$docen->correo}}</p>
                                 </label>
                             </a>
                         </div>
                         @endforeach
-                        
+
                     </div>   
             </div>
         </div>
