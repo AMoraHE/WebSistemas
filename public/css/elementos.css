@@ -710,7 +710,7 @@
 }
 
 #CalendarioWeb {
-		max-width: 800px;
+	max-width: 800px;
 }
 
 .contenedor-formulario-dividido{
@@ -861,7 +861,8 @@
 /************************************************************************************************ICONOS***********************************************************************/
 
 .icono-izquierda {
-	float: left;
+	/*float: left;*/
+	margin-right: 10px;
 }
 
 .icono-pdf {
@@ -1089,6 +1090,10 @@ body::-webkit-scrollbar-thumb{
 		font-size: 15px;
 	}
 
+	.formulario-check{
+		font-size: 15px;
+	}
+
 	/***********************************TABLAS*****************************************/
 
 	.tabla-informacion-escolar{
@@ -1259,6 +1264,10 @@ body::-webkit-scrollbar-thumb{
 		font-size: 14px;
 	}
 
+	.formulario-check{
+		font-size: 14px;
+	}
+
 	/***********************************TABLAS*****************************************/
 
 	.tabla-informacion-escolar{
@@ -1342,7 +1351,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 /***************************************************************************************************************************************************
-***************************************************************RESPONSIBO 1024PX********************************************************************/
+***************************************************************RESPONSIBO 600PX********************************************************************/
 
 
 @media screen and (max-width: 600px) {
@@ -1434,6 +1443,10 @@ body::-webkit-scrollbar-thumb{
 	}
 
 	.formulario select{
+		font-size: 14px;
+	}
+
+	.formulario-check{
 		font-size: 14px;
 	}
 
@@ -1606,6 +1619,10 @@ body::-webkit-scrollbar-thumb{
 	}
 
 	.formulario select{
+		font-size: 12px;
+	}
+
+	.formulario-check{
 		font-size: 12px;
 	}
 

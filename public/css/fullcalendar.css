@@ -725,7 +725,8 @@ a.fc-more:hover {
 /* title text */
 
 .fc-toolbar h2 {
-	margin: 0;
+	margin: 10px auto;
+	text-transform: uppercase;
 }
 
 /* button layering (for border precedence) */
@@ -1131,4 +1132,40 @@ be a descendant of the grid when it is being dragged.
 	border-width: 5px 6px 5px 0;
 	border-top-color: transparent;
 	border-bottom-color: transparent;
+}
+
+@media screen and (max-width: 1024px) {
+
+	.fc button {
+
+		font-size: 14px; /* normalize */
+
+	}
+
+	.fc-toolbar h2 {
+		font-size: 20px;
+	}
+
+	.fc-event {
+		font-size: 14px;
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+
+	.fc button {
+
+		font-size: 12px; /* normalize */
+
+	}
+
+	.fc-toolbar h2 {
+		font-size: 18px;
+	}
+
+	.fc-event {
+		font-size: 12px;
+	}
+
 }

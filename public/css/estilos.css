@@ -266,8 +266,8 @@ SLIDER********************************************/
 
 
 .contenedor-slider{
-    width: calc(100% - 40px);
-    margin: 0px auto 50px auto;
+    width: 100%; /*para ponerle un margin: calc(100% - 40px);
+    margin: 0px auto 50px auto;*/
 
 }
 

@@ -48,7 +48,7 @@ a {
 }
 
 #seccion-login{
-	width: 50%;
+	width: 60%;
 	min-width: 350px;
 }
 
@@ -61,6 +61,7 @@ a {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	color: var(--blanco);
 }
 
 .img-usuario{
@@ -108,4 +109,46 @@ a {
 	justify-content: center;
 	align-items: center;
 	border: 1px solid var(--verde);
+}
+
+/***************************************************************************************************************************************************
+***************************************************************RESPONSIBO 1024PX********************************************************************/
+
+@media screen and (max-width: 1024px) {
+	#seccion-login{
+		width: 90%;
+	}
+
+	#usuario{
+		font-size:14px; 
+	}
+
+	.titulo-seccion-loggin{
+		font-size: 18px;
+	}
+
+	.cuerpo-seccion-loggin{
+		font-size: 14px;
+	}
+}
+
+/***************************************************************************************************************************************************
+***************************************************************RESPONSIBO 600PX********************************************************************/
+
+@media screen and (max-width: 480px) {
+	#seccion-login{
+		width: 100%;
+	}
+
+	#usuario{
+		font-size:12px; 
+	}
+
+	.titulo-seccion-loggin{
+		font-size: 16px;
+	}
+
+	.cuerpo-seccion-loggin{
+		font-size: 12px;
+	}
 }

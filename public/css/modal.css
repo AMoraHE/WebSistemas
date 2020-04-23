@@ -11,7 +11,7 @@
 .modal{
 	display: none;
 	position: fixed;
-	z-index: 6;
+	z-index: 1000;
 	overflow: auto;
 	left: 0;
 	top: 0;
@@ -24,13 +24,11 @@
 	position: relative;
 	background: #fefefe;
 	margin: auto;
-	width: 35%; /*Regresar a 30%*/
+	min-width: 350px;
+	max-width: 1920px;
 	box-shadow: 0 0 6px 0 rgba(0,0,0,.4);
 	animation-name: modal;
 	animation-duration: 1s;
-	border-radius: 10px 10px 10px 10px;
-	-moz-border-radius: 10px 10px 10px 10px;
-	-webkit-border-radius: 10px 10px 10px 10px;
 	border: 2px solid #8cc63e;
 }
 
@@ -58,20 +56,6 @@
 	cursor: pointer;
 }
 
-.modal-encabezado{
-	border-radius: 10px 10px 0px 0px;
-	-moz-border-radius: 10px 10px 0px 0px;
-	-webkit-border-radius: 10px 10px 0px 0px;
-	border: 2px solid #8cc63e;
-}
-
-.modal-pie{
-	border-radius: 0px 0px 10px 10px;
-	-moz-border-radius: 0px 0px 10px 10px;
-	-webkit-border-radius: 0px 0px 10px 10px;
-	border: 2px solid #8cc63e;
-}
-
 .modal-encabezado, .modal-pie{
 	padding: 8px 16px;
 	background: #1B396A;
@@ -85,9 +69,6 @@
 	width: 95%;
 }
 
-.modal-encabezado p{
-	text-align: justify;
-}
 
 .modal-cuerpo{
 	padding: 20px 16px;
@@ -104,7 +85,6 @@
   	display: inline-block;
   	padding: 10px;
 	margin: 0px 10px; 
-	min-width: 100px;
 	cursor: pointer;
 	border-radius: 10px;
 	border: none;
@@ -130,26 +110,56 @@
 
 /*************************************Responsivo***************************************/
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1024px){
 
-	.contenido-modal{
-		width: 70%;
-	}
+	.modal-encabezado h5{
 
-	.textos{
-		padding: 150px;
+		font-size: 18px;
+
+	}		
+
+	.btn-modal span{
+
+		font-size: 16px;
+
 	}
 
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
 
-	.contenido-modal{
-		width: 70%;
+	.modal-encabezado h5{
+
+		font-size: 16px;
+
+	}		
+
+	.btn-modal span{
+
+		font-size: 14px;
+
 	}
 
-	.textos{
-		padding: 50px;
+}
+
+@media screen and (max-width: 480px){
+
+
+	.close{
+
+		font-size: 18px;
+	}
+
+	.modal-encabezado h5{
+
+		font-size: 14px;
+
+	}		
+
+	.btn-modal span{
+
+		font-size: 12px;
+
 	}
 
 }
