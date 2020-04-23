@@ -29,8 +29,12 @@ html {
 
 
 body {
+    position: relative;
     width: 1920px;
-    min-width: 320px;
+    min-width: 350px;
+    min-height: 100%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 18px;
 }
 
 a {
@@ -44,7 +48,8 @@ a {
 }
 
 #seccion-login{
-	width: 60%;
+	width: 50%;
+	min-width: 350px;
 }
 
 #usuario{
@@ -54,7 +59,7 @@ a {
 	float: left;
 	text-transform: uppercase;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 }
 
@@ -87,24 +92,20 @@ a {
 	background: var(--azul);
 	color: var(--blanco);
 	text-align: center;
-	font-size: 26px;
-	padding: 10px;
+	font-size: 24px;
+	padding: 20px;
 	text-transform: uppercase;
-	border: 2px solid var(--azul);
-	border-radius: 10px;
+	border-bottom: 3px solid var(--verde);
 }
 
 .cuerpo-seccion-loggin{
-	margin: 10px auto;
 	padding: 10px;
-	border: 2px solid var(--azul);
-	border-radius: 10px;
+	border: 1px solid var(--verde);
 }
 
 .contenedor-seccion-botones-inicio-sesion{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 2px solid var(--azul);
-	border-radius: 10px;
+	border: 1px solid var(--verde);
 }

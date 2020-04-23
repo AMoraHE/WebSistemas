@@ -87,8 +87,7 @@ Divisor*************************************************************************
     padding: 2%;
     /*margin: 10px auto;*/
     position: relative;
-    min-height: 60px;
-
+    min-height: 20px;
     display: flex;
     align-items: center;
 }
@@ -200,9 +199,9 @@ MENU**********************************************/
 }
 .contenedor-menu {
   width: 350px;  
-  height: 100%;
+  height: 100vh; /* Sin hay bugs cambiarlo a % */
   background: #1B396A;
-  padding: 30px 0px;
+  padding: 10px 0px;
   position: fixed;
   overflow: auto; /*Agrega un scroll si hay mas elementos dentro el MENU*/
 }
