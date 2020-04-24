@@ -865,6 +865,10 @@
 	margin-right: 10px;
 }
 
+.icono-derecha{
+	float: right;
+}
+
 .icono-pdf {
 	display: flex;
 	justify-content: center;

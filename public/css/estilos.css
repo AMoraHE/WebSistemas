@@ -187,6 +187,8 @@ BODY****************************************************************************
 /**************************************************
 MENU**********************************************/
 
+/********INI VERSIÓN MOVIL*************/
+
 .btn-menu {
     min-width: 350px;
     display:none;
@@ -194,6 +196,18 @@ MENU**********************************************/
     background: #1B396A;
     color: #fff;
 }
+
+.btn-movil{
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+/********FIN VERSIÓN MOVIL*************/
+
 .btn-menu .icono {
     float: right;
 }
@@ -343,8 +357,8 @@ Contenedor - Información - 1366px**********************************************
 Menu - 1366px*************************************************************/
 
     .contenedor-menu {
-        width: 300px;
-        font-size: 14px;
+            width: 300px;
+            font-size: 14px;
         }
 
 /*******************Boton Cerrar Sesión en el Menu******************************/
@@ -400,8 +414,8 @@ Contenedor - Información - 1150px**********************************************
 Menu - 1150px*************************************************************/
 
     .contenedor-menu {
-        width: 250px;
-        font-size: 12px;
+            width: 250px;
+            font-size: 12px;
         }
 
 /*******************Boton Cerrar Sesión en el Menu******************************/
@@ -458,7 +472,7 @@ Menu - 768px and 1024px*********************************************************
     .contenedor-menu {
         width: 250px;
         font-size: 12px;
-        }
+    }
 
 /*******************Boton Cerrar Sesión en el Menu******************************/
 
@@ -520,7 +534,7 @@ Menu - 767px*************************************************************/
     .contenedor-menu {
         width: 200px;
         font-size: 10px;
-        }
+    }
 
 /*******************Boton Cerrar Sesión en el Menu******************************/
 
@@ -571,8 +585,8 @@ Usuario - 600px*****************************************/
 Encabezado - 600px*******************************************************/
 
     .contenedor-txt h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
     }
 
 /*************************************************************************
@@ -587,30 +601,58 @@ Contenedor - Información - 600px***********************************************
 /*************************************************************************
 Menu - 600px*************************************************************/
 
-    .contenedor-menu {
+    .btn-movil{
+        z-index: 1000;
+        top: 0;
+        position: fixed;
         width: 100%;
         min-width: 350px;
-        height: auto;
-        /*position: fixed;*/
-        position: absolute;
-        top: 0;
-        z-index: 1000;
-        margin-top: 0px;
-        padding: 0px;
-    }
-    
-    .btn-menu {
-        display: block;
+        display:block;
+        height: 50px;
+        padding: 20px;
+        background: #1B396A;
+        color: #fff;
+        font-size: 10px;
     }
 
-    .contenedor-menu .menu {
+    #check{
         display: none;
     }
 
-    .contenedor-menu ul {
+    #check:checked ~ .contenedor-menu{
+        width: 350px;
+    }
+
+
+    .contenedor-menu {
+        top: 50px;
+        width: 0;
+        height: 100vh;
+        position: fixed;
+        z-index: 1000;
+        margin-top: 0px;
+        padding: 0px;
+
+        transition: all 500ms cubic-bezier(1,0,0,1);
+        transition-timing-function: cubic-bezier(1,0,0,1);
+        overflow: auto;
+        opacity: .8;
+    }
+    
+    .btn-menu {
+        display: none;
+    }
+
+    .contenedor-menu .menu {
+        display: block;
+        overflow: auto;
+        margin-bottom: 50px;
+    }
+
+  /*  .contenedor-menu ul {
         list-style: none;
         min-width: 350px;
-    }
+    } */
 
 
 /*************************************************************************
@@ -658,7 +700,7 @@ Encabezado - 320px and 480px****************************************************
 
     .contenedor-txt h1 {
     font-family: 'Roboto', sans-serif;
-    font-size: 10px;
+    font-size: 12px;
     }
 
 /*************************************************************************
@@ -673,29 +715,22 @@ Contenedor - Información - 320px and 480px*************************************
 /*************************************************************************
 Menu - 320px and 480px*************************************************************/
 
-    .contenedor-menu {
-        width: 100%;
-        min-width: 350px;
-        height: auto;
-        position: absolute;
-        top: 0;
-        z-index: 1000;
-        margin-top: 0px;
-        padding: 0px;
+    .btn-movil{
+        display: block;
     }
     
     .btn-menu {
-        display: block;
-    }
-
-    .contenedor-menu .menu {
         display: none;
     }
 
-    .contenedor-menu ul {
+    .contenedor-menu .menu {
+        display: block;
+    }
+
+ /*   .contenedor-menu ul {
         list-style: none;
         min-width: 350px;
-    }
+    } */
 
 
 /*************************************************************************
