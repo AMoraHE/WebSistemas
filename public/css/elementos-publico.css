@@ -963,6 +963,133 @@
 	width: 50%;
 }
 
+/************************************************************************************************SECCIÓN ORGANIGRAMA***********************************************************************/
+
+.contenedor-organigrama{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#titulo-organigrama{
+	background: rgba(27,57,106,0.8);
+	width: 230px;
+	color: #fff;
+	padding: 15px;
+	margin: 0px;
+
+}
+
+.organigrama p{
+	 font-family: 'Roboto', sans-serif;
+	 line-height: 20px;
+	 text-align: center;
+	 margin-top: 20px;
+
+}
+
+
+.contenedor-dir{
+display: inline-block;
+text-align: -webkit-center;
+text-align: -moz-center;
+}
+
+.contenedor-lab-doc{
+width: 100%;
+}
+
+.titulo-org1{
+display: inline-flex;
+text-align: center;
+list-style-type: none;
+padding: 0px 5px 0px 5px;
+position: relative;
+margin: 20px;
+}
+
+.titulo-org2{
+display: inline-flex;
+text-align: center;
+list-style-type: none;
+padding: 0px 5px 0px 5px;
+position: relative;
+margin-left: 31%;
+
+}
+
+.contenedor-lab{
+width: 50%;
+float: left;
+text-align: center;
+list-style-type: none;
+padding: 0px 5px 0px 5px;
+position: relative;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+
+}
+
+.contenedor-doc{
+width: 50%;
+float: right;
+text-align: center;
+list-style-type: none;
+padding: 0px 5px 0px 5px;
+position: relative;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+
+}
+
+.contenedor-doc a{
+
+
+}
+
+.contenedor-inf{
+width: 260px;
+text-align: center;
+list-style-type: none;
+padding: 0px 5px 0px 5px;
+position: relative;
+margin: 10px;
+}
+
+.contenedor-inf img{
+width: 100px;
+height: 100px;
+overflow: hidden;
+object-fit: cover;
+object-position: center;
+padding: 10px;
+}
+
+.contenedor-inf a{
+border: 3px solid #8cc63e;
+	padding: 0.5em 0.2em;
+	text-decoration: none;
+	color: #1B396A;
+	background: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	display: inline-block;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-transition: all 500ms;
+	-moz-transition: all 500ms;
+	transition: all 500ms;
+}
+
+.contenedor-inf a:hover{
+	border: 3px solid #1B396A;
+	background: #fff;
+	display: inline-block;
+  }
+
+
+
 /************************************************************************************************SECCIÓN BOTONES***********************************************************************/
 
 .contenedor-botones{
