@@ -29,8 +29,8 @@ $(document).ready(function(){
 		if ($(document).width() < 600){
 			$('.contenedor-menu .menu').css({'display' : 'block'});
 			/*$('.contenedor-menu .contenedor-usuario').css({'display' : 'none'});//Esconder Perfil de Usuario*/
-			$('.menu li ul').slideUp();
-			$('.menu li').removeClass('activado');
+			/*$('.menu li ul').slideUp();
+			$('.menu li').removeClass('activado');*/
 		}
 	});
 
