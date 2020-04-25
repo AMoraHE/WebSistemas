@@ -54,7 +54,7 @@
 
 		<div class="contenedor-botones">
 
-			<a class="msj" mesanje="Volver?" href="/admin"><button class="btn volver"><span>Volver</span></button></a>
+			<a class="msj" mesanje="volver al inicio?" href="/admin"><button class="btn volver"><span>Volver</span></button></a>
 
 		</div>
 

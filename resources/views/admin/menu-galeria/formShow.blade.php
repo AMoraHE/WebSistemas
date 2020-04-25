@@ -45,7 +45,7 @@
 
 				           	<div class="contenedor-img-mini-galeria-button">
 
-					        	<a class="msj" mesanje="eliminar esta imagen?" href="/Album-Galeria-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
+					        	<a class="msj" mesanje="eliminar esta imagen?" href="/Album-Galeria-Delete/{{$imagen->id}}"><button class="btn eliminar centrado"><span>Eliminar</span></button></a>
 					        	
 					        </div> 
 

@@ -776,6 +776,10 @@
 	margin-left: 0;
 }
 
+.m-derecha{
+	margin-right: 10px;
+}
+
 /****BOTONES BUSCADOR****/
 
 .btn-buscar {

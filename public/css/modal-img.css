@@ -156,3 +156,12 @@
 x:-o-prefocus, .modal-img img {
     height: 100%;
 }
+
+@media screen and (max-width: 600px) {
+
+	.modal-img:target {
+
+		padding: 80px 25px 30px 25px;
+	}
+
+}

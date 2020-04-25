@@ -37,7 +37,7 @@
 
 		<div class="contenedor-botones">
 
-			<a class="msj" mesanje="editar los slider?" href="/slider"><button class="btn editar"><span>Editar</span></button></a>
+			<a class="msj" mesanje="editar los slider?" href="/slider"><button class="btn editar m-derecha"><span>Editar</span></button></a>
 
 		</div>
 

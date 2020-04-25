@@ -63,7 +63,7 @@
 
 	<div class="contenedor-botones">
 
-		<a class="msj" mesanje="volver?" href="{{route('CampoLaboralIndex')}}"><button class="btn volver"><span>Volver</span></button></a>
+		<a class="msj" mesanje="volver a la vista campo laboral?" href="{{route('CampoLaboralIndex')}}"><button class="btn volver"><span>Volver</span></button></a>
 
 	</div>
 		

@@ -61,13 +61,13 @@
 
 
 							@if($infra->slug == 'cisco')
-							<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Cisco-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
+							<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Cisco-Delete/{{$imagen->id}}"><button class="btn eliminar centrado"><span>Eliminar</span></button></a>
 							@elseif($infra->slug == 'celula')
-							<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Celula-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
+							<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Celula-Delete/{{$imagen->id}}"><button class="btn eliminar centrado"><span>Eliminar</span></button></a>
 							@elseif($infra->slug == 'sistemas')
-							<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Sistemas-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
+							<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Sistemas-Delete/{{$imagen->id}}"><button class="btn eliminar centrado"><span>Eliminar</span></button></a>
 							@elseif($infra->slug == 'micro')
-							<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Micro-Delete/{{$imagen->id}}"><button class="btn eliminar"><span>Eliminar</span></button></a>
+							<a class="msj" mesanje="eliminar esta imagen?" href="/Lab-Micro-Delete/{{$imagen->id}}"><button class="btn eliminar centrado"><span>Eliminar</span></button></a>
 							@endif
 
 						</div>

@@ -61,7 +61,7 @@
 
 	<div class="contenedor-botones">
 
-		<a class="msj" mesanje="volver?" href="{{route('perfil-egreso')}}"> <button class="btn volver"><span>Volver</span></button> </a>
+		<a class="msj" mesanje="volver a la vista perfil egreso?" href="{{route('perfil-egreso')}}"> <button class="btn volver"><span>Volver</span></button> </a>
 
 	</div>
 		
