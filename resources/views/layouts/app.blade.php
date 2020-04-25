@@ -38,7 +38,7 @@
 
                             <!-- Authentication Links -->
                             @guest
-                                    <a href="{{ route('login') }}"><button class="btn finalizar"><span>{{ __('Iniciar Sesión') }}</span></button></a>
+                                    <a href="{{ route('login') }}"><button class="btn finalizar m-derecha"><span>{{ __('Iniciar Sesión') }}</span></button></a>
                                     <a href="{{ route('register') }}"><button class="btn agregar"><span>{{ __('Registrarse') }}</span></button></a>
                             @else
 
@@ -54,7 +54,7 @@
                             </div>
 
                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                <button class="btn cancelar"><span>{{ __('Cerrar Sesión') }}</span></button>
+                                <button class="btn cancelar m-derecha"><span>{{ __('Cerrar Sesión') }}</span></button>
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST">
