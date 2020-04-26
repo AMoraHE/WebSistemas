@@ -36,7 +36,7 @@
 
 	<div class="formulario">
 
- 		<label>Tamaño de imagen recomendado minimo: 500px de ancho y 500px de alto - Peso de la Imagen menor a 1 Mb</label>
+ 		<label>Tamaño mínimo de la imagen recomendado: 500 x 500 pixeles. Tamaño máximo del archivo: 1MB.</label>
 
  	</div>
 
@@ -44,7 +44,7 @@
 
 		<div class="contenedor-txt-seccion">
 
-			<label>Cargar IMG</label>
+			<label>Seleccionar imagen</label>
 
 		</div>
 
@@ -64,7 +64,7 @@
 
 	</div>
 
-	<div id="info-img">No se Eligió Archivo</div>
+	<div id="info-img">No se eligió archivo</div>
 
 	@if ($errors->has('image'))
       <span class="invalid-feedback" role="alert">

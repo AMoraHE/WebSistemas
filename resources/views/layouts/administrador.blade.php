@@ -96,6 +96,8 @@
 			</div>
 
 			<ul class="menu">
+
+				<li><a href="/admin"><i class="icono izquierda fas fa-home"></i>Home</a></li>
 			
 				<!----------------------------------------------------------- MENU USUARIO ---------------------------------------------------------->
 
@@ -122,8 +124,6 @@
 				</li>
 
 				<!----------------------------------------------------------- MENU ---------------------------------------------------------->
-
-				<li><a href="/admin"><i class="icono izquierda fas fa-home"></i>Home</a></li>
 
 				<li><a href="{{route('slider')}}"><i class="icono izquierda fas fa-laptop-house"></i>Inicio<i class=" icono derecha fa fa-chevron-down"></i></a>
 					<ul>
