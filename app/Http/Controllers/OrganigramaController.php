@@ -61,10 +61,25 @@ class OrganigramaController extends Controller
             'nombre' => 'required|string',
             'genero_id' => 'required|string',
             'correo' => 'required|string|email',
+        ], [
+            'imgOrg.required' => 'Se requiere que seleccione un archivo en formato JPEG, PNG, BMP, TIFF, GIF',
+            'imgOrg.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
+            'imgOrg.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 512 KB',
+            'area_id.required' => 'Se requiere que seleccione el área del integrante',
+            'area_id.string' => 'El área seleccionada contiene caracteres no válidos',
+            'puesto.required' => 'Se requiere que ingrese el puesto del integrante',
+            'puesto.string' => 'El puesto ingresado contiene caracteres no válidos',
+            'nombre.required' => 'Se requiere que ingrese el nombre del integrante',
+            'nombre.string' => 'El nombre ingresado contiene caracteres no válidos',
+            'genero_id.required' => 'Se requiere que seleccione el género del integrante',
+            'genero_id.string' => 'El género ingresado contiene caracteres no válidos',
+            'correo.required' => 'Se requiere que ingrese el correo electrónico del integrante',
+            'correo.string' => 'El correo electrónico ingresado contiene caracteres no válidos',
+            'correo.email' => 'No ha ingresado una dirección de correo electrónico',
         ]);
 
         if ($validator->fails()) {
-            return redirect('/Agregar nuveo elemento')
+            return redirect('/Agregar nuevo elemento')
                         ->withErrors($validator)
                         ->withInput($request->all());
         }
@@ -134,6 +149,20 @@ class OrganigramaController extends Controller
             'integrante' => 'required|string',
             'genero_id' => 'required|string',
             'correo' => 'required|string|email',
+        ], [
+            'imgOrg.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
+            'imgOrg.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 512 KB',
+            'area_id.required' => 'Se requiere que seleccione el área del integrante',
+            'area_id.string' => 'El área seleccionada contiene caracteres no válidos',
+            'puesto.required' => 'Se requiere que ingrese el puesto del integrante',
+            'puesto.string' => 'El puesto ingresado contiene caracteres no válidos',
+            'nombre.required' => 'Se requiere que ingrese el nombre del integrante',
+            'nombre.string' => 'El nombre ingresado contiene caracteres no válidos',
+            'genero_id.required' => 'Se requiere que seleccione el género del integrante',
+            'genero_id.string' => 'El género ingresado contiene caracteres no válidos',
+            'correo.required' => 'Se requiere que ingrese el correo electrónico del integrante',
+            'correo.string' => 'El correo electrónico ingresado contiene caracteres no válidos',
+            'correo.email' => 'No ha ingresado una dirección de correo electrónico',
         ]);
 
         if ($validator->fails()) {

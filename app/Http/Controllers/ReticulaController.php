@@ -43,7 +43,19 @@ class ReticulaController extends Controller
             'programa' => 'required|string',
             'plan' => 'required|string',
             'especialidad' => 'required|string',
-            'doc' => 'required|mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel|max:2048',
+            'doc' => 'required|mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel|max:3072'
+        ], [
+            'titulo.required' => 'Se requiere que ingrese un título para la retícula',
+            'titulo.string' => 'El título ingresado contiene caracteres no válidos',
+            'programa.required' => 'Se requiere que ingrese el nombre del programa para la retícula',
+            'programa.string' => 'El nombre del programa contiene caracteres no válidos',
+            'plan.required' => 'Se requiere que ingrese el nombre del plan para la retícula',
+            'plan.string' => 'El nombre del plan contiene caracteres no válidos',
+            'especialidad.required' => 'Se requiere que ingrese el nombre de la especialidad para la retícula',
+            'especialidad.string' => 'El nombre de la especialidad contiene caracteres no válidos',
+            'doc.required' => 'Se requiere que seleccione un archivo en formato PDF, WORD, EXCEL, POWERPOINT',
+            'doc.mimetypes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: PDF, WORD, EXCEL, POWERPOINT',
+            'doc.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 3 MB (3072 KB)'
         ]);
 
         if ($validator->fails()) {
@@ -132,7 +144,18 @@ class ReticulaController extends Controller
             'programa' => 'required|string',
             'plan' => 'required|string',
             'especialidad' => 'required|string',
-            'doc' => 'mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel|max:2048',
+            'doc' => 'mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel|max:3072',
+        ], [
+            'titulo.required' => 'Se requiere que ingrese un título para la retícula',
+            'titulo.string' => 'El título ingresado contiene caracteres no válidos',
+            'programa.required' => 'Se requiere que ingrese el nombre del programa para la retícula',
+            'programa.string' => 'El nombre del programa contiene caracteres no válidos',
+            'plan.required' => 'Se requiere que ingrese el nombre del plan para la retícula',
+            'plan.string' => 'El nombre del plan contiene caracteres no válidos',
+            'especialidad.required' => 'Se requiere que ingrese el nombre de la especialidad para la retícula',
+            'especialidad.string' => 'El nombre de la especialidad contiene caracteres no válidos',
+            'doc.mimetypes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: PDF, WORD, EXCEL, POWERPOINT',
+            'doc.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 3 MB (3072 KB)'
         ]);
 
         if ($validator->fails()) {

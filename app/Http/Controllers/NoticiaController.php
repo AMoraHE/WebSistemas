@@ -17,7 +17,7 @@ class NoticiaController extends Controller
   */
   public function index()
  {
-    $noticias = Noticia::orderBy('id', 'desc')->paginate(10);
+    $noticias = Noticia::orderBy('id', 'desc')->paginate(5);
     return view('admin.menu-inicio.noticias.noticias', compact('noticias'));
   }
 
@@ -43,6 +43,14 @@ class NoticiaController extends Controller
     'titulo' => 'required|string',
     'image' => 'required|mimes:jpeg,png,bmp,tiff,gif|max:1024',
     'redaccion' => 'required|string',
+    ], [
+      'titulo.required' => 'Se requiere que ingrese el título de la noticia',
+      'titulo.string' => 'El título ingresado contiene caracteres no válidos',
+      'image.required' => 'Se requiere que seleccione un archivo en formato JPEG, PNG, BMP, TIFF, GIF',
+      'image.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
+      'image.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 1 MB (1024 KB)',
+      'redaccion.required' => 'Se requiere que redacte el contenido de la noticia',
+      'redaccion.string' => 'El texto redactado contiene caracteres no válidos',
     ]);
 
     if ($validator->fails()) {
@@ -107,6 +115,13 @@ class NoticiaController extends Controller
     'titulo' => 'required|string',
     'image' => 'mimes:jpeg,png,bmp,tiff,gif|max:1024',
     'redaccion' => 'required|string',
+    ], [
+      'titulo.required' => 'Se requiere que ingrese el título de la noticia',
+      'titulo.string' => 'El título ingresado contiene caracteres no válidos',
+      'image.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
+      'image.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 1 MB (1024 KB)',
+      'redaccion.required' => 'Se requiere que redacte el contenido de la noticia',
+      'redaccion.string' => 'El texto redactado contiene caracteres no válidos',
     ]);
 
     if ($validator->fails()) {
@@ -168,7 +183,7 @@ class NoticiaController extends Controller
     //////Eliminacion anual////////////////
   public function eliminaranual()
   {
-    $noticias = Noticia::orderBy('id', 'desc')->paginate(10);
+    $noticias = Noticia::orderBy('id', 'desc')->paginate(5);
     return view('admin.menu-inicio.noticias.eliminacion-anual',compact('noticias'));
   }
 

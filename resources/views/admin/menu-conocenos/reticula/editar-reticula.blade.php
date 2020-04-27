@@ -92,7 +92,7 @@
 
 		<div class="formulario">
 			
-			<label>Peso del documento menor a 2 Mb</label>
+			<label>Peso del documento menor a 3 Mb</label>
 
 		</div>
 
