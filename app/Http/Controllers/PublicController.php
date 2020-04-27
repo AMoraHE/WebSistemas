@@ -321,6 +321,15 @@ class PublicController extends Controller
       'remitente' => 'required|email',
       'nombre' => 'required|string',
       'mensaje' => 'required|string',
+      ], [
+        'destinatario.required' => 'Se requiere que indique la dirección de correo electrónico del destinatario',
+        'destinatario.email' => 'No ha ingresado una dirección de correo electrónico válida para el destinatario',
+        'remitente.required' => 'Se requiere que indique su dirección de correo electrónico',
+        'remitente.email' => 'No ha ingresado una dirección de correo electrónico válida',
+        'nombre.required' => 'Se requiere que ingrese su nombre',
+        'nombre.string' => 'El nombre ingresado contiene caracteres no válidos',
+        'mensaje.required' => 'Se requiere que ingrese el mensaje del correo',
+        'mensaje.string' => 'El mensaje ingresado contiene caracteres no válidos',
       ]);
 
       if ($validator->fails())
