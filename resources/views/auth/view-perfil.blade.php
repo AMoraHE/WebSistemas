@@ -20,7 +20,7 @@
 
 		<div class="contenedor-botones">
 			
-			<a class="msj" mesanje="editar perfil?" href="{{route('users.edit', $user)}}"><button class="btn editar"><span>Editar</span></button></a>
+			<a class="msj" mesanje="cambiar su contraseña?" href="{{route('users.edit', $user)}}"><button class="btn editar"><span>Cambiar contraseña</span></button></a>
 	
 		</div>
 

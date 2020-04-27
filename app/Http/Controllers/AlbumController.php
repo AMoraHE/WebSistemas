@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\DB;
 
 class AlbumController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -54,6 +59,14 @@ class AlbumController extends Controller
         'imgPrin' => 'required|mimes:jpeg,png,bmp,tiff,gif|max:1024',
         'descripcion' => 'required|string',
         'titulo' => 'required|string',
+        ], [
+            'imgPrin.required' => 'Se requiere que seleccione un archivo en formato JPEG, PNG, BMP, TIFF, GIF',
+            'imgPrin.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
+            'imgPrin.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 1 MB (1024 KB)',
+            'descripcion.required' => 'Se requiere que ingrese una descripción',
+            'descripción.string' => 'La descripción ingresada contiene caracteres no válidos',
+            'titulo.required' => 'Se requiere que ingrese un título',
+            'titulo.string' => 'El título ingresado contiene caracteres no válidos',
         ]);
 
         if ($validator->fails()) {
@@ -120,6 +133,13 @@ class AlbumController extends Controller
         'imgPrin' => 'mimes:jpeg,png,bmp,tiff,gif|max:1024',
         'descripcion' => 'required|string',
         'titulo' => 'required|string',
+        ], [
+            'imgPrin.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
+            'imgPrin.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 1 MB (1024 KB)',
+            'descripcion.required' => 'Se requiere que ingrese una descripción',
+            'descripción.string' => 'La descripción ingresada contiene caracteres no válidos',
+            'titulo.required' => 'Se requiere que ingrese un título',
+            'titulo.string' => 'El título ingresado contiene caracteres no válidos',
         ]);
 
         if ($validator->fails()) {

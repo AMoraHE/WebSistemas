@@ -9,6 +9,11 @@ use App\Http\Requests\StoreNoticiaRequest;
 
 class InicioController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *

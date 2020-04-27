@@ -97,7 +97,7 @@
 
                                 @if ($errors->has('validar'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>La contraseña de validación es incorrecta, solicite la contraseña al administrador</strong>
+                                        <strong>{{$errors->first('validar')}}</strong>
                                     </span>
                                 @endif
                         </div>

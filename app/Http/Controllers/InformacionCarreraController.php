@@ -4,9 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\informacion;
+use Validator;
 
 class InformacionCarreraController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -73,11 +79,27 @@ class InformacionCarreraController extends Controller
      */
     public function update(Request $request, informacion $informacion)
     {
-        $informacion->fill($request->all());
+        $validator = Validator::make($request->all(), [
+            'descripcion' => 'required|string',
+        ], [
+            'descripcion.required' => 'Se requiere que ingrese la descripción del elemento',
+            'descripcion.string' => 'La descripción ingresada contiene caracteres no válidos',
+        ]);
 
-        $informacion->save();
+        if ($validator->fails()) {
+            return redirect('/informacion/'.$informacion->slug.'/edit')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
+        }
 
-        return redirect()->route('informacion.index')->with('status','Actualización Exitosa');
+        else
+        {
+            $informacion->fill($request->all());
+
+            $informacion->save();
+
+            return redirect()->route('informacion.index')->with('status','Actualización Exitosa');
+        }
     }
 
     /**

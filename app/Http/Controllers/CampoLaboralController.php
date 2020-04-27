@@ -4,9 +4,15 @@ namespace App\Http\Controllers;
 
 use App\campo_laboral;
 use Illuminate\Http\Request;
+use Validator;
 
 class CampoLaboralController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -44,14 +50,34 @@ class CampoLaboralController extends Controller
      */
     public function store(Request $request)
     {
-        $campolaboral = new campo_laboral();
+        $validator = Validator::make($request->all(), [
+            'vineta' => 'required|string|max:2',
+            'elemento' => 'required|string',
+        ], [
+            'vineta.required' => 'Se requiere que ingrese la viñeta del elemento',
+            'vineta.string' => 'La viñeta ingresada contiene caracteres no válidos',
+            'vineta.max' => 'Las viñetas ingresads son demasiadas, se permite ingresar máximo 2',
+            'elemento.required' => 'Se requiere que ingrese la descripción del elemento',
+            'elemento.string' => 'La descripción ingresada contiene caracteres no válidos',
+        ]);
 
-        $campolaboral->vineta = $request->input('vineta');
-        $campolaboral->elemento = $request->input('elemento');
-        $campolaboral->slug = time();
-        $campolaboral->save();
+        if ($validator->fails()) {
+            return redirect('/Campo-Laboral-Crear')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
+        }
 
-        return redirect()->route('CampoLaboralLista')->with('status','Registro Exitoso');
+        else
+        {
+            $campolaboral = new campo_laboral();
+
+            $campolaboral->vineta = $request->input('vineta');
+            $campolaboral->elemento = $request->input('elemento');
+            $campolaboral->slug = time();
+            $campolaboral->save();
+
+            return redirect()->route('CampoLaboralLista')->with('status','Registro Exitoso');
+        }
     }
 
     /**
@@ -89,14 +115,34 @@ class CampoLaboralController extends Controller
      */
     public function update(Request $request, $slug)
     {
-        $campolaboral = campo_laboral::where('slug', '=', $slug)->firstOrFail();
+        $validator = Validator::make($request->all(), [
+            'vineta' => 'required|string|max:2',
+            'elemento' => 'required|string',
+        ], [
+            'vineta.required' => 'Se requiere que ingrese la viñeta del elemento',
+            'vineta.string' => 'La viñeta ingresada contiene caracteres no válidos',
+            'vineta.max' => 'Las viñetas ingresads son demasiadas, se permite ingresar máximo 2',
+            'elemento.required' => 'Se requiere que ingrese la descripción del elemento',
+            'elemento.string' => 'La descripción ingresada contiene caracteres no válidos',
+        ]);
 
-        $campolaboral->vineta = $request->input('vineta');
-        $campolaboral->elemento = $request->input('elemento');
-        $campolaboral->slug = time();
-        $campolaboral->save();
+        if ($validator->fails()) {
+            return redirect('/CampoLaboral/'.$slug.'/edit')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
+        }
 
-        return redirect()->route('CampoLaboralLista')->with('status','Actualización Exitosa');
+        else
+        {
+            $campolaboral = campo_laboral::where('slug', '=', $slug)->firstOrFail();
+
+            $campolaboral->vineta = $request->input('vineta');
+            $campolaboral->elemento = $request->input('elemento');
+            $campolaboral->slug = time();
+            $campolaboral->save();
+
+            return redirect()->route('CampoLaboralLista')->with('status','Actualización Exitosa');
+        }
     }
 
     /**

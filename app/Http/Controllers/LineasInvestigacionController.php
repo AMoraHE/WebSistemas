@@ -4,9 +4,15 @@ namespace App\Http\Controllers;
 
 use App\lineas_investigacion;
 use Illuminate\Http\Request;
+use Validator;
 
 class LineasInvestigacionController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -37,15 +43,37 @@ class LineasInvestigacionController extends Controller
      */
     public function store(Request $request)
     {
-        $lineainvestigacion = new lineas_investigacion();
+        $validator = Validator::make($request->all(), [
+            'programa' => 'required|string',
+            'linea' => 'required|string',
+            'clave' => 'required|string',
+        ], [
+            'programa.required' => 'Se requiere que ingrese el nombre del programa para la LI',
+            'programa.string' => 'El nombre del programa ingresado contiene caracteres no válidos',
+            'linea.required' => 'Se requiere que ingrese el nombre de la LI',
+            'linea.string' => 'El nombre de la LI ingresado contiene caracteres no válidos',
+            'clave.required' => 'Se requiere que ingrese la clave de la LI',
+            'clave.string' => 'La clave de la LI ingresada contiene caracteres no válidos',
+        ]);
 
-        $lineainvestigacion->programa = $request->input('programa');
-        $lineainvestigacion->linea = $request->input('linea');
-        $lineainvestigacion->clave = $request->input('clave');
-        $lineainvestigacion->slug = time();
-        $lineainvestigacion->save();
+        if ($validator->fails()) {
+            return redirect('/CrearLineaInvestigacion')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
+        }
 
-        return redirect()->route('LineasInvestigacion')->with('status','Registro Exitoso');
+        else
+        {
+            $lineainvestigacion = new lineas_investigacion();
+
+            $lineainvestigacion->programa = $request->input('programa');
+            $lineainvestigacion->linea = $request->input('linea');
+            $lineainvestigacion->clave = $request->input('clave');
+            $lineainvestigacion->slug = time();
+            $lineainvestigacion->save();
+
+            return redirect()->route('LineasInvestigacion')->with('status','Registro Exitoso');
+        }
     }
 
     /**
@@ -83,14 +111,36 @@ class LineasInvestigacionController extends Controller
      */
     public function update(Request $request, $slug)
     {
-        $lineainvestigacion = lineas_investigacion::where('slug', '=', $slug)->firstOrFail();
+        $validator = Validator::make($request->all(), [
+            'programa' => 'required|string',
+            'linea' => 'required|string',
+            'clave' => 'required|string',
+        ], [
+            'programa.required' => 'Se requiere que ingrese el nombre del programa para la LI',
+            'programa.string' => 'El nombre del programa ingresado contiene caracteres no válidos',
+            'linea.required' => 'Se requiere que ingrese el nombre de la LI',
+            'linea.string' => 'El nombre de la LI ingresado contiene caracteres no válidos',
+            'clave.required' => 'Se requiere que ingrese la clave de la LI',
+            'clave.string' => 'La clave de la LI ingresada contiene caracteres no válidos',
+        ]);
 
-        $lineainvestigacion->programa = $request->input('programa');
-        $lineainvestigacion->linea = $request->input('linea');
-        $lineainvestigacion->clave = $request->input('clave');
-        $lineainvestigacion->save();
+        if ($validator->fails()) {
+            return redirect('/Lineas-Investigacion/'.$slug.'/edit')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
+        }
 
-        return redirect()->route('LineasInvestigacion')->with('status','Actualización Exitosa');
+        else
+        {
+            $lineainvestigacion = lineas_investigacion::where('slug', '=', $slug)->firstOrFail();
+
+            $lineainvestigacion->programa = $request->input('programa');
+            $lineainvestigacion->linea = $request->input('linea');
+            $lineainvestigacion->clave = $request->input('clave');
+            $lineainvestigacion->save();
+
+            return redirect()->route('LineasInvestigacion')->with('status','Actualización Exitosa');
+        }
     }
 
     /**

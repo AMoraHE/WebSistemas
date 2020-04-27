@@ -4,10 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CuerposAcademico;
+use Validator;
 
 
 class CuerposAcademicosController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -37,16 +43,44 @@ class CuerposAcademicosController extends Controller
      */
     public function store(Request $request)
     {
-        $cuerpo = new CuerposAcademico;
-        $cuerpo->nombre = $request->input('nombre');
-        $cuerpo->grado = $request->input('grado');
-        $cuerpo->idCA = $request->input('idCA');
-        $cuerpo->clave = $request->input('clave');
-        $cuerpo->integrantes = $request->input('integrantes');
-        $cuerpo->slug = time().$request->input('nombre');
-        $cuerpo->save();
+        $validator = Validator::make($request->all(), [
+            'nombre' => 'required|string',
+            'grado' => 'required|string',
+            'idCA' => 'required|string',
+            'clave' => 'required|string',
+            'integrantes' => 'required|string',
+        ], [
+            'nombre.required' => 'Se requiere que ingrese el nombre del CA',
+            'nombre.string' => 'El nombre del CA ingresado contiene caracteres no válidos',
+            'grado.required' => 'Se requiere que ingrese el grado del CA',
+            'grado.string' => 'El grado del CA ingresado contiene caracteres no válidos',
+            'idCA.required' => 'Se requiere que ingrese la ID del CA',
+            'idCA.string' => 'El ID del CA ingresado contiene caracteres no válidos',
+            'clave.required' => 'Se requiere que ingrese la clave del CA',
+            'clave.string' => 'La clave del CA ingresada contiene caracteres no válidos',
+            'integrantes.required' => 'Se requiere que ingrese los integrantes del CA',
+            'integrantes.string' => 'Los integrantes del CA ingresados contienen caracteres no válidos',
+        ]);
 
-        return redirect()->route('CuerposAcademicos.index')->with('status','Inserción Exitosa');
+        if ($validator->fails()) {
+            return redirect('/CuerposAcademicos/create')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
+        }
+
+        else
+        {
+            $cuerpo = new CuerposAcademico;
+            $cuerpo->nombre = $request->input('nombre');
+            $cuerpo->grado = $request->input('grado');
+            $cuerpo->idCA = $request->input('idCA');
+            $cuerpo->clave = $request->input('clave');
+            $cuerpo->integrantes = $request->input('integrantes');
+            $cuerpo->slug = time().$request->input('nombre');
+            $cuerpo->save();
+
+            return redirect()->route('CuerposAcademicos.index')->with('status','Inserción Exitosa');
+        }
     }
 
     /**
@@ -82,12 +116,39 @@ class CuerposAcademicosController extends Controller
      */
     public function update(Request $request, $slug)
     {
-        $CuerposAcademico = CuerposAcademico::where('slug', '=', $slug)->firstOrFail();
-        $CuerposAcademico->fill($request->all());
-        $CuerposAcademico->save();
+        $validator = Validator::make($request->all(), [
+            'nombre' => 'required|string',
+            'grado' => 'required|string',
+            'idCA' => 'required|string',
+            'clave' => 'required|string',
+            'integrantes' => 'required|string',
+        ], [
+            'nombre.required' => 'Se requiere que ingrese el nombre del CA',
+            'nombre.string' => 'El nombre del CA ingresado contiene caracteres no válidos',
+            'grado.required' => 'Se requiere que ingrese el grado del CA',
+            'grado.string' => 'El grado del CA ingresado contiene caracteres no válidos',
+            'idCA.required' => 'Se requiere que ingrese la ID del CA',
+            'idCA.string' => 'El ID del CA ingresado contiene caracteres no válidos',
+            'clave.required' => 'Se requiere que ingrese la clave del CA',
+            'clave.string' => 'La clave del CA ingresada contiene caracteres no válidos',
+            'integrantes.required' => 'Se requiere que ingrese los integrantes del CA',
+            'integrantes.string' => 'Los integrantes del CA ingresados contienen caracteres no válidos',
+        ]);
 
-        return redirect()->route('CuerposAcademicos.index')->with('status','Actualización Exitosa');
-        //return $request;
+        if ($validator->fails()) {
+            return redirect('/CuerposAcademicos/'.$slug.'/edit')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
+        }
+
+        else
+        {
+            $CuerposAcademico = CuerposAcademico::where('slug', '=', $slug)->firstOrFail();
+            $CuerposAcademico->fill($request->all());
+            $CuerposAcademico->save();
+
+            return redirect()->route('CuerposAcademicos.index')->with('status','Actualización Exitosa');
+        }
     }
 
     /**

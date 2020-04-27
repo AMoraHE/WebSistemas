@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\DB;
 
 class LabSistemasController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -50,6 +55,21 @@ class LabSistemasController extends Controller
         'responsable' => 'required|string',
         'correo' => 'required|string|email',
         'slug' => 'required|string',
+        ], [
+            'imgInicio.required' => 'Se requiere que seleccione un archivo en formato JPEG, PNG, BMP, TIFF, GIF',
+            'imgInicio.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
+            'imgInicio.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 1 MB (1024 KB)',
+            'nombre.required' => 'Se requiere que ingrese el nombre del laboratorio',
+            'nombre.string' => 'El nombre ingresado contiene caracteres no válidos',
+            'descripcion.required' => 'Se requiere que ingrese una descripción',
+            'descripción.string' => 'La descripción ingresada contiene caracteres no válidos',
+            'responsable.required' => 'Se requiere que ingrese el responsable del laboratorio',
+            'responsable.string' => 'El responsable ingresado contiene caracteres no válidos',
+            'correo.required' => 'Se requiere que ingrese el correo electrónico del responsable',
+            'correo.string' => 'El correo electrónico ingresado contiene caracteres no válidos',
+            'correo.email' => 'No ha ingresado una dirección de correo electrónico',
+            'slug.required' => 'El identificador no debe estar vacío, regrese al menú anterior y reintente',
+            'slug.string' => 'El identificador contiene caracteres no válidos, regrese al menú anterior y reintente',
         ]);
 
         if ($validator->fails()) {
@@ -120,6 +140,18 @@ class LabSistemasController extends Controller
         'descripcion' => 'required|string',
         'responsable' => 'required|string',
         'correo' => 'required|string|email',
+        ], [
+            'imgInicio.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
+            'imgInicio.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 1 MB (1024 KB)',
+            'nombre.required' => 'Se requiere que ingrese el nombre del laboratorio',
+            'nombre.string' => 'El nombre ingresado contiene caracteres no válidos',
+            'descripcion.required' => 'Se requiere que ingrese una descripción',
+            'descripción.string' => 'La descripción ingresada contiene caracteres no válidos',
+            'responsable.required' => 'Se requiere que ingrese el responsable del laboratorio',
+            'responsable.string' => 'El responsable ingresado contiene caracteres no válidos',
+            'correo.required' => 'Se requiere que ingrese el correo electrónico del responsable',
+            'correo.string' => 'El correo electrónico ingresado contiene caracteres no válidos',
+            'correo.email' => 'No ha ingresado una dirección de correo electrónico',
         ]);
 
         if ($validator->fails()) {

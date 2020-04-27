@@ -9,6 +9,11 @@ use App\imagenLab;
 
 class ImagenMicroController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -41,6 +46,10 @@ class ImagenMicroController extends Controller
     {
         $validator = Validator::make($request->all(), [
         'image' => 'required|mimes:jpeg,png,bmp,tiff,gif|max:512',
+        ], [
+            'image.required' => 'Se requiere que seleccione un archivo en formato JPEG, PNG, BMP, TIFF, GIF',
+            'image.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
+            'image.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 512 KB',
         ]);
 
         if ($validator->fails()) {

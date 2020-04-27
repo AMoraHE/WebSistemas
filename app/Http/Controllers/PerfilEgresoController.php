@@ -4,9 +4,15 @@ namespace App\Http\Controllers;
 
 use App\perfil_egreso;
 use Illuminate\Http\Request;
+use Validator;
 
 class PerfilEgresoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -45,13 +51,33 @@ class PerfilEgresoController extends Controller
      */
     public function store(Request $request)
     {
-        $perfilegreso = new perfil_egreso();
-        $perfilegreso->vineta = $request->input('vineta');
-        $perfilegreso->elemento = $request->input('elemento');
-        $perfilegreso->slug = time();
-        $perfilegreso->save();
+        $validator = Validator::make($request->all(), [
+            'vineta' => 'required|string|max:2',
+            'elemento' => 'required|string',
+        ], [
+            'vineta.required' => 'Se requiere que ingrese la viñeta del elemento',
+            'vineta.string' => 'La viñeta ingresada contiene caracteres no válidos',
+            'vineta.max' => 'Las viñetas ingresads son demasiadas, se permite ingresar máximo 2',
+            'elemento.required' => 'Se requiere que ingrese la descripción del elemento',
+            'elemento.string' => 'La descripción ingresada contiene caracteres no válidos',
+        ]);
 
-        return redirect()->route('editar-perfil-egreso')->with('status','Registro Exitoso');
+        if ($validator->fails()) {
+            return redirect('/Perfil-Egreso-Crear')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
+        }
+
+        else
+        {
+            $perfilegreso = new perfil_egreso();
+            $perfilegreso->vineta = $request->input('vineta');
+            $perfilegreso->elemento = $request->input('elemento');
+            $perfilegreso->slug = time();
+            $perfilegreso->save();
+
+            return redirect()->route('editar-perfil-egreso')->with('status','Registro Exitoso');
+        }
     }
 
     /**
@@ -89,13 +115,33 @@ class PerfilEgresoController extends Controller
      */
     public function update(Request $request, $slug)
     {
-        $perfilegreso = perfil_egreso::where('slug', '=', $slug)->firstOrFail();
-        $perfilegreso->vineta = $request->input('vineta');
-        $perfilegreso->elemento = $request->input('elemento');
-        $perfilegreso->slug = time();
-        $perfilegreso->save();
+        $validator = Validator::make($request->all(), [
+            'vineta' => 'required|string|max:2',
+            'elemento' => 'required|string',
+        ], [
+            'vineta.required' => 'Se requiere que ingrese la viñeta del elemento',
+            'vineta.string' => 'La viñeta ingresada contiene caracteres no válidos',
+            'vineta.max' => 'Las viñetas ingresads son demasiadas, se permite ingresar máximo 2',
+            'elemento.required' => 'Se requiere que ingrese la descripción del elemento',
+            'elemento.string' => 'La descripción ingresada contiene caracteres no válidos',
+        ]);
 
-        return redirect()->route('editar-perfil-egreso')->with('status','Actualización Exitosa');
+        if ($validator->fails()) {
+            return redirect('/PerfilEgreso/'.$slug.'/edit')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
+        }
+
+        else
+        {
+            $perfilegreso = perfil_egreso::where('slug', '=', $slug)->firstOrFail();
+            $perfilegreso->vineta = $request->input('vineta');
+            $perfilegreso->elemento = $request->input('elemento');
+            $perfilegreso->slug = time();
+            $perfilegreso->save();
+
+            return redirect()->route('editar-perfil-egreso')->with('status','Actualización Exitosa');
+        }
     }
 
     /**

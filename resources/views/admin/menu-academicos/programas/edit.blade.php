@@ -55,17 +55,17 @@
         <input  class="fecha" data-date-format="l j, F, Y" id="FInicio" name="FInicio" value="{{$programas->FInicio}}" required/>
         @endif
 
-        @if ($errors->has('FInicio'))
-
-              <span class="invalid-feedback" role="alert">
-
-                <strong>{{ $errors->first('FInicio') }}</strong>
-
-              </span>
-
-          @endif
-
       </div>
+
+      @if ($errors->has('FInicio'))
+
+        <span class="invalid-feedback" role="alert">
+
+          <strong>{{ $errors->first('FInicio') }}</strong>
+
+        </span>
+
+      @endif
 
     </div>
 
@@ -82,17 +82,17 @@
         <input  class="fecha" data-date-format="l j, F, Y" id="FFin" name="FFin" value="{{$programas->FFin}}" required/>
         @endif
 
-        @if ($errors->has('FFin'))
-
-              <span class="invalid-feedback" role="alert">
-
-                <strong>{{ $errors->first('FFin') }}</strong>
-
-              </span>
-
-          @endif
-
       </div>
+
+      @if ($errors->has('FFin'))
+
+        <span class="invalid-feedback" role="alert">
+
+          <strong>{{ $errors->first('FFin') }}</strong>
+
+        </span>
+
+      @endif
 
     </div>
 
@@ -125,7 +125,7 @@
 
     <div class="formulario">
       
-      <label>Peso del documento menor a 2 Mb</label>
+      <label>Peso del documento menor a 3 Mb</label>
 
     </div> 
 

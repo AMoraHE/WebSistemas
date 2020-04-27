@@ -23,14 +23,34 @@
 		<div class="formulario"> 
 		      
 		    <label>Viñeta</label>
+		    @if ($errors->any())
+		    <input type="text" maxlength="2" name="vineta" id ="viñeta" value="{{old('vineta')}}" placeholder="Máximo 2 viñetas: 1-@-*-3-." class="form-control" required>
+		    @else
 		    <input type="text" maxlength="2" name="vineta" id ="viñeta" value="{{$perfilingreso->vineta}}" placeholder="Máximo 2 viñetas: 1-@-*-3-." class="form-control" required>
+		    @endif
 		
 		</div>
 
+		@if ($errors->has('vineta'))
+	      <span class="invalid-feedback" role="alert">
+	          <strong>{{ $errors->first('vineta') }}</strong>
+	      </span>
+	    @endif
+
 		<div class="formulario"> 
 		    <label>Información</label>
+		    @if ($errors->any())
+		    <textarea type="text" name="elemento" id ="informacion-perfil" placeholder="Ingrese Información Deseada" class="form-control" required>{{old('elemento')}}</textarea>
+		    @else
 		    <textarea type="text" name="elemento" id ="informacion-perfil" placeholder="Ingrese Información Deseada" class="form-control" required>{{$perfilingreso->elemento}}</textarea>
+		    @endif
 		</div>
+
+		@if ($errors->has('elemento'))
+	      <span class="invalid-feedback" role="alert">
+	          <strong>{{ $errors->first('elemento') }}</strong>
+	      </span>
+	    @endif
 
 <!--------------------------------------------------------------- BOTONES CREAR SECCION CONOCENOS PERFIL ----------------------------------------------------------> 
 

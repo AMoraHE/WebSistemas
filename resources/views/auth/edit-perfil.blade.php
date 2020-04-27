@@ -61,7 +61,11 @@
 		    <div class="formulario"> 
 		      
 		          <label for="">Usuario</label>
+		          @if ($errors->any())
+		          <input type="text" name="name" id ="nombre" value="{{old('name')}}" placeholder="Ingrese su nombre" class="form-control">
+		          @else
 		          <input type="text" name="name" id ="nombre" value="{{$user->name}}" placeholder="Ingrese su nombre" class="form-control">
+		          @endif
 		    </div>
 
 		    <div class="formulario">
@@ -74,7 +78,11 @@
 
 		    <div class="formulario"> 
 		          <label for="">Correo electrónico</label>
+		          @if ($errors->any())
+		          <input type="email" name="email" id ="correo" value="{{old('email')}}" placeholder="Ingrese su correo electrónico" class="form-control" required>
+		          @else
 		          <input type="email" name="email" id ="correo" value="{{$user->email}}" placeholder="Ingrese su correo electrónico" class="form-control" required>
+		          @endif
 		    </div>
 
 		    <div class="formulario">

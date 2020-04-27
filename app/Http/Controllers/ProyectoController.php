@@ -10,6 +10,11 @@ use App\ProyectoGaleria;
 
 class ProyectoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -56,7 +61,17 @@ class ProyectoController extends Controller
     'proyecto' => 'required|string',
     'desarrolladores' => 'required|string',
     'descripcion' => 'required|string', 
-    ]);
+    ], [
+            'imagen.required' => 'Se requiere que seleccione un archivo en formato JPEG, PNG, BMP, TIFF, GIF',
+            'imagen.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
+            'imagen.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 1 MB (1024 KB)',
+            'proyecto.required' => 'Se requiere que ingrese el nombre del proyecto',
+            'proyecto.string' => 'El nombre ingresado contiene caracteres no válidos',
+            'desarrolladores.required' => 'Se requiere que ingrese los nombres de los integrantes',
+            'desarrolladores.string' => 'Los nombres ingresados contienen caracteres no válidos',
+            'descripcion.required' => 'Se requiere que ingrese la descripción del proyecto',
+            'descripcion.string' => 'La descripción ingresada contiene caracteres no válidos',
+        ]);
 
     if ($validator->fails()) {
         return redirect('/ProyectosAcademicos/create')
@@ -124,7 +139,16 @@ class ProyectoController extends Controller
     'desarrolladores' => 'required|string',
     'descripcion' => 'required|string',
    
-    ]);
+    ], [
+            'image.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
+            'image.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 1 MB (1024 KB)',
+            'proyecto.required' => 'Se requiere que ingrese el nombre del proyecto',
+            'proyecto.string' => 'El nombre ingresado contiene caracteres no válidos',
+            'desarrolladores.required' => 'Se requiere que ingrese los nombres de los integrantes',
+            'desarrolladores.string' => 'Los nombres ingresados contienen caracteres no válidos',
+            'descripcion.required' => 'Se requiere que ingrese la descripción del proyecto',
+            'descripcion.string' => 'La descripción ingresada contiene caracteres no válidos',
+        ]);
 
     if ($validator->fails()) {
         return redirect('/ProyectosAcademicos/'.$proyectos.'/edit')

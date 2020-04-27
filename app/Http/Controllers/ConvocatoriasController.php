@@ -8,6 +8,11 @@ use App\Convocatoria;
 
 class ConvocatoriasController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
   /**
    * Display a listing of the resource.
    *
@@ -39,11 +44,23 @@ class ConvocatoriasController extends Controller
   {
       $validator = Validator::make($request->all(), [
 
-  'doc' => 'required|mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel|max:2048',
+  'doc' => 'required|mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel|max:3072',
   'convocatoria' => 'required|string',
   'descripcion' => 'required|string',
   'FInicio' => 'required|string',
   'FFin' => 'required|string',
+  ], [
+    'doc.required' => 'Se requiere que seleccione un archivo en formato PDF, WORD, EXCEL, POWERPOINT',
+    'doc.mimetypes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: PDF, WORD, EXCEL, POWERPOINT',
+    'doc.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 3 MB (3072 KB)',
+    'convocatoria.required' => 'Se requiere que ingrese un nombre',
+    'convocatoria.string' => 'El nombre ingresado contiene caracteres no válidos',
+    'descripcion.required' => 'Se requiere que ingrese una descripcion',
+    'descripcion.string' => 'La descripcion ingresada contiene caracteres no válidos',
+    'FInicio.required' => 'Se requiere que indique la fecha de inicio',
+    'FInicio.string' => 'La fecha de inicio contiene caracteres no válidos',
+    'FFin.required' => 'Se requiere que indique la fecha de finalización',
+    'FFin.string' => 'La fecha de finalización contiene caracteres no válidos',
   ]);
 
   if ($validator->fails()) {
@@ -128,12 +145,23 @@ class ConvocatoriasController extends Controller
   public function update(Request $request, $convocatorias)
   {
     $validator = Validator::make($request->all(), [
-    'doc' => 'mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel|max:2048',
+    'doc' => 'mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel|max:3072',
     'convocatoria' => 'required|string',
     'descripcion' => 'required|string',
     'FInicio' => 'required|string',
     'FFin' => 'required|string',
-    ]);
+    ], [
+    'doc.mimetypes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: PDF, WORD, EXCEL, POWERPOINT',
+    'doc.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 3 MB (3072 KB)',
+    'convocatoria.required' => 'Se requiere que ingrese un nombre',
+    'convocatoria.string' => 'El nombre ingresado contiene caracteres no válidos',
+    'descripcion.required' => 'Se requiere que ingrese una descripcion',
+    'descripcion.string' => 'La descripcion ingresada contiene caracteres no válidos',
+    'FInicio.required' => 'Se requiere que indique la fecha de inicio',
+    'FInicio.string' => 'La fecha de inicio contiene caracteres no válidos',
+    'FFin.required' => 'Se requiere que indique la fecha de finalización',
+    'FFin.string' => 'La fecha de finalización contiene caracteres no válidos',
+  ]);
         
   if ($validator->fails()) {
       return redirect('/ConvocatoriasAcademicos/'.$convocatorias.'/edit')

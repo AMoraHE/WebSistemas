@@ -8,6 +8,11 @@ use Validator;
 
 class ProyectoGaleriaController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -40,6 +45,12 @@ class ProyectoGaleriaController extends Controller
         $validator = Validator::make($request->all(), [
         'imagen' => 'required|mimes:jpeg,png,bmp,tiff,gif|max:512',
         'slug' => 'required|string',
+        ], [
+            'imagen.required' => 'Se requiere que seleccione un archivo en formato JPEG, PNG, BMP, TIFF, GIF',
+            'imagen.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
+            'imagen.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 512 KB',
+            'slug.required' => 'El identificador no debe estar vacío, regrese al menú anterior y reintente',
+            'slug.string' => 'El identificador contiene caracteres no válidos, regrese al menú anterior y reintente',
         ]);
 
         if ($validator->fails()) {

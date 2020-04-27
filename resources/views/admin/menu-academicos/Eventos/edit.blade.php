@@ -52,13 +52,13 @@
 
 		      	</div>
 
-		 	</div>
+		      	@if ($errors->has('FInicio'))
+	            	<span class="invalid-feedback" role="alert">
+	                	<strong>{{ $errors->first('FInicio') }}</strong>
+	            	</span>
+	        	@endif
 
-		 	@if ($errors->has('FInicio'))
-            	<span class="invalid-feedback" role="alert">
-                	<strong>{{ $errors->first('FInicio') }}</strong>
-            	</span>
-        	@endif
+		 	</div>
 
 		    <div class="columna-de-dos">
 
@@ -73,13 +73,13 @@
 
 		     	</div>
 
-			</div>
-
-			@if ($errors->has('FCierre'))
+		     	@if ($errors->has('FCierre'))
 	            <span class="invalid-feedback" role="alert">
 	                <strong>{{ $errors->first('FCierre') }}</strong>
 	            </span>
         	@endif
+
+			</div>
 
 		</div>
 
@@ -106,7 +106,7 @@
 
 		<div class="formulario">
 			
-			<label>Peso del documento menor a 2 Mb</label>
+			<label>Peso del documento menor a 3 Mb</label>
 
 		</div>
 

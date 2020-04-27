@@ -8,6 +8,10 @@ use Validator;
 
 class EventosAcademicosController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
       /**
      * Display a listing of the resource.
      *
@@ -40,9 +44,21 @@ class EventosAcademicosController extends Controller
        $validator = Validator::make($request->all(), [
             'titulo' => 'required|string',
             'descripcion' => 'required|string',
-            'doc' => 'required|mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel|max:2048',
+            'doc' => 'required|mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel|max:3072',
             'FInicio' => 'required|string',
             'FCierre' => 'required|string',
+        ], [
+            'titulo.required' => 'Se requiere que ingrese un título',
+            'titulo.string' => 'El título ingresado contiene caracteres no válidos',
+            'descripcion.required' => 'Se requiere que ingrese una descripcion',
+            'descripcion.string' => 'La descripcion ingresada contiene caracteres no válidos',
+            'doc.required' => 'Se requiere que seleccione un archivo en formato PDF, WORD, EXCEL, POWERPOINT',
+            'doc.mimetypes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: PDF, WORD, EXCEL, POWERPOINT',
+            'doc.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 3 MB (3072 KB)',
+            'FInicio.required' => 'Se requiere que indique la fecha de inicio',
+            'FInicio.string' => 'La fecha de inicio contiene caracteres no válidos',
+            'FCierre.required' => 'Se requiere que indique la fecha de finalización',
+            'FCierre.string' => 'La fecha de finalización contiene caracteres no válidos',
         ]);
 
         if ($validator->fails()) {
@@ -133,9 +149,20 @@ class EventosAcademicosController extends Controller
         $validator = Validator::make($request->all(), [
             'titulo' => 'required|string',
             'descripcion' => 'required|string',
-            'doc' => 'mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel|max:2048',
+            'doc' => 'mimetypes:application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint,application/msword,application/vnd.ms-excel|max:3072',
             'FInicio' => 'required|string',
             'FCierre' => 'required|string',
+        ], [
+            'titulo.required' => 'Se requiere que ingrese un título',
+            'titulo.string' => 'El título ingresado contiene caracteres no válidos',
+            'descripcion.required' => 'Se requiere que ingrese una descripcion',
+            'descripcion.string' => 'La descripcion ingresada contiene caracteres no válidos',
+            'doc.mimetypes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: PDF, WORD, EXCEL, POWERPOINT',
+            'doc.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 3 MB (3072 KB)',
+            'FInicio.required' => 'Se requiere que indique la fecha de inicio',
+            'FInicio.string' => 'La fecha de inicio contiene caracteres no válidos',
+            'FCierre.required' => 'Se requiere que indique la fecha de finalización',
+            'FCierre.string' => 'La fecha de finalización contiene caracteres no válidos',
         ]);
 
         if ($validator->fails()) {

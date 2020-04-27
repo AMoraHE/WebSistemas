@@ -24,9 +24,19 @@
 		<div class="formulario">
 				
 			<label>Información</label>
+			@if ($errors->any())
+			<textarea type="text" name="descripcion" required>{{old('descripcion')}}</textarea> 
+			@else
 			<textarea type="text" name="descripcion" required>{{$informacion->descripcion}}</textarea> 
+			@endif
 				
 		</div>
+
+		@if ($errors->has('descripcion'))
+	      <span class="invalid-feedback" role="alert">
+	          <strong>{{ $errors->first('descripcion') }}</strong>
+	      </span>
+	    @endif
 <!----------------------------------------------------------------- BOTONES INFORMACIÓN DE LA CARRERA --------------------------------------------------------------------->
 
 		<div class="contenedor-botones">

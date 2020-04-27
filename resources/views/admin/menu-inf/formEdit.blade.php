@@ -30,7 +30,11 @@
 
   </div>
 
-  @if ($errors->has('imgInicio'))
+</div>
+
+<div id="info-img">No se eligió archivo</div>
+
+@if ($errors->has('imgInicio'))
 
     <span class="invalid-feedback" role="alert">
 
@@ -40,10 +44,6 @@
     </span>
 
   @endif
-
-</div>
-
-<div id="info-img">No se eligió archivo</div>
 
 <!----------------------------------------------------------------- FORMULARIO LABORATORIOS ---------------------------------------------------------->
 

@@ -23,16 +23,36 @@
     <div class="formulario"> 
 
       <label>Viñetas</label>
+      @if ($errors->any())
+      <input type="text" maxlength="2" name="vineta" id ="informacion-perfil" value="{{old('vineta')}}" placeholder="Máximo 2 viñetas: 1-@-*-3-." class="form-control" required>
+      @else
       <input type="text" maxlength="2" name="vineta" id ="informacion-perfil" value="{{$campolaboral->vineta}}" placeholder="Máximo 2 viñetas: 1-@-*-3-." class="form-control" required>
+      @endif
     
     </div>
+
+    @if ($errors->has('vineta'))
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $errors->first('vineta') }}</strong>
+        </span>
+    @endif
 
     <div class="formulario"> 
 
       <label>Información</label>
+      @if ($errors->any())
+      <textarea type="text" name="elemento" id ="informacion-perfil" placeholder="Información" class="form-control" required>{{old('elemento')}}</textarea>
+      @else
       <textarea type="text" name="elemento" id ="informacion-perfil" placeholder="Información" class="form-control" required>{{$campolaboral->elemento}}</textarea>
+      @endif
         
     </div>
+
+    @if ($errors->has('elemento'))
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $errors->first('elemento') }}</strong>
+        </span>
+    @endif
 
 <!------------------------------------------------------------------ BOTONES CAMPO LABORAL -------------------------------------------------------------->
 
