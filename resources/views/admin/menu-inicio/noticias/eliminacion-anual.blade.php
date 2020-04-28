@@ -84,7 +84,7 @@
 
 	</div>
 
-	<div class="contenedor-fecha-noticia">
+	<div class="contenedor-fecha-noticia-eliminacion-anual">
 
 		<p>{{$noticia->created_at}}</p>
 		

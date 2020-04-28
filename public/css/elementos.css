@@ -175,6 +175,8 @@
 	width: 250px;
 	height: 250px;
 	overflow: hidden;
+
+	position: relative; /* Posicion la cual permite que el txt de fecha y hora no se desborde */
 }
 
 .contenedor-img-dividido img{
@@ -187,6 +189,17 @@
 /******************************SECCIONES FECHA NOTICIA************************************/
 
 .contenedor-fecha-noticia{
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	background: var(--azul);
+	opacity: .8;
+	color: var(--blanco);
+}
+
+.contenedor-fecha-noticia-eliminacion-anual{
 	padding: 20px;
 	text-align: center;
 }
@@ -1047,6 +1060,10 @@ body::-webkit-scrollbar-thumb{
 		font-size: 15px;
 	}
 
+	.contenedor-fecha-noticia-eliminacion-anual{
+		font-size: 15px;
+	}
+
 	/******************************SECCIONES CUERPO PARTIDO EN 2 COLUMNAS************************************/
 
 	.contenedor-texto-dividido{
@@ -1230,6 +1247,10 @@ body::-webkit-scrollbar-thumb{
 		font-size: 14px;
 	}
 
+	.contenedor-fecha-noticia-eliminacion-anual{
+		font-size: 15px;
+	}	
+
 /******************************SECCIONES CUERPO PARTIDO EN 2 COLUMNAS************************************/
 
 	.contenedor-texto-dividido p{
@@ -1407,6 +1428,10 @@ body::-webkit-scrollbar-thumb{
 	/******************************SECCIONES FECHA NOTICIA************************************/
 
 	.contenedor-fecha-noticia{
+		font-size: 14px;
+	}
+
+	.contenedor-fecha-noticia-eliminacion-anual{
 		font-size: 14px;
 	}
 
@@ -1594,6 +1619,10 @@ body::-webkit-scrollbar-thumb{
 	/******************************SECCIONES FECHA NOTICIA************************************/
 
 	.contenedor-fecha-noticia{
+		font-size: 12px;
+	}
+
+	.contenedor-fecha-noticia-eliminacion-anual{
 		font-size: 12px;
 	}
 

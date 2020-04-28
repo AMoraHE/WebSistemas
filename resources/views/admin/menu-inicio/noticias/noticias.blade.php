@@ -78,6 +78,11 @@
 				
 				</a>
 
+				<div class="contenedor-fecha-noticia">
+
+					<p>{{$noticia->created_at}}</p>
+					
+				</div>	
 
 			</div>
 
@@ -97,12 +102,6 @@
 				<p>{{$parrafo}}</p>
 				@endforeach
 
-			</div>
-
-			<div class="contenedor-fecha-noticia">
-
-				<p>{{$noticia->created_at}}</p>
-				
 			</div>
 
 		</div>
