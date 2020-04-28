@@ -21,7 +21,7 @@ class ProgramasController extends Controller
   public function index()
   {
       $programas = Programa::orderBy('id', 'DESC')->paginate(5);
-      return view('/admin/menu-academicos/programas/view', compact('programas'));
+      return view('admin.menu-academicos.programas.view', compact('programas'));
   }
 
   /**
@@ -31,7 +31,7 @@ class ProgramasController extends Controller
    */
   public function create()
   {
-          return view('/admin/menu-academicos/programas/create');
+          return view('admin.menu-academicos.programas.create');
   }
 
   /**
