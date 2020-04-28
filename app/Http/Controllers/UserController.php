@@ -132,6 +132,7 @@ class UserController extends Controller
                     'password.required' => 'Se requiere que ingrese una contraseña',
                     'password.string' => 'La contraseña ingresada contiene caracteres no válidos',
                     'password.min' => 'La contraseña ingresada es demasiado corta, ingrese al menos 6 caracteres',
+                    'password.confirmed' => 'Las contraseñas ingresadas no coinciden',
                 ]);
 
                 $user->name = request('name');
@@ -162,6 +163,7 @@ class UserController extends Controller
                     'password.required' => 'Se requiere que ingrese una contraseña',
                     'password.string' => 'La contraseña ingresada contiene caracteres no válidos',
                     'password.min' => 'La contraseña ingresada es demasiado corta, ingrese al menos 6 caracteres',
+                    'password.confirmed' => 'Las contraseñas ingresadas no coinciden',
                 ]);
 
                 $user->name = request('name');
