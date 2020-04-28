@@ -58,7 +58,6 @@
                         <div class="contenedor-inf">
                             <a href="/isc-inicio-formContacto/{{$lab->correo}}" onclick="return confirm('¿Contactar?')">
                                 <label>
-                                    <p id="titulo-organigrama">{{$lab->nombre}}</p>
                                     <img src="/images/organigrama/{{$lab->foto}}">
                                     <p>{{$lab->puesto}}</p>
                                     <p>{{$lab->integrante}}</p>
@@ -76,7 +75,6 @@
                         <div class="contenedor-inf">
                             <a href="/isc-inicio-formContacto/{{$docen->correo}}" onclick="return confirm('¿Contactar?')">
                                 <label>
-                                    <p id="titulo-organigrama">{{$docen->nombre}}</p>
                                     <img src="/images/organigrama/{{$docen->foto}}">
                                     <p>{{$docen->puesto}}</p>
                                     <p>{{$docen->integrante}}</p>
