@@ -93,6 +93,18 @@
 .alert-danger .alert-link {
   color: #843534;
 }
+
+/************************************************************************************************SECCIÓN ALERTAS FORMULARIO********************************************************************************/
+
+.invalid-feedback {
+  width: 100%;
+  color: #a94442;
+  background: #f2dede;
+  display: block;
+  padding: 15px;
+  border-radius: 4px;
+}
+
 /************************************************************************************************SECCIÓN USUARIO****************************************************************************/
 
 .seccion-avatar{
@@ -453,7 +465,7 @@
 .formulario{
 	font-family: 'Roboto', sans-serif;
 	width: 100%;
-	margin: 2% auto;
+	margin: 10px auto;
 }
 
 .formulario input{
@@ -665,7 +677,7 @@
 	padding: 10px;
 	border-bottom: 1px solid var(--verde);
 	overflow: auto;
-
+	margin-bottom: 10px;
 }
 
 /************************************************************************************************SECCIÓN CARGAR ARCHIVOS PDF***********************************************************************/
@@ -995,6 +1007,10 @@ body::-webkit-scrollbar-thumb{
 
 @media screen and (max-width: 1150px) { 
 
+	.invalid-feedback {
+	  font-size: 15px;
+	}
+
 	/************************************************************************************************SECCIÓN USUARIO****************************************************************************/
 
 	.avatar{
@@ -1190,6 +1206,10 @@ body::-webkit-scrollbar-thumb{
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
+	.invalid-feedback {
+	  font-size: 14px;
+	}
+
 
 /******************************SECCIONES CUERPO PARTIDO EN 1 COLUMNA******************************************/
 
@@ -1364,6 +1384,9 @@ body::-webkit-scrollbar-thumb{
 
 @media screen and (max-width: 600px) {
 
+	.invalid-feedback {
+	  font-size: 14px;
+	}
 
 	.contenedor-texto-completo p{
 		font-size: 14px;
@@ -1553,6 +1576,10 @@ body::-webkit-scrollbar-thumb{
 
 
 @media screen and (max-width: 480px) {
+
+	.invalid-feedback {
+	  font-size: 12px;
+	}
 
 	
 	.contenedor-texto-completo p{

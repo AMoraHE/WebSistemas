@@ -50,6 +50,8 @@
   <label>titulo</label>
   <input type="text" name="titulo" placeholder="Titulo de la galería" value="{{old('titulo')}}" required>
 
+</div>
+
   @if ($errors->has('titulo'))
             
     <span class="invalid-feedback" role="alert">
@@ -60,12 +62,12 @@
 
   @endif
 
-</div>
-
 <div class="formulario">
 
   <label>Descripción</label>
   <textarea name="descripcion" placeholder="Descripcion de la galería">{{old('descripcion')}}</textarea>
+
+</div>
 
   @if ($errors->has('descripcion'))
     
@@ -77,4 +79,3 @@
   
   @endif
 
-</div>

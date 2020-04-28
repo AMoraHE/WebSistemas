@@ -92,6 +92,8 @@
 		<label>Proyecto</label>
 		<input type="text" name="proyecto" id="proyecto" value="{{old('proyecto')}}" placeholder="Nombre del proyecto" class="form-control" required>
 
+	</div>
+
 		@if ($errors->has('proyecto'))
 
       		<span class="invalid-feedback" role="alert">
@@ -102,7 +104,6 @@
 
     	@endif
 
-	</div>	
 
    <!----------------------------------DESARROLLADORES---------------->
 
@@ -110,6 +111,8 @@
 
 		<label>Desarrolladores</label>
 		<input type="text" name="desarrolladores" placeholder="Ingrese los desarrolladores, Ejem: osiel canul, erick herrera, etc, etc" required>{{old('desarrolladores')}}</input>
+
+	</div>
 
 		@if ($errors->has('desarrolladores'))
 
@@ -121,7 +124,6 @@
 
     	@endif
 
-	</div>	
 
     <!-----------------------------------OBJETIVO----------------------
 
@@ -151,6 +153,8 @@
 		<label>Descripción</label>
 		<textarea name="descripcion" placeholder="descripcion" required>{{old('descripcion')}}</textarea>
 
+	</div>
+
 		@if ($errors->has('descripcion'))
 
       		<span class="invalid-feedback" role="alert">
@@ -161,7 +165,6 @@
 
     	@endif
 
-	</div>	
 
     <!--------------------------------RESULTADOS--------------------
 

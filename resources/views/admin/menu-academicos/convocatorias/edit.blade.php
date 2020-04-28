@@ -60,6 +60,8 @@
         <input  class="fecha" data-date-format="l j, F, Y" id="FInicio" name="FInicio" value="{{$convocatorias->FInicio}}" required/>
         @endif
 
+      </div>
+
         @if ($errors->has('FInicio'))
 
               <span class="invalid-feedback" role="alert">
@@ -69,8 +71,6 @@
               </span>
 
           @endif
-
-      </div>
 
     </div>
 
@@ -87,6 +87,8 @@
         <input  class="fecha" data-date-format="l j, F, Y" id="FFin" name="FFin" value="{{$convocatorias->FFin}}" required/>
         @endif
 
+      </div>
+
         @if ($errors->has('FFin'))
 
               <span class="invalid-feedback" role="alert">
@@ -96,8 +98,6 @@
               </span>
 
           @endif
-
-      </div>
 
     </div>
 

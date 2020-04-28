@@ -29,6 +29,8 @@
 			<label>Convocatoria</label>
 			<input type="text" name="programa" id="programas" value="{{old('programa')}}" placeholder="Nombre del programa" class="form-control" required>
 
+		</div>
+
 			@if ($errors->has('programa'))
 
 						<span class="invalid-feedback" role="alert">
@@ -39,7 +41,6 @@
 
 				@endif
 
-		</div>
 
 		<div class="contenedor-formulario-dividido">
 
@@ -98,6 +99,8 @@
 			<label>Descripcion</label>
 			<textarea name="descripcion" placeholder="Descripcion" required>{{old('descripcion')}}</textarea>
 
+		</div>
+
 			@if ($errors->has('descripcion'))
 
 						<span class="invalid-feedback" role="alert">
@@ -108,7 +111,6 @@
 
 				@endif
 
-		</div>
 
 <!----------------------------------------------------------------- CARGRA IMG Convocatorias ---------------------------------------------------------->
 

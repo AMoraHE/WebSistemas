@@ -52,6 +52,8 @@
   <label>Título del Laboratorio</label>
   <input type="text" name="nombre" value="{{old('nombre')}}" placeholder="Título Laboratorio">
 
+</div>
+
   @if ($errors->has('nombre'))
             
     <span class="invalid-feedback" role="alert">
@@ -62,12 +64,14 @@
 
   @endif
 
-</div>
+
 
 <div class="formulario">
 
   <label>Descripción</label>
   <textarea name="descripcion" placeholder="Descripcion">{{old('descripcion')}}</textarea>
+
+</div>
 
   @if ($errors->has('descripcion'))
     
@@ -79,12 +83,14 @@
   
   @endif
 
-</div>
+
 
 <div class="formulario">
 
   <label>responsable</label>
   <input type="text" name="responsable" value="{{old('responsable')}}">
+
+</div>
 
   @if ($errors->has('responsable'))
             
@@ -96,12 +102,14 @@
 
   @endif
 
-</div>
+
 
 <div class="formulario">
 
   <label>Correo</label>
   <input type="email" name="correo" value="{{old('correo')}}">
+
+</div>
 
   @if ($errors->has('correo'))
 
@@ -113,12 +121,14 @@
 
   @endif
 
-</div>
+
 
 <div class="formulario">
 
   <label>Identificador</label>
   <input type="text" name="slug" value="{{$identificador}}" readonly>
+
+</div>
 
   @if ($errors->has('slug'))
             
@@ -130,4 +140,3 @@
 
   @endif
 
-</div>

@@ -26,6 +26,8 @@
 				<label>Convocatoria</label>
 				<input type="text" name="convocatoria" id="convocatoria" value="{{old('convocatoria')}}" placeholder="Nombre de la conocatoria" required>
 
+			</div>
+
 				@if ($errors->has('convocatoria'))
 
 		      		<span class="invalid-feedback" role="alert">
@@ -36,7 +38,7 @@
 
 		    	@endif
 
-			</div>
+			
 
 			<div class="contenedor-formulario-dividido">
 
@@ -49,6 +51,8 @@
 						<label>Fecha Inicio</label>
 						<input  class="fecha" data-date-format="l j, F, Y" id="FInicio" name="FInicio" value="{{old('FInicio')}}" required/>
 
+					</div>
+
 						@if ($errors->has('FInicio'))
 
 				      		<span class="invalid-feedback" role="alert">
@@ -59,7 +63,6 @@
 
 				    	@endif
 
-					</div>
 
 				</div>
 
@@ -72,6 +75,8 @@
 						<label>Fecha Final</label>
 						<input  class="fecha" data-date-format="l j, F, Y" id="FFin" name="FFin" value="{{old('FFin')}}" required/>
 
+					</div>
+
 						@if ($errors->has('FFin'))
 
 				      		<span class="invalid-feedback" role="alert">
@@ -81,8 +86,6 @@
 				      		</span>
 
 				    	@endif
-
-					</div>
 
 				</div>
 
@@ -95,6 +98,8 @@
 				<label>Descripción</label>
 				<textarea name="descripcion" placeholder="Descripcion" required>{{old('descripcion')}}</textarea>
 
+			</div>
+
 				@if ($errors->has('descripcion'))
 
 		      		<span class="invalid-feedback" role="alert">
@@ -105,7 +110,7 @@
 
 		    	@endif
 
-			</div>
+			
 
 <!----------------------------------------------------------------- CARGRA IMG Convocatorias ---------------------------------------------------------->
 			<div class="formulario">
