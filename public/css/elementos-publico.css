@@ -1022,13 +1022,18 @@ opacity: 0.5;
 
 
 .contenedor-dir{
+background-color: #0ae9e9;
+border-radius: 5px;
 display: inline-block;
 text-align: -webkit-center;
 text-align: -moz-center;
 }
 
 .contenedor-lab-doc{
+	border-radius: 25px;
+background: linear-gradient(to right, #dcc5a1, #0ac3cc);
 width: 100%;
+height: 100%
 }
 
 .titulo-org1{
@@ -1053,6 +1058,8 @@ margin-left: 14.5%;
 }
 
 .contenedor-lab{
+	border-radius: 5px;
+	background-color: #dcc5a1;
 width: 50%;
 float: left;
 text-align: center;
@@ -1065,6 +1072,8 @@ grid-template-columns: repeat(2, 1fr);
 }
 
 .contenedor-doc{
+	border-radius: 5px;
+	background-color: #09053a2b;
 width: 50%;
 float: right;
 text-align: center;
@@ -1141,50 +1150,14 @@ padding: 10px;
 	border-right: 1px solid #1B396A;
   }
 
- .contenedor-inf:first-child::after {
+ .contenedor-inf:nth-child(-n+2)::after {
 border: 0 none;
  }
 
- .contenedor-lap-contenedor-inf:nth-last-child(-n+2)::before {
+ .contenedor-inf:nth-last-child(-n+2)::before {
 border: 0 none;
  }
 
-.contenedor-lab-doc::before{
-content: '';
-position: absolute;
-right: -22%;
-border-left: 1px solid #1B396A;
-width: 50%;
-height: 23px;
-}
-
-.contenedor-lab-doc::after{
-content: '';
-position: absolute;
-right: 22%;
-border-left: 1px solid #1B396A;
-width: 50%;
-height: 23px;
-}
-
-.titulo-org1::before,
-.titulo-org1::after,
- .titulo-org2::before,
-.titulo-org2::after {
-content: '';
-position: absolute;
-top: 102%;
-right: 50%;
-border-bottom: 1px solid #1B396A;
-width: 58%;
-height: 20px;
-}
-.titulo-org1::after,
-.titulo-org2::after {
-right: auto;
-left: 50%;
-border-bottom: 1px solid #1B396A;
-}
 
 /************************************************************************************************SECCIÓN BOTONES***********************************************************************/
 
