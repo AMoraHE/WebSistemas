@@ -26,7 +26,7 @@
 
 		<div class="formulario">
 
-			<label>Convocatoria</label>
+			<label>Programa</label>
 			<input type="text" name="programa" id="programas" value="{{old('programa')}}" placeholder="Nombre del programa" class="form-control" required>
 
 		</div>
