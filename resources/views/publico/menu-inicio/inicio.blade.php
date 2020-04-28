@@ -122,6 +122,12 @@
 			<h2>{{$noticia->titulo}}</h2>
 			</div>
 
+			<div class="contenedor-fecha-noticia-inicio">
+
+				<p>{{$noticia->created_at}}</p>
+				
+			</div>
+
 		</div>
 		
 		@endforeach
