@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use App\Programa;
+
 class ProgramasController extends Controller
 {
   public function __construct()
@@ -217,5 +218,5 @@ class ProgramasController extends Controller
     $programas->delete();
 
     return redirect()->route('ProgramasAcademicos')->with('status','Eliminación Exitosa');
-}
+  }
 }
