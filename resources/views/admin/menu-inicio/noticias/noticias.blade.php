@@ -99,6 +99,12 @@
 
 			</div>
 
+			<div class="contenedor-fecha-noticia">
+
+				<p>{{$noticia->created_at}}</p>
+				
+			</div>
+
 		</div>
 
 	</div>

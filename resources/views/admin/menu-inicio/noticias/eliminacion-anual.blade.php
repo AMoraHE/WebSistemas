@@ -86,7 +86,7 @@
 
 	<div class="contenedor-fecha-noticia">
 
-		<p>12/08/2020</p>
+		<p>{{$noticia->created_at}}</p>
 		
 	</div>
 

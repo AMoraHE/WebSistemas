@@ -64,6 +64,12 @@
 
 			</div>
 
+			<div class="contenedor-fecha-noticia">
+
+				<p>{{$noticias->created_at}}</p>
+				
+			</div>
+
 			<div class="contenedor-botones">
 
 			<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticias"><button class="btn ver"><span>Regresar...</span></button></a>
