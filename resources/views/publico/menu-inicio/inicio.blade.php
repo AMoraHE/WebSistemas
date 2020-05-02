@@ -55,34 +55,40 @@
 	<div class="contenedor-titulo-seccion">
 		<div class="tlinea"></div>
 
-		<h3>Noticia</h3>
+		<h3>{{$noticia->titulo}}</h3>
 
 		<div class="tlinea"></div>
 
 	</div>
 
-	<div class="contenedor-cuerpo-dividido-inicio">
+	<div class="contenedor-seccion-centrado">
+	
+		<div class="contenedor-cuerpo-contenido">
 
-		<div class="contenedor-img-dividido-inicio">
+			<div class="contenedor-img-contenido">
 
-			<img src="/images/news/{{$noticia->newimage}}">
+				<img src="/images/news/{{$noticia->newimage}}">
 
-		</div>
+				<div class="seccion-fecha-noticia">
 
-		<div class="titulo-img-n1">
-			<h2>{{$noticia->titulo}}</h2>
+					<p>{{$noticia->created_at}}</p>
+
+				</div>
+
 			</div>
 
-		<div class="contenedor-texto-dividido-inicio">
+			<div class="contenedor-cuerpo-txt">
 
-			<p>{{$noticia->redaccion}}</p>
+				<p>{{$noticia->redaccion}}</p>
 
-		</div>
+			</div>
 
-		<div class="contenedor-botones">
+			<div class="contenedor-botones">
 
-			<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticiasVerInd/{{$noticia->id}}"><button class="btn ver"><span>Leer Más...</span></button></a>
-		
+				<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticiasVerInd/{{$noticia->id}}"><button class="btn"><span>Leer Más...</span></button></a>
+			
+			</div>
+
 		</div>
 
 	</div>
@@ -99,33 +105,47 @@
 	<div class="contenedor-previsualizar-seccion">
 
 		<div class="contenedor-titulo-seccion">
+
 			<div class="tlinea"></div>
 
 			<h3>Más Noticias</h3>
 
 			<div class="tlinea"></div>
 
-		</div>
+		</div>			
 
 		@foreach ($noticias as $noticia)
+
+		<div class="contenedor-seccion-noticias">
 				
-		<div class="contenedor-seccion-preliminar">
+			<div class="contenedor-seccion-preliminar">
 
 
-			<div class="contenedor-seccion-preliminar-img-redimensionales">
+				<div class="contenedor-seccion-preliminar-img">
 
-				<img src="/images/news/{{$noticia->newimage}}">
+					<img src="/images/news/{{$noticia->newimage}}">
 
-			</div>
 
-			<div class="titulo-img">
-			<h2>{{$noticia->titulo}}</h2>
-			</div>
+					<div class="seccion-fecha-noticia">
 
-			<div class="contenedor-fecha-noticia-inicio">
+						<p>{{$noticia->created_at}}</p>
 
-				<p>{{$noticia->created_at}}</p>
+					</div>
+
+				</div>
+
+				<div class="contenedor-cuerpo-txt">
+
+					<p>{{$noticia->titulo}}</p>
+
+				</div>
+
+				<div class="contenedor-botones">
+
+					<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticiasVerInd/{{$noticia->id}}"><button class="btn"><span>Leer Más...</span></button></a>
 				
+				</div>
+
 			</div>
 
 		</div>
@@ -137,7 +157,7 @@
 		<div class="contenedor-botones">
 
 			<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticias"><button class="btn ver"><span>Ver Más...</span></button></a>
-		
+
 		</div>
 
 	</div>

@@ -794,6 +794,7 @@
 	display: flex;
 	justify-content: center;
   	align-items: center;
+  	overflow: hidden;
 }
 
 .centrado{
@@ -952,7 +953,7 @@
 /************************************************************************************************PAGINACIÓN**************************************************************************/
 
 #paginas {
-    text-align: center; 
+    text-align: center;
 }
 
 #paginas ul{
@@ -961,7 +962,7 @@
 }
 #paginas li{
     display: inline-block;
-    margin: 0;
+    margin-top: 10px; /*Para que no se pegue los li*/ 
     padding: 10px;
 }
 
