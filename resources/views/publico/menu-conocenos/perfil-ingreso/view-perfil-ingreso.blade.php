@@ -18,17 +18,26 @@
 
 	<div class="contenedor-componentes-principales">
 
-		<div class="contenedor-texto-completo">
+		<div class="contenedor-texto-completo-acordeon">
 
-			<ul>
+			<div class="contenedor-acordeon">
 
 				@foreach ($perfilingreso as $perfilingres)
+				<div class="contenedor-acordeon-subapartado">
+				<div class="contenedor-titulo-acordeon">
+				<p>PERFIL {{$perfilingres->vineta}}</p>
+			</div>
 
-				<li>{{$perfilingres->vineta}} {{$perfilingres->elemento}}</li>
+				<div class="info-acordeon">
 
+					<p>
+					 {{$perfilingres->elemento}}
+					</p>
+				</div>
+				</div>
 				@endforeach
 
-			</ul>
+			</div>
 
 		</div>
 
