@@ -145,12 +145,71 @@
 }
 
 
+.contenedor-texto-completo-1{
+	width: 100%;
+	min-height: 250px;
+    margin: auto;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFF;
+	border: 2px solid var(--verde);
+	border-radius: 10px;
+}
+
+.contenedor-1-1{
+	display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: -webkit-center;
+}
+.contenedor-1-2-subapartado{
+	width:80%;
+	min-height:50px;
+	background-color: #f5f5f5;
+	-webkit-transiton: height 0.3s;
+	border-radius: 5px;
+	margin-bottom: 1em;
+}
+
+.contenedor-titulo-1-3{
+	width:100%;
+	height:50px;
+	background-color: #1b396a;
+	overflow: hidden;
+	border-bottom: 1px solid #39f58f;
+	border-radius: 5px;
+}
+
+.contenedor-titulo-1-3 p{
+	margin:13px;
+	color: white;
+}
+
+.info-1-4{
+	display: block;
+	width:100%;
+	height:180PX;
+	background-color: #f5f5f5;
+	overflow: hidden;
+}
+
+.info-1-4 p{
+	margin:20px;
+	text-align: justify;
+	color:#4f4f4f;
+}
+
+/*******************************************************SECCIONES ACORDEON******************************************/
 .contenedor-texto-completo-acordeon{
 	width: 100%;
 	min-height: 250px;
     margin: auto;
     padding: 10px;
-    background-color: #404040;
+    background-color: #FFF;
+    font-family: 'Roboto', sans-serif;
 	border: 2px solid var(--verde);
 	border-radius: 10px;
 }
@@ -179,6 +238,7 @@
 	height:50px;
 	background-color: #24c06f;
 	overflow: hidden;
+	font-family: 'Roboto', sans-serif;
 	border-bottom: 1px solid #39f58f;
 	border-radius: 5px;
 }
@@ -191,7 +251,7 @@
 .info-acordeon{
 	display: none;
 	width:100%;
-	height:180px;
+	height:auto;
 	background-color: #f5f5f5;
 	overflow: hidden;
 }
@@ -201,6 +261,21 @@
 	text-align: justify;
 	color:#4f4f4f;
 }
+
+.info-acordeon-centrado{
+	display: none;
+	width:100%;
+	height:auto;
+	background-color: #f5f5f5;
+	overflow: hidden;
+}
+
+.info-acordeon-centrado p{
+	margin:20px;
+	text-align: center;
+	color:#4f4f4f;
+}
+
 /******************************SECCIONES PRINCIPALES PARTIDO EN 2 COLUMNAS************************************/
 
 .contenedor-seccion-centrado{ /* --------->Seccion de Noticias inicio*/
@@ -1332,6 +1407,9 @@ border: 0 none;
 	float: left;
 }
 
+.icono-derecha {
+	float: right;
+}
 .icono-pdf {
 	display: flex;
 	justify-content: center;

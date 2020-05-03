@@ -8,7 +8,7 @@
 
 <!----------------------------------------------------------------- PERFIL EGRESO ---------------------------------------------------------->
 
-	<div class="contenedor-titulo-seccion">
+	<div class="contenedor-titulo-seccion-select">
 
 		<h3>Perfil Egreso</h3> 
 
@@ -19,17 +19,28 @@
 
 	<div class="contenedor-componentes-principales">
 
-		<div class="contenedor-texto-completo">
+		<div class="contenedor-texto-completo-acordeon">
 
-			<ul>
+			<div class="contenedor-acordeon">
 
 				@foreach ($perfilegreso as $perfilegres)
+				<div class="contenedor-acordeon-subapartado">
+				<div class="contenedor-titulo-acordeon">
+				<p>PERFIL {{$perfilegres->id}}<i class="icono-derecha fas fa-plus"></i></p>
 
-				<li>{{$perfilegres->vineta}} {{$perfilegres->elemento}}</li>
+			</div>
 
+				<div class="info-acordeon">
+
+					<p>
+					 {{$perfilegres->vineta}}
+					 {{$perfilegres->elemento}}
+					</p>
+				</div>
+				</div>
 				@endforeach
 
-			</ul>
+			</div>
 
 		</div>
 
