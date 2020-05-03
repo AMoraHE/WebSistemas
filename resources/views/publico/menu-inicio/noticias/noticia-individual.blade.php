@@ -11,7 +11,7 @@
 <!----------------------------------------------------------------- NOTICIAS----------------------------------------------------------------------------->
 
 
-	<div class="contenedor-componentes-principales">
+	<div class="contenedor-noticias-individuales">
 
 		<div class="contenedor-titulo-seccion-ind">
 
@@ -19,7 +19,6 @@
 
 		</div>
 
-		<div class="contenedor-cuerpo-dividido">
 
 			<div class="contenedor-img-dividido hover-img">
 
@@ -55,11 +54,10 @@
 
 			<div class="contenedor-botones">
 
-			<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticias"><button class="btn ver"><span>Regresar...</span></button></a>
+				<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticias"><button class="btn"><span>Regresar</span></button></a>
 		
-		</div>
+			</div>
 
-		</div>
 
 	</div>
 

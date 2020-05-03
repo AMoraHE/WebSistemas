@@ -106,11 +106,16 @@
 	align-items: center;
 }
 
-.contenedor-componentes-principales{
+.contenedor-noticias-individuales{
 	width: 70%;
 	margin: auto;
-	background: red;
-	padding: 2%;
+	box-shadow: 0 4px 6px #000;
+	border: 5px solid var(--blanco);
+}
+
+.contenedor-componentes-principales{
+	width: 100%;
+	margin: auto;
 }
 
 /******************************SECCIONES CUERPO PARTIDO EN 1 COLUMNA******************************************/
@@ -300,12 +305,17 @@
 .contenedor-titulo-contenido{
 	width: 100%;
 	height: 50px;
-	overflow: hidden;
 	display: flex;
 	align-items: center;
 	padding: 10px;
 	text-align: justify;
 	color: var(--azul);
+}
+
+.contenedor-titulo-contenido h3{
+	overflow: hidden;
+	white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .contenedor-cuerpo-contenido{
@@ -444,12 +454,6 @@ opacity: 0.5;
 	color: var(--blanco);
 }
 
-.contenedor-cuerpo-dividido{ /* --------->Seccion de Noticias vusualización por noticia*/
-	width: 100%;
-	background: blue;
-	text-align: center;
-}
-
 .contenedor-img-dividido{
 	max-width: 100%;
 	max-height: 800px;
@@ -457,11 +461,9 @@ opacity: 0.5;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: green;
 }
 
 .contenedor-img-dividido img{
-	box-shadow: 0 4px 6px #000;
 	width: 100%;
 	height: 100%; /***Hacer Responsivo***/
 	object-fit: cover;
@@ -504,8 +506,6 @@ opacity: 0.5;
 	min-height: 250px;
    	margin: 0px auto;
     padding: 10px;
-	box-shadow: 0 4px 6px #000;
-	background: yellow;
 	/*overflow: auto; Aplica Scroll automatico ---> Modificar que cuando supere la catidad maxima de 200px el texto puede ver todo el contenido en un MODAL*/
 
 }
@@ -551,15 +551,13 @@ opacity: 0.5;
 .contenedor-titulo-seccion-ind{/******************************** TITULOS NOTICIAS INDIVIDUALES******************************************/
 	width: 100%;
 	min-height: 50px;
-	margin: 2% auto;
-	border-bottom: 3px solid var(--verde);
 }
 
 .contenedor-titulo-seccion-ind h3{
 	width: 100%;
     text-transform: uppercase;
     color: var(--azul);
-    padding: 2%;
+    padding: 10px;
     text-align: justify;
     line-height: 2;
 }
