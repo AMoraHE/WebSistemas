@@ -8,7 +8,7 @@
 
 <!----------------------------------------------------------------- CUERPO ACADÉMICO  ---------------------------------------------------------->
 
-	<div class="contenedor-titulo-seccion">
+	<div class="contenedor-titulo-seccion-select">
 
 		<h3>Cuerpos Académicos</h3>
 

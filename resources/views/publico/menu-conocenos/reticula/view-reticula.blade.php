@@ -19,31 +19,35 @@
 
 <!----------------------------------------------------------------- CUERPO RETICULA ---------------------------------------------------------->
 
-	@foreach ($reticulas as $reticula)
 
-	<div class="contenedor-titulo-seccion">
+<div class="contenedor-componentes-principales">
+	<div class="contenedor-titulo-seccion-select">
 
-		<h3>{{$reticula->titulo}}</h3>
+		<h3>RETICULA</h3>
 
 	</div>
+	<div class="contenedor-texto-completo-acordeon">
+	<div class="contenedor-acordeon">
+	@foreach ($reticulas as $reticula)
 
-	<div class="contenedor-componentes-principales">
+	<div class="contenedor-acordeon-subapartado">
+				<div class="contenedor-titulo-acordeon">
 
-		<div class="contenedor-texto-centrado">
+				<p>{{$reticula->titulo}}<i class="icono-derecha fas fa-plus"></i></p>
+
+				</div>
+		<div class="info-acordeon-centrado">
 
 			<p>{{$reticula->programa}}</p>
 			<p>PLAN: {{$reticula->plan}}</p>
-			<p>ESPECIALIDAD: {{$reticula->especialidad}}</p>
-
-		</div>
-
-	</div>
+			<p>ESPECIALIDAD: {{$reticula->especialidad}}</p>	
 
 	<div class="contenedor-enlaces">
 			
 		<a target="_blank" rel="noopener noreferrer" href="/isc-conocenos-reticulaVer/{{$reticula->slug}}">{{$reticula->documento}}</a>
 
 	</div>
+
 
 	@php
 	$var = $reticula->slug
@@ -56,12 +60,16 @@
 		<a href="/isc-conocenos-reticulaDescargar/{{$reticula->slug}}"><button class="btn"><span>Descargar</span></button></a>
 
 	</div>
+	</div>
+</div>	
 
 	@endforeach
-
+</div>
 	<div id="paginas">
 			{{$reticulas->links()}}
 	</div>
+</div>
+</div>	
 				
 </div>
 

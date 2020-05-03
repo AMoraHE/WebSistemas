@@ -8,7 +8,7 @@
 
 <!----------------------------------------------------------------- PERFIL INGRESO ---------------------------------------------------------->
 		
-	<div class="contenedor-titulo-seccion">
+	<div class="contenedor-titulo-seccion-select">
 
 		<h3>Perfil De Ingreso</h3>
 
@@ -25,12 +25,12 @@
 				@foreach ($perfilingreso as $perfilingres)
 				<div class="contenedor-acordeon-subapartado">
 				<div class="contenedor-titulo-acordeon">
-				<p>PERFIL {{$perfilingres->vineta}}</p>
+				<p>PERFIL {{$perfilingres->id}}<i class="icono-derecha fas fa-plus"></i></p>
+
 			</div>
 
 				<div class="info-acordeon">
-
-					<p>
+					<p>{{$perfilingres->vineta}}
 					 {{$perfilingres->elemento}}
 					</p>
 				</div>

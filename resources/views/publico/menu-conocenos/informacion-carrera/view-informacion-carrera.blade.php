@@ -7,32 +7,43 @@
 <!----------------------------------------------------------------- INFORMACIÓN DE LA CARRERA --------------------------------------------------------------------------->
 
 <div class="seccion-principal">
+	<div class="contenedor-titulo-seccion-select">
 
-	@foreach($informaciones as $informacion)
-	
-	<div class="contenedor-titulo-seccion">
-
-		<h3>{{$informacion->categoria}}</h3>
+		<h3>Informacion de la carrera</h3>
 
 	</div>
 
-<!----------------------------------------------------------------- CUERPO INFORMACIÓN DE LA CARRERA --------------------------------------------------------------------------->
 
 	<div class="contenedor-componentes-principales">
 
-		<div class="contenedor-texto-completo">
+		<div class="contenedor-texto-completo-1">
 
-			<p>{{$informacion->descripcion}} </p>
-						
-		</div>
+			<div class="contenedor-1-1">
 
-	</div>
+	@foreach($informaciones as $informacion)
+	
+	
+<!----------------------------------------------------------------- CUERPO INFORMACIÓN DE LA CARRERA --------------------------------------------------------------------------->
 
-<!----------------------------------------------------------------- BOTONES INFORMACIÓN DE LA CARRERA --------------------------------------------------------------------------->
+		
+				<div class="contenedor-1-2-subapartado">
 
+					<div class="contenedor-titulo-1-3">
+						<p>{{$informacion->categoria}}</p>			
+					</div>
+
+					<div class="info-1-4">
+
+								<p>{{$informacion->descripcion}}</p>
+					</div>
+				</div>
 
 	@endforeach
 
+				</div>
+		</div>
+
+	</div>
 </div>
 
 @endsection
