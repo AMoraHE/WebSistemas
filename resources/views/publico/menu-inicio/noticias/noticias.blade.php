@@ -54,46 +54,46 @@
 	
 	@foreach ($noticias as $noticia)
 
-<div class="contenedor-seccion-noticias">
+	<div class="contenedor-seccion-noticias">
 
 
-	<div class="contenedor-cuerpo-contenido">
+		<div class="contenedor-cuerpo-contenido">
 
-		<div class="contenedor-titulo-contenido">
-			
-			<h3>{{$noticia->titulo}}</h3>
-
-		</div>
-
-		<div class="contenedor-img-contenido">
-
-			<img src="/images/news/{{$noticia->newimage}}">
-
-			<div class="seccion-fecha-noticia">
-
-				<p>{{$noticia->created_at}}</p>
+			<div class="contenedor-titulo-contenido">
+				
+				<h3>{{$noticia->titulo}}</h3>
 
 			</div>
 
+			<div class="contenedor-img-contenido">
+
+				<img src="/images/news/{{$noticia->newimage}}">
+
+				<div class="seccion-fecha-noticia">
+
+					<p>{{$noticia->created_at}}</p>
+
+				</div>
+
+			</div>
+
+			<div class="contenedor-cuerpo-txt">
+
+				<p>{{$noticia->redaccion}}</p>
+
+			</div>
+
+
+			<div class="contenedor-botones">
+
+					<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticiasVerInd/{{$noticia->id}}"><button class="btn"><span>Leer Más...</span></button></a>
+				
+			</div>
+		
+
 		</div>
-
-		<div class="contenedor-cuerpo-txt">
-
-			<p>{{$noticia->redaccion}}</p>
-
-		</div>
-
-
-		<div class="contenedor-botones">
-
-				<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticiasVerInd/{{$noticia->id}}"><button class="btn"><span>Leer Más...</span></button></a>
-			
-		</div>
-	
 
 	</div>
-
-</div>
 
 <!-------------------------------------------------------------- Paginacion ----------------------------------------------------------------------------->
 

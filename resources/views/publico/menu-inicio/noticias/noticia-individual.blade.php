@@ -8,17 +8,6 @@
 
 <div class="seccion-principal">
 
-	<div class="titulos-secciones-principales">
-
-    	<h1></h1>
-    
-  	</div>
-
-	
-
-<!----------------------------------------------------------------- BUSCADOR NOTICIAS ------------------------------------------------------------------->
-
-
 <!----------------------------------------------------------------- NOTICIAS----------------------------------------------------------------------------->
 
 
@@ -62,12 +51,6 @@
 				<p>{{$parrafo}}</p>
 				@endforeach
 
-			</div>
-
-			<div class="contenedor-fecha-noticia">
-
-				<p>{{$noticias->created_at}}</p>
-				
 			</div>
 
 			<div class="contenedor-botones">
