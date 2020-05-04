@@ -14,6 +14,8 @@
 
 	</div>
 
+	<div class="contenedor-tabla">
+
 		<div class="tabla-informacion-escolar">
 
 				<table>
@@ -40,7 +42,7 @@
 				</table>		
 
 		</div>
-
+	</div>
 				
 </div>
 
