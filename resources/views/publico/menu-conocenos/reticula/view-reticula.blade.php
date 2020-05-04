@@ -17,15 +17,17 @@
 <div class="seccion-principal">
 
 
-<!----------------------------------------------------------------- CUERPO RETICULA ---------------------------------------------------------->
-
-
-<div class="contenedor-componentes-principales">
-	<div class="contenedor-titulo-seccion-select">
+	<div class="contenedor-titulo-seccion">
 
 		<h3>RETICULA</h3>
 
 	</div>
+
+<!----------------------------------------------------------------- CUERPO RETICULA ---------------------------------------------------------->
+
+
+<div class="contenedor-componentes-principales">
+
 	<div class="contenedor-texto-completo-acordeon">
 	<div class="contenedor-acordeon">
 	@foreach ($reticulas as $reticula)
@@ -64,12 +66,13 @@
 </div>	
 
 	@endforeach
+</div>	
+
 </div>
 	<div id="paginas">
 			{{$reticulas->links()}}
 	</div>
 </div>
-</div>	
 				
 </div>
 

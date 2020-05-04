@@ -222,13 +222,9 @@
 /*******************************************************SECCIONES ACORDEON******************************************/
 .contenedor-texto-completo-acordeon{
 	width: 100%;
-	min-height: 250px;
-    margin: auto;
+	min-height: 500px; 
     padding: 10px;
     background-image: url("/img/TecFCP.png");
-    font-family: 'Roboto', sans-serif;
-	border: 2px solid var(--verde);
-	border-radius: 10px;
 }
 
 .contenedor-acordeon{
