@@ -281,6 +281,51 @@
 	color:#4f4f4f;
 }
 
+/******************************SECCIONES CONTACTO************************************/
+
+
+.contenedor-contacto{
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.foto-contacto{
+	width: 350px;
+	height: 350px;
+	overflow: hidden;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.7);
+
+}
+
+.foto-contacto img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+    object-position: center;
+    border: 5px solid var(--blanco);
+}
+
+.contenedor-cuerpo-contacto{
+	width: 100%;
+	text-align: center;
+}
+
+.contenedor-txt-contacto{
+	padding: 10px;
+	text-transform: uppercase;
+}
+
+.contenedor-txt-contacto p{
+	padding-bottom: 10px;
+	color: var(--azul);
+}
+
+.contenedor-txt-contacto h3{
+	padding-bottom: 10px;
+	color: var(--verde);
+}
+
 /******************************SECCIONES PRINCIPALES PARTIDO EN 2 COLUMNAS************************************/
 
 .contenedor-seccion-centrado{ /* --------->Seccion de Noticias inicio*/

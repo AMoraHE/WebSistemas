@@ -17,25 +17,44 @@
 <div class="seccion-principal">
 
 	<div class="contenedor-titulo-seccion">
-
-		@php
-			$var = 'armandomoraherrera@gmail.com'
-		@endphp
-
-		<a href="/isc-inicio-formContacto/{{$var}}"><h3>armandomoraherrera@gmail.com</h3></a>
+	
+		<h3>Contactos</h3>
 
 	</div>
 
-	<div class="contenedor-titulo-seccion">
+	<div class="contenedor-contacto">
 
-		@php
-			$var2 = '161k0021@itscarrillopuerto.edu.mx'
-		@endphp
+		<div class="foto-contacto">
+			
+			<img src="{{ asset('img/Mora.jpeg')}}">
 
-		<a href="/isc-inicio-formContacto/{{$var2}}"><h3>161k0021@itscarrillopuerto.edu.mx</h3></a>
+		</div>
+
+		<div class="contenedor-cuerpo-contacto">
+			
+		
+			<div class="contenedor-txt-contacto">
+				<p>División ISC</p>
+				<p>Jefa de la academia</p>
+				<p>MC. MAHALETH SALINAS SEGURA</p>
+				
+				@php
+					$var = 'm.salinas@itscarrillopuerto.edu.mx'
+				@endphp
+
+				<h3>m.salinas@itscarrillopuerto.edu.mx</h3>
+
+			</div>
+
+			<div class="contenedor-botones">
+				
+				<a href="/isc-inicio-formContacto/{{$var}}"><button class="btn"><span>Contactar</span></button></a>
+
+			</div>
+
+		</div>
 
 	</div>
-
 
 </div>
 
