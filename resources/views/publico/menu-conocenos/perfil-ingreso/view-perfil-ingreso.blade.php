@@ -10,7 +10,7 @@
 		
 	<div class="contenedor-titulo-seccion-select">
 
-		<h3>Perfil De Ingreso</h3>
+		<h3>Perfil Ingreso</h3>
 
 	</div>
 

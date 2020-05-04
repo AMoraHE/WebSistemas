@@ -18,17 +18,17 @@
 
 	<div class="contenedor-componentes-principales">
 
-		<div class="contenedor-texto-completo-1">
+		<div class="contenedor-texto-completo-acordeon">
 
-			<div class="contenedor-1-1">
+			<div class="contenedor-acordeon">
 
 				@foreach ($campolaboral as $campolabora)
-				<div class="contenedor-1-2-subapartado">
-					<div class="contenedor-titulo-1-3">
-						<p>Campo laboral</p>			
+				<div class="contenedor-acordeon-subapartado">
+					<div class="contenedor-titulo-acordeon">
+						<p>Campo laboral {{$campolabora->id}}<i class="icono-derecha fas fa-plus"></i></p>			
 					</div>
 
-					<div class="info-1-4">
+					<div class="info-acordeon">
 
 								<p>{{$campolabora->vineta}} {{$campolabora->elemento}}</p>
 					</div>
