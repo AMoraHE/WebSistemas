@@ -5,24 +5,21 @@
 @section('content')
 
 	<div class="seccion-principal">
-		
-@foreach ($infras as $infra)
-	
+
+	@foreach ($infras as $infra)
 
 <!----------------------------------------------------------------- Lab Celula---------------------------------------------------------->
 
-		<div class="contenedor-titulo-seccion">
+		 <div class="contenedor-titulo-seccion">
 	
 			<h3>{{$infra->nombre}}</h3>
 
 		</div>
 
-
 		@include('publico.menu-inf.formShow')
 
+	@endforeach
 <!----------------------------------------------------------------- Agregar IMG a la Mini Galeria Lab Celula---------------------------------------------------------->
-
-
-		@endforeach
+	</div>
 
 @endsection

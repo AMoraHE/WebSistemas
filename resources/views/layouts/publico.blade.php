@@ -16,6 +16,8 @@
 		<!--------------------------------SLIDER---------------------------------------->
 
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/flexslider.css')}}">
+		<!-- css agregado para slider de infraestructura -->
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/infraslider.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css')}}">
 		<script src="{{ asset('js/jquery.min.js')}}"></script>
 
@@ -204,6 +206,8 @@
 	<script src="{{ asset('js/main.js')}}"></script>
 
 	<script src="{{ asset('js/jquery.flexslider.js')}}"></script>
+	<!-- jquery agregado para slider de infraestructura -->
+	<script src="{{ asset('js/jquery.infraslider.js')}}"></script>
 
 	<script src="{{ asset('js/slider.js')}}"></script>
 

@@ -42,20 +42,27 @@
 
 	<div class="seccion-mini-galeria">
 
-
-		@foreach ($imagenes as $imagen)
-
-		<div class="contenedor-img-mini-galeria">
-
-			<div class="contenedor-img-mini-galeria-img">
-
-				<a target="_blank" rel="noopener noreferrer" href="/isc-infraestructura-labGaleriaVerImg/{{$imagen->id}}"><img src="/images/infra/{{$imagen->imagen}}"></a>
-
-			</div>
-
-
+<!-- slider agregado para la mini galeria -->
+	<div class="slideshow" >
+		<ul class="slider">
+			@foreach ($imagenes as $imagen)
+				<li>
+				<a target="_blank" rel="noopener noreferrer" href="/isc-infraestructura-labGaleriaVerImg/{{$imagen->id}}">
+				<img src="/images/infra/{{$imagen->imagen}}" >
+					</a>
+				</li>
+			@endforeach
+		</ul>
+		<ol class="pagination">
+			
+		</ol>
+	
+		<div class="left">
+			<span class="fa fa-chevron-left"></span>
 		</div>
 
-		@endforeach
-			
+		<div class="right">
+			<span class="fa fa-chevron-right"></span>
+		</div>
 	</div>
+			

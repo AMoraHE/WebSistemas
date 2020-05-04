@@ -17,7 +17,6 @@
 	</div>
 
 	@include('publico.menu-inf.formShow')
-
 	
 	@endforeach
 
