@@ -1522,7 +1522,7 @@ border: 0 none;
 /************************************************************************************************PAGINACIÓN**************************************************************************/
 
 #paginas {
-    text-align: center; 
+    text-align: center;
 }
 
 #paginas ul{
@@ -1531,7 +1531,7 @@ border: 0 none;
 }
 #paginas li{
     display: inline-block;
-    margin: 0;
+    margin-top: 10px; /*Para que no se pegue los li*/ 
     padding: 10px;
 }
 

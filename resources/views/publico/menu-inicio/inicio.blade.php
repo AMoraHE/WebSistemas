@@ -108,7 +108,7 @@
 
 			<div class="tlinea"></div>
 
-			<h3>Más Noticias</h3>
+			<h3>Noticias Recientes</h3>
 
 			<div class="tlinea"></div>
 
