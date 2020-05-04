@@ -16,6 +16,15 @@
 
 <div class="seccion-principal">
 
+	<div class="contenedor-titulo-seccion">
+		<div class="tlinea"></div>
+
+			<h3>Noticias</h3>
+
+		<div class="tlinea"></div>
+
+	</div>
+
 <!----------------------------------------------------------------- BUSCADOR NOTICIAS ------------------------------------------------------------------->
 
 	<div class="contenedor-buscador">
@@ -40,15 +49,6 @@
 	</div>
 
 <!----------------------------------------------------------------- NOTICIAS----------------------------------------------------------------------------->
-
-	<div class="contenedor-titulo-seccion">
-		<div class="tlinea"></div>
-
-			<h3>Noticias</h3>
-
-		<div class="tlinea"></div>
-
-	</div>
 
 <div class="contenedor-noticias">
 	
