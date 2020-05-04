@@ -16,6 +16,8 @@
 		<!--------------------------------SLIDER---------------------------------------->
 
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/flexslider.css')}}">
+		<!-- css agregado para slider de infraestructura -->
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-infra.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css')}}">
 		<script src="{{ asset('js/jquery.min.js')}}"></script>
 

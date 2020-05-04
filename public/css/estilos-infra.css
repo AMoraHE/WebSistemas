@@ -1,0 +1,23 @@
+.contenedor-img-grande .caption-infra{
+	width: 80%;
+	height: 5%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	text-align: center;
+	position: absolute;
+	top: 25%;
+	left:10%;
+	z-index: 2;
+}
+.contenedor-img-grande .caption-infra h2{
+
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 18px;
+	color: #fff;
+	padding: 1%; /*Tamaño de padding del fondo del texto*/
+	background: rgba(27,57,106,0.8);
+	text-shadow: 3px 3px 2px rgba(000, 000, 000, 0.70);
+	margin-bottom: 35px;
+}

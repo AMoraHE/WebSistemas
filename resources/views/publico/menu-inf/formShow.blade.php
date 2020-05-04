@@ -5,8 +5,13 @@
 
 		<div class="contenedor-img-grande">
 
-			<a target="_blank" rel="noopener noreferrer" href="/isc-infraestructura-labVerImg/{{$infra->id}}"><img src="/images/infra/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}"></a>
-
+			<a target="_blank" rel="noopener noreferrer" href="/isc-infraestructura-labVerImg/{{$infra->id}}">			
+				<img src="/images/infra/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}">
+				<section class="caption-infra">
+					<h2>{{$infra->nombre}}</h2 >
+				</section>
+			</a>
+			
 		</div>
 
 	</div>
@@ -44,7 +49,7 @@
 
 <!-- slider agregado para la mini galeria -->
 	<div class="slideshow" >
-		<ul class="slider">
+		<ul class="slider config">
 			@foreach ($imagenes as $imagen)
 				<li>
 				<a target="_blank" rel="noopener noreferrer" href="/isc-infraestructura-labGaleriaVerImg/{{$imagen->id}}">
@@ -53,7 +58,7 @@
 				</li>
 			@endforeach
 		</ul>
-		<ol class="pagination">
+		<ol class="pagination config">
 			
 		</ol>
 	
