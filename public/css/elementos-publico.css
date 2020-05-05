@@ -120,11 +120,9 @@
 }
 
 .contenedor-tabla{
-    width: calc(100% - 40px);
-    margin: 0px auto;
-    padding: 10px;
-    border: 2px solid #1B396A;
-    border-radius: 10px;
+    width: 70%;
+    margin: auto;
+    padding-top: 10px;
 }
 
 /******************************SECCIONES CUERPO PARTIDO EN 1 COLUMNA******************************************/
