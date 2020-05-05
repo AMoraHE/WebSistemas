@@ -163,6 +163,13 @@
 	width: 100%;
 	min-height: 250px;
     margin: auto;
+<<<<<<< HEAD
+=======
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+	border: 2px solid var(--verde);
+	border-radius: 10px;
+>>>>>>> d3cd70893ed85657165c12129444a7f753bbdab0
 }
 
 .contenedor-1-1{
@@ -210,6 +217,10 @@
 .info-1-4 p{
 	margin:20px;
 	text-align: justify;
+<<<<<<< HEAD
+=======
+	color:#000;
+>>>>>>> d3cd70893ed85657165c12129444a7f753bbdab0
 }
 
 /*******************************************************SECCIONES ACORDEON******************************************/
@@ -261,6 +272,10 @@
 .info-acordeon p{
 	margin:20px;
 	text-align: justify;
+<<<<<<< HEAD
+=======
+	color:#000;
+>>>>>>> d3cd70893ed85657165c12129444a7f753bbdab0
 }
 
 .info-acordeon-centrado{
