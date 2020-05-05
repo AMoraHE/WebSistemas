@@ -8,9 +8,13 @@
 
 <!----------------------------------------------------------------- CUERPO ACADÉMICO  ---------------------------------------------------------->
 
-	<div class="contenedor-titulo-seccion-select">
+	<div class="contenedor-titulo-seccion">
+
+		<div class="tlinea"></div>
 
 		<h3>Cuerpos Académicos</h3>
+
+		<div class="tlinea"></div>
 
 	</div>
 

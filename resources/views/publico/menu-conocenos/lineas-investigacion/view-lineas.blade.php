@@ -8,9 +8,13 @@
 
 <!----------------------------------------------------------------- TABLA LINEAS INVESTIGACIÓN---------------------------------------->
 
-	<div class="contenedor-titulo-seccion-select">
+	<div class="contenedor-titulo-seccion">
+
+		<div class="tlinea"></div>
 
 		<h3>Líneas de Investigación</h3>
+
+		<div class="tlinea"></div>
 
 	</div>
 

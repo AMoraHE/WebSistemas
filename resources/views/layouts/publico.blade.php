@@ -42,6 +42,10 @@
 
 		<script src="{{ asset('js/es.js')}}"></script>
 
+		<!-- Menu -->
+
+		<script src="{{ asset('js/headroom.min.js')}}"></script>
+
 		<!-- script Boostrap-->
 
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -109,15 +113,17 @@
 		<!----------------------------------------------------------- MENU ---------------------------------------------------------->	
 
 
-		<nav class="navegacion">
+		<nav class="navegacion" id="navegacion">
 			
 			<ul class="menu">
-				<li><a href="#"><i class="icono izquierda fa fa-home"></i>Inicio<i class=" icono derecha fa fa-chevron-down"></i></a>
+
+				<li><a href="{{route('ISC-INICIO')}}"><i class="icono izquierda fa fa-home"></i>Home</a></li>
+
+				<li><a href="#"><i class="icono izquierda fas fa-laptop-house"></i>Principal<i class=" icono derecha fa fa-chevron-down"></i></a>
 					<ul class="submenu">
-						<li><a href="{{route('ISC-INICIO')}}"><i class="icono izquierda fa fa-home"></i>Inicio</a></li>
 						<li><a href="/isc-inicio-noticias"><i class="icono izquierda far fa-newspaper"></i>Noticias</a></li>
 						<li><a href="/isc-inicio-calendario"><i class="icono izquierda far fa-calendar-alt"></i>Calendario</a></li>
-						<li><a href="/isc-inicio-contactos"><i class="icono izquierda far fa-calendar-alt"></i>Contacto</a></li>
+						<li><a href="/isc-inicio-contactos"><i class="icono izquierda fas fa-address-book"></i>Contacto</a></li>
 					</ul>
 				</li>
 							
@@ -203,7 +209,7 @@
 
 </div>
 
-	<script src="{{ asset('js/main.js')}}"></script>
+	<script src="{{ asset('js/main-public.js')}}"></script>
 
 	<script src="{{ asset('js/jquery.flexslider.js')}}"></script>
 	<!-- jquery agregado para slider de infraestructura -->

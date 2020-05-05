@@ -7,9 +7,14 @@
 <!----------------------------------------------------------------- INFORMACIÓN DE LA CARRERA --------------------------------------------------------------------------->
 
 <div class="seccion-principal">
+	
 	<div class="contenedor-titulo-seccion">
 
+		<div class="tlinea"></div>
+
 		<h3>Informacion de la carrera</h3>
+
+		<div class="tlinea"></div>
 
 	</div>
 

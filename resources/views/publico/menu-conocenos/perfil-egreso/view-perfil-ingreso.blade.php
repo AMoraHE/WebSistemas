@@ -8,9 +8,13 @@
 
 <!----------------------------------------------------------------- PERFIL EGRESO ---------------------------------------------------------->
 
-	<div class="contenedor-titulo-seccion-select">
+	<div class="contenedor-titulo-seccion">
+
+		<div class="tlinea"></div>
 
 		<h3>Perfil Egreso</h3> 
+
+		<div class="tlinea"></div>
 
 	</div>
 

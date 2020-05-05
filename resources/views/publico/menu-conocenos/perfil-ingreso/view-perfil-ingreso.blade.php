@@ -8,9 +8,13 @@
 
 <!----------------------------------------------------------------- PERFIL INGRESO ---------------------------------------------------------->
 		
-	<div class="contenedor-titulo-seccion-select">
+	<div class="contenedor-titulo-seccion">
+
+		<div class="tlinea"></div>
 
 		<h3>Perfil Ingreso</h3>
+
+		<div class="tlinea"></div>
 
 	</div>
 

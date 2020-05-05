@@ -19,7 +19,11 @@
 
 	<div class="contenedor-titulo-seccion">
 
+		<div class="tlinea"></div>
+
 		<h3>RETICULA</h3>
+
+		<div class="tlinea"></div>
 
 	</div>
 
