@@ -175,11 +175,11 @@
     text-align: -webkit-center;
 }
 .contenedor-1-2-subapartado{
-	width: 100%;
+	width: 70%;
 	min-height:50px;
 	-webkit-transiton: height 0.3s;
 	margin-bottom: 1em;
-	box-shadow: 0 10px 10px rgba(0,0,0,0.7);
+	/*box-shadow: 0 10px 10px rgba(0,0,0,0.7);*/
 
 }
 
@@ -292,7 +292,7 @@
 .contenedor-contacto{
 	display: flex;
 	align-items: center;
-	margin-top: 10px;
+	padding: 10px;
 }
 
 .foto-contacto{
