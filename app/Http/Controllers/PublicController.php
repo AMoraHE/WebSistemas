@@ -35,8 +35,9 @@ class PublicController extends Controller
   {
     $sliders = Slider::all();
     $noticias = Noticia::latest()->take(4)->get();
+    $proyectos = Proyecto::latest()->take(6)->get();
 
-    return view('publico/menu-inicio/inicio', compact('noticias','sliders'));
+    return view('publico/menu-inicio/inicio', compact('noticias','sliders', 'proyectos'));
   }
 
   public function noticias()

@@ -250,12 +250,12 @@
         </div>
           <div class="project-img">
 
-            <img src="images/proyectos/1586637139N4.png" alt="">
-            <img src="images/proyectos/1586637317CP.png" alt="">
-            <img src="images/proyectos/1586732801IMG_20180430_180150633.jpg" alt="">
-            <img src="images/proyectos/1586998014Foto01.png" alt="">
-            <img src="images/proyectos/1586190448Slider02.png" alt="">
-            <img src="images/proyectos/1586190448Slider02.png" alt="">
+          	@foreach($proyectos as $proyecto)
+
+            	<img src="/images/proyectos/{{$proyecto->newimage}}" alt="">
+
+            @endforeach
+            
 
          </div>
    <!--<div class="skew-abajo"></div>-->
