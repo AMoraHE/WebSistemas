@@ -162,20 +162,6 @@
 	padding: 20px;
 }
 
-.mini-calendario{
-	width: 30%;
-	padding: 20px;
-	overflow: hidden;
-	background: var(--gris-tipo1);
-}
-
-.mini-calendario img{
-	width: 100%;
-	object-fit: cover;
-	object-position: center;
-}
-
-
 .contenedor-seccion-dividido-noticia-1{ /* --------->Seccion de Noticias inicio*/
 	display: flex;
 	align-items: center;
@@ -1287,14 +1273,24 @@ opacity: 0.5;
 
 /************************************************************************************************SECCIÓN CALENDARIO***********************************************************************/
 
+.mini-calendario{
+	width: 30%;
+	padding: 20px;
+	overflow: hidden;
+	background: var(--gris-tipo1);
+}
+
 .contenedor-calendario{
+	min-height: 100vh;
+	margin-top: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 #CalendarioWeb {
-		max-width: 800px;
+		max-width: 100%;
+		max-height: 100%;
 }
 
 .contenedor-formulario-dividido{

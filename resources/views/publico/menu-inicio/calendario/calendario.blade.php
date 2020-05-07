@@ -6,14 +6,31 @@
 
 
 </script>
-  	<div class="seccion-principal">
+  
+  <div class="seccion-principal">
 
-  		<div class="contenedor-titulo-seccion">
-        <div class="tlinea"></div>
+    <!------------------------------------------------------------- IMG PARALLAX ----------------------------------------------------------->
 
-  			<h3>Calendario</h3>
+      <div class="contenedor-img-parallax">
 
-        <div class="tlinea"></div>
+          <div class="img-parallax">
+           <div class="proyectos">
+             <h1>Eventos Escolares</h1>
+             <hr>
+           </div>       
+          </div>
+
+          <div class="skew-abajo"></div>
+
+      </div>
+
+    <!------------------------------------------------------------- CALENDARIO ----------------------------------------------------------->
+
+    <div class="contenedor-secciones">
+
+  		<div class="contenedor-titulo-seccion-mas">
+
+  			<h3>Calendario Escolar</h3>
 
   		</div>
 
@@ -26,6 +43,11 @@
   		</div>
 
   	</div>
+
+  </div>
+
+  <!------------------------------------------------------------- FUNCION ----------------------------------------------------------->
+
 
   	<script>
 
