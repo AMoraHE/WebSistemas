@@ -1,3 +1,5 @@
+@import url('estilos-publico.css');
+
 :root {
   --azul: #1B396A;
   --verde: #8cc63e;
@@ -5,6 +7,16 @@
   --azul-claro: #1a95d5;
   --gris: #ddd;
   --verde-azulado: #369681;
+
+  --azul-fuerte: #012138;
+  --azul-medio: #013253;
+  --gris-tipo2: #8f8f8f;
+  --gris-fuerte: #3e3e3e;
+  --gris-tipo1: #e7e7e7;
+
+  --naranja: #f1592a;
+
+  --azul-bajo: #79bad6;
 
   font-family: 'Roboto', sans-serif;
 
@@ -94,11 +106,458 @@
   color: #843534;
 }
 
+/************************************************************************************************EFECTO SKEW********************************************************************************/
+
+/** Skew **/
+.skew-abajo{
+    position: absolute;
+	bottom: 0;
+	left: 0;
+	border-width: 0 0 10vh 100vw;
+	border-style: solid;
+	border-color: transparent transparent #fff transparent;
+}
+.skew-arriba{
+    position: absolute;
+	top: 0;
+	left: 0;
+	border-width: 10vh 100vw 0 0;
+	border-style: solid;
+	border-color: #fff transparent transparent transparent;
+	z-index: 10;
+}
+
 /************************************************************************************************SECCIONES PRINCIPALES********************************************************************************/
 
 .seccion-principal{
 	width: 100%;
 }
+
+/************************************************************************************************PAGINA HOME********************************************************************************/
+
+.contenedor-descripcion{
+	background: var(--gris-tipo1);
+	padding: 50px;
+}
+
+.contenedor-descripcion-txt{
+	width: 50%;
+	margin: auto;
+	font-size: 18px;
+	text-align: center;
+	color: var(--azul);
+}
+
+.contenedor-descripcion-txt h3{
+	font-size: 50px;
+	font-weight: 400;
+}
+
+.contenedor-dividido{
+	display: flex;
+}
+
+.contenedor-noticia-1{
+	width: 70%;
+	padding: 20px;
+}
+
+.mini-calendario{
+	width: 30%;
+	padding: 20px;
+	overflow: hidden;
+	background: var(--gris-tipo1);
+}
+
+.mini-calendario img{
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+
+.contenedor-seccion-dividido-noticia-1{ /* --------->Seccion de Noticias inicio*/
+	display: flex;
+	align-items: center;
+	padding-top: 10px;
+}
+
+.contenedor-titulo-contenido{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	text-align: justify;
+	color: var(--azul);
+}
+
+.contenedor-titulo-contenido h3{
+	overflow: hidden;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.contenedor-cuerpo-contenido{
+	width: 400px;
+	box-shadow: 0 4px 6px #000;
+	background: var(--blanco);
+}
+
+.contenedor-img-contenido{
+	width: 400px;
+	height: 400px;
+    /*box-shadow: 0 4px 6px #000;*/
+    border: 5px solid var(--blanco);
+    overflow: hidden;
+    position: relative;
+}
+
+.contenedor-img-contenido img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+    object-position: center;
+}
+
+.contenedor-cuerpo-txt{/* --------->Seccion de Noticias texto inicio*/
+	width: calc(100% - 400px); /****Restamos los 250px del ancho de la img****/
+	height: 400px;
+	overflow: hidden;
+	border: 5px solid var(--blanco);
+
+	/*box-shadow: 0 4px 6px #000;*/
+	/*overflow: auto; Aplica Scroll automatico ---> Modificar que cuando supere la catidad maxima de 200px el texto puede ver todo el contenido en un MODAL*/
+
+}
+
+.contenedor-cuerpo-txt p{ 
+	padding: 5px;
+	height: 330px;
+    text-align: justify;
+    overflow:hidden;
+    /*white-space:nowrap;
+    text-overflow: ellipsis;*/
+
+}
+
+.seccion-continuacion{
+	width: 100%;
+	height: 70px;
+	background: var(--azul);
+}
+
+/************************************FECHA Y HORA***********************************/
+
+.seccion-fecha-noticia{
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	background: var(--azul);
+	opacity: .8;
+	color: var(--blanco);
+}
+
+/************************************************************************************************FIN PAGINA HOME********************************************************************************/
+
+/************************************************************************************************SECCIÓN PRELIMINAR***********************************************************************/
+
+.contenedor-previsualizar-seccion{
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+}
+
+.contenedor-seccion-noticias{
+	display: inline-block;
+	margin: 10px 10px 0px 0px;
+	background: var(--gris-tipo1);
+	border-radius: 5px;
+}
+
+/***********************************SECCIONES PRELIMINARES NOTICIAS**************************************/
+
+
+.contenedor-seccion-preliminar{
+	width: 300px;
+}
+
+.titulo-img{
+	width: 100%;
+	height: 50px;
+	padding: 5px;
+	text-align: justify;
+	position: absolute;
+	bottom: 0;
+	background: var(--azul);
+	color: var(--blanco);
+	opacity: .8;
+}
+
+/***********************************SECCIONES PRELIMINARES IMG SIN TXT*****************************************/
+
+/*.contenedor-seccion-preliminar-img-ajustable{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.contenedor-seccion-preliminar-img-ajustable img{
+	max-width: 100%;
+	max-height: 100%;
+}*/
+
+/***********************************SECCIONES PRELIMINARES IMG CON TXT*****************************************/
+
+.contenedor-seccion-preliminar-img{
+	width: 300px;
+	height: 300px;
+    /*box-shadow: 0 4px 6px #000;*/
+    border: 5px solid var(--gris-tipo1);
+    overflow: hidden;
+    position: relative;
+}
+
+.contenedor-seccion-preliminar-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.contenedor-cuerpo-txt-preliminar{
+	width: 100%;
+	max-height: 100px;
+}
+
+.contenedor-cuerpo-txt-preliminar p{
+	padding: 5px;
+	max-height: 70px;
+    text-align: justify;
+    line-height: 20px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+
+/************************************************************************************************FIN SECCIÓN PRELIMINAR***********************************************************************/
+
+/************************************************************************************************SECCIÓN IMG PARALLAX***********************************************************************/
+.contenedor-img-parallax{
+	position: relative;
+    width: 100%;
+}
+
+.img-parallax{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background:url(../img/contacto.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.img-parallax .proyectos{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.img-parallax .proyectos h1{
+    font-size: 50px;
+    color:#fff;
+    font-weight: 200;
+}
+
+.img-parallax .proyectos hr{
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin-top: 5px;
+}
+.img-parallax .proyectos p{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+}
+.img-parallax .proyectos > button{
+    width: 170px;
+    height: 40px;
+    background: var(--azul);
+    border-radius: 24px;
+    border:none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.img-parallax .proyectos > button:hover{
+    background:var(--azul-bajo);
+}
+
+
+/************************************************************************************************FIN SECCIÓN IMG PARALLAX***********************************************************************/
+
+/************************************************************************************************SECCIÓN PROYECTOS***********************************************************************/
+
+/** Nuestros proyectos **/
+.our-projects{
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    background: url(../img/textura1.jpg);
+    background-attachment:fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+}
+.our-projects .deg-background{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(27,57,106,0.8);
+}
+.our-projects .ejeZproject{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.our-projects .container-project{
+    width: 90%;
+    margin:auto;
+    padding-top: 100px;
+}
+.our-projects .container-project .project-title{
+    border:2px solid #fff;
+    padding:10px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+.our-projects .container-project .project-title h2{
+    font-size: 40px;
+    color: #fff;
+    font-weight: normal;
+}
+.our-projects .container-project .project-title hr{
+   background:#fff;
+   width: 50%;
+   height: 3px;
+   margin: 10px auto;
+}
+.our-projects .container-project .project-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
+.our-projects .container-project .project-img img{
+  width: calc(30% - 10px);
+  margin:10px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/************************************************************************************************FIN SECCIÓN PROYECTOS***********************************************************************/
+
+/************************************************************************************************SECCIÓN CONTACTANOS***********************************************************************/
+
+.contenedor-secciones{
+	width: calc(100% - 50px);
+	margin: 10px auto;
+}
+
+.info-contacto-1{
+	width: 100%;
+    background: var(--gris-tipo1);
+}
+
+.info-contacto-2{
+	padding-top: 25px;
+	padding-bottom: 50px;
+	width: 80%;
+    margin: auto;
+    background: var(--gris-tipo1);
+}
+
+.info-contacto p{
+
+	margin: 0 0 10px;
+}
+
+.contacto{
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+.contenedor-contacto{
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	background: var(--gris-tipo1);
+	border-radius: 5px;
+}
+
+.foto-contacto{
+	width: 350px;
+	height: 350px;
+	overflow: hidden;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.7);
+
+}
+
+.foto-contacto img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+    object-position: center;
+    border: 5px solid var(--blanco);
+}
+
+.contenedor-cuerpo-contacto{
+	width: 100%;
+	text-align: center;
+}
+
+.contenedor-txt-contacto{
+	padding: 10px;
+	text-transform: uppercase;
+}
+
+.contenedor-txt-contacto p{
+	padding-bottom: 10px;
+	color: var(--azul);
+}
+
+.contenedor-txt-contacto h3{
+	padding-bottom: 10px;
+	color: var(--verde);
+}
+
+/************************************************************************************************FIN SECCIÓN CONTACTANOS***********************************************************************/
+
+
 
 .contenedor-cuerpo-seccion{
 	width: 100%;
@@ -284,60 +743,7 @@
 	color:#000;
 }
 
-/******************************SECCIONES CONTACTO************************************/
-
-
-.contenedor-contacto{
-	display: flex;
-	align-items: center;
-	padding: 10px;
-}
-
-.foto-contacto{
-	width: 350px;
-	height: 350px;
-	overflow: hidden;
-	box-shadow: 0 10px 10px rgba(0,0,0,0.7);
-
-}
-
-.foto-contacto img{
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-    object-position: center;
-    border: 5px solid var(--blanco);
-}
-
-.contenedor-cuerpo-contacto{
-	width: 100%;
-	text-align: center;
-}
-
-.contenedor-txt-contacto{
-	padding: 10px;
-	text-transform: uppercase;
-}
-
-.contenedor-txt-contacto p{
-	padding-bottom: 10px;
-	color: var(--azul);
-}
-
-.contenedor-txt-contacto h3{
-	padding-bottom: 10px;
-	color: var(--verde);
-}
-
 /******************************SECCIONES PRINCIPALES PARTIDO EN 2 COLUMNAS************************************/
-
-.contenedor-seccion-centrado{ /* --------->Seccion de Noticias inicio*/
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 20px;
-	background-image: url("/img/TecFCP.png");
-}
 
 .contenedor-noticias{
 	width: 100%;
@@ -345,48 +751,8 @@
 	padding: 10px;
 }
 
-.contenedor-seccion-noticias{
-	display: inline-block;
-	margin: 10px 10px 0px 0px;
-}
 
-.contenedor-titulo-contenido{
-	width: 100%;
-	height: 50px;
-	display: flex;
-	align-items: center;
-	padding: 10px;
-	text-align: justify;
-	color: var(--azul);
-}
 
-.contenedor-titulo-contenido h3{
-	overflow: hidden;
-	white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.contenedor-cuerpo-contenido{
-	width: 400px;
-	box-shadow: 0 4px 6px #000;
-	background: var(--blanco);
-}
-
-.contenedor-img-contenido{
-	width: 400px;
-	height: 400px;
-    /*box-shadow: 0 4px 6px #000;*/
-    border: 5px solid var(--blanco);
-    overflow: hidden;
-    position: relative;
-}
-
-.contenedor-img-contenido img{
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-    object-position: center;
-}
 /*
 .contenedor-img-dividido-inicio img{
 	transition: transform .5s;	
@@ -489,19 +855,6 @@ border-radius: 5px;
 opacity: 0.5;
 }
 
-/************************************FECHA Y HORA***********************************/
-
-.seccion-fecha-noticia{
-	width: 100%;
-	padding: 20px;
-	text-align: center;
-	position: absolute;
-	bottom: 0;
-	background: var(--azul);
-	opacity: .8;
-	color: var(--blanco);
-}
-
 .contenedor-img-dividido{
 	max-width: 100%;
 	max-height: 800px;
@@ -529,25 +882,6 @@ opacity: 0.5;
 
 /******************************SECCIONES CUERPO PARTIDO EN 2 COLUMNAS************************************/
 
-.contenedor-cuerpo-txt{/* --------->Seccion de Noticias texto inicio*/
-	width: 100%;
-	max-height: 100px;
-
-	/*box-shadow: 0 4px 6px #000;*/
-	/*overflow: auto; Aplica Scroll automatico ---> Modificar que cuando supere la catidad maxima de 200px el texto puede ver todo el contenido en un MODAL*/
-
-}
-
-.contenedor-cuerpo-txt p{ 
-	padding: 5px;
-	max-height: 70px;
-    text-align: justify;
-    line-height: 20px;
-    overflow:hidden;
-    white-space:nowrap;
-    text-overflow: ellipsis;
-
-}
 
 .contenedor-texto-dividido{ /* --------->Seccion de Noticias texto seccion noticia individual*/
 	width: 100%;
@@ -576,18 +910,34 @@ opacity: 0.5;
 	border-bottom: 3px solid var(--blanco);
 	display: flex;
 	align-items: center;
+	border-radius: 5px;
 }
 
 .contenedor-titulo-seccion h3{
-	min-width: fit-content;
     text-transform: uppercase;
     color: var(--blanco);
     padding: 2%;
-    padding-left: 5px;
-    padding-right: 5px;
-    text-align: center;
+    text-align: justify;
 
 }
+
+.contenedor-titulo-seccion-mas{
+	width: 100%;	
+	min-height: 50px;
+	margin: auto;
+	background: var(--naranja);
+	/*border-bottom: 3px solid var(--blanco);*/
+	border-radius: 5px;
+}
+
+.contenedor-titulo-seccion-mas h3{
+    text-transform: uppercase;
+    color: var(--blanco);
+    padding: 2%;
+    text-align: center;
+}
+
+
 .tlinea{
 	width: 100%;
 	height: 3px;
@@ -645,130 +995,6 @@ opacity: 0.5;
     display: none;
 }
 
-/***************************************SECCIONES SELECT FORMULARIO ***************************************/
-
-.contenedor-select-seccion select.seleccion{			/* clase de los Items de Seleccion del Área*/
-	position: relative;
-	width: 100%;
-	height: 50px;
-	background: var(--azul);
-	border: none;
-	box-shadow: none;
-	outline: none;
-	cursor: pointer;
-	color: var(--blanco);
-	border-bottom: 1px solid var(--verde);
-	font-size: 18px;
-	cursor: pointer;
-	padding: 10px; /****deja un espacio interno el select****/
-}
-
-/***************************************SECCIONES PRINCIPALES TITULOS CON SELECT***************************************/
-
-.contenedor-titulo-seccion-select{
-	width: calc(100% - 40px);
-	min-height: 50px;
-	margin: 2% auto;
-	background: var(--azul);
-	border: 2px solid var(--verde);
-	position: relative;
-	display: flex;
-	align-items: center;
-	border-radius: 10px;
-}
-
-.contenedor-titulo-seccion-select h3{
-	width: 70%;
-	font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    color: var(--blanco);
-    padding: 2%;
-    text-align: left;
-}
-
-.contenedor-titulo-seccion-select h4{
-	width: 30%;
-	font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    color: var(--blanco);
-    padding: 2%;
-    text-align: center;
-}
-
-/************************************************************************************************SECCIÓN PRELIMINAR***********************************************************************/
-
-.contenedor-previsualizar-seccion{
-	width: 100%;
-	text-align: center;
-}
-
-/***********************************SECCIONES PRELIMINARES NOTICIAS**************************************/
-
-
-.contenedor-seccion-preliminar{
-	width: 300px;
-	box-shadow: 0 4px 6px #000;
-	background: var(--blanco);
-}
-
-/************SECCIONES PRELIMINARES IMG NOTICIA**********************/
-/*
-.contenedor-seccion-preliminar h2{
-	font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    text-shadow: 0 1px 1px #000;
-    text-align: center;
-    font-size: 18px;
-    margin: 20px 0px;
-    line-height: 20px;
-    padding: 5px;
-}*/
-
-.titulo-img{
-	width: 100%;
-	height: 50px;
-	padding: 5px;
-	text-align: justify;
-	position: absolute;
-	bottom: 0;
-	background: var(--azul);
-	color: var(--blanco);
-	opacity: .8;
-}
-
-/***********************************SECCIONES PRELIMINARES IMG SIN TXT*****************************************/
-
-/*.contenedor-seccion-preliminar-img-ajustable{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-
-.contenedor-seccion-preliminar-img-ajustable img{
-	max-width: 100%;
-	max-height: 100%;
-}*/
-
-/***********************************SECCIONES PRELIMINARES IMG CON TXT*****************************************/
-
-.contenedor-seccion-preliminar-img{
-	width: 300px;
-	height: 300px;
-    /*box-shadow: 0 4px 6px #000;*/
-    border: 5px solid var(--blanco);
-    overflow: hidden;
-    position: relative;
-}
-
-.contenedor-seccion-preliminar-img img{
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: center;
-}
 
 /************************************************************************************************SECCIÓN LISTA DE SLIDER***********************************************************************/
 
@@ -856,99 +1082,54 @@ opacity: 0.5;
 }
 
 /************************************************************************************************SECCIÓN FORMULARIOS***********************************************************************/
+#formulario{
+	background: var(--gris-tipo1);
+	padding: 10px;
+	border-radius: 5px;
+	margin-top: 10px;
+
+}
 
 .formulario{
-	font-family: 'Roboto', sans-serif;
-	width: calc(100% - 40px);
-	margin: 2% auto;
-	display: block;
+	width: 100%;
+	/*margin: 2% auto;*/
+	margin: auto;
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .formulario input{
-	font-family: 'Roboto', sans-serif;
-	display: block;
-	text-align: center;
     width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    background-color: var(--blanco);
-    background-clip: padding-box;
-    border: 1px solid var(--verde);
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    height: 40px;
+    margin:auto;
+    border-radius: 5px;
+    outline: none;
+    border:1.5px solid var(--naranja);
+    text-align: center;
+    font-size: 18px;
+    color: var(--black);
 }
 
 .formulario label{
-	display: inline-block;
-    margin-bottom: .5rem;
-    text-align: center;
+    font-size: 18px;
+    text-align: left;
+    color: var(--black);
+    margin: 30px 0px 10px 0px;
 }
 
 .formulario textarea{
 	font-family: 'Roboto', sans-serif;
-	display: block;
-	text-align: justify;
     width: 100%;
-    height: 250px;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    background-color: var(--blanco);
-    background-clip: padding-box;
-    border: 1px solid var(--verde);
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    height: 500px;
+    margin:auto;
+    padding: 20px;
+    border-radius: 5px;
+    outline: none;
+    border:1.5px solid var(--naranja);
+    font-size: 18px;
+    color: var(--black);
 
-}
-
-.formulario select{
-	font-family: 'Roboto', sans-serif;
-	display: block;
-	text-align: center;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    background-color: var(--blanco);
-    background-clip: padding-box;
-    border: 1px solid var(--verde);
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    cursor: pointer;
-}
-
-.formulario-check{
-	font-family: 'Roboto', sans-serif;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.formulario-check input[type="checkbox"] {
-	display: none;
-}
-
-.formulario-check input[type="checkbox"] + label span {
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	margin: -1px 4px 0 0;
-	vertical-align: middle;
-	background: url(/img/checkbox-uncheck.png);
-	background-size: cover;
-	cursor: pointer;
-}
-
-.formulario-check input[type="checkbox"]:checked + label span {
-	background: url(/img/checkbox-check.png);
-	background-size: cover;
 }
 
 /***********************************TABLAS*****************************************/
@@ -1298,6 +1479,27 @@ border: 0 none;
 	overflow: hidden;
 }
 
+/****BOTONES LEER NOITICA 1****/
+
+.btn-leer{
+	width: 100%;
+	height: 100%;
+	background: var(--azul);
+	border: none;
+	outline-style: none;
+	transition: all .7s;
+	cursor: pointer;
+	text-align: center;
+	color: var(--blanco);
+	font-size: 18px;
+}
+
+.btn-leer:hover{
+	background: var(--naranja);
+	transition: .7s;
+}
+
+
 /****BOTONES GENERAL****/
 
 .btn {
@@ -1475,28 +1677,16 @@ border: 0 none;
 
 /***************************COLORES**************************************/
 
-.eliminar{
-	background: #E74C3C ;
-}
-
 .guardar{
 	background: #229954;
 }
 
 .cancelar{
-	background: #F39C12;
-}
-
-.editar{
-	background: #0b231e;
-}
-
-.agregar{
-	background: #229954;
+	background: #E74C3C;
 }
 
 .ver{
-	background: #34495E;
+	background: #013253;
 }
 
 .volver{
@@ -1505,6 +1695,12 @@ border: 0 none;
 
 .finalizar{
 	background: #0174DF;
+}
+
+.mas{
+	
+	background: #f1592a;
+
 }
 
 /************************************************************************************************PAGINACIÓN**************************************************************************/

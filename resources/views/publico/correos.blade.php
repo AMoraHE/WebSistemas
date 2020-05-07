@@ -16,43 +16,74 @@
 
 <div class="seccion-principal">
 
-	<div class="contenedor-titulo-seccion">
+	<!------------------------------------------------------------- IMG PARALLAX ----------------------------------------------------------->
 
-		<div class="tlinea"></div>
-	
-		<h3>Contactos</h3>
+	<div class="contenedor-img-parallax">
 
-		<div class="tlinea"></div>
+	    <div class="img-parallax"> <!--style="background:url(../img/contacto.jpg);"-->
+	     <div class="proyectos">
+	       <h1>Queremos saber de ti</h1>
+	       <hr>
+
+	     </div>       
+	    </div>
+
+	    <div class="skew-abajo"></div>
 
 	</div>
 
-	<div class="contenedor-contacto">
+	<!------------------------------------------------------------- INFO ----------------------------------------------------------->
+		<div class="info-contacto-1">
 
-		<div class="foto-contacto">
+			<div class="info-contacto-2">
+				
+			<p class="contacto">Nos interesa conocer tus opiniones y dudas sobre la carrera.</p>
+		    <p>Escríbenos y nos pondremos en contacto contigo.</p>
+
+		    </div>
 			
-			<img src="{{ asset('img/Mora.jpeg')}}">
+		</div>
+
+	<div class="contenedor-secciones">
+			
+
+		<div class="contenedor-titulo-seccion-mas">
+
+		
+			<h3>Contactos</h3>
+
 
 		</div>
 
-		<div class="contenedor-cuerpo-contacto">
-			
-		
-			<div class="contenedor-txt-contacto">
-				<p>División ISC</p>
-				<p>Jefa de la academia</p>
-				<p>MC. MAHALETH SALINAS SEGURA</p>
-				
-				@php
-					$var = 'm.salinas@itscarrillopuerto.edu.mx'
-				@endphp
+		<div class="contenedor-contacto">
 
-				<h3>m.salinas@itscarrillopuerto.edu.mx</h3>
+			<div class="foto-contacto">
+				
+				<img src="{{ asset('img/Mora.jpeg')}}">
 
 			</div>
 
-			<div class="contenedor-botones">
+			<div class="contenedor-cuerpo-contacto">
 				
-				<a href="/isc-inicio-formContacto/{{$var}}"><button class="btn"><span>Contactar</span></button></a>
+			
+				<div class="contenedor-txt-contacto">
+					<p>División ISC</p>
+					<p>Jefa de la academia</p>
+					<p>MC. MAHALETH SALINAS SEGURA</p>
+					
+					@php
+						$var = 'm.salinas@itscarrillopuerto.edu.mx'
+					@endphp
+
+					<h3>m.salinas@itscarrillopuerto.edu.mx</h3>
+
+				</div>
+
+				<div class="contenedor-botones">
+					
+					<a href="/isc-inicio-formContacto/{{$var}}"><button class="btn"><span>Contactar</span></button></a>
+
+				</div>
 
 			</div>
 

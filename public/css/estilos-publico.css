@@ -22,18 +22,19 @@ html {
 body {
     position: relative;
     margin: 0;
-    padding-top: 50px;
-    width: 1920px;
-    min-width: 320px;
+    /*width: 1920px;*/
+    width: 100%;
+    min-width: 350px;
     min-height: 100%;
     background: #fff;
     font-family: 'Roboto', sans-serif;
-    line-height: 18px;
+    line-height: 2;
+    overflow-x: hidden;
 }
 
-header{
-    margin-bottom: 20px;
-    border-bottom: 1px solid #e0e4e8;
+header {
+    width: 100%;
+    background: #1B396A;
 }
 
 a {
@@ -44,6 +45,7 @@ a {
 .contenedor{
     width: 100%;
     margin: 0 auto;
+    position: relative;
 }
 
 /**************************************************************************************************
@@ -70,14 +72,6 @@ Boton Cerrar Sesión************************************************************
     align-items: center;
     padding: 5px;
     color: #fff;
-}
-
-.divisor{
-    background: #1B396A;
-    padding: 2%;
-    /*margin: 10px auto;*/
-    position: relative;
-    min-height: 20px;
 }
 
 /**************************************************************************************************
@@ -138,7 +132,6 @@ img#isc {
 }
 
 .contenedor-txt h1 {
-    font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     font-size: 36px;
 }
@@ -160,113 +153,82 @@ BODY****************************************************************************
 
 /**************************************************
 MENU**********************************************/
-.btn-menu {
-    min-width: 320px;
-    display:none;
-    padding: 20px;
+
+.menu {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     background: #1B396A;
-    color: #fff;
-}
-.btn-menu .icono {
-    float: right;
-}
-.navegacion{
-    width: 100%;
-    background: #1B396A;
-    border-bottom: 0;
-    position: fixed;
-    top: 0;
-    z-index: 999;
 }
 
-.navegacion ul{
-    list-style: none;
-    z-index: 3;
-}
-
-.menu > li{
-    position: relative;
+.menu .logo {
     display: inline-block;
+    margin-right: 1em;
+    
 }
 
-.menu > li > a{
-    display: block;
-    padding: 20px 20px;
+.menu .logo img {
+    vertical-align: top;
+    height: 50px;
+}
+
+.menu .btn-menu {
+    display: none;
     color: #fff;
     text-decoration: none;
+    font-size: 1em;
 }
 
-.menu li a:hover{
-    color: #CE7D35;
-    background: #f2f2f2; /*Color del hover*/
-    transition: all .3s;
-}
-
-.navegacion .menu .icono {
-    font-size: 12px;
-    line-height: 18px;
-}
-.navegacion .menu .icono.izquierda {
-    float: left;
-    margin-right: 10px; 
-}
-.navegacion .menu .icono.derecha {
-    float: right;
-    margin-left: 10px; 
-}
-
+.menu .logo:hover {
+    background: #4357ad;/* color fondo logo*/
 
 }
-/*submenu hover*/
-.contenedor-menu .menu li:hover > ul {
-    display: block;
-    background: #1a95d5; 
-    color: #fff;
-
+menu .enlaces {
+    display: inline-block;
+    text-align: right;
 }
-
-/* Submenu*/
-
-.submenu{
-    position: absolute;
-    background: #333333;
-    width: 150%;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 1.5s;
-}
-
-.submenu li a{
-    display: block;
-    padding: 15px;
+.menu .enlaces a {
     color: #fff;
     text-decoration: none;
+    display: inline-block;
+    padding: 1em;
+    text-align: center;
+    font-size: 1em;
+
 }
 
-.menu li:hover .submenu{
-    visibility: visible;
-    opacity: 1;
+.menu .enlaces i {
+    margin-right: 5px;
 }
-
+.menu .enlaces a:hover {
+    color: #8f8f8f;
+}
 
 /**************************************************************************************CONTENEDOR INFORMACION*************************************/
 
 
 /**************************************************
-SLIDER********************************************/
+SLIDER*******************************************
 
 
 .contenedor-slider{
     width: 100%;
-    margin: 0px auto 50px auto;
-}
+    overflow: hidden;
+}*/
 
 /**************************************************
 CONTENIDO*****************************************/
 
-.contenedor-contenido{
+/*.contenedor-contenido{
     width: 100%;
-}
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
 
 /**************************************************
 CALENDARIO****************************************/
@@ -290,7 +252,6 @@ footer{
 
 footer p{
     color: #fff;
-    font-family: 'Roboto', sans-serif;
     line-height: 18px;
 }
 
