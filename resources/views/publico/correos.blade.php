@@ -21,7 +21,7 @@
 	<div class="contenedor-img-parallax">
 
 	    <div class="img-parallax"> <!--style="background:url(../img/contacto.jpg);"-->
-	     <div class="proyectos">
+	     <div class="parallax">
 	       <h1>Queremos saber de ti</h1>
 	       <hr>
 

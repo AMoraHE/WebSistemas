@@ -19,7 +19,7 @@
 	<div class="contenedor-img-parallax">
 
 	    <div class="img-parallax">
-	     <div class="proyectos">
+	     <div class="parallax">
 	       <h1>Noticias</h1>
 	       <hr>
 	     </div>       
@@ -41,11 +41,15 @@
         	<form  files = "true" method="GET" action="/isc-inicio-buscadorNoticias" enctype="multipart/form-data">
           		@csrf
 
-          		<div class="formulario">
+          		<div class="contenedor-secciones">        			
 
-					<input type="search" name="key" placeholder="Noticia">
-					<button type="submit" class="btn-buscar"><span><i class="icono izquierda fas fa-search"></i></span></button>
+	          		<div class="formulario">
 
+						<input type="search" name="key" placeholder="Noticia">
+						<button type="submit" class="btn-buscar"><span><i class="icono izquierda fas fa-search"></i></span></button>
+
+
+					</div>
 
 				</div>
 
@@ -55,24 +59,25 @@
 
 	</div>
 
-<!----------------------------------------------------------------- NOTICIAS----------------------------------------------------------------------------->
+<!----------------------------------------------------------------- NOTICIAS ----------------------------------------------------------------------------->
 
-<div class="contenedor-noticias">
+
+
+<div class="contenedor-secciones">
 	
 	@foreach ($noticias as $noticia)
 
+
+	<div class="contenedor-titulo-contenido">
+				
+		<h3>{{$noticia->titulo}}</h3>
+
+	</div>
+
 	<div class="contenedor-seccion-noticias">
 
+		<div class="contenedor-img-contenido-noticia">
 
-		<div class="contenedor-cuerpo-contenido">
-
-			<div class="contenedor-titulo-contenido">
-				
-				<h3>{{$noticia->titulo}}</h3>
-
-			</div>
-
-			<div class="contenedor-img-contenido">
 
 				<img src="/images/news/{{$noticia->newimage}}">
 
@@ -82,25 +87,29 @@
 
 				</div>
 
-			</div>
+			
+		</div>
 
-			<div class="contenedor-cuerpo-txt">
+
+		<div class="contenedor-cuerpo-contenido-noticia">
+
+			<div class="contenedor-cuerpo-txt-noticia">
 
 				<p>{{$noticia->redaccion}}</p>
 
+				<div class="seccion-continuacion">
+
+					<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticiasVerInd/{{$noticia->id}}"><button class="btn-leer"><span>Leer Más...</span></button></a>
+						
+				</div>
+
 			</div>
-
-
-			<div class="contenedor-botones">
-
-					<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticiasVerInd/{{$noticia->id}}"><button class="btn"><span>Leer Más...</span></button></a>
-				
-			</div>
-		
 
 		</div>
 
 	</div>
+
+	<div class="seccion-divisor-noticia"></div>
 
 <!-------------------------------------------------------------- Paginacion ----------------------------------------------------------------------------->
 

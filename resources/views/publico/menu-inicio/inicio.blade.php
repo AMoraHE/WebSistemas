@@ -68,11 +68,12 @@
 		
 	</div>
 
+
+<div class="contenedor-dividido">
+
 @foreach ($noticias as $noticia)
 	
 	@if($loop->first)
-
-<div class="contenedor-dividido">
 
 	<div class="contenedor-noticia-1">
 		
@@ -109,15 +110,13 @@
 
 				</div>
 
-
 		</div>
 
-			<div class="contenedor-botones">
-
-				
-			</div>
-
 	</div>
+
+	@endif
+
+@endforeach
 
 <!------------------------------------------------------------- CALENDARIO ---------------------------------------------------------->
 
@@ -158,9 +157,6 @@
 
 </div>
 
-	@endif
-
-@endforeach
 
 <!------------------------------------------------------------- PREVISUALIZACIÓN ---------------------------------------------------------->
 
@@ -175,7 +171,7 @@
 
 		@foreach ($noticias as $noticia)
 
-		<div class="contenedor-seccion-noticias">
+		<div class="contenedor-seccion-noticias-preliminar">
 				
 			<div class="contenedor-seccion-preliminar">
 

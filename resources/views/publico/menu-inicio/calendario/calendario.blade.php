@@ -14,7 +14,7 @@
       <div class="contenedor-img-parallax">
 
           <div class="img-parallax">
-           <div class="proyectos">
+           <div class="parallax">
              <h1>Eventos Escolares</h1>
              <hr>
            </div>       
