@@ -1,0 +1,172 @@
+/************************************************************************************************SECCIÓN CONOCENOS MVO***********************************************************************/
+
+.fondo-mvo{
+	background:url(../img/textura3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; 
+}
+
+.contenedor-texto-mvo{
+	width: 100%;
+	min-height: 250px;
+    margin: auto;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+	border: 2px solid var(--verde);
+	border-radius: 10px;
+}
+
+.contenedor-mvo{
+	width: 100%;
+	height: 434px;
+    background-color: #d9dfffe0; 
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.contenedor-mvo:nth-child(odd){
+	background-color: #fff
+}
+
+.contenedor-mvo-subapartado{
+	width: 90%;
+	margin: auto;
+}
+.contenedor-img-mvo{
+	width: 45%;
+	height: 273px;
+	margin: 30px auto;
+	float: left;
+}
+
+.imagen-mvo{
+	 display: block;
+	 margin: auto; 
+}
+
+.contenedor-img-mvo2{
+	width: 45%;
+	height: 273px;
+	margin: 30px auto;
+	float: right;
+}
+
+.contenedor-titulo-mvo{
+	width:50%;
+	height:max-content;
+	float: right;
+}
+
+
+.contenedor-titulo-mvo p{
+	color: #f1592a;
+	padding: 10px;
+	padding-bottom: 10px;
+	font-size: 28pt;
+	line-height: 1.42857143;
+	text-align: left;
+}
+
+.contenedor-titulo-mvo-2{
+	width:50%;
+	height:max-content;
+	float: left;
+}
+
+
+.contenedor-titulo-mvo-2 p{
+	color: #f1592a;
+	padding: 10px;
+	padding-bottom: 10px;
+	font-size: 28pt;
+	line-height: 1.42857143;
+	text-align: left;
+}
+
+.info-mvo{
+	display: block;
+	width:100%;
+	height:200px;
+}
+
+.info-mvo p{
+	text-align: justify;
+	font-size: 18pt;
+	color:#000;
+}
+
+
+/************************************************************************************************FIN SECCIÓN MVO***********************************************************************/
+
+
+/*******************************************************SECCIONES ACORDEON******************************************/
+.contenedor-texto-completo-acordeon{
+	width: 100%;
+	min-height: 500px; 
+    padding: 10px;
+}
+
+.contenedor-acordeon{
+	display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: -webkit-center;
+}
+.contenedor-acordeon-subapartado{
+	width:80%;
+	min-height:50px;
+	-webkit-transiton: height 0.3s;
+	border-radius: 5px;
+	margin-bottom: 1em;
+	cursor: pointer;
+}
+
+.contenedor-titulo-acordeon{
+	width:100%;
+	height:50px;
+	background-color: #1b396a;
+	overflow: hidden;
+	font-family: 'Roboto', sans-serif;
+	border-bottom: 1px solid #39f58f;
+	border-radius: 5px;
+}
+
+.contenedor-titulo-acordeon p{
+	margin:13px;
+	color: white;
+	text-shadow: 0px 1px 0px white;
+	text-transform: uppercase;
+}
+
+.info-acordeon{
+	display: none;
+	width:100%;
+	height:auto;
+	background-color: #f5f5f5;
+	overflow: hidden;
+}
+
+.info-acordeon p{
+	margin:20px;
+	text-align: justify;
+	color:#000;
+}
+
+.info-acordeon-centrado{
+	display: none;
+	width:100%;
+	height:auto;
+	background-color: #f5f5f5;
+	opacity: 0.9;
+	overflow: hidden;
+}
+
+.info-acordeon-centrado p{
+	margin:20px;
+	text-align: center;
+	color:#000;
+}

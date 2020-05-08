@@ -73,7 +73,7 @@
 	@endif	
 
 
-	@if($informacion->categoria == 'OBjetivo de la Carrera')
+	@if($informacion->categoria == 'Objetivo de la carrera')
 		<div class="contenedor-mvo">
 
 				<div class="contenedor-mvo-subapartado">
