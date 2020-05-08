@@ -14,20 +14,26 @@
 
 <div class="seccion-principal">
 
-	<!------------------------------------------------------------- IMG PARALLAX ----------------------------------------------------------->
+    <!------------------------------------------------------------- IMG Encabezado ----------------------------------------------------------->
 
-	<div class="contenedor-img-parallax">
+      <div class="contenedor-img-encabezado">
 
-	    <div class="img-parallax">
-	     <div class="parallax">
-	       <h1>Noticias</h1>
-	       <hr>
-	     </div>       
-	    </div>
+          <div class="img-encabezado">
 
-	    <div class="skew-abajo"></div>
+            <img src="/img/Noticias.png">
 
-	</div> 
+            <div class="encabezado">
+
+            	<h1>Noticias</h1>
+            	<hr>
+
+            </div>
+
+          </div>   
+
+          <div class="skew-abajo"></div>
+
+      </div>
 
 <!--------------------------------------------------------------------------NOTICIA---------------------------------------------------------------------->
 

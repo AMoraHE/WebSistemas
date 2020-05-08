@@ -325,6 +325,62 @@
 
 /************************************************************************************************FIN SECCIÓN IMG PARALLAX***********************************************************************/
 
+/************************************************************************************************SECCIÓN IMG ENCABEZADO***********************************************************************/
+
+.contenedor-img-encabezado{
+	position: relative;
+    width: 100%;
+}
+
+.img-encabezado{
+	position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.img-encabezado img{
+	width: 100%;
+	height: 100%; /***Hacer Responsivo***/
+	object-fit: cover;
+	object-position: center;
+}
+
+.encabezado{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.encabezado h1{
+    font-size: 50px;
+    color:#fff;
+    font-weight: 200;
+}
+
+.encabezado hr{
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin-top: 5px;
+}
+.encabezado p{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+
+/************************************************************************************************FIN SECCIÓN IMG ENCABEZADO***********************************************************************/
+
 /************************************************************************************************SECCIÓN PROYECTOS***********************************************************************/
 
 /** Nuestros proyectos **/
@@ -693,7 +749,6 @@
     border:1.5px solid var(--naranja);
     text-align: center;
     font-size: 18px;
-    color: var(--black);
 }
 
 .formulario label{
@@ -713,8 +768,6 @@
     outline: none;
     border:1.5px solid var(--naranja);
     font-size: 18px;
-    color: var(--black);
-
 }
 
 /***********************************TABLAS*****************************************/
@@ -814,54 +867,66 @@
 
 .contenedor-modal-dividido{
 	width: 100%;
-	background: red;
+	background: var(--blanco);
 	display: flex;
-	padding: 10px;
+	border-radius: 5px;
 }
 
 .contenedor-modal-info{
-	background: blue;
 	width: calc(100% - 250px);
-	height: 250px;
+	height: 300px;
+	overflow: auto;
 }
 
-
+.contenedor-modal-info p{
+	padding: 10px;
+	font-size: 1em;
+	text-align: justify;
+}
 
 .s-color{
-	background: green;
 	width: 250px;
-	height: 250px;
+	height: 300px;
 	/*margin: 2% auto;*/
 	margin: auto;
 	display: flex;
     justify-content: center;
     flex-direction: column;
     position: relative;
-
 }
 
 .s-color input{
 	width: 100%;
 	height: 100%;
-	border: none;
+    outline: none;
+    border: none;
+}
+
+.s-color input:disabled{
+	background: transparent;
 }
 
 .contenedor-fecha-cal{
 	width: 100%;
-	background: blue;
 	position: absolute;
-	color: #fff;
+	color: var(--azul);
 	text-align: center;
+	background: var(--blanco);
 }
 
-.contenedor-fecha-cal input{
-	height: auto;
-	font-size: 20px;
+.FeCh{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.FeCh h3{
+	font-size: 18px;
 	font-weight: 400;
 }
 
-.contenedor-fecha-cal p{
-	text-align: center;
+.FeCh p{
+	margin: auto 10px;
 }
 
 /************************************************************************************************SECCIÓN BOTONES***********************************************************************/

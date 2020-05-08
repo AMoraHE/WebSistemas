@@ -30,7 +30,7 @@
 	box-shadow: 0 0 6px 0 rgba(0,0,0,.4);
 	animation-name: modal;
 	animation-duration: 1s;
-	border: 2px solid #f1592a;
+	border: 2px solid #8cc63e;
 }
 
 @keyframes modal{
@@ -72,7 +72,7 @@
 
 
 .modal-cuerpo{
-	padding: 20px 16px;
+	padding: 10px;
 }
 
 .contenedor-botones-modal{

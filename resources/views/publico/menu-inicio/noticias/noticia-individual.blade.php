@@ -8,20 +8,23 @@
 
 <div class="seccion-principal">
 
-		<!------------------------------------------------------------- IMG PARALLAX ----------------------------------------------------------->
+    <!------------------------------------------------------------- IMG Encabezado ----------------------------------------------------------->
 
-	<div class="contenedor-img-parallax">
+      <div class="contenedor-img-encabezado">
 
-	    <div class="img-parallax">
-	     <div class="parallax">
+          <div class="img-encabezado">
 
+            <img src="/img/Noticias.png">
 
-	     </div>       
-	    </div>
+            <div class="encabezado">
 
-	    <div class="skew-abajo"></div>
+            </div>
 
-	</div> 
+          </div>   
+
+          <div class="skew-abajo"></div>
+
+      </div>
 
 	<!----------------------------------------------------------------- NOTICIAS----------------------------------------------------------------------------->
 	<div class="contenedor-secciones"> 
