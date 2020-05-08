@@ -99,16 +99,13 @@ class PublicController extends Controller
     return view('publico.menu-conocenos.informacion-carrera.view-informacion-carrera', compact('informaciones'));
   }
 
-  public function perfilIngreso()
+  public function perfilCampoISC()
   {
     $perfilingreso = perfil_ingreso::all();
-    return view('publico.menu-conocenos.perfil-ingreso.view-perfil-ingreso', compact('perfilingreso'));
-  }
-
-  public function perfilEgreso()
-  {
     $perfilegreso = perfil_egreso::all();
-    return view('publico.menu-conocenos.perfil-egreso.view-perfil-ingreso', compact('perfilegreso'));
+    $campolaboral = campo_laboral::all();
+
+    return view('publico.menu-conocenos.perfil-campo-ISC.view-perfil-campo-ISC', compact('perfilingreso', 'perfilegreso', 'campolaboral'));
   }
 
   public function reticula()
@@ -152,12 +149,6 @@ class PublicController extends Controller
     $docente = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '6')->get();
 
     return view('publico.menu-conocenos.organigrama.view-organigrama', compact('director', 'laboratorio', 'docente'));
-  }
-
-  public function campoLaboral()
-  {
-    $campolaboral = campo_laboral::all();
-    return view('publico.menu-conocenos.campo-laboral.view-campo-laboral', compact('campolaboral'));
   }
 
   public function labCisco()
