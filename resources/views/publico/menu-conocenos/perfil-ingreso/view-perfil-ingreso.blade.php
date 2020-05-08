@@ -6,30 +6,33 @@
 
 <div class="seccion-principal">
 
-<!----------------------------------------------------------------- PERFIL INGRESO ---------------------------------------------------------->
-		
-	<div class="contenedor-titulo-seccion">
+<!------------------------------------------------------------- IMG PARALLAX ----------------------------------------------------------->
 
-		<div class="tlinea"></div>
+	<div class="contenedor-img-parallax">
 
-		<h3>Perfil Ingreso</h3>
+	    <div class="img-parallax">
+	     <div class="parallax">
+	       <h1>Información de la carrera</h1>
+	       <hr>
+	     </div>       
+	    </div>
 
-		<div class="tlinea"></div>
+	    <div class="skew-abajo"></div>
 
-	</div>
+	</div> 
+	
+<!-------------------------------------------------------------  PERFIL INGRESO ------------------------------------------------------->
 
-<!------------------------------------------------------------- CUERPO PERFIL INGRESO ------------------------------------------------------->
+	<div class="contenedor-componentes-info-carrera">
 
-	<div class="contenedor-componentes-principales">
+		<div class="contenedor-apartado">
 
-		<div class="contenedor-texto-completo-acordeon">
-
-			<div class="contenedor-acordeon">
+			<div class="contenedor-perfil">
 
 				@foreach ($perfilingreso as $perfilingres)
 				<div class="contenedor-acordeon-subapartado">
 				<div class="contenedor-titulo-acordeon">
-				<p>PERFIL {{$perfilingres->id}}<i class="icono-derecha fas fa-plus"></i></p>
+				<p>PERFIL {{$perfilingres->id}}</p>
 
 			</div>
 
@@ -47,9 +50,80 @@
 
 	</div>
 
-<!----------------------------------------------------------------- BOTONES PERFIL INGRESO ---------------------------------------------------------->
 
-		
+
+
+@endsection
+
+
+@section('content-perfilegres')
+<!----------------------------------------------------------------- PERFIL EGRESO---------------------------------------------------------->
+
+<div class="contenedor-componentes-info-carrera">
+
+		<div class="contenedor-apartado">
+
+			<div class="contenedor-perfil">
+
+				@foreach ($perfilegreso as $perfilegres)
+				<div class="contenedor-acordeon-subapartado">
+				<div class="contenedor-titulo-acordeon">
+				<p>PERFIL {{$perfilegres->id}}<i class="icono-derecha fas fa-plus"></i></p>
+
+			</div>
+
+				<div class="info-acordeon">
+
+					<p>
+					 {{$perfilegres->vineta}}
+					 {{$perfilegres->elemento}}
+					</p>
+				</div>
+				</div>
+				@endforeach
+
+
+
+			</div>
+
+		</div>
+
 </div>
 
 @endsection
+
+@section('content-campo')
+<!----------------------------------------------------------------- CAMPO LABORAL---------------------------------------------------------->
+
+<div class="contenedor-componentes-info-carrera">
+
+		<div class="contenedor-apartado">
+
+			<div class="contenedor-perfil">
+
+				@foreach ($campolaboral as $campolabora)
+				<div class="contenedor-acordeon-subapartado">
+					<div class="contenedor-titulo-acordeon">
+						<p>Campo laboral {{$campolabora->id}}<i class="icono-derecha fas fa-plus"></i></p>			
+					</div>
+
+					<div class="info-acordeon">
+
+								<p>{{$campolabora->vineta}} {{$campolabora->elemento}}</p>
+					</div>
+				</div>
+						
+					
+						
+				@endforeach
+
+
+			</div>
+
+		</div>
+
+</div>
+
+@endsection
+
+</div>
