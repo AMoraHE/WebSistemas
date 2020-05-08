@@ -252,7 +252,18 @@
 
           	@foreach($proyectos as $proyecto)
 
+          	<div class="contenedor-img-proyecto">
+          		
+          	
+
             	<img src="/images/proyectos/{{$proyecto->newimage}}" alt="">
+
+            	<div class="hover-galeria">
+                    <img src="/img/icono1.png" alt="">
+                    <p>{{$proyecto->proyecto}}</p>
+                </div>
+
+            </div>
 
             @endforeach
             

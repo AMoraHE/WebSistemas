@@ -4,8 +4,6 @@
 
 @section('content')
 
-
-</script>
   
   <div class="seccion-principal">
 
@@ -109,7 +107,41 @@
 
   							<div class="modal-cuerpo">
 
+                  <div class="contenedor-modal-dividido">
+
+                  <!-- COLOR-->
+
+                  <div class="s-color">
+
+
+                    <input type="color" value="#ff0000" id="txtColor" class="form-control" disabled>
+
+
+                    <div class="contenedor-fecha-cal">
+
+                      <h3>12/12/20</h3>
+                      <p>20:00</p>
+
+                    </div>
+                    
+
+                  </div>
+
+                  <!-- INFO-->
+
+                    
+                    <div class="contenedor-modal-info">
+
+
+                      
+                    </div>
+
+
+                  </div>
+
   								<input type="hidden" id="txtID" name="txtID">
+
+
 
   									<div class="formulario">
   										<label>Titulo:</label>
@@ -170,13 +202,6 @@
 
   									<label>Descripción:</label>
   									<textarea id="txtDescripcion" rows="3" class="form-control" readonly></textarea>
-
-  								</div>
-
-  								<div class="formulario">
-
-  									<label>Color:</label>
-  									<input type="color" value="#ff0000" id="txtColor" class="form-control" style="height:36px" disabled>
 
   								</div>
 

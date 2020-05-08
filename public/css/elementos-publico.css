@@ -229,7 +229,7 @@
 	margin: 10px 10px 0px 0px;
 	background: var(--gris-tipo1);
 	border-radius: 5px;
-	padding: 10px;
+	padding: 5px;
 }
 
 .contenedor-seccion-preliminar-img img{
@@ -338,7 +338,7 @@
     background-size: cover;
     margin-top: 100px;
 }
-.our-projects .deg-background{
+.deg-background{
     position:absolute;
     top: 0;
     left: 0;
@@ -346,35 +346,36 @@
     height: 100%;
     background:rgba(27,57,106,0.8);
 }
-.our-projects .ejeZproject{
+.ejeZproject{
     position: relative;
     width: 100%;
     height: 100%;
 }
-.our-projects .container-project{
+.container-project{
     width: 90%;
     margin:auto;
     padding-top: 100px;
 }
-.our-projects .container-project .project-title{
+.project-title{
     border:2px solid #fff;
     padding:10px;
     text-align: center;
     width: 50%;
     margin: auto;
 }
-.our-projects .container-project .project-title h2{
+.project-title h2{
     font-size: 40px;
     color: #fff;
     font-weight: normal;
 }
-.our-projects .container-project .project-title hr{
+.project-title hr{
    background:#fff;
    width: 50%;
    height: 3px;
    margin: 10px auto;
 }
-.our-projects .container-project .project-img{
+
+.project-img{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -382,12 +383,22 @@
     margin-top: 80px;
     padding-bottom: 100px;
 }
-.our-projects .container-project .project-img img{
-  width: calc(30% - 10px);
-  margin:10px;
+
+.contenedor-img-proyecto{
+	width: calc(30% - 10px);
+  	margin:10px;
+  	overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.contenedor-img-proyecto img{
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  cursor: pointer;
+  position: relative;
 }
 
 /************************************************************************************************FIN SECCIÓN PROYECTOS***********************************************************************/
@@ -768,7 +779,8 @@
 
 .mini-calendario{
 	width: 30%;
-	padding: 20px;
+	padding: 10px;
+	padding-top: 20px;
 	overflow: hidden;
 	background: var(--gris-tipo1);
 }
@@ -782,8 +794,8 @@
 }
 
 #CalendarioWeb {
-		max-width: 100%;
-		max-height: 100%;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .contenedor-formulario-dividido{
@@ -795,6 +807,61 @@
 
 .columna-de-dos{
 	width: 50%;
+	margin-right: 10px;
+}
+
+/***********************************************MODAL INFO CALENDARIO*******************************/
+
+.contenedor-modal-dividido{
+	width: 100%;
+	background: red;
+	display: flex;
+	padding: 10px;
+}
+
+.contenedor-modal-info{
+	background: blue;
+	width: calc(100% - 250px);
+	height: 250px;
+}
+
+
+
+.s-color{
+	background: green;
+	width: 250px;
+	height: 250px;
+	/*margin: 2% auto;*/
+	margin: auto;
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.s-color input{
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+.contenedor-fecha-cal{
+	width: 100%;
+	background: blue;
+	position: absolute;
+	color: #fff;
+	text-align: center;
+}
+
+.contenedor-fecha-cal input{
+	height: auto;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.contenedor-fecha-cal p{
+	text-align: center;
 }
 
 /************************************************************************************************SECCIÓN BOTONES***********************************************************************/
@@ -942,6 +1009,36 @@
 }
 
 /************************************************************************************************ELEMENTOS VARIADOS***********************************************************************/
+
+/***************************EFECTO HOVER IMG***********************************/
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: rgb(27, 57, 106, 0.7); /* rgb(241, 89, 42, 0.7); */
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.hover-galeria img{
+    width: 50px;
+    height: auto;
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+
+.contenedor-img-proyecto:hover .hover-galeria{
+    transform: scale(1);
+}
 
 /***************************EFECTO SKEW***********************************/
 
