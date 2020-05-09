@@ -27,7 +27,7 @@
 
 		<!--------------------------------CALENDARIO---------------------------------------->
 
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/modal.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/modal-public.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/fullcalendar.css')}}">
 
 		<!-- Calendario -->
@@ -78,7 +78,7 @@
 	    	<div class="enlaces" id="enlaces">
 	    		<a href="{{route('ISC-INICIO')}}"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
 	    		<a href="/isc-inicio-noticias"><i class="fa fa-newspaper" aria-hidden="true"></i> Noticias</a>
-	    		<a href="/isc-conocenos-perfil_campo_ISC"><i class="fa fa-handshake" aria-hidden="true"></i> Conocenos</a>
+	    		<a href="/isc-conocenos-MVO"><i class="fa fa-handshake" aria-hidden="true"></i> Conocenos</a>
 	    		<a href="#"><i class="fa fa-school" aria-hidden="true"></i> Infraestructura</a>
 	    		<a href="#"><i class="fa fa-chalkboard-teacher" aria-hidden="true"></i> Académicos</a>
 	    		<a href="#"><i class="fa fa-image" aria-hidden="true"></i> Galería</a>

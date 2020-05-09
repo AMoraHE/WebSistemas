@@ -372,12 +372,6 @@
     border: none;
     margin-top: 5px;
 }
-.encabezado p{
-    font-size: 20px;
-    color: #fff;
-    margin-top: 20px;
-}
-
 
 /************************************************************************************************FIN SECCIÓN IMG ENCABEZADO***********************************************************************/
 
@@ -867,24 +861,25 @@
 
 .contenedor-modal-dividido{
 	width: 100%;
-	background: var(--blanco);
 	display: flex;
-	border-radius: 5px;
 }
 
 .contenedor-modal-info{
+	margin-left: 10px;
 	width: calc(100% - 250px);
 	height: 300px;
 	overflow: auto;
+	border-radius: 5px;
 }
 
 .contenedor-modal-info p{
+	color: var(--blanco);
 	padding: 10px;
 	font-size: 1em;
 	text-align: justify;
 }
 
-.s-color{
+.seccion-modal-fech{
 	width: 250px;
 	height: 300px;
 	/*margin: 2% auto;*/
@@ -895,39 +890,53 @@
     position: relative;
 }
 
-.s-color input{
-	width: 100%;
-	height: 100%;
-    outline: none;
-    border: none;
-}
 
-.s-color input:disabled{
-	background: transparent;
-}
 
-.contenedor-fecha-cal{
-	width: 100%;
-	position: absolute;
-	color: var(--azul);
-	text-align: center;
-	background: var(--blanco);
-}
-
-.FeCh{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.FeCh h3{
+.seccion-modal-fech h3{
 	font-size: 18px;
 	font-weight: 400;
 }
 
-.FeCh p{
+.seccion-modal-fech p{
 	margin: auto 10px;
 }
+
+.contenedor-fecha-cal-arriba{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	color: var(--blanco);
+	text-align: center;
+	background: var(--gris-fuerte);
+	border-radius: 5px 5px 0px 0px;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.7);
+}
+
+.contenedor-fecha-cal-abajo{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	color: var(--blanco);
+	text-align: center;
+	background: var(--azul);
+	border-radius: 0px 0px 5px 5px;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.7);
+}
+
+.logo-cal{
+	width: 100%;
+	height: 150px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.logo-cal img{
+	height: 100%; /***Hacer Responsivo***/
+	object-fit: cover;
+	object-position: center;
+}
+
+
 
 /************************************************************************************************SECCIÓN BOTONES***********************************************************************/
 

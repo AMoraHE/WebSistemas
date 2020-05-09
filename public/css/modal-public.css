@@ -1,0 +1,168 @@
+/****************************Modal*************************/
+
+.flex{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal{
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	overflow: auto;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(27,57,106,0.452);
+}
+
+.contenido-modal{
+	width: 90%;
+	position: relative;
+	background: -webkit-linear-gradient(to right, #f1592a, #1B396A); 
+    background: linear-gradient(to right, #f1592a, #1B396A);
+	margin: auto;
+	min-width: 350px;
+	max-width: 1000px;
+	box-shadow: 0 0 6px 0 rgba(0,0,0,.4);
+	animation-name: modal;
+	animation-duration: 1s;
+	border: 2px solid #fff;
+	border-radius: 10px;
+}
+
+@keyframes modal{
+	from{
+		top: -330px; 
+		opacity: 0;
+	}
+
+	to{
+		top: 0;
+		opacity: 1;
+	}
+}
+
+.close{
+	color: #fff;
+	float: right;
+	font-size: 20px;
+}
+
+.close:hover{
+	color: #7f8c8d;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-encabezado, .modal-pie{
+	padding: 8px 16px;
+	color: #fff;
+	overflow: hidden;
+	border-bottom: 1px solid #fff;
+}
+
+.modal-encabezado h5{
+	float: left;
+	font-size: 18px;
+	width: 95%;
+}
+
+
+.modal-cuerpo{
+	padding: 10px;
+}
+
+.contenedor-botones-modal{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-modal{
+  	display: inline-block;
+  	padding: 10px;
+	margin: 0px 10px; 
+	cursor: pointer;
+	border-radius: 10px;
+	border: none;
+}
+
+.btn-modal span{
+	color: var(--blanco);
+	font-size: 16px;
+	transition: .7s;
+	text-align: center;
+}
+
+.btn-modal span::after{
+	opacity: 0;
+	content: "\00bb";
+	transition: .7s;
+}
+
+.btn-modal:hover span::after{
+	opacity: 1;
+	margin-left: 5px;
+}
+
+/*************************************Responsivo***************************************/
+
+@media screen and (max-width: 1024px){
+
+	.modal-encabezado h5{
+
+		font-size: 18px;
+
+	}		
+
+	.btn-modal span{
+
+		font-size: 16px;
+
+	}
+
+}
+
+@media screen and (max-width: 600px){
+
+	.modal-encabezado h5{
+
+		font-size: 16px;
+
+	}		
+
+	.btn-modal span{
+
+		font-size: 14px;
+
+	}
+
+}
+
+@media screen and (max-width: 480px){
+
+
+	.close{
+
+		font-size: 18px;
+	}
+
+	.modal-encabezado h5{
+
+		font-size: 14px;
+
+	}		
+
+	.btn-modal span{
+
+		font-size: 12px;
+
+	}
+
+}

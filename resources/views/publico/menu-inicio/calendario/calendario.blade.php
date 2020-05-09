@@ -97,6 +97,7 @@
 
               });
       	});
+
   	</script>
 
   	<!-- Modal Modificar , Agregar, Eliminar-->
@@ -118,25 +119,35 @@
 
                   <!-- COLOR-->
 
-                  <div class="s-color">
+                  <div class="seccion-modal-fech">
+
+                    <div class="logo-cal">
+                      
+                      <img src="/img/logo-evento.png">
 
 
-                    <input type="color" value="#ff0000" id="txtColor" class="form-control" disabled />
+                    </div>
 
 
-                    <div class="contenedor-fecha-cal">
+                    <!--<input type="color" value="#ff0000" id="txtColor" class="form-control" disabled />-->
 
-                      <div class="FeCh">
+
+                    <div class="contenedor-fecha-cal-arriba">
+
 
                         <h3 id="txtFechaInicio"></h3>
 
-                      </div>
-
-                      <div class="FeCh">
-
                         <p id="txtHoraInicio"></p>
 
-                      </div>
+
+                    </div>
+
+                    <div class="contenedor-fecha-cal-abajo">
+
+                        <h3 id="txtFechaFinal"></h3>
+
+                        <p id="txtHoraFinal"></p>
+
 
                     </div>
                     
