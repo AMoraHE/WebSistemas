@@ -81,7 +81,7 @@
 	    		<a href="/isc-conocenos-MVO"><i class="fa fa-handshake" aria-hidden="true"></i> Conocenos</a>
 	    		<a href="#"><i class="fa fa-school" aria-hidden="true"></i> Infraestructura</a>
 	    		<a href="#"><i class="fa fa-chalkboard-teacher" aria-hidden="true"></i> Académicos</a>
-	    		<a href="#"><i class="fa fa-image" aria-hidden="true"></i> Galería</a>
+	    		<a href="/isc-galeria-fotos"><i class="fa fa-image" aria-hidden="true"></i> Galería</a>
 	    		<a href="/isc-inicio-contactos"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contactanos</a>
 	    	</div>
 	    </nav>
