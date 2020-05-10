@@ -12,7 +12,7 @@
 
 	    <div class="img-parallax">
 	     <div class="parallax">
-	       <h1>Información de la carrera</h1>
+	       <h1>Perfil de la carrera</h1>
 	       <hr>
 	     </div>       
 	    </div>
@@ -22,80 +22,74 @@
 	</div> 
 	
 <!-------------------------------------------------------------  PERFIL INGRESO ------------------------------------------------------->
-	@php
-	$var = 0;
-	$var2 = 0;
-	$var3 = 0;
-	@endphp
 
-	<div class="contenedor-componentes-info-carrera">
 
-		<strong>PERFIL DE INGRESO</strong>
+<div class="contenedor-perfil-campo">
+
+	<div class="contenedor-componentes-info-carrera-ingreso">
+
+		
 
 		<div class="contenedor-apartado">
+			
 
 			<div class="contenedor-perfil">
 
-				@foreach ($perfilingreso as $perfilingres)
-				<div class="contenedor-acordeon-subapartado">
-				<div class="contenedor-titulo-acordeon">
-					@php
-					$var = $var + 1;
-					@endphp
+				<ol class="round">
 
-				<p>PERFIL {{$var}}</p>
+				@foreach ($perfilingreso as $perfilingres)
+
+					<li><i class="viñeta">{{$perfilingres->vineta}}</i> <p>{{$perfilingres->elemento}}</p></li>
+				
+
+				@endforeach
+
+				</ol>
 
 			</div>
 
-				<div class="info-acordeon">
-					<p>{{$perfilingres->vineta}} {{$perfilingres->elemento}}</p>
-				</div>
-				</div>
-				@endforeach
+			<div class="contenedor-titulo-perfil">
+
+				<img class="imagen-ingre-egre" src="{{ asset('img/ingreso1.png')}}">
 
 			</div>
 
 		</div>
+
 
 	</div>
 
 
 <!----------------------------------------------------------------- PERFIL EGRESO---------------------------------------------------------->
 
-<div class="contenedor-componentes-info-carrera">
+<div class="contenedor-componentes-info-carrera-egreso">
 
-	<strong>PERFIL DE EGRESO</strong>
+	
 
 		<div class="contenedor-apartado">
+			<div class="contenedor-titulo-perfil">
+
+				<img class="imagen-ingre-egre" src="{{ asset('img/egreso1.png')}}">
+
+			</div>
 
 			<div class="contenedor-perfil">
+				
+				<ol class="round">
 
 				@foreach ($perfilegreso as $perfilegres)
-				<div class="contenedor-acordeon-subapartado">
-				<div class="contenedor-titulo-acordeon">
+				
 
-					@php
-					$var2 = $var2 + 1;
-					@endphp
-
-				<p>PERFIL {{$var2}}</i></p>
-
-			</div>
-
-				<div class="info-acordeon">
-
-					<p>
-					 {{$perfilegres->vineta}} {{$perfilegres->elemento}}</p>
-				</div>
-				</div>
+					<li><i class="viñeta">{{$perfilegres->vineta}}</i> <p>{{$perfilegres->elemento}}</p></li>
+					  
+				
 				@endforeach
 
+			</ol>
 
-
-			</div>
+			</div>		
 
 		</div>
-
 </div>
 
 
@@ -103,35 +97,33 @@
 
 <div class="contenedor-componentes-info-carrera">
 
-	<strong>CAMPO LABORAL</strong>
+	
 
-		<div class="contenedor-apartado">
+		<div class="contenedor-apartado-campo">
+			<div class="contenedor-titulo-campo">
+
+				<h3>Campo Laboral</h3>
+
+			</div>
 
 			<div class="contenedor-perfil">
 
+				<ol class="round">
+
 				@foreach ($campolaboral as $campolabora)
-				<div class="contenedor-acordeon-subapartado">
-					<div class="contenedor-titulo-acordeon">
 
-						@php
-						$var3 = $var3 + 1;
-						@endphp
-
-						<p>Campo laboral {{$var3}}</p>			
-					</div>
-
-					<div class="info-acordeon">
-
-								<p>{{$campolabora->vineta}} {{$campolabora->elemento}}</p>
-					</div>
-				</div>
+						<li><i class="viñeta">{{$campolabora->vineta}}</i> <p>{{$campolabora->elemento}}</p></li>
 						
 				@endforeach
 
+				</ol>
 
 			</div>
 
 		</div>
+
+</div>
+</div>
 
 </div>
 

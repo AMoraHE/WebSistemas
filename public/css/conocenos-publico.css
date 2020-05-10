@@ -1,3 +1,6 @@
+
+
+
 /************************************************************************************************SECCIÓN CONOCENOS MVO***********************************************************************/
 
 .fondo-mvo{
@@ -169,4 +172,117 @@
 	margin:20px;
 	text-align: center;
 	color:#000;
+}
+
+/************************************************************************************************SECCIÓN CONOCENOS PERFIL-CAMPO***********************************************************************/
+
+.contenedor-perfil-campo{
+	width: 100%;
+	margin: auto;
+}
+
+.contenedor-componentes-info-carrera{
+	width: 100%;
+	margin:auto;
+	display: flex;
+}
+
+.contenedor-componentes-info-carrera-ingreso{
+width: 100%;
+margin: auto;
+display: block;
+float: left;
+
+}
+
+.contenedor-componentes-info-carrera-egreso{
+width: 100%;
+margin: auto;
+display: block;
+float: right;
+text-align: end;
+}
+
+.contenedor-apartado{
+	width: 100%;
+	margin: auto;
+	padding: 20px;
+	display: flex;
+}
+.contenedor-apartado-campo{
+	width: 100%;
+	margin: auto;
+	padding: 20px;
+}
+
+.contenedor-titulo-perfil{
+	background-color: #96C6BB;
+	padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+}
+
+
+.contenedor-titulo-perfil h3{
+    color: white;
+    font-weight: normal;
+    font-size: 27px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.contenedor-titulo-campo{
+	background-color: #bcc696;
+	padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.contenedor-titulo-campo h3{
+    color: white;
+    font-weight: normal;
+    font-size: 27px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.contenedor-perfil{
+	width: 100%;
+	margin: auto;
+	display: block;
+	padding: 15px;
+	background-color: #fafad2;
+	border: 1px solid #f4f4f4;
+
+}
+.imagen-ingre-egre{
+	width: 300px;
+}
+
+ol.round{
+	list-style-type: none;
+    padding-left: 0px;
+
+}
+
+ol.round li{
+	margin: 10px 0;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+ol.round p{
+	width: 97%;
+	display: inline-block;
+	padding-left: 10px;
+	text-align: justify;
+}
+.viñeta{
+	display: inline-block;
+	vertical-align: top;
 }
