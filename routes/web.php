@@ -28,6 +28,7 @@ Route::get('/isc-inicio-noticiasVerInd/{id}', 'PublicController@noticiasVerInd')
 Route::get('/isc-inicio-buscadorNoticias', 'PublicController@buscadorNoticias');
 Route::get('/isc-inicio-calendario', 'PublicController@calendario');
 Route::get('/isc-inicio-calendarioEventos', 'PublicController@calendarioEventos');
+Route::get('/isc-conocenos', 'PublicController@conocenos');
 Route::get('/isc-conocenos-MVO', 'PublicController@MVO');
 Route::get('/isc-conocenos-perfil_campo_ISC', 'PublicController@PerfilCampoISC');
 Route::get('/isc-conocenos-reticula', 'PublicController@reticula');

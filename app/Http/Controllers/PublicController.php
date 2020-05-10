@@ -93,6 +93,22 @@ class PublicController extends Controller
   	}
   }
 
+  public function conocenos()
+  {
+    $informaciones = informacion::all();
+    $perfilingreso = perfil_ingreso::oldest()->take(4)->get();
+    $perfilegreso = perfil_egreso::oldest()->take(4)->get();
+    $campolaboral = campo_laboral::oldest()->take(4)->get();
+    $reticulas = reticula::latest()->take(1)->get();
+    $lineainvestigacion = lineas_investigacion::latest()->take(3)->get();
+    $cuerpos = CuerposAcademico::latest()->take(3)->get();
+    $director = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '<', '5')->orderBy('areas.id', 'ASC')->get();
+    $laboratorio = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '5')->get();
+    $docente = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '6')->get();
+
+    return view('publico.menu-conocenos.conocenos', compact('informaciones', 'perfilingreso', 'perfilegreso', 'campolaboral', 'reticulas', 'lineainvestigacion', 'cuerpos', 'director', 'laboratorio', 'docente'));
+  }
+
   public function MVO()
   {
     $informaciones = informacion::all();
