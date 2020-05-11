@@ -44,18 +44,55 @@
 
 		<div class="contenedor-seccion-convocatoria">
 
-			<div class="fecha-conv">
+			<div class="contenedor-fecha-conv">
 
-				<p>Fecha Incio</p>
-				<p class="fecha-inicio-conv">{{$convocatoria->FInicio}}</p>
+				<div class="fecha-divi">
+
+					<div class="fecha-conv">
+
+						<p>Inicia</p>
+
+						<div class="c-fecha fc-inicio">
+
+							<p>{{$convocatoria->FInicio}}</p>
+
+						</div>
+						
+					</div>
+
+				</div>
+
+				<div class="fecha-divi">
+
+					<div class="fecha-conv">
+
+						<p>Termina</p>
+						
+						<div class="c-fecha fc-final">
+
+							<p>{{$convocatoria->FFin}}</p>
+
+						</div>
+
+					</div>
+
+				</div>
 				
 			</div>
 
 			<div class="desc-conv">
+
+				<div class="c-descripcion">
+
+					<p>{{$convocatoria->descripcion}}</p>
+					
+				</div>
 				
 			</div>
 			
 		</div>
+
+		<div class="seccion-divisor-seccion"></div>
 
 		
 

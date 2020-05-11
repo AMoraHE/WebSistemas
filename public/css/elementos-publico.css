@@ -634,7 +634,82 @@
 
 /************************************************************************************************PAGINA ACADÉMICOS********************************************************************************/
 
+.contenedor-seccion-convocatoria{
+	padding: 10px;
+	margin-top: 10px;
+	border-radius: 5px;
+	border: 2px solid var(--gris-tipo1);
+}
 
+.contenedor-fecha-conv{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fecha-divi{
+	width: 50%;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+
+.fecha-conv{
+	background: var(--azul);
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.fecha-conv p{
+	text-align: center;
+	color: var(--blanco);
+	font-weight: bold;
+}
+
+.c-fecha{
+	width: 200px;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+}
+
+.c-fecha p{
+	color: var(--blanco);
+	font-size: 16px;
+	font-weight: 200;
+}
+
+.fc-inicio{
+	background: var(--naranja);
+}
+
+.fc-final{
+	background: var(--verde);
+}
+
+.desc-conv{
+	background: rgb(241, 89, 42, .8);
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.c-descripcion{
+	min-height: 250px;
+	background: var(--blanco);
+	border-radius: 5px;
+	padding: 10px;
+	overflow: auto;
+}
+
+.c-descripcion p{
+	color: var(--azul);
+	padding: 10px;
+}
+
+/************************************************************************************************PAGINA ACADÉMICOS********************************************************************************/
 
 
 /****************************************SECCIONES PRINCIPALES TITULOS*************************************************/
@@ -1158,7 +1233,7 @@
 
 /***************************DIVISORES**************************************/
 
-.seccion-divisor-noticia{
+.seccion-divisor-seccion{
 	border: 1px solid #dee2e6;
 	margin: 3rem auto;
 }
@@ -1227,6 +1302,7 @@
 
 body::-webkit-scrollbar{
     width: 8px;
+    height: 8px;
     background-color: #F5F5F5;
 }
 body::-webkit-scrollbar-track{
@@ -1235,20 +1311,22 @@ body::-webkit-scrollbar-track{
 }
 body::-webkit-scrollbar-thumb{
     background-color: #1B396A; 
-    background-image: -webkit-linear-gradient(90deg,rgba(255, 255, 255, .2) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, .2) 50%,rgba(255, 255, 255, .2) 75%,transparent 75%,transparent)
+    background-image: -webkit-linear-gradient(90deg,rgba(255, 255, 255, .2) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, .2) 50%,rgba(255, 255, 255, .2) 75%,transparent 75%,transparent);
 }
 
 /*****************************SCROLL CONTENIDO**********************/
 
 ::-webkit-scrollbar {
-  width: 0.5px;
+  width: 5px;
+  height: 5px;
 }
 ::-webkit-scrollbar-track {
-  background-color: var(--verde);
+  background-color: var(--naranja);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--verde);
-  background-image:-webkit-linear-gradient(rgba(255,255,255,.3) 20%,transparent 20%,transparent 40%,rgba(255, 255, 255, 0.3) 40%,rgba(255,255,255,.3) 60%,transparent 60%,transparent 80%,rgba(255, 255, 255, 0.3) 80%);
+  background-color: var(--naranja);
+  background-image:-webkit-linear-gradient(rgba(255,255,255,.3) 20%,transparent 20%,transparent 40%,rgba(255, 255, 255, 0.3) 40%,rgba(255,255,255,.3) 60%,transparent 60%,transparent 80%,rgba(255, 255, 255, 0.3) 80%);  
+
 }
 
 
