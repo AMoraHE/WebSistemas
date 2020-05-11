@@ -39,7 +39,7 @@
 			@if($informacion->categoria == 'Misión')
 				
 
-						<div class="contenedor-mvo-subapartado-con">
+						<a href="/isc-conocenos-MVO" class="contenedor-mvo-subapartado-con">
 
 							<div class="contenedor-titulo-mvo-con">
 								<p>{{$informacion->categoria}}</p>			
@@ -51,7 +51,7 @@
 							</div>
 							
 
-						</div>
+						</a>
 				
 				
 			@endif	
@@ -59,7 +59,7 @@
 			@if($informacion->categoria == 'Visión')
 				
 
-						<div class="contenedor-mvo-subapartado-con">
+						<a href="/isc-conocenos-MVO" class="contenedor-mvo-subapartado-con">
 
 							<div class="contenedor-titulo-mvo-con2">
 								<p>{{$informacion->categoria}}</p>			
@@ -70,7 +70,7 @@
 
 							</div>
 
-						</div>
+						</a>
 				
 			
 			@endif	
@@ -147,9 +147,11 @@
 
 			</ol>
 
-			</div>		
+			</div>
+					
 
 		</div>
+
 </div>
 
 
@@ -180,10 +182,15 @@
 				</ol>
 
 			</div>
+<div class="contenedor-botones">
+			
+		<a href="/isc-conocenos-perfil_campo_ISC"><button class="btn"><span>Ver más</span></button></a>
 
+	</div>
 		</div>
 
 </div>
+
 <div class="separador2"></div>
 </div>
 
@@ -191,6 +198,9 @@
 <div class="contenedor-lineas-cuerpos-reticula">
 
 <div class="contenedor-lineas-cuerpos">
+
+	<div class="contenedor-lineas-cuerpos-ind">
+
 	<div class="contenedor-titulo-seccion-con">
 
 		<h3>Líneas de Investigación</h3>
@@ -221,21 +231,23 @@
 					@endforeach
 
 				</table>		
+				<div class="contenedor-botones">
+			
+		<a href="/isc-conocenos-lineasInvestigacion"><button class="btn"><span>Ver más</span></button></a>
 
+	</div>
 		</div>
 	</div>
+	</div>
 
-
-	<!----------------------------------------------------------------- CUERPO ACADÉMICO  ---------------------------------------------------------->
-
+	<!----------------------------------------------------------------- CUERPO ACADÉMICO -------------------------------------------------->
+	<div class="contenedor-lineas-cuerpos-ind">
 	<div class="contenedor-titulo-seccion-con">
 
 		<h3>Cuerpos Académicos</h3>
 
 	</div>
 
-
-<!----------------------------------------------------------------- TABLA - CUERPO ACADÉMICO  ---------------------------------------------------------->
 		<div class="contenedor-tabla">
 			<div class="tabla-informacion-escolar-con">
 
@@ -267,10 +279,15 @@
 					@endforeach
 
 				</table>		
+		<div class="contenedor-botones">
+			
+		<a href="/isc-conocenos-cuerposAcademicos"><button class="btn"><span>Ver más</span></button></a>
 
+		</div>
 			</div>
 		</div>
 
+</div>
 </div>
 		<!-------------------------------------------------------------- RETICULA ---------------------------------------------------------->
 
@@ -282,23 +299,65 @@
 	<div class="contenedor-acordeon-subapartado-con">
 				<div class="contenedor-titulo-acordeon-con">
 
-				<p>{{$reticula->titulo}}<i class="icono-derecha fas fa-plus"></i></p>
+				<p>{{$reticula->titulo}}</p>
 
 				</div>
+
+				<div class="info-acordeon-con">
+
+			<p>{{$reticula->programa}}</p>
+			<p>PLAN: {{$reticula->plan}}</p>
+			<p>ESPECIALIDAD: {{$reticula->especialidad}}</p>	
+
+	<div class="contenedor-enlaces">
+			
+		<a target="_blank" rel="noopener noreferrer" href="/isc-conocenos-reticulaVer/{{$reticula->slug}}">{{$reticula->documento}}</a>
+
+	</div>
+
+	<div class="contenedor-botones">
+			
+		<a href="/isc-conocenos-reticula"><button class="btn"><span>Ver más</span></button></a>
+
+	</div>
+	</div>
 
 	</div>
 
 	@endforeach
 	</div>
 	</div>
-</div>
+
 <!-------------------------------------------------------------- organigrama ---------------------------------------------------------->
-		<div class="contenedor-titulo-seccion">
+	<a href="/isc-conocenos-organigrama" class="contenedor-texto-completo-org-con">
+		<div class="contenedor-org-con">
 
-		    <h3>Organigrama</h3>
-		  </div>
+		<div class="contenedor-org-subapartado-con">
+
+					<div class="contenedor-titulo-org-con">
+
+					<p>Organigrama</p>
+
+					</div>
+
+					<div class="info-org-con">
+
+						<img class="imagen-ingre-egre" src="{{ asset('img/org2.jpg')}}">
+		
+		</div>
+
+		</div>
+
+		</div>
+	</a>
 
 </div>
+
+
+
+
+</div>
+
 @endsection
 
 

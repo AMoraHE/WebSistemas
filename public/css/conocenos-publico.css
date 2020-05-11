@@ -22,6 +22,7 @@
 .contenedor-mvo-subapartado-con{
 	width: 95%;
 	margin: auto;
+	cursor: pointer;
 }
 .contenedor-img-mvo-con{
 	width: 45%;
@@ -52,6 +53,11 @@
 }
 
 
+.contenedor-org-subapartado-con:hover{
+box-shadow: 0 1px 6px #000;
+}
+
+
 .contenedor-titulo-mvo-con p{
 	background-color: #96C6BB;
     padding: 10px 15px;
@@ -69,6 +75,7 @@
 	float: right;
 	margin: 20px;
 	border: 1px solid #f4f4f4;
+	border-radius: 5px;
 }
 
 
@@ -183,6 +190,7 @@ text-align: end;
 	margin: auto;
 	display: block;
 	padding: 15px;
+	background-color: #ffffff63;
 	border: 2px solid #fff;
 	border-top: none;
 	overflow: hidden;
@@ -241,8 +249,16 @@ ol.round p{
     border-color: transparent transparent #fff transparent;
 }
 /***********************************LINEAS DE INV. Y CUERPOS ACAD.*****************************************/
-.contenedor-lineas-cuerpos{
-	width: 100%
+.contenedor-lineas-cuerpos-reticula{
+padding-top: 2%;
+}
+
+
+.contenedor-lineas-cuerpos-ind{
+	width: 100%;
+	margin-bottom: 10%;
+	border: 1px solid #f4f4f4;
+	border-radius: 5px;
 }
 
 .contenedor-lineas-cuerpos{
@@ -270,7 +286,7 @@ ol.round p{
 }
 
 .tabla-informacion-escolar-con{
-	width: 95%;
+	width: 100%;
 	margin: auto;
 }
 
@@ -281,7 +297,7 @@ ol.round p{
 }
 
 .tabla-informacion-escolar-con th, td{
-	padding: 20px;
+	padding: 10px;
 	max-width: 700px; /***TAMAÑO MÁXIMO DE LAS CELDAS***/
 }
 
@@ -306,12 +322,12 @@ ol.round p{
 }
 
 .tabla-informacion-escolar-con tr:nth-child(even){
-	background-color: var(--gris); 
+	background-color: #f3f1f1; 
 }
 
 .tabla-informacion-escolar-con tr:hover td{
-	background-color: var(--verde-azulado);
-	color: var(--blanco);
+	background-color: var(--gris);
+	color: var(--azul);
 }
 
 .tabla-informacion-escolar-con p{
@@ -321,50 +337,42 @@ ol.round p{
 
 /*******************************************************RETICULA******************************************/
 .contenedor-texto-completo-acordeon-con{
-	width: 35%;
-    min-height: 500px;
-    padding: 10px;
+	width: 38%;
+    min-height: 350px;
     display: inline-block;
     float: right;
 }
 
 .contenedor-acordeon-con{
+	width: 90%;
+	height: 300px;
 	display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    margin: auto;
     text-align: -webkit-center;
 }
 .contenedor-acordeon-subapartado-con{
-	width:80%;
-	min-height:50px;
-	-webkit-transiton: height 0.3s;
+	width:90%;
 	border-radius: 5px;
 	margin-bottom: 1em;
-	cursor: pointer;
 }
 
 .contenedor-titulo-acordeon-con{
 	width:100%;
-	height:50px;
-	background-color: #1b396a;
-	overflow: hidden;
+	height:70px;
+	background-color: #edc016;
 	font-family: 'Roboto', sans-serif;
-	border-bottom: 1px solid #39f58f;
 	border-radius: 5px;
 }
 
 .contenedor-titulo-acordeon-con p{
-	margin:13px;
+	padding: 12px;
 	color: white;
 	text-shadow: 0px 1px 0px white;
+	font-size: 22px;
 	text-transform: uppercase;
 }
 
 .info-acordeon-con{
-	display: none;
 	width:100%;
 	height:auto;
 	background-color: #f5f5f5;
@@ -377,23 +385,60 @@ ol.round p{
 	color:#000;
 }
 
-.info-acordeon-centrado-con{
-	display: none;
+
+/*******************************************************ORGANIGRAMA******************************************/
+.contenedor-texto-completo-org-con{
+	width: 38%;
+    min-height: 350px;
+    margin-top: 34%;
+    position: absolute;
+    display: inline-block;
+    float: right;
+}
+
+.contenedor-org-con{
+	width: 90%;
+	height: 300px;
+	display: block;
+    margin: auto;
+    text-align: -webkit-center;
+}
+.contenedor-org-subapartado-con{
+	width:90%;
+	border-radius: 5px;
+	margin-bottom: 1em;
+	cursor: pointer;
+}
+
+.contenedor-titulo-org-con{
+	width:100%;
+	height:70px;
+	background-color: #35342e;
+	font-family: 'Roboto', sans-serif;
+	border-radius: 5px;
+}
+
+.contenedor-titulo-org-con p{
+	padding: 12px;
+	color: white;
+	text-shadow: 0px 1px 0px white;
+	font-size: 22px;
+	text-transform: uppercase;
+}
+
+.info-org-con{
 	width:100%;
 	height:auto;
+	padding-top: 10px;
 	background-color: #f5f5f5;
-	opacity: 0.9;
 	overflow: hidden;
 }
 
-.info-acordeon-centrado-con p{
+.info-org p{
 	margin:20px;
-	text-align: center;
+	text-align: justify;
 	color:#000;
 }
-
-
-
 
 
 /***************************************************************FIN SECCION CONOCENOS PRINCIPAL******************************************************/
