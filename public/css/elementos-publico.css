@@ -1057,13 +1057,12 @@
 	transition: .7s;
 }
 
-
 /*** BOTONES GENERAL ***/
 
 .btn {
 	max-width: 250px;
 	padding: 10px;
-	margin:10px 10px 10px 0px;
+	margin:10px 0px 10px 0px;
 	background: var(--azul);
 	border: none;
 	outline-style: none;
@@ -1173,11 +1172,11 @@
 }
 
 .contenedor-enlaces a{
-	color: var(--azul);
+	color: var(--blanco);
 }
 
 .contenedor-enlaces a:hover{
-	color: var(--naranja);
+	color: var(--azul);
 }
 
 /***************************EFECTO HOVER IMG***********************************/

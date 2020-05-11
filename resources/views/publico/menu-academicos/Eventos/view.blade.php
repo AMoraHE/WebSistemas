@@ -6,68 +6,114 @@
 
 <div class="seccion-principal">
 
+	<!------------------------------------------------------------- IMG Encabezado ----------------------------------------------------------->
+
+
+ 	<div class="contenedor-img-encabezado">
+
+          <div class="img-encabezado">
+
+            <img src="/img/Eventos.jpg">
+
+            <div class="encabezado">
+
+               <h1>Eventos</h1>
+               <hr>
+
+            </div>
+
+          </div>   
+
+          <div class="skew-abajo"></div>
+
+    </div>
+
 	
 
 <!----------------------------------------------------------------- EVENTOS ---------------------------------------------------------->
 
-	@foreach ($eventos as $evento)
+	<div class="contenedor-secciones">
 
-	<div class="contenedor-titulo-seccion">
+		@foreach ($eventos as $evento)
 
-		<h3>{{$evento->titulo}}</h3>
+		<div class="contenedor-titulo-seccion">
 
-	</div>
+			<h3><i class="icono-izquierda fas fa-file-invoice"></i>{{$evento->titulo}}</h3>
 
-	<!----------------------------------------------------------------- FORMULARIOS ---------------------------------------------------------->
+		</div>
 
-			<div class="contenedor-formulario-dividido">
+		<div class="contenedor-seccion-convocatoria">
 
-			    <div class="columna-de-dos">
+			<div class="contenedor-fecha-conv">
 
-			      <div class="formulario">
+				<div class="fecha-divi">
 
-			        <label>Fecha Inicio</label>
-			        <input  data-date-format="l j, F, Y" id="FInicio" name="FInicio" value="{{$evento->FInicio}}" readonly />
+					<div class="fecha-conv">
 
-			      </div>
+						<p>Inicia</p>
 
-			    </div>
+						<div class="c-fecha fc-inicio">
 
-			    <div class="columna-de-dos">
+							<p>{{$evento->FInicio}}</p>
 
-			      <div class="formulario">
+						</div>
+						
+					</div>
 
-			        <label>Fecha Cierre</label>
-			        <input  data-date-format="l j, F, Y" id="FFin" name="FCierre" value="{{$evento->FCierre}}" readonly />
+				</div>
 
-			      </div>
+				<div class="fecha-divi">
 
-			    </div>
+					<div class="fecha-conv">
 
-			</div>
+						<p>Termina</p>
+						
+						<div class="c-fecha fc-final">
 
-			<div class="formulario">
+							<p>{{$evento->FCierre}}</p>
 
-				<label>Descripción</label>
-				<textarea readonly>{{$evento->descripcion}}</textarea>
+						</div>
+
+					</div>
+
+				</div>
 				
 			</div>
 
+			<div class="desc-conv">
+
+				<div class="c-descripcion">
+
+					<p>{{$evento->descripcion}}</p>
+					
+				</div>
+
 				<div class="contenedor-enlaces">
-						
+				
 					<a target="_blank" rel="" href="/isc-academicos-eventosVer/{{$evento->slug}}">{{$evento->documento}}</a>
 
 				</div>
 
-			<!----------------------------------------------------------------- BOTONES EVENTOS ---------------------------------------------------------->
+			</div>
+			
+		</div>
 
-				<div class="contenedor-botones">
-						
-					<a href="/isc-academicos-eventosDescargar/{{$evento->slug}}"><button class="btn"><span>Descargar</span></button></a>
+		<!---------------BOTONES convocatoria------------------------------------->
 
-				</div>
+		<div class="contenedor-botones">
 
-				@endforeach
+			<a href="/isc-academicos-eventosDescargar/{{$evento->slug}}"><button class="btn"><span>Descargar <i class="icono-derecha far fa-save"></i></span></button></a>
+
+		</div>
+
+
+
+
+		<div class="seccion-divisor-seccion"></div>		
+
+		@endforeach
+
+	</div>
 
 	<div id="paginas">
 			{{$eventos->links()}}

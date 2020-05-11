@@ -9,76 +9,121 @@
 
 <div class="seccion-principal">
 
-	<!-----------------Botones--------->
+	<!------------------------------------------------------------- IMG Encabezado ----------------------------------------------------------->
 
-	
+      <div class="contenedor-img-encabezado">
 
-	@foreach ($programas as $programa)
+          <div class="img-encabezado">
 
-	<div class="contenedor-titulo-seccion">
+            <img src="/img/Programas.jpg">
 
-		<h3>{{$programa->programa}}</h3>
+            <div class="encabezado">
 
-	</div>
+               <h1>Programas</h1>
+               <hr>
 
-	<!----------------------------------------------------------------- TABLA ---------------------------------------------------------->
+            </div>
 
-			<div class="contenedor-formulario-dividido">
+          </div>   
 
-			    <div class="columna-de-dos">
+          <div class="skew-abajo"></div>
 
-			      <div class="formulario">
+      </div>
 
-			        <label>Fecha Inicio</label>
-			        <input  data-date-format="l j, F, Y" id="FInicio" name="FInicio" value="{{$programa->FInicio}}" readonly />
+	<!------------------------------------------------------------- CONVOCATORIAS ----------------------------------------------------------->
 
-			      </div>
+	<div class="contenedor-secciones">
 
-			    </div>
+		@foreach ($programas as $programa)
 
-			    <div class="columna-de-dos">
+			<div class="contenedor-titulo-seccion">
 
-			      <div class="formulario">
+				<h3><i class="icono-izquierda fas fa-file-invoice"></i>{{$programa->programa}}</h3>
 
-			        <label>Fecha Cierre</label>
-			        <input  data-date-format="l j, F, Y" id="FFin" name="FFin" value="{{$programa->FFin}}" readonly />
+			</div>
 
-			      </div>
+			<div class="contenedor-seccion-convocatoria">
 
-			    </div>
+				<div class="contenedor-fecha-conv">
 
-			  </div>
+					<div class="fecha-divi">
 
-			<div class="formulario">
+						<div class="fecha-conv">
 
-				<label>Descripción</label>
-				<textarea readonly>{{$programa->descripcion}}</textarea>
+							<p>Inicia</p>
+
+							<div class="c-fecha fc-inicio">
+
+								<p>{{$programa->FInicio}}</p>
+
+							</div>
+							
+						</div>
+
+					</div>
+
+					<div class="fecha-divi">
+
+						<div class="fecha-conv">
+
+							<p>Termina</p>
+							
+							<div class="c-fecha fc-final">
+
+								<p>{{$programa->FFin}}</p>
+
+							</div>
+
+						</div>
+
+					</div>
+					
+				</div>
+
+				<div class="desc-conv">
+
+					<div class="c-descripcion">
+
+						<p>{{$programa->descripcion}}</p>
+						
+					</div>
+
+					<div class="contenedor-enlaces">
+					
+						<a target="_blank" rel="noopener noreferrer" href="/isc-academicos-programasVer/{{$programa->slug}}">{{$programa->doc}}</a>
+
+					</div>
+
+					@php
+					$var = $programa->slug
+					@endphp
+							
+				</div>
 				
 			</div>
 
-			<div class="contenedor-enlaces">
+			<!---------------BOTONES convocatoria------------------------------------->
 
-				<a target="_blank" rel="noopener noreferrer" href="/isc-academicos-programasVer/{{$programa->slug}}">{{$programa->doc}}</a>
+			<div class="contenedor-botones">
+
+				<a href="/isc-academicos-programasDescargar/{{$programa->slug}}"><button class="btn"><span>Descargar <i class="icono-derecha far fa-save"></i></span></button></a>
 
 			</div>
 
-			@php
-			$var = $programa->slug
-			@endphp
 
-<!---------------BOTONES programas------------------------------------->
 
-	<div class="contenedor-botones">
 
-		<a href="/isc-academicos-programasDescargar/{{$programa->slug}}"><button class="btn"><span>Descargar</span></button></a>
+			<div class="seccion-divisor-seccion"></div>
 
+		
+		@endforeach
 
 	</div>
 
-	@endforeach
-
 	<div id="paginas">
-			{{$programas->links()}}
+
+		{{$programas->links()}}
+
 	</div>
 
 </div>

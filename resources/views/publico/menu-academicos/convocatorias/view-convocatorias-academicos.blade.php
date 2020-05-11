@@ -87,10 +87,31 @@
 					<p>{{$convocatoria->descripcion}}</p>
 					
 				</div>
+
+				<div class="contenedor-enlaces">
+				
+					<a target="_blank" rel="noopener noreferrer" href="/isc-academicos-convocatoriasVer/{{$convocatoria->slug}}">{{$convocatoria->doc}}</a>
+
+				</div>
+
+				@php
+				$var = $convocatoria->slug
+				@endphp
 				
 			</div>
 			
 		</div>
+
+		<!---------------BOTONES convocatoria------------------------------------->
+
+		<div class="contenedor-botones">
+
+			<a href="/isc-academicos-convocatoriasDescargar/{{$convocatoria->slug}}"><button class="btn"><span>Descargar <i class="icono-derecha far fa-save"></i></span></button></a>
+
+		</div>
+
+
+
 
 		<div class="seccion-divisor-seccion"></div>
 
