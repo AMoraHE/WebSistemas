@@ -9,18 +9,26 @@
 
 <div class="seccion-principal">
 
-	<div class="contenedor-img-parallax">
+    <!------------------------------------------------------------- IMG Encabezado ----------------------------------------------------------->
 
-	    <div class="img-parallax">
-	     <div class="parallax">
-	       <h1>CONOCENOS</h1>
-	       <hr>
-	     </div>       
-	    </div>
+      <div class="contenedor-img-encabezado">
 
-	    <div class="skew-abajo"></div>
+          <div class="img-encabezado">
 
-	</div> 
+            <img src="/img/Conocenos.jpg">
+
+            <div class="encabezado">
+
+               <h1>Conocenos</h1>
+               <hr>
+
+            </div>
+
+          </div>   
+
+          <div class="skew-abajo"></div>
+
+      </div>
 		
 	<div class="fondo-mvo">
 
