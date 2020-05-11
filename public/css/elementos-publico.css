@@ -709,6 +709,27 @@
 	padding: 10px;
 }
 
+/********PROYECTOS***********/
+
+.contenedor-seccion-img-grande{
+	width: 100%;
+	height: 50vh;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.7);
+
+}
+
+
+.contenedor-seccion-img-grande img{
+	width: 100%;
+	height: 100%; /***Hacer Responsivo***/
+	object-fit: cover;
+	object-position: center;
+	border: 5px solid var(--blanco);
+}
+
+
 /************************************************************************************************PAGINA ACADÉMICOS********************************************************************************/
 
 
