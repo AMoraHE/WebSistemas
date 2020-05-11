@@ -1,5 +1,402 @@
 
 
+/*********************************************************SECCIÓN CONOCENOS PRINCIPAL***********************************************************************/
+
+/***************************************************************MISION VISION ******************************************************/
+
+.fondo-mvo-con{
+	background-color:#fff;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; 
+}
+
+.contenedor-mvo-con{
+	width: 100%;
+	height: 434px; 
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.contenedor-mvo-subapartado-con{
+	width: 95%;
+	margin: auto;
+}
+.contenedor-img-mvo-con{
+	width: 45%;
+	height: 273px;
+	margin: 30px auto;
+	float: left;
+}
+
+.imagen-mvo-con{
+	 display: block;
+	 margin: auto; 
+}
+
+.contenedor-img-mvo-con2{
+	width: 45%;
+	height: 273px;
+	margin: 30px auto;
+	float: right;
+}
+
+.contenedor-titulo-mvo-con{
+	width:46%;
+	height:max-content;
+	float: left;
+	margin: 20px;
+	border: 1px solid #f4f4f4;
+	border-radius: 5px;
+}
+
+
+.contenedor-titulo-mvo-con p{
+	background-color: #96C6BB;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+    color: #fff;
+	font-size: 28pt;
+	line-height: 1.42857143;
+	text-align: center;
+}
+
+.contenedor-titulo-mvo-con2{
+	width:46%;
+	height:max-content;
+	float: right;
+	margin: 20px;
+	border: 1px solid #f4f4f4;
+}
+
+
+.contenedor-titulo-mvo-con2 p{
+	background-color: #96C6BB;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+    color: #fff;
+	font-size: 28pt;
+	line-height: 1.42857143;
+	text-align: center;
+}
+
+.info-mvo-con{
+	display: block;
+	width:100%;
+	height:300px;
+}
+
+.info-mvo-con p{
+	background-color: #fff;
+	text-align: justify;
+	font-size: 18pt;
+	color:#000;
+}
+
+/***************************************************************PERFIL-CAMPO******************************************************/
+.contenedor-perfil-campo-con{
+	width: 100%;
+    margin: auto;
+    background-color: #f4f4f4
+    ;
+}
+
+.contenedor-componentes-info-carrera-ingreso-con{
+width: 50%;
+margin: auto;
+display: block;
+float: left;
+
+}
+
+.contenedor-componentes-info-carrera-egreso-con{
+width: 50%;
+margin: auto;
+display: block;
+float: right;
+text-align: end;
+}
+.contenedor-apartado-con{
+	width: 100%;
+	height: 400px;
+	margin: auto;
+	padding: 20px;
+	display: block;
+	overflow: hidden;
+}
+.contenedor-apartado-campo{
+	width: 100%;
+	margin: auto;
+	padding: 20px;
+}
+
+.contenedor-titulo-perfil-con{
+	background-color: #a5b7d7;
+	padding-right: 15px;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+    text-align: right;
+}
+
+
+.contenedor-titulo-perfil-con h3{
+    color: white;
+    font-weight: normal;
+    font-size: 27px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.contenedor-titulo-perfil-con2{
+	background-color: #fb8738;
+	padding-left: 15px;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+    text-align: left;
+}
+
+
+.contenedor-titulo-perfil-con2 h3{
+    color: white;
+    font-weight: normal;
+    font-size: 27px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.contenedor-titulo-campo-con{
+	background-color: #bcc696;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.contenedor-perfil-con{
+	width: 100%;
+	height: 245px;
+	margin: auto;
+	display: block;
+	padding: 15px;
+	border: 2px solid #fff;
+	border-top: none;
+	overflow: hidden;
+	border-radius: 5px;
+
+}
+.imagen-ingre-egre-con{
+	width: 200px;
+	vertical-align: middle;
+}
+
+.imagen-ingre-egre-con1{
+	width: 300px;
+	vertical-align: middle;
+}
+
+ol.round{
+	list-style-type: none;
+    padding-left: 0px;
+
+}
+
+ol.round li{
+	margin: 10px 0;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+ol.round p{
+	width: 97%;
+	display: inline-block;
+	padding-left: 10px;
+	text-align: justify;
+}
+.viñeta{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.separador{
+	margin-top: 10px;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 10vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #f4f4f4 transparent;
+}
+
+.separador2{
+	margin-top: 10px;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 10vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+/***********************************LINEAS DE INV. Y CUERPOS ACAD.*****************************************/
+.contenedor-lineas-cuerpos{
+	width: 100%
+}
+
+.contenedor-lineas-cuerpos{
+	width: 60%;
+	margin-left: 2%;
+	display: inline-block;
+}
+
+.contenedor-titulo-seccion-con{
+	width: 100%;
+    min-height: 50px;
+    background: #83aec0c2;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.contenedor-titulo-seccion-con h3{
+	width: 100%;
+    text-transform: uppercase;
+    color: var(--blanco);
+    padding: 2%;
+    text-align: justify;
+}
+
+.tabla-informacion-escolar-con{
+	width: 95%;
+	margin: auto;
+}
+
+.tabla-informacion-escolar-con table{
+	background: var(--blanco);
+	border-collapse: collapse;
+	width: 100%; 
+}
+
+.tabla-informacion-escolar-con th, td{
+	padding: 20px;
+	max-width: 700px; /***TAMAÑO MÁXIMO DE LAS CELDAS***/
+}
+
+.tabla-informacion-escolar-con td{
+	text-align: justify;
+}
+
+.tabla-informacion-escolar-con thead{
+	padding: 5px;
+	font-size: 16px;
+	background-color: #83aec0;
+	background-image: url(../img/fondo_t.png);
+	background-repeat: repeat-x;
+	color: #FFFFFF;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #558FA6;
+	border-bottom-color: #558FA6;
+	text-transform: uppercase;
+}
+
+.tabla-informacion-escolar-con tr:nth-child(even){
+	background-color: var(--gris); 
+}
+
+.tabla-informacion-escolar-con tr:hover td{
+	background-color: var(--verde-azulado);
+	color: var(--blanco);
+}
+
+.tabla-informacion-escolar-con p{
+	text-align: center;
+}
+
+
+/*******************************************************RETICULA******************************************/
+.contenedor-texto-completo-acordeon-con{
+	width: 35%;
+    min-height: 500px;
+    padding: 10px;
+    display: inline-block;
+    float: right;
+}
+
+.contenedor-acordeon-con{
+	display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: -webkit-center;
+}
+.contenedor-acordeon-subapartado-con{
+	width:80%;
+	min-height:50px;
+	-webkit-transiton: height 0.3s;
+	border-radius: 5px;
+	margin-bottom: 1em;
+	cursor: pointer;
+}
+
+.contenedor-titulo-acordeon-con{
+	width:100%;
+	height:50px;
+	background-color: #1b396a;
+	overflow: hidden;
+	font-family: 'Roboto', sans-serif;
+	border-bottom: 1px solid #39f58f;
+	border-radius: 5px;
+}
+
+.contenedor-titulo-acordeon-con p{
+	margin:13px;
+	color: white;
+	text-shadow: 0px 1px 0px white;
+	text-transform: uppercase;
+}
+
+.info-acordeon-con{
+	display: none;
+	width:100%;
+	height:auto;
+	background-color: #f5f5f5;
+	overflow: hidden;
+}
+
+.info-acordeon p{
+	margin:20px;
+	text-align: justify;
+	color:#000;
+}
+
+.info-acordeon-centrado-con{
+	display: none;
+	width:100%;
+	height:auto;
+	background-color: #f5f5f5;
+	opacity: 0.9;
+	overflow: hidden;
+}
+
+.info-acordeon-centrado-con p{
+	margin:20px;
+	text-align: center;
+	color:#000;
+}
+
+
+
+
+
+/***************************************************************FIN SECCION CONOCENOS PRINCIPAL******************************************************/
 
 /************************************************************************************************SECCIÓN CONOCENOS MVO***********************************************************************/
 
@@ -101,78 +498,6 @@
 
 
 /************************************************************************************************FIN SECCIÓN MVO***********************************************************************/
-
-
-/*******************************************************SECCIONES ACORDEON******************************************/
-.contenedor-texto-completo-acordeon{
-	width: 100%;
-	min-height: 500px; 
-    padding: 10px;
-}
-
-.contenedor-acordeon{
-	display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    text-align: -webkit-center;
-}
-.contenedor-acordeon-subapartado{
-	width:80%;
-	min-height:50px;
-	-webkit-transiton: height 0.3s;
-	border-radius: 5px;
-	margin-bottom: 1em;
-	cursor: pointer;
-}
-
-.contenedor-titulo-acordeon{
-	width:100%;
-	height:50px;
-	background-color: #1b396a;
-	overflow: hidden;
-	font-family: 'Roboto', sans-serif;
-	border-bottom: 1px solid #39f58f;
-	border-radius: 5px;
-}
-
-.contenedor-titulo-acordeon p{
-	margin:13px;
-	color: white;
-	text-shadow: 0px 1px 0px white;
-	text-transform: uppercase;
-}
-
-.info-acordeon{
-	display: none;
-	width:100%;
-	height:auto;
-	background-color: #f5f5f5;
-	overflow: hidden;
-}
-
-.info-acordeon p{
-	margin:20px;
-	text-align: justify;
-	color:#000;
-}
-
-.info-acordeon-centrado{
-	display: none;
-	width:100%;
-	height:auto;
-	background-color: #f5f5f5;
-	opacity: 0.9;
-	overflow: hidden;
-}
-
-.info-acordeon-centrado p{
-	margin:20px;
-	text-align: center;
-	color:#000;
-}
 
 /************************************************************************************************SECCIÓN CONOCENOS PERFIL-CAMPO***********************************************************************/
 
@@ -286,3 +611,76 @@ ol.round p{
 	display: inline-block;
 	vertical-align: top;
 }
+
+
+/*******************************************************SECCIONES ACORDEON******************************************/
+.contenedor-texto-completo-acordeon{
+	width: 100%;
+	min-height: 500px; 
+    padding: 10px;
+}
+
+.contenedor-acordeon{
+	display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: -webkit-center;
+}
+.contenedor-acordeon-subapartado{
+	width:80%;
+	min-height:50px;
+	-webkit-transiton: height 0.3s;
+	border-radius: 5px;
+	margin-bottom: 1em;
+	cursor: pointer;
+}
+
+.contenedor-titulo-acordeon{
+	width:100%;
+	height:50px;
+	background-color: #1b396a;
+	overflow: hidden;
+	font-family: 'Roboto', sans-serif;
+	border-bottom: 1px solid #39f58f;
+	border-radius: 5px;
+}
+
+.contenedor-titulo-acordeon p{
+	margin:13px;
+	color: white;
+	text-shadow: 0px 1px 0px white;
+	text-transform: uppercase;
+}
+
+.info-acordeon{
+	display: none;
+	width:100%;
+	height:auto;
+	background-color: #f5f5f5;
+	overflow: hidden;
+}
+
+.info-acordeon p{
+	margin:20px;
+	text-align: justify;
+	color:#000;
+}
+
+.info-acordeon-centrado{
+	display: none;
+	width:100%;
+	height:auto;
+	background-color: #f5f5f5;
+	opacity: 0.9;
+	overflow: hidden;
+}
+
+.info-acordeon-centrado p{
+	margin:20px;
+	text-align: center;
+	color:#000;
+}
+

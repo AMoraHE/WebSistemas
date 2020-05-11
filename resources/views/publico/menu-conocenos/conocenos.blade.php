@@ -22,59 +22,57 @@
 
 	</div> 
 		
-	<div class="fondo-mvo">
+	<div class="fondo-mvo-con">
 
+		<div class="contenedor-mvo-con">
+			@foreach($informaciones as $informacion)
 
-	@foreach($informaciones as $informacion)
+				
+			@if($informacion->categoria == 'Misión')
+				
 
-		
-	@if($informacion->categoria == 'Misión')
-		<div class="contenedor-mvo">
+						<div class="contenedor-mvo-subapartado-con">
 
-				<div class="contenedor-mvo-subapartado">
+							<div class="contenedor-titulo-mvo-con">
+								<p>{{$informacion->categoria}}</p>			
+							
+							<div class="info-mvo-con">
+										<p>{{$informacion->descripcion}}</p>
+							</div>
 
-					<div class="contenedor-titulo-mvo">
-						<p>{{$informacion->categoria}}</p>			
-					
-					<div class="info-mvo">
-								<p>{{$informacion->descripcion}}</p>
-					</div>
+							</div>
+							
 
-					</div>
-					<div class="contenedor-img-mvo">
-						<img class="imagen-mvo" src="{{ asset('img/mision.png')}}">
-					</div>
+						</div>
+				
+				
+			@endif	
 
-				</div>
-		
-		</div>
-	@endif	
+			@if($informacion->categoria == 'Visión')
+				
 
-	@if($informacion->categoria == 'Visión')
-		<div class="contenedor-mvo">
+						<div class="contenedor-mvo-subapartado-con">
 
-				<div class="contenedor-mvo-subapartado">
+							<div class="contenedor-titulo-mvo-con2">
+								<p>{{$informacion->categoria}}</p>			
+							
+							<div class="info-mvo-con">
+										<p>{{$informacion->descripcion}}</p>
+							</div>
 
-					<div class="contenedor-titulo-mvo-2">
-						<p>{{$informacion->categoria}}</p>			
-					
-					<div class="info-mvo">
-								<p>{{$informacion->descripcion}}</p>
-					</div>
+							</div>
 
-					</div>
-					<div class="contenedor-img-mvo2">
-						<img class="imagen-mvo" src="{{ asset('img/vision.png')}}">
-					</div>
+						</div>
+				
+			
+			@endif	
 
-				</div>
-		
-		</div>
-	@endif	
+			
 
-	@endforeach
+			@endforeach
 
 		</div>
+	</div>
 
 		
 
@@ -82,34 +80,30 @@
 
 <!-------------------------------------------------------------  PERFIL INGRESO ------------------------------------------------------->
 
+<div class="separador"></div>
+<div class="contenedor-perfil-campo-con">
 
-<div class="contenedor-perfil-campo">
+	<div class="contenedor-componentes-info-carrera-ingreso-con">
 
-	<div class="contenedor-componentes-info-carrera-ingreso">
+		<div class="contenedor-apartado-con">
 
-		
+			<div class="contenedor-titulo-perfil-con">
 
-		<div class="contenedor-apartado">
-			
+				<img class="imagen-ingre-egre-con" src="{{ asset('img/ingreso1.png')}}">
 
-			<div class="contenedor-perfil">
+			</div>
+
+			<div class="contenedor-perfil-con">
 
 				<ol class="round">
 
 				@foreach ($perfilingreso as $perfilingres)
 
 					<li><i class="viñeta">{{$perfilingres->vineta}}</i> <p>{{$perfilingres->elemento}}</p></li>
-				
 
 				@endforeach
 
 				</ol>
-
-			</div>
-
-			<div class="contenedor-titulo-perfil">
-
-				<img class="imagen-ingre-egre" src="{{ asset('img/ingreso1.png')}}">
 
 			</div>
 
@@ -121,18 +115,17 @@
 
 <!----------------------------------------------------------------- PERFIL EGRESO---------------------------------------------------------->
 
-<div class="contenedor-componentes-info-carrera-egreso">
+<div class="contenedor-componentes-info-carrera-egreso-con">
 
-	
+		<div class="contenedor-apartado-con">
 
-		<div class="contenedor-apartado">
-			<div class="contenedor-titulo-perfil">
+			<div class="contenedor-titulo-perfil-con2">
 
-				<img class="imagen-ingre-egre" src="{{ asset('img/egreso1.png')}}">
+				<img class="imagen-ingre-egre-con" src="{{ asset('img/egreso1.png')}}">
 
 			</div>
 
-			<div class="contenedor-perfil">
+			<div class="contenedor-perfil-con">
 				
 				<ol class="round">
 
@@ -159,13 +152,14 @@
 	
 
 		<div class="contenedor-apartado-campo">
-			<div class="contenedor-titulo-campo">
 
-				<h3>Campo Laboral</h3>
+			<div class="contenedor-titulo-campo-con">
+
+				<img class="imagen-ingre-egre-con1" src="{{ asset('img/laboral.png')}}">
 
 			</div>
 
-			<div class="contenedor-perfil">
+			<div class="contenedor-perfil-con">
 
 				<ol class="round">
 
@@ -182,23 +176,22 @@
 		</div>
 
 </div>
+<div class="separador2"></div>
 </div>
 
 <!----------------------------------------------------------------- TABLA LINEAS INVESTIGACIÓN---------------------------------------->
+<div class="contenedor-lineas-cuerpos-reticula">
 
-	<div class="contenedor-titulo-seccion">
-
-		<div class="tlinea"></div>
+<div class="contenedor-lineas-cuerpos">
+	<div class="contenedor-titulo-seccion-con">
 
 		<h3>Líneas de Investigación</h3>
-
-		<div class="tlinea"></div>
 
 	</div>
 
 	<div class="contenedor-tabla">
 
-		<div class="tabla-informacion-escolar">
+		<div class="tabla-informacion-escolar-con">
 
 				<table>
 									
@@ -206,7 +199,6 @@
 						<tr>
 							<th>Programa</th>
 							<th>Líneas de Investigación</th>
-							<th>CLave LI TECNM</th>
 						</tr>
 					</thead>
 
@@ -215,7 +207,6 @@
 						<tr>
 							<td>{{$lineainvestigacio->programa}}</td>
 							<td>{{$lineainvestigacio->linea}}</td>
-							<td>{{$lineainvestigacio->clave}}</td>
 							
 						</tr>
 
@@ -229,20 +220,16 @@
 
 	<!----------------------------------------------------------------- CUERPO ACADÉMICO  ---------------------------------------------------------->
 
-	<div class="contenedor-titulo-seccion">
-
-		<div class="tlinea"></div>
+	<div class="contenedor-titulo-seccion-con">
 
 		<h3>Cuerpos Académicos</h3>
-
-		<div class="tlinea"></div>
 
 	</div>
 
 
 <!----------------------------------------------------------------- TABLA - CUERPO ACADÉMICO  ---------------------------------------------------------->
 		<div class="contenedor-tabla">
-			<div class="tabla-informacion-escolar">
+			<div class="tabla-informacion-escolar-con">
 
 				<table>
 							
@@ -250,8 +237,6 @@
 						<tr>
 							<th>Nombre del CA</th>
 							<th>Grado del CA</th>
-							<th>ID CA</th>
-							<th>Clave CA</th>
 							<th>Integrantes</th>
 						</tr>
 					</thead>
@@ -261,8 +246,6 @@
 					<tr>
 						<td>{{$cuerpo->nombre}}</td>
 						<td>{{$cuerpo->grado}}</td>
-						<td>{{$cuerpo->idCA}}</td>
-						<td>{{$cuerpo->clave}}</td>
 						<td>
 							<ol>
 								@foreach (explode(', ', $cuerpo->integrantes) as $integrantes)
@@ -280,18 +263,16 @@
 			</div>
 		</div>
 
-
+</div>
 		<!-------------------------------------------------------------- RETICULA ---------------------------------------------------------->
 
 
-<div class="contenedor-componentes-principales">
-
-	<div class="contenedor-texto-completo-acordeon">
-	<div class="contenedor-acordeon">
+	<div class="contenedor-texto-completo-acordeon-con">
+	<div class="contenedor-acordeon-con">
 	@foreach ($reticulas as $reticula)
 
-	<div class="contenedor-acordeon-subapartado">
-				<div class="contenedor-titulo-acordeon">
+	<div class="contenedor-acordeon-subapartado-con">
+				<div class="contenedor-titulo-acordeon-con">
 
 				<p>{{$reticula->titulo}}<i class="icono-derecha fas fa-plus"></i></p>
 
@@ -306,12 +287,7 @@
 <!-------------------------------------------------------------- organigrama ---------------------------------------------------------->
 		<div class="contenedor-titulo-seccion">
 
-		    <div class="tlinea"></div>
-
 		    <h3>Organigrama</h3>
-
-		    <div class="tlinea"></div>
-
 		  </div>
 
 </div>
