@@ -9,73 +9,59 @@
 
 <div class="seccion-principal">
 
-	<!-----------------Botones--------->
+	<!------------------------------------------------------------- IMG Encabezado ----------------------------------------------------------->
 
+      <div class="contenedor-img-encabezado">
 
-	@foreach ($convocatorias as $convocatoria)
+          <div class="img-encabezado">
 
-	<div class="contenedor-titulo-seccion">
+            <img src="/img/Convocatorias.jpg">
 
-		<h3>{{$convocatoria->convocatoria}}</h3>
+            <div class="encabezado">
 
-	</div>
+               <h1>Convocatorias</h1>
+               <hr>
 
-	<!----------------------------------------------------------------- FORMULARIO ---------------------------------------------------------->
+            </div>
 
-			<div class="contenedor-formulario-dividido">
+          </div>   
 
-			    <div class="columna-de-dos">
+          <div class="skew-abajo"></div>
 
-			      <div class="formulario">
+      </div>
 
-			        <label>Fecha Inicio</label>
-			        <input  data-date-format="l j, F, Y" id="FInicio" name="FInicio" value="{{$convocatoria->FInicio}}" readonly />
+	<!------------------------------------------------------------- CONVOCATORIAS ----------------------------------------------------------->
 
-			      </div>
+	<div class="contenedor-secciones">
 
-			    </div>
+		@foreach ($convocatorias as $convocatoria)
 
-			    <div class="columna-de-dos">
+		<div class="contenedor-titulo-seccion">
 
-			      <div class="formulario">
+			<h3><i class="icono-izquierda fas fa-file-invoice"></i>{{$convocatoria->convocatoria}}</h3>
 
-			        <label>Fecha Cierre</label>
-			        <input data-date-format="l j, F, Y" id="FFin" name="FFin" value="{{$convocatoria->FFin}}" readonly />
+		</div>
 
-			      </div>
+		<div class="contenedor-seccion-convocatoria">
 
-			    </div>
+			<div class="fecha-conv">
 
-			</div>
-
-			<div class="formulario">
-
-				<label>Descripción</label>
-				<textarea readonly>{{$convocatoria->descripcion}}</textarea>
+				<p>Fecha Incio</p>
+				<p class="fecha-inicio-conv">{{$convocatoria->FInicio}}</p>
 				
 			</div>
 
-			<div class="contenedor-enlaces">
-			
-				<a target="_blank" rel="noopener noreferrer" href="/isc-academicos-convocatoriasVer/{{$convocatoria->slug}}">{{$convocatoria->doc}}</a>
-
+			<div class="desc-conv">
+				
 			</div>
+			
+		</div>
 
-			@php
-			$var = $convocatoria->slug
-			@endphp
+		
 
-
-<!---------------BOTONES convocatoria------------------------------------->
-
-	<div class="contenedor-botones">
-
-		<a href="/isc-academicos-convocatoriasDescargar/{{$convocatoria->slug}}"><button class="btn"><span>Descargar</span></button></a>
-
+		@endforeach
 
 	</div>
-
-	@endforeach
 
 	<div id="paginas">
 			{{$convocatorias->links()}}
