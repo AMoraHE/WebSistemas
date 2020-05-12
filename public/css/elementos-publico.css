@@ -713,10 +713,10 @@
 
 .contenedor-seccion-img-grande{
 	width: 100%;
-	height: 50vh;
+	height: 600px;
 	position: relative;
 	overflow: hidden;
-	box-shadow: 0 10px 10px rgba(0,0,0,0.7);
+	/*box-shadow: 0 10px 10px rgba(0,0,0,0.7);*/
 
 }
 
@@ -726,11 +726,54 @@
 	height: 100%; /***Hacer Responsivo***/
 	object-fit: cover;
 	object-position: center;
-	border: 5px solid var(--blanco);
+	/*border: 5px solid var(--blanco);*/
+}
+
+.contenedor-seccion-cuerpo-dividido{
+	width: 100%;
+	height: 350px; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px auto;
+	background: rgb(241, 89, 42, .8);
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.contenedor-seccion-cuerpo-dividido h3{
+	color: var(--azul);
+	font-size: 28px;
+	font-weight: 400;
+}
+
+.contenedor-seccion-cuerpo-dividido p{
+	font-size: 18px;
+}
+
+.contenedor-desarrolladores{
+	background: var(--blanco);
+	width: 50%;
+	height: 100%;
+	padding: 10px;
+	overflow: auto;
+	border-radius: 5px; 
+	margin-right: 5px; 
+}
+
+.contenedor-descripcion-proyecto{
+	background: var(--gris-tipo1);
+	width: 50%;
+	height: 100%;
+	padding: 10px;
+	overflow: auto;
+	border-radius: 5px;
+	margin-left: 5px; 
+	
 }
 
 
-/************************************************************************************************PAGINA ACADÉMICOS********************************************************************************/
+/************************************************************************************************FIN PAGINA ACADÉMICOS********************************************************************************/
 
 
 /****************************************SECCIONES PRINCIPALES TITULOS*************************************************/
@@ -795,6 +838,60 @@
     padding: 10px;
     padding: 2%;
     text-align: center;
+}
+
+/************************************************************************************************SECCIÓN MINI GALERIA***********************************************************************/
+
+.seccion-mini-galeria{
+	width: 100%;
+	text-align: center;
+	border-top: 1px solid var(--naranja);
+	background: var(--gris-tipo1);
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.seccion-mini-galeria h3{
+	font-size: 28px;
+	font-weight: 400;
+	color: var(--azul);
+}
+
+.contenedor-img-mini-galeria-img{
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+
+.contenedor-img-mini-galeria-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	border: 2px solid var(--blanco);
+}
+
+.contenedor-img-mini-galeria-button{
+	width: 100%;
+	height: 20%;
+	background: #1B396A;
+    opacity: .8;
+	position: absolute;
+	bottom: 0;
+	margin: 10px 0 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+	border-color: var(--blanco);
+}
+
+.contenedor-img-mini-galeria-button button{
+	width: 200px;
 }
 
 /************************************************************************************************SECCIÓN BUSCADOR***************************************************************************/
@@ -1220,6 +1317,7 @@
 .hover-galeria img{
     width: 50px;
     height: auto;
+    border: 0px;
 }
 
 .hover-galeria p{
@@ -1228,6 +1326,11 @@
 
 .contenedor-img-proyecto:hover .hover-galeria{
     transform: scale(1);
+}
+
+.contenedor-img-mini-galeria-img:hover .hover-galeria{
+    transform: scale(1);
+    border-radius: 0px;
 }
 
 /***************************EFECTO SKEW***********************************/

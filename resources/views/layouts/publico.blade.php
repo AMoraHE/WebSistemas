@@ -5,14 +5,19 @@
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-	<title>Inicio</title>
+	<title>Sistemas - @yield('title')</title>
   
-	  	<script src="https://kit.fontawesome.com/13b3d85bca.js" crossorigin="anonymous"></script>
 	  	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-publico.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/elementos-publico.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/conocenos-publico.css')}}">
+
+		<!--------------------------------ICONOS---------------------------------------->
+
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/iconos.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css')}}">
+
 
 		<!--------------------------------SLIDER---------------------------------------->
 
@@ -30,9 +35,30 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/modal-public.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/fullcalendar.css')}}">
 
-		<!-- Calendario -->
+		<!--------------------------------MODAL IMG---------------------------------------->
 
-		<script src="{{ asset('js/jquery.min.js')}}"></script>
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/modal-img.css')}}">
+		
+		<!---------------------------------GALERIA------------------------------------------>
+		
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/galeria.css')}}">
+
+		<!-----------SCRIPT AJAX --- IMPORTANTE DEBE IR ARRIBA DE TODOS LOS JS-------------->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+		<!-- Galería -->
+
+		<script src="{{ asset('js/galeria.js')}}"></script>
+		<script src="{{ asset('js/galeria-animacion.js')}}"></script>
+
+		<!-- Iconos -->
+
+		<script src="{{ asset('js/iconos.js')}}"></script>
+
+		<!-- Calendario -->
+		<!--<script src="{{ asset('js/jquery.min.js')}}"></script>-->
 		<script src="{{ asset('js/moment.min.js')}}"></script>
 
 		<script src="{{ asset('js/fullcalendar.min.js')}}"></script>
@@ -41,7 +67,7 @@
 
 		<!-- Menu -->
 
-		<script src="{{ asset('js/headroom.min.js')}}"></script>
+		<!--<script src="{{ asset('js/headroom.min.js')}}"></script>-->
 
 		<!-- script Boostrap-->
 
@@ -76,13 +102,13 @@
 	        </div>
 
 	    	<div class="enlaces" id="enlaces">
-	    		<a href="{{route('ISC-INICIO')}}"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
-	    		<a href="/isc-inicio-noticias"><i class="fa fa-newspaper" aria-hidden="true"></i> Noticias</a>
-	    		<a href="/isc-conocenos"><i class="fa fa-handshake" aria-hidden="true"></i> Conocenos</a>
-	    		<a href="#"><i class="fa fa-school" aria-hidden="true"></i> Infraestructura</a>
-	    		<a href="#"><i class="fa fa-chalkboard-teacher" aria-hidden="true"></i> Académicos</a>
-	    		<a href="/isc-galeria-fotos"><i class="fa fa-image" aria-hidden="true"></i> Galería</a>
-	    		<a href="/isc-inicio-contactos"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contactanos</a>
+	    		<a href="{{route('ISC-INICIO')}}"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a>
+	    		<a href="/isc-inicio-noticias"><i class="fas fa-newspaper" aria-hidden="true"></i> Noticias</a>
+	    		<a href="/isc-conocenos"><i class="fas fa-handshake" aria-hidden="true"></i> Conocenos</a>
+	    		<a href="#"><i class="fas fa-school" aria-hidden="true"></i> Infraestructura</a>
+	    		<a href="#"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> Académicos</a>
+	    		<a href="/isc-galeria-fotos"><i class="fas fa-image" aria-hidden="true"></i> Galería</a>
+	    		<a href="/isc-inicio-contactos"><i class="fas fa-envelope" aria-hidden="true"></i> Contactanos</a>
 	    	</div>
 	    </nav>
 
@@ -125,7 +151,7 @@
 
 </div>
 
-	<script src="{{ asset('js/main-public.js')}}"></script>
+	<!--<script src="{{ asset('js/main-public.js')}}"></script>-->
 
 	<!--------------------------------SLIDER---------------------------------------->
 
