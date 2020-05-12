@@ -211,7 +211,7 @@ class PublicController extends Controller
 
   public function academicos()
   {
-    $proyectos = Proyecto::latest()->take(4)->get();
+    $proyectos = Proyecto::latest()->take(1)->get();
     $eventos = EventosAcademico::latest()->take(2)->get();
     $convocatorias = Convocatoria::latest()->take(2)->get();
     $programas = Programa::latest()->take(2)->get();

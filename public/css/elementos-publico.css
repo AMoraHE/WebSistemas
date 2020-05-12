@@ -215,6 +215,14 @@
 	width: 300px;
 }
 
+.contenedor-seccion-noticias-preliminar{
+	display: inline-block;
+	margin: 10px 10px 0px 0px;
+	background: var(--gris-tipo1);
+	border-radius: 5px;
+	padding: 5px;
+}
+
 .contenedor-seccion-preliminar-img{
 	width: 300px;
 	height: 300px;
@@ -222,14 +230,6 @@
     border: 5px solid var(--gris-tipo1);
     overflow: hidden;
     position: relative;
-}
-
-.contenedor-seccion-noticias-preliminar{
-	display: inline-block;
-	margin: 10px 10px 0px 0px;
-	background: var(--gris-tipo1);
-	border-radius: 5px;
-	padding: 5px;
 }
 
 .contenedor-seccion-preliminar-img img{
@@ -457,6 +457,7 @@
 
 .contenedor-secciones{
 	width: calc(100% - 50px);
+	min-width: 350px;
 	margin: 10px auto;
 }
 
@@ -632,7 +633,105 @@
 
 /************************************************************************************************FIN SECCIÓN NOTICIAS IND***********************************************************************/
 
-/************************************************************************************************PAGINA ACADÉMICOS********************************************************************************/
+/************************************************************************************************PAGINA ACADÉMICOS PRINCIPAL********************************************************************************/
+
+.contenedor-seccion-proyecto{
+	width: 100%;
+	text-align: center;
+}
+
+.contenedor-seccion-proyecto h1{
+	color: var(--naranja);
+	font-size: 36px;
+	font-weight: 400;
+}
+
+.contenedor-proyectos-1{
+	width: 100%;
+	display: inline-block;
+	margin: 10px 10px 0px 0px;
+	background: var(--gris-tipo1);
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.contenedor-seccion-cuerpo-filas-1{
+	width: 50%;
+	height: 100%;
+	display: block;
+}
+
+.contenedor-seccion-cuerpo-dividido-1{
+	width: 100%;
+	height: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px auto;
+	background: rgb(241, 89, 42, .8);
+	padding: 10px;
+}
+
+.contenedor-seccion-cuerpo-dividido-1 h3{
+	color: var(--azul);
+	font-size: 28px;
+	font-weight: 400;
+}
+
+.contenedor-seccion-cuerpo-dividido-1 p{
+	font-size: 18px;
+	text-align: justify;
+}
+
+.contenedor-seccion-img-grande-1{
+	width: 50%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	/*box-shadow: 0 10px 10px rgba(0,0,0,0.7);*/
+
+}
+
+.contenedor-desarrolladores-1{
+	background: var(--blanco);
+	width: 100%;
+	height: 50%;
+	padding: 10px;
+	overflow: auto;
+}
+
+.contenedor-descripcion-proyecto-1{
+	background: var(--gris-tipo1);
+	width: 100%;
+	height: 50%;
+	padding: 10px;
+	overflow: auto;	
+}
+
+
+.contenedor-seccion-img-grande-1 img{
+	width: 100%;
+	height: 100%; /***Hacer Responsivo***/
+	object-fit: cover;
+	object-position: center;
+	/*border: 5px solid var(--blanco);*/
+}
+
+
+
+.contenedor-seccion-eventos{
+	background: yellow;
+}
+
+.contenedor-seccion-convocatorias{
+	background: blue;
+}
+
+.contenedor-seccion-programas{
+	background: green;
+}
+
+/************************************************************************************************PAGINA ACADÉMICOS SECCIONES********************************************************************************/
 
 .contenedor-seccion-convocatoria{
 	padding: 10px;
