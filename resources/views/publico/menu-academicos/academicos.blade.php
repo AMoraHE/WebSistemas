@@ -33,6 +33,7 @@
 
 	<!------------------------------------------------------------- PROYECTOS ----------------------------------------------------------->
 
+	<strong>PROYECTOS</strong>
 
     <div class="contenedor-secciones">
 
@@ -75,76 +76,276 @@
 
 		
 	</div>
-
-	<div class="seccion-mini-galeria">
-
-		<h3>Galería de Fotos</h3>
-
-			<ul id="carousel{{$proyecto->id}}" class="elastislide-list">
-
-			@foreach ($imagenes as $imagen)
-			@if($imagen->proySlug == $proyecto ->slug)
-
-			<li>
-
-				<div class="contenedor-img-mini-galeria">
-
-		        <!---------------------------------- MODAL IMG -------------------------------------------->
-
-		          <div class="contenedor-img-mini-galeria-img">
-
-		            <a href="#modal-img{{$imagen->id}}">
-
-		            	<img src="/images/proyectos/{{$imagen->imagen}}">
-
-			            <div class="hover-galeria">
-		                    <img src="/img/icono1.png" alt="">
-		                    <p>Abrir</p>
-	                	</div>
-
-                	</a>
-
-
-		          </div>
-
-		        <!---------------------------------- FIN MODAL IMG -------------------------------------------->
-
-				</div>
-
-			</li>
-
-			@endif
-			@endforeach
-
-				<script>
-				
-					$('#carousel{{$proyecto->id}}').elastislide();
-				
-				</script>
-
-			</ul>
-
-			@foreach ($imagenes as $imagen)
-
-			    <div class="modal-img" id="modal-img{{$imagen->id}}">
-
-	              <a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
-	              <img src="/images/proyectos/{{$imagen->imagen}}" />
-
-	            </div>
-
-	        @endforeach
-		
-	</div>
-
 	
 	<div class="seccion-divisor-seccion"></div>
 	@endforeach
 
 	</div>
 
-	<div id="paginas">
-			{{$proyectos->links()}}
+	<strong>EVENTOS ACADÉMICOS</strong>
+
+	<div class="contenedor-secciones">
+
+		@foreach ($eventos as $evento)
+
+		<div class="contenedor-titulo-seccion">
+
+			<h3><i class="icono-izquierda fas fa-file-invoice"></i>{{$evento->titulo}}</h3>
+
+		</div>
+
+		<div class="contenedor-seccion-convocatoria">
+
+			<div class="contenedor-fecha-conv">
+
+				<div class="fecha-divi">
+
+					<div class="fecha-conv">
+
+						<p>Inicia</p>
+
+						<div class="c-fecha fc-inicio">
+
+							<p>{{$evento->FInicio}}</p>
+
+						</div>
+						
+					</div>
+
+				</div>
+
+				<div class="fecha-divi">
+
+					<div class="fecha-conv">
+
+						<p>Termina</p>
+						
+						<div class="c-fecha fc-final">
+
+							<p>{{$evento->FCierre}}</p>
+
+						</div>
+
+					</div>
+
+				</div>
+				
+			</div>
+
+			<div class="desc-conv">
+
+				<div class="c-descripcion">
+
+					<p>{{$evento->descripcion}}</p>
+					
+				</div>
+
+				<div class="contenedor-enlaces">
+				
+					<a target="_blank" rel="" href="/isc-academicos-eventosVer/{{$evento->slug}}">{{$evento->documento}}</a>
+
+				</div>
+
+			</div>
+			
+		</div>
+
+		<!---------------BOTONES convocatoria------------------------------------->
+
+		<div class="contenedor-botones">
+
+			<a href="/isc-academicos-eventosDescargar/{{$evento->slug}}"><button class="btn"><span>Descargar <i class="icono-derecha far fa-save"></i></span></button></a>
+
+		</div>
+
+
+
+
+		<div class="seccion-divisor-seccion"></div>		
+
+		@endforeach
+
+	</div>
+
+	<strong>CONVOCATORIAS</strong>
+
+	<div class="contenedor-secciones">
+
+		@foreach ($convocatorias as $convocatoria)
+
+		<div class="contenedor-titulo-seccion">
+
+			<h3><i class="icono-izquierda fas fa-file-invoice"></i>{{$convocatoria->convocatoria}}</h3>
+
+		</div>
+
+		<div class="contenedor-seccion-convocatoria">
+
+			<div class="contenedor-fecha-conv">
+
+				<div class="fecha-divi">
+
+					<div class="fecha-conv">
+
+						<p>Inicia</p>
+
+						<div class="c-fecha fc-inicio">
+
+							<p>{{$convocatoria->FInicio}}</p>
+
+						</div>
+						
+					</div>
+
+				</div>
+
+				<div class="fecha-divi">
+
+					<div class="fecha-conv">
+
+						<p>Termina</p>
+						
+						<div class="c-fecha fc-final">
+
+							<p>{{$convocatoria->FFin}}</p>
+
+						</div>
+
+					</div>
+
+				</div>
+				
+			</div>
+
+			<div class="desc-conv">
+
+				<div class="c-descripcion">
+
+					<p>{{$convocatoria->descripcion}}</p>
+					
+				</div>
+
+				<div class="contenedor-enlaces">
+				
+					<a target="_blank" rel="noopener noreferrer" href="/isc-academicos-convocatoriasVer/{{$convocatoria->slug}}">{{$convocatoria->doc}}</a>
+
+				</div>
+
+				@php
+				$var = $convocatoria->slug
+				@endphp
+				
+			</div>
+			
+		</div>
+
+		<!---------------BOTONES convocatoria------------------------------------->
+
+		<div class="contenedor-botones">
+
+			<a href="/isc-academicos-convocatoriasDescargar/{{$convocatoria->slug}}"><button class="btn"><span>Descargar <i class="icono-derecha far fa-save"></i></span></button></a>
+
+		</div>
+
+
+
+
+		<div class="seccion-divisor-seccion"></div>
+
+		
+
+		@endforeach
+
+	</div>
+
+	<strong>PROGRAMAS</strong>
+
+	<div class="contenedor-secciones">
+
+		@foreach ($programas as $programa)
+
+			<div class="contenedor-titulo-seccion">
+
+				<h3><i class="icono-izquierda fas fa-file-invoice"></i>{{$programa->programa}}</h3>
+
+			</div>
+
+			<div class="contenedor-seccion-convocatoria">
+
+				<div class="contenedor-fecha-conv">
+
+					<div class="fecha-divi">
+
+						<div class="fecha-conv">
+
+							<p>Inicia</p>
+
+							<div class="c-fecha fc-inicio">
+
+								<p>{{$programa->FInicio}}</p>
+
+							</div>
+							
+						</div>
+
+					</div>
+
+					<div class="fecha-divi">
+
+						<div class="fecha-conv">
+
+							<p>Termina</p>
+							
+							<div class="c-fecha fc-final">
+
+								<p>{{$programa->FFin}}</p>
+
+							</div>
+
+						</div>
+
+					</div>
+					
+				</div>
+
+				<div class="desc-conv">
+
+					<div class="c-descripcion">
+
+						<p>{{$programa->descripcion}}</p>
+						
+					</div>
+
+					<div class="contenedor-enlaces">
+					
+						<a target="_blank" rel="noopener noreferrer" href="/isc-academicos-programasVer/{{$programa->slug}}">{{$programa->doc}}</a>
+
+					</div>
+
+					@php
+					$var = $programa->slug
+					@endphp
+							
+				</div>
+				
+			</div>
+
+			<!---------------BOTONES convocatoria------------------------------------->
+
+			<div class="contenedor-botones">
+
+				<a href="/isc-academicos-programasDescargar/{{$programa->slug}}"><button class="btn"><span>Descargar <i class="icono-derecha far fa-save"></i></span></button></a>
+
+			</div>
+
+
+
+
+			<div class="seccion-divisor-seccion"></div>
+
+		
+		@endforeach
+
 	</div>
 
 </div>

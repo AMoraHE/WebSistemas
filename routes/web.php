@@ -43,6 +43,7 @@ Route::get('/isc-infraestructura-labMicroprocesadores', 'PublicController@labMic
 Route::get('/isc-infraestructura-labCelula', 'PublicController@labCelula');
 Route::get('/isc-infraestructura-labVerImg/{id}', 'PublicController@labVerImg');
 Route::get('/isc-infraestructura-labGaleriaVerImg/{id}', 'PublicController@labGaleriaVerImg');
+Route::get('/isc-academicos', 'PublicController@academicos');
 Route::get('/isc-academicos-proyectos', 'PublicController@proyectos');
 Route::get('/isc-academicos-eventos', 'PublicController@eventos');
 Route::get('/isc-academicos-convocatorias', 'PublicController@convocatorias');
