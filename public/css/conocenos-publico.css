@@ -674,6 +674,28 @@ ol.round p{
 }
 
 
+.contenedor-componentes-info-carrera{
+	width: 100%;
+	margin:auto;
+	display: flex;
+}
+
+
+
+.contenedor-titulo-campo{
+	background-color: #bcc696;
+	padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.contenedor-apartado-campo{
+	width: 100%;
+	margin: auto;
+	padding: 20px;
+}
+
 /*******************************************************SECCIONES ACORDEON******************************************/
 .contenedor-texto-completo-acordeon{
 	width: 100%;
