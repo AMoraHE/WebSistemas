@@ -562,11 +562,6 @@ box-shadow: 0 1px 6px #000;
 	margin: auto;
 }
 
-.contenedor-componentes-info-carrera{
-	width: 100%;
-	margin:auto;
-	display: flex;
-}
 
 .contenedor-componentes-info-carrera-ingreso{
 width: 100%;
@@ -590,35 +585,28 @@ text-align: end;
 	padding: 20px;
 	display: flex;
 }
-.contenedor-apartado-campo{
-	width: 100%;
-	margin: auto;
-	padding: 20px;
-}
+
+.contenedor-componentes-info-carrera-egreso:nth-child(even){
+background-color: #f4f4f4;
+}	
 
 .contenedor-titulo-perfil{
-	background-color: #96C6BB;
+	background-color: #bae4dac7;
 	padding: 10px 15px;
     border-bottom: 1px solid transparent;
     border-radius: 5px;
+
 }
 
 
-.contenedor-titulo-perfil h3{
+.contenedor-titulo-perfil p{
     color: white;
     font-weight: normal;
-    font-size: 27px;
+    font-size: 28pt;
+    text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
     line-height: 1.1;
-}
-
-.contenedor-titulo-campo{
-	background-color: #bcc696;
-	padding: 10px 15px;
-    border-bottom: 1px solid transparent;
-    border-radius: 5px;
-    text-align: center;
 }
 
 
@@ -633,13 +621,30 @@ text-align: end;
 
 .contenedor-perfil{
 	width: 100%;
+	min-height: 302.44px;
 	margin: auto;
 	display: block;
 	padding: 15px;
-	background-color: #fafad2;
 	border: 1px solid #f4f4f4;
 
 }
+
+.contenedor-perfil1{
+	width: 100%;
+	min-height: 302.44px;
+	margin: auto;
+	display: block;
+	padding: 15px;
+	border: 1px solid #fff;
+
+}
+
+.imagen-perfil-campo{
+	width: 200px;
+    display: block;
+    position: relative;
+}
+
 .imagen-ingre-egre{
 	width: 300px;
 }

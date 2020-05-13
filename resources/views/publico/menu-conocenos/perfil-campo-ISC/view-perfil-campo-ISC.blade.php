@@ -32,7 +32,12 @@
 
 		<div class="contenedor-apartado">
 			
+			<div class="contenedor-titulo-perfil">
 
+				<p>Perfil Ingreso</p>
+				<img class="imagen-perfil-campo" src="{{ asset('img/ingreso.png')}}">
+
+			</div>
 			<div class="contenedor-perfil">
 
 				<ol class="round">
@@ -46,11 +51,6 @@
 
 				</ol>
 
-			</div>
-
-			<div class="contenedor-titulo-perfil">
-
-				<img class="imagen-ingre-egre" src="{{ asset('img/ingreso1.png')}}">
 
 			</div>
 
@@ -67,13 +67,8 @@
 	
 
 		<div class="contenedor-apartado">
-			<div class="contenedor-titulo-perfil">
 
-				<img class="imagen-ingre-egre" src="{{ asset('img/egreso1.png')}}">
-
-			</div>
-
-			<div class="contenedor-perfil">
+			<div class="contenedor-perfil1">
 				
 				<ol class="round">
 
@@ -87,6 +82,14 @@
 
 			</ol>
 
+			</div>
+
+			<div class="contenedor-titulo-perfil">
+
+				<p>Perfil Egreso</p>
+
+				<img class="imagen-perfil-campo" src="{{ asset('img/egreso.png')}}">
+
 			</div>		
 
 		</div>
@@ -94,20 +97,22 @@
 
 
 <!----------------------------------------------------------------- CAMPO LABORAL---------------------------------------------------------->
-
-<div class="contenedor-componentes-info-carrera">
+<div class="contenedor-componentes-info-carrera-egreso">
 
 	
 
-		<div class="contenedor-apartado-campo">
-			<div class="contenedor-titulo-campo">
+		<div class="contenedor-apartado">
 
-				<h3>Campo Laboral</h3>
+			<div class="contenedor-titulo-perfil">
 
-			</div>
+				<p>Campo Laboral</p>
+
+				<img class="imagen-perfil-campo" src="{{ asset('img/laboral.png')}}">
+
+			</div>	
 
 			<div class="contenedor-perfil">
-
+				
 				<ol class="round">
 
 				@foreach ($campolaboral as $campolabora)
@@ -116,13 +121,16 @@
 						
 				@endforeach
 
-				</ol>
+			</ol>
 
 			</div>
 
-		</div>
+				
 
+		</div>
 </div>
+
+
 </div>
 
 </div>
