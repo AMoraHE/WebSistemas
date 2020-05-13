@@ -19,7 +19,7 @@
 
             <div class="encabezado">
 
-               <h1>Conocenos</h1>
+               <h1>Conócenos</h1>
                <hr>
 
             </div>
@@ -39,11 +39,12 @@
 			@if($informacion->categoria == 'Misión')
 				
 
-						<a href="/isc-conocenos-MVO" class="contenedor-mvo-subapartado-con">
+						 <div class="contenedor-mvo-subapartado-con">
 
 							<div class="contenedor-titulo-mvo-con">
+								<a href="/isc-conocenos-MVO" class="titulo-con">
 								<p>{{$informacion->categoria}}</p>			
-							
+								</a>
 							<div class="info-mvo-con">
 										<p>{{$informacion->descripcion}}</p>
 							</div>
@@ -51,7 +52,7 @@
 							</div>
 							
 
-						</a>
+						</div>
 				
 				
 			@endif	
@@ -59,18 +60,19 @@
 			@if($informacion->categoria == 'Visión')
 				
 
-						<a href="/isc-conocenos-MVO" class="contenedor-mvo-subapartado-con">
+						<div class="contenedor-mvo-subapartado-con">
 
 							<div class="contenedor-titulo-mvo-con2">
+								<a href="/isc-conocenos-MVO" class="titulo-con">
 								<p>{{$informacion->categoria}}</p>			
-							
+								</a>
 							<div class="info-mvo-con">
 										<p>{{$informacion->descripcion}}</p>
 							</div>
 
 							</div>
 
-						</a>
+						</div>
 				
 			
 			@endif	
@@ -95,11 +97,11 @@
 
 		<div class="contenedor-apartado-con">
 
-			<div class="contenedor-titulo-perfil-con">
+			<a href="/isc-conocenos-perfil_campo_ISC" class="contenedor-titulo-perfil-con">
 
-				<img class="imagen-ingre-egre-con" src="{{ asset('img/ingreso1.png')}}">
+				<p>Perfil Ingreso</p>
 
-			</div>
+			</a>
 
 			<div class="contenedor-perfil-con">
 
@@ -127,11 +129,11 @@
 
 		<div class="contenedor-apartado-con">
 
-			<div class="contenedor-titulo-perfil-con2">
+			<a href="/isc-conocenos-perfil_campo_ISC" class="contenedor-titulo-perfil-con2">
 
-				<img class="imagen-ingre-egre-con" src="{{ asset('img/egreso1.png')}}">
+				<p>Perfil Egreso</p>
 
-			</div>
+			</a>
 
 			<div class="contenedor-perfil-con">
 				
@@ -163,11 +165,11 @@
 
 		<div class="contenedor-apartado-campo">
 
-			<div class="contenedor-titulo-campo-con">
+			<a href="/isc-conocenos-perfil_campo_ISC" class="contenedor-titulo-campo-con">
 
-				<img class="imagen-ingre-egre-con1" src="{{ asset('img/laboral.png')}}">
+				<p>Campo Laboral</p>
 
-			</div>
+			</a>
 
 			<div class="contenedor-perfil-con">
 
@@ -182,11 +184,6 @@
 				</ol>
 
 			</div>
-<div class="contenedor-botones">
-			
-		<a href="/isc-conocenos-perfil_campo_ISC"><button class="btn"><span>Ver más</span></button></a>
-
-	</div>
 		</div>
 
 </div>
@@ -201,11 +198,11 @@
 
 	<div class="contenedor-lineas-cuerpos-ind">
 
-	<div class="contenedor-titulo-seccion-con">
+	<a href="/isc-conocenos-lineasInvestigacion" class="contenedor-titulo-seccion-con">
 
-		<h3>Líneas de Investigación</h3>
+		<p>Líneas de Investigación</p>
 
-	</div>
+	</a>
 
 	<div class="contenedor-tabla">
 
@@ -231,22 +228,18 @@
 					@endforeach
 
 				</table>		
-				<div class="contenedor-botones">
-			
-		<a href="/isc-conocenos-lineasInvestigacion"><button class="btn"><span>Ver más</span></button></a>
-
-	</div>
+				
 		</div>
 	</div>
 	</div>
 
 	<!----------------------------------------------------------------- CUERPO ACADÉMICO -------------------------------------------------->
 	<div class="contenedor-lineas-cuerpos-ind">
-	<div class="contenedor-titulo-seccion-con">
+	<a href="/isc-conocenos-cuerposAcademicos" class="contenedor-titulo-seccion-con">
 
-		<h3>Cuerpos Académicos</h3>
+		<p>Cuerpos Académicos</p>
 
-	</div>
+	</a>
 
 		<div class="contenedor-tabla">
 			<div class="tabla-informacion-escolar-con">
@@ -279,11 +272,7 @@
 					@endforeach
 
 				</table>		
-		<div class="contenedor-botones">
-			
-		<a href="/isc-conocenos-cuerposAcademicos"><button class="btn"><span>Ver más</span></button></a>
-
-		</div>
+		
 			</div>
 		</div>
 
@@ -297,11 +286,11 @@
 	@foreach ($reticulas as $reticula)
 
 	<div class="contenedor-acordeon-subapartado-con">
-				<div class="contenedor-titulo-acordeon-con">
+				<a href="/isc-conocenos-reticula" class="contenedor-titulo-acordeon-con">
 
 				<p>{{$reticula->titulo}}</p>
 
-				</div>
+				</a>
 
 				<div class="info-acordeon-con">
 
@@ -309,17 +298,12 @@
 			<p>PLAN: {{$reticula->plan}}</p>
 			<p>ESPECIALIDAD: {{$reticula->especialidad}}</p>	
 
-	<div class="contenedor-enlaces">
+	<div class="contenedor-enlaces-con">
 			
 		<a target="_blank" rel="noopener noreferrer" href="/isc-conocenos-reticulaVer/{{$reticula->slug}}">{{$reticula->documento}}</a>
 
 	</div>
 
-	<div class="contenedor-botones">
-			
-		<a href="/isc-conocenos-reticula"><button class="btn"><span>Ver más</span></button></a>
-
-	</div>
 	</div>
 
 	</div>
@@ -329,16 +313,16 @@
 	</div>
 
 <!-------------------------------------------------------------- organigrama ---------------------------------------------------------->
-	<a href="/isc-conocenos-organigrama" class="contenedor-texto-completo-org-con">
+	<div class="contenedor-texto-completo-org-con">
 		<div class="contenedor-org-con">
 
 		<div class="contenedor-org-subapartado-con">
 
-					<div class="contenedor-titulo-org-con">
+					<a href="/isc-conocenos-organigrama" class="contenedor-titulo-org-con">
 
 					<p>Organigrama</p>
 
-					</div>
+					</a>
 
 					<div class="info-org-con">
 
@@ -349,7 +333,7 @@
 		</div>
 
 		</div>
-	</a>
+	</div>
 
 </div>
 

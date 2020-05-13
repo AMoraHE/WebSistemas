@@ -22,7 +22,6 @@
 .contenedor-mvo-subapartado-con{
 	width: 95%;
 	margin: auto;
-	cursor: pointer;
 }
 .contenedor-img-mvo-con{
 	width: 45%;
@@ -52,12 +51,6 @@
 	border-radius: 5px;
 }
 
-
-.contenedor-org-subapartado-con:hover{
-box-shadow: 0 1px 6px #000;
-}
-
-
 .contenedor-titulo-mvo-con p{
 	background-color: #96C6BB;
     padding: 10px 15px;
@@ -67,6 +60,11 @@ box-shadow: 0 1px 6px #000;
 	font-size: 28pt;
 	line-height: 1.42857143;
 	text-align: center;
+}
+
+.titulo-con p:hover{
+	background-color: #6f988f;
+	transition: .7s;
 }
 
 .contenedor-titulo-mvo-con2{
@@ -140,47 +138,49 @@ text-align: end;
 	padding: 20px;
 }
 
-.contenedor-titulo-perfil-con{
-	background-color: #a5b7d7;
-	padding-right: 15px;
+.contenedor-titulo-perfil-con p:hover,
+.contenedor-titulo-perfil-con2 p:hover,
+.contenedor-titulo-campo-con p:hover{
+	background-color: #619c72;
+	transition: .7s;
+ }   
+
+
+.contenedor-titulo-perfil-con p{
+   background-color: #81ca97;
+    padding: 10px 15px;
     border-bottom: 1px solid transparent;
     border-radius: 5px;
-    text-align: right;
-}
-
-
-.contenedor-titulo-perfil-con h3{
-    color: white;
-    font-weight: normal;
-    font-size: 27px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 1.1;
-}
-
-.contenedor-titulo-perfil-con2{
-	background-color: #fb8738;
-	padding-left: 15px;
-    border-bottom: 1px solid transparent;
-    border-radius: 5px;
-    text-align: left;
-}
-
-
-.contenedor-titulo-perfil-con2 h3{
-    color: white;
-    font-weight: normal;
-    font-size: 27px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 1.1;
-}
-
-.contenedor-titulo-campo-con{
-	background-color: #bcc696;
-    border-bottom: 1px solid transparent;
-    border-radius: 5px;
+    color: #fff;
+    font-size: 28pt;
+    line-height: 1.42857143;
     text-align: center;
+    cursor: pointer;
+}
+
+
+.contenedor-titulo-perfil-con2 p{
+    background-color: #81ca97;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 28pt;
+    line-height: 1.42857143;
+    text-align: center;
+    cursor: pointer;
+}
+
+.contenedor-titulo-campo-con p{
+	background-color: #81ca97;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 28pt;
+    line-height: 1.42857143;
+    text-align: center;
+    cursor: pointer;
 }
 
 
@@ -190,8 +190,8 @@ text-align: end;
 	margin: auto;
 	display: block;
 	padding: 15px;
-	background-color: #ffffff63;
-	border: 2px solid #fff;
+	background-color: #;
+	border: 1px solid #fff;
 	border-top: none;
 	overflow: hidden;
 	border-radius: 5px;
@@ -269,20 +269,24 @@ padding-top: 2%;
 
 .contenedor-titulo-seccion-con{
 	width: 100%;
-    min-height: 50px;
-    background: #83aec0c2;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
 }
 
-.contenedor-titulo-seccion-con h3{
-	width: 100%;
-    text-transform: uppercase;
-    color: var(--blanco);
-    padding: 2%;
-    text-align: justify;
+.contenedor-titulo-seccion-con p{
+	background: #83aec0c2;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 28pt;
+    line-height: 1.42857143;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.contenedor-titulo-seccion-con p:hover{
+	background-color: #5b7c8ac2;
+	transition: .7s;
 }
 
 .tabla-informacion-escolar-con{
@@ -298,7 +302,8 @@ padding-top: 2%;
 
 .tabla-informacion-escolar-con th, td{
 	padding: 10px;
-	max-width: 700px; /***TAMAÑO MÁXIMO DE LAS CELDAS***/
+	max-width: 700px;
+	 /***TAMAÑO MÁXIMO DE LAS CELDAS***/
 }
 
 .tabla-informacion-escolar-con td{
@@ -308,17 +313,9 @@ padding-top: 2%;
 .tabla-informacion-escolar-con thead{
 	padding: 5px;
 	font-size: 16px;
-	background-color: #83aec0;
-	background-image: url(../img/fondo_t.png);
-	background-repeat: repeat-x;
-	color: #FFFFFF;
-	border-right-width: 1px;
-	border-bottom-width: 1px;
-	border-right-style: solid;
-	border-bottom-style: solid;
-	border-right-color: #558FA6;
-	border-bottom-color: #558FA6;
-	text-transform: uppercase;
+	background-color: #9abccce0;
+	color: #FFF;
+	
 }
 
 .tabla-informacion-escolar-con tr:nth-child(even){
@@ -356,26 +353,29 @@ padding-top: 2%;
 	margin-bottom: 1em;
 }
 
-.contenedor-titulo-acordeon-con{
-	width:100%;
-	height:70px;
-	background-color: #edc016;
-	font-family: 'Roboto', sans-serif;
-	border-radius: 5px;
+.contenedor-titulo-acordeon-con p:hover{
+	background-color: #b18f0cba;
+	transition: .7s;
+	cursor: pointer;
 }
 
 .contenedor-titulo-acordeon-con p{
+	width:100%;
+	height:74px;
 	padding: 12px;
+	background-color: #ecbe0fba;
+	border-radius: 5px;
 	color: white;
-	text-shadow: 0px 1px 0px white;
-	font-size: 22px;
-	text-transform: uppercase;
+	font-size: 20pt;
+	font-family: 'Roboto', sans-serif;
+	text-transform: capitalize; 
 }
 
 .info-acordeon-con{
 	width:100%;
-	height:auto;
+	height:200px;
 	background-color: #f5f5f5;
+	padding: 20px 0;
 	overflow: hidden;
 }
 
@@ -385,12 +385,20 @@ padding-top: 2%;
 	color:#000;
 }
 
+.contenedor-enlaces-con a{
+	margin:20px;
+	text-align: justify;
+	color:#000;
+}
+.contenedor-enlaces-con a:hover{
+	color:#1e1b5a;
+}
 
 /*******************************************************ORGANIGRAMA******************************************/
 .contenedor-texto-completo-org-con{
 	width: 38%;
     min-height: 350px;
-    margin-top: 34%;
+    margin-top: 29%;
     position: absolute;
     display: inline-block;
     float: right;
@@ -407,24 +415,27 @@ padding-top: 2%;
 	width:90%;
 	border-radius: 5px;
 	margin-bottom: 1em;
-	cursor: pointer;
 }
 
-.contenedor-titulo-org-con{
-	width:100%;
-	height:70px;
-	background-color: #35342e;
-	font-family: 'Roboto', sans-serif;
-	border-radius: 5px;
-}
 
 .contenedor-titulo-org-con p{
-	padding: 12px;
+	height:74px;
+	background-color: #35342ec4;
+	font-family: 'Roboto', sans-serif;
+	border-radius: 5px;
 	color: white;
-	text-shadow: 0px 1px 0px white;
-	font-size: 22px;
-	text-transform: uppercase;
+	padding: 10px;
+	font-size: 22pt;
 }
+
+.contenedor-titulo-org-con p:hover{
+	background-color: #35342e;
+	transition: .7s
+}
+
+/*.contenedor-org-subapartado-con:hover{
+box-shadow: 0 1px 6px #000;
+}*/
 
 .info-org-con{
 	width:100%;
