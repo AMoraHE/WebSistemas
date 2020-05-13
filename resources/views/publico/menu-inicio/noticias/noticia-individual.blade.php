@@ -37,21 +37,20 @@
 				<h3>{{$noticias->titulo}}</h3>
 
 			</div>
-
-
+			
 				<div class="contenedor-img-noticia-ind">
 
-				<!---------------------------------- MODAL IMG -------------------------------------------->
+					<div class="contenedor-img-noticia-ind-img">
 
-					<div class="skew-arriba"></div>
+					<!---------------------------------- MODAL IMG -------------------------------------------->
 
-					<a href="#modal-img{{$noticias->id}}">
+						<a href="#modal-img{{$noticias->id}}">
 
-						<img src="/images/news/{{$noticias->newimage}}">
+							<img src="/images/news/{{$noticias->newimage}}">
 
-					</a>
+						</a>
 
-					<div class="skew-abajo"></div>
+					</div>
 
 				</div>
 

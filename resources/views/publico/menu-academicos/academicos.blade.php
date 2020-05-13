@@ -15,7 +15,7 @@
 
           <div class="img-encabezado">
 
-            <img src="/img/Convocatorias.jpg">
+            <img src="/img/academicos.png">
 
             <div class="encabezado">
 
@@ -98,59 +98,35 @@
 
 <!------------------------------------------------------------- EVENTOS ----------------------------------------------------------->
 
+	<div class="contenedor-seccion-ecp">
+	
 		<div class="contenedor-seccion-eventos">
 
 			<h1>EVENTOS ACADÉMICOS</h1>
 
 			@foreach ($eventos as $evento)
 
-			<div class="contenedor-titulo-seccion">
+			<div class="contenedor-titulo-seccion-ecp">
 
 				<h3><i class="icono-izquierda fas fa-file-invoice"></i>{{$evento->titulo}}</h3>
 
 			</div>
 
-			<div class="contenedor-seccion-convocatoria">
+			<div class="contenedor-seccion-cuerpo-ecp">
 
-				<div class="contenedor-fecha-conv">
+				<div class="contenedor-fecha-ecp">
 
-					<div class="fecha-divi">
+					<h3><i class=" icono-izquierda far fa-calendar-plus"></i>{{$evento->FInicio}}</h3>
 
-						<div class="fecha-conv">
+					<h1>|</h1>
 
-							<p>Inicia</p>
-
-							<div class="c-fecha fc-inicio">
-
-								<p>{{$evento->FInicio}}</p>
-
-							</div>
-							
-						</div>
-
-					</div>
-
-					<div class="fecha-divi">
-
-						<div class="fecha-conv">
-
-							<p>Termina</p>
-							
-							<div class="c-fecha fc-final">
-
-								<p>{{$evento->FCierre}}</p>
-
-							</div>
-
-						</div>
-
-					</div>
+					<h3><i class="icono-izquierda far fa-calendar-minus"></i>{{$evento->FCierre}}</h3>
 					
 				</div>
 
-				<div class="desc-conv">
+				<div class="cuerpo-ecp">
 
-					<div class="c-descripcion">
+					<div class="descripcion-ecp">
 
 						<p>{{$evento->descripcion}}</p>
 						
@@ -166,14 +142,11 @@
 				
 			</div>
 
-			<div class="contenedor-botones">
+			<div class="seccion-continuacion">
 
-				<a href="/isc-academicos-eventosDescargar/{{$evento->slug}}"><button class="btn"><span>Descargar <i class="icono-derecha far fa-save"></i></span></button></a>
+				<a class="msj" mesanje="ver más noticias?" href="/isc-academicos-eventos"><button class="btn-leer"><span>Ver más eventos</span></button></a>
 
 			</div>
-
-
-			<div class="seccion-divisor-seccion"></div>		
 
 			@endforeach
 
@@ -188,53 +161,25 @@
 
 			@foreach ($convocatorias as $convocatoria)
 
-			<div class="contenedor-titulo-seccion">
+			<div class="contenedor-titulo-seccion-ecp">
 
 				<h3><i class="icono-izquierda fas fa-file-invoice"></i>{{$convocatoria->convocatoria}}</h3>
 
 			</div>
 
-			<div class="contenedor-seccion-convocatoria">
+			<div class="contenedor-seccion-cuerpo-ecp">
 
-				<div class="contenedor-fecha-conv">
+				<div class="contenedor-fecha-ecp">
 
-					<div class="fecha-divi">
-
-						<div class="fecha-conv">
-
-							<p>Inicia</p>
-
-							<div class="c-fecha fc-inicio">
-
-								<p>{{$convocatoria->FInicio}}</p>
-
-							</div>
-							
-						</div>
-
-					</div>
-
-					<div class="fecha-divi">
-
-						<div class="fecha-conv">
-
-							<p>Termina</p>
-							
-							<div class="c-fecha fc-final">
-
-								<p>{{$convocatoria->FFin}}</p>
-
-							</div>
-
-						</div>
-
-					</div>
+					<h3><i class=" icono-izquierda far fa-calendar-plus"></i>{{$convocatoria->FInicio}}</h3>
+					<h1>|</h1>
+					<h3><i class="icono-izquierda far fa-calendar-minus"></i>{{$convocatoria->FFin}}</h3>
 					
 				</div>
 
-				<div class="desc-conv">
+				<div class="cuerpo-ecp">
 
-					<div class="c-descripcion">
+					<div class="descripcion-ecp">
 
 						<p>{{$convocatoria->descripcion}}</p>
 						
@@ -242,34 +187,31 @@
 
 					<div class="contenedor-enlaces">
 					
-						<a target="_blank" rel="noopener noreferrer" href="/isc-academicos-convocatoriasVer/{{$convocatoria->slug}}">{{$convocatoria->doc}}</a>
+						<a target="_blank" rel="" href="/isc-academicos-convocatoriasVer/{{$convocatoria->slug}}">{{$convocatoria->doc}}</a>
 
 					</div>
 
 					@php
 					$var = $convocatoria->slug
 					@endphp
-					
+
 				</div>
 				
 			</div>
 
-			<div class="contenedor-botones">
+			<div class="seccion-continuacion">
 
-				<a href="/isc-academicos-convocatoriasDescargar/{{$convocatoria->slug}}"><button class="btn"><span>Descargar <i class="icono-derecha far fa-save"></i></span></button></a>
+				<a class="msj" mesanje="ver más noticias?" href="/isc-academicos-convocatorias"><button class="btn-leer"><span>Ver más convocatorias</span></button></a>
 
 			</div>
-
-
-
-
-			<div class="seccion-divisor-seccion"></div>
-
 			
 
 			@endforeach
 
 		</div>
+
+
+	</div>
 
 <!------------------------------------------------------------- PROGRAMA ----------------------------------------------------------->
 
@@ -280,83 +222,50 @@
 
 			@foreach ($programas as $programa)
 
-				<div class="contenedor-titulo-seccion">
+				
+			<div class="contenedor-titulo-seccion-ecp">
 
-					<h3><i class="icono-izquierda fas fa-file-invoice"></i>{{$programa->programa}}</h3>
+				<h3><i class="icono-izquierda fas fa-file-invoice"></i>{{$programa->programa}}</h3>
 
+			</div>
+
+			<div class="contenedor-seccion-cuerpo-ecp">
+
+				<div class="contenedor-fecha-ecp">
+
+					<h3><i class=" icono-izquierda far fa-calendar-plus"></i>{{$programa->FInicio}}</h3>
+					<h1>|</h1>
+					<h3><i class="icono-izquierda far fa-calendar-minus"></i>{{$programa->FFin}}</h3>
+					
 				</div>
 
-				<div class="contenedor-seccion-convocatoria">
+				<div class="cuerpo-ecp">
 
-					<div class="contenedor-fecha-conv">
+					<div class="descripcion-ecp">
 
-						<div class="fecha-divi">
-
-							<div class="fecha-conv">
-
-								<p>Inicia</p>
-
-								<div class="c-fecha fc-inicio">
-
-									<p>{{$programa->FInicio}}</p>
-
-								</div>
-								
-							</div>
-
-						</div>
-
-						<div class="fecha-divi">
-
-							<div class="fecha-conv">
-
-								<p>Termina</p>
-								
-								<div class="c-fecha fc-final">
-
-									<p>{{$programa->FFin}}</p>
-
-								</div>
-
-							</div>
-
-						</div>
+						<p>{{$programa->descripcion}}</p>
 						
 					</div>
 
-					<div class="desc-conv">
+					<div class="contenedor-enlaces">
+					
+						<a target="_blank" rel="" href="/isc-academicos-programasVer/{{$programa->slug}}">{{$programa->doc}}</a>
 
-						<div class="c-descripcion">
-
-							<p>{{$programa->descripcion}}</p>
-							
-						</div>
-
-						<div class="contenedor-enlaces">
-						
-							<a target="_blank" rel="noopener noreferrer" href="/isc-academicos-programasVer/{{$programa->slug}}">{{$programa->doc}}</a>
-
-						</div>
+					</div>
 
 						@php
 						$var = $programa->slug
 						@endphp
-								
-					</div>
-					
-				</div>
-
-				<div class="contenedor-botones">
-
-					<a href="/isc-academicos-programasDescargar/{{$programa->slug}}"><button class="btn"><span>Descargar <i class="icono-derecha far fa-save"></i></span></button></a>
 
 				</div>
+				
+			</div>
 
+			<div class="seccion-continuacion">
 
+				<a class="msj" mesanje="ver más noticias?" href="/isc-academicos-programas"><button class="btn-leer"><span>Ver más programas</span></button></a>
 
-
-				<div class="seccion-divisor-seccion"></div>
-
+			</div>
 			
 			@endforeach
 

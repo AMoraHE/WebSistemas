@@ -67,7 +67,7 @@
 
 		<!-- Menu -->
 
-		<!--<script src="{{ asset('js/headroom.min.js')}}"></script>-->
+		<script src="{{ asset('js/headroom.min.js')}}"></script>
 
 		<!-- script Boostrap-->
 
@@ -78,22 +78,25 @@
 
 <body onload="renderDate()"> <!--evento que permite ejecutarse el mini calendario-->
 
-<div class="contenedor-logos">
+<div class="contenedor-header">
 
-	<img src="{{ asset('img/Gob.png')}}" id="gobierno">
-	<img src="{{ asset('img/Educacion.png')}}" id="educacion">
-	<img src="{{ asset('img/TecNM.jpg')}}" id="tecnm">
-	<img src="{{ asset('img/QRoo.png')}}" id="qroo">
-	<img src="{{ asset('img/TecFCP.png')}}" id="fcp">
+	<div class="contenedor-logos">
+
+		<img src="{{ asset('img/Gob.png')}}" id="gobierno">
+		<img src="{{ asset('img/Educacion.png')}}" id="educacion">
+		<img src="{{ asset('img/TecNM.jpg')}}" id="tecnm">
+		<img src="{{ asset('img/QRoo.png')}}" id="qroo">
+		<img src="{{ asset('img/TecFCP.png')}}" id="fcp">
+
+	</div>
 
 </div>
 
-<div class="contenedor">
+<!------------------------------------------------------------------ MENU ---------------------------------------------------------->	
 
-<!------------------------------------------------------------------ HEADER ---------------------------------------------------------->	
-
-	<header id="header">
-
+	
+<div class="contenedor-menu" id="contenedor-menu">
+	
 
 		<nav class="menu">
 	    	<div class="logo">
@@ -108,16 +111,16 @@
 	    		<a href="#"><i class="fas fa-school" aria-hidden="true"></i> Infraestructura</a>
 	    		<a href="/isc-academicos"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> Académicos</a>
 	    		<a href="/isc-galeria-fotos"><i class="fas fa-image" aria-hidden="true"></i> Galería</a>
-	    		<a href="/isc-inicio-contactos"><i class="fas fa-envelope" aria-hidden="true"></i> Contactanos</a>
+	    		<a href="/isc-inicio-contactos"><i class="fas fa-envelope" aria-hidden="true"></i> Contáctanos</a>
 	    	</div>
 	    </nav>
 
-	</header>
+</div>
+
+<div class="contenedor">
+
 
 <!------------------------------------------------------------------ CUERPO ---------------------------------------------------------->	
-
-
-		<!----------------------------------------------------------- MENU ---------------------------------------------------------->	
 
 
 
@@ -151,7 +154,7 @@
 
 </div>
 
-	<!--<script src="{{ asset('js/main-public.js')}}"></script>-->
+	<script src="{{ asset('js/main-public.js')}}"></script>
 
 	<!--------------------------------SLIDER---------------------------------------->
 

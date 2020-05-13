@@ -44,40 +44,14 @@
 
 		<div class="contenedor-seccion-convocatoria">
 
-			<div class="contenedor-fecha-conv">
+			<div class="contenedor-fecha-ecp">
 
-				<div class="fecha-divi">
+				<h3><i class=" icono-izquierda far fa-calendar-plus"></i>{{$evento->FInicio}}</h3>
 
-					<div class="fecha-conv">
+				<h1>|</h1>
 
-						<p>Inicia</p>
-
-						<div class="c-fecha fc-inicio">
-
-							<p>{{$evento->FInicio}}</p>
-
-						</div>
-						
-					</div>
-
-				</div>
-
-				<div class="fecha-divi">
-
-					<div class="fecha-conv">
-
-						<p>Termina</p>
-						
-						<div class="c-fecha fc-final">
-
-							<p>{{$evento->FCierre}}</p>
-
-						</div>
-
-					</div>
-
-				</div>
-				
+				<h3><i class="icono-izquierda far fa-calendar-minus"></i>{{$evento->FCierre}}</h3>
+					
 			</div>
 
 			<div class="desc-conv">

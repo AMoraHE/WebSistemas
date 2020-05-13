@@ -212,9 +212,9 @@ class PublicController extends Controller
   public function academicos()
   {
     $proyectos = Proyecto::latest()->take(1)->get();
-    $eventos = EventosAcademico::latest()->take(2)->get();
-    $convocatorias = Convocatoria::latest()->take(2)->get();
-    $programas = Programa::latest()->take(2)->get();
+    $eventos = EventosAcademico::latest()->take(1)->get();
+    $convocatorias = Convocatoria::latest()->take(1)->get();
+    $programas = Programa::latest()->take(1)->get();
 
     return view('publico.menu-academicos.academicos', compact('proyectos', 'eventos', 'convocatorias', 'programas'));
   }

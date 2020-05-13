@@ -607,33 +607,47 @@
 	background: var(--gris-tipo1);
 	padding: 10px;
 	border-radius: 5px;
+	text-align: center;
 }
 
 .contenedor-img-noticia-ind{
 	width: 100%;
-	height: 100vh;
-	overflow: hidden;
-	position: relative;
+	display: flex;
+	justify-content: center;
 }
 
-.contenedor-img-noticia-ind img{
+.contenedor-img-noticia-ind-img{
+	width: 700px;
+	height: 700px;
+	padding: 5px;
+	overflow: hidden;
+	background: var(--blanco);
+}
+
+.contenedor-img-noticia-ind-img img{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
-	border: 5px solid var(--blanco);
+	/*border: 5px solid var(--blanco);
+	box-shadow: 0 10px 10px rgba(0,0,0,0.7);*/
 }
 
 .redaccion-noticia-ind{
 	width: 100%;
-	padding-top: 10px;
+	min-height: 250px;
 	font-size: 18px;
     text-align: justify;
+    background: var(--blanco);
+    border-radius: 5px;
+    padding: 10px;
 }
 
 /************************************************************************************************FIN SECCIÓN NOTICIAS IND***********************************************************************/
 
 /************************************************************************************************PAGINA ACADÉMICOS PRINCIPAL********************************************************************************/
+
+/*************************************PROYECTO******************************************/
 
 .contenedor-seccion-proyecto{
 	width: 100%;
@@ -663,13 +677,14 @@
 
 .contenedor-seccion-cuerpo-dividido-1{
 	width: 100%;
-	height: 600px;
+	height: 725px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: 10px auto;
 	background: rgb(241, 89, 42, .8);
-	padding: 10px;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 .contenedor-seccion-cuerpo-dividido-1 h3{
@@ -717,18 +732,107 @@
 	/*border: 5px solid var(--blanco);*/
 }
 
+/*************************************ECP******************************************/
 
+.contenedor-seccion-ecp{
+	width: 100%;
+	margin: 20px auto; 
+
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+
+	flex-direction: row;
+	/*flex-wrap: no-wrap;*/
+	justify-content: center;
+	align-items: center;
+
+}
+
+.contenedor-seccion-ecp h1{
+	color: var(--naranja);
+	font-size: 28px;
+	font-weight: 400;
+	text-align: center;
+}
+
+.contenedor-seccion-cuerpo-ecp{
+	background: var(--blanco);
+}
+
+.contenedor-fecha-ecp{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contenedor-fecha-ecp p{
+	padding: 10px;
+	font-size: 14px;
+}
+.contenedor-fecha-ecp h1{
+	color: var(--naranja);
+	font-weight: bold;
+}
+
+.contenedor-fecha-ecp h3{
+    color: var(--azul);
+    padding: 10px;
+    font-weight: bold;
+}
+
+.cuerpo-ecp{
+	background: var(--gris);
+	padding-top: 5px;
+}
+
+.cuerpo-ecp a{
+	color: var(--naranja);
+}
+
+.descripcion-ecp{
+	height: 250px;
+	background: var(--blanco);
+	padding: 10px;
+	overflow: auto;
+}
+
+.descripcion-ecp p{
+	color: var(--azul);
+	padding: 10px;
+	text-align: justify;
+}
 
 .contenedor-seccion-eventos{
-	background: yellow;
+	background: var(--gris-tipo1);
+	width: 50%;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 .contenedor-seccion-convocatorias{
-	background: blue;
+	background: var(--gris-tipo1);
+	width: 50%;
+	margin: auto 5px;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 .contenedor-seccion-programas{
-	background: green;
+	background: var(--gris-tipo1);
+	width: 100%;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.contenedor-seccion-programas h1{
+
+	color: var(--naranja);
+	font-size: 28px;
+	font-weight: 400;
+	text-align: center;
+
 }
 
 /************************************************************************************************PAGINA ACADÉMICOS SECCIONES********************************************************************************/
@@ -737,60 +841,11 @@
 	padding: 10px;
 	margin-top: 10px;
 	border-radius: 5px;
-	border: 2px solid var(--gris-tipo1);
-}
-
-.contenedor-fecha-conv{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.fecha-divi{
-	width: 50%;
-	display: grid;
-	align-items: center;
-	justify-content: center;
-	padding: 10px;
-}
-
-.fecha-conv{
-	background: var(--azul);
-	padding: 10px;
-	border-radius: 5px;
-}
-
-.fecha-conv p{
-	text-align: center;
-	color: var(--blanco);
-	font-weight: bold;
-}
-
-.c-fecha{
-	width: 200px;
-	height: 200px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 5px;
-}
-
-.c-fecha p{
-	color: var(--blanco);
-	font-size: 16px;
-	font-weight: 200;
-}
-
-.fc-inicio{
-	background: var(--naranja);
-}
-
-.fc-final{
-	background: var(--verde);
+	background: var(--gris-tipo1);
 }
 
 .desc-conv{
-	background: rgb(241, 89, 42, .8);
+	background: var(--blanco);
 	padding: 10px;
 	border-radius: 5px;
 }
@@ -798,14 +853,15 @@
 .c-descripcion{
 	min-height: 250px;
 	background: var(--blanco);
-	border-radius: 5px;
 	padding: 10px;
 	overflow: auto;
+	border-bottom: 2px solid var(--naranja);
 }
 
 .c-descripcion p{
 	color: var(--azul);
 	padding: 10px;
+	text-align: justify;
 }
 
 /********PROYECTOS***********/
@@ -835,9 +891,13 @@
 	align-items: center;
 	justify-content: center;
 	margin: 10px auto;
-	background: rgb(241, 89, 42, .8);
+	background: var(--azul);
+	padding: 5px;
 	border-radius: 5px;
-	padding: 10px;
+	/*background: rgb(241, 89, 42, .8);
+	border-radius: 5px;
+	padding: 1px;
+	border: 1px solid rgb(241, 89, 42, .8);*/
 }
 
 .contenedor-seccion-cuerpo-dividido h3{
@@ -857,7 +917,8 @@
 	padding: 10px;
 	overflow: auto;
 	border-radius: 5px; 
-	margin-right: 5px; 
+	margin-right: 2.5px; 
+	text-align: justify;
 }
 
 .contenedor-descripcion-proyecto{
@@ -867,8 +928,8 @@
 	padding: 10px;
 	overflow: auto;
 	border-radius: 5px;
-	margin-left: 5px; 
-	
+	margin-left: 2.5px; 
+	text-align: justify;
 }
 
 
@@ -923,7 +984,7 @@
 	min-height: 50px;
 	margin: auto;
 	border: 5px solid var(--blanco);
-	background: var(--azul-claro);
+	background: var(--azul);
 	display: flex;
 	align-items: center;
 	border-radius: 5px;
@@ -934,9 +995,30 @@
 	width: 100%;
     text-transform: uppercase;
     color: var(--blanco);
-    padding: 10px;
     padding: 2%;
     text-align: center;
+}
+
+
+/*** TITULOS ECP -- Eventos - Convocatoria - Programas - Individuales***/
+
+.contenedor-titulo-seccion-ecp{
+	width: 100%;
+	height: 80px;	
+	margin: auto;
+	background: var(--azul);
+	display: flex;
+	align-items: center;
+}
+
+.contenedor-titulo-seccion-ecp h3{
+	text-transform: uppercase;
+    color: var(--blanco);
+    padding: 10px;
+    text-align: justify;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
 }
 
 /************************************************************************************************SECCIÓN MINI GALERIA***********************************************************************/
@@ -944,7 +1026,6 @@
 .seccion-mini-galeria{
 	width: 100%;
 	text-align: center;
-	border-top: 1px solid var(--naranja);
 	background: var(--gris-tipo1);
 	padding: 10px;
 	border-radius: 5px;
@@ -1385,15 +1466,16 @@
 	width: 100%;
 	text-align: center;
 	margin-top: 20px;
-	margin-bottom: 10px;
+	padding-bottom: 10px;
+	overflow: auto;
 }
 
 .contenedor-enlaces a{
-	color: var(--blanco);
+	color: var(--azul);
 }
 
 .contenedor-enlaces a:hover{
-	color: var(--azul);
+	color: var(--naranja);
 }
 
 /***************************EFECTO HOVER IMG***********************************/
@@ -1543,11 +1625,11 @@ body::-webkit-scrollbar-thumb{
   height: 5px;
 }
 ::-webkit-scrollbar-track {
-  background-color: var(--naranja);
+  background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--naranja);
-  background-image:-webkit-linear-gradient(rgba(255,255,255,.3) 20%,transparent 20%,transparent 40%,rgba(255, 255, 255, 0.3) 40%,rgba(255,255,255,.3) 60%,transparent 60%,transparent 80%,rgba(255, 255, 255, 0.3) 80%);  
+  background-color: var(--gris-fuerte);
+  /*background-image:-webkit-linear-gradient(rgba(255,255,255,.3) 20%,transparent 20%,transparent 40%,rgba(255, 255, 255, 0.3) 40%,rgba(255,255,255,.3) 60%,transparent 60%,transparent 80%,rgba(255, 255, 255, 0.3) 80%);*/  
 
 }
 
