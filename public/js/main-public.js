@@ -49,7 +49,7 @@ for (var i = 0; i < btnburbuja.length; i++) {
 
 /* ---------------------------------------------------RETRASO EN REDIRECCIONAR----------------------------------------------- 
 
-$('#btn-time').click(function(e) {
+$('#btn-time{{$infra->id}}').click(function(e) {
 
 	e.preventDefault();
 
