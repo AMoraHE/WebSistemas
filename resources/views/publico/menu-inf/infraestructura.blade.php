@@ -59,7 +59,15 @@
 							<div class="contenedor-txt-efecto">
 				                <h2>Responsable</h2>
 				                <p>{{$infra->responsable}}</p>
-				                <button href="/isc-infraestructura-labCisco" class="btn-burbuja-1">Ver</button>              
+				                @if($infra->slug == "cisco")
+				                <button href="/isc-infraestructura-labCisco" class="btn-burbuja-1">Ver</button>
+				                @elseif($infra->slug == "sistemas")
+				                <button href="/isc-infraestructura-labSistemas" class="btn-burbuja-1">Ver</button>
+				                @elseif($infra->slug == "celula")
+				                <button href="/isc-infraestructura-labCelula" class="btn-burbuja-1">Ver</button>
+				                @elseif($infra->slug == "micro")
+				                <button href="/isc-infraestructura-labMicroprocesadores" class="btn-burbuja-1">Ver</button>
+				                @endif
 				            </div>
 						
 					</div>
