@@ -108,7 +108,7 @@
 	    		<a href="{{route('ISC-INICIO')}}"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a>
 	    		<a href="/isc-inicio-noticias"><i class="fas fa-newspaper" aria-hidden="true"></i> Noticias</a>
 	    		<a href="/isc-conocenos"><i class="fas fa-handshake" aria-hidden="true"></i> Conócenos</a>
-	    		<a href="#"><i class="fas fa-school" aria-hidden="true"></i> Infraestructura</a>
+	    		<a href="/isc-infraestructura"><i class="fas fa-school" aria-hidden="true"></i> Infraestructura</a>
 	    		<a href="/isc-academicos"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> Académicos</a>
 	    		<a href="/isc-galeria-fotos"><i class="fas fa-image" aria-hidden="true"></i> Galería</a>
 	    		<a href="/isc-inicio-contactos"><i class="fas fa-envelope" aria-hidden="true"></i> Contáctanos</a>

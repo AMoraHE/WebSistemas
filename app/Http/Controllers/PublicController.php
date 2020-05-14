@@ -33,11 +33,14 @@ class PublicController extends Controller
 {
   public function inicio()
   {
-    $sliders = Slider::all();
+    $FSlider = Slider::latest()->first();
+    $idFS = $FSlider->id;
+
+    $sliders = Slider::where('id', '!=', $idFS)->get();
     $noticias = Noticia::latest()->take(4)->get();
     $proyectos = Proyecto::latest()->take(6)->get();
 
-    return view('publico/menu-inicio/inicio', compact('noticias','sliders', 'proyectos'));
+    return view('publico/menu-inicio/inicio', compact('noticias','sliders', 'proyectos', 'FSlider'));
   }
 
   public function noticias()
@@ -165,6 +168,13 @@ class PublicController extends Controller
     $docente = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '6')->get();
 
     return view('publico.menu-conocenos.organigrama.view-organigrama', compact('director', 'laboratorio', 'docente'));
+  }
+
+  public function infraestructura()
+  {
+    $infras = Infraestructura::all();
+
+    return view('publico.menu-inf.infraestructura', compact('infras'));
   }
 
   public function labCisco()

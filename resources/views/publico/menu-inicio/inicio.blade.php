@@ -13,13 +13,13 @@
 
 				<div class="slide current">
 
-					<img src="/img/Isc-logo.png" alt="">
+					<!-- <img src="/img/Isc-logo.png" alt=""> -->
+					<img src="/images/slider/{{$FSlider->image}}" alt="">
 
 			        <div class="content">
 			          <h1>Ingeniería en Sistemas Computacionales</h1>
 			          <p>
-			            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic
-			            maxime, voluptatibus labore doloremque vero!
+			            {{$FSlider->contenido}}
 			          </p>
 			        </div>
 			    </div>

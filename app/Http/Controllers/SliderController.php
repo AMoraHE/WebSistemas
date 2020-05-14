@@ -56,51 +56,41 @@ class SliderController extends Controller
     public function store(Request $request)
     {
         $slider = new Slider();
-        $sliders = Slider::all();
 
-        if(count($sliders) <=3)
-        {
-            $validator = Validator::make($request->all(), [
-            'image' => 'required|mimes:jpeg,png,bmp,tiff,gif|max:1024',
-            'contenido' => 'required|string',
-            ], [
-              'image.required' => 'Se requiere que seleccione un archivo en formato JPEG, PNG, BMP, TIFF, GIF',
-              'image.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
-              'image.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 1 MB (1024 KB)',
-              'contenido.required' => 'Se requiere que ingrese un título para la imagen',
-              'contenido.string' => 'El título ingresado contiene caracteres no válidos',
-            ]);
+        $validator = Validator::make($request->all(), [
+        'image' => 'required|mimes:jpeg,png,bmp,tiff,gif|max:1024',
+        'contenido' => 'required|string',
+        ], [
+          'image.required' => 'Se requiere que seleccione un archivo en formato JPEG, PNG, BMP, TIFF, GIF',
+          'image.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
+          'image.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 1 MB (1024 KB)',
+          'contenido.required' => 'Se requiere que ingrese un título para la imagen',
+          'contenido.string' => 'El título ingresado contiene caracteres no válidos',
+        ]);
 
-            if ($validator->fails()) {
-                return redirect('/slider/create')
-                            ->withErrors($validator)
-                            ->withInput($request->all());
-            }
-
-            else
-            {
-                if ($request->hasFile('image'))
-                {
-                    $file = $request->file('image');
-                    $name2 = time().$file->getClientOriginalName();
-                    $file->move(public_path().'/images/slider/',$name2);
-                    $slider->image = $name2;
-                }
-
-                $slider->contenido = $request->input('contenido');
-                $slider->slug = time();
-
-                $slider->save();
-
-                return redirect()->route('slider')->with('status','Inserción Exitosa');
-            }
+        if ($validator->fails()) {
+            return redirect('/slider/create')
+                        ->withErrors($validator)
+                        ->withInput($request->all());
         }
 
         else
         {
-            return 'Error limite de siliders';
+            if ($request->hasFile('image'))
+            {
+                $file = $request->file('image');
+                $name2 = time().$file->getClientOriginalName();
+                $file->move(public_path().'/images/slider/',$name2);
+                $slider->image = $name2;
+            }
+
+            $slider->contenido = $request->input('contenido');
+            $slider->slug = time();
+
+            $slider->save();
+
+            return redirect()->route('slider')->with('status','Inserción Exitosa');
         }
-        
 
     }
 

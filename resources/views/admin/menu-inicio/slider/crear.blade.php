@@ -8,7 +8,6 @@
 
 <!----------------------------------------------------------------- SLIDER ---------------------------------------------------------->
 
-@if(count($sliders) <=3  )
 	<form id="formulario" class="form-goup" files="true" method="POST" action="/slider" enctype="multipart/form-data">
   @csrf
 
@@ -79,12 +78,6 @@
   </div>
 
   </form>
-
-@else
-
-	<div class="alert alert-danger" role="alert" >Se alcanzo limite de 4 Sliders, por favor edite o elimine los slider existentes </div>
-
-@endif
 
 <!------------------------------------------------------------- PREVISUALIZACIÓN SLIDER ---------------------------------------------------------->
 

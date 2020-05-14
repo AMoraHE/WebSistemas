@@ -37,6 +37,7 @@ Route::get('/isc-conocenos-reticulaDescargar/{slug}', 'PublicController@reticula
 Route::get('/isc-conocenos-lineasInvestigacion', 'PublicController@LineasInvestigacion');
 Route::get('/isc-conocenos-cuerposAcademicos', 'PublicController@cuerposAcademicos');
 Route::get('/isc-conocenos-organigrama', 'PublicController@organigrama');
+Route::get('/isc-infraestructura', 'PublicController@infraestructura');
 Route::get('/isc-infraestructura-labCisco', 'PublicController@labCisco');
 Route::get('/isc-infraestructura-labSistemas', 'PublicController@labSistemas');
 Route::get('/isc-infraestructura-labMicroprocesadores', 'PublicController@labMicroprocesadores');
