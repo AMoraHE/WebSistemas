@@ -47,7 +47,7 @@ for (var i = 0; i < btnburbuja.length; i++) {
 }
 
 
-/* ---------------------------------------------------RETRASO EN REDIRECCIONAR----------------------------------------------- */
+/* ---------------------------------------------------RETRASO EN REDIRECCIONAR----------------------------------------------- 
 
 $('#btn-time').click(function(e) {
 
@@ -62,4 +62,4 @@ $('#btn-time').click(function(e) {
     	document.location.href = loc; 
     	}, 700); 
 
-});
+}); */

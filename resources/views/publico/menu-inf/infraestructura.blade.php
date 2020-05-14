@@ -59,7 +59,7 @@
 							<div class="contenedor-txt-efecto">
 				                <h2>Responsable</h2>
 				                <p>{{$infra->responsable}}</p>
-				                <a id="btn-time" href="/isc-infraestructura-labCisco"><button class="btn-burbuja-1">Ver</button></a>                
+				                <a id="btn-time{{$infra->id}}" href="/isc-infraestructura-labCisco"><button class="btn-burbuja-1">Ver</button></a>                
 				            </div>
 						
 					</div>
@@ -67,6 +67,26 @@
 				</div>
 
 			</div>
+
+			<script type="text/javascript">
+				
+
+				$('#btn-time{{$infra->id}}').click(function(e) {
+
+					e.preventDefault();
+
+					var loc = $(this).attr('href');
+					let retraso = null;
+
+					
+				   retraso = setTimeout(function(){
+				    	
+				    	document.location.href = loc; 
+				    	}, 700); 
+
+				});
+
+			</script>
 
 		
 		@endforeach
