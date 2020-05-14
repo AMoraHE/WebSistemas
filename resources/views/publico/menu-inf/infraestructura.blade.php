@@ -37,15 +37,20 @@
 
 		@foreach($infras as $infra)
 		
-		<div class="contenedor-cuerpo-seccion">
+		<div class="contenedor-seccion-flex">
 
-			<div class="contenedor-img-grande">
+			<div class="contenedor-cuerpo-seccion-flex">
 
-				<h2>{{$infra->nombre}}</h2 >
-				<a target="_blank" rel="noopener noreferrer" href="/isc-infraestructura-labVerImg/{{$infra->id}}">			
-					<img src="/images/infra/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}">
-				</a>
-				
+				<h2>{{$infra->nombre}}</h2>
+
+				<div class="contenedor-seccion-img-lab">
+					
+					<a target="_blank" rel="noopener noreferrer" href="/isc-infraestructura-labVerImg/{{$infra->id}}">			
+						<img src="/images/infra/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}">
+					</a>
+					
+				</div>
+
 			</div>
 
 		</div>
