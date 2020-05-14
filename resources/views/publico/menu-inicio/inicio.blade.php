@@ -71,15 +71,11 @@
 
 <div class="contenedor-dividido">
 
-@foreach ($noticias as $noticia)
-	
-	@if($loop->first)
-
 	<div class="contenedor-noticia-1">
 		
 		<div class="contenedor-titulo-seccion">
 
-			<h3>{{$noticia->titulo}}</h3>
+			<h3>{{$FNoticia->titulo}}</h3>
 
 		</div>
 
@@ -88,11 +84,11 @@
 
 				<div class="contenedor-img-contenido">
 
-					<img src="/images/news/{{$noticia->newimage}}">
+					<img src="/images/news/{{$FNoticia->newimage}}">
 
 					<div class="seccion-fecha-noticia">
 
-						<p>{{$noticia->created_at}}</p>
+						<p>{{$FNoticia->created_at}}</p>
 
 					</div>
 
@@ -100,11 +96,11 @@
 
 				<div class="contenedor-cuerpo-txt">
 
-					<p>{{$noticia->redaccion}}</p>
+					<p>{{$FNoticia->redaccion}}</p>
 
 					<div class="seccion-continuacion">
 
-						<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticiasVerInd/{{$noticia->id}}"><button class="btn-leer"><span>Leer Más...</span></button></a>
+						<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticiasVerInd/{{$FNoticia->id}}"><button class="btn-leer"><span>Leer Más...</span></button></a>
 						
 					</div>
 
@@ -113,10 +109,6 @@
 		</div>
 
 	</div>
-
-	@endif
-
-@endforeach
 
 <!------------------------------------------------------------- CALENDARIO ---------------------------------------------------------->
 
