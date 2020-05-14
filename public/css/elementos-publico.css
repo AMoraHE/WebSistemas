@@ -1662,11 +1662,12 @@
 /***************************ENLACES***********************************/
 .contenedor-enlaces{
 	width: 100%;
-	height: 60px;
+	/*height: 60px; *****Temporal mientras que no se desborde por el - o un espacio****/
 	text-align: center;
 	margin-top: 20px;
 	padding-bottom: 10px;
 	overflow: auto;
+	white-space:nowrap;
 }
 
 .contenedor-enlaces a{
