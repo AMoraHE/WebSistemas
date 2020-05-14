@@ -24,3 +24,42 @@
 	 	var headroom = new Headroom(navegacion);
 	 	headroom.init();
 	 }); */
+
+/* ---------------------------------------------------BOTONES BURBUJAS----------------------------------------------- */
+
+
+var animacionBurbuja = function(e) {
+
+  e.preventDefault;
+  //reset animation
+  e.target.classList.remove('animacion');
+  
+  e.target.classList.add('animacion');
+  setTimeout(function(){
+    e.target.classList.remove('animacion');
+  },700);
+};
+
+var btnburbuja = document.getElementsByClassName("btn-burbuja-1");
+
+for (var i = 0; i < btnburbuja.length; i++) {
+  btnburbuja[i].addEventListener('click', animacionBurbuja, false);
+}
+
+
+/* ---------------------------------------------------RETRASO EN REDIRECCIONAR----------------------------------------------- */
+
+$('#btn-time').click(function(e) {
+
+	e.preventDefault();
+
+	var loc = $(this).attr('href');
+	let retraso = null;
+
+	
+   retraso = setTimeout(function(){
+    	
+    	document.location.href = loc; 
+    	}, 700); 
+
+});

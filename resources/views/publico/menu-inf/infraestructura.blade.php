@@ -53,10 +53,14 @@
 					<h2>{{$infra->nombre}}</h2>
 
 					<div class="contenedor-seccion-img-lab">
-						
-						<a target="_blank" rel="noopener noreferrer" href="/isc-infraestructura-labVerImg/{{$infra->id}}">			
+
 							<img src="/images/infra/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}">
-						</a>
+
+							<div class="contenedor-txt-efecto">
+				                <h2>Responsable</h2>
+				                <p>{{$infra->responsable}}</p>
+				                <a id="btn-time" href="/isc-infraestructura-labCisco"><button class="btn-burbuja-1">Ver</button></a>                
+				            </div>
 						
 					</div>
 
