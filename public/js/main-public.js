@@ -30,14 +30,19 @@
 
 var animacionBurbuja = function(e) {
 
-  e.preventDefault;
+	var loc = $(this).attr('href');
+
+  	e.preventDefault;
   //reset animation
-  e.target.classList.remove('animacion');
+  	e.target.classList.remove('animacion');
   
-  e.target.classList.add('animacion');
-  setTimeout(function(){
-    e.target.classList.remove('animacion');
-  },700);
+  	e.target.classList.add('animacion');
+  	setTimeout(function(){
+
+    	e.target.classList.remove('animacion');
+    	document.location.href = loc; 
+
+  	},700);
 };
 
 var btnburbuja = document.getElementsByClassName("btn-burbuja-1");
