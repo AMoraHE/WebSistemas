@@ -31,31 +31,44 @@
       </div>
 
 
-<!------------------------------------------------------------- PROYECTOS ----------------------------------------------------------->
+<!------------------------------------------------------------- INFRA ----------------------------------------------------------->
 
 	<div class="contenedor-secciones">
 
-		@foreach($infras as $infra)
-		
+		<div class="contenedor-titulo-seccion-mas">
+
+  			<h3>Laboratorios</h3>
+
+  		</div>
+
+
 		<div class="contenedor-seccion-flex">
+
+		@foreach($infras as $infra)
 
 			<div class="contenedor-cuerpo-seccion-flex">
 
-				<h2>{{$infra->nombre}}</h2>
+				<div class="contenedor-cuerpo-flex"> 
 
-				<div class="contenedor-seccion-img-lab">
-					
-					<a target="_blank" rel="noopener noreferrer" href="/isc-infraestructura-labVerImg/{{$infra->id}}">			
-						<img src="/images/infra/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}">
-					</a>
-					
+					<h2>{{$infra->nombre}}</h2>
+
+					<div class="contenedor-seccion-img-lab">
+						
+						<a target="_blank" rel="noopener noreferrer" href="/isc-infraestructura-labVerImg/{{$infra->id}}">			
+							<img src="/images/infra/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}">
+						</a>
+						
+					</div>
+
 				</div>
 
 			</div>
 
+		
+		@endforeach
+
 		</div>
 
-		@endforeach
 
 	</div>
 
