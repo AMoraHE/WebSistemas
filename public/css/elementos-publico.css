@@ -1667,7 +1667,7 @@
 	margin-top: 20px;
 	padding-bottom: 10px;
 	overflow: auto;
-	white-space:nowrap;
+	white-space:nowrap; /* Evita que el - o espacio haga salto de lineas */
 }
 
 .contenedor-enlaces a{
