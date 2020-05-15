@@ -35,7 +35,7 @@
 
 	<div class="contenedor-secciones">
 
-		<div class="contenedor-seccion-proyecto">
+		<div class="contenedor-seccion-titulos-grande">
 
   			<h1>LABORATORIOS</h1>
 
