@@ -52,7 +52,7 @@
 }
 
 .contenedor-titulo-mvo-con p{
-	background-color: #96C6BB;
+	background-color: #81ca97;
     padding: 10px 15px;
     border-bottom: 1px solid transparent;
     border-radius: 5px;
@@ -63,7 +63,7 @@
 }
 
 .titulo-con p:hover{
-	background-color: #6f988f;
+	background-color: #619c72;
 	transition: .7s;
 }
 
@@ -78,7 +78,7 @@
 
 
 .contenedor-titulo-mvo-con2 p{
-	background-color: #96C6BB;
+	background-color: #81ca97;
     padding: 10px 15px;
     border-bottom: 1px solid transparent;
     border-radius: 5px;
@@ -584,10 +584,14 @@ text-align: end;
 	margin: auto;
 	padding: 20px;
 	display: flex;
+	background-color: #ffffffe0
 }
 
 .contenedor-componentes-info-carrera-egreso:nth-child(even){
-background-color: #f4f4f4;
+background: url(../img/textura3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }	
 
 .contenedor-titulo-perfil{
