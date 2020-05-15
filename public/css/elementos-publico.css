@@ -651,13 +651,6 @@
 
 .contenedor-seccion-proyecto{
 	width: 100%;
-	text-align: center;
-}
-
-.contenedor-seccion-proyecto h1{
-	color: var(--naranja);
-	font-size: 36px;
-	font-weight: 400;
 }
 
 .contenedor-proyectos-1{
@@ -1046,6 +1039,16 @@
 
 /****************************************SECCIONES PRINCIPALES TITULOS*************************************************/
 
+.contenedor-seccion-titulos-grande{
+	width: 100%;
+	text-align: center;
+}
+
+.contenedor-seccion-titulos-grande h1{
+	color: var(--naranja);
+	font-size: 36px;
+	font-weight: 400;
+}
 
 .contenedor-titulo-seccion{
 	width: 100%;	
@@ -1772,6 +1775,10 @@
 
 .t-verde{
 	background: #619c72;
+}
+
+.t-azul{
+	background: #1B396A;
 }
 
 /************************************************************************************************PAGINACIÓN**************************************************************************/

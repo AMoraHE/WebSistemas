@@ -37,7 +37,11 @@
 
 	    <div class="contenedor-seccion-proyecto">
 
-	    	<h1>PROYECTOS</h1>
+	    	<div class="contenedor-seccion-titulos-grande">
+
+	    		<h1>PROYECTOS</h1>
+	    		
+	    	</div>
 
 	    	<div class="contenedor-proyectos-1">
 
