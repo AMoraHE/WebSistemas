@@ -3,9 +3,9 @@ $(document).ready(function(){
 	$('.contenedor-titulo-acordeon').on('click',function(){
 		$(this).next().slideToggle();
 
-     icon = $(this).find("i");
-     icon.toggleClass("fa-plus fa-minus")
-
+     icon = $(this).find("svg");
+     icon.toggleClass("fa-caret-down fa-caret-up")
+     estado = true;
 		if (estado == true) {
 			$('contenedor-acordeon-subapartado').css({
 				"overflow": "auto"

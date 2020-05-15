@@ -46,7 +46,7 @@
                 <div class="contenedor-inf-dir">
                     
                     <div class="contenedor_tarjeta">
-                        <a href="/isc-inicio-formContacto/{{$direc->correo}}" onclick="return confirm('¿Contactar?')">
+                        <div>
                             <figure id="tarjeta">
                                 <img src="/images/organigrama/{{$direc->foto}}" class="frontal" alt="">
                                 <figcaption class="trasera">
@@ -55,9 +55,10 @@
                                         <p>{{$direc->puesto}}</p>
                                         <p>{{$direc->integrante}}</p>
                                         <p>{{$direc->correo}}</p>
+                                        <button href="/isc-inicio-formContacto/{{$direc->correo}}" class="btn-burbuja-1">Contactar</button>
                                 </figcaption>
                             </figure>
-                        </a>
+                        </div>
                     </div>
                             
                 </div>
@@ -72,9 +73,9 @@
                  @foreach($director as $direc)
 
 
-                    @if($direc->puesto == 'Dirección Académica y de vinculación')
+                    @if($direc->nombre == 'Dirección Académica y de vinculación')
                     <div class="contenedor_tarjeta">
-                        <a href="/isc-inicio-formContacto/{{$direc->correo}}" onclick="return confirm('¿Contactar?')">
+                        <div>
                             <figure id="tarjeta">
                                 <img src="/images/organigrama/{{$direc->foto}}" class="frontal" alt="">
                                 <figcaption class="trasera">
@@ -83,15 +84,16 @@
                                         <p>{{$direc->puesto}}</p>
                                         <p>{{$direc->integrante}}</p>
                                         <p>{{$direc->correo}}</p>
+                                        <button href="/isc-inicio-formContacto/{{$direc->correo}}" class="btn-burbuja-1">Contactar</button>
                                 </figcaption>
                             </figure>
-                        </a>
+                        </div>
                     </div>
                     @endif
 
-                     @if($direc->puesto == 'Subdirección Académica')
+                     @if($direc->nombre == 'Subdirección Académica')
                     <div class="contenedor_tarjeta">
-                        <a href="/isc-inicio-formContacto/{{$direc->correo}}" onclick="return confirm('¿Contactar?')">
+                        <div>
                             <figure id="tarjeta">
                                 <img src="/images/organigrama/{{$direc->foto}}" class="frontal" alt="">
                                 <figcaption class="trasera">
@@ -100,15 +102,16 @@
                                         <p>{{$direc->puesto}}</p>
                                         <p>{{$direc->integrante}}</p>
                                         <p>{{$direc->correo}}</p>
+                                        <button href="/isc-inicio-formContacto/{{$direc->correo}}" class="btn-burbuja-1">Contactar</button>
                                 </figcaption>
                             </figure>
-                        </a>
+                        </div>
                     </div>
                     @endif
 
-                     @if($direc->puesto == 'División de ISC')
+                     @if($direc->nombre == 'División de ISC')
                     <div class="contenedor_tarjeta">
-                        <a href="/isc-inicio-formContacto/{{$direc->correo}}" onclick="return confirm('¿Contactar?')">
+                        <div>
                             <figure id="tarjeta">
                                 <img src="/images/organigrama/{{$direc->foto}}" class="frontal" alt="">
                                 <figcaption class="trasera">
@@ -117,9 +120,10 @@
                                         <p>{{$direc->puesto}}</p>
                                         <p>{{$direc->integrante}}</p>
                                         <p>{{$direc->correo}}</p>
+                                        <button href="/isc-inicio-formContacto/{{$direc->correo}}" class="btn-burbuja-1">Contactar</button>
                                 </figcaption>
                             </figure>
-                        </a>
+                        </div>
                     </div>
                     @endif
                             
@@ -148,7 +152,7 @@
                        
                             
                             <div class="contenedor_tarjeta">
-                                <a href="/isc-inicio-formContacto/{{$lab->correo}}" onclick="return confirm('¿Contactar?')">
+                                <div>
                                     <figure id="tarjeta">
                                         <img src="/images/organigrama/{{$lab->foto}}" class="frontal" alt="">
                                         <figcaption class="trasera">
@@ -156,9 +160,10 @@
                                             <hr>
                                                 <p>{{$lab->integrante}}</p>
                                                 <p>{{$lab->correo}}</p>
+                                                <button href="/isc-inicio-formContacto/{{$lab->correo}}" class="btn-burbuja-1">Contactar</button>
                                         </figcaption>
                                     </figure>
-                                </a>
+                                </div>
                             </div>
                           
                         @endforeach
@@ -174,7 +179,7 @@
                         @foreach($docente as $docen)
 
                             <div class="contenedor_tarjeta">
-                                <a href="/isc-inicio-formContacto/{{$docen->correo}}" onclick="return confirm('¿Contactar?')">
+                                <div>
                                     <figure id="tarjeta">
                                         <img src="/images/organigrama/{{$docen->foto}}" class="frontal" alt="">
                                         <figcaption class="trasera">
@@ -182,9 +187,10 @@
                                             <hr>
                                                 <p>{{$docen->integrante}}</p>
                                                 <p>{{$docen->correo}}</p>
+                                                <button href="/isc-inicio-formContacto/{{$docen->correo}}" class="btn-burbuja-1">Contactar</button>
                                         </figcaption>
                                     </figure>
-                                </a>
+                                </div>
                             </div>
 
                         

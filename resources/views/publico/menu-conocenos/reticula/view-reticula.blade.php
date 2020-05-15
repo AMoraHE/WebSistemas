@@ -17,16 +17,24 @@
 <div class="seccion-principal">
 
 
-	<div class="contenedor-titulo-seccion">
+	<div class="contenedor-img-encabezado">
 
-		<div class="tlinea"></div>
+          <div class="img-encabezado">
 
-		<h3>RETICULA</h3>
+            <img src="/img/Conocenos.jpg">
 
-		<div class="tlinea"></div>
+            <div class="encabezado">
 
-	</div>
+               <h1>Retícula</h1>
+               <hr>
 
+            </div>
+
+          </div>   
+
+          <div class="skew-abajo"></div>
+
+      </div>
 <!----------------------------------------------------------------- CUERPO RETICULA ---------------------------------------------------------->
 
 
@@ -39,7 +47,7 @@
 	<div class="contenedor-acordeon-subapartado">
 				<div class="contenedor-titulo-acordeon">
 
-				<p>{{$reticula->titulo}}<i class="icono-derecha fas fa-plus"></i></p>
+				<p>{{$reticula->titulo}}<i class="icono-aco-derecha fas fa-caret-down"></i></p>
 
 				</div>
 		<div class="info-acordeon-centrado">
@@ -63,7 +71,7 @@
 
 	<div class="contenedor-botones">
 			
-		<a href="/isc-conocenos-reticulaDescargar/{{$reticula->slug}}"><button class="btn"><span>Descargar</span></button></a>
+		<a href="/isc-conocenos-reticulaDescargar/{{$reticula->slug}}"><button class="btn-ret"><span>Descargar</span></button></a>
 
 	</div>
 	</div>
