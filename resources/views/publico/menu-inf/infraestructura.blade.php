@@ -35,11 +35,12 @@
 
 	<div class="contenedor-secciones">
 
-		<div class="contenedor-titulo-seccion-mas t-verde">
+		<div class="contenedor-seccion-proyecto">
 
-  			<h3>Laboratorios</h3>
+  			<h1>LABORATORIOS</h1>
 
   		</div>
+
 
 
 		<div class="contenedor-seccion-flex">
