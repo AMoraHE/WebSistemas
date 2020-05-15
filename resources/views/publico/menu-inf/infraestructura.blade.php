@@ -35,7 +35,7 @@
 
 	<div class="contenedor-secciones">
 
-		<div class="contenedor-titulo-seccion-mas">
+		<div class="contenedor-titulo-seccion-mas t-verde">
 
   			<h3>Laboratorios</h3>
 
@@ -48,9 +48,14 @@
 
 			<div class="contenedor-cuerpo-seccion-flex">
 
-				<div class="contenedor-cuerpo-flex"> 
+				<div class="contenedor-cuerpo-flex">
 
-					<h2>{{$infra->nombre}}</h2>
+				<div class="contenedor-titulo-seccion-mas">
+					
+					<h3>{{$infra->nombre}}</h3>
+
+				</div> 
+
 
 					<div class="contenedor-seccion-img-lab">
 

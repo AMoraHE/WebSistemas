@@ -979,6 +979,7 @@
 .contenedor-seccion-img-lab{
 	width: 100%;
 	height: 500px;
+	margin-top: 10px;
 	position: relative;
 	overflow: hidden;
 
@@ -995,6 +996,7 @@
 		height: 100%; 
 		object-fit: cover;
 		object-position: center;
+		border-radius: 5px;
 	}
 
 	.contenedor-txt-efecto{
@@ -1765,9 +1767,11 @@
 }
 
 .mas{
-	
 	background: #f1592a;
+}
 
+.t-verde{
+	background: #619c72;
 }
 
 /************************************************************************************************PAGINACIÓN**************************************************************************/
