@@ -42,7 +42,7 @@
         <div class="contenedor-dir"><!------------------- CONTENEDOR DIR ----------------------------->
                 @foreach($director as $direc)
 
-                @if($direc->puesto == 'Dirección General')
+                @if($direc->nombre == 'Dirección General')
                 <div class="contenedor-inf-dir">
                     
                     <div class="contenedor_tarjeta">
