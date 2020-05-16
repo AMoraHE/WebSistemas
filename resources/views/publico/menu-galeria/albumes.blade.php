@@ -1,6 +1,6 @@
 @extends('layouts.publico')
 
-@section('title', 'Proyectos')
+@section('title', 'Galería')
 
 @section('content')
 
@@ -19,7 +19,7 @@
 
             <div class="encabezado">
 
-               <h1>Infraestructura</h1>
+               <h1>Galería</h1>
                <hr>
 
             </div>
@@ -37,7 +37,7 @@
 
 		<div class="contenedor-seccion-titulos-grande">
 
-  			<h1>LABORATORIOS</h1>
+  			<h1>Álbumes</h1>
 
   		</div>
 
@@ -45,7 +45,7 @@
 
 		<div class="contenedor-seccion-flex">
 
-		@foreach($infras as $infra)
+		@foreach ($albums as $album)
 
 			<div class="contenedor-cuerpo-seccion-flex">
 
@@ -53,27 +53,19 @@
 
 				<div class="contenedor-titulo-seccion-mas t-azul">
 					
-					<h3>{{$infra->nombre}}</h3>
+					<h3>{{$album->titulo}}</h3>
 
 				</div> 
 
 
 					<div class="contenedor-seccion-img-lab">
 
-							<img src="/images/infra/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}">
+							<img src="/images/galeria/album/{{$album->imgPrin}}" alt="{{$album->imgPrin}}">
 
 							<div class="contenedor-txt-efecto">
-				                <h2>Responsable</h2>
-				                <p>{{$infra->responsable}}</p>
-				                @if($infra->slug == "cisco")
-				                <button href="/isc-infraestructura-labCisco" class="btn-burbuja-1">Ver</button>
-				                @elseif($infra->slug == "sistemas")
-				                <button href="/isc-infraestructura-labSistemas" class="btn-burbuja-1">Ver</button>
-				                @elseif($infra->slug == "celula")
-				                <button href="/isc-infraestructura-labCelula" class="btn-burbuja-1">Ver</button>
-				                @elseif($infra->slug == "micro")
-				                <button href="/isc-infraestructura-labMicroprocesadores" class="btn-burbuja-1">Ver</button>
-				                @endif
+				                <h2>Descripción</h2>
+				                <p>{{$album->descripcion}}</p>
+				                <button href="/isc-galeria-fotos/{{$album->slug}}" class="btn-burbuja-1">Ver álbum</button>
 				            </div>
 						
 					</div>

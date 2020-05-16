@@ -55,7 +55,7 @@
                                         <p>{{$direc->puesto}}</p>
                                         <p>{{$direc->integrante}}</p>
                                         <p>{{$direc->correo}}</p>
-                                        <button href="/isc-inicio-formContacto/{{$direc->correo}}" class="btn-burbuja-1">Contactar</button>
+                                        <!-- <button href="/isc-inicio-formContacto/{{$direc->correo}}" class="btn-burbuja-1">Contactar</button> -->
                                 </figcaption>
                             </figure>
                         </div>
@@ -84,7 +84,7 @@
                                         <p>{{$direc->puesto}}</p>
                                         <p>{{$direc->integrante}}</p>
                                         <p>{{$direc->correo}}</p>
-                                        <button href="/isc-inicio-formContacto/{{$direc->correo}}" class="btn-burbuja-1">Contactar</button>
+                                        <!-- <button href="/isc-inicio-formContacto/{{$direc->correo}}" class="btn-burbuja-1">Contactar</button> -->
                                 </figcaption>
                             </figure>
                         </div>
@@ -102,7 +102,7 @@
                                         <p>{{$direc->puesto}}</p>
                                         <p>{{$direc->integrante}}</p>
                                         <p>{{$direc->correo}}</p>
-                                        <button href="/isc-inicio-formContacto/{{$direc->correo}}" class="btn-burbuja-1">Contactar</button>
+                                        <!-- <button href="/isc-inicio-formContacto/{{$direc->correo}}" class="btn-burbuja-1">Contactar</button> -->
                                 </figcaption>
                             </figure>
                         </div>

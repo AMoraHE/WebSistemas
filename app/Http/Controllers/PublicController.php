@@ -312,11 +312,18 @@ class PublicController extends Controller
     return response()->download('docs/programas/'.$name);
   }
 
-  public function fotos()
+  public function galeria()
   {
-    $albums = album::orderBy('id', 'DESC')->paginate(5);
-    $imagenes = DB::table('album_galerias')->join('albums', 'album_galerias.albumSlug', '=', 'albums.slug')->select('album_galerias.*')->get();
-    return view('/publico/menu-galeria/galeria/show', compact('albums', 'imagenes'));
+    $albums = album::orderBy('id', 'DESC')->get();
+    return view('publico.menu-galeria.albumes', compact('albums'));
+  }
+
+  public function fotos($slug)
+  {
+    $albums = album::where('slug', $slug)->firstOrFail();
+    $ASlug = $albums->slug;
+    $imagenes = albumGaleria::where('albumSlug', $ASlug)->get();
+    return view('publico.menu-galeria.galeria.galeria', compact('albums', 'imagenes'));
   }
 
   public function fotosVerImg($id)

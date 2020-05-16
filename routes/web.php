@@ -57,10 +57,10 @@ Route::get('/isc-academicos-convocatoriasVer/{slug}', 'PublicController@convocat
 Route::get('/isc-academicos-convocatoriasDescargar/{slug}', 'PublicController@convocatoriasDescargar');
 Route::get('/isc-academicos-programasVer/{slug}', 'PublicController@programasVer');
 Route::get('/isc-academicos-programasDescargar/{slug}', 'PublicController@programasDescargar');
-Route::get('/isc-galeria-fotos', 'PublicController@fotos');
+Route::get('/isc-galeria', 'PublicController@galeria');
+Route::get('/isc-galeria-fotos/{id}', 'PublicController@fotos');
 Route::get('/isc-galeria-fotosVerImg/{id}', 'PublicController@fotosVerImg');
 Route::get('/isc-galeria-fotosGaleriaVerImg/{id}', 'PublicController@fotosGaleriaVerImg');
-
 Route::get('/isc-inicio-contactos', 'PublicController@contactos');
 Route::get('/isc-inicio-formContacto/{correo}', 'PublicController@formContacto');
 Route::post('/isc-inicio-contactoCorreo', 'PublicController@contactoCorreo');
