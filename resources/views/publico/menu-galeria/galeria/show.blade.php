@@ -6,7 +6,28 @@
 
 <div class="seccion-principal">
 
+	    <!------------------------------------------------------------- IMG Encabezado ----------------------------------------------------------->
 
+      <div class="contenedor-img-encabezado">
+
+          <div class="img-encabezado">
+
+            <img src="/img/Noticias.png">
+
+            <div class="encabezado">
+
+            	<h1>Galería</h1>
+            	<hr>
+
+            </div>
+
+          </div>   
+
+          <div class="skew-abajo"></div>
+
+      </div>
+
+<div class="contenedor-secciones">
 		
 	@foreach ($albums as $album)
 	
@@ -25,6 +46,8 @@
 
 
 	@endforeach
+
+</div>
 
 	<div id="paginas"> 
 			{{$albums->links()}}

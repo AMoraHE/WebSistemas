@@ -1,6 +1,6 @@
 @extends('layouts.publico')
 
-@section('title', 'Infraestructura')
+@section('title', 'Proyectos')
 
 @section('content')
 

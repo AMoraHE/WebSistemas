@@ -126,7 +126,7 @@
 		<div class="contenedor-botones">
 
 			<a id="save" texto="guardar el nuevo proyecto?"><button class="btn guardar" type="submit" name="send"><span>Enviar</span></button></a>
-	 		<a class="msj" mesanje="cancelar?" href="{{url()->previous()}}"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+	 		<a class="msj" mesanje="cancelar?" href="{{url()->previous()}}"><button type="button" class="btn cancelar icono-izquierda"><span>Cancelar</span></button></a>
 		
 
 		</div>
