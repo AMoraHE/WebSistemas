@@ -1253,63 +1253,7 @@
     font-size: 18px;
 }
 
-/***********************************TABLAS*****************************************/
 
-.tabla-informacion-escolar{
-	margin: auto;
-	width: 100%;
-}
-
-.tabla-informacion-escolar table{
-	background: var(--blanco);
-	border-collapse: collapse;
-	width: 100%; 
-}
-
-.tabla-informacion-escolar th, td{
-	padding: 20px;
-	max-width: 700px; /***TAMAÑO MÁXIMO DE LAS CELDAS***/
-}
-
-.tabla-informacion-escolar td{
-	text-align: justify;
-}
-
-.tabla-informacion-escolar td img{
-	max-width: 50%;
-	border: 2px solid var(--verde);
-}
-
-.tabla-informacion-escolar thead{
-	text-transform: uppercase;
-	text-align: justify;
-	background: var(--azul);
-	border-bottom: solid 5px var(--verde);
-	color: var(--blanco);
-}
-
-.tabla-informacion-escolar tr:nth-child(even){
-	background-color: var(--gris); 
-}
-
-.tabla-informacion-escolar tr:hover td{
-	background-color: var(--verde-azulado);
-	color: var(--blanco);
-}
-
-.tabla-informacion-escolar p{
-	text-align: center;
-}
-
-.advertencia{
-	align-items: center;
-	justify-content: center;
-	padding: 10px;
-	border-radius: 4px;
-	background: #E74C3C;
-	color: var(--blanco);
-	display: none;
-}
 
 /************************************************************************************************SECCIÓN CALENDARIO***********************************************************************/
 

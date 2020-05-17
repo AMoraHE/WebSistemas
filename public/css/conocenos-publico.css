@@ -272,7 +272,7 @@ padding-top: 2%;
 }
 
 .contenedor-titulo-seccion-con p{
-	background: #83aec0c2;
+	background: #81ca97;
     padding: 10px 15px;
     border-bottom: 1px solid transparent;
     border-radius: 5px;
@@ -285,7 +285,7 @@ padding-top: 2%;
 }
 
 .contenedor-titulo-seccion-con p:hover{
-	background-color: #5b7c8ac2;
+	background-color: #619c72;
 	transition: .7s;
 }
 
@@ -354,7 +354,7 @@ padding-top: 2%;
 }
 
 .contenedor-titulo-acordeon-con p:hover{
-	background-color: #b18f0cba;
+	background-color: #619c72;
 	transition: .7s;
 	cursor: pointer;
 }
@@ -363,7 +363,7 @@ padding-top: 2%;
 	width:100%;
 	height:74px;
 	padding: 12px;
-	background-color: #ecbe0fba;
+	background-color: #81ca97;
 	border-radius: 5px;
 	color: white;
 	font-size: 20pt;
@@ -420,7 +420,7 @@ padding-top: 2%;
 
 .contenedor-titulo-org-con p{
 	height:74px;
-	background-color: #35342ec4;
+	background-color: #81ca97;
 	font-family: 'Roboto', sans-serif;
 	border-radius: 5px;
 	color: white;
@@ -429,7 +429,7 @@ padding-top: 2%;
 }
 
 .contenedor-titulo-org-con p:hover{
-	background-color: #35342e;
+	background-color: #619c72;
 	transition: .7s
 }
 
@@ -934,6 +934,8 @@ figure .frontal,
 figure .trasera {
 	width: 100%;
 	height: 100%;
+	object-fit: cover;
+	object-position: center;
 	border-radius: 5px;
 	transition: all ease .5s;
 }
@@ -1023,3 +1025,82 @@ figure .trasera p {
 	}
 
 }
+
+/*******************************************************SECCIÓN LINEAS CUERPOS******************************************/
+/***********************************TABLAS*****************************************/
+.titulo-linea-cuerpo p{
+	color: #f1592a;
+    padding-top: 20px;
+    font-size: 28pt;
+    line-height: 1.42857143;
+    text-align: -webkit-center;
+}
+
+
+.tabla-informacion-escolar{
+	margin: auto;
+	padding-top: 40px;
+	width: 100%;
+}
+
+.tabla-informacion-escolar table{
+	background: var(--blanco);
+	border-collapse: collapse;
+	width: 90%;
+	margin: auto;
+	border-radius: 10px;
+}
+
+.tabla-informacion-escolar th, td{
+	padding: 20px;
+	max-width: 700px; /***TAMAÑO MÁXIMO DE LAS CELDAS***/
+}
+
+.tabla-informacion-escolar td{
+	text-align: center;
+}
+
+.tabla-informacion-escolar td img{
+	max-width: 50%;
+	border: 2px solid var(--verde);
+}
+
+.tabla-informacion-escolar thead{
+	text-transform: capitalize;
+	font-size: 20pt;
+	text-align: center;
+	background: #9abccce0;
+	color: var(--blanco);
+}
+
+.tabla-informacion-escolar tr:nth-child(even){
+	background-color: #f3f1f1; 
+}
+
+.tabla-informacion-escolar tr:hover td{
+	background-color: #dddddd;
+	color: var(--blanco);
+}
+
+
+.tabla-informacion-escolar p{
+	text-align: center;
+}
+
+.advertencia{
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	border-radius: 4px;
+	background: #E74C3C;
+	color: var(--blanco);
+	display: none;
+}
+
+
+
+
+
+
+
+
