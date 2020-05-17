@@ -198,7 +198,7 @@
 
 	<div class="contenedor-lineas-cuerpos-ind">
 
-	<a href="/isc-conocenos-lineasInvestigacion" class="contenedor-titulo-seccion-con">
+	<a href="/isc-conocenos-lineasInv_cuerposAcad" class="contenedor-titulo-seccion-con">
 
 		<p>Líneas de Investigación</p>
 
@@ -235,7 +235,7 @@
 
 	<!----------------------------------------------------------------- CUERPO ACADÉMICO -------------------------------------------------->
 	<div class="contenedor-lineas-cuerpos-ind">
-	<a href="/isc-conocenos-cuerposAcademicos" class="contenedor-titulo-seccion-con">
+	<a href="/isc-conocenos-lineasInv_cuerposAcad" class="contenedor-titulo-seccion-con">
 
 		<p>Cuerpos Académicos</p>
 
@@ -261,7 +261,7 @@
 						<td>{{$cuerpo->grado}}</td>
 						<td>
 							<ol>
-								@foreach (explode(', ', $cuerpo->integrantes) as $integrantes)
+								@foreach (explode(',', $cuerpo->integrantes) as $integrantes)
 								<li>{{$integrantes}}</li>
 								@endforeach
 							</ol>

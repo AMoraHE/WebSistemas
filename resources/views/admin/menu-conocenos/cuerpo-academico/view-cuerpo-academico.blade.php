@@ -53,7 +53,7 @@
 						<td>{{$cuerpo->clave}}</td>
 						<td>
 							<ol>
-								@foreach (explode(', ', $cuerpo->integrantes) as $integrantes)
+								@foreach (explode(',', $cuerpo->integrantes) as $integrantes)
 								<li>{{$integrantes}}</li>
 								@endforeach
 							</ol>
