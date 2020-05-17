@@ -96,7 +96,10 @@
 
 				<div class="contenedor-cuerpo-txt">
 
-					<p>{{$FNoticia->redaccion}}</p>
+					@foreach(explode(PHP_EOL, $FNoticia->redaccion) as $parrafo)
+					<p>{{$parrafo}}</p>
+					@endforeach
+					<!-- <p>{{$FNoticia->redaccion}}</p> -->
 
 					<div class="seccion-continuacion">
 

@@ -54,7 +54,12 @@
 						<td>
 							<ol>
 								@foreach (explode(',', $cuerpo->integrantes) as $integrantes)
-								<li>{{$integrantes}}</li>
+
+								@php
+								$integrante = ltrim($integrantes);
+								@endphp
+
+								<li>{{$integrante}}</li>
 								@endforeach
 							</ol>
 						</td>
