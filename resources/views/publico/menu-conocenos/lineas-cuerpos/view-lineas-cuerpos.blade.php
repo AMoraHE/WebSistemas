@@ -62,6 +62,8 @@
 		</div>
 	</div>
 <!----------------------------------------------------------------- TABLA CUERPOS ACÁDEMICOS---------------------------------------->
+	<div class="separador"></div>
+
 	<div class="contenedor-tabla">
 
 		<div class="titulo-linea-cuerpo">

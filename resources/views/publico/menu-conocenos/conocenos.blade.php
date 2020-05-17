@@ -293,12 +293,12 @@
 	<div class="contenedor-acordeon-subapartado-con">
 				<a href="/isc-conocenos-reticula" class="contenedor-titulo-acordeon-con">
 
-				<p>{{$reticula->titulo}}</p>
+				<p>Retícula</p>
 
 				</a>
 
 				<div class="info-acordeon-con">
-
+			<p>{{$reticula->titulo}}</p>
 			<p>{{$reticula->programa}}</p>
 			<p>PLAN: {{$reticula->plan}}</p>
 			<p>ESPECIALIDAD: {{$reticula->especialidad}}</p>	

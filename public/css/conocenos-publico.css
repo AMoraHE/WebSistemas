@@ -313,7 +313,7 @@ padding-top: 2%;
 .tabla-informacion-escolar-con thead{
 	padding: 5px;
 	font-size: 16px;
-	background-color: #9abccce0;
+	background-color: #69c6859e;
 	color: #FFF;
 	
 }
@@ -342,7 +342,7 @@ padding-top: 2%;
 
 .contenedor-acordeon-con{
 	width: 90%;
-	height: 300px;
+	height: 350px;
 	display: block;
     margin: auto;
     text-align: -webkit-center;
@@ -362,18 +362,17 @@ padding-top: 2%;
 .contenedor-titulo-acordeon-con p{
 	width:100%;
 	height:74px;
-	padding: 12px;
 	background-color: #81ca97;
 	border-radius: 5px;
 	color: white;
-	font-size: 20pt;
+	font-size: 28pt;
 	font-family: 'Roboto', sans-serif;
 	text-transform: capitalize; 
 }
 
 .info-acordeon-con{
 	width:100%;
-	height:200px;
+	height:auto;
 	background-color: #f5f5f5;
 	padding: 20px 0;
 	overflow: hidden;
@@ -398,7 +397,7 @@ padding-top: 2%;
 .contenedor-texto-completo-org-con{
 	width: 38%;
     min-height: 350px;
-    margin-top: 29%;
+    margin-top: 34%;
     position: absolute;
     display: inline-block;
     float: right;
@@ -424,8 +423,7 @@ padding-top: 2%;
 	font-family: 'Roboto', sans-serif;
 	border-radius: 5px;
 	color: white;
-	padding: 10px;
-	font-size: 22pt;
+	font-size: 28pt;
 }
 
 .contenedor-titulo-org-con p:hover{
@@ -595,7 +593,8 @@ background: url(../img/textura3.jpg);
 }	
 
 .contenedor-titulo-perfil{
-	background-color: #bae4dac7;
+	/*background-color: #bae4dac7;*/
+	background-color: #ff8d00bf;
 	padding: 10px 15px;
     border-bottom: 1px solid transparent;
     border-radius: 5px;
@@ -741,22 +740,10 @@ ol.round p{
     text-transform: capitalize;
 }
 
-.info-acordeon{
-	display: none;
-	width:100%;
-	height:auto;
-	background-color: #f5f5f5;
-	overflow: hidden;
-}
 
-.info-acordeon p{
-	margin:20px;
-	text-align: justify;
-	color:#000;
-}
 
 .info-acordeon-centrado{
-	display: none;
+	display: block;
 	width:100%;
 	height:auto;
 	background-color: #f5f5f5;
@@ -1046,8 +1033,8 @@ figure .trasera p {
 .tabla-informacion-escolar table{
 	background: var(--blanco);
 	border-collapse: collapse;
-	width: 90%;
-	margin: auto;
+	width: 97%;
+	margin: 20px;
 	border-radius: 10px;
 }
 
@@ -1075,6 +1062,9 @@ figure .trasera p {
 
 .tabla-informacion-escolar tr:nth-child(even){
 	background-color: #f3f1f1; 
+}
+.contenedor-tabla:last-child{
+background-color: #f4f4f4;
 }
 
 .tabla-informacion-escolar tr:hover td{
