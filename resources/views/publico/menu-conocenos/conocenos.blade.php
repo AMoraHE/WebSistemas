@@ -31,8 +31,14 @@
       </div>
 		
 	<div class="fondo-mvo-con">
+		<div class="titulo-linea-cuerpo">
+		 <p>INFORMACIÓN DE LA CARRERA</p>
+		</div>
 
 		<div class="contenedor-mvo-con">
+
+			
+
 			@foreach($informaciones as $informacion)
 
 				
@@ -92,6 +98,10 @@
 
 <div class="separador"></div>
 <div class="contenedor-perfil-campo-con">
+
+	<div class="titulo-linea-cuerpo">
+		 <p>PERFIL DE LA CARRERA</p>
+		</div>
 
 	<div class="contenedor-componentes-info-carrera-ingreso-con">
 
@@ -163,28 +173,7 @@
 
 	
 
-		<div class="contenedor-apartado-campo">
-
-			<a href="/isc-conocenos-perfil_campo_ISC" class="contenedor-titulo-campo-con">
-
-				<p>Campo Laboral</p>
-
-			</a>
-
-			<div class="contenedor-perfil-con">
-
-				<ol class="round">
-
-				@foreach ($campolaboral as $campolabora)
-
-						<li><i class="viñeta">{{$campolabora->vineta}}</i> <p>{{$campolabora->elemento}}</p></li>
-						
-				@endforeach
-
-				</ol>
-
-			</div>
-		</div>
+		
 
 </div>
 

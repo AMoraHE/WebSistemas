@@ -87,7 +87,7 @@
 
 					</div>
 					<div class="contenedor-img-mvo">
-						<img class="imagen-mvo" src="{{ asset('img/isc.png')}}">
+						<img class="imagen-mvo" src="{{ asset('img/isc.jpg')}}">
 					</div>
 
 				</div>
