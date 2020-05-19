@@ -1234,6 +1234,8 @@
 
 .efecto-album h2{
     color: #ffff;
+    max-height: 200px;
+    overflow:hidden;
     font-weight: 300;
     font-size: 26px;
     text-align: center;
