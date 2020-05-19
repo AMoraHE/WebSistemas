@@ -12,6 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-publico.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/elementos-publico.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/conocenos-publico.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-infra.css')}}">
 
 		<!--------------------------------ICONOS---------------------------------------->
 

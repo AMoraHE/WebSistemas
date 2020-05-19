@@ -42,42 +42,32 @@
   		</div>
 
 
+	    <div class="galeria">
 
-		<div class="contenedor-seccion-flex">
+	        <div class="linea"></div>
 
-		@foreach ($albums as $album)
+	        <div class="contenedor-album">
 
-			<div class="contenedor-cuerpo-seccion-flex">
+	        	@foreach ($albums as $album)
 
-				<div class="contenedor-cuerpo-flex">
+	            <div class="album">
 
-				<div class="contenedor-titulo-seccion-mas t-azul">
-					
-					<h3>{{$album->titulo}}</h3>
+	                <img src="/images/galeria/album/{{$album->imgPrin}}" alt="{{$album->imgPrin}}">
 
-				</div> 
+	                <div class="efecto-album">
 
+	                   <!-- <h2>{{$album->titulo}}</h2> -->
+	                    <button href="/isc-galeria-fotos/{{$album->slug}}" class="btn-burbuja-1">Ver álbum</button>
 
-					<div class="contenedor-seccion-img-lab">
+	                </div>
 
-							<img src="/images/galeria/album/{{$album->imgPrin}}" alt="{{$album->imgPrin}}">
+	            </div>
 
-							<div class="contenedor-txt-efecto">
-				                <h2>Descripción</h2>
-				                <p>{{$album->descripcion}}</p>
-				                <button href="/isc-galeria-fotos/{{$album->slug}}" class="btn-burbuja-1">Ver álbum</button>
-				            </div>
-						
-					</div>
+	            @endforeach
 
-				</div>
+	        </div>
 
-			</div>
-		
-		@endforeach
-
-		</div>
-
+	    </div>
 
 	</div>
 

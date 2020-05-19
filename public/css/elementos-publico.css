@@ -335,7 +335,7 @@
 .img-encabezado{
 	position: relative;
     width: 100%;
-    height: 50vh;
+    height: 50vh; /**Antes era 500px **/
     overflow: hidden;
 }
 
@@ -861,7 +861,7 @@
 
 .contenedor-seccion-img-grande{
 	width: 100%;
-	height: 600px;
+	height: 50vh; /***Antes 600px***/
 	position: relative;
 	overflow: hidden;
 	/*box-shadow: 0 10px 10px rgba(0,0,0,0.7);*/
@@ -1183,6 +1183,87 @@
 
 .contenedor-img-mini-galeria-button button{
 	width: 200px;
+}
+
+/************************************************************************************************SECCIÓN GALERIA***********************************************************************/
+
+
+.galeria{
+	background: var(--gris-tipo1);
+	border-radius: 5px;
+}
+
+.linea{
+    border-top: 3px solid var(--naranja);
+    margin-bottom: 40px;
+}
+
+.contenedor-album{
+    display:flex;
+   /* width: 85%; */
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.album{
+    width: 32%;
+    position: relative;
+    height: 300px;
+    margin-bottom: 40px;
+}
+.album img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.efecto-album{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background:rgba(27, 57, 106, 0.5);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .5s ease;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.album:hover .efecto-album{
+    height:100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1000px){
+    .contenedor-album{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:700px){
+    .contenedor-album{
+        width: 90%;
+    }
+    .album{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:450px){
+
+    .contenedor-album{
+        width: 98%;
+    }
+   	.album{
+        width: 80%;
+    }
 }
 
 /************************************************************************************************SECCIÓN BUSCADOR***************************************************************************/

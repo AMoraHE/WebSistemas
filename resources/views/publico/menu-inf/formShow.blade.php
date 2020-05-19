@@ -1,73 +1,48 @@
 
 <!----------------------------------------------------------------- VISTA LABORATORIOS -------------------------------------------------------->
 
-	<div class="contenedor-cuerpo-seccion">
+<div class="contenedor-img-encabezado">
 
-		<div class="contenedor-img-grande">
+<div class="img-encabezado">
 
-			<a target="_blank" rel="noopener noreferrer" href="/isc-infraestructura-labVerImg/{{$infra->id}}">			
-				<img src="/images/infra/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}">
-				<section class="caption-infra">
-					<h2>{{$infra->nombre}}</h2 >
-				</section>
-			</a>
-			
-		</div>
+<img src="/images/infra/{{$infra->imgInicio}}" alt="{{$infra->imgInicio}}">
 
+  <div class="encabezado">
+
+	  <h1 class="titulo-infra diseño-titulo-infra">{{$infra->nombre}}</h1>
+
+  </div>
+
+</div>   
+
+<div class="skew-abajo"></div>
+
+</div>
+		<label class="elegantshadow-infra subtitulo-infra">Descripción:</label>
+	<div class="formulario-infra">
+
+	<div class="formulario-infra-hijo">
+		{{$infra->descripcion}}
 	</div>
 
-	<div class="formulario">
+	</div>
+	<label class="elegantshadow-infra subtitulo-infra">Responsable:</label>
+	<div class="formulario-infra">
 		
-		<label>Responsable</label>
-		<input type="text" name="" id ="" value="{{$infra->responsable}}" class="form-control" readonly>
+		{{$infra->responsable}}
+		
+	</div>
+	<label class="elegantshadow-infra subtitulo-infra">Correo Electrónico:</label>
+	<div class="formulario-infra">
+
+		{{$infra->correo}}
 
 	</div>
 
-	<div class="formulario">
+	<label class="elegantshadow-infra subtitulo-infra">Mini Galería:</label>
 
-		<label>Correo Electrónico</label>
-		<input type="email" name="correo" value="{{$infra->correo}}" id="correo" readonly>
+	<div class="mini-galeria-infra">
 
-	</div>
-
-
-	<div class="formulario">
-
-		<label>Descripción:</label>
-		<textarea readonly>{{$infra->descripcion}}</textarea>
+		<!-- slider agregado para la mini galeria -->
 
 	</div>
-
-	<div class="formulario">
-
-		<label>Mini Galería: </label>
-
-	</div>
-
-
-	<div class="seccion-mini-galeria">
-
-<!-- slider agregado para la mini galeria -->
-	<div class="slideshow" >
-		<ul class="slider config">
-			@foreach ($imagenes as $imagen)
-				<li>
-				<a target="_blank" rel="noopener noreferrer" href="/isc-infraestructura-labGaleriaVerImg/{{$imagen->id}}">
-				<img src="/images/infra/{{$imagen->imagen}}" >
-					</a>
-				</li>
-			@endforeach
-		</ul>
-		<ol class="pagination config">
-			
-		</ol>
-	
-		<div class="left">
-			<span class="fa fa-chevron-left"></span>
-		</div>
-
-		<div class="right">
-			<span class="fa fa-chevron-right"></span>
-		</div>
-	</div>
-			

@@ -11,51 +11,30 @@
 
 	    <!------------------------------------------------------------- IMG Encabezado ----------------------------------------------------------->
 
-      <div class="contenedor-img-encabezado">
+      	<div class="contenedor-seccion-img-grande">
 
-          <div class="img-encabezado">
+            <img src="/images/galeria/album/{{$albums->imgPrin}}">
 
-            <img src="/img/Noticias.png">
+            <div class="skew-abajo"></div>
 
-            <div class="encabezado">
 
-            	<h1>Galería</h1>
-            	<hr>
+      	</div>
 
-            </div>
+      	<div class="contenedor-descripcion">
 
-          </div>   
+			<div class="contenedor-descripcion-txt">
 
-          <div class="skew-abajo"></div>
-
-      </div>
+				<h3>{{$albums->titulo}}</h3>
+				<p>{{$albums->descripcion}}</p>
+				
+			</div>
+		
+		</div>
 
 <div class="contenedor-secciones">
 	
 <!----------------------------------------------------------------- GALERÍA ---------------------------------------------------------->
 
-		<div class="contenedor-titulo-seccion">
-	
-			<h3>{{$albums->titulo}}</h3>
-
-		</div>
-
-		<div class="contenedor-cuerpo-seccion">
-
-	<div class="contenedor-seccion-img-grande">
-
-		<a target="_blank" rel="noopener noreferrer" href="/isc-galeria-fotosVerImg/{{$albums->id}}"><img src="/images/galeria/album/{{$albums->imgPrin}}" alt="{{$albums->imgPrin}}"></a>
-
-	</div>
-
-</div>
-
-	<div class="formulario">
-
-		<label>Descripción</label>
-		<textarea name="descripcion" readonly>{{$albums->descripcion}}</textarea>
-
-	</div>
 
 	<div class="seccion-mini-galeria">
 
