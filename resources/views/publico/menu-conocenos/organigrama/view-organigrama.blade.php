@@ -40,9 +40,16 @@
 <!------------------------------------------------------------------ VISTA-ORGANIGRAMA ------------------------------------------------------------->
     <div class="contenedor-organigrama">
         <div class="contenedor-dir"><!------------------- CONTENEDOR DIR ----------------------------->
+
                 @foreach($director as $direc)
 
                 @if($direc->nombre == 'Dirección General')
+
+                <div class="titulo-org1-dir1">
+                    <p id="titulo-organigrama1">Dirección General</p>
+                    <hr>
+                </div>
+
                 <div class="contenedor-inf-dir">
                     
                     <div class="contenedor_tarjeta">
@@ -68,8 +75,12 @@
 
 
 <!------------------- CONTENEDOR /SUB/DIV ----------------------------->
+                  <div class="titulo-org1-dir">
+                    <p id="titulo-organigrama">Directivos</p>
+                    <hr>
+                </div>
                  <div class="contenedor-inf-dir">
-                
+
                  @foreach($director as $direc)
 
 
