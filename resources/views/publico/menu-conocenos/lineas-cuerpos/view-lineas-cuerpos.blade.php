@@ -14,7 +14,7 @@
 
             <div class="encabezado">
 
-               <h1>Líneas y Cuerpos</h1>
+               <h1>Líneas de Investigación y Cuerpos Acádemicos</h1>
                <hr>
 
             </div>
