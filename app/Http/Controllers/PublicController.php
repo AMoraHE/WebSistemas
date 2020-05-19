@@ -149,7 +149,15 @@ class PublicController extends Controller
     return response()->download('docs/ret/'.$name);
   }
 
-  public function lineasInvestigacion()
+  public function lineasCuerpos()
+  {
+    $lineainvestigacion = lineas_investigacion::all();
+    $cuerpos = CuerposAcademico::all();
+
+    return view('publico.menu-conocenos.lineas-cuerpos.view-lineas-cuerpos', compact('lineainvestigacion', 'cuerpos'));
+  }
+
+  /*public function lineasInvestigacion()
   {
     $lineainvestigacion = lineas_investigacion::all();
     return view('publico.menu-conocenos.lineas-investigacion.view-lineas', compact('lineainvestigacion'));
@@ -159,7 +167,7 @@ class PublicController extends Controller
   {
     $cuerpos = CuerposAcademico::all();
     return view('publico.menu-conocenos.cuerpo-academico.view-cuerpo-academico', compact('cuerpos'));
-  }
+  }*/
 
   public function organigrama()
   {

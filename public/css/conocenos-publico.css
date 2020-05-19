@@ -13,8 +13,7 @@
 
 .contenedor-mvo-con{
 	width: 100%;
-	height: 434px; 
-    padding-top: 50px;
+	height: 550px; 
     padding-bottom: 50px;
 }
 
@@ -272,7 +271,7 @@ padding-top: 2%;
 }
 
 .contenedor-titulo-seccion-con p{
-	background: #83aec0c2;
+	background: #81ca97;
     padding: 10px 15px;
     border-bottom: 1px solid transparent;
     border-radius: 5px;
@@ -285,7 +284,7 @@ padding-top: 2%;
 }
 
 .contenedor-titulo-seccion-con p:hover{
-	background-color: #5b7c8ac2;
+	background-color: #619c72;
 	transition: .7s;
 }
 
@@ -313,7 +312,7 @@ padding-top: 2%;
 .tabla-informacion-escolar-con thead{
 	padding: 5px;
 	font-size: 16px;
-	background-color: #9abccce0;
+	background-color: #69c6859e;
 	color: #FFF;
 	
 }
@@ -342,7 +341,7 @@ padding-top: 2%;
 
 .contenedor-acordeon-con{
 	width: 90%;
-	height: 300px;
+	height: 350px;
 	display: block;
     margin: auto;
     text-align: -webkit-center;
@@ -354,7 +353,7 @@ padding-top: 2%;
 }
 
 .contenedor-titulo-acordeon-con p:hover{
-	background-color: #b18f0cba;
+	background-color: #619c72;
 	transition: .7s;
 	cursor: pointer;
 }
@@ -362,18 +361,17 @@ padding-top: 2%;
 .contenedor-titulo-acordeon-con p{
 	width:100%;
 	height:74px;
-	padding: 12px;
-	background-color: #ecbe0fba;
+	background-color: #81ca97;
 	border-radius: 5px;
 	color: white;
-	font-size: 20pt;
+	font-size: 28pt;
 	font-family: 'Roboto', sans-serif;
 	text-transform: capitalize; 
 }
 
 .info-acordeon-con{
 	width:100%;
-	height:200px;
+	height:auto;
 	background-color: #f5f5f5;
 	padding: 20px 0;
 	overflow: hidden;
@@ -398,7 +396,7 @@ padding-top: 2%;
 .contenedor-texto-completo-org-con{
 	width: 38%;
     min-height: 350px;
-    margin-top: 29%;
+    margin-top: 34%;
     position: absolute;
     display: inline-block;
     float: right;
@@ -420,16 +418,15 @@ padding-top: 2%;
 
 .contenedor-titulo-org-con p{
 	height:74px;
-	background-color: #35342ec4;
+	background-color: #81ca97;
 	font-family: 'Roboto', sans-serif;
 	border-radius: 5px;
 	color: white;
-	padding: 10px;
-	font-size: 22pt;
+	font-size: 28pt;
 }
 
 .contenedor-titulo-org-con p:hover{
-	background-color: #35342e;
+	background-color: #619c72;
 	transition: .7s
 }
 
@@ -595,7 +592,8 @@ background: url(../img/textura3.jpg);
 }	
 
 .contenedor-titulo-perfil{
-	background-color: #bae4dac7;
+	/*background-color: #bae4dac7;*/
+	background-color: #ff8d00bf;
 	padding: 10px 15px;
     border-bottom: 1px solid transparent;
     border-radius: 5px;
@@ -741,22 +739,14 @@ ol.round p{
     text-transform: capitalize;
 }
 
-.info-acordeon{
-	display: none;
-	width:100%;
-	height:auto;
-	background-color: #f5f5f5;
-	overflow: hidden;
+.contenedor-titulo-acordeon p:hover{
+transition: .9s;
+background-color: #1b396a;
 }
 
-.info-acordeon p{
-	margin:20px;
-	text-align: justify;
-	color:#000;
-}
 
 .info-acordeon-centrado{
-	display: none;
+	display: block;
 	width:100%;
 	height:auto;
 	background-color: #f5f5f5;
@@ -798,7 +788,22 @@ ol.round p{
 	background: -ms-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
 	background: linear-gradient(to bottom, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfeaf1', endColorstr='#0f6390', GradientType=0 );
+}
 
+#titulo-organigrama1{
+	width: 100%;
+	color: #f1592a;
+	font-size: 28pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+.titulo-org1-dir1 hr{
+	height: 2px;
+	background: #f1592a;
+	border: none;
+	margin: 0 260px;
+	margin-bottom: 20px;
+	opacity: .5;
 }
 
 #titulo-organigrama{
@@ -828,6 +833,21 @@ ol.round p{
 	border-radius: 25px;
 	width: 100%;
 	height: 100%
+}
+
+.titulo-org1-dir{
+	width: 100%;
+    display: inline-block;
+    align-items: center;
+}
+
+.titulo-org1-dir hr{
+	height: 2px;
+	background: #fff;
+	border: none;
+	margin: 0 240px;
+	margin-bottom: 20px;
+	opacity: .5;
 }
 
 .titulo-org1{
@@ -934,6 +954,8 @@ figure .frontal,
 figure .trasera {
 	width: 100%;
 	height: 100%;
+	object-fit: cover;
+	object-position: center;
 	border-radius: 5px;
 	transition: all ease .5s;
 }
@@ -993,6 +1015,7 @@ figure .trasera .titulo {
 	color: #fff;
 	font-weight: normal;
 	margin-bottom: 20px;
+	line-height: normal;
 	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 }
@@ -1007,7 +1030,7 @@ figure .trasera hr {
 
 figure .trasera p {
 	font-family: 'Open Sans', sans-serif;
-	line-height: 22px;
+	line-height: inherit;
 	font-size: 18px;
 }
 
@@ -1023,3 +1046,85 @@ figure .trasera p {
 	}
 
 }
+
+/*******************************************************SECCIÓN LINEAS CUERPOS******************************************/
+/***********************************TABLAS*****************************************/
+.titulo-linea-cuerpo p{
+	color: #f1592a;
+    padding-top: 20px;
+    font-size: 28pt;
+    line-height: 1.42857143;
+    text-align: -webkit-center;
+}
+
+
+.tabla-informacion-escolar{
+	margin: auto;
+	padding-top: 40px;
+	width: 100%;
+}
+
+.tabla-informacion-escolar table{
+	background: var(--blanco);
+	border-collapse: collapse;
+	width: 97%;
+	margin: 20px;
+	border-radius: 10px;
+}
+
+.tabla-informacion-escolar th, td{
+	padding: 20px;
+	max-width: 700px; /***TAMAÑO MÁXIMO DE LAS CELDAS***/
+}
+
+.tabla-informacion-escolar td{
+	text-align: center;
+}
+
+.tabla-informacion-escolar td img{
+	max-width: 50%;
+	border: 2px solid var(--verde);
+}
+
+.tabla-informacion-escolar thead{
+	text-transform: capitalize;
+	font-size: 20pt;
+	text-align: center;
+	background: #9abccce0;
+	color: var(--blanco);
+}
+
+.tabla-informacion-escolar tr:nth-child(even){
+	background-color: #f3f1f1; 
+}
+.contenedor-tabla:last-child{
+background-color: #f4f4f4;
+}
+
+.tabla-informacion-escolar tr:hover td{
+	background-color: #dddddd;
+	color: var(--blanco);
+}
+
+
+.tabla-informacion-escolar p{
+	text-align: center;
+}
+
+.advertencia{
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	border-radius: 4px;
+	background: #E74C3C;
+	color: var(--blanco);
+	display: none;
+}
+
+
+
+
+
+
+
+

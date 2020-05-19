@@ -31,8 +31,14 @@
       </div>
 		
 	<div class="fondo-mvo-con">
+		<div class="titulo-linea-cuerpo">
+		 <p>INFORMACIÓN DE LA CARRERA</p>
+		</div>
 
 		<div class="contenedor-mvo-con">
+
+			
+
 			@foreach($informaciones as $informacion)
 
 				
@@ -92,6 +98,10 @@
 
 <div class="separador"></div>
 <div class="contenedor-perfil-campo-con">
+
+	<div class="titulo-linea-cuerpo">
+		 <p>PERFIL DE LA CARRERA</p>
+		</div>
 
 	<div class="contenedor-componentes-info-carrera-ingreso-con">
 
@@ -163,28 +173,7 @@
 
 	
 
-		<div class="contenedor-apartado-campo">
-
-			<a href="/isc-conocenos-perfil_campo_ISC" class="contenedor-titulo-campo-con">
-
-				<p>Campo Laboral</p>
-
-			</a>
-
-			<div class="contenedor-perfil-con">
-
-				<ol class="round">
-
-				@foreach ($campolaboral as $campolabora)
-
-						<li><i class="viñeta">{{$campolabora->vineta}}</i> <p>{{$campolabora->elemento}}</p></li>
-						
-				@endforeach
-
-				</ol>
-
-			</div>
-		</div>
+		
 
 </div>
 
@@ -198,7 +187,7 @@
 
 	<div class="contenedor-lineas-cuerpos-ind">
 
-	<a href="/isc-conocenos-lineasInvestigacion" class="contenedor-titulo-seccion-con">
+	<a href="/isc-conocenos-lineasInv_cuerposAcad" class="contenedor-titulo-seccion-con">
 
 		<p>Líneas de Investigación</p>
 
@@ -235,7 +224,7 @@
 
 	<!----------------------------------------------------------------- CUERPO ACADÉMICO -------------------------------------------------->
 	<div class="contenedor-lineas-cuerpos-ind">
-	<a href="/isc-conocenos-cuerposAcademicos" class="contenedor-titulo-seccion-con">
+	<a href="/isc-conocenos-lineasInv_cuerposAcad" class="contenedor-titulo-seccion-con">
 
 		<p>Cuerpos Académicos</p>
 
@@ -261,8 +250,13 @@
 						<td>{{$cuerpo->grado}}</td>
 						<td>
 							<ol>
-								@foreach (explode(', ', $cuerpo->integrantes) as $integrantes)
-								<li>{{$integrantes}}</li>
+								@foreach (explode(',', $cuerpo->integrantes) as $integrantes)
+
+								@php
+								$integrante = ltrim($integrantes);
+								@endphp
+
+								<li>{{$integrante}}</li>
 								@endforeach
 							</ol>
 						</td>
@@ -288,12 +282,12 @@
 	<div class="contenedor-acordeon-subapartado-con">
 				<a href="/isc-conocenos-reticula" class="contenedor-titulo-acordeon-con">
 
-				<p>{{$reticula->titulo}}</p>
+				<p>Retícula</p>
 
 				</a>
 
 				<div class="info-acordeon-con">
-
+			<p>{{$reticula->titulo}}</p>
 			<p>{{$reticula->programa}}</p>
 			<p>PLAN: {{$reticula->plan}}</p>
 			<p>ESPECIALIDAD: {{$reticula->especialidad}}</p>	

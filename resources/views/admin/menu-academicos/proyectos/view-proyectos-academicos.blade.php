@@ -67,8 +67,13 @@
 							<td>
 
 							<ol>
-								@foreach (explode(', ', $proyecto->desarrolladores) as $desarrolladores)
-								<li>{{$desarrolladores}}</li>
+								@foreach (explode(',', $proyecto->desarrolladores) as $desarrolladores)
+
+								@php
+								$desarrollador = ltrim($desarrolladores);
+								@endphp
+
+								<li>{{$desarrollador}}</li>
 								@endforeach
 							</ul>
 

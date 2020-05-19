@@ -57,9 +57,12 @@
 
 			<h3>Desarrolladores</h3>
 
-			@foreach (explode(', ', $proyecto->desarrolladores) as $desarrolladores)
-									
-				<p><i class="icono-izquierda far fa-user-circle"></i>{{$desarrolladores}}</p>
+			@foreach (explode(',', $proyecto->desarrolladores) as $desarrolladores)
+				
+				@php
+				$desarrollador = ltrim($desarrolladores);
+				@endphp
+				<p><i class="icono-izquierda far fa-user-circle"></i>{{$desarrollador}}</p>
 
 			@endforeach
 
