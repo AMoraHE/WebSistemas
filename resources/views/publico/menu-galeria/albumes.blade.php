@@ -56,7 +56,7 @@
 
 	                <div class="efecto-album">
 
-	                   <!-- <h2>{{$album->titulo}}</h2> -->
+	                   	<h2>{{$album->titulo}}</h2>
 	                    <button href="/isc-galeria-fotos/{{$album->slug}}" class="btn-burbuja-1">Ver álbum</button>
 
 	                </div>
