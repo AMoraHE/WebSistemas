@@ -31,11 +31,12 @@
       </div>
 		
 	<div class="fondo-mvo-con">
-		<div class="titulo-linea-cuerpo">
-		 <p>INFORMACIÓN DE LA CARRERA</p>
-		</div>
+		
 
 		<div class="contenedor-mvo-con">
+			<div class="titulo-linea-cuerpo">
+		 <p>INFORMACIÓN DE LA CARRERA</p>
+		</div>
 
 			
 
