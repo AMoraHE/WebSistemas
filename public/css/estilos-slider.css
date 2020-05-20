@@ -78,7 +78,12 @@
   opacity: 1;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+
+  .slider {
+  height: 60vh; /*eliminarlo si quiero que sea el 100%*/
+}
+
   .slide .content {
     bottom: -300px;
     left: 0;

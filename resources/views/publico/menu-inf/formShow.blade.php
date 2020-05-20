@@ -41,8 +41,61 @@
 
 	<label class="elegantshadow-infra subtitulo-infra">Mini Galería:</label>
 
-	<div class="mini-galeria-infra">
+	<div class="seccion-mini-galeria">
 
-		<!-- slider agregado para la mini galeria -->
+		<h3>Galería de Fotos</h3>
 
+			<ul id="carousel{{$infra->id}}" class="elastislide-list">
+
+			@foreach ($imagenes as $imagen)
+
+			<li>
+
+				<div class="contenedor-img-mini-galeria">
+
+		        <!---------------------------------- MODAL IMG -------------------------------------------->
+
+		          <div class="contenedor-img-mini-galeria-img">
+
+		            <a href="#modal-img{{$imagen->id}}">
+
+		            	<img src="/images/infra/{{$imagen->imagen}}">
+
+			            <div class="hover-galeria">
+		                    <img src="/img/icono1.png" alt="">
+		                    <p>Abrir</p>
+	                	</div>
+
+                	</a>
+
+
+		          </div>
+
+		        <!---------------------------------- FIN MODAL IMG -------------------------------------------->
+
+				</div>
+
+			</li>
+
+			@endforeach
+
+				<script>
+				
+					$('#carousel{{$infra->id}}').elastislide();
+				
+				</script>
+
+			</ul>
+
+			@foreach ($imagenes as $imagen)
+
+			    <div class="modal-img" id="modal-img{{$imagen->id}}">
+
+	              <a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
+	              <img src="/images/infra/{{$imagen->imagen}}" />
+
+	            </div>
+
+	        @endforeach
+		
 	</div>

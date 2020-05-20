@@ -50,14 +50,31 @@
 
   	<div class="formulario">
 
-  		<label for="">Título</label>
+  		<label>Título</label>
       @if ($errors->any())
-  		<input type="text" name="contenido" id="titulo" value="{{old('contenido')}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
+  		<input type="text" name="contenido" id="titulo" value="{{old('contenido')}}" placeholder="Inserte Título Deseado" class="form-control" required>
       @else
-      <input type="text" name="contenido" id="titulo" value="{{$slider->contenido}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
+      <input type="text" name="contenido" id="titulo" value="{{$slider->contenido}}" placeholder="Inserte Título Deseado" class="form-control" required>
       @endif
 
   	</div>
+
+    @if ($errors->has('contenido'))
+      <span class="invalid-feedback" role="alert">
+        <strong>{{ $errors->first('contenido') }}</strong>
+      </span>
+    @endif
+
+    <div class="formulario">
+
+      <label>Subtítulo</label>
+      @if ($errors->any())
+      <input type="text" name="contenido" id="subtitulo" value="{{old('contenido')}}" placeholder="Inserte Subtítulo Deseado" class="form-control" required>
+      @else
+      <input type="text" name="contenido" id="subtitulo" value="{{$slider->contenido}}" placeholder="Inserte Subtítulo Deseado" class="form-control" required>
+      @endif
+
+    </div>
 
     @if ($errors->has('contenido'))
       <span class="invalid-feedback" role="alert">

@@ -9,41 +9,50 @@
 
 <div class="contenedor-slider">
 
-	<div class="seccion-principal">
+<div class="slider">
 
-		<div class="flexslider">
+				<div class="slide current">
 
-			<ul class="slides">
+					<!-- <img src="/img/Isc-logo.png" alt=""> -->
+					<img src="/img/academicos.png" alt="">
 
+			        <div class="content">
+			          <h1>Ingeniería en Sistemas Computacionales</h1>
+			          <p>
+			            aqui va el txt del primero
+			          </p>
+			        </div>
+			    </div>
 			@foreach ($sliders as $slider)
 
+				<div class="slide">
 
-				<li>
 					<img src="/images/slider/{{$slider->image}}" alt="">
-					
-					<section class="caption">
 
-						<h2>{{$slider->contenido}}</h2>
-
-					</section>
-				</li>
+			        <div class="content">
+			          <h1>Titulo - Slider</h1>
+			          <p>
+			            {{$slider->contenido}}
+			          </p>
+			        </div>
+			      </div>
 			
 			@endforeach
 
+</div>
 
-			</ul>
-		
-		</div>
-
-		<div class="contenedor-botones">
-
-			<a class="msj" mesanje="editar los slider?" href="/slider"><button class="btn editar m-derecha"><span>Editar</span></button></a>
-
-		</div>
-
+	<div class="buttons">
+	    <button id="prev"><i class="fas fa-arrow-left"></i></button>
+	    <button id="next"><i class="fas fa-arrow-right"></i></button>
 	</div>
 
 </div>
+
+	<div class="contenedor-botones">
+
+		<a class="msj" mesanje="editar los slider?" href="/slider"><button class="btn editar m-derecha"><span>Editar</span></button></a>
+
+	</div>
 
 @endsection
 

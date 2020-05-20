@@ -15,8 +15,15 @@
 
   <div class="formulario">
 
-  	<label for="">Título</label>
-  	<input type="text" name="contenido" id="titulo" value="{{old('contenido')}}" placeholder="Inserte Titulo Deseado" class="form-control" required>
+    <label>Título</label>
+    <input type="text" name="contenido" id="titulo" value="{{old('contenido')}}" placeholder="Inserte Título Deseado" class="form-control" required>
+
+  </div>
+
+  <div class="formulario">
+
+  	<label>Subtítulo</label>
+  	<input type="text" name="contenido" id="subtitulo" value="{{old('contenido')}}" placeholder="Inserte Subtítulo Deseado" class="form-control" required>
 
   </div>
 

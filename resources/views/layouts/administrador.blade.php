@@ -19,8 +19,7 @@
 
 		<!--------------------------------SLIDER---------------------------------------->
 
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/flexslider.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-slider.css')}}">
 
 		<!--------------------------------CALENDARIO---------------------------------------->
 
@@ -273,18 +272,14 @@
 
 
 	<script src="{{ asset('js/main.js')}}"></script>
-<!--<script src="{{ asset('js/jquery.js')}}"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
 
 	<script src="{{ asset('js/select.js')}}"></script>
 
-	<!--<script src="{{ asset('js/modal.js')}}"></script>-->
 	<script src="{{ asset('js/msj-confirmacion.js')}}"></script>
 
-<!--<script src="{{ asset('js/jquery-3.1.0.min.js')}}"></script>-->
-	<script src="{{ asset('js/jquery.flexslider.js')}}"></script>
+	<!--------------------------------SLIDER---------------------------------------->
 
-	<script src="{{ asset('js/slider.js')}}"></script>
+	<script src="{{ asset('js/slider-public.js')}}"></script>
 
 </body>
 

@@ -110,7 +110,7 @@
 
 .modal-img:target {
 	width: auto;
-	height: auto;
+	height: 100vh; /** Para que no se desborde de los moviles **/
 	bottom: 0px;
 	right: 0px;
 	padding: 80px 100px 120px 100px;
