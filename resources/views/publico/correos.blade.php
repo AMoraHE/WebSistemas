@@ -81,10 +81,11 @@
 
 				</div>
 
-				<div class="contenedor-botones">
-					
-					<a href="/isc-inicio-formContacto/{{$var}}"><button class="btn"><span>Contactar</span></button></a>
 
+				<div class="seccion-continuacion">
+
+					<a href="/isc-inicio-formContacto/{{$var}}"><button class="btn-leer"><span>Contactar</span></button></a>
+						
 				</div>
 
 			</div>
