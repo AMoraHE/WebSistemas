@@ -115,12 +115,12 @@
 		    		<a href="/isc-conocenos"><li><i class="fas fa-handshake" aria-hidden="true"></i> Conócenos
 
 					<ul>
-						<a href="/isc-conocenos"><li><span><i class="fas fa-book" aria-hidden="true"></i></span> Información de la carrera</li></a>
-						<a href="/isc-conocenos"><li><span><i class="fas fa-user-tie" aria-hidden="true"></i></span> Perfil de la carrera</li></a>
-						<a href="/isc-conocenos"><li><span><i class="fab fa-searchengin" aria-hidden="true"></i></span> Líneas de investigación</li></a>
-						<a href="/isc-conocenos"><li><span><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i></span> Cuerpos académicos</li></a>
-						<a href="/isc-conocenos"><li><span><i class="fas fa-table" aria-hidden="true"></i></span> Retícula</li></a>
-						<a href="/isc-conocenos"><li><span><i class="fas fa-sitemap" aria-hidden="true"></i></span> Organigrama</li></a>
+						<a href="/isc-conocenos"><li><i class="icono-izquierda fas fa-book" aria-hidden="true"></i> Información de la carrera</li></a>
+						<a href="/isc-conocenos"><li><i class="icono-izquierda fas fa-user-tie" aria-hidden="true"></i> Perfil de la carrera</li></a>
+						<a href="/isc-conocenos"><li><i class="icono-izquierda fab fa-searchengin" aria-hidden="true"></i> Líneas de investigación</li></a>
+						<a href="/isc-conocenos"><li><i class="icono-izquierda fas fa-chalkboard-teacher" aria-hidden="true"></i> Cuerpos académicos</li></a>
+						<a href="/isc-conocenos"><li><i class="icono-izquierda fas fa-table" aria-hidden="true"></i> Retícula</li></a>
+						<a href="/isc-conocenos"><li><i class="icono-izquierda fas fa-sitemap" aria-hidden="true"></i> Organigrama</li></a>
 					</ul>
 
 		    		</li></a>

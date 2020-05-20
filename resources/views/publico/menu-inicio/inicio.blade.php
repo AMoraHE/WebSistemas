@@ -61,7 +61,7 @@
 
 		<div class="contenedor-descripcion-txt">
 			
-			<h3>Acerca de la Carrera</h3>
+			<h3>Objetivo de la Carrera</h3>
 			<p>es una carrera muy interesante porque te franquean rapido :v Formar profesionistas líderes con visión estratégica y amplio sentido ético; capaz de diseñar, desarrollar, implementar y administrar tecnología computacional para aportar soluciones innovadoras en beneficio de la sociedad; en un contexto global, multidisciplinario y sostenible.</p>
 
 		</div>
@@ -95,7 +95,7 @@
 				</div>
 
 				<div class="contenedor-cuerpo-txt">
-					
+
 					<div class="contenedor-txt-N1">
 					
 						@foreach(explode(PHP_EOL, $FNoticia->redaccion) as $parrafo)

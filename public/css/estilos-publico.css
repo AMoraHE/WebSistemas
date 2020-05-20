@@ -202,7 +202,7 @@ MENU**********************************************/
 
 .menu .enlaces ul li:hover {
   cursor: pointer;
-  background-color: #f1592a;
+  background-color: #79bad6;
 }
 
 .menu .enlaces ul li:hover ul {
@@ -230,7 +230,7 @@ MENU**********************************************/
 }
 
 .menu .enlaces ul li:hover ul li:hover {
-  background-color: #f1592a;
+  background-color: #79bad6;
 }
 
 .menu .enlaces ul li:hover ul li:hover span {
