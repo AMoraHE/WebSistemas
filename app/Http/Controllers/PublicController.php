@@ -350,7 +350,9 @@ class PublicController extends Controller
 
   public function contactos()
   {
-    return view('publico.correos');
+    $directors = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '4')->orderBy('areas.id', 'ASC')->get();
+
+    return view('publico.correos', compact('directors'));
   }
 
   public function formContacto($correo)
@@ -361,6 +363,7 @@ class PublicController extends Controller
 
   public function contactoCorreo(Request $request)
   {
+    $destin = Organigrama::where('correo', '=', $request->destinatario)->firstOrFail();
     $validator = Validator::make($request->all(), [
       'destinatario' => 'required|email',
       'remitente' => 'required|email',
@@ -385,6 +388,7 @@ class PublicController extends Controller
       else
       {
         $data = array(
+          'destin' => $destin->integrante,
           'remitente' => $request->remitente,
           'nombre' => $request->nombre,
           'mensaje' => $request->mensaje

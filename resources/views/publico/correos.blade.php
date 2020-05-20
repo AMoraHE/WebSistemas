@@ -55,11 +55,13 @@
 
 		</div>
 
+		@foreach($directors as $director)
+
 		<div class="contenedor-contacto">
 
 			<div class="foto-contacto">
 				
-				<img src="{{ asset('img/Mora.jpeg')}}">
+				<img src="/images/organigrama/{{$director->foto}}">
 
 			</div>
 
@@ -67,15 +69,15 @@
 				
 			
 				<div class="contenedor-txt-contacto">
-					<p>División ISC</p>
-					<p>Jefa de la academia</p>
-					<p>MC. MAHALETH SALINAS SEGURA</p>
+					<p>{{$director->nombre}}</p>
+					<p>{{$director->puesto}}</p>
+					<p>{{$director->integrante}}</p>
 					
 					@php
-						$var = 'm.salinas@itscarrillopuerto.edu.mx'
+						$var = $director->correo
 					@endphp
 
-					<h3>m.salinas@itscarrillopuerto.edu.mx</h3>
+					<h3>{{$director->correo}}</h3>
 
 				</div>
 
@@ -88,6 +90,8 @@
 			</div>
 
 		</div>
+
+		@endforeach
 
 	</div>
 
