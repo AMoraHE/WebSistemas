@@ -34,11 +34,44 @@
 
 	<div class="contenedor-componentes-principales">
 
-		<div class="contenedor-texto-completo">
+	<div class="tabla-informacion-carrera">
 
-			<p>{{$informacion->descripcion}} </p>
+		<table>
+
+			<thead>
+            <tr>
+              <th>Foto</th>
+              <th>Información</th>
+            </tr>
+          </thead>
+
+          <tr>
+          	<td><div class="contenedor-img-organigrama hover-img">
+
+                  <a href="#modal-img">
+    
+                    <img src="/images/informacion/{{$informacion->foto}}">
+                    <span><i class="fas fa-expand"></i></span>
+
+                  </a>
+
+                </div>
+
+                  <div class="modal-img" id="modal-img{{$informacion->id}}">
+
+                      <a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
+                      <img src="/images/informacion/{{$informacion->foto}}" />
+
+                
+                  </div></td>
+          	<td><p>{{$informacion->descripcion}} </p></td>
+          </tr>
+
+			
 						
-		</div>
+		</table>
+
+	</div>
 
 	</div>
 

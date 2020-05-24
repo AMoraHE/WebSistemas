@@ -345,6 +345,7 @@ padding-top: 2%;
 	display: block;
     margin: auto;
     text-align: -webkit-center;
+    text-align: center;
 }
 .contenedor-acordeon-subapartado-con{
 	width:90%;
@@ -396,8 +397,7 @@ padding-top: 2%;
 .contenedor-texto-completo-org-con{
 	width: 38%;
     min-height: 350px;
-    margin-top: 34%;
-    position: absolute;
+    margin-top: -41%;
     display: inline-block;
     float: right;
 }
@@ -408,6 +408,7 @@ padding-top: 2%;
 	display: block;
     margin: auto;
     text-align: -webkit-center;
+    text-align: center;
 }
 .contenedor-org-subapartado-con{
 	width:90%;
@@ -713,6 +714,7 @@ ol.round p{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     text-align: -webkit-center;
+    text-align: -moz-center;
 }
 .contenedor-acordeon-subapartado{
 	width:80%;
@@ -1055,6 +1057,7 @@ figure .trasera p {
     font-size: 28pt;
     line-height: 1.42857143;
     text-align: -webkit-center;
+    text-align: center;
 }
 
 

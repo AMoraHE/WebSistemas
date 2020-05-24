@@ -21,7 +21,6 @@
   </div>
 
 <!------------------------------------------------------------- TABLA EDITAR PERFIL INGRESO --------------------------------------------------->
-
 	<div class="contenedor-botones">
 			
 		<a class="msj" mesanje="agregar un nuevo elemento?" href="{{route('crear-perfil-ingreso')}}"><button class="btn agregar"><span>Agregar</span></button></a>

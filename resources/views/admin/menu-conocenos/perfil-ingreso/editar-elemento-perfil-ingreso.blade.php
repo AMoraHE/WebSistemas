@@ -20,6 +20,7 @@
 
 <!-------------------------------------------------------- FORMULARIO CREAR SECCION CONOCENOS PERFIL ----------------------------------------------------------> 
 
+
 		<div class="formulario"> 
 		      
 		    <label>Viñeta</label>
