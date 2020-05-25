@@ -21,14 +21,16 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $sliders = Slider::all();
+        //$sliders = Slider::all();
+        $sliders = DB::table('sliders')->orderBy('id', 'DESC')->get();
 
         return view('admin.menu-inicio.slider.slider', compact('sliders'));
     }
 
     public function filtrar($id)
     {
-        $slidersG = Slider::all();
+        //$slidersG = Slider::all();
+        $slidersG = DB::table('sliders')->orderBy('id', 'DESC')->get();
         $slider = Slider::where('id', '=', $id)->firstOrFail();
 
         return view('admin.menu-inicio.slider.editar', compact('slidersG','slider'));
@@ -41,7 +43,8 @@ class SliderController extends Controller
      */
     public function create()
     {
-        $sliders = Slider::all();
+        //$sliders = Slider::all();
+        $sliders = DB::table('sliders')->orderBy('id', 'DESC')->get();
 
 
         return view('admin.menu-inicio.slider.crear',compact('sliders'));
@@ -59,13 +62,16 @@ class SliderController extends Controller
 
         $validator = Validator::make($request->all(), [
         'image' => 'required|mimes:jpeg,png,bmp,tiff,gif|max:1024',
+        'titulo' => 'required|string',
         'contenido' => 'required|string',
         ], [
           'image.required' => 'Se requiere que seleccione un archivo en formato JPEG, PNG, BMP, TIFF, GIF',
           'image.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
           'image.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 1 MB (1024 KB)',
-          'contenido.required' => 'Se requiere que ingrese un título para la imagen',
-          'contenido.string' => 'El título ingresado contiene caracteres no válidos',
+          'titulo.required' => 'Se requiere que ingrese el título del slider',
+          'titulo.string' => 'El título ingresado contiene caracteres no válidos',
+          'contenido.required' => 'Se requiere que ingrese una descripción para el slider',
+          'contenido.string' => 'La descripción ingresada contiene caracteres no válidos',
         ]);
 
         if ($validator->fails()) {
@@ -85,6 +91,7 @@ class SliderController extends Controller
             }
 
             $slider->contenido = $request->input('contenido');
+            $slider->titulo = $request->input('titulo');
             $slider->slug = time();
 
             $slider->save();
@@ -114,7 +121,8 @@ class SliderController extends Controller
     public function edit(Slider $slider)
     {
 
-        $slidersG = Slider::all();
+        //$slidersG = Slider::all();
+        $slidersG = DB::table('sliders')->orderBy('id', 'DESC')->get();
 
 
         return view('admin.menu-inicio.slider.editar', compact('slidersG','slider'));
@@ -131,13 +139,16 @@ class SliderController extends Controller
     {
         $validator = Validator::make($request->all(), [
         'image' => 'mimes:jpeg,png,bmp,tiff,gif|max:1024',
+        'titulo' => 'required|string',
         'contenido' => 'required|string',
         ], [
               'image.required' => 'Se requiere que seleccione un archivo en formato JPEG, PNG, BMP, TIFF, GIF',
               'image.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
               'image.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 1 MB (1024 KB)',
-              'contenido.required' => 'Se requiere que ingrese un título para la imagen',
-              'contenido.string' => 'El título ingresado contiene caracteres no válidos',
+              'titulo.required' => 'Se requiere que ingrese el título del slider',
+              'titulo.string' => 'El título ingresado contiene caracteres no válidos',
+              'contenido.required' => 'Se requiere que ingrese una descripción para el slider',
+              'contenido.string' => 'La descripción ingresada contiene caracteres no válidos',
             ]);
 
         if ($validator->fails()) {
@@ -163,6 +174,7 @@ class SliderController extends Controller
             }
 
             $slider->contenido =$request->input('contenido');
+            $slider->titulo = $request->input('titulo');
             $slider->slug = time();
             $slider->save();
 

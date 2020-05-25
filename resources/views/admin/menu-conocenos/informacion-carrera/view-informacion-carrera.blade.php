@@ -46,11 +46,12 @@
           </thead>
 
           <tr>
-          	<td><div class="contenedor-img-organigrama hover-img">
+          	<td>
+              <div class="contenedor-img-organigrama hover-img">
 
-                  <a href="#modal-img">
+                  <a href="#modal-img{{$informacion->id}}">
     
-                    <img src="/images/informacion/{{$informacion->foto}}">
+                    <img src="/images/informacion/{{$informacion->img}}">
                     <span><i class="fas fa-expand"></i></span>
 
                   </a>
@@ -60,11 +61,14 @@
                   <div class="modal-img" id="modal-img{{$informacion->id}}">
 
                       <a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
-                      <img src="/images/informacion/{{$informacion->foto}}" />
+                      <img src="/images/informacion/{{$informacion->img}}" />
 
                 
-                  </div></td>
-          	<td><p>{{$informacion->descripcion}} </p></td>
+                  </div>
+                </td>
+          	<td>
+              <p>{{$informacion->descripcion}} </p>
+            </td>
           </tr>
 
 			

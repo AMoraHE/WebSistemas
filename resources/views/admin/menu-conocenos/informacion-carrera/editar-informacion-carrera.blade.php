@@ -32,13 +32,13 @@
       <div class="contenedor-boton-cargar">
 
         <label for="file-upload" class="subir"><i class="icono-izquierda fas fa-cloud-upload-alt"></i> Subir Archivo</label>     
-        <input id="file-upload" onchange='cambiar()' name="imglog" type="file" accept="image/gif, image/jpeg, image/png" style='display: none;'/>              
+        <input id="file-upload" onchange='cambiar()' name="img" type="file" accept="image/gif, image/jpeg, image/png" style='display: none;'/>              
               
       </div>
 
       <div class="contenedor-img-seccion-cuadrado">
               
-        <img id="img-pre" src="/images/informacion/">
+        <img id="img-pre" src="/images/informacion/{{$informacion->img}}">
 
       </div>
               
@@ -46,11 +46,11 @@
 
     <div id="info-img">No se eligió archivo</div>
 
-    @if ($errors->has('imglog'))
+    @if ($errors->has('img'))
       <span class="invalid-feedback" role="alert">
 
-        <strong>{{$errors->first('imglog')}}</strong>
-        <!-- <strong>El archivo seleccionado no es válido, seleccione un archivo JPG, PNG, GIF, TIFF, BMP</strong> -->
+        <strong>{{$errors->first('img')}}</strong>
+
       </span>
     @endif
 

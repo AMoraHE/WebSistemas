@@ -14,12 +14,12 @@
 				<div class="slide current">
 
 					<!-- <img src="/img/Isc-logo.png" alt=""> -->
-					<img src="/img/academicos.png" alt="">
+					<img src="/images/slider/{{$FSlider->image}}" alt="">
 
 			        <div class="content">
-			          <h1>Ingeniería en Sistemas Computacionales</h1>
+			          <h1>{{$FSlider->titulo}}</h1>
 			          <p>
-			            aqui va el txt del primero
+			            {{$FSlider->contenido}}
 			          </p>
 			        </div>
 			    </div>
@@ -30,7 +30,7 @@
 					<img src="/images/slider/{{$slider->image}}" alt="">
 
 			        <div class="content">
-			          <h1>Titulo - Slider</h1>
+			          <h1>{{$slider->titulo}}</h1>
 			          <p>
 			            {{$slider->contenido}}
 			          </p>

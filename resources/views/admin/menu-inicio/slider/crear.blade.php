@@ -1,6 +1,6 @@
 @extends('layouts.administrador')
 
-@section('title', 'Agregar Noticia')
+@section('title', 'Agregar Slider')
 
 @section('content')
 
@@ -16,14 +16,20 @@
   <div class="formulario">
 
     <label>Título</label>
-    <input type="text" name="contenido" id="titulo" value="{{old('contenido')}}" placeholder="Inserte Título Deseado" class="form-control" required>
+    <input type="text" name="titulo" id="titulo" value="{{old('titulo')}}" placeholder="Inserte El Título Deseado" class="form-control" required>
 
   </div>
 
+  @if ($errors->has('titulo'))
+    <span class="invalid-feedback" role="alert">
+      <strong>{{ $errors->first('titulo') }}</strong>
+    </span>
+  @endif
+
   <div class="formulario">
 
-  	<label>Subtítulo</label>
-  	<input type="text" name="contenido" id="subtitulo" value="{{old('contenido')}}" placeholder="Inserte Subtítulo Deseado" class="form-control" required>
+  	<label>Descripcion</label>
+  	<input type="text" name="contenido" id="descripcion" value="{{old('contenido')}}" placeholder="Inserte La Descripción Deseada" class="form-control" required>
 
   </div>
 
@@ -107,7 +113,7 @@
 
       </div>
 
-  		<h2>{{$slider->contenido}}</h2>
+  		<h2>{{$slider->titulo}}</h2>
 
   	</div>
 
