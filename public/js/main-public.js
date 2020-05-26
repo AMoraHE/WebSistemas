@@ -1,5 +1,18 @@
+var elementTop = $('.nav').offset().top;
 
-	posicionarMenu();
+$(window).scroll(function(){
+    if( $(window).scrollTop() >= elementTop){
+        $('body').addClass('nav_fixed');
+    }else{
+        $('body').removeClass('nav_fixed');
+    }
+});
+
+$('.btn-menu').on('click', function(){
+    $('.nav').toggleClass('nav-toggle');
+})
+
+/*posicionarMenu();
 	 
 	$(window).scroll(function() {    
 	    posicionarMenu();
@@ -17,13 +30,27 @@
 	        $('.contenedor').css('margin-top', '0');
 	    }
 	    
-	}
+	}*/
 
 	/*$(function(){
 	    var navegacion = document.getElementById('contenedor-menu');
 	 	var headroom = new Headroom(navegacion);
 	 	headroom.init();
 	 }); */
+
+/*	$(window).resize(function(){
+		if ($(document).width() < 800){
+			
+			$('.contenedor-menu').addClass('fixed');
+	        $('.contenedor').css('margin-top', (altura_del_menu) + 'px');
+
+		}
+
+		if ($(document).width() > 800){
+			$('.contenedor-menu').removeClass('fixed');
+	        $('.contenedor').css('margin-top', '0');
+		}
+	}); */
 
 /* ---------------------------------------------------BOTONES BURBUJAS----------------------------------------------- */
 

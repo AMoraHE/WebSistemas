@@ -8,6 +8,7 @@
 	<title>Sistemas - @yield('title')</title>
   
 	  	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	  	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Pacifico' rel='stylesheet' type='text/css'>
 
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-publico.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/elementos-publico.css')}}">
@@ -98,41 +99,35 @@
 
 <!------------------------------------------------------------------ MENU ---------------------------------------------------------->	
 
-	
-<div class="contenedor-menu" id="contenedor-menu">
-	
+<!--<div class="logo logo_main">Sistemas Computacionales</div>-->
+    
+    <div class="nav">
+        <div class="wrap">
+            <div class="logo logo_small">ISC</div>
+            <nav>
+                <ul>
+                    <li><a href="{{route('ISC-INICIO')}}"><i class="icono fas fa-home" aria-hidden="true"></i> Inicio</a></li>
+		    		<li><a href="/isc-inicio-noticias"><i class="icono fas fa-newspaper" aria-hidden="true"></i> Noticias</a></li>
+		    		<li><a href="/isc-conocenos"><i class="icono fas fa-handshake" aria-hidden="true"></i> Conócenos
 
-		<nav class="menu">
-	    	<div class="logo">
-	    	<a href="#"><img src="img/Titulo.png" alt=""></a>
-	    	<a href="#" class="btn-menu" id="btn-menu"><i class="icono fa fa-bars" aria-hidden="true"></i></a>
-	        </div>
+					<!--<ul>
+						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-book" aria-hidden="true"></i> Información de la carrera</a></li>
+						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-user-tie" aria-hidden="true"></i> Perfil de la carrera</a></li>
+						<li><a href="/isc-conocenos"><i class="icono-izquierda fab fa-searchengin" aria-hidden="true"></i> Líneas de investigación</a></li>
+						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-chalkboard-teacher" aria-hidden="true"></i> Cuerpos académicos</a></li>
+						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-table" aria-hidden="true"></i> Retícula</a></li>
+						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-sitemap" aria-hidden="true"></i> Organigrama</a></li>
+					</ul>-->
 
-	    	<div class="enlaces" id="enlaces">
-	    		<ul>
-		    		<a href="{{route('ISC-INICIO')}}"><li><i class="fas fa-home" aria-hidden="true"></i> Inicio</li></a>
-		    		<a href="/isc-inicio-noticias"><li><i class="fas fa-newspaper" aria-hidden="true"></i> Noticias</li></a>
-		    		<a href="/isc-conocenos"><li><i class="fas fa-handshake" aria-hidden="true"></i> Conócenos
-
-					<ul>
-						<a href="/isc-conocenos"><li><i class="icono-izquierda fas fa-book" aria-hidden="true"></i> Información de la carrera</li></a>
-						<a href="/isc-conocenos"><li><i class="icono-izquierda fas fa-user-tie" aria-hidden="true"></i> Perfil de la carrera</li></a>
-						<a href="/isc-conocenos"><li><i class="icono-izquierda fab fa-searchengin" aria-hidden="true"></i> Líneas de investigación</li></a>
-						<a href="/isc-conocenos"><li><i class="icono-izquierda fas fa-chalkboard-teacher" aria-hidden="true"></i> Cuerpos académicos</li></a>
-						<a href="/isc-conocenos"><li><i class="icono-izquierda fas fa-table" aria-hidden="true"></i> Retícula</li></a>
-						<a href="/isc-conocenos"><li><i class="icono-izquierda fas fa-sitemap" aria-hidden="true"></i> Organigrama</li></a>
-					</ul>
-
-		    		</li></a>
-		    		<a href="/isc-infraestructura"><li><i class="fas fa-school" aria-hidden="true"></i> Infraestructura</li></a>
-		    		<a href="/isc-academicos"><li><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> Académicos</li></a>
-		    		<a href="/isc-galeria"><li><i class="fas fa-image" aria-hidden="true"></i> Galería</li></a>
-		    		<a href="/isc-inicio-contactos"><li><i class="fas fa-envelope" aria-hidden="true"></i> Contáctanos</li></a>
-	    		</ul>
-	    	</div>
-	    </nav>
-
-</div>
+		    		</a></li>
+		    		<li><a href="/isc-infraestructura"><i class="icono fas fa-school" aria-hidden="true"></i> Infraestructura</a></li>
+		    		<li><a href="/isc-academicos"><i class="icono fas fa-chalkboard-teacher" aria-hidden="true"></i> Académicos</a></li>
+		    		<li><a href="/isc-galeria"><i class="icono fas fa-image" aria-hidden="true"></i> Galería</a></li>
+		    		<li><a href="/isc-inicio-contactos"><i class="icono fas fa-envelope" aria-hidden="true"></i> Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
 <div class="contenedor">
 
@@ -170,6 +165,9 @@
 	</footer> -->
 
 </div>
+
+   	<div class="btn-menu"><i class="fas fa-ellipsis-v"></i></div>
+
 
 	<script src="{{ asset('js/main-public.js')}}"></script>
 
