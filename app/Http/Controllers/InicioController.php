@@ -6,6 +6,7 @@ use App\Noticia;
 use App\Slider;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreNoticiaRequest;
+use Illuminate\Support\Facades\DB;
 
 class InicioController extends Controller
 {
@@ -23,13 +24,17 @@ class InicioController extends Controller
     {
         //
 
-        $sliders = Slider::all();
+        //$sliders = Slider::all();
+        $FSlider = Slider::latest()->first();
+        $idFS = $FSlider->id;
+
+        $sliders = DB::table('sliders')->where('id', '!=', $idFS)->orderBy('id', 'DESC')->get();
         $noticias = Noticia::latest()->take(4)->get();
 
 
       //  echo $ultimo;
     //notica1 = Noticia::->where('id', $)
-        return view('admin/menu-inicio/inicio', compact('noticias','sliders'));
+        return view('admin/menu-inicio/inicio', compact('noticias','sliders', 'FSlider'));
     }
 
     /**

@@ -33,16 +33,17 @@ class PublicController extends Controller
 {
   public function inicio()
   {
+    $informaciones = informacion::where('slug', 'ObjetivoCarrera')->firstOrFail();
     $FSlider = Slider::latest()->first();
     $idFS = $FSlider->id;
     $FNoticia = Noticia::latest()->first();
     $idFN = $FNoticia->id;
 
-    $sliders = Slider::where('id', '!=', $idFS)->get();
+    $sliders = Slider::where('id', '!=', $idFS)->orderBy('id', 'DESC')->get();
     $noticias = Noticia::latest()->where('id', '!=', $idFN)->take(4)->get();
     $proyectos = Proyecto::latest()->take(6)->get();
 
-    return view('publico/menu-inicio/inicio', compact('noticias','sliders', 'proyectos', 'FSlider', 'FNoticia'));
+    return view('publico/menu-inicio/inicio', compact('noticias','sliders', 'proyectos', 'FSlider', 'FNoticia', 'informaciones'));
   }
 
   public function noticias()

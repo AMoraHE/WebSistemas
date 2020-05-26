@@ -55,7 +55,7 @@
 		<div class="formulario">
 
 			<label>Destinatario</label>
-			<input type="email" name="destinatario" id="destinatario" value="{{$destinatario}}" class="form-control">
+			<input type="email" name="destinatario" id="destinatario" value="{{$destinatario}}" class="form-control" readonly>
 
 			@if ($errors->has('destinatario'))
 

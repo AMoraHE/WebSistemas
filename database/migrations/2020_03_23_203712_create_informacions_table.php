@@ -18,6 +18,7 @@ class CreateInformacionsTable extends Migration
             $table->timestamps();
             $table->text('categoria');
             $table->text('descripcion');
+            $table->text('img');
 
         });
     }
