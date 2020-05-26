@@ -33,8 +33,8 @@
   @foreach ($sliders as $slider)
 
   <div class="contenedor-titulo-seccion">
-
-      <h3>{{$slider->contenido}}</h3>
+      
+      <h3>{{$slider->titulo}}</h3>
 
   </div>
 
@@ -43,6 +43,8 @@
     <img src="/images/slider/{{$slider->image}}">
 
   </div>
+
+  <h3>{{$slider->contenido}}</h3>
 
 <!----------------------------------------------------------------- BOTONES SLIDER ---------------------------------------------------------->
 

@@ -42,7 +42,7 @@
 
 					</div>
 					<div class="contenedor-img-mvo">
-						<img class="imagen-mvo" src="{{ asset('img/mision.png')}}">
+						<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
 					</div>
 
 				</div>
@@ -64,7 +64,7 @@
 
 					</div>
 					<div class="contenedor-img-mvo2">
-						<img class="imagen-mvo" src="{{ asset('img/vision.png')}}">
+						<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
 					</div>
 
 				</div>
@@ -87,7 +87,7 @@
 
 					</div>
 					<div class="contenedor-img-mvo">
-						<img class="imagen-mvo" src="{{ asset('img/isc.jpg')}}">
+						<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
 					</div>
 
 				</div>
@@ -110,7 +110,7 @@
 
 					</div>
 					<div class="contenedor-img-mvo2">
-						<img class="imagen-mvo" src="{{ asset('img/TecFCP.png')}}">
+						<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
 					</div>
 
 				</div>
@@ -118,7 +118,7 @@
 		</div>
 	@endif
 
-
+	
 	@endforeach
 
 		</div>

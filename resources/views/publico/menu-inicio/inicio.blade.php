@@ -17,7 +17,7 @@
 					<img src="/images/slider/{{$FSlider->image}}" alt="">
 
 			        <div class="content">
-			          <h1>Ingeniería en Sistemas Computacionales</h1>
+			          <h1>{{$FSlider->titulo}}</h1>
 			          <p>
 			            {{$FSlider->contenido}}
 			          </p>
@@ -30,7 +30,7 @@
 					<img src="/images/slider/{{$slider->image}}" alt="">
 
 			        <div class="content">
-			          <h1>Titulo - Slider</h1>
+			          <h1>{{$slider->titulo}}</h1>
 			          <p>
 			            {{$slider->contenido}}
 			          </p>
@@ -61,8 +61,8 @@
 
 		<div class="contenedor-descripcion-txt">
 			
-			<h3>Objetivo de la Carrera</h3>
-			<p>es una carrera muy interesante porque te franquean rapido :v Formar profesionistas líderes con visión estratégica y amplio sentido ético; capaz de diseñar, desarrollar, implementar y administrar tecnología computacional para aportar soluciones innovadoras en beneficio de la sociedad; en un contexto global, multidisciplinario y sostenible.</p>
+			<h3>{{$informaciones->categoria}}</h3>
+			<p>{{$informaciones->descripcion}}</p>
 
 		</div>
 		

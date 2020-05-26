@@ -81,7 +81,10 @@ class InformacionCarreraController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'descripcion' => 'required|string',
+            'img' => 'mimes:jpeg,png,bmp,tiff,gif|max:1024',
         ], [
+            'img.mimes' => 'El formato del archivo seleccionado no es válido. Seleccione un archivo en formato: JPEG, PNG, BMP, TIFF, GIF',
+            'img.max' => 'El tamaño del archivo seleccionado no debe ser mayor a 1 MB (1024 KB)',
             'descripcion.required' => 'Se requiere que ingrese la descripción del elemento',
             'descripcion.string' => 'La descripción ingresada contiene caracteres no válidos',
         ]);
@@ -94,7 +97,22 @@ class InformacionCarreraController extends Controller
 
         else
         {
-            $informacion->fill($request->all());
+            if ($request->hasFile('img'))
+            {
+                $file_path =public_path().'/images/informacion/'.$informacion->img;
+                if(file_exists($file_path))
+                {
+                    unlink($file_path);
+                }
+
+                $file = $request->file('img');
+                $name2 = time().$file->getClientOriginalName();
+                $file->move(public_path().'/images/informacion/',$name2);
+                $informacion->img = $name2;
+            }
+
+            //$informacion->fill($request->all());
+            $informacion->descripcion = $request->input('descripcion');
 
             $informacion->save();
 
