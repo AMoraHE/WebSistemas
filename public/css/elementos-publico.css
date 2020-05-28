@@ -490,6 +490,7 @@
 .info-contacto-1{
 	width: 100%;
     background: var(--gris-tipo1);
+    line-height: 2;
 }
 
 .info-contacto-2{
@@ -507,7 +508,9 @@
 
 .contacto{
     font-weight: lighter;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--naranja);
 }
 
 .contenedor-contacto{
