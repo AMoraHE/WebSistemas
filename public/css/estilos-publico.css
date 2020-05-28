@@ -169,7 +169,7 @@ MENU**********************************************/
     align-items: center;
 }
 .navbar .logo .brand-name{
- font-size:28px;
+ font-size:22px;
  color:#ffffff;
  text-decoration: none;
  font-family: 'Pacifico';
@@ -234,7 +234,7 @@ MENU**********************************************/
 }
 .navbar .navbar-nav ul > li{
     display: inline-block;
-    margin:0 25px;
+    margin:0 15px;
     position: relative;
 }
 .navbar .navbar-nav ul > li:last-child{
