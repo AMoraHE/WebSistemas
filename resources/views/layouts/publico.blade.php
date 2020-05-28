@@ -183,10 +183,7 @@
                 <div class="colum1">
                     <h1>Información de la escuela</h1>
 
-                    <p>Esta compañia se dedica a la venta de software integrado con un 
-                    conjunto de cosas que no se lo que estoy escribiendo, este 
-                    texto es solo para llenara informacion en el cuadro de informacion 
-                    de la compañia.</p>
+                    <p>Somos una institución que franquea alumnos :v capturamos EmOssielNorlax y ayudamos a nuestros alumnos a desarrollar su capacidad y los volvemos maestros puchamones...</p>
 
                     <div class="footer-logo-contenedor">                  	
                    
@@ -206,23 +203,23 @@
                     <h1>Redes Sociales</h1>
 
                     <div class="row">
-                        <img src="icon/facebook.png">
+                        <img src="/icon/facebook.png">
                         <label>Siguenos en Facebook</label>
                     </div>
                     <div class="row">
-                        <img src="icon/twitter.png">
+                        <img src="/icon/twitter.png">
                         <label>Siguenos en Twitter</label>
                     </div>
                     <div class="row">
-                        <img src="icon/instagram.png">
+                        <img src="/icon/instagram.png">
                         <label>Siguenos en Instagram</label>
                     </div>
                     <div class="row">
-                        <img src="icon/google-plus.png">
+                        <img src="/icon/google-plus.png">
                         <label>Siguenos en Google Plus</label>
                     </div>
                     <div class="row">
-                        <img src="icon/pinterest.png">
+                        <img src="/icon/pinterest.png">
                         <label>Siguenos en Pinteres</label>
                     </div>
 
