@@ -16,21 +16,26 @@
 
 <div class="seccion-principal">
 
-	<!------------------------------------------------------------- IMG PARALLAX ----------------------------------------------------------->
+<!------------------------------------------------------------- IMG Encabezado ----------------------------------------------------------->
 
-	<div class="contenedor-img-parallax">
+      <div class="contenedor-img-encabezado">
 
-	    <div class="img-parallax"> <!--style="background:url(../img/contacto.jpg);"-->
-	     <div class="parallax">
-	       <h1>Queremos saber de ti</h1>
-	       <hr>
+          <div class="img-encabezado">
 
-	     </div>       
-	    </div>
+            <img src="/img/contacto.jpg">
 
-	    <div class="skew-abajo"></div>
+            <div class="encabezado">
 
-	</div>
+            	<h1>Queremos saber de ti</h1>
+            	<hr>
+
+            </div>
+
+          </div>   
+
+          <div class="skew-abajo"></div>
+
+      </div>
 
 	<!------------------------------------------------------------- INFO ----------------------------------------------------------->
 		<div class="info-contacto-1">
