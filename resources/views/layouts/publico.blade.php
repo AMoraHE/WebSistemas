@@ -100,34 +100,48 @@
 <!------------------------------------------------------------------ MENU ---------------------------------------------------------->	
 
 <!--<div class="logo logo_main">Sistemas Computacionales</div>-->
-    
-    <div class="nav">
-        <div class="wrap">
-            <div class="logo logo_small">ISC</div>
-            <nav>
-                <ul>
-                    <li><a href="{{route('ISC-INICIO')}}"><i class="icono fas fa-home" aria-hidden="true"></i> Inicio</a></li>
-		    		<li><a href="/isc-inicio-noticias"><i class="icono fas fa-newspaper" aria-hidden="true"></i> Noticias</a></li>
-		    		<li><a href="/isc-conocenos"><i class="icono fas fa-handshake" aria-hidden="true"></i> Conócenos
+<div class="contenedor-menu" id="contenedor-menu">
 
-					<!--<ul>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-book" aria-hidden="true"></i> Información de la carrera</a></li>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-user-tie" aria-hidden="true"></i> Perfil de la carrera</a></li>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fab fa-searchengin" aria-hidden="true"></i> Líneas de investigación</a></li>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-chalkboard-teacher" aria-hidden="true"></i> Cuerpos académicos</a></li>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-table" aria-hidden="true"></i> Retícula</a></li>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-sitemap" aria-hidden="true"></i> Organigrama</a></li>
-					</ul>-->
+ <nav class="navbar">
+ 	<div class="container">
+ 		<div class="row justify-content-between align-items-center">
+ 			<div class="logo">
+ 				<a href="#" class="brand-name">
+ 					Sistemas Computacionales
+ 				</a>
+ 			</div>
+ 			<button class="navbar-nav-toggle">
+ 				<span></span>
+ 			</button>
+ 			<div class="navbar-nav">
+ 				<ul>
+ 					 <li><a href="{{route('ISC-INICIO')}}"><i class="icono fas fa-home"></i> Inicio</a></li>
+		    		<li><a href="/isc-inicio-noticias"><i class="icono fas fa-newspaper"></i> Noticias</a></li>
+					<li class="dropdown">
+						<a href="#/isc-conocenos" class="sub-menu-toggle"><i class="icono fas fa-handshake"></i> Conócenos<i class="icono-derecha fas fa-chevron-down"></i></a>
 
-		    		</a></li>
-		    		<li><a href="/isc-infraestructura"><i class="icono fas fa-school" aria-hidden="true"></i> Infraestructura</a></li>
+					<ul class="sub-menu">
+						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-book"></i> Información de la carrera</a></li>
+						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-user-tie"></i> Perfil de la carrera</a></li>
+						<li><a href="/isc-conocenos"><i class="icono-izquierda fab fa-searchengin"></i> Líneas de investigación</a></li>
+						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-chalkboard-teacher"></i> Cuerpos académicos</a></li>
+						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-table"></i> Retícula</a></li>
+						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-sitemap"></i> Organigrama</a></li>
+					</ul>
+
+		    		</li>
+
+					<li><a href="/isc-infraestructura"><i class="icono fas fa-school" aria-hidden="true"></i> Infraestructura</a></li>
 		    		<li><a href="/isc-academicos"><i class="icono fas fa-chalkboard-teacher" aria-hidden="true"></i> Académicos</a></li>
 		    		<li><a href="/isc-galeria"><i class="icono fas fa-image" aria-hidden="true"></i> Galería</a></li>
 		    		<li><a href="/isc-inicio-contactos"><i class="icono fas fa-envelope" aria-hidden="true"></i> Contáctanos</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+ 				</ul>
+ 			</div>
+ 		</div>
+ 	</div>
+ </nav>
+
+</div>
 
 <div class="contenedor">
 
@@ -160,14 +174,102 @@
 <!------------------------------------------------------------------ FOOTER ---------------------------------------------------------->	
 
 
-<!--	<footer>
-		<p>© Copyright 2020, Todos Los Derechos Reservados</p>
-	</footer> -->
+	<footer>
+
+		<div class="container-footer-all">
+        
+            <div class="container-body">
+
+                <div class="colum1">
+                    <h1>Información de la escuela</h1>
+
+                    <p>Esta compañia se dedica a la venta de software integrado con un 
+                    conjunto de cosas que no se lo que estoy escribiendo, este 
+                    texto es solo para llenara informacion en el cuadro de informacion 
+                    de la compañia.</p>
+
+                    <div class="footer-logo-contenedor">                  	
+                   
+	                    <div class="footer-logo">
+
+	                    	<img src="/img/logo.jpg">          
+	                    	
+	                    </div>
+
+                     </div>
+
+
+                </div>
+
+                <div class="colum2">
+
+                    <h1>Redes Sociales</h1>
+
+                    <div class="row">
+                        <img src="icon/facebook.png">
+                        <label>Siguenos en Facebook</label>
+                    </div>
+                    <div class="row">
+                        <img src="icon/twitter.png">
+                        <label>Siguenos en Twitter</label>
+                    </div>
+                    <div class="row">
+                        <img src="icon/instagram.png">
+                        <label>Siguenos en Instagram</label>
+                    </div>
+                    <div class="row">
+                        <img src="icon/google-plus.png">
+                        <label>Siguenos en Google Plus</label>
+                    </div>
+                    <div class="row">
+                        <img src="icon/pinterest.png">
+                        <label>Siguenos en Pinteres</label>
+                    </div>
+
+
+                </div>
+
+                <div class="colum3">
+
+                    <h1>Información Contactos</h1>
+
+                    <div class="row2">
+                        <div class="icono"><i class="fas fa-school"></i></div>
+                        <label>Carretera Vigía Chico Km 1.5, C.P. 77200, Felipe Carrillo Puerto, Quintana Roo, México</label>
+                    </div>
+
+                    <div class="row2">
+                        <div class="icono"><i class="fas fa-phone"></i></div>
+                        <label>834-00-51, 267-10-48</label>
+                    </div>
+
+                    <div class="row2">
+                        <div class="icono"><i class="fas fa-envelope"></i></div>
+                         <label>direccion@itscarrillopuerto.edu.mx </label>
+                    </div>
+
+                </div>
+
+            </div>
+        
+        </div>
+        
+        <div class="container-footer">
+               <div class="footer">
+                    <div class="copyright">
+                        © 2020 Todos los Derechos Reservados | <a href="">ISC</a>
+                    </div>
+
+                    <div class="information">
+                        <a href="">Conócenos</a> | <a href="">Contáctanos</a>
+                    </div>
+                </div>
+
+            </div>
+
+	</footer>
 
 </div>
-
-   	<div class="btn-menu"><i class="fas fa-ellipsis-v"></i></div>
-
 
 	<script src="{{ asset('js/main-public.js')}}"></script>
 

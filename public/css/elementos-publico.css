@@ -116,28 +116,42 @@
 
 .contenedor-descripcion{
 	background: var(--gris-tipo1);
-	padding: 50px;
+	width: 100%;
+    padding: 50px;
 }
 
 .contenedor-descripcion-txt{
-	width: 50%;
+	width: 80%;
 	margin: auto;
-	font-size: 18px;
-	text-align: center;
 	color: var(--azul);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .contenedor-descripcion-txt h3{
 	font-size: 50px;
-	font-weight: 400;
+    font-weight: 400;
+    color: var(--naranja);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contenedor-descripcion-txt p{
+	text-align: center;
+    font-size: 17px;
+    color: var(--black);
+    line-height: 35px;
+    margin:10px 0px;
 }
 
 .contenedor-dividido{
 	display: flex;
+	flex-direction: row;
 }
 
 .contenedor-noticia-1{
-	width: 70%;
+	width: 65%;
 	padding: 20px;
 }
 
@@ -158,6 +172,7 @@
 	height: 330px;
 	padding: 5px;
 	overflow: hidden;
+	line-height: 2;
 }
 
 .contenedor-txt-N1 p{ 
@@ -429,7 +444,7 @@
 }
 
 .project-img{
-    width: 100%;
+ 	width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -454,13 +469,21 @@
   position: relative;
 }
 
+@media only screen and (max-width:773px){
+    .contenedor-img-proyecto {width: 80%; margin-bottom: 30px;}
+}
+@media only screen and (max-width:446px){
+    .project-title h2{font-size: 30px;}
+}
+
+
 /************************************************************************************************FIN SECCIÓN PROYECTOS***********************************************************************/
 
 /************************************************************************************************SECCIÓN CONTACTANOS***********************************************************************/
 
 .contenedor-secciones{
 	width: calc(100% - 50px);
-	min-width: 350px;
+	/*min-width: 350px;*/
 	margin: 10px auto;
 }
 
@@ -571,6 +594,7 @@
 	border-radius: 5px;
 	display: flex;
 	align-items: center;
+	line-height: 2;
 }
 
 .contenedor-titulo-contenido h3{
@@ -635,6 +659,7 @@
     background: var(--blanco);
     border-radius: 5px;
     padding: 10px;
+    line-height: 2;
 }
 
 /************************************************************************************************FIN SECCIÓN NOTICIAS IND***********************************************************************/
@@ -659,7 +684,8 @@
 .contenedor-seccion-cuerpo-filas-1{
 	width: 50%;
 	height: 100%;
-	display: block;
+	display: flex;
+	flex-direction: column;
 }
 
 .contenedor-seccion-cuerpo-dividido-1{
@@ -672,6 +698,7 @@
 	background: rgb(241, 89, 42, .8);
 	padding: 5px;
 	border-radius: 5px;
+	line-height: 2;
 }
 
 .contenedor-seccion-cuerpo-dividido-1 h3{
@@ -733,7 +760,6 @@
 	/*flex-wrap: no-wrap;*/
 	justify-content: center;
 	align-items: center;
-
 }
 
 .contenedor-seccion-ecp h1{
@@ -741,6 +767,7 @@
 	font-size: 28px;
 	font-weight: 400;
 	text-align: center;
+	padding: 10px;
 }
 
 .contenedor-seccion-cuerpo-ecp{
@@ -783,6 +810,7 @@
 	background: var(--blanco);
 	padding: 10px;
 	overflow: auto;
+	line-height: 2;
 }
 
 .descripcion-ecp p{
@@ -814,7 +842,7 @@
 }
 
 .contenedor-seccion-programas h1{
-
+	padding: 10px;
 	color: var(--naranja);
 	font-size: 28px;
 	font-weight: 400;
@@ -835,6 +863,7 @@
 	background: var(--blanco);
 	padding: 10px;
 	border-radius: 5px;
+	line-height: 2;
 }
 
 .c-descripcion{
@@ -881,6 +910,7 @@
 	background: var(--azul);
 	padding: 5px;
 	border-radius: 5px;
+	line-height: 2;
 	/*background: rgb(241, 89, 42, .8);
 	border-radius: 5px;
 	padding: 1px;
@@ -1053,6 +1083,7 @@
 	display: flex;
 	align-items: center;
 	border-radius: 5px;
+	line-height: 2;
 }
 
 .contenedor-titulo-seccion h3{
@@ -1073,13 +1104,15 @@
 	background: var(--naranja);
 	/*border-bottom: 3px solid var(--blanco);*/
 	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .contenedor-titulo-seccion-mas h3{
     text-transform: uppercase;
     color: var(--blanco);
     padding: 2%;
-    text-align: center;
 }
 
 /*** TITULOS NOTICIAS INDIVIDUALES***/
@@ -1094,6 +1127,7 @@
 	align-items: center;
 	border-radius: 5px;
 	margin-bottom: 10px;
+	line-height: 2;
 }
 
 .contenedor-titulo-seccion-ind h3{
@@ -1343,7 +1377,7 @@
 /************************************************************************************************SECCIÓN CALENDARIO***********************************************************************/
 
 .mini-calendario{
-	width: 30%;
+	width: 35%;
 	padding: 10px;
 	padding-top: 20px;
 	overflow: hidden;
@@ -1901,6 +1935,454 @@ body::-webkit-scrollbar-thumb{
 ::-webkit-scrollbar-thumb {
   background-color: var(--gris-fuerte);
   /*background-image:-webkit-linear-gradient(rgba(255,255,255,.3) 20%,transparent 20%,transparent 40%,rgba(255, 255, 255, 0.3) 40%,rgba(255,255,255,.3) 60%,transparent 60%,transparent 80%,rgba(255, 255, 255, 0.3) 80%);*/  
+
+}
+
+@media screen and (max-width: 1100px){
+	.contenedor-img-contenido{
+		width: 300px;
+		height: 400px;
+	}
+	.contenedor-cuerpo-txt{/* --------->Seccion de Noticias texto inicio*/
+		width: calc(100% - 300px); /* ---->Restamos los 250px del ancho de la img*/
+		height: 400px;
+	}
+
+	.contenedor-txt-N1{
+		height: 330px;
+	}
+
+	/************************************************************************************************PAGINA INFRA********************************************************************************/
+
+	.contenedor-seccion-img-lab{
+		height: 400px;
+		margin-top: 5px;
+	}
+
+
+/************************************************************************************************FIN PAGINA INFRA********************************************************************************/
+
+}
+
+@media screen and (max-width: 950px){
+	.contenedor-dividido{
+		flex-direction: column;
+	}
+
+	.contenedor-noticia-1{
+		width: 100%;
+	}
+	.mini-calendario{
+		width: 100%;
+	}
+
+	.img-encabezado{
+		height: 300px;
+	}
+
+	.encabezado h1{
+	    font-size: 40px;
+	}
+
+	.encabezado hr{
+		width: 300px;
+	}
+
+	.contenedor-img-contenido-noticia{
+		width: 300px;
+	}
+	.contenedor-cuerpo-contenido-noticia{
+		width: calc(100% - 300px);
+	}
+
+/************************************************************************************************PAGINA INFRA********************************************************************************/
+
+	.contenedor-seccion-flex{
+		margin: 10px auto; 
+	}
+
+	.contenedor-cuerpo-flex h2{
+		font-size: 18px;
+	}
+	
+	.contenedor-cuerpo-flex p{
+		font-size: 14px;
+	}
+
+	.contenedor-titulo-seccion-mas h3{
+		font-size: 16px;
+	}
+
+/*** IMG LAB ***/
+
+	.contenedor-seccion-img-lab{
+		height: 300px;
+		margin-top: 5px;
+	}
+
+
+/************************************************************************************************FIN PAGINA INFRA********************************************************************************/
+
+/************************************************************************************************PAGINA ACADÉMICOS PRINCIPAL********************************************************************************/
+
+/*************************************PROYECTO******************************************/
+
+.contenedor-seccion-cuerpo-dividido-1{
+	height: 500px;
+}
+
+.contenedor-seccion-cuerpo-dividido-1 h3{
+	font-size: 24px;
+}
+
+.contenedor-seccion-cuerpo-dividido-1 p{
+	font-size: 16px;
+}
+
+.contenedor-desarrolladores-1{
+	padding: 5px;
+}
+
+.contenedor-descripcion-proyecto-1{
+	padding: 5px;
+}
+
+
+/*************************************ECP******************************************/
+
+.contenedor-seccion-ecp{
+	margin: 10px auto; 
+}
+
+.contenedor-seccion-ecp h1{
+	font-size: 24px;
+}
+
+.contenedor-fecha-ecp p{
+	padding: 10px;
+	font-size: 14px;
+}
+
+.contenedor-fecha-ecp h3{
+    padding: 5px;
+    font-size: 18px;
+}
+
+.descripcion-ecp{
+	padding: 5px;
+}
+
+.descripcion-ecp p{
+	padding: 5px;
+}
+
+.contenedor-seccion-programas h1{
+
+	font-size: 24px;
+
+}
+
+/************************************************************************************************PAGINA ACADÉMICOS SECCIONES********************************************************************************/
+
+.contenedor-seccion-convocatoria{
+	padding: 5px;
+	margin-top: 5px;
+}
+
+.desc-conv{
+	padding: 5px;
+}
+
+.c-descripcion{
+
+	padding: 5px;
+}
+
+/********PROYECTOS***********/
+
+
+.contenedor-seccion-cuerpo-dividido h3{
+	font-size: 24px;
+}
+
+.contenedor-seccion-cuerpo-dividido p{
+	font-size: 16px;
+}
+
+.contenedor-desarrolladores{
+	padding: 5px;
+}
+
+.contenedor-descripcion-proyecto{
+	padding: 5px;
+}
+
+
+/************************************************************************************************FIN PAGINA ACADÉMICOS********************************************************************************/
+
+
+}
+
+@media screen and (max-width: 800px){
+
+
+	.buscador{
+		width: 100%;
+		float: none;
+	}
+
+/************************************************************************************************PAGINA INFRA********************************************************************************/
+
+	.contenedor-seccion-flex{
+		flex-direction: column;
+	}
+
+	.contenedor-cuerpo-seccion-flex{
+		width: 100%;
+	}
+
+	.contenedor-seccion-img-lab{
+		height: 500px;
+		margin-top: 10px;
+	}
+
+
+/************************************************************************************************FIN PAGINA INFRA********************************************************************************/
+
+/************************************************************************************************PAGINA ACADÉMICOS PRINCIPAL********************************************************************************/
+
+/*************************************PROYECTO******************************************/
+
+.contenedor-seccion-cuerpo-filas-1{
+	width: 100%;
+}
+
+.contenedor-seccion-cuerpo-dividido-1{
+	flex-direction: column;
+	height: auto;
+}
+
+.contenedor-seccion-img-grande-1{
+	width: 100%;
+	height: 400px;
+	padding-bottom: 5px; 
+}
+
+/*************************************ECP******************************************/
+
+.contenedor-seccion-ecp{
+	flex-direction: column; 
+}
+
+.contenedor-seccion-ecp h1{
+	font-size: 20px;
+}
+
+.contenedor-fecha-ecp p{
+	padding: 5px;
+}
+
+.contenedor-fecha-ecp h3{
+    font-size: 16px;
+}
+
+.contenedor-seccion-eventos{
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.contenedor-seccion-convocatorias{
+	width: 100%;
+}
+
+.contenedor-seccion-programas h1{
+
+	font-size: 20px;
+
+}
+
+.contenedor-titulo-seccion-ecp{
+
+	height: 60px;	
+}
+
+.contenedor-titulo-seccion-ecp h3{
+    
+    font-size: 18px;
+}
+
+/************************************************************************************************PAGINA ACADÉMICOS SECCIONES********************************************************************************/
+
+
+/********PROYECTOS***********/
+
+.contenedor-seccion-img-grande{
+	width: 100%;
+	height: 50vh; /***Antes 600px***/
+	position: relative;
+	overflow: hidden;
+	/*box-shadow: 0 10px 10px rgba(0,0,0,0.7);*/
+}
+
+
+.contenedor-seccion-cuerpo-dividido{
+	height: auto; 
+	flex-direction: column;
+}
+
+.contenedor-seccion-cuerpo-dividido h3{
+	font-size: 20px;
+}
+
+.contenedor-desarrolladores{
+	width: 100%;
+	border-radius: 0px;
+	margin: 0px;
+}
+
+.contenedor-descripcion-proyecto{
+	width: 100%;
+	border-radius: 0px;
+	margin: 0px;
+}
+
+/************************************************************************************************FIN PAGINA ACADÉMICOS********************************************************************************/
+
+
+}
+
+@media screen and (max-width: 650px){
+
+	.contenedor-secciones{
+		width: calc(100% - 10px);
+	}
+
+	.encabezado h1{
+	    font-size: 30px;
+	}
+
+	.encabezado hr{
+		width: 200px;
+	}
+
+	.contenedor-seccion-noticias{
+		margin: 5px 0px 0px 0px;
+		padding: 5px;
+	}
+
+	.contenedor-img-contenido-noticia{
+		width: 200px;
+		height: 200px;
+	}
+	.contenedor-cuerpo-contenido-noticia{
+		width: calc(100% - 200px);
+	}
+
+	.contenedor-titulo-contenido h3{
+		font-size: 16px;
+	}
+
+	.contenedor-cuerpo-txt-noticia{
+		width: 100%;
+		height: 200px;
+		border: 2px solid var(--blanco);
+		overflow: hidden;
+		border: 2px solid var(--blanco);
+	}
+
+	.contenedor-txt-N1{
+		height: 165px;
+	}
+
+	.seccion-continuacion{
+		height: 35px;
+		background: var(--azul);
+	}
+
+	.btn-leer{
+		font-size: 14px;
+	}
+
+/************************************************************************************************SECCIÓN NOTICIAS IND***********************************************************************/
+
+
+	.contenedor-noticias-individuales{
+		width: 100%;
+		border: 2px solid var(--blanco);
+		padding: 5px;
+	}
+
+	.contenedor-img-noticia-ind{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	.contenedor-img-noticia-ind-img{
+		width: 100%;
+		height: 500px;
+	}
+
+	.redaccion-noticia-ind{
+
+		font-size: 16px;
+		border-radius: 0px;
+
+	}
+
+	.contenedor-titulo-seccion-ind{
+
+		margin-bottom: 5px;
+	}
+
+	.contenedor-titulo-seccion-ind h3{
+		font-size: 16px;
+	}
+/************************************************************************************************FIN SECCIÓN NOTICIAS IND***********************************************************************/
+
+/************************************************************************************************PAGINA INFRA********************************************************************************/
+
+	.contenedor-seccion-img-lab{
+		height: 300px;
+		margin-top: 5px;
+	}
+
+
+/************************************************************************************************FIN PAGINA INFRA********************************************************************************/
+
+
+
+}
+
+@media screen and (max-width: 450px){
+	
+	.contenedor-seccion-noticias{
+		flex-direction: column;
+	}
+
+	.contenedor-img-contenido-noticia{
+		width: 100%;
+	}
+
+	.contenedor-cuerpo-contenido-noticia{
+		width: 100%;
+	}
+
+/************************************************************************************************SECCIÓN NOTICIAS IND***********************************************************************/
+
+
+	.contenedor-img-noticia-ind-img{
+		height: 300px;
+	}
+
+	.redaccion-noticia-ind{
+		font-size: 14px;
+	}
+
+	.contenedor-titulo-seccion-ind h3{
+		font-size: 14px;
+		text-align: justify;
+	}
 
 }
 

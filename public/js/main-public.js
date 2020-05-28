@@ -1,17 +1,61 @@
-var elementTop = $('.nav').offset().top;
 
-$(window).scroll(function(){
-    if( $(window).scrollTop() >= elementTop){
-        $('body').addClass('nav_fixed');
-    }else{
-        $('body').removeClass('nav_fixed');
-    }
-});
+ const navToggleBtn=document.querySelector(".navbar-nav-toggle");
+ const navbarNav=document.querySelector(".navbar-nav");
+ const subMenuToggleBtn=document.querySelectorAll(".navbar-nav .sub-menu-toggle");
 
-$('.btn-menu').on('click', function(){
-    $('.nav').toggleClass('nav-toggle');
-})
+ navToggleBtn.addEventListener("click",function () {
+ 	if(navbarNav.classList.contains("open")){
+ 		navbarNav.classList.remove("open");
+ 		navbarNav.removeAttribute("style");
+ 		hideSubMenu();
+ 	}
+ 	else{
+ 	 navbarNav.classList.add("open");
+ 	 navbarNav.style.maxHeight=	navbarNav.scrollHeight + "px";
+ 	}
 
+ 	navToggleBtn.classList.toggle("close");
+ })
+
+ for(let i=0; i<subMenuToggleBtn.length; i++){
+    subMenuToggleBtn[i].addEventListener("click",function(){
+     if(window.innerWidth < 768){
+    	const dropdown=this.parentElement;
+    	const height=dropdown.querySelector(".sub-menu").scrollHeight;
+    	const subMenu=dropdown.querySelector(".sub-menu");
+    	// console.log(height)
+    	if(subMenu.classList.contains("open")){
+    		// if subMenu classList has class open then
+    		subMenu.classList.remove("open");
+    		subMenu.removeAttribute("style");
+    		navbarNav.style.maxHeight=(navbarNav.scrollHeight - height) + "px";
+    	}
+       else{
+         // if subMenu classList has no class open then
+         subMenu.classList.add("open")
+         subMenu.style.maxHeight=height + "px";
+         navbarNav.style.maxHeight=(navbarNav.scrollHeight + height) + "px";
+       }
+     }
+     
+    })
+ }
+
+ function hideSubMenu(){
+ 	for(let i=0; i<subMenuToggleBtn.length; i++){
+ 		const dropdown=subMenuToggleBtn[i].parentElement;
+ 		dropdown.querySelector(".sub-menu").removeAttribute("style");
+ 		dropdown.querySelector(".sub-menu").classList.remove("open");
+ }
+}
+ 
+ window.addEventListener("resize" , function(){
+        navbarNav.classList.remove("open");
+ 		navbarNav.removeAttribute("style");
+ 		hideSubMenu();
+ 		navToggleBtn.classList.remove("close");
+ })
+ 
 /*posicionarMenu();
 	 
 	$(window).scroll(function() {    
@@ -77,21 +121,3 @@ var btnburbuja = document.getElementsByClassName("btn-burbuja-1");
 for (var i = 0; i < btnburbuja.length; i++) {
   btnburbuja[i].addEventListener('click', animacionBurbuja, false);
 }
-
-
-/* ---------------------------------------------------RETRASO EN REDIRECCIONAR----------------------------------------------- 
-
-$('#btn-time{{$infra->id}}').click(function(e) {
-
-	e.preventDefault();
-
-	var loc = $(this).attr('href');
-	let retraso = null;
-
-	
-   retraso = setTimeout(function(){
-    	
-    	document.location.href = loc; 
-    	}, 700); 
-
-}); */

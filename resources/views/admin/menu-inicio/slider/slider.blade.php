@@ -44,7 +44,11 @@
 
   </div>
 
-  <h3>{{$slider->contenido}}</h3>
+  <div class="contenedor-titulo-seccion">
+
+    <h3>{{$slider->contenido}}</h3>
+
+  </div>
 
 <!----------------------------------------------------------------- BOTONES SLIDER ---------------------------------------------------------->
 
