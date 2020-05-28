@@ -1107,9 +1107,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 }
 
 .contenedor-titulo-seccion-mas h3{
+	width: 100%;
     text-transform: uppercase;
     color: var(--blanco);
     padding: 2%;
