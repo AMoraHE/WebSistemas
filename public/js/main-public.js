@@ -1,7 +1,7 @@
 
- const navToggleBtn=document.querySelector(".navbar-nav-toggle");
- const navbarNav=document.querySelector(".navbar-nav");
- const subMenuToggleBtn=document.querySelectorAll(".navbar-nav .sub-menu-toggle");
+ const navToggleBtn=document.querySelector(".menu-nav-toggle");
+ const navbarNav=document.querySelector(".menu-nav");
+ const subMenuToggleBtn=document.querySelectorAll(".menu-nav .sub-menu-toggle");
 
  navToggleBtn.addEventListener("click",function () {
  	if(navbarNav.classList.contains("open")){

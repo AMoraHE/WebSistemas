@@ -102,32 +102,32 @@
 <!--<div class="logo logo_main">Sistemas Computacionales</div>-->
 <div class="contenedor-menu" id="contenedor-menu">
 
- <nav class="navbar">
- 	<div class="container">
- 		<div class="row justify-content-between align-items-center">
- 			<div class="logo">
- 				<a href="#" class="brand-name">
+ <nav class="menu">
+ 	<div class="contenedor">
+ 		<div class="lista-menu justify-content-between align-items-center">
+ 			<div class="logo-menu">
+ 				<a href="#" class="titulo-menu">
  					Sistemas Computacionales
  				</a>
  			</div>
- 			<button class="navbar-nav-toggle">
+ 			<button class="menu-nav-toggle">
  				<span></span>
  			</button>
- 			<div class="navbar-nav">
+ 			<div class="menu-nav">
  				<ul>
- 					 <li><a href="{{route('ISC-INICIO')}}"><i class="icono fas fa-home"></i> Inicio</a></li>
+ 					<li><a href="{{route('ISC-INICIO')}}"><i class="icono fas fa-home"></i> Inicio</a></li>
 		    		<li><a href="/isc-inicio-noticias"><i class="icono fas fa-newspaper"></i> Noticias</a></li>
 					<li class="dropdown">
-						<a href="/isc-conocenos" class="sub-menu-toggle"><i class="icono fas fa-handshake"></i> Conócenos<i class="icono-derecha fas fa-chevron-down"></i></a>
+						<a href="#/isc-conocenos" class="sub-menu-toggle"><i class="icono fas fa-handshake"></i> Conócenos<i class="icono-derecha fas fa-chevron-down"></i></a>
 
-					<ul class="sub-menu">
-						<li><a href="/isc-conocenos-MVO"><i class="icono-izquierda fas fa-book"></i> Información de la carrera</a></li>
-						<li><a href="/isc-conocenos-perfil_campo_ISC"><i class="icono-izquierda fas fa-user-tie"></i> Perfil de la carrera</a></li>
-						<li><a href="/isc-conocenos-lineasInv_cuerposAcad"><i class="icono-izquierda fab fa-searchengin"></i> Líneas de investigación</a></li>
-						<li><a href="/isc-conocenos-lineasInv_cuerposAcad"><i class="icono-izquierda fas fa-chalkboard-teacher"></i> Cuerpos académicos</a></li>
-						<li><a href="/isc-conocenos-reticula"><i class="icono-izquierda fas fa-table"></i> Retícula</a></li>
-						<li><a href="/isc-conocenos-organigrama"><i class="icono-izquierda fas fa-sitemap"></i> Organigrama</a></li>
-					</ul>
+						<ul class="sub-menu">
+							<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-book"></i> Información de la carrera</a></li>
+							<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-user-tie"></i> Perfil de la carrera</a></li>
+							<li><a href="/isc-conocenos"><i class="icono-izquierda fab fa-searchengin"></i> Líneas de investigación</a></li>
+							<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-chalkboard-teacher"></i> Cuerpos académicos</a></li>
+							<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-table"></i> Retícula</a></li>
+							<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-sitemap"></i> Organigrama</a></li>
+						</ul>
 
 		    		</li>
 
@@ -176,11 +176,11 @@
 
 	<footer>
 
-		<div class="container-footer-all">
+		<div class="contenedor-footer">
         
-            <div class="container-body">
+            <div class="contenedor-cuerpo-footer">
 
-                <div class="colum1">
+                <div class="columna1">
                     <h1>Información de la escuela</h1>
 
                     <p>Somos una institución que franquea alumnos :v capturamos EmOssielNorlax y ayudamos a nuestros alumnos a desarrollar su capacidad y los volvemos maestros puchamones...</p>
@@ -189,7 +189,7 @@
                    
 	                    <div class="footer-logo">
 
-	                    	<img src="/img/logo.png">          
+	                    	<img src="/img/Logo-Footer.png">          
 	                    	
 	                    </div>
 
@@ -198,27 +198,27 @@
 
                 </div>
 
-                <div class="colum2">
+                <div class="columna2">
 
                     <h1>Redes Sociales</h1>
 
-                    <div class="row">
+                    <div class="redes-sociales">
                         <img src="/icon/facebook.png">
                         <label>Siguenos en Facebook</label>
                     </div>
-                    <div class="row">
+                    <div class="redes-sociales">
                         <img src="/icon/twitter.png">
                         <label>Siguenos en Twitter</label>
                     </div>
-                    <div class="row">
+                    <div class="redes-sociales">
                         <img src="/icon/instagram.png">
                         <label>Siguenos en Instagram</label>
                     </div>
-                    <div class="row">
+                    <div class="redes-sociales">
                         <img src="/icon/google-plus.png">
                         <label>Siguenos en Google Plus</label>
                     </div>
-                    <div class="row">
+                    <div class="redes-sociales">
                         <img src="/icon/pinterest.png">
                         <label>Siguenos en Pinteres</label>
                     </div>
@@ -226,21 +226,21 @@
 
                 </div>
 
-                <div class="colum3">
+                <div class="columna3">
 
-                    <h1>Información Contactos</h1>
+                    <h1>Contactos</h1>
 
-                    <div class="row2">
+                    <div class="contactos-footer">
                         <div class="icono"><i class="fas fa-school"></i></div>
                         <label>Carretera Vigía Chico Km 1.5, C.P. 77200, Felipe Carrillo Puerto, Quintana Roo, México</label>
                     </div>
 
-                    <div class="row2">
+                    <div class="contactos-footer">
                         <div class="icono"><i class="fas fa-phone"></i></div>
                         <label>834-00-51, 267-10-48</label>
                     </div>
 
-                    <div class="row2">
+                    <div class="contactos-footer">
                         <div class="icono"><i class="fas fa-envelope"></i></div>
                          <label>direccion@itscarrillopuerto.edu.mx </label>
                     </div>
@@ -251,14 +251,14 @@
         
         </div>
         
-        <div class="container-footer">
+        <div class="contenedor-footer-barra">
                <div class="footer">
                     <div class="copyright">
                         © 2020 Todos los Derechos Reservados | <a href="">ISC</a>
                     </div>
 
-                    <div class="information">
-                        <a href="/isc-conocenos">Conócenos</a> | <a href="/isc-inicio-contactos">Contáctanos</a>
+                    <div class="informacion-footer">
+                        <a href="">Conócenos</a> | <a href="">Contáctanos</a>
                     </div>
                 </div>
 

@@ -1218,7 +1218,7 @@
 	width: 200px;
 }
 
-/************************************************************************************************SECCIÓN GALERIA***********************************************************************/
+/************************************************************************************************SECCIÓN GALERIA - ÁLBUM***********************************************************************/
 
 
 .galeria{
@@ -1309,6 +1309,11 @@
     }
 }
 
+/************************************************************************************************SECCIÓN GALERIA - IMG***********************************************************************/
+
+
+
+
 /************************************************************************************************SECCIÓN BUSCADOR***************************************************************************/
 
 .contenedor-buscador{
@@ -1390,7 +1395,7 @@
 }
 
 .contenedor-calendario{
-	min-height: 100vh;
+	/*min-height: 100vh;*/
 	margin-top: 10px;
 	display: flex;
 	justify-content: center;
@@ -2308,6 +2313,30 @@ body::-webkit-scrollbar-thumb{
 		font-size: 14px;
 	}
 
+/************************************************************************************************SECCIÓN NOTICIAS INICIO***********************************************************************/
+
+
+	.contenedor-seccion-dividido-noticia-1{
+		flex-direction: column;
+	}
+
+	.contenedor-img-contenido{
+		width: 100%;
+		height: 300px;
+	}
+
+	.contenedor-cuerpo-txt{
+		width: 100%;
+	}
+
+	.contenedor-cuerpo-txt{
+		height: auto;
+	}
+
+	.contenedor-titulo-seccion h3{
+		font-size: 16px;
+	}
+
 /************************************************************************************************SECCIÓN NOTICIAS IND***********************************************************************/
 
 
@@ -2374,10 +2403,48 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
-
 /************************************************************************************************FIN SECCIÓN CONTACTANOS***********************************************************************/
 
+/***********************************************MODAL INFO CALENDARIO*******************************/
+
+	.contenedor-modal-dividido{
+
+		flex-direction: column;
+	}
+
+	.contenedor-modal-info{
+		margin-left: 0px;
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	.contenedor-modal-info p{
+		padding: 5px;
+	}
+
+	.seccion-modal-fech{
+		width: 100%;
+	}
+
+
+
+	.seccion-modal-fech h3{
+		font-size: 16px;
+	}
+
+	.seccion-modal-fech p{
+		margin: auto 5px;
+	}
+
+	.contenedor-fecha-cal-arriba{
+
+		box-shadow: 0 5px 5px rgba(0,0,0,0.7);
+	}
+
+	.contenedor-fecha-cal-abajo{
+
+		box-shadow: 0 5px 5px rgba(0,0,0,0.7);
+	}
 
 
 }

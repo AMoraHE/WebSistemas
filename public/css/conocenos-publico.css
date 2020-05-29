@@ -1127,11 +1127,243 @@ background-color: #f4f4f4;
 	color: var(--blanco);
 	display: none;
 }
+/*******************************************************SECCIÓN RESPONSIVA******************************************/
+
+/*******************************************************SECCIÓN PRINCIPAL******************************************/
+
+/*******************************************************SECCIÓN INFO-MVO-CON******************************************/
+
+@media screen and (max-width: 700px){/************************700PX***********************************/
+
+.titulo-linea-cuerpo p{
+    padding-top: 20px;
+    font-size: 25pt;
+}
+
+.contenedor-titulo-mvo-con,
+.contenedor-titulo-mvo-con2{
+	width:47%;
+	margin: 9px;
+}
+
+.contenedor-titulo-mvo-con p,
+.contenedor-titulo-mvo-con2 p{
+	padding: 5px 15px;
+	font-size: 24pt;
+}
+
+.info-mvo-con p {
+    font-size: 16pt;
+}
+
+/*******************************************************SECCIÓN PERFIL-CARRERA-CON******************************************/
+
+
+.contenedor-titulo-perfil-con p
+.contenedor-titulo-perfil-con2 p{
+    padding: 5px 15px;
+    font-size: 24pt;
+ }
+
+.contenedor-apartado-con {
+	padding: 10PX;
+}
+
+ .contenedor-perfil-con {
+    padding: 10px;
+}
+
+ol.round p {
+    width: 94%;
+}
+/*******************************************************SECCIÓN LINEAS-CUERPOS-CON******************************************/
+
+.contenedor-titulo-seccion-con p {
+    padding: 5px 15px;
+    font-size: 24pt;
+    margin-bottom: 15px;
+}
+/*******************************************************SECCIÓN RETICULA-CON******************************************/
+.contenedor-acordeon-subapartado-con {
+    width: 100%;
+}
+
+.contenedor-titulo-acordeon-con p {
+    height: 49px;
+    font-size: 24pt;
+}
+
+.contenedor-acordeon-con p{
+    line-height: 1.5;
+}
+
+.contenedor-enlaces-con a {
+	font-size: 9pt;
+	margin: 0;
+}
+
+}	
 
 
 
 
 
+/*******************************************************SECCIÓN MVO******************************************/
 
+
+@media screen and (max-width: 700px){/************************700PX***********************************/
+
+.contenedor-mvo{
+	height: 550px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.contenedor-img-mvo{
+	height: 220px;
+	margin: 1% auto;
+	width: 100%;
+}
+
+.contenedor-img-mvo2{
+	height: 220px;
+	margin: 1% auto;
+	width: 100%;
+}
+
+.contenedor-titulo-mvo,
+.contenedor-titulo-mvo-2{
+	width: 100%
+}
+
+.contenedor-titulo-mvo p{
+	padding: 5px;
+	padding-bottom: 10px;
+	font-size: 28pt;
+}
+
+.contenedor-titulo-mvo-2 p{
+	padding: 5px;
+	padding-bottom: 10px;
+	font-size: 28pt;
+}
+
+.info-mvo{
+	display: block;
+	width:100%;
+	height:200px;
+}
+
+.info-mvo p{
+	font-size: 16pt;
+}
+
+}
+
+
+@media screen and (max-width: 450px){/**************************450PX*******************************/
+
+.contenedor-mvo{
+	height: 490px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.contenedor-img-mvo{
+	height: 160px;
+	margin: 1% auto;
+	width: 100%;
+}
+
+.contenedor-img-mvo2{
+	height: 160px;
+	margin: 1% auto;
+	width: 100%;
+}
+
+.contenedor-titulo-mvo,
+.contenedor-titulo-mvo-2{
+	width: 100%
+}
+
+.contenedor-titulo-mvo p{
+	padding: 5px;
+	padding-bottom: 10px;
+	font-size: 25pt;
+}
+
+.contenedor-titulo-mvo-2 p{
+	padding: 5px;
+	padding-bottom: 10px;
+	font-size: 25pt;
+}
+
+.info-mvo{
+	display: block;
+	width:100%;
+	height:200px;
+}
+
+.info-mvo p{
+	font-size: 13pt;
+}
+
+}
+
+
+/*******************************************************SECCIÓN ACORDEON******************************************/
+
+
+
+@media screen and (max-width: 700px){/************************700PX***********************************/
+
+.contenedor-titulo-acordeon p{
+    font-size: 20pt;
+}
+
+.info-acordeon-centrado p{
+	margin:10px;
+	font-size: 15pt;
+}
+
+.contenedor-enlaces a{
+	font-size: 11pt;
+}
+
+}
+
+@media screen and (max-width: 450px){/**************************450PX*******************************/
+
+.contenedor-titulo-acordeon p{
+    font-size: 16pt;
+}
+
+.info-acordeon-centrado p{
+	margin:10px;
+	font-size: 10pt;
+}
+
+.contenedor-enlaces a{
+	font-size: 7pt;
+}
+
+}
+
+@media screen and (max-width: 375px){/**************************375PX*******************************/
+
+.contenedor-titulo-acordeon p{
+    font-size: 14pt;
+}
+
+.info-acordeon-centrado p{
+	margin:10px;
+	font-size: 9pt;
+}
+
+.contenedor-enlaces a{
+	font-size: 6pt;
+}
+
+}
 
 

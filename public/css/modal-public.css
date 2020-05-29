@@ -33,6 +33,7 @@
 	animation-duration: 1s;
 	border: 2px solid #fff;
 	border-radius: 10px;
+	line-height: 2;
 }
 
 @keyframes modal{
