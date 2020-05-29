@@ -102,32 +102,32 @@
 <!--<div class="logo logo_main">Sistemas Computacionales</div>-->
 <div class="contenedor-menu" id="contenedor-menu">
 
- <nav class="navbar">
- 	<div class="container">
- 		<div class="row justify-content-between align-items-center">
- 			<div class="logo">
- 				<a href="#" class="brand-name">
+ <nav class="menu">
+ 	<div class="contenedor">
+ 		<div class="lista-menu justify-content-between align-items-center">
+ 			<div class="logo-menu">
+ 				<a href="#" class="titulo-menu">
  					Sistemas Computacionales
  				</a>
  			</div>
- 			<button class="navbar-nav-toggle">
+ 			<button class="menu-nav-toggle">
  				<span></span>
  			</button>
- 			<div class="navbar-nav">
+ 			<div class="menu-nav">
  				<ul>
- 					 <li><a href="{{route('ISC-INICIO')}}"><i class="icono fas fa-home"></i> Inicio</a></li>
+ 					<li><a href="{{route('ISC-INICIO')}}"><i class="icono fas fa-home"></i> Inicio</a></li>
 		    		<li><a href="/isc-inicio-noticias"><i class="icono fas fa-newspaper"></i> Noticias</a></li>
 					<li class="dropdown">
 						<a href="#/isc-conocenos" class="sub-menu-toggle"><i class="icono fas fa-handshake"></i> Conócenos<i class="icono-derecha fas fa-chevron-down"></i></a>
 
-					<ul class="sub-menu">
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-book"></i> Información de la carrera</a></li>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-user-tie"></i> Perfil de la carrera</a></li>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fab fa-searchengin"></i> Líneas de investigación</a></li>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-chalkboard-teacher"></i> Cuerpos académicos</a></li>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-table"></i> Retícula</a></li>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-sitemap"></i> Organigrama</a></li>
-					</ul>
+						<ul class="sub-menu">
+							<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-book"></i> Información de la carrera</a></li>
+							<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-user-tie"></i> Perfil de la carrera</a></li>
+							<li><a href="/isc-conocenos"><i class="icono-izquierda fab fa-searchengin"></i> Líneas de investigación</a></li>
+							<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-chalkboard-teacher"></i> Cuerpos académicos</a></li>
+							<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-table"></i> Retícula</a></li>
+							<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-sitemap"></i> Organigrama</a></li>
+						</ul>
 
 		    		</li>
 
