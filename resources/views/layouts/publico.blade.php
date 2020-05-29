@@ -118,15 +118,15 @@
  					 <li><a href="{{route('ISC-INICIO')}}"><i class="icono fas fa-home"></i> Inicio</a></li>
 		    		<li><a href="/isc-inicio-noticias"><i class="icono fas fa-newspaper"></i> Noticias</a></li>
 					<li class="dropdown">
-						<a href="#/isc-conocenos" class="sub-menu-toggle"><i class="icono fas fa-handshake"></i> Conócenos<i class="icono-derecha fas fa-chevron-down"></i></a>
+						<a href="/isc-conocenos" class="sub-menu-toggle"><i class="icono fas fa-handshake"></i> Conócenos<i class="icono-derecha fas fa-chevron-down"></i></a>
 
 					<ul class="sub-menu">
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-book"></i> Información de la carrera</a></li>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-user-tie"></i> Perfil de la carrera</a></li>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fab fa-searchengin"></i> Líneas de investigación</a></li>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-chalkboard-teacher"></i> Cuerpos académicos</a></li>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-table"></i> Retícula</a></li>
-						<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-sitemap"></i> Organigrama</a></li>
+						<li><a href="/isc-conocenos-MVO"><i class="icono-izquierda fas fa-book"></i> Información de la carrera</a></li>
+						<li><a href="/isc-conocenos-perfil_campo_ISC"><i class="icono-izquierda fas fa-user-tie"></i> Perfil de la carrera</a></li>
+						<li><a href="/isc-conocenos-lineasInv_cuerposAcad"><i class="icono-izquierda fab fa-searchengin"></i> Líneas de investigación</a></li>
+						<li><a href="/isc-conocenos-lineasInv_cuerposAcad"><i class="icono-izquierda fas fa-chalkboard-teacher"></i> Cuerpos académicos</a></li>
+						<li><a href="/isc-conocenos-reticula"><i class="icono-izquierda fas fa-table"></i> Retícula</a></li>
+						<li><a href="/isc-conocenos-organigrama"><i class="icono-izquierda fas fa-sitemap"></i> Organigrama</a></li>
 					</ul>
 
 		    		</li>
@@ -189,7 +189,7 @@
                    
 	                    <div class="footer-logo">
 
-	                    	<img src="/img/logo.jpg">          
+	                    	<img src="/img/logo.png">          
 	                    	
 	                    </div>
 
@@ -258,7 +258,7 @@
                     </div>
 
                     <div class="information">
-                        <a href="">Conócenos</a> | <a href="">Contáctanos</a>
+                        <a href="/isc-conocenos">Conócenos</a> | <a href="/isc-inicio-contactos">Contáctanos</a>
                     </div>
                 </div>
 
