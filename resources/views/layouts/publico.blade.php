@@ -176,11 +176,11 @@
 
 	<footer>
 
-		<div class="container-footer-all">
+		<div class="contenedor-footer">
         
-            <div class="container-body">
+            <div class="contenedor-cuerpo-footer">
 
-                <div class="colum1">
+                <div class="columna1">
                     <h1>Información de la escuela</h1>
 
                     <p>Somos una institución que franquea alumnos :v capturamos EmOssielNorlax y ayudamos a nuestros alumnos a desarrollar su capacidad y los volvemos maestros puchamones...</p>
@@ -189,7 +189,7 @@
                    
 	                    <div class="footer-logo">
 
-	                    	<img src="/img/logo.jpg">          
+	                    	<img src="/img/Logo-Footer.png">          
 	                    	
 	                    </div>
 
@@ -198,27 +198,27 @@
 
                 </div>
 
-                <div class="colum2">
+                <div class="columna2">
 
                     <h1>Redes Sociales</h1>
 
-                    <div class="row">
+                    <div class="redes-sociales">
                         <img src="/icon/facebook.png">
                         <label>Siguenos en Facebook</label>
                     </div>
-                    <div class="row">
+                    <div class="redes-sociales">
                         <img src="/icon/twitter.png">
                         <label>Siguenos en Twitter</label>
                     </div>
-                    <div class="row">
+                    <div class="redes-sociales">
                         <img src="/icon/instagram.png">
                         <label>Siguenos en Instagram</label>
                     </div>
-                    <div class="row">
+                    <div class="redes-sociales">
                         <img src="/icon/google-plus.png">
                         <label>Siguenos en Google Plus</label>
                     </div>
-                    <div class="row">
+                    <div class="redes-sociales">
                         <img src="/icon/pinterest.png">
                         <label>Siguenos en Pinteres</label>
                     </div>
@@ -226,21 +226,21 @@
 
                 </div>
 
-                <div class="colum3">
+                <div class="columna3">
 
-                    <h1>Información Contactos</h1>
+                    <h1>Contactos</h1>
 
-                    <div class="row2">
+                    <div class="contactos-footer">
                         <div class="icono"><i class="fas fa-school"></i></div>
                         <label>Carretera Vigía Chico Km 1.5, C.P. 77200, Felipe Carrillo Puerto, Quintana Roo, México</label>
                     </div>
 
-                    <div class="row2">
+                    <div class="contactos-footer">
                         <div class="icono"><i class="fas fa-phone"></i></div>
                         <label>834-00-51, 267-10-48</label>
                     </div>
 
-                    <div class="row2">
+                    <div class="contactos-footer">
                         <div class="icono"><i class="fas fa-envelope"></i></div>
                          <label>direccion@itscarrillopuerto.edu.mx </label>
                     </div>
@@ -251,13 +251,13 @@
         
         </div>
         
-        <div class="container-footer">
+        <div class="contenedor-footer-barra">
                <div class="footer">
                     <div class="copyright">
                         © 2020 Todos los Derechos Reservados | <a href="">ISC</a>
                     </div>
 
-                    <div class="information">
+                    <div class="informacion-footer">
                         <a href="">Conócenos</a> | <a href="">Contáctanos</a>
                     </div>
                 </div>
