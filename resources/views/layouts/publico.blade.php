@@ -113,7 +113,7 @@
  	<div class="contenedor">
  		<div class="lista-menu justify-content-between align-items-center">
  			<div class="logo-menu">
- 				<a href="#" class="titulo-menu">
+ 				<a href="/" class="titulo-menu">
  					Sistemas Computacionales
  				</a>
  			</div>
@@ -128,12 +128,12 @@
 						<a href="#/isc-conocenos" class="sub-menu-toggle"><i class="icono fas fa-handshake"></i> Conócenos<i class="icono-derecha fas fa-chevron-down"></i></a>
 
 						<ul class="sub-menu">
-							<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-book"></i> Información de la carrera</a></li>
-							<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-user-tie"></i> Perfil de la carrera</a></li>
-							<li><a href="/isc-conocenos"><i class="icono-izquierda fab fa-searchengin"></i> Líneas de investigación</a></li>
-							<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-chalkboard-teacher"></i> Cuerpos académicos</a></li>
-							<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-table"></i> Retícula</a></li>
-							<li><a href="/isc-conocenos"><i class="icono-izquierda fas fa-sitemap"></i> Organigrama</a></li>
+							<li><a href="/isc-conocenos"><i class="icono fas fa-handshake"></i> Conócenos</a></li>
+							<li><a href="/isc-conocenos-MVO"><i class="icono-izquierda fas fa-book"></i> Información de la carrera</a></li>
+							<li><a href="/isc-conocenos-perfil_campo_ISC"><i class="icono-izquierda fas fa-user-tie"></i> Perfil de la carrera</a></li>
+							<li><a href="/isc-conocenos-lineasInv_cuerposAcad"><i class="icono-izquierda fab fa-searchengin"></i> LI - CA</a></li>
+							<li><a href="/isc-conocenos-reticula"><i class="icono-izquierda fas fa-table"></i> Retícula</a></li>
+							<li><a href="/isc-conocenos-organigrama"><i class="icono-izquierda fas fa-sitemap"></i> Organigrama</a></li>
 						</ul>
 
 		    		</li>
@@ -211,23 +211,23 @@
 
                     <div class="redes-sociales">
                         <img src="/icon/facebook.png">
-                        <label>Siguenos en Facebook</label>
+                        <label>Síguenos en Facebook</label>
                     </div>
                     <div class="redes-sociales">
                         <img src="/icon/twitter.png">
-                        <label>Siguenos en Twitter</label>
+                        <label>Síguenos en Twitter</label>
                     </div>
                     <div class="redes-sociales">
                         <img src="/icon/instagram.png">
-                        <label>Siguenos en Instagram</label>
+                        <label>Síguenos en Instagram</label>
                     </div>
                     <div class="redes-sociales">
                         <img src="/icon/google-plus.png">
-                        <label>Siguenos en Google Plus</label>
+                        <label>Síguenos en Google Plus</label>
                     </div>
                     <div class="redes-sociales">
                         <img src="/icon/pinterest.png">
-                        <label>Siguenos en Pinteres</label>
+                        <label>Síguenos en Pinteres</label>
                     </div>
 
 
@@ -249,7 +249,7 @@
 
                     <div class="contactos-footer">
                         <div class="icono"><i class="fas fa-envelope"></i></div>
-                         <label>direccion@itscarrillopuerto.edu.mx </label>
+                         <label>direccion@gmail</label>
                     </div>
 
                 </div>
@@ -265,7 +265,7 @@
                     </div>
 
                     <div class="informacion-footer">
-                        <a href="">Conócenos</a> | <a href="">Contáctanos</a>
+                        <a href="/isc-conocenos">Conócenos</a> | <a href="/isc-inicio-contactos">Contáctanos</a>
                     </div>
                 </div>
 

@@ -1127,11 +1127,514 @@ background-color: #f4f4f4;
 	color: var(--blanco);
 	display: none;
 }
+/*******************************************************SECCIÓN RESPONSIVA******************************************/
+
+/*******************************************************SECCIÓN PRINCIPAL******************************************/
+
+/*******************************************************SECCIÓN INFO-MVO-CON******************************************/
+
+@media screen and (max-width: 700px){/************************700PX***********************************/
+
+.titulo-linea-cuerpo p{
+    padding-top: 20px;
+    font-size: 25pt;
+}
+
+.contenedor-titulo-mvo-con,
+.contenedor-titulo-mvo-con2{
+	width:48%;
+	margin: 0px;
+}
+
+.contenedor-titulo-mvo-con p,
+.contenedor-titulo-mvo-con2 p{
+	padding: 5px 15px;
+	font-size: 24pt;
+}
+
+.info-mvo-con p {
+    font-size: 16pt;
+}
+
+/*******************************************************SECCIÓN PERFIL-CARRERA-CON******************************************/
+
+
+.contenedor-titulo-perfil-con p,
+.contenedor-titulo-perfil-con2 p{
+    padding: 5px 15px;
+    font-size: 24pt;
+ }
+
+.contenedor-apartado-con {
+	padding: 10PX;
+	height: 350px;
+}
+
+ .contenedor-perfil-con {
+    padding: 10px;
+}
+
+ol.round p {
+    width: 94%;
+}
+/*******************************************************SECCIÓN LINEAS-CUERPOS-CON******************************************/
+
+.contenedor-titulo-seccion-con p {
+    padding: 5px 15px;
+    font-size: 24pt;
+    margin-bottom: 15px;
+}
+/*******************************************************SECCIÓN RETICULA-CON******************************************/
+.contenedor-acordeon-subapartado-con {
+    width: 100%;
+}
+
+.contenedor-titulo-acordeon-con p {
+    height: 49px;
+    font-size: 24pt;
+}
+
+.contenedor-acordeon-con p{
+    line-height: 1.5;
+}
+
+.contenedor-enlaces-con a {
+	font-size: 9pt;
+	margin: 0;
+}
+
+/*******************************************************SECCIÓN ORGANIGRAMA-CON******************************************/
+
+.contenedor-texto-completo-org-con{
+    min-height: 280px;
+    margin-top: -82%;
+}
+
+.contenedor-org-con{
+	width: 90%;
+	height: 260px;
+}
+.contenedor-org-subapartado-con{
+	width:100%;
+}
+
+.contenedor-titulo-org-con p{
+	height:49px;
+	font-size: 24pt;
+	line-height: 1.5;
+}
+
+.info-org-con{
+	padding-top: 5px;
+}
+
+.info-org p{
+	margin:10px;
+}
+
+.imagen-ingre-egre{
+	width: 220px;
+}
+
+}	
+@media screen and (max-width: 450px){/************************450PX***********************************/
+.contenedor-mvo-con{
+	height: 670px;
+	padding-bottom: 25px;
+
+}
+
+.titulo-linea-cuerpo p{
+    padding-top: 10px;
+    font-size: 17pt;
+    padding-bottom: 10px;
+}
+
+.contenedor-mvo-subapartado-con {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.contenedor-titulo-mvo-con,
+.contenedor-titulo-mvo-con2{
+	width:95%;
+	margin: auto;
+	float: none;
+}
+
+.contenedor-titulo-mvo-con p,
+.contenedor-titulo-mvo-con2 p{
+	padding: 1px 15px;
+	font-size: 22pt;
+}
+.info-mvo-con{
+	height: 250px;
+}
+
+.info-mvo-con p {
+    font-size: 14pt;
+    padding: 10px;
+}
+
+/*******************************************************SECCIÓN PERFIL-CARRERA-CON******************************************/
+.contenedor-componentes-info-carrera-egreso-con,
+.contenedor-componentes-info-carrera-ingreso-con{
+    width: 100%;
+    padding: 10px 0;
+}
+
+.contenedor-mvo-subaartado-con{
+	padding-bottom: 20px;
+}
+
+.contenedor-titulo-perfil-con p,
+.contenedor-titulo-perfil-con2 p{
+    padding: 1px 15px;
+    font-size: 24pt;
+ }
+
+.contenedor-apartado-con {
+	padding: 10PX;
+	height: 350px;
+}
+
+ .contenedor-perfil-con {
+    height: 280px;
+}
+
+ol.round p {
+    width: 94%;
+    font-size: 12pt;
+}
+/*******************************************************SECCIÓN LINEAS-CUERPOS-CON******************************************/
+
+.contenedor-lineas-cuerpos {
+    width: 95%;
+    margin: auto;
+    display: block;
+}
+
+.contenedor-titulo-seccion-con p {
+    padding: 5px 15px;
+    font-size: 22pt;
+    margin-bottom: 15px;
+}
+/*******************************************************SECCIÓN RETICULA-CON******************************************/
+.contenedor-texto-completo-acordeon-con {
+    min-height: 350px;
+    display: contents;
+}
+
+.contenedor-acordeon-subapartado-con {
+    width: 100%;
+}
+
+.contenedor-titulo-acordeon-con p {
+    height: 49px;
+    font-size: 24pt;
+}
+
+.contenedor-acordeon-con {
+    width: 47%;
+    height: auto;
+    display: block;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.info-acordeon-con p{
+	font-size: 8pt;
+    line-height: 1.5;
+}
+
+.contenedor-enlaces-con a {
+	font-size: 8pt;
+	margin: 0;
+}
+
+/*******************************************************SECCIÓN ORGANIGRAMA-CON******************************************/
+
+.contenedor-texto-completo-org-con {
+    min-height: 200px;
+    margin-top: -222px;
+    margin-right: 10px;
+    float: right;
+    width: 46%;
+}
+.contenedor-org-con{
+	width: 100%;
+	height: 200px;
+}
+
+
+.contenedor-titulo-org-con p{
+	height:49px;
+	font-size: 22pt;
+	line-height: 1.5;
+}
+
+.info-org-con{
+	padding-top: 5px;
+}
+
+.info-org p{
+	margin:10px;
+}
+
+.imagen-ingre-egre{
+	width: 	160px;
+}
+
+}
+
+@media screen and (max-width: 375px){/************************375PX***********************************/
+/*******************************************************SECCIÓN PERFIL-CARRERA-CON******************************************/
+
+.contenedor-apartado-con {
+    height: 270px;
+}
+/*******************************************************SECCIÓN LINEAS-CUERPOS-CON******************************************/
+
+.tabla-informacion-escolar th, td {
+    padding: 10px;
+}
+
+.tabla-informacion-escolar-con thead {
+    font-size: 14px;
+}
+
+.tabla-informacion-escolar-con td {
+    text-align: center;
+    font-size: 12pt;
+    line-height: 1.5;
+}
+
+.contenedor-titulo-acordeon-con p {
+    font-size: 20pt;
+    padding-top: 5px;
+}
+
+
+/*******************************************************SECCIÓN ORGANIGRAMA-CON******************************************/
+.contenedor-texto-completo-org-con {
+    margin-top: -254px;
+}
+.contenedor-titulo-org-con p  {
+    font-size: 18pt;
+    padding-top: 5px;
+}
+
+}
+
+@media screen and (max-width: 360px){/************************360PX***********************************/
+.contenedor-mvo-con {
+    height: 710px;
+}
+
+.titulo-linea-cuerpo p {
+    font-size: 15pt;
+}
+
+.info-mvo-con p {
+    font-size: 13pt;
+    padding: 10px;
+}
+
+.contenedor-mvo-con {
+    height: 750px;
+}
+
+.contenedor-perfil-con {
+    height: 220px;
+    margin-bottom: 10px;
+}
+
+.contenedor-titulo-seccion-con p {
+    padding: 5px 15px;
+    font-size: 19pt;
+    margin-bottom: 15px;
+}
+
+.tabla-informacion-escolar-con td {
+    font-size: 9pt;
+}
+
+.contenedor-texto-completo-org-con {
+    margin-top: -221px;
+}
+
+.info-acordeon-con p {
+    font-size: 7pt;
+}
+
+.imagen-ingre-egre {
+    width: 146px;
+}
+
+}
+/*******************************************************SECCIÓN MVO******************************************/
+
+
+@media screen and (max-width: 700px){/************************700PX***********************************/
+
+.contenedor-mvo{
+	height: 550px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.contenedor-img-mvo{
+	height: 220px;
+	margin: 1% auto;
+	width: 100%;
+}
+
+.contenedor-img-mvo2{
+	height: 220px;
+	margin: 1% auto;
+	width: 100%;
+}
+
+.contenedor-titulo-mvo,
+.contenedor-titulo-mvo-2{
+	width: 100%
+}
+
+.contenedor-titulo-mvo p{
+	padding: 5px;
+	padding-bottom: 10px;
+	font-size: 28pt;
+}
+
+.contenedor-titulo-mvo-2 p{
+	padding: 5px;
+	padding-bottom: 10px;
+	font-size: 28pt;
+}
+
+.info-mvo{
+	display: block;
+	width:100%;
+	height:200px;
+}
+
+.info-mvo p{
+	font-size: 16pt;
+}
+
+}
+
+
+@media screen and (max-width: 450px){/**************************450PX*******************************/
+
+.contenedor-mvo{
+	height: 490px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.contenedor-img-mvo{
+	height: 160px;
+	margin: 1% auto;
+	width: 100%;
+}
+
+.contenedor-img-mvo2{
+	height: 160px;
+	margin: 1% auto;
+	width: 100%;
+}
+
+.contenedor-titulo-mvo,
+.contenedor-titulo-mvo-2{
+	width: 100%
+}
+
+.contenedor-titulo-mvo p{
+	padding: 5px;
+	padding-bottom: 10px;
+	font-size: 25pt;
+}
+
+.contenedor-titulo-mvo-2 p{
+	padding: 5px;
+	padding-bottom: 10px;
+	font-size: 25pt;
+}
+
+.info-mvo{
+	display: block;
+	width:100%;
+	height:200px;
+}
+
+.info-mvo p{
+	font-size: 13pt;
+}
+
+}
+
+@media screen and (max-width: 360px){/**************************375PX*******************************/
+
+.info-mvo p {
+    font-size: 12pt;
+}
+
+}
+
+
+/*******************************************************SECCIÓN ACORDEON******************************************/
 
 
 
+@media screen and (max-width: 700px){/************************700PX***********************************/
 
+.contenedor-titulo-acordeon p{
+    font-size: 20pt;
+}
 
+.info-acordeon-centrado p{
+	margin:10px;
+	font-size: 15pt;
+}
 
+.contenedor-enlaces a{
+	font-size: 11pt;
+}
 
+}
+
+@media screen and (max-width: 450px){/**************************450PX*******************************/
+
+.contenedor-titulo-acordeon p{
+    font-size: 16pt;
+}
+
+.info-acordeon-centrado p{
+	margin:10px;
+	font-size: 10pt;
+}
+
+.contenedor-enlaces a{
+	font-size: 7pt;
+}
+
+}
+
+@media screen and (max-width: 375px){/**************************375PX*******************************/
+
+.contenedor-titulo-acordeon p{
+    font-size: 14pt;
+}
+
+.info-acordeon-centrado p{
+	margin:10px;
+	font-size: 9pt;
+}
+
+.contenedor-enlaces a{
+	font-size: 6pt;
+}
+
+}
 

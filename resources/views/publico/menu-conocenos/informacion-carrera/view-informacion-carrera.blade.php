@@ -7,19 +7,24 @@
 <!----------------------------------------------------------------- INFORMACIÓN DE LA CARRERA --------------------------------------------------------------------------->
 <div class="seccion-principal">
 	<!------------------------------------------------------------- IMG PARALLAX ----------------------------------------------------------->
+	<div class="contenedor-img-encabezado">
 
-	<div class="contenedor-img-parallax">
+          <div class="img-encabezado">
 
-	    <div class="img-parallax">
-	     <div class="parallax">
-	       <h1>Información de la carrera</h1>
-	       <hr>
-	     </div>       
-	    </div>
+            <img src="/img/Conocenos.jpg">
 
-	    <div class="skew-abajo"></div>
+            <div class="encabezado">
 
-	</div> 
+               <h1>Información de la carrera</h1>
+               <hr>
+
+            </div>
+
+          </div>   
+
+          <div class="skew-abajo"></div>
+
+      </div>
 <!----------------------------------------------------------------- CUERPO INFORMACIÓN DE LA CARRERA --------------------------------------------------------------------------->
 		
 	<div class="fondo-mvo">
@@ -33,6 +38,10 @@
 
 				<div class="contenedor-mvo-subapartado">
 
+					<div class="contenedor-img-mvo">
+						<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
+					</div>
+
 					<div class="contenedor-titulo-mvo">
 						<p>{{$informacion->categoria}}</p>			
 					
@@ -40,9 +49,6 @@
 								<p>{{$informacion->descripcion}}</p>
 					</div>
 
-					</div>
-					<div class="contenedor-img-mvo">
-						<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
 					</div>
 
 				</div>
@@ -55,6 +61,10 @@
 
 				<div class="contenedor-mvo-subapartado">
 
+					<div class="contenedor-img-mvo2">
+						<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
+					</div>
+
 					<div class="contenedor-titulo-mvo-2">
 						<p>{{$informacion->categoria}}</p>			
 					
@@ -63,9 +73,7 @@
 					</div>
 
 					</div>
-					<div class="contenedor-img-mvo2">
-						<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
-					</div>
+					
 
 				</div>
 		
@@ -78,6 +86,10 @@
 
 				<div class="contenedor-mvo-subapartado">
 
+					<div class="contenedor-img-mvo">
+						<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
+					</div>
+
 					<div class="contenedor-titulo-mvo">
 						<p>{{$informacion->categoria}}</p>			
 					
@@ -85,9 +97,6 @@
 								<p>{{$informacion->descripcion}}</p>
 					</div>
 
-					</div>
-					<div class="contenedor-img-mvo">
-						<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
 					</div>
 
 				</div>
@@ -101,6 +110,10 @@
 
 				<div class="contenedor-mvo-subapartado">
 
+					<div class="contenedor-img-mvo2">
+						<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
+					</div>
+
 					<div class="contenedor-titulo-mvo-2">
 						<p>{{$informacion->categoria}}</p>			
 					
@@ -108,9 +121,6 @@
 								<p>{{$informacion->descripcion}}</p>
 					</div>
 
-					</div>
-					<div class="contenedor-img-mvo2">
-						<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
 					</div>
 
 				</div>
