@@ -106,7 +106,7 @@
  	<div class="contenedor">
  		<div class="lista-menu justify-content-between align-items-center">
  			<div class="logo-menu">
- 				<a href="#" class="titulo-menu">
+ 				<a href="/" class="titulo-menu">
  					Sistemas Computacionales
  				</a>
  			</div>
@@ -242,7 +242,7 @@
 
                     <div class="contactos-footer">
                         <div class="icono"><i class="fas fa-envelope"></i></div>
-                         <label>direccion@itscarrillopuerto.edu.mx </label>
+                         <label>direccion@gmail</label>
                     </div>
 
                 </div>
