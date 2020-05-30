@@ -9,6 +9,13 @@
 
 		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
+		<!--------------------------------NORMALIZE - AYUDA A QUE NUESTRA PAG SE VEA BIEN EN OTRAS PÁGINAS---------------------------------------->
+		
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css')}}">
+
+		<!--------------------------------NORMALIZE - IMPORTANTE DEBE IR SOBRE TODOS LOS CSS---------------------------------------->
+
+
         <link rel="stylesheet" type="text/css" href="{{ asset('css/estilos.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/elementos.css')}}">
 
@@ -127,6 +134,7 @@
 				<li><a href="{{route('slider')}}"><i class="icono izquierda fas fa-laptop-house"></i>Inicio<i class=" icono derecha fa fa-chevron-down"></i></a>
 					<ul>
 						<li><a href="{{route('slider')}}"><i class="icono izquierda fab fa-slideshare"></i>Slider</a></li>
+						<li><a href="#"><i class="icono izquierda fas fa-th-list"></i>Encabezados</a></li>
 						<li><a href="{{route('noticias-admin')}}"><i class="icono izquierda far fa-newspaper"></i>Noticias</a></li>
 						<li><a href="{{route('calendario')}}"><i class="icono izquierda far fa-calendar-alt"></i>Calendario</a></li>
 					</ul>
@@ -174,6 +182,8 @@
 					</ul>
 
 				</li>
+
+				<li><a href="/footer"><i class="icono izquierda fas fa-shoe-prints"></i>Footer</a></li>
 
 			</ul>
 
