@@ -10,6 +10,13 @@
 	  	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	  	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Pacifico' rel='stylesheet' type='text/css'>
 
+
+		<!--------------------------------NORMALIZE - AYUDA A QUE NUESTRA PAG SE VEA BIEN EN OTRAS PÁGINAS---------------------------------------->
+		
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css')}}">
+
+		<!--------------------------------NORMALIZE - IMPORTANTE DEBE IR SOBRE TODOS LOS CSS---------------------------------------->
+
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-publico.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/elementos-publico.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/conocenos-publico.css')}}">

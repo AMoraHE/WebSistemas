@@ -239,7 +239,6 @@
 
    <!-- Nuestros proyectos -->
    <section class="our-projects">
-      <div class="skew-arriba"></div>
    <div class="deg-background"></div>
    
    <div class="ejeZproject">

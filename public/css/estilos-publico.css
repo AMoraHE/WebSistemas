@@ -22,8 +22,6 @@ html {
 
 body {
     position: relative;
-    margin: 0;
-    /*width: 1920px;*/
     width: 100%;
    /* min-width: 350px; */
     min-height: 100%;
@@ -339,8 +337,9 @@ Pie*****************************************************************************
 
 footer{
     width: 100%;
-    background: #202020;
-    color: white;   
+    background: #17202A;
+    color: white;
+    border-top: 3px solid #f1592a;   
     
 }
 
@@ -440,7 +439,7 @@ footer{
 
 .contenedor-footer-barra{
     width: 100%;  
-    background: #101010;
+    background: #212F3D;
 }
 
 .footer{
@@ -467,9 +466,23 @@ footer{
 }
 
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1180px){
 
  /************************************************************************************************SECCIÓN MENU***********************************************************************/
+
+ .logo-menu{
+    width: 100%;
+    text-align: center;
+ }
+
+ .menu-nav{
+    width: 100%;
+    text-align: center;
+ }
+
+ .sub-menu{
+    text-align: justify;
+ }
 
 
 /************************************************************************************************SECCIÓN FOOTER***********************************************************************/
@@ -493,8 +506,21 @@ footer{
     }
 }
 
-@media(max-width: 800px){
+@media(max-width: 950px){
 
+
+    .logo-menu{
+        width: auto;
+    }
+
+    .menu-nav{
+        width: auto;
+        text-align: justify;
+    }
+
+    .lista-menu{
+        padding: 10px;
+    }
 
     .menu .menu-nav-toggle{
         display: flex;
@@ -509,7 +535,7 @@ footer{
 
   .menu .menu-nav ul{
     background-color: #222222;
-    margin-top:12px;
+    margin:15px auto;
   }
   .menu .menu-nav ul > li{
     display: block;
@@ -538,4 +564,17 @@ footer{
     color: #ffffff;
     padding:14px 20px 12px 40px;
  }
+}
+
+@media(max-width: 450px){
+
+/************************************************************************************************SECCIÓN MENU***********************************************************************/
+
+    .menu .logo-menu .titulo-menu{
+     font-size:18px;
+    }
+
+  .menu .menu-nav ul > li > a {
+    font-size: 14px;
+  }
 }

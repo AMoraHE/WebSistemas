@@ -19,7 +19,7 @@
 
  for(let i=0; i<subMenuToggleBtn.length; i++){
     subMenuToggleBtn[i].addEventListener("click",function(){
-     if(window.innerWidth < 768){
+     if(window.innerWidth < 951){
     	const dropdown=this.parentElement;
     	const height=dropdown.querySelector(".sub-menu").scrollHeight;
     	const subMenu=dropdown.querySelector(".sub-menu");
