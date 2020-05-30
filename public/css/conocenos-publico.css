@@ -1382,7 +1382,7 @@ ol.round p {
 }
 
 .imagen-ingre-egre{
-	width: 200px;
+	width: 	160px;
 }
 
 }
@@ -1417,15 +1417,61 @@ ol.round p {
 
 /*******************************************************SECCIÓN ORGANIGRAMA-CON******************************************/
 .contenedor-texto-completo-org-con {
-    margin-top: -238px;
+    margin-top: -254px;
 }
-.contenedor-titulo-org-con p {
+.contenedor-titulo-org-con p  {
     font-size: 18pt;
     padding-top: 5px;
 }
 
 }
 
+@media screen and (max-width: 360px){/************************360PX***********************************/
+.contenedor-mvo-con {
+    height: 710px;
+}
+
+.titulo-linea-cuerpo p {
+    font-size: 15pt;
+}
+
+.info-mvo-con p {
+    font-size: 13pt;
+    padding: 10px;
+}
+
+.contenedor-mvo-con {
+    height: 750px;
+}
+
+.contenedor-perfil-con {
+    height: 220px;
+    margin-bottom: 10px;
+}
+
+.contenedor-titulo-seccion-con p {
+    padding: 5px 15px;
+    font-size: 19pt;
+    margin-bottom: 15px;
+}
+
+.tabla-informacion-escolar-con td {
+    font-size: 9pt;
+}
+
+.contenedor-texto-completo-org-con {
+    margin-top: -221px;
+}
+
+.info-acordeon-con p {
+    font-size: 7pt;
+}
+
+.imagen-ingre-egre {
+    width: 146px;
+}
+
+}
 /*******************************************************SECCIÓN MVO******************************************/
 
 
@@ -1583,5 +1629,15 @@ ol.round p {
 }
 
 }
+@media screen and (max-width: 375px){/**************************375PX*******************************/
 
+.info-mvo p {
+    font-size: 12pt;
+}
 
+.contenedor-titulo-mvo p,
+.contenedor-titulo-mvo-2 p{
+    font-size: 22pt;
+}
+
+}
