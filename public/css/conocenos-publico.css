@@ -1574,6 +1574,14 @@ ol.round p {
 
 }
 
+@media screen and (max-width: 360px){/**************************375PX*******************************/
+
+.info-mvo p {
+    font-size: 12pt;
+}
+
+}
+
 
 /*******************************************************SECCIÓN ACORDEON******************************************/
 
@@ -1629,15 +1637,4 @@ ol.round p {
 }
 
 }
-@media screen and (max-width: 375px){/**************************375PX*******************************/
 
-.info-mvo p {
-    font-size: 12pt;
-}
-
-.contenedor-titulo-mvo p,
-.contenedor-titulo-mvo-2 p{
-    font-size: 22pt;
-}
-
-}
