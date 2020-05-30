@@ -209,7 +209,7 @@
 
 <!----------------------------------------------------------------- BOTONES VER MAS ---------------------------------------------------------->
 
-		<div class="contenedor-botones-centrado">
+		<div class="contenedor-botones-centrado margin-arriba">
 
 			<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticias"><button class="btn ver centrado"><span>Ver Más Noticias</span></button></a>
 

@@ -72,11 +72,11 @@
 
 				</div>
 
-				<div class="contenedor-botones">
+				<!--<div class="contenedor-botones">
 
 					<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticias"><button class="btn"><span>Regresar</span></button></a>
 			
-				</div>
+				</div>-->
 
 
 		</div>
