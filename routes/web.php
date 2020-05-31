@@ -11,6 +11,15 @@
 |
 */
 
+//TEMP ROUTES
+
+Route::get('/admin-header', 'PublicController@header');
+Route::get('/admin-header-edit', 'PublicController@headerEdit');
+Route::get('/admin-footer', 'PublicController@footer');
+Route::get('/admin-footer-edit', 'PublicController@footerEdit');
+
+//END TEMP ROUTES
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

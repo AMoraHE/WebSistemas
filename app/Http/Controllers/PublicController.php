@@ -31,6 +31,28 @@ use Validator;
 
 class PublicController extends Controller
 {
+  //TEMP
+  public function header()
+  {
+    return view('admin.menu-inicio.img-encabezado.encabezados');
+  }
+
+  public function headerEdit()
+  {
+    return view('admin.menu-inicio.img-encabezado.editar-encabezados');
+  }
+
+  public function footer()
+  {
+    return view('admin.menu-footer.view-footer');
+  }
+
+  public function footerEdit()
+  {
+    return view('admin.menu-footer.editar-footer');
+  }
+  //END TEMP
+
   public function inicio()
   {
     $informaciones = informacion::where('slug', 'ObjetivoCarrera')->firstOrFail();

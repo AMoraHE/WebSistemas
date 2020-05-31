@@ -18,17 +18,22 @@
 
 	<div class="titulos-secciones-principales">
 
-    	<h1>INFORMACIÓN DE LA CARRERA</h1>
+    	<h1>FOOTER</h1>
     
   	</div>
 
-	@foreach($informaciones as $informacion)
 	
 	<div class="contenedor-titulo-seccion">
 
-		<h3>{{$informacion->categoria}}</h3>
+		<h3>FOOTER X2</h3>
 
 	</div>
+
+  <div class="contenedor-botones">
+    
+    <a href="/admin-footer-edit"><button class="btn editar"><span>VISTA EDITAR</span></button></a>
+
+  </div>
 
 <!----------------------------------------------------------------- CUERPO INFORMACIÓN DE LA CARRERA --------------------------------------------------------------------------->
 
@@ -49,25 +54,25 @@
           	<td>
               <div class="contenedor-img-organigrama hover-img">
 
-                  <a href="#modal-img{{$informacion->id}}">
+                  <a href="#modal-img1">
     
-                    <img src="/images/informacion/{{$informacion->img}}">
+                    <img src="">
                     <span><i class="fas fa-expand"></i></span>
 
                   </a>
 
                 </div>
 
-                  <div class="modal-img" id="modal-img{{$informacion->id}}">
+                  <div class="modal-img" id="modal-img1">
 
                       <a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
-                      <img src="/images/informacion/{{$informacion->img}}" />
+                      <img src="/1.png" />
 
                 
                   </div>
                 </td>
           	<td>
-              <p>{{$informacion->descripcion}} </p>
+              <p>FOOTER X3</p>
             </td>
           </tr>
 
@@ -83,11 +88,9 @@
 
 	<div class="contenedor-botones">
 
-		<a class="msj" mesanje="editar información de la carrera?" href="/informacion/{{$informacion->slug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
+		<a class="msj" mesanje="editar footer?" href=""><button class="btn editar"><span>Editar</span></button></a>
 			
 	</div>
-
-	@endforeach
 
 </div>
 

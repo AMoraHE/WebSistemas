@@ -10,30 +10,22 @@
 
 <div class="contenedor-titulo-seccion">
 
-      <h3>Editar Slider</h3>
+      <h3>Editar Encabezado</h3>
   
 </div>
 
 <!----------------------------------------------------- SELECT SLIDER -------------------------------------------------------------->
 
-  <div class="contenedor-select">
+   <div class="contenedor-select">
 
 
     <div class="contenedor-select-seccion">
               
       <select name="slider_id" id ="slider" class="seleccion" onchange="top.location.href = this.options[this.selectedIndex].value">
 
-        <option value="">--Elija el slider--</option> 
+        <option value="">--Elija el encabezado--</option> 
+        <option value="">Encabezado - 1</option>
 
-        @foreach ($slidersG as $sliderG)
-
-        @php
-        $var = $sliderG->id
-        @endphp
-
-        <option value="{{route('filtrarslider', ['id' => $var])}}">Slider - {{$sliderG->id}}</option>
-
-        @endforeach
 
       </select>
       <i></i>
@@ -44,7 +36,7 @@
 
 <!----------------------------------------------------------------- FORMULARIO SLIDER ---------------------------------------------------------->
 
-  <form id="formulario" class="form-goup" files="true" method="POST" action="/slider/{{$slider->slug}}" enctype="multipart/form-data">
+  <form id="formulario" class="form-goup" files="true" method="POST" action="/" enctype="multipart/form-data">
       @method('PUT')
       @csrf
 
@@ -54,7 +46,7 @@
       @if ($errors->any())
   		<input type="text" name="titulo" id="titulo" value="{{old('titulo')}}" placeholder="Inserte El Título Deseado" class="form-control" required>
       @else
-      <input type="text" name="titulo" id="titulo" value="{{$slider->titulo}}" placeholder="Inserte El Título Deseado" class="form-control" required>
+      <input type="text" name="titulo" id="titulo" value="" placeholder="Inserte El Título Deseado" class="form-control" required>
       @endif
 
   	</div>
@@ -71,7 +63,7 @@
       @if ($errors->any())
       <input type="text" name="contenido" id="subtitulo" value="{{old('contenido')}}" placeholder="Inserte Subtítulo Deseado" class="form-control" required>
       @else
-      <input type="text" name="contenido" id="subtitulo" value="{{$slider->contenido}}" placeholder="Inserte Subtítulo Deseado" class="form-control" required>
+      <input type="text" name="contenido" id="subtitulo" value="" placeholder="Inserte Subtítulo Deseado" class="form-control" required>
       @endif
 
     </div>
@@ -101,14 +93,14 @@
   		<div class="contenedor-boton-cargar">
 
   			<label for="file-upload" class="subir"><i class="icono-izquierda fas fa-cloud-upload-alt"></i> Subir Archivo</label>
-  			<input id="file-upload" name="image" value="/images/slider/{{$slider->image}}" onchange='cambiar()' type="file" accept="image/gif, image/jpeg, image/png" style='display: none;'/>
+  			<input id="file-upload" name="image" value="/1.png" onchange='cambiar()' type="file" accept="image/gif, image/jpeg, image/png" style='display: none;'/>
 
   		</div>
 
 
   		<div class="contenedor-img-seccion-rectangular">
 
-  			<img id="img-pre" src="/images/slider/{{$slider->image}}">
+  			<img id="img-pre" src="/1.png">
 
   		</div>
 
@@ -145,21 +137,18 @@
 
   	</div>
 
-    @foreach ($slidersG as $sliderG)
-
   	<div class="contenedor-seccion-preliminar">
 
       <div class="contenedor-seccion-preliminar-img-redimensionales">
 
-  			<img src="/images/slider/{{$sliderG->image}}">
+  			<img src="/1.png">
 
       </div>
 
-  		<h2>{{$sliderG->titulo}}</h2>
+  		<h2>NEL</h2>
 
   	</div>
 
-    @endforeach
 
   </div>
 
@@ -167,7 +156,7 @@
 
   <div class="contenedor-botones">
 
-    <a class="msj" mesanje="cancelar?" href="/slider"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+    <a class="msj" mesanje="cancelar?" href="/admin-header"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 
   </div>
   
