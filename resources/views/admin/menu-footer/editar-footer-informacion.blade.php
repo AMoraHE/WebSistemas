@@ -10,14 +10,14 @@
 
 	<div class="contenedor-titulo-seccion">
 
-		<h3>Editar - {{$informacion->categoria}}</h3>											
+		<h3>Editar - Información de la escuela</h3>											
 
 	</div> 
 
 <!--------------------------------------------------- FORMULARIO - EDITAR INFORMACION DE LA CARRERA ---------------------------------------------------------------------->
 
 
-	<form id="formulario" class="form group" method="POST" action="/informacion/{{$informacion->slug}}" enctype="multipart/form-data">
+	<form id="formulario" class="form group" method="POST" action="/" enctype="multipart/form-data">
 		@method('PUT')
 		@csrf
 
@@ -25,7 +25,7 @@
 
       <div class="contenedor-txt-seccion">
               
-        <label>Seleccionar Logo</label>
+        <label>Seleccionar logo</label>
 
       </div>
 
@@ -38,7 +38,7 @@
 
       <div class="contenedor-img-seccion-cuadrado">
               
-        <img id="img-pre" src="/images/informacion/{{$informacion->img}}">
+        <img id="img-pre" src="/1.png">
 
       </div>
               
@@ -57,11 +57,11 @@
 
 		<div class="formulario">
 				
-			<label>Información</label>
+			<label>Información de la escuela</label>
 			@if ($errors->any())
 			<textarea type="text" name="descripcion" required>{{old('descripcion')}}</textarea> 
 			@else
-			<textarea type="text" name="descripcion" required>{{$informacion->descripcion}}</textarea> 
+			<textarea type="text" name="descripcion" required>Footer x2</textarea> 
 			@endif
 				
 		</div>
@@ -76,7 +76,7 @@
 		<div class="contenedor-botones">
 					
 			<a id="save" texto="guardar los cambios?"><button type="submit" class="btn guardar"><span>Guardar</span></button></a>
-			<a class="msj" mesanje="Cancelar" href="/informacion"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
+			<a class="msj" mesanje="Cancelar" href="/admin-footer"><button type="button" class="btn cancelar"><span>Cancelar</span></button></a>
 	
 		</div> 
 		

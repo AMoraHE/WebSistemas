@@ -1435,7 +1435,7 @@ body::-webkit-scrollbar-thumb{
 ***************************************************************RESPONSIBO 600PX********************************************************************/
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 
 	.invalid-feedback {
 	  font-size: 14px;
@@ -1558,7 +1558,9 @@ body::-webkit-scrollbar-thumb{
 /************************************************************************************************SECCIÓN CARGAR ARCHIVOS IMG***********************************************************************/
 
 	.contenedor-cargar-img{
-		height: 200px;
+		height: auto;
+		padding: 20px;
+		flex-direction: column;
 	}
 
 	/***********************************ELEMENTOS SECCION CARGAR IMG*****************************************/

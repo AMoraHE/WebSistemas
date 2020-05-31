@@ -57,17 +57,6 @@
       </span>
     @endif
 
-    <div class="formulario">
-
-      <label>Descripción</label>
-      @if ($errors->any())
-      <input type="text" name="contenido" id="subtitulo" value="{{old('contenido')}}" placeholder="Inserte Subtítulo Deseado" class="form-control" required>
-      @else
-      <input type="text" name="contenido" id="subtitulo" value="" placeholder="Inserte Subtítulo Deseado" class="form-control" required>
-      @endif
-
-    </div>
-
     @if ($errors->has('contenido'))
       <span class="invalid-feedback" role="alert">
         <strong>{{ $errors->first('contenido') }}</strong>

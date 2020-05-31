@@ -29,37 +29,157 @@
 
   </div>
 
-<!----------------------------------------------------------------- IMG SLIDER ---------------------------------------------------------->
+<!----------------------------------------------------------------- IMG NOTICIAS ---------------------------------------------------------->
 
 
   <div class="contenedor-titulo-seccion">
       
-      <h3>NEL</h3>
+      <h3>Noticias</h3>
 
   </div>
 
   <div class="contenedor-img-grande">
 
-    <img src="/1.png">
-
-  </div>
-
-  <div class="contenedor-titulo-seccion">
-
-    <h3>NEL X2</h3>
+    <img src="img/academicos.png">
 
   </div>
 
 
-<!----------------------------------------------------------------- BOTONES SLIDER ---------------------------------------------------------->
+<!----------------------------------------------------------------- BOTONES ENCABEZADO ---------------------------------------------------------->
 
 
   <div class="contenedor-botones">
 
     <a class="msj" mesanje="editar el encabezado?" href=""><button class="btn editar"><span>Editar</span></button></a>
-    button></a>
 
   </div>
+
+<!----------------------------------------------------------------- IMG CONOCENOS ---------------------------------------------------------->
+
+
+  <div class="contenedor-titulo-seccion">
+      
+      <h3>Cónocenos</h3>
+
+  </div>
+
+  <div class="contenedor-img-grande">
+
+    <img src="img/academicos.png">
+
+  </div>
+
+
+<!----------------------------------------------------------------- BOTONES ENCABEZADO ---------------------------------------------------------->
+
+
+  <div class="contenedor-botones">
+
+    <a class="msj" mesanje="editar el encabezado?" href=""><button class="btn editar"><span>Editar</span></button></a>
+
+  </div>
+
+<!----------------------------------------------------------------- IMG INFRAESTRUCTURA ---------------------------------------------------------->
+
+
+  <div class="contenedor-titulo-seccion">
+      
+      <h3>Infraestructura</h3>
+
+  </div>
+
+  <div class="contenedor-img-grande">
+
+    <img src="img/academicos.png">
+
+  </div>
+
+
+<!----------------------------------------------------------------- BOTONES ENCABEZADO ---------------------------------------------------------->
+
+
+  <div class="contenedor-botones">
+
+    <a class="msj" mesanje="editar el encabezado?" href=""><button class="btn editar"><span>Editar</span></button></a>
+
+  </div>
+
+<!----------------------------------------------------------------- IMG ACÁDEMICOS ---------------------------------------------------------->
+
+
+  <div class="contenedor-titulo-seccion">
+      
+      <h3>Académicos</h3>
+
+  </div>
+
+  <div class="contenedor-img-grande">
+
+    <img src="img/academicos.png">
+
+  </div>
+
+
+<!----------------------------------------------------------------- BOTONES ENCABEZADO ---------------------------------------------------------->
+
+
+  <div class="contenedor-botones">
+
+    <a class="msj" mesanje="editar el encabezado?" href=""><button class="btn editar"><span>Editar</span></button></a>
+
+  </div>
+
+<!----------------------------------------------------------------- IMG CONOCENOS ---------------------------------------------------------->
+
+
+  <div class="contenedor-titulo-seccion">
+      
+      <h3>Galería</h3>
+
+  </div>
+
+  <div class="contenedor-img-grande">
+
+    <img src="img/academicos.png">
+
+  </div>
+
+
+<!----------------------------------------------------------------- BOTONES ENCABEZADO ---------------------------------------------------------->
+
+
+  <div class="contenedor-botones">
+
+    <a class="msj" mesanje="editar el encabezado?" href=""><button class="btn editar"><span>Editar</span></button></a>
+
+  </div>
+
+<!----------------------------------------------------------------- IMG CONOCENOS ---------------------------------------------------------->
+
+
+  <div class="contenedor-titulo-seccion">
+      
+      <h3>Contáctanos</h3>
+
+  </div>
+
+  <div class="contenedor-img-grande">
+
+    <img src="img/academicos.png">
+
+  </div>
+
+
+<!----------------------------------------------------------------- BOTONES ENCABEZADO ---------------------------------------------------------->
+
+
+  <div class="contenedor-botones">
+
+    <a class="msj" mesanje="editar el encabezado?" href=""><button class="btn editar"><span>Editar</span></button></a>
+
+  </div>
+
+
 
 </div>
 
