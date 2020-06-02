@@ -755,6 +755,46 @@
     text-align: center;
 }
 
+/************************************************************************************************SECCIÓN ENCABEZADO***********************************************************************/
+
+.encabezado-subsecciones{
+	display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.contenedor-sub{
+	width: 25%;
+	height: 200px;
+  	margin:10px;
+  	overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid var(--verde);
+}
+
+.contenedor-sub img{
+	width: 100%;
+	height: 100%; /***Hacer Responsivo***/
+	object-fit: cover;
+	object-position: center;
+	/*border: 2px solid var(--blanco);*/
+}
+
+.contenedor-sub h3{
+	width: 100%;
+	text-align: center;
+	color: var(--azul);
+	position: absolute;
+	bottom: 0;
+	background: var(--blanco);
+	font-weight: 200;
+	font-size: 18px;
+	border-top: 1px solid var(--verde);
+}
+
 /************************************************************************************************SECCIÓN CALENDARIO***********************************************************************/
 
 .contenedor-calendario{
@@ -1051,6 +1091,10 @@ body::-webkit-scrollbar-thumb{
 
 
 @media screen and (max-width: 1150px) { 
+
+/************************************************************************************************SECCIÓN ENCABEZADO****************************************************************************/
+	
+	.contenedor-sub {width: 80%; margin-bottom: 30px;}
 
 	.invalid-feedback {
 	  font-size: 15px;

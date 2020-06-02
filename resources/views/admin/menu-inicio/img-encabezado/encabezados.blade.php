@@ -29,6 +29,7 @@
 
   </div>
 
+
 <!----------------------------------------------------------------- IMG NOTICIAS ---------------------------------------------------------->
 
 
@@ -78,6 +79,69 @@
     <a class="msj" mesanje="editar el encabezado?" href=""><button class="btn editar"><span>Editar</span></button></a>
 
   </div>
+
+<!----------------------------------------------------------------- IMG CONOCENOS SUBSECCIONES---------------------------------------------------------->
+
+<div class="encabezado-subsecciones">
+
+  <div class="contenedor-sub">
+
+     <img src="img/academicos.png">
+
+     <div class="contenedor-fecha-noticia">
+
+          <p>Información de la Carrera</p>
+          
+      </div>  
+
+    
+  </div>
+
+  <div class="contenedor-sub">
+
+     <img src="img/academicos.png">
+     <div class="contenedor-fecha-noticia">
+
+          <p>Perfil de la Carrera</p>
+          
+      </div>  
+    
+  </div>
+
+  <div class="contenedor-sub">
+
+     <img src="img/academicos.png">
+     <div class="contenedor-fecha-noticia">
+
+          <p>LI - CA</p>
+          
+      </div>      
+    
+  </div>
+
+  <div class="contenedor-sub">
+
+     <img src="img/academicos.png">
+     <div class="contenedor-fecha-noticia">
+
+          <p>Retícula</p>
+          
+      </div>      
+    
+  </div>
+
+  <div class="contenedor-sub">
+
+     <img src="img/academicos.png">
+     <div class="contenedor-fecha-noticia">
+
+          <p>Organigrama</p>
+          
+      </div>      
+    
+  </div>
+  
+</div>
 
 <!----------------------------------------------------------------- IMG INFRAESTRUCTURA ---------------------------------------------------------->
 
@@ -129,6 +193,59 @@
 
   </div>
 
+<!----------------------------------------------------------------- IMG ACÁDEMICOS SUBSECCIONES---------------------------------------------------------->
+
+<div class="encabezado-subsecciones">
+
+  <div class="contenedor-sub">
+
+     <img src="img/academicos.png">
+
+     <div class="contenedor-fecha-noticia">
+
+          <p>Proyectos</p>
+          
+      </div>  
+
+    
+  </div>
+
+  <div class="contenedor-sub">
+
+     <img src="img/academicos.png">
+     <div class="contenedor-fecha-noticia">
+
+          <p>Eventos Académicos</p>
+          
+      </div>  
+    
+  </div>
+
+  <div class="contenedor-sub">
+
+     <img src="img/academicos.png">
+     <div class="contenedor-fecha-noticia">
+
+          <p>Convocatorias</p>
+          
+      </div>      
+    
+  </div>
+
+    <div class="contenedor-sub">
+
+     <img src="img/academicos.png">
+     <div class="contenedor-fecha-noticia">
+
+          <p>Programas</p>
+          
+      </div>      
+    
+  </div>
+  
+</div>
+
+
 <!----------------------------------------------------------------- IMG CONOCENOS ---------------------------------------------------------->
 
 
@@ -160,6 +277,32 @@
   <div class="contenedor-titulo-seccion">
       
       <h3>Contáctanos</h3>
+
+  </div>
+
+  <div class="contenedor-img-grande">
+
+    <img src="img/academicos.png">
+
+  </div>
+
+
+<!----------------------------------------------------------------- BOTONES ENCABEZADO ---------------------------------------------------------->
+
+
+  <div class="contenedor-botones">
+
+    <a class="msj" mesanje="editar el encabezado?" href=""><button class="btn editar"><span>Editar</span></button></a>
+
+  </div>
+
+
+<!----------------------------------------------------------------- IMG CLENDARIO ---------------------------------------------------------->
+
+
+  <div class="contenedor-titulo-seccion">
+      
+      <h3>Calendario</h3>
 
   </div>
 

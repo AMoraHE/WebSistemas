@@ -21,6 +21,10 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/elementos-publico.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/conocenos-publico.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-infra.css')}}">
+		
+		<!--------------------------------Animaciones---------------------------------------->
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/animaciones.css')}}">
+
 
 		<!--------------------------------ICONOS---------------------------------------->
 
@@ -284,6 +288,9 @@
 	<!--------------------------------MINI CALENDARIO---------------------------------------->
 
 	<script src="{{ asset('js/calendar-public.js')}}"></script>
+
+	<!--------------------------------Animaciones---------------------------------------->
+	<script src="{{ asset('js/animacion.js')}}"></script>
 
 
 </body>

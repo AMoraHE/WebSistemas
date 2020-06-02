@@ -347,7 +347,7 @@
 
 .contenedor-img-encabezado{
 	position: relative;
-    width: 100%;
+  width: 100%;
 }
 
 .img-encabezado{
@@ -362,6 +362,7 @@
 	height: 100%; /***Hacer Responsivo***/
 	object-fit: cover;
 	object-position: center;
+  animation: arriba 1s ease-in;
 }
 
 .encabezado{
@@ -381,6 +382,7 @@
     font-size: 50px;
     color:#fff;
     font-weight: 200;
+    animation: moverDerecha 1s ease-in;
 }
 
 .encabezado hr{
@@ -389,6 +391,7 @@
     background: #fff;
     border: none;
     margin-top: 5px;
+     animation: moverIzquierda 1s ease-in;
 }
 
 /************************************************************************************************FIN SECCIÓN IMG ENCABEZADO***********************************************************************/
@@ -453,7 +456,7 @@
 }
 
 .contenedor-img-proyecto{
-	width: calc(30% - 10px);
+	 width: calc(30% - 10px);
   	margin:10px;
   	overflow: hidden;
     position: relative;

@@ -71,7 +71,7 @@
 
 <div class="contenedor-dividido">
 
-	<div class="contenedor-noticia-1">
+	<div class="contenedor-noticia-1 animado">
 		
 		<div class="contenedor-titulo-seccion">
 
@@ -121,7 +121,7 @@
 <!------------------------------------------------------------- CALENDARIO ---------------------------------------------------------->
 
 	<div class="mini-calendario">
-		<div class="contenedor-mini-calendario">
+		<div class="contenedor-mini-calendario animado">
 	        <div class="calendario-public">
 	            <div class="month">
 	                <div class="prev" onclick="moveDate('prev')">
