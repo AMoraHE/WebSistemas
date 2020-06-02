@@ -217,7 +217,7 @@
                     @foreach($redes as $red)
                     <div class="redes-sociales">
                         <img src="/icon/{{$red->icon}}">
-                        <a target="_blank" rel="noopener noreferrer" href="http://{{$red->enlace}}">{{$red->descripcion}}</a>
+                        <label><a target="_blank" rel="noopener noreferrer" href="http://{{$red->enlace}}">{{$red->descripcion}}</a></label>
                     </div>
                     @endforeach
 
