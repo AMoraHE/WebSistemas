@@ -1056,8 +1056,8 @@ figure .trasera hr {
 
 figure .trasera p {
 	font-family: 'Open Sans', sans-serif;
-	line-height: inherit;
-	font-size: 18px;
+	line-height: 2.5;
+    font-size: 12pt;
 }
 
 
