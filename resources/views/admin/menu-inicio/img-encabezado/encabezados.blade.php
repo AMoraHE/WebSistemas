@@ -55,12 +55,11 @@
 
        <img src="/images/header/{{$subheader->sImg}}">
 
-       <div class="contenedor-fecha-noticia">
+       <a class="msj" mesanje="editar el encabezado?" href="/admin-header-sub/{{$subheader->sSlug}}/edit"><div class="contenedor-fecha-noticia">
 
             <p>{{$subheader->sTitulo}}</p>
-            <a class="msj" mesanje="editar el encabezado?" href="/admin-header-sub/{{$subheader->sSlug}}/edit"><button class="btn editar"><span>Editar</span></button></a>
             
-        </div>  
+        </div></a>  
 
     </div>
     @endif
