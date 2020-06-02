@@ -362,7 +362,7 @@
 	height: 100%; /***Hacer Responsivo***/
 	object-fit: cover;
 	object-position: center;
-  animation: desvanecer .5s ease-in;
+  animation: fadeIn .5s ease-in;
 }
 
 .encabezado{

@@ -21,10 +21,10 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/elementos-publico.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/conocenos-publico.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/estilos-infra.css')}}">
-		
-		<!--------------------------------Animaciones---------------------------------------->
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/animaciones.css')}}">
 
+		<!---------------------------------ANIMACIONES------------------------------------------>
+
+		<link rel="stylesheet" href="{{ asset('css/animate.css')}}">
 
 		<!--------------------------------ICONOS---------------------------------------->
 
@@ -55,10 +55,6 @@
 		<!---------------------------------GALERIA------------------------------------------>
 		
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/galeria.css')}}">
-
-		<!---------------------------------ANIMACIONES------------------------------------------>
-
-		<link rel="stylesheet" href="{{ asset('css/animate.css')}}">
 
 		<!-----------SCRIPT AJAX --- IMPORTANTE DEBE IR ARRIBA DE TODOS LOS JS-------------->
 
@@ -294,7 +290,6 @@
 	<script src="{{ asset('js/calendar-public.js')}}"></script>
 
 	<!--------------------------------Animaciones---------------------------------------->
-	<script src="{{ asset('js/animacion.js')}}"></script>
 	<script src="{{ asset('js/wow.min.js')}}"></script>
 
    	<script>
