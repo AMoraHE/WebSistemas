@@ -11,14 +11,14 @@
 
 	    <!------------------------------------------------------------- IMG Encabezado ----------------------------------------------------------->
 
-      	<div class="contenedor-seccion-img-grande">
 
-            <img src="/images/galeria/album/{{$albums->imgPrin}}">
+    <div class="container-portada" style="background: url(/images/galeria/album/{{$albums->imgPrin}}); background-size: 150%;">
 
-            <div class="skew-abajo"></div>
+        <div class="capa-gradient"></div>
+        
+        <div class="skew-abajo"></div>
 
-
-      	</div>
+    </div>
 
       	<div class="contenedor-descripcion">
 
