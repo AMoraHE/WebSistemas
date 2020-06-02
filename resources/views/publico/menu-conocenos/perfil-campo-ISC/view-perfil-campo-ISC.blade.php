@@ -8,18 +8,24 @@
 
 <!------------------------------------------------------------- IMG PARALLAX ----------------------------------------------------------->
 
-	<div class="contenedor-img-parallax">
+	<div class="contenedor-img-encabezado">
 
-	    <div class="img-parallax">
-	     <div class="parallax">
-	       <h1>Perfil de la carrera</h1>
-	       <hr>
-	     </div>       
-	    </div>
+          <div class="img-encabezado">
 
-	    <div class="skew-abajo"></div>
+            <img src="/img/Conocenos.jpg">
 
-	</div> 
+            <div class="encabezado">
+
+               <h1>Perfil de la Carrera</h1>
+               <hr>
+
+            </div>
+
+          </div>   
+
+          <div class="skew-abajo"></div>
+
+      </div>
 	
 <!-------------------------------------------------------------  PERFIL INGRESO ------------------------------------------------------->
 
@@ -67,8 +73,15 @@
 	
 
 		<div class="contenedor-apartado">
+			<div class="contenedor-titulo-perfil">
 
-			<div class="contenedor-perfil1">
+				<p>Perfil Egreso</p>
+
+				<img class="imagen-perfil-campo" src="{{ asset('img/egreso.png')}}">
+
+			</div>	
+
+			<div class="contenedor-perfil">
 				
 				<ol class="round">
 
@@ -82,15 +95,7 @@
 
 			</ol>
 
-			</div>
-
-			<div class="contenedor-titulo-perfil">
-
-				<p>Perfil Egreso</p>
-
-				<img class="imagen-perfil-campo" src="{{ asset('img/egreso.png')}}">
-
-			</div>		
+			</div>	
 
 		</div>
 </div>

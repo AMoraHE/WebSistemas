@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('/admin-header/{slug}/edit', 'headerController@edit')->middleware('auth');
+Route::get('/admin-header-sub/{slug}/edit', 'subHeaderController@edit')->middleware('auth');
+
 //TEMP ROUTES
 
 Route::get('/admin-header', 'PublicController@header');

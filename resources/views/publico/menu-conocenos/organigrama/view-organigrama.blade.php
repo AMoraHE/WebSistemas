@@ -186,6 +186,11 @@
 
 
                      <div class="contenedor-inf-doc">
+                        <div class="titulo-org3">
+                    <p id="titulo-organigrama">Docentes</p>
+                    <hr>
+                            
+                </div>
 
                         @foreach($docente as $docen)
 

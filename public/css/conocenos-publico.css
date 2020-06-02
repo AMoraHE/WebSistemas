@@ -563,6 +563,7 @@ box-shadow: 0 1px 6px #000;
 .contenedor-perfil-campo{
 	width: 100%;
 	margin: auto;
+	contain: content;
 }
 
 
@@ -672,6 +673,7 @@ ol.round li{
 
 ol.round p{
 	width: 97%;
+	line-height: 1.5;
 	display: inline-block;
 	padding-left: 10px;
 	text-align: justify;
@@ -679,6 +681,7 @@ ol.round p{
 .viñeta{
 	display: inline-block;
 	vertical-align: top;
+	width: 8.63px;
 }
 
 
@@ -787,6 +790,7 @@ background-color: #1b396a;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	contain: content;
 	background: rgba(223,234,241,0.7);
 	background: -moz-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
 	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(223,234,241,0.7)), color-stop(100%, rgba(15,99,144,1)));
@@ -869,8 +873,15 @@ background-color: #1b396a;
     float: right;
 }
 
+.titulo-org3{
+	width: 50%;
+    display: none;
+    float: right;
+}
+
 .titulo-org2 hr,
-.titulo-org1 hr{
+.titulo-org1 hr,
+.titulo-org3 hr{
 	height: 2px;
 	background: #fff;
 	border: none;
@@ -983,6 +994,14 @@ figure .trasera {
 	transform: perspective(600px) rotateY(180deg);
 	backface-visibility: hidden;
 	overflow: auto;
+	background: rgba(223,234,241,0.7);
+	background: -moz-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(223,234,241,0.7)), color-stop(100%, rgba(15,99,144,1)));
+	background: -webkit-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+	background: -o-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+	background: -ms-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+	background: linear-gradient(to bottom, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfeaf1', endColorstr='#0f6390', GradientType=0 );
 }
 
 .contenedor_tarjeta:nth-child(1) figure .trasera{
@@ -1041,18 +1060,7 @@ figure .trasera p {
 	font-size: 18px;
 }
 
-@media screen and (max-width: 992px) { 
-	figure .trasera {
-		/*position: relative;*/
-		backface-visibility:visible;
-		transform: perspective(600px) rotateY(0deg);
-	}
 
-	.contenedor_tarjeta:hover figure {
-		transform: perspective(600px) rotateY(0deg);	
-	}
-
-}
 
 /*******************************************************SECCIÓN LINEAS CUERPOS******************************************/
 /***********************************TABLAS*****************************************/
@@ -1396,7 +1404,7 @@ ol.round p {
 /*******************************************************SECCIÓN LINEAS-CUERPOS-CON******************************************/
 
 .tabla-informacion-escolar th, td {
-    padding: 10px;
+    padding: 5px;
 }
 
 .tabla-informacion-escolar-con thead {
@@ -1460,7 +1468,7 @@ ol.round p {
 }
 
 .contenedor-texto-completo-org-con {
-    margin-top: -221px;
+    margin-top: -218px;
 }
 
 .info-acordeon-con p {
@@ -1637,4 +1645,178 @@ ol.round p {
 }
 
 }
+
+/*******************************************************SECCIÓN PERFIL-CAMPO-ISC******************************************/
+
+
+
+@media screen and (max-width: 800px){/************************800PX***********************************/
+
+.contenedor-titulo-perfil p {
+    font-size: 25pt;
+}
+
+.imagen-perfil-campo {
+    width: 150px;
+    margin: auto;
+}
+
+ol.round p {
+    line-height: 1.4;
+}
+
+}
+
+@media screen and (max-width: 450px){/**************************450PX*******************************/
+
+.contenedor-apartado {
+    padding: 10px;
+    display: block;
+}
+
+.contenedor-titulo-perfil p {
+    font-size: 24pt;
+    margin: 5px;
+}
+
+.imagen-perfil-campo {
+    display: none;
+}
+
+
+}
+
+@media screen and (max-width: 375px){/**************************375PX*******************************/
+
+ol.round p {
+    font-size: 11pt;
+}
+.viñeta {
+    font-size: 11pt;
+}
+
+}
+
+/*******************************************************SECCIÓN LINEAS-CUERPOS******************************************/
+
+
+
+@media screen and (max-width: 800px){/************************700PX***********************************/
+
+.tabla-informacion-escolar {
+    width: 95%;
+}
+
+.tabla-informacion-escolar table {
+    border-radius: 10px;
+    margin: 15px auto;
+}
+
+.tabla-informacion-escolar thead {
+    font-size: 15pt;
+}
+
+}
+
+@media screen and (max-width: 450px){/**************************450PX*******************************/
+
+.tabla-informacion-escolar thead {
+    font-size: 12pt;
+}
+
+.tabla-informacion-escolar td {
+    font-size: 9pt;
+}
+
+.tabla-informacion-escolar th, td {
+    padding: 10px;
+
+}
+}
+
+@media screen and (max-width: 375px){/**************************375PX*******************************/
+
+.tabla-informacion-escolar {
+    width: 100%;
+    padding-top: 0px
+}
+
+.tabla-informacion-escolar table {
+    width: 100%;
+}
+
+.tabla-informacion-escolar thead {
+	font-size: 10pt;
+}
+
+.tabla-informacion-escolar td {
+    font-size: 8pt;
+}
+.tabla-informacion-escolar th, td {
+    padding: 6px;
+}
+
+}
+
+
+/*******************************************************SECCIÓN ORGANIGRAMA******************************************/
+
+@media screen and (max-width: 800px){/************************700PX***********************************/
+
+.titulo-org1-dir1 hr {
+    margin: 0 180px;
+}
+.titulo-org1-dir hr {
+    margin: 0 180px;
+}
+
+.titulo-org2 hr, .titulo-org1 hr, .titulo-org3 hr {
+    margin: 0 40px;
+}
+}
+@media screen and (max-width: 450px){/**************************450PX*******************************/
+
+.contenedor-doc,
+.contenedor-lab{
+	float: none;
+}
+.titulo-org1-dir1 hr {
+    height: 0px;
+}
+
+.titulo-org1-dir hr {
+	height: 0px;
+}
+
+.titulo-org1 {
+    float: none;
+}
+
+.titulo-org2 {
+    display: none;
+}
+
+.titulo-org3 {
+    width: 100%;
+    display: inline-block;
+}
+
+#titulo-organigrama {
+    font-size: 24pt;
+
+}
+
+.titulo-org2 hr,
+.titulo-org1 hr {
+    height: 0px;
+    margin: 0px;
+
+}
+.titulo-org3 hr{
+	height: 0px;
+    margin: 0px;
+    margin-bottom: 40px;
+}
+}
+
 
