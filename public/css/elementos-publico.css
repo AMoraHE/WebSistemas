@@ -2283,6 +2283,10 @@ body::-webkit-scrollbar-thumb{
 
 @media screen and (max-width: 650px){
 
+  .contenedor-previsualizar-seccion{
+    padding: 10px;
+    }
+
     .contenedor-descripcion{
       padding: 25px;
     }
@@ -2491,6 +2495,21 @@ body::-webkit-scrollbar-thumb{
   .contenedor-enlaces{
     font-size: 14px;
   }
+
+/************************************************************************************************SECCIÓN PRELIMINAR***********************************************************************/
+
+.contenedor-seccion-noticias-preliminar{
+  width: 100%;
+}
+
+.contenedor-seccion-preliminar{
+  width: 100%;
+}
+
+.contenedor-seccion-preliminar-img{
+  width: 100%;
+  height: 300px;
+}
 
 
 }
