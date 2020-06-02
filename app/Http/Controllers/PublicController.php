@@ -29,6 +29,9 @@ use App\ProyectoGaleria;
 use App\reticula;
 use App\header;
 use App\subheader;
+use App\contactosGen;
+use App\infoFooter;
+use App\rSocial;
 use Validator;
 
 class PublicController extends Controller
@@ -48,6 +51,10 @@ class PublicController extends Controller
 
   public function inicio()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $informaciones = informacion::where('slug', 'ObjetivoCarrera')->firstOrFail();
     $FSlider = Slider::latest()->first();
     $idFS = $FSlider->id;
@@ -58,34 +65,50 @@ class PublicController extends Controller
     $noticias = Noticia::latest()->where('id', '!=', $idFN)->take(4)->get();
     $proyectos = Proyecto::latest()->take(6)->get();
 
-    return view('publico/menu-inicio/inicio', compact('noticias','sliders', 'proyectos', 'FSlider', 'FNoticia', 'informaciones'));
+    return view('publico/menu-inicio/inicio', compact('noticias','sliders', 'proyectos', 'FSlider', 'FNoticia', 'informaciones', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function noticias()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $header = header::where('slug', 'noticias')->firstOrFail();
     $noticias = Noticia::orderBy('id', 'DESC')->paginate(10);
-    return view('publico.menu-inicio.noticias.noticias', compact('noticias', 'header'));
+    return view('publico.menu-inicio.noticias.noticias', compact('noticias', 'header', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function noticiasVerInd($id)
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $header = header::where('slug', 'noticias')->firstOrFail();
     $noticias = Noticia::where("id", '=', $id)->firstOrFail();
-    return view('publico.menu-inicio.noticias.noticia-individual', compact('noticias', 'header'));
+    return view('publico.menu-inicio.noticias.noticia-individual', compact('noticias', 'header', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function buscadorNoticias(Request $request)
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $header = header::where('slug', 'noticias')->firstOrFail();
     $noticias = Noticia::orderBy('id', 'DESC')->where('titulo', 'like',"%".$request->key."%")->paginate(10);
-    return view('publico.menu-inicio.noticias.noticias',compact('noticias', 'header'));
+    return view('publico.menu-inicio.noticias.noticias',compact('noticias', 'header', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function calendario()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $header = header::where('slug', 'calendario')->firstOrFail();
-    return view('publico.menu-inicio.calendario.calendario', compact('header'));
+    return view('publico.menu-inicio.calendario.calendario', compact('header' , 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function calendarioEventos(Request $request)
@@ -119,7 +142,10 @@ class PublicController extends Controller
   }
 
   public function conocenos()
-  {
+  {$redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $header = header::where('slug', 'conocenos')->firstOrFail();
     $informaciones = informacion::all();
     $perfilingreso = perfil_ingreso::oldest()->take(4)->get();
@@ -132,31 +158,43 @@ class PublicController extends Controller
     $laboratorio = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '5')->get();
     $docente = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '6')->get();
 
-    return view('publico.menu-conocenos.conocenos', compact('informaciones', 'perfilingreso', 'perfilegreso', 'campolaboral', 'reticulas', 'lineainvestigacion', 'cuerpos', 'director', 'laboratorio', 'docente', 'header'));
+    return view('publico.menu-conocenos.conocenos', compact('informaciones', 'perfilingreso', 'perfilegreso', 'campolaboral', 'reticulas', 'lineainvestigacion', 'cuerpos', 'director', 'laboratorio', 'docente', 'header' , 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function MVO()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $subheader = subheader::where('sSlug', 'MVO')->firstOrFail();
     $informaciones = informacion::all();
-    return view('publico.menu-conocenos.informacion-carrera.view-informacion-carrera', compact('informaciones', 'subheader'));
+    return view('publico.menu-conocenos.informacion-carrera.view-informacion-carrera', compact('informaciones', 'subheader', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function perfilCampoISC()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $subheader = subheader::where('sSlug', 'perfilC')->firstOrFail();
     $perfilingreso = perfil_ingreso::all();
     $perfilegreso = perfil_egreso::all();
     $campolaboral = campo_laboral::all();
 
-    return view('publico.menu-conocenos.perfil-campo-ISC.view-perfil-campo-ISC', compact('perfilingreso', 'perfilegreso', 'campolaboral', 'subheader'));
+    return view('publico.menu-conocenos.perfil-campo-ISC.view-perfil-campo-ISC', compact('perfilingreso', 'perfilegreso', 'campolaboral', 'subheader', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function reticula()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $subheader = subheader::where('sSlug', 'reticula')->firstOrFail();
     $reticulas = reticula::orderBy('id', 'DESC')->paginate(5);
-    return view('publico.menu-conocenos.reticula.view-reticula', compact('reticulas', 'subheader'));
+    return view('publico.menu-conocenos.reticula.view-reticula', compact('reticulas', 'subheader', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function reticulaVer($slug)
@@ -175,11 +213,15 @@ class PublicController extends Controller
 
   public function lineasCuerpos()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $subheader = subheader::where('sSlug', 'LiCa')->firstOrFail();
     $lineainvestigacion = lineas_investigacion::all();
     $cuerpos = CuerposAcademico::all();
 
-    return view('publico.menu-conocenos.lineas-cuerpos.view-lineas-cuerpos', compact('lineainvestigacion', 'cuerpos', 'subheader'));
+    return view('publico.menu-conocenos.lineas-cuerpos.view-lineas-cuerpos', compact('lineainvestigacion', 'cuerpos', 'subheader', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   /*public function lineasInvestigacion()
@@ -196,6 +238,10 @@ class PublicController extends Controller
 
   public function organigrama()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $subheader = subheader::where('sSlug', 'organigrama')->firstOrFail();
     $director = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '<', '5')->orderBy('areas.id', 'ASC')->get();
 
@@ -203,43 +249,63 @@ class PublicController extends Controller
 
     $docente = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '6')->get();
 
-    return view('publico.menu-conocenos.organigrama.view-organigrama', compact('director', 'laboratorio', 'docente', 'subheader'));
+    return view('publico.menu-conocenos.organigrama.view-organigrama', compact('director', 'laboratorio', 'docente', 'subheader', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function infraestructura()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $header = header::where('slug', 'infraestructura')->firstOrFail();
     $infras = Infraestructura::all();
 
-    return view('publico.menu-inf.infraestructura', compact('infras', 'header'));
+    return view('publico.menu-inf.infraestructura', compact('infras', 'header', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function labCisco()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $infras = Infraestructura::where('slug', '=', 'cisco')->get();
     $imagenes = imagenLab::all()->where('lab_id', '=', 'cisco');
-    return view('publico.menu-inf.lab-cisco.show', compact('infras', 'imagenes'));
+    return view('publico.menu-inf.lab-cisco.show', compact('infras', 'imagenes', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function labSistemas()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $infras = Infraestructura::where('slug', '=', 'sistemas')->get();
     $imagenes = imagenLab::all()->where('lab_id', '=', 'sistemas');
-    return view('publico.menu-inf.lab-sistemas.show', compact('infras', 'imagenes'));
+    return view('publico.menu-inf.lab-sistemas.show', compact('infras', 'imagenes', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function labMicroprocesadores()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $infras = Infraestructura::where('slug', '=', 'micro')->get();
     $imagenes = imagenLab::all()->where('lab_id', '=', 'micro');
-    return view('publico.menu-inf.lab-micro.show', compact('infras', 'imagenes'));
+    return view('publico.menu-inf.lab-micro.show', compact('infras', 'imagenes', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function labCelula()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $infras = Infraestructura::where('slug', '=', 'celula')->get();
     $imagenes = imagenLab::all()->where('lab_id', '=', 'celula');
-    return view('publico.menu-inf.lab-celula.show', compact('infras', 'imagenes'));
+    return view('publico.menu-inf.lab-celula.show', compact('infras', 'imagenes', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function labVerImg($id)
@@ -258,21 +324,29 @@ class PublicController extends Controller
 
   public function academicos()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $header = header::where('slug', 'academicos')->firstOrFail();
     $proyectos = Proyecto::latest()->take(1)->get();
     $eventos = EventosAcademico::latest()->take(1)->get();
     $convocatorias = Convocatoria::latest()->take(1)->get();
     $programas = Programa::latest()->take(1)->get();
 
-    return view('publico.menu-academicos.academicos', compact('proyectos', 'eventos', 'convocatorias', 'programas', 'header'));
+    return view('publico.menu-academicos.academicos', compact('proyectos', 'eventos', 'convocatorias', 'programas', 'header', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function proyectos()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $subheader = subheader::where('sSlug', 'proy')->firstOrFail();
     $proyectos = Proyecto::orderBy('id', 'DESC')->paginate(5);
     $imagenes = DB::table('proyecto_galerias')->join('proyectos', 'proyecto_galerias.proySlug', '=', 'proyectos.slug')->select('proyecto_galerias.*')->get();
-    return view('/publico/menu-academicos/proyectos/view-proyectos-academicos', compact('proyectos', 'imagenes', 'subheader'));
+    return view('/publico/menu-academicos/proyectos/view-proyectos-academicos', compact('proyectos', 'imagenes', 'subheader', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function proyectosVerImg($id)
@@ -291,9 +365,13 @@ class PublicController extends Controller
 
   public function eventos()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $subheader = subheader::where('sSlug', 'eventosacad')->firstOrFail();
     $eventos = EventosAcademico::orderBy('id', 'DESC')->paginate(5);
-    return view('/publico/menu-academicos/Eventos/view', compact('eventos', 'subheader'));
+    return view('/publico/menu-academicos/Eventos/view', compact('eventos', 'subheader', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function eventosVer($slug)
@@ -312,9 +390,13 @@ class PublicController extends Controller
 
   public function convocatorias()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $subheader = subheader::where('sSlug', 'convocatorias')->firstOrFail();
     $convocatorias = Convocatoria::orderBy('id', 'DESC')->paginate(5);
-    return view('/publico/menu-academicos/convocatorias/view-convocatorias-academicos', compact('convocatorias', 'subheader'));
+    return view('/publico/menu-academicos/convocatorias/view-convocatorias-academicos', compact('convocatorias', 'subheader', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function convocatoriasVer($slug)
@@ -333,9 +415,13 @@ class PublicController extends Controller
 
   public function programas()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $subheader = subheader::where('sSlug', 'programas')->firstOrFail();
     $programas = Programa::orderBy('id', 'DESC')->paginate(5);
-    return view('/publico/menu-academicos/programas/view', compact('programas', 'subheader'));
+    return view('/publico/menu-academicos/programas/view', compact('programas', 'subheader', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function programasVer($slug)
@@ -354,17 +440,25 @@ class PublicController extends Controller
 
   public function galeria()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $header = header::where('slug', 'galeria')->firstOrFail();
     $albums = album::orderBy('id', 'DESC')->get();
-    return view('publico.menu-galeria.albumes', compact('albums', 'header'));
+    return view('publico.menu-galeria.albumes', compact('albums', 'header', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function fotos($slug)
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $albums = album::where('slug', $slug)->firstOrFail();
     $ASlug = $albums->slug;
     $imagenes = albumGaleria::where('albumSlug', $ASlug)->get();
-    return view('publico.menu-galeria.galeria.galeria', compact('albums', 'imagenes'));
+    return view('publico.menu-galeria.galeria.galeria', compact('albums', 'imagenes', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function fotosVerImg($id)
@@ -383,17 +477,25 @@ class PublicController extends Controller
 
   public function contactos()
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+
     $header = header::where('slug', 'contactanos')->firstOrFail();
     $directors = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '4')->orderBy('areas.id', 'ASC')->get();
 
-    return view('publico.correos', compact('directors', 'header'));
+    return view('publico.correos', compact('directors', 'header', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function formContacto($correo)
   {
+    $redes = rSocial::all();
+    $infoFooter = infoFooter::all();
+    $contactosGen = contactosGen::all();
+    
     $subheader = subheader::where('sSlug', 'contact')->firstOrFail();
     $destinatario = $correo;
-    return view('publico.formCorreo', compact('destinatario', 'subheader'));
+    return view('publico.formCorreo', compact('destinatario', 'subheader', 'redes', 'infoFooter', 'contactosGen'));
   }
 
   public function contactoCorreo(Request $request)

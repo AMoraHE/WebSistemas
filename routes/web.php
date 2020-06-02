@@ -17,9 +17,22 @@ Route::get('/admin-header', 'headerController@index')->middleware('auth');
 Route::get('/admin-header/{slug}/edit', 'headerController@edit')->middleware('auth');
 Route::get('/admin-header-sub/{slug}/edit', 'subHeaderController@edit')->middleware('auth');
 
+Route::resource('infoFooter', 'infoFooterController')->middleware('auth');
+Route::resource('redSocial', 'redSocialController')->middleware('auth');
+Route::resource('contactoGen', 'contactoGenController')->middleware('auth');
+
+Route::get('/admin-footer', 'infoFooterController@index')->middleware('auth');
+Route::get('/admin-footer-infoFooter/{slug}/edit', 'infoFooterController@edit')->middleware('auth');
+
+Route::get('/admin-footer-redes/agregar', 'redSocialController@create')->middleware('auth');
+Route::get('/admin-footer-redes/{slug}/edit', 'redSocialController@edit')->middleware('auth');
+Route::get('/admin-footer-eliminarRed/{slug}', 'redSocialController@destroy')->middleware('auth');
+
+Route::get('/admin-footer-contactoGen/{slug}/edit', 'contactoGenController@edit')->middleware('auth');
+
 //TEMP ROUTES
 
-Route::get('/admin-footer', 'PublicController@footer');
+
 Route::get('/admin-footer-edit', 'PublicController@footerEdit');
 
 //END TEMP ROUTES

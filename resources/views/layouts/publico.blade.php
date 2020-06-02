@@ -191,49 +191,35 @@
         
             <div class="contenedor-cuerpo-footer">
 
+                @foreach($infoFooter as $infoF)
                 <div class="columna1">
-                    <h1>Información de la escuela</h1>
+                    <h1>{{$infoF->titulo}}</h1>
 
-                    <p>Somos una institución que franquea alumnos :v capturamos EmOssielNorlax y ayudamos a nuestros alumnos a desarrollar su capacidad y los volvemos maestros puchamones...</p>
+                    <p>{{$infoF->descripcion}}</p>
 
                     <div class="footer-logo-contenedor">                  	
                    
 	                    <div class="footer-logo">
 
-	                    	<img src="/img/Logo-Footer.png">          
+	                    	<img src="/img/{{$infoF->img}}">          
 	                    	
 	                    </div>
 
                      </div>
 
-
                 </div>
+                @endforeach
 
                 <div class="columna2">
 
                     <h1>Redes Sociales</h1>
 
+                    @foreach($redes as $red)
                     <div class="redes-sociales">
-                        <img src="/icon/facebook.png">
-                        <label>Síguenos en Facebook</label>
+                        <img src="/icon/{{$red->icon}}">
+                        <a target="_blank" rel="noopener noreferrer" href="http://{{$red->enlace}}">{{$red->descripcion}}</a>
                     </div>
-                    <div class="redes-sociales">
-                        <img src="/icon/twitter.png">
-                        <label>Síguenos en Twitter</label>
-                    </div>
-                    <div class="redes-sociales">
-                        <img src="/icon/instagram.png">
-                        <label>Síguenos en Instagram</label>
-                    </div>
-                    <div class="redes-sociales">
-                        <img src="/icon/google-plus.png">
-                        <label>Síguenos en Google Plus</label>
-                    </div>
-                    <div class="redes-sociales">
-                        <img src="/icon/pinterest.png">
-                        <label>Síguenos en Pinteres</label>
-                    </div>
-
+                    @endforeach
 
                 </div>
 
@@ -241,20 +227,28 @@
 
                     <h1>Contactos</h1>
 
+                    @foreach($contactosGen as $contactG)
+                    @if($contactG->slug == "direc")
                     <div class="contactos-footer">
                         <div class="icono"><i class="fas fa-school"></i></div>
-                        <label>Carretera Vigía Chico Km 1.5, C.P. 77200, Felipe Carrillo Puerto, Quintana Roo, México</label>
+                        <label>{{$contactG->descripcion}}</label>
                     </div>
+                    @endif
 
+                    @if($contactG->slug == "tels")
                     <div class="contactos-footer">
                         <div class="icono"><i class="fas fa-phone"></i></div>
-                        <label>834-00-51, 267-10-48</label>
+                        <label>{{$contactG->descripcion}}</label>
                     </div>
+                    @endif
 
+                    @if($contactG->slug == "email")
                     <div class="contactos-footer">
                         <div class="icono"><i class="fas fa-envelope"></i></div>
-                         <label>direccion@gmail</label>
+                         <label>{{$contactG->descripcion}}</label>
                     </div>
+                    @endif
+                    @endforeach
 
                 </div>
 

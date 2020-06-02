@@ -1,6 +1,6 @@
 @extends('layouts.administrador')
 
-@section('title', 'Editar Información Carrera')
+@section('title', 'Editar Información General')
 
 @section('content')
 
@@ -17,7 +17,7 @@
 <!--------------------------------------------------- FORMULARIO - EDITAR INFORMACION DE LA CARRERA ---------------------------------------------------------------------->
 
 
-	<form id="formulario" class="form group" method="POST" action="/" enctype="multipart/form-data">
+	<form id="formulario" class="form group" method="POST" action="/infoFooter/{{$infoFooter->slug}}" enctype="multipart/form-data">
 		@method('PUT')
 		@csrf
 
@@ -38,7 +38,7 @@
 
       <div class="contenedor-img-seccion-cuadrado">
               
-        <img id="img-pre" src="/1.png">
+        <img id="img-pre" src="/img/{{$infoFooter->img}}">
 
       </div>
               
@@ -56,12 +56,29 @@
 
 
 		<div class="formulario">
+
+	      <label>Título</label>
+	      @if ($errors->any())
+	  		<input type="text" name="titulo" id="titulo" value="{{old('titulo')}}" placeholder="Inserte El Título Deseado" class="form-control" required>
+	      @else
+	      <input type="text" name="titulo" id="titulo" value="{{$infoFooter->titulo}}" placeholder="Inserte El Título Deseado" class="form-control" required>
+	      @endif
+
+	  	</div>
+
+	    @if ($errors->has('titulo'))
+	      <span class="invalid-feedback" role="alert">
+	        <strong>{{ $errors->first('titulo') }}</strong>
+	      </span>
+	    @endif
+
+		<div class="formulario">
 				
-			<label>Información de la escuela</label>
+			<label>Información general</label>
 			@if ($errors->any())
-			<textarea type="text" name="descripcion" required>{{old('descripcion')}}</textarea> 
+			<textarea type="text" name="descripcion" placeholder="Insete La Decripción Deseada" required>{{old('descripcion')}}</textarea> 
 			@else
-			<textarea type="text" name="descripcion" required>Footer x2</textarea> 
+			<textarea type="text" name="descripcion" placeholder="Insete La Decripción Deseada" required>{{$infoFooter->descripcion}}</textarea> 
 			@endif
 				
 		</div>

@@ -1,6 +1,6 @@
 @extends('layouts.administrador')
 
-@section('title', 'Editar Información Carrera')
+@section('title', 'Editar Contacto General')
 
 @section('content')
 
@@ -16,17 +16,26 @@
 
 <!--------------------------------------------------- FORMULARIO - EDITAR CONTACTOS GENERALES ---------------------------------------------------------------------->
 
+	<form id="formulario" class="form group" method="POST" action="/contactoGen/{{$contactoGen->slug}}" enctype="multipart/form-data">
+	@method('PUT')
+	@csrf
 
 		<div class="formulario">
 				
-			<label>Titulo</label>
+			<label>Título</label>
 			@if ($errors->any())
-			<input type="text" name="puesto" id ="" value="Titulo" readonly>
+			<input type="text" name="titulo" id ="titulo" value="{{old('titulo')}}" readonly>
 			@else
-			<input type="text" name="puesto" id ="" value="Titulo" readonly>
+			<input type="text" name="titulo" id ="titulo" value="{{$contactoGen->titulo}}" readonly>
 			@endif
 				
 		</div>
+
+		@if ($errors->has('titulo'))
+	      <span class="invalid-feedback" role="alert">
+	          <strong>{{ $errors->first('titulo') }}</strong>
+	      </span>
+	    @endif
 
 		<div class="formulario">
 				
@@ -34,7 +43,7 @@
 			@if ($errors->any())
 			<textarea type="text" name="descripcion" required>{{old('descripcion')}}</textarea> 
 			@else
-			<textarea type="text" name="descripcion" required>Dirección xxx</textarea> 
+			<textarea type="text" name="descripcion" required>{{$contactoGen->descripcion}}</textarea> 
 			@endif
 				
 		</div>

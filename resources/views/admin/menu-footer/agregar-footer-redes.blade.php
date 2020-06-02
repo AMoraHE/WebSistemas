@@ -23,52 +23,48 @@
 <!--------------------------------------------------- FORMULARIO - EDITAR INFORMACION DE LA CARRERA ---------------------------------------------------------------------->
 
 
-	<form id="formulario" class="form group" method="POST" action="/" enctype="multipart/form-data">
-		@method('PUT')
+	<form id="formulario" class="form group" method="POST" action="/redSocial" enctype="multipart/form-data">
 		@csrf
 
-	<div class="contenedor-cargar-img">
+		<div class="contenedor-cargar-img">
 
-      <div class="contenedor-txt-seccion">
-              
-        <label>Seleccionar logo</label>
+	      <div class="contenedor-txt-seccion">
+	              
+	        <label>Seleccionar logo</label>
 
-      </div>
+	      </div>
 
-      <div class="contenedor-boton-cargar">
+	      <div class="contenedor-boton-cargar">
 
-        <label for="file-upload" class="subir"><i class="icono-izquierda fas fa-cloud-upload-alt"></i> Subir Archivo</label>     
-        <input id="file-upload" onchange='cambiar()' name="img" type="file" accept="image/gif, image/jpeg, image/png" style='display: none;'/>              
-              
-      </div>
+	        <label for="file-upload" class="subir"><i class="icono-izquierda fas fa-cloud-upload-alt"></i> Subir Archivo</label>     
+	        <input id="file-upload" onchange='cambiar()' name="icon" type="file" accept="image/gif, image/jpeg, image/png" style='display: none;'/>              
+	              
+	      </div>
 
-      <div class="contenedor-img-seccion-cuadrado">
-              
-        <img id="img-pre" src="/1.png">
+	      <div class="contenedor-img-seccion-cuadrado">
+	              
+	        <img id="img-pre" src="{{old('icon')}}">
 
-      </div>
-              
-    </div>
+	      </div>
+	              
+	    </div>
 
-    <div id="info-img">No se eligió archivo</div>
+	    <div id="info-img">No se eligió archivo</div>
 
-    @if ($errors->has('img'))
-      <span class="invalid-feedback" role="alert">
+	    @if ($errors->has('icon'))
+	      <span class="invalid-feedback" role="alert">
 
-        <strong>{{$errors->first('img')}}</strong>
+	        <strong>{{$errors->first('icon')}}</strong>
 
-      </span>
-    @endif
-
+	      </span>
+	    @endif
 
 		<div class="formulario">
 				
 			<label>Descripción</label>
-			@if ($errors->any())
-			<input type="text" name="puesto" id ="" value="{{old('descripcion')}}" required>
-			@else
-			<input type="text" name="puesto" id ="" value="{{old('descripcion')}}" required>
-			@endif
+			
+			<input type="text" name="descripcion" id ="" value="{{old('descripcion')}}" placeholder="Ej: Síguenos en Facebook" required>
+			
 				
 		</div>
 
@@ -81,17 +77,15 @@
 	    <div class="formulario">
 				
 			<label>Enlace</label>
-			@if ($errors->any())
-			<input type="text" name="puesto" id ="" value="{{old('descripcion')}}" required>
-			@else
-			<input type="text" name="puesto" id ="" value="{{old('descripcion')}}" required>
-			@endif
+			
+			<input type="text" name="enlace" id ="" value="{{old('enlace')}}" placeholder="Ej: www.facebook.com/isc" required>
+			
 				
 		</div>
 
-		@if ($errors->has('descripcion'))
+		@if ($errors->has('enlace'))
 	      <span class="invalid-feedback" role="alert">
-	          <strong>{{ $errors->first('descripcion') }}</strong>
+	          <strong>{{ $errors->first('enlace') }}</strong>
 	      </span>
 	    @endif
 <!----------------------------------------------------------------- BOTONES INFORMACIÓN DE LA CARRERA --------------------------------------------------------------------->

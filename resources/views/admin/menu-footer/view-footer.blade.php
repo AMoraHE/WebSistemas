@@ -12,11 +12,13 @@
 
 @endif
 
- <div class="contenedor-botones">
-    
-    <a href="/admin-footer-edit"><button class="btn editar"><span>VISTA EDITAR</span></button></a>
+@if(session('Error'))
 
-  </div>
+  <span class="invalid-feedback" role="alert">
+    <strong>{{session('Error')}}</strong>
+  </span>
+
+@endif
 
 <!----------------------------------------------------------------- FOOTER --------------------------------------------------------------------------->
 
@@ -32,9 +34,10 @@
 
   <div class="contenedor-componentes-principales">
 
+    @foreach($infoFooter as $infoF)
     <div class="contenedor-titulo-seccion">
 
-      <h3>Información de la escuela</h3>
+      <h3>{{$infoF->titulo}}</h3>
 
     </div>
 
@@ -46,7 +49,7 @@
 
         <a href="#modal-img">
 
-          <img src="">
+          <img src="/img/{{$infoF->img}}">
           <span><i class="fas fa-expand"></i></span>
         
         </a>
@@ -56,7 +59,7 @@
         <div class="modal-img" id="modal-img">
 
           <a href="#page" class="btn-close"><i class="fas fa-times"></i></a>
-          <img src="" />
+          <img src="/img/{{$infoF->img}}" />
 
                 
         </div>
@@ -65,11 +68,12 @@
 
       <div class="contenedor-texto-dividido">
 
-        <p>Somos una institución que franquea alumnos :v capturamos EmOssielNorlax y ayudamos a nuestros alumnos a desarrollar su capacidad y los volvemos maestros puchamones...</p>
+        <p>{{$infoF->descripcion}}</p>
 
       </div>
 
     </div>
+    @endforeach
 
   </div>
 
@@ -77,7 +81,7 @@
 
   <div class="contenedor-botones">
     
-    <a class="msj" mesanje="editar la información?" href="/admin-footer-edit"><button class="btn editar"><span>Editar</span></button></a>
+    <a class="msj" mesanje="editar la información?" href="/admin-footer-infoFooter/{{$infoF->slug}}/edit"><button class="btn editar"><span>Editar Descripción</span></button></a>
 
   </div>
 
@@ -103,31 +107,38 @@
             </tr>
           </thead>
 
+            @foreach($redes as $red)
             <tr>
-              <td><img src="/icon/facebook.png"></td>
-              <td>Siguenos x Facebook</td>
-              <td>http//:www.facebook.com</td>
+
+              <td><img src="/icon/{{$red->icon}}"></td>
+              <td>{{$red->descripcion}}</td>
+              <td>{{$red->enlace}}</td>
               
               <td>
-                <a class="msj" mesanje="eliminar este elemento?" href=""><button class="btn-tabla eliminar"><i class="far fa-trash-alt"></i></button></a>
+                <a class="msj" mesanje="eliminar este elemento?" href="/admin-footer-eliminarRed/{{$red->slug}}"><button class="btn-tabla eliminar"><i class="far fa-trash-alt"></i></button></a>
               </td>
 
               <td>
-                <a class="msj" mesanje="editar este elemento?" href=""><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a>
+                <a class="msj" mesanje="editar este elemento?" href="/admin-footer-redes/{{$red->slug}}/edit"><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a>
               </td> 
 
             </tr>
+            @endforeach
 
         </table>    
 
     </div>
 
+  
   <div class="contenedor-botones">
-      
-      <a class="msj" mesanje="agregar una nueva red social?" href=""><button class="btn agregar"><span>Agregar</span></button></a>
-      
-  </div>
 
+      @if(count($redes) > 4)
+      <button></button>
+      @else
+      <a class="msj" mesanje="agregar una nueva red social?" href="/admin-footer-redes/agregar"><button class="btn agregar"><span>Agregar Red Social</span></button></a>
+      @endif
+
+  </div>
 
 <!----------------------------------------------------------------- FOOTER COLUMNA 3--------------------------------------------------------------------------->
   <div class="contenedor-titulo-seccion">
@@ -148,35 +159,17 @@
             </tr>
           </thead>
 
+            @foreach($contactosGen as $contactoGen)
             <tr>
-              <td>Dirección</td>
-              <td>Carretera Vigía Chico Km 1.5, C.P. 77200, Felipe Carrillo Puerto, Quintana Roo, México</td>
 
+              <td>{{$contactoGen->titulo}}</td>
+              <td>{{$contactoGen->descripcion}}</td>
               <td>
-                <a class="msj" mesanje="editar este elemento?" href=""><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a>
+                <a class="msj" mesanje="editar este elemento?" href="/admin-footer-contactoGen/{{$contactoGen->slug}}/edit"><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a>
               </td> 
 
             </tr>
-
-            <tr>
-              <td>Teléfono</td>
-              <td>834-00-51, 267-10-48</td>
-
-              <td>
-                <a class="msj" mesanje="editar este elemento?" href=""><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a>
-              </td> 
-
-            </tr>
-
-            <tr>
-              <td>Correo electrónico</td>
-              <td>direccion@gmail</td>
-
-              <td>
-                <a class="msj" mesanje="editar este elemento?" href=""><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a>
-              </td> 
-
-            </tr>
+            @endforeach
 
         </table>    
 
