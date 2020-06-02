@@ -1,6 +1,6 @@
 @extends('layouts.administrador')
 
-@section('title', 'Editar Encabezado')
+@section('title', 'Editar Subencabezado')
 
 @section('content')
 
@@ -8,11 +8,11 @@
 
   <div class="contenedor-titulo-seccion">
 
-    <h3>Editar Encabezado Principal</h3>
+    <h3>Editar Subencabezado - {{$subheader->sTitulo}}</h3>
     
   </div>
 
-  <form id="formulario" class="form-goup" files="true" method="POST" action="/headerC/{{$header->slug}}" enctype="multipart/form-data">
+  <form id="formulario" class="form-goup" files="true" method="POST" action="/subheaderC/{{$subheader->sSlug}}" enctype="multipart/form-data">
     @method('PUT')
     @csrf
 
@@ -20,16 +20,16 @@
 
       <label>Título</label>
       @if ($errors->any())
-  		<input type="text" name="titulo" id="titulo" value="{{old('titulo')}}" placeholder="Inserte El Título Deseado" class="form-control" required>
+  		<input type="text" name="sTitulo" id="titulo" value="{{old('sTitulo')}}" placeholder="Inserte El Título Deseado" class="form-control" required>
       @else
-      <input type="text" name="titulo" id="titulo" value="{{$header->titulo}}" placeholder="Inserte El Título Deseado" class="form-control" required>
+      <input type="text" name="sTitulo" id="titulo" value="{{$subheader->sTitulo}}" placeholder="Inserte El Título Deseado" class="form-control" required>
       @endif
 
   	</div>
 
-    @if ($errors->has('titulo'))
+    @if ($errors->has('sTitulo'))
       <span class="invalid-feedback" role="alert">
-        <strong>{{ $errors->first('titulo') }}</strong>
+        <strong>{{ $errors->first('sTitulo') }}</strong>
       </span>
     @endif
 
@@ -50,14 +50,14 @@
   		<div class="contenedor-boton-cargar">
 
   			<label for="file-upload" class="subir"><i class="icono-izquierda fas fa-cloud-upload-alt"></i> Subir Archivo</label>
-  			<input id="file-upload" name="img" value="" onchange='cambiar()' type="file" accept="image/gif, image/jpeg, image/png" style='display: none;'/>
+  			<input id="file-upload" name="sImg" value="" onchange='cambiar()' type="file" accept="image/gif, image/jpeg, image/png" style='display: none;'/>
 
   		</div>
 
 
   		<div class="contenedor-img-seccion-rectangular">
 
-  			<img id="img-pre" src="/images/header/{{$header->img}}">
+  			<img id="img-pre" src="/images/header/{{$subheader->sImg}}">
 
   		</div>
 
@@ -65,10 +65,10 @@
 
     <div id="info-img">No se eligió archivo</div>
 
-    @if ($errors->has('img'))
+    @if ($errors->has('sImg'))
       <span class="invalid-feedback" role="alert">
 
-        <strong>{{$errors->first('img')}}</strong>
+        <strong>{{$errors->first('sImg')}}</strong>
 
       </span>
     @endif

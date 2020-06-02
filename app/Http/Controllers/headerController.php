@@ -25,7 +25,7 @@ class headerController extends Controller
         $headers = header::all();
         $subheaders = subheader::all();
 
-        return view('admin.menu-inicio.img-encabezado.encabezados', compact('headers'));
+        return view('admin.menu-inicio.img-encabezado.encabezados', compact('headers', 'subheaders'));
     }
 
     /**
@@ -102,7 +102,7 @@ class headerController extends Controller
 
             if($request->hasFile('img'))
             {
-                $oldFile = public_path().'/img/'.$header->img;
+                $oldFile = public_path().'/images/header/'.$header->img;
                 if(file_exists($oldFile))
                 {
                     unlink($oldFile);
@@ -111,7 +111,7 @@ class headerController extends Controller
                 $file = $request->file('img');
                 $name = time().$file->getClientOriginalName();
                 $header->img = $name; 
-                $file->move(public_path().'/img/',$name);
+                $file->move(public_path().'/images/header/',$name);
             }
 
             $header->titulo = $request->input('titulo');

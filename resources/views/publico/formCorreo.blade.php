@@ -14,11 +14,11 @@
 
           <div class="img-encabezado">
 
-            <img src="/img/contacto.jpg">
+            <img src="/images/header/{{$subheader->sImg}}">
 
             <div class="encabezado">
 
-            	<h1>Queremos saber de ti</h1>
+            	<h1>{{$subheader->sTitulo}}</h1>
             	<hr>
 
             </div>

@@ -20,11 +20,11 @@
 
           <div class="img-encabezado">
 
-            <img src="/img/Noticias.png">
+            <img src="/images/header/{{$header->img}}">
 
             <div class="encabezado">
 
-            	<h1>Noticias</h1>
+            	<h1>{{$header->titulo}}</h1>
             	<hr>
 
             </div>

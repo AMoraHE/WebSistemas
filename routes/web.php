@@ -10,14 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('headerC', 'headerController')->middleware('auth');
+Route::resource('subheaderC', 'subHeaderController')->middleware('auth');
 
+Route::get('/admin-header', 'headerController@index')->middleware('auth');
 Route::get('/admin-header/{slug}/edit', 'headerController@edit')->middleware('auth');
 Route::get('/admin-header-sub/{slug}/edit', 'subHeaderController@edit')->middleware('auth');
 
 //TEMP ROUTES
 
-Route::get('/admin-header', 'PublicController@header');
-Route::get('/admin-header-edit', 'PublicController@headerEdit');
 Route::get('/admin-footer', 'PublicController@footer');
 Route::get('/admin-footer-edit', 'PublicController@footerEdit');
 

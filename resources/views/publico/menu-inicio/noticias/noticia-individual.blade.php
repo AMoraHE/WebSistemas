@@ -14,7 +14,7 @@
 
           <div class="img-encabezado">
 
-            <img src="/img/Noticias.png">
+            <img src="/images/header/{{$header->img}}">
 
             <div class="encabezado">
 

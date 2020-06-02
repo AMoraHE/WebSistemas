@@ -63,7 +63,7 @@ class subHeaderController extends Controller
      */
     public function edit($slug)
     {
-        $subheader = subheader::where('slug', $slug)->firstOrFail();
+        $subheader = subheader::where('sSlug', $slug)->firstOrFail();
 
         return view('admin.menu-inicio.img-encabezado.editar-subencabezados', compact('subheader'));
     }
@@ -94,11 +94,11 @@ class subHeaderController extends Controller
 
         else
         {
-            $subheader = subheader::where('slug', '=', $slug)->firstOrFail();
+            $subheader = subheader::where('sSlug', '=', $slug)->firstOrFail();
 
             if($request->hasFile('sImg'))
             {
-                $oldFile = public_path().'/img/'.$subheader->sImg;
+                $oldFile = public_path().'/images/header/'.$subheader->sImg;
                 if(file_exists($oldFile))
                 {
                     unlink($oldFile);
@@ -107,7 +107,7 @@ class subHeaderController extends Controller
                 $file = $request->file('sImg');
                 $name = time().$file->getClientOriginalName();
                 $subheader->sImg = $name; 
-                $file->move(public_path().'/img/',$name);
+                $file->move(public_path().'/images/header/',$name);
             }
 
             $subheader->sTitulo = $request->input('sTitulo');

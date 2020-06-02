@@ -12,11 +12,11 @@
 
           <div class="img-encabezado">
 
-            <img src="/img/Conocenos.jpg">
+            <img src="/images/header/{{$subheader->sImg}}">
 
             <div class="encabezado">
 
-               <h1>Perfil de la Carrera</h1>
+               <h1>{{$subheader->sTitulo}}</h1>
                <hr>
 
             </div>

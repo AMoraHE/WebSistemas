@@ -27,20 +27,13 @@ use App\Programa;
 use App\Proyecto;
 use App\ProyectoGaleria;
 use App\reticula;
+use App\header;
+use App\subheader;
 use Validator;
 
 class PublicController extends Controller
 {
   //TEMP
-  public function header()
-  {
-    return view('admin.menu-inicio.img-encabezado.encabezados');
-  }
-
-  public function headerEdit()
-  {
-    return view('admin.menu-inicio.img-encabezado.editar-encabezados');
-  }
 
   public function footer()
   {
@@ -70,25 +63,29 @@ class PublicController extends Controller
 
   public function noticias()
   {
+    $header = header::where('slug', 'noticias')->firstOrFail();
     $noticias = Noticia::orderBy('id', 'DESC')->paginate(10);
-    return view('publico.menu-inicio.noticias.noticias', compact('noticias'));
+    return view('publico.menu-inicio.noticias.noticias', compact('noticias', 'header'));
   }
 
   public function noticiasVerInd($id)
   {
+    $header = header::where('slug', 'noticias')->firstOrFail();
     $noticias = Noticia::where("id", '=', $id)->firstOrFail();
-    return view('publico.menu-inicio.noticias.noticia-individual', compact('noticias'));
+    return view('publico.menu-inicio.noticias.noticia-individual', compact('noticias', 'header'));
   }
 
   public function buscadorNoticias(Request $request)
   {
+    $header = header::where('slug', 'noticias')->firstOrFail();
     $noticias = Noticia::orderBy('id', 'DESC')->where('titulo', 'like',"%".$request->key."%")->paginate(10);
-    return view('publico.menu-inicio.noticias.noticias',compact('noticias'));
+    return view('publico.menu-inicio.noticias.noticias',compact('noticias', 'header'));
   }
 
   public function calendario()
   {
-    return view('publico.menu-inicio.calendario.calendario');
+    $header = header::where('slug', 'calendario')->firstOrFail();
+    return view('publico.menu-inicio.calendario.calendario', compact('header'));
   }
 
   public function calendarioEventos(Request $request)
@@ -123,6 +120,7 @@ class PublicController extends Controller
 
   public function conocenos()
   {
+    $header = header::where('slug', 'conocenos')->firstOrFail();
     $informaciones = informacion::all();
     $perfilingreso = perfil_ingreso::oldest()->take(4)->get();
     $perfilegreso = perfil_egreso::oldest()->take(4)->get();
@@ -134,28 +132,31 @@ class PublicController extends Controller
     $laboratorio = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '5')->get();
     $docente = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '6')->get();
 
-    return view('publico.menu-conocenos.conocenos', compact('informaciones', 'perfilingreso', 'perfilegreso', 'campolaboral', 'reticulas', 'lineainvestigacion', 'cuerpos', 'director', 'laboratorio', 'docente'));
+    return view('publico.menu-conocenos.conocenos', compact('informaciones', 'perfilingreso', 'perfilegreso', 'campolaboral', 'reticulas', 'lineainvestigacion', 'cuerpos', 'director', 'laboratorio', 'docente', 'header'));
   }
 
   public function MVO()
   {
+    $subheader = subheader::where('sSlug', 'MVO')->firstOrFail();
     $informaciones = informacion::all();
-    return view('publico.menu-conocenos.informacion-carrera.view-informacion-carrera', compact('informaciones'));
+    return view('publico.menu-conocenos.informacion-carrera.view-informacion-carrera', compact('informaciones', 'subheader'));
   }
 
   public function perfilCampoISC()
   {
+    $subheader = subheader::where('sSlug', 'perfilC')->firstOrFail();
     $perfilingreso = perfil_ingreso::all();
     $perfilegreso = perfil_egreso::all();
     $campolaboral = campo_laboral::all();
 
-    return view('publico.menu-conocenos.perfil-campo-ISC.view-perfil-campo-ISC', compact('perfilingreso', 'perfilegreso', 'campolaboral'));
+    return view('publico.menu-conocenos.perfil-campo-ISC.view-perfil-campo-ISC', compact('perfilingreso', 'perfilegreso', 'campolaboral', 'subheader'));
   }
 
   public function reticula()
   {
+    $subheader = subheader::where('sSlug', 'reticula')->firstOrFail();
     $reticulas = reticula::orderBy('id', 'DESC')->paginate(5);
-    return view('publico.menu-conocenos.reticula.view-reticula', compact('reticulas'));
+    return view('publico.menu-conocenos.reticula.view-reticula', compact('reticulas', 'subheader'));
   }
 
   public function reticulaVer($slug)
@@ -174,10 +175,11 @@ class PublicController extends Controller
 
   public function lineasCuerpos()
   {
+    $subheader = subheader::where('sSlug', 'LiCa')->firstOrFail();
     $lineainvestigacion = lineas_investigacion::all();
     $cuerpos = CuerposAcademico::all();
 
-    return view('publico.menu-conocenos.lineas-cuerpos.view-lineas-cuerpos', compact('lineainvestigacion', 'cuerpos'));
+    return view('publico.menu-conocenos.lineas-cuerpos.view-lineas-cuerpos', compact('lineainvestigacion', 'cuerpos', 'subheader'));
   }
 
   /*public function lineasInvestigacion()
@@ -194,20 +196,22 @@ class PublicController extends Controller
 
   public function organigrama()
   {
+    $subheader = subheader::where('sSlug', 'organigrama')->firstOrFail();
     $director = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '<', '5')->orderBy('areas.id', 'ASC')->get();
 
     $laboratorio = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '5')->get();
 
     $docente = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '6')->get();
 
-    return view('publico.menu-conocenos.organigrama.view-organigrama', compact('director', 'laboratorio', 'docente'));
+    return view('publico.menu-conocenos.organigrama.view-organigrama', compact('director', 'laboratorio', 'docente', 'subheader'));
   }
 
   public function infraestructura()
   {
+    $header = header::where('slug', 'infraestructura')->firstOrFail();
     $infras = Infraestructura::all();
 
-    return view('publico.menu-inf.infraestructura', compact('infras'));
+    return view('publico.menu-inf.infraestructura', compact('infras', 'header'));
   }
 
   public function labCisco()
@@ -254,19 +258,21 @@ class PublicController extends Controller
 
   public function academicos()
   {
+    $header = header::where('slug', 'academicos')->firstOrFail();
     $proyectos = Proyecto::latest()->take(1)->get();
     $eventos = EventosAcademico::latest()->take(1)->get();
     $convocatorias = Convocatoria::latest()->take(1)->get();
     $programas = Programa::latest()->take(1)->get();
 
-    return view('publico.menu-academicos.academicos', compact('proyectos', 'eventos', 'convocatorias', 'programas'));
+    return view('publico.menu-academicos.academicos', compact('proyectos', 'eventos', 'convocatorias', 'programas', 'header'));
   }
 
   public function proyectos()
   {
+    $subheader = subheader::where('sSlug', 'proy')->firstOrFail();
     $proyectos = Proyecto::orderBy('id', 'DESC')->paginate(5);
     $imagenes = DB::table('proyecto_galerias')->join('proyectos', 'proyecto_galerias.proySlug', '=', 'proyectos.slug')->select('proyecto_galerias.*')->get();
-    return view('/publico/menu-academicos/proyectos/view-proyectos-academicos', compact('proyectos', 'imagenes'));
+    return view('/publico/menu-academicos/proyectos/view-proyectos-academicos', compact('proyectos', 'imagenes', 'subheader'));
   }
 
   public function proyectosVerImg($id)
@@ -285,8 +291,9 @@ class PublicController extends Controller
 
   public function eventos()
   {
+    $subheader = subheader::where('sSlug', 'eventosacad')->firstOrFail();
     $eventos = EventosAcademico::orderBy('id', 'DESC')->paginate(5);
-    return view('/publico/menu-academicos/Eventos/view', compact('eventos'));
+    return view('/publico/menu-academicos/Eventos/view', compact('eventos', 'subheader'));
   }
 
   public function eventosVer($slug)
@@ -305,8 +312,9 @@ class PublicController extends Controller
 
   public function convocatorias()
   {
+    $subheader = subheader::where('sSlug', 'convocatorias')->firstOrFail();
     $convocatorias = Convocatoria::orderBy('id', 'DESC')->paginate(5);
-    return view('/publico/menu-academicos/convocatorias/view-convocatorias-academicos', compact('convocatorias'));
+    return view('/publico/menu-academicos/convocatorias/view-convocatorias-academicos', compact('convocatorias', 'subheader'));
   }
 
   public function convocatoriasVer($slug)
@@ -325,8 +333,9 @@ class PublicController extends Controller
 
   public function programas()
   {
+    $subheader = subheader::where('sSlug', 'programas')->firstOrFail();
     $programas = Programa::orderBy('id', 'DESC')->paginate(5);
-    return view('/publico/menu-academicos/programas/view', compact('programas'));
+    return view('/publico/menu-academicos/programas/view', compact('programas', 'subheader'));
   }
 
   public function programasVer($slug)
@@ -345,8 +354,9 @@ class PublicController extends Controller
 
   public function galeria()
   {
+    $header = header::where('slug', 'galeria')->firstOrFail();
     $albums = album::orderBy('id', 'DESC')->get();
-    return view('publico.menu-galeria.albumes', compact('albums'));
+    return view('publico.menu-galeria.albumes', compact('albums', 'header'));
   }
 
   public function fotos($slug)
@@ -373,15 +383,17 @@ class PublicController extends Controller
 
   public function contactos()
   {
+    $header = header::where('slug', 'contactanos')->firstOrFail();
     $directors = DB::table('organigramas')->join('areas', 'organigramas.area_id', '=', 'areas.id')->select('organigramas.*', 'areas.nombre')->where('areas.id', '=', '4')->orderBy('areas.id', 'ASC')->get();
 
-    return view('publico.correos', compact('directors'));
+    return view('publico.correos', compact('directors', 'header'));
   }
 
   public function formContacto($correo)
   {
+    $subheader = subheader::where('sSlug', 'contact')->firstOrFail();
     $destinatario = $correo;
-    return view('publico.formCorreo', compact('destinatario'));
+    return view('publico.formCorreo', compact('destinatario', 'subheader'));
   }
 
   public function contactoCorreo(Request $request)

@@ -15,11 +15,11 @@
 
           <div class="img-encabezado">
 
-            <img src="/img/Convocatorias.jpg">
+            <img src="/images/header/{{$subheader->sImg}}">
 
             <div class="encabezado">
 
-               <h1>Proyectos</h1>
+               <h1>{{$subheader->sTitulo}}</h1>
                <hr>
 
             </div>

@@ -13,11 +13,11 @@
 
           <div class="img-encabezado">
 
-            <img src="/img/Calendario.png">
+            <img src="/images/header/{{$header->img}}">
 
             <div class="encabezado">
 
-               <h1>Eventos Escolares</h1>
+               <h1>{{$header->titulo}}</h1>
                <hr>
 
             </div>

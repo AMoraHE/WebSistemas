@@ -1,6 +1,6 @@
 @extends('layouts.publico')
 
-@section('title', 'Correos')
+@section('title', 'Correos De Contacto')
 
 @section('content')
 
@@ -22,11 +22,11 @@
 
           <div class="img-encabezado">
 
-            <img src="/img/contacto.jpg">
+            <img src="/images/header/{{$header->img}}">
 
             <div class="encabezado">
 
-            	<h1>Queremos saber de ti</h1>
+            	<h1>{{$header->titulo}}</h1>
             	<hr>
 
             </div>
