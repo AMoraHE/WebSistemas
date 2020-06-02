@@ -9,7 +9,8 @@
 
   <div class="encabezado">
 
-	  <h1 class="titulo-infra diseño-titulo-infra">{{$infra->nombre}}</h1>
+	  <h1>{{$infra->nombre}}</h1>
+	  <hr>
 
   </div>
 
@@ -18,7 +19,10 @@
 <div class="skew-abajo"></div>
 
 </div>
-		<label class="elegantshadow-infra subtitulo-infra">Descripción:</label>
+
+<div class="contenedor-secciones">
+	
+	<label class="elegantshadow-infra subtitulo-infra">Descripción</label>
 	<div class="formulario-infra">
 
 	<div class="formulario-infra-hijo">
@@ -26,20 +30,18 @@
 	</div>
 
 	</div>
-	<label class="elegantshadow-infra subtitulo-infra">Responsable:</label>
+	<label class="elegantshadow-infra subtitulo-infra">Responsable</label>
 	<div class="formulario-infra">
 		
 		{{$infra->responsable}}
 		
 	</div>
-	<label class="elegantshadow-infra subtitulo-infra">Correo Electrónico:</label>
+	<label class="elegantshadow-infra subtitulo-infra">Correo Electrónico</label>
 	<div class="formulario-infra">
 
 		{{$infra->correo}}
 
 	</div>
-
-	<label class="elegantshadow-infra subtitulo-infra">Mini Galería:</label>
 
 	<div class="seccion-mini-galeria">
 
@@ -99,3 +101,5 @@
 	        @endforeach
 		
 	</div>
+
+</div>

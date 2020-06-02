@@ -362,7 +362,7 @@
 	height: 100%; /***Hacer Responsivo***/
 	object-fit: cover;
 	object-position: center;
-  animation: arriba 1s ease-in;
+  animation: desvanecer 1s ease-in;
 }
 
 .encabezado{
@@ -1184,6 +1184,7 @@
 	font-size: 28px;
 	font-weight: 400;
 	color: var(--azul);
+  margin-bottom: 10px;
 }
 
 .contenedor-img-mini-galeria-img{
@@ -2272,7 +2273,11 @@ body::-webkit-scrollbar-thumb{
 
 /************************************************************************************************FIN PAGINA ACADÉMICOS********************************************************************************/
 
+/************************************************************************************************PAGINA MINI GALERIA SECCIONES********************************************************************************/
 
+  .seccion-mini-galeria h3{
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 650px){
@@ -2530,6 +2535,9 @@ body::-webkit-scrollbar-thumb{
 	}
 
 /************************************************************************************************SECCIÓN IMG ENCABEZADO***********************************************************************/
+  .contenedor-img-encabezado{
+    margin-bottom: 20px;
+  }
 
   .img-encabezado{
     height: 200px;
@@ -2543,6 +2551,7 @@ body::-webkit-scrollbar-thumb{
 
 
 /***************************EFECTO SKEW***********************************/
+
 
   /** Skew **/
   .skew-abajo{

@@ -4,7 +4,7 @@ function mostrarScroll(){
 	let scrollTop = document.documentElement.scrollTop;
 	for (var i=0; i<animado.length; i++){
 		let alturaAnimado = animado[i].offsetTop;
-		if (alturaAnimado - 800 < scrollTop) {
+		if (alturaAnimado - 600 < scrollTop) {
 			animado[i].style.opacity = 1;
 			animado[i].classList.add("mostrarArriba");
 		}
@@ -12,3 +12,5 @@ function mostrarScroll(){
 }
 
 window.addEventListener('scroll', mostrarScroll);
+
+/**********************************************Animaacion *********************************************/

@@ -1,4 +1,4 @@
-/*Titulo*/
+/*Titulo
 .titulo-infra{
         text-transform: uppercase;
         border: 8px double rgba(255,255,255,.25);
@@ -10,80 +10,90 @@
         margin: 0 auto;
         text-shadow: 0 0 80px rgba(255,255,255,.5);
   
-  /* Imagen de fondo */
+  /* Imagen de fondo 
   
         background: url(../img/titulo_relleno.png) repeat-y;
         -webkit-background-clip: text;
         background-clip: text;
   
-  /* Imagen de fondo animado */
+  /* Imagen de fondo animado 
   
         -webkit-text-fill-color: transparent;
         animation: aitf-infra 80s linear infinite;
   
-  /* Activar aceleracion de hardware para animaciones mas suaves */
+  /* Activar aceleracion de hardware para animaciones mas suaves 
   
         transform: translate3d(0,0,0);
         backface-visibility: hidden;
    
-  }
+  } 
   
-  /* Imagen de fondo animado */
+  /* Imagen de fondo animado 
   
     @keyframes aitf-infra {
       0% { background-position: 0% 50%; }
       100% { background-position: 100% 50%; }
-}
+}*/
+
 /*formularios*/
 .formulario-infra{
-    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-    width: 90%;
+    background: #e7e7e7; 
     color: #000; 
     font-size: 18px; 
     font-weight: 400; 
-    background: #FFF; 
     margin: 0 0 25px; 
     overflow: hidden; 
     padding: 20px;
     position: relative;
-    left: 5%;
     /*alineacion de contenido*/
     display: flex;
     justify-content: center;
     align-items: center;
     /*borde de caja*/ 
-    border-radius: 0px 0px 35px 35px; 
-    -moz-border-radius: 0px 0px 35px 35px; 
-    -webkit-border-radius: 0px 0px 35px 35px;
-    /*sombra de caja*/
+    border-radius: 0px 0px 5px 5px; 
+    -moz-border-radius: 0px 0px 5px 5px; 
+    -webkit-border-radius: 0px 0px 5px 5px;
+    /*sombra de caja
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);  
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); 
+    */
+    line-height: 2; 
 }
 /*Texto de subtitulos*/
 .subtitulo-infra{
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-    font-size: 32px;
-    width: 90%;
+    font-size: 28px;
     background: #1B396A; 
     padding: 10px 10px;
     position: relative;
-    left: 5%;
     /*alineacion de contenido*/
     display: flex;
     justify-content: center;
     align-items: center;
-    text-transform: uppercase;
     text-rendering: optimizeLegibility;
     /*borde de caja*/ 
-    border-radius: 35px 35px 0px 0px; 
-    -moz-border-radius: 35px 35px 0px 0px; 
-    -webkit-border-radius: 35px 35px 0px 0px;
+    border-radius: 5px 5px 0px 0px; 
+    -moz-border-radius: 5px 5px 0px 0px; 
+    -webkit-border-radius: 5px 5px 0px 0px;
 }
+
+.formulario-infra-hijo{
+    text-align: justify;
+}
+
 .elegantshadow-infra {
     color: #FFF;
-    letter-spacing: .15em;
-    text-shadow: 2px 2px 2px #767676;
+   /* letter-spacing: .15em;
+    text-shadow: 2px 2px 2px #767676;*/
 }
 /*galeria infra*/
+
+@media screen and (max-width: 800px){
+    .formulario-infra{
+        font-size: 16px;
+    }
+    .subtitulo-infra{
+        font-size: 20px;
+    }
+}
 
