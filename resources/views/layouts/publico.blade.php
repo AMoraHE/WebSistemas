@@ -277,6 +277,8 @@
 
 	</footer>
 
+	<a href="#up" class="simplescrollup__button simplescrollup__button--hide"><i class="fas fa-angle-up"></i></a>
+
 </div>
 
 	<script src="{{ asset('js/main-public.js')}}"></script>
@@ -288,6 +290,10 @@
 	<!--------------------------------MINI CALENDARIO---------------------------------------->
 
 	<script src="{{ asset('js/calendar-public.js')}}"></script>
+
+	<!--------------------------------SCROLL---------------------------------------->
+
+	<script src="{{ asset('js/simplescrollup.js')}}"></script>
 
 	<!--------------------------------Animaciones---------------------------------------->
 	<script src="{{ asset('js/wow.min.js')}}"></script>
