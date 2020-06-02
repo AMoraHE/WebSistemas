@@ -362,7 +362,7 @@
 	height: 100%; /***Hacer Responsivo***/
 	object-fit: cover;
 	object-position: center;
-  animation: desvanecer 1s ease-in;
+  animation: desvanecer .5s ease-in;
 }
 
 .encabezado{
@@ -383,7 +383,7 @@
     font-size: 50px;
     color:#fff;
     font-weight: 200;
-    animation: moverDerecha 1s ease-in;
+    animation: slideInLeft  1s ease-in;
 }
 
 .encabezado hr{
@@ -392,7 +392,7 @@
     background: #fff;
     border: none;
     margin-top: 5px;
-     animation: moverIzquierda 1s ease-in;
+     animation: slideInRight 1s ease-in;
 }
 
 /************************************************************************************************FIN SECCIÓN IMG ENCABEZADO***********************************************************************/
@@ -1996,6 +1996,7 @@ body::-webkit-scrollbar-thumb{
 
 	.contenedor-noticia-1{
 		width: 100%;
+    padding: 10px;
 	}
 	.mini-calendario{
 		width: 100%;

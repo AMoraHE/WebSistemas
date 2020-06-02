@@ -61,8 +61,8 @@
 
 		<div class="contenedor-descripcion-txt">
 			
-			<h3>{{$informaciones->categoria}}</h3>
-			<p>{{$informaciones->descripcion}}</p>
+			<h3 class="wow slideInLeft">{{$informaciones->categoria}}</h3>
+			<p class="wow slideInRight">{{$informaciones->descripcion}}</p>
 
 		</div>
 		
@@ -71,7 +71,7 @@
 
 <div class="contenedor-dividido">
 
-	<div class="contenedor-noticia-1 animado">
+	<div class="contenedor-noticia-1 wow bounceInLeft">
 		
 		<div class="contenedor-titulo-seccion">
 
@@ -121,7 +121,7 @@
 <!------------------------------------------------------------- CALENDARIO ---------------------------------------------------------->
 
 	<div class="mini-calendario">
-		<div class="contenedor-mini-calendario animado">
+		<div class="contenedor-mini-calendario wow bounceInRight">
 	        <div class="calendario-public">
 	            <div class="month">
 	                <div class="prev" onclick="moveDate('prev')">
@@ -163,7 +163,7 @@
 
 	<div class="contenedor-previsualizar-seccion">
 
-		<div class="contenedor-titulo-seccion-mas">
+		<div class="contenedor-titulo-seccion-mas wow bounceInRight">
 
 			<h3>Noticias Recientes</h3>
 
@@ -171,7 +171,7 @@
 
 		@foreach ($noticias as $noticia)
 
-		<div class="contenedor-seccion-noticias-preliminar">
+		<div class="contenedor-seccion-noticias-preliminar wow bounceInLeft">
 				
 			<div class="contenedor-seccion-preliminar">
 
@@ -197,7 +197,7 @@
 
 				<div class="contenedor-botones">
 
-					<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticiasVerInd/{{$noticia->id}}"><button class="btn mas"><span>Leer Más...</span></button></a>
+					<a href="/isc-inicio-noticiasVerInd/{{$noticia->id}}"><button class="btn mas"><span>Leer Más...</span></button></a>
 				
 				</div>
 
@@ -209,9 +209,9 @@
 
 <!----------------------------------------------------------------- BOTONES VER MAS ---------------------------------------------------------->
 
-		<div class="contenedor-botones-centrado margin-arriba">
+		<div class="contenedor-botones-centrado margin-arriba wow fadeInDown">
 
-			<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticias"><button class="btn ver centrado"><span>Ver Más Noticias</span></button></a>
+			<a href="/isc-inicio-noticias"><button class="btn ver centrado"><span>Ver Más Noticias</span></button></a>
 
 		</div>
 
@@ -243,7 +243,7 @@
    
    <div class="ejeZproject">
       <div class="container-project">
-        <div class="project-title">
+        <div class="project-title wow flipInX">
           <h2>Nuestros Proyectos</h2>
           <hr>
         </div>
@@ -251,7 +251,7 @@
 
           	@foreach($proyectos as $proyecto)
 
-          	<div class="contenedor-img-proyecto">
+          	<div class="contenedor-img-proyecto wow fadeInRightBig">
           		
           	
 

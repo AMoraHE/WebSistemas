@@ -56,6 +56,10 @@
 		
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/galeria.css')}}">
 
+		<!---------------------------------ANIMACIONES------------------------------------------>
+
+		<link rel="stylesheet" href="{{ asset('css/animate.css')}}">
+
 		<!-----------SCRIPT AJAX --- IMPORTANTE DEBE IR ARRIBA DE TODOS LOS JS-------------->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -116,7 +120,7 @@
  <nav class="menu">
  	<div class="contenedor">
  		<div class="lista-menu justify-content-between align-items-center">
- 			<div class="logo-menu">
+ 			<div class="logo-menu wow slideInLeft">
  				<a href="/" class="titulo-menu">
  					Sistemas Computacionales
  				</a>
@@ -291,6 +295,21 @@
 
 	<!--------------------------------Animaciones---------------------------------------->
 	<script src="{{ asset('js/animacion.js')}}"></script>
+	<script src="{{ asset('js/wow.min.js')}}"></script>
+
+   	<script>
+        wow = new WOW(
+            {
+                boxClass:     'wow',      // default
+                animateClass: 'animated', // default
+                offset:       50,          // default
+                mobile:       true,       // default
+                live:         true        // default
+            }
+            )
+        wow.init();
+
+    </script>
 
 
 </body>
