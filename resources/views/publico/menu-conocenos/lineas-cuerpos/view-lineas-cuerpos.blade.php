@@ -27,18 +27,17 @@
 
 <!----------------------------------------------------------------- TABLA LINEAS INVESTIGACIÓN---------------------------------------->
 
-	<div class="contenedor-tabla">
+<div class="contenedor-secciones">
 
-		<div class="titulo-linea-cuerpo">
+	<div class="titulo-linea-cuerpo">
 		 <p>Líneas de investigación</p>
-		</div>
+	</div>
+ 	
+ 	<div class="tabla-informacion-escolar">
 
-
-		<div class="tabla-informacion-escolar">
-
-				<table>
-									
-					<thead>
+        <table>
+            
+            		<thead>
 						<tr>
 							<th>Programa</th>
 							<th>Líneas de Investigación</th>
@@ -55,19 +54,18 @@
 							
 						</tr>
 
-					@endforeach
+					@endforeach  
 
-				</table>		
+        </table>    
 
-		</div>
-	</div>
+    </div>
+
 <!----------------------------------------------------------------- TABLA CUERPOS ACÁDEMICOS---------------------------------------->
-	<div class="separador"></div>
+	<div class="seccion-divisor-seccion"></div>
 
-	<div class="contenedor-tabla">
 
 		<div class="titulo-linea-cuerpo">
-		 <p>Cuerpos Académicos</p>
+		 	<p>Cuerpos Académicos</p>
 		</div>
 
 			<div class="tabla-informacion-escolar">
@@ -111,7 +109,12 @@
 				</table>		
 
 			</div>
-		</div>
+
+		<div class="seccion-divisor-seccion"></div>
+
+
+	
+	</div>
 		
 				
 </div>

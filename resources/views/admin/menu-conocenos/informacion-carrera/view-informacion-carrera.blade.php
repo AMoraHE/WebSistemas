@@ -34,7 +34,7 @@
 
 	<div class="contenedor-componentes-principales">
 
-	<div class="tabla-informacion-carrera">
+	<div class="tabla-informacion-escolar">
 
 		<table>
 

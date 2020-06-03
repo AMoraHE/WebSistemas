@@ -616,37 +616,6 @@
 	text-align: center;
 }
 
-.tabla-informacion-carrera{
-	width: 100%;
-	border: 1px solid var(--verde);
-	overflow-x: auto;
-}
-
-.tabla-informacion-carrera table{
-	background: var(--blanco);
-	border-collapse: collapse;
-	width: 100%; 
-}
-
-.tabla-informacion-carrera th, td{
-	padding: 20px;
-	max-width: 700px; /***TAMAÑO MÁXIMO DE LAS CELDAS***/
-}
-
-.tabla-informacion-carrera td{
-	text-align: justify;
-}
-.tabla-informacion-carrera thead{
-	text-transform: uppercase;
-	text-align: center;
-	background: #f4f4f4;
-	color: #000;
-}
-
-.tabla-informacion-carrera p{
-	text-align: justify;
-}
-
 /***********************************IMG ORGANIGRAMA TABLA*****************************************/
 
 .contenedor-img-organigrama{
@@ -654,6 +623,7 @@
 	height: 150px;
 	overflow: hidden;
 	box-shadow: 0 10px 10px rgba(0,0,0,0.7);
+	background: rgb(27,57,106, .5);
 }
 
 .contenedor-img-organigrama img{

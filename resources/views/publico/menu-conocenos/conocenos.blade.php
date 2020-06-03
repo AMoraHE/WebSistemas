@@ -182,7 +182,13 @@
 </div>
 
 <!----------------------------------------------------------------- TABLA LINEAS INVESTIGACIÓN---------------------------------------->
-<div class="contenedor-lineas-cuerpos-reticula">
+
+<div class="partido-li">
+
+	<div class="seccion1-li">
+
+
+		<div class="contenedor-lineas-cuerpos-reticula">
 
 <div class="contenedor-lineas-cuerpos">
 
@@ -196,7 +202,7 @@
 
 	<div class="contenedor-tabla">
 
-		<div class="tabla-informacion-escolar-con">
+		<div class="tabla-informacion-escolar t-con">
 
 				<table>
 									
@@ -232,7 +238,7 @@
 	</a>
 
 		<div class="contenedor-tabla">
-			<div class="tabla-informacion-escolar-con">
+			<div class="tabla-informacion-escolar t-con">
 
 				<table>
 							
@@ -273,7 +279,17 @@
 
 </div>
 </div>
-		<!-------------------------------------------------------------- RETICULA ---------------------------------------------------------->
+
+
+</div>
+
+
+		
+	</div>
+
+	<div class="seccion2-li">
+
+				<!-------------------------------------------------------------- RETICULA ---------------------------------------------------------->
 
 
 	<div class="contenedor-texto-completo-acordeon-con">
@@ -330,7 +346,19 @@
 		</div>
 	</div>
 
+
+
+
+
+		
+	</div>
+
+
+
+	
 </div>
+
+
 
 
 
