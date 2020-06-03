@@ -401,7 +401,7 @@
 
 .container-portada{
     width: 100%;
-    height: 500px;
+    height: 50vh;
     position: relative;
     animation: movimiento 20s infinite linear alternate;  
 }
