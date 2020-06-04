@@ -2590,6 +2590,10 @@ body::-webkit-scrollbar-thumb{
       font-size: 28px;
   }
 
+  .contenedor-descripcion-txt p{
+    text-align: justify;
+  }
+
 /************************************************************************************************SECCIÓN NOTICIAS***********************************************************************/
 
 	.contenedor-seccion-noticias{
