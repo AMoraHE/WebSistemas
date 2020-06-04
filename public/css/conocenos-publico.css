@@ -509,7 +509,7 @@ box-shadow: 0 1px 6px #000;
 
 .contenedor-mvo{
 	width: 100%;
-	height: 434px;
+	/*height: 434px;*/
     background-color: #d9dfffe0; 
     padding-top: 50px;
     padding-bottom: 50px;
@@ -522,6 +522,7 @@ box-shadow: 0 1px 6px #000;
 .contenedor-mvo-subapartado{
 	width: 90%;
 	margin: auto;
+	overflow: hidden;
 }
 .contenedor-img-mvo{
 	width: 45%;
@@ -582,7 +583,7 @@ box-shadow: 0 1px 6px #000;
 .info-mvo{
 	display: block;
 	width:100%;
-	height:200px;
+	/*height:200px;*/
 }
 
 .info-mvo p{
@@ -1448,11 +1449,11 @@ ol.round p {
 
 @media screen and (max-width: 700px){/************************700PX***********************************/
 
-.contenedor-mvo{
+/*.contenedor-mvo{
 	height: 550px;
     padding-top: 25px;
     padding-bottom: 25px;
-}
+}*/
 
 .contenedor-img-mvo{
 	height: 220px;
@@ -1486,7 +1487,7 @@ ol.round p {
 .info-mvo{
 	display: block;
 	width:100%;
-	height:200px;
+	/*height:200px;*/
 }
 
 .info-mvo p{
@@ -1498,11 +1499,11 @@ ol.round p {
 
 @media screen and (max-width: 450px){/**************************450PX*******************************/
 
-.contenedor-mvo{
+/*.contenedor-mvo{
 	height: 490px;
     padding-top: 25px;
     padding-bottom: 25px;
-}
+}*/
 
 .contenedor-img-mvo{
 	height: 160px;
@@ -1536,7 +1537,7 @@ ol.round p {
 .info-mvo{
 	display: block;
 	width:100%;
-	height:200px;
+	/*height:200px;*/
 }
 
 .info-mvo p{
