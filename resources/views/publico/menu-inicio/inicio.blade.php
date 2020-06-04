@@ -7,6 +7,7 @@
 
 <!----------------------------------------------------------------- SLIDER ---------------------------------------------------------->
 
+@if(count($sliders) > 0)
 <div class="contenedor-slider">
 
 <div class="slider">
@@ -47,6 +48,7 @@
 	</div>
 
 </div>
+@endif
 @endsection
 
 
@@ -71,6 +73,7 @@
 
 <div class="contenedor-dividido">
 
+	@if(count($noticias) > 0)
 	<div class="contenedor-noticia-1 wow bounceInLeft">
 		
 		<div class="contenedor-titulo-seccion">
@@ -117,6 +120,7 @@
 		</div>
 
 	</div>
+	@endif
 
 <!------------------------------------------------------------- CALENDARIO ---------------------------------------------------------->
 
