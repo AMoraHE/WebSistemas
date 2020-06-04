@@ -1127,6 +1127,34 @@ figure .trasera p {
 
 /*******************************************************SECCIÓN INFO-MVO-CON******************************************/
 
+@media screen and (max-width: 1000px){/************************1000PX***********************************/
+
+.titulo-linea-cuerpo p{
+    padding-top: 20px;
+    font-size: 25pt;
+}
+
+.contenedor-titulo-mvo-con,
+.contenedor-titulo-mvo-con2{
+	width:48%;
+	margin: 0px;
+}
+
+.contenedor-titulo-mvo-con p,
+.contenedor-titulo-mvo-con2 p{
+	padding: 5px 15px;
+	font-size: 24pt;
+}
+
+.info-mvo-con p {
+    font-size: 16pt;
+}
+
+ol.round p {
+    width: 96%;
+}
+
+}
 
 @media screen and (max-width: 700px){/************************700PX***********************************/
 
@@ -1447,7 +1475,7 @@ ol.round p {
 /*******************************************************SECCIÓN MVO******************************************/
 
 
-@media screen and (max-width: 700px){/************************700PX***********************************/
+@media screen and (max-width: 1000px){/************************1000PX***********************************/
 
 /*.contenedor-mvo{
 	height: 550px;
