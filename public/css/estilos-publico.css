@@ -436,6 +436,7 @@ footer{
     margin-top: 10px;
     margin-left: 20px;
     max-width: 140px;
+    overflow: auto;
 }
 
 .contenedor-footer-barra{
