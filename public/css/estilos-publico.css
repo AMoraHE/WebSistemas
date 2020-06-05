@@ -22,7 +22,7 @@ html {
 
 body {
     position: relative;
-    width: 100vh;
+    width: 100%;
    /* min-width: 350px; */
     min-height: 100%;
     background: #fff;
@@ -436,7 +436,7 @@ footer{
     margin-top: 10px;
     margin-left: 20px;
     max-width: 140px;
-    overflow: auto;
+    overflow-x: auto;
 }
 
 .contenedor-footer-barra{
@@ -567,6 +567,13 @@ footer{
     padding:14px 20px 12px 40px;
  }
 }
+
+@media(max-width: 768px){
+    body{
+        width: 100vh;
+    }
+}
+
 
 @media(max-width: 450px){
 
