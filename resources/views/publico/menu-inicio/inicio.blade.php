@@ -169,7 +169,7 @@
 
 		<div class="contenedor-titulo-seccion-mas">
 
-			<h3 class="wow bounceInRight">Noticias Recientes</h3>
+			<h3 class="wow bounceInLeft">Noticias Recientes</h3>
 
 		</div>			
 
