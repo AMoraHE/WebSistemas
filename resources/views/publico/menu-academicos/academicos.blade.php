@@ -96,7 +96,7 @@
 
 				<div class="seccion-continuacion">
 
-					<a class="msj" mesanje="ver más noticias?" href="/isc-academicos-proyectos"><button class="btn-leer"><span>Ver más proyectos</span></button></a>
+					<a href="/isc-academicos-proyectos"><button class="btn-leer"><span>Ver más proyectos</span></button></a>
 						
 				</div>
 
@@ -152,7 +152,7 @@
 
 			<div class="seccion-continuacion">
 
-				<a class="msj" mesanje="ver más noticias?" href="/isc-academicos-eventos"><button class="btn-leer"><span>Ver más eventos</span></button></a>
+				<a href="/isc-academicos-eventos"><button class="btn-leer"><span>Ver más eventos</span></button></a>
 
 			</div>
 
@@ -209,7 +209,7 @@
 
 			<div class="seccion-continuacion">
 
-				<a class="msj" mesanje="ver más noticias?" href="/isc-academicos-convocatorias"><button class="btn-leer"><span>Ver más convocatorias</span></button></a>
+				<a href="/isc-academicos-convocatorias"><button class="btn-leer"><span>Ver más convocatorias</span></button></a>
 
 			</div>
 			
@@ -271,7 +271,7 @@
 
 			<div class="seccion-continuacion">
 
-				<a class="msj" mesanje="ver más noticias?" href="/isc-academicos-programas"><button class="btn-leer"><span>Ver más programas</span></button></a>
+				<a href="/isc-academicos-programas"><button class="btn-leer"><span>Ver más programas</span></button></a>
 
 			</div>
 			

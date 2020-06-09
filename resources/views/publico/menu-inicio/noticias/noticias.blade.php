@@ -112,7 +112,7 @@
 
 				<div class="seccion-continuacion">
 
-					<a class="msj" mesanje="ver más noticias?" href="/isc-inicio-noticiasVerInd/{{$noticia->id}}"><button class="btn-leer"><span>Leer Más...</span></button></a>
+					<a href="/isc-inicio-noticiasVerInd/{{$noticia->id}}"><button class="btn-leer"><span>Leer Más...</span></button></a>
 						
 				</div>
 
