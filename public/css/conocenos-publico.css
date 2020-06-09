@@ -1,5 +1,4 @@
 
-
 /*********************************************************SECCIÓN CONOCENOS PRINCIPAL***********************************************************************/
 
 .partido-li{
@@ -17,223 +16,72 @@
 	padding: 10px;
 }
 
-@media screen and (max-width: 700px){
-
-	.partido-li{
-		flex-direction: column;
-	}
-
-	.seccion1-li{
-		width: 100%
-	}
-
-	.seccion2-li{
-		width: 100%;
-	}
-}
-
-/***************************************************************MISION VISION ******************************************************/
-
-.fondo-mvo-con{
-	background-color:#fff;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover; 
-}
-
-.contenedor-mvo-con{
-	width: 100%;
-	height: 550px; 
-    padding-bottom: 50px;
-}
-
+/*********************************************************FIN SECCIÓN CONOCENOS PRINCIPAL***********************************************************************/
 
 .contenedor-mvo-subapartado-con{
-	width: 95%;
-	margin: auto;
-}
-.contenedor-img-mvo-con{
-	width: 45%;
-	height: 273px;
-	margin: 30px auto;
-	float: left;
-}
-
-.imagen-mvo-con{
-	 display: block;
-	 margin: auto; 
-}
-
-.contenedor-img-mvo-con2{
-	width: 45%;
-	height: 273px;
-	margin: 30px auto;
-	float: right;
+	width: 50%;
+	padding: 10px;
 }
 
 .contenedor-titulo-mvo-con{
-	width:46%;
-	height:max-content;
-	float: left;
-	margin: 20px;
-	border: 1px solid #f4f4f4;
-	border-radius: 5px;
+	background-color: #81ca97;
+	border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
 }
 
-.contenedor-titulo-mvo-con p{
-	background-color: #81ca97;
-    padding: 10px 15px;
-    border-bottom: 1px solid transparent;
-    border-radius: 5px;
-    color: #fff;
-	font-size: 28pt;
-	line-height: 1.42857143;
+.contenedor-titulo-mvo-con h3{
+	font-size: 28px;
+	font-weight: 400;
+    color: var(--blanco);
 	text-align: center;
 }
 
-.titulo-con p:hover{
+.contenedor-titulo-mvo-con:hover{
 	background-color: #619c72;
 	transition: .7s;
-}
-
-.contenedor-titulo-mvo-con2{
-	width:46%;
-	height:max-content;
-	float: right;
-	margin: 20px;
-	border: 1px solid #f4f4f4;
-	border-radius: 5px;
-}
-
-
-.contenedor-titulo-mvo-con2 p{
-	background-color: #81ca97;
-    padding: 10px 15px;
-    border-bottom: 1px solid transparent;
-    border-radius: 5px;
-    color: #fff;
-	font-size: 28pt;
-	line-height: 1.42857143;
-	text-align: center;
 }
 
 .info-mvo-con{
-	display: block;
-	width:100%;
-	height:300px;
+	height: 375px;
+	padding: 10px;
+	border: 1px solid var(--gris-tipo1);
+	overflow: hidden;
 }
 
 .info-mvo-con p{
-	background-color: #fff;
 	text-align: justify;
-	font-size: 18pt;
-	color:#000;
+	font-size: 18px;
 }
 
-/***************************************************************PERFIL-CAMPO******************************************************/
-.contenedor-perfil-campo-con{
+.contenedor-seccion-mov-cuerpo-dividido{
 	width: 100%;
-    margin: auto;
-    background-color: #f4f4f4
-    ;
+	display: flex;
+	margin: 10px auto;
+	padding: 5px;
+	line-height: 2;
 }
 
-.contenedor-componentes-info-carrera-ingreso-con{
-width: 50%;
-margin: auto;
-display: block;
-float: left;
-
+.separador{
+	margin-top: 10px;
+	border-width: 0 0 10vh 100vw;
+	border-style: solid;
+	border-color: transparent transparent #f4f4f4  transparent;
 }
 
-.contenedor-componentes-info-carrera-egreso-con{
-width: 50%;
-margin: auto;
-display: block;
-float: right;
-text-align: end;
-}
-.contenedor-apartado-con{
-	width: 100%;
-	height: 400px;
-	margin: auto;
-	padding: 20px;
-	display: block;
-	overflow: hidden;
-}
-.contenedor-apartado-campo{
-	width: 100%;
-	margin: auto;
-	padding: 20px;
+.separador-abajo{
+	margin-top: 10px;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 10vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
 }
 
-.contenedor-titulo-perfil-con p:hover,
-.contenedor-titulo-perfil-con2 p:hover,
-.contenedor-titulo-campo-con p:hover{
-	background-color: #619c72;
-	transition: .7s;
- }   
-
-
-.contenedor-titulo-perfil-con p{
-   background-color: #81ca97;
-    padding: 10px 15px;
-    border-bottom: 1px solid transparent;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 28pt;
-    line-height: 1.42857143;
-    text-align: center;
-    cursor: pointer;
-}
-
-
-.contenedor-titulo-perfil-con2 p{
-    background-color: #81ca97;
-    padding: 10px 15px;
-    border-bottom: 1px solid transparent;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 28pt;
-    line-height: 1.42857143;
-    text-align: center;
-    cursor: pointer;
-}
-
-.contenedor-titulo-campo-con p{
-	background-color: #81ca97;
-    padding: 10px 15px;
-    border-bottom: 1px solid transparent;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 28pt;
-    line-height: 1.42857143;
-    text-align: center;
-    cursor: pointer;
-}
-
-
-.contenedor-perfil-con{
-	width: 100%;
-	height: 245px;
-	margin: auto;
-	display: block;
-	padding: 15px;
-	background-color: #;
-	border: 1px solid #fff;
-	border-top: none;
-	overflow: hidden;
-	border-radius: 5px;
-
-}
-.imagen-ingre-egre-con{
-	width: 200px;
-	vertical-align: middle;
-}
-
-.imagen-ingre-egre-con1{
-	width: 300px;
-	vertical-align: middle;
+.viñeta{
+	display: inline-block;
+	vertical-align: center;
+	font-weight: bold;
 }
 
 ol.round{
@@ -244,78 +92,28 @@ ol.round{
 
 ol.round li{
 	margin: 10px 0;
-    font-family: Roboto;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: lighter;
+    display: flex;
 }
 
 ol.round p{
-	width: 97%;
-	display: inline-block;
 	padding-left: 10px;
 	text-align: justify;
 }
-.viñeta{
-	display: inline-block;
-	vertical-align: top;
-}
 
-.separador{
-	margin-top: 10px;
-    bottom: 0;
-    left: 0;
-    border-width: 0 0 10vh 100vw;
-    border-style: solid;
-    border-color: transparent transparent #f4f4f4 transparent;
-}
+.contenedor-secciones-mov{
+	width: 100%;
+	background: #f4f4f4;
+	padding-top: 25px;
+	padding-bottom: 0px;
 
-.separador2{
-	margin-top: 10px;
-    bottom: 0;
-    left: 0;
-    border-width: 0 0 10vh 100vw;
-    border-style: solid;
-    border-color: transparent transparent #fff transparent;
 }
-/***********************************LINEAS DE INV. Y CUERPOS ACAD.*****************************************/
-.contenedor-lineas-cuerpos-reticula{
-	/*padding-top: 2%;*/
-}
-
 
 .contenedor-lineas-cuerpos-ind{
-	width: 100%;
-	margin-bottom: 10%;
+	margin-bottom: 25px;
 	border: 1px solid #f4f4f4;
 	border-radius: 5px;
-}
-
-.contenedor-lineas-cuerpos{
-	/*width: 60%;
-	margin-left: 2%;
-	display: inline-block;*/
-}
-
-.contenedor-titulo-seccion-con{
-	width: 100%;
-}
-
-.contenedor-titulo-seccion-con p{
-	background: #81ca97;
-    padding: 10px 15px;
-    border-bottom: 1px solid transparent;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 28pt;
-    line-height: 1.42857143;
-    text-align: center;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-.contenedor-titulo-seccion-con p:hover{
-	background-color: #619c72;
-	transition: .7s;
 }
 
 /***********************************TABLAS*****************************************/
@@ -332,7 +130,7 @@ ol.round p{
 }
 
 .tabla-informacion-escolar thead{
-	font-size: 20pt;
+	font-size: 22px;
 	text-align: center;
 	background: #9abccce0;
 	color: var(--blanco);
@@ -341,6 +139,8 @@ ol.round p{
 .tabla-informacion-escolar th, td{
 	padding: 20px;
 	max-width: 700px; /***TAMAÑO MÁXIMO DE LAS CELDAS***/
+	font-weight: 200;
+	line-height: 1.5;
 }
 
 .tabla-informacion-escolar td{
@@ -351,91 +151,50 @@ ol.round p{
 	background-color: var(--gris); 
 }
 
-.tabla-informacion-escolar p{
+/*.tabla-informacion-escolar p{
 	text-align: center;
-}
+}*/
 
 .t-con  thead{
 	padding: 5px;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #69c6859e;
     color: #FFF;
 }
 
+.ti-padding{
+	padding: 10px;
+}
+
 
 /*******************************************************RETICULA******************************************/
-.contenedor-texto-completo-acordeon-con{
-	/*width: 38%;
-    min-height: 350px;
-    display: inline-block;
-    float: right;*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .contenedor-acordeon-con{
 	width: 100%;
-	/*height: 350px;*/
-	/*display: block;
-    margin: auto;*/
-    text-align: -webkit-center;
-    /*text-align: center;*/
+    text-align: center;
     line-height: 2;
 }
 .contenedor-acordeon-subapartado-con{
-	width:90%;
 	border-radius: 5px;
-	margin-bottom: 1em;
-}
-
-.contenedor-titulo-acordeon-con p:hover{
-	background-color: #619c72;
-	transition: .7s;
-	cursor: pointer;
-}
-
-.contenedor-titulo-acordeon-con p{
-	width:100%;
-	height:74px;
-	background-color: #81ca97;
-	border-radius: 5px;
-	color: white;
-	font-size: 28pt;
-	font-family: 'Roboto', sans-serif;
-	text-transform: capitalize; 
+	margin-bottom: 25px;
 }
 
 .info-acordeon-con{
 	width:100%;
 	height:auto;
 	background-color: #f5f5f5;
-	padding: 20px 0;
-	overflow: hidden;
+	padding: 10px;
+	display: inline-grid
 }
 
-.info-acordeon p{
-	margin:20px;
-	text-align: justify;
-	color:#000;
-}
-
-.contenedor-enlaces-con a{
-	margin:20px;
-	text-align: justify;
-	color:#000;
-}
-.contenedor-enlaces-con a:hover{
-	color:#1e1b5a;
+.info-acordeon-con p{
+	line-height: 2;
+	margin: 10px auto;
 }
 
 /*******************************************************ORGANIGRAMA******************************************/
 .contenedor-texto-completo-org-con{
 	width: 100%;
-    /*min-height: 350px;
-    margin-top: -41%;
-    display: inline-block;
-    float: right;*/
 }
 
 .contenedor-org-con{
@@ -447,29 +206,9 @@ ol.round p{
     /*text-align: center;*/
 }
 .contenedor-org-subapartado-con{
-	width:90%;
 	border-radius: 5px;
-	margin-bottom: 1em;
+	margin-bottom: 25px;
 }
-
-
-.contenedor-titulo-org-con p{
-	height:74px;
-	background-color: #81ca97;
-	font-family: 'Roboto', sans-serif;
-	border-radius: 5px;
-	color: white;
-	font-size: 28pt;
-}
-
-.contenedor-titulo-org-con p:hover{
-	background-color: #619c72;
-	transition: .7s
-}
-
-/*.contenedor-org-subapartado-con:hover{
-box-shadow: 0 1px 6px #000;
-}*/
 
 .info-org-con{
 	width:100%;
@@ -479,339 +218,214 @@ box-shadow: 0 1px 6px #000;
 	overflow: hidden;
 }
 
-.info-org p{
-	margin:20px;
-	text-align: justify;
-	color:#000;
+.imagen-ingre-egre{
+	width: 300px;
 }
 
+/*********************************************************FIN SECCIÓN CONOCENOS PRINCIPAL***********************************************************************/
 
-/***************************************************************FIN SECCION CONOCENOS PRINCIPAL******************************************************/
-
-/************************************************************************************************SECCIÓN CONOCENOS MVO***********************************************************************/
+/*********************************************************SECCIÓN INFORMACION DE LA CARRERA***********************************************************************/
 
 .fondo-mvo{
-	background:url(../img/textura3.jpg);
+	background:url(../img/t1.jpg);
     background-attachment: fixed;
     background-position: center;
-    background-size: cover; 
-}
-
-.contenedor-texto-mvo{
-	width: 100%;
-	min-height: 250px;
-    margin: auto;
-    padding: 10px;
-    font-family: 'Roboto', sans-serif;
-	border: 2px solid var(--verde);
-	border-radius: 10px;
+    /*background-size: cover;*/
 }
 
 .contenedor-mvo{
 	width: 100%;
-	/*height: 434px;*/
-    background-color: #d9dfffe0; 
+    background: var(--fondo-color-mvo);
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
 .contenedor-mvo:nth-child(odd){
-	background-color: #fff
+	background-color: var(--blanco);
 }
 
 .contenedor-mvo-subapartado{
-	width: 90%;
-	margin: auto;
-	overflow: hidden;
+	display: flex;
+	align-items: center;
 }
+
+.mov-reversa{
+	flex-direction: row-reverse;
+}
+
+.contenedor-mov-contenido{
+	/*width: calc(100% - 250px);*/
+	width: 50%;
+}
+
 .contenedor-img-mvo{
-	width: 45%;
-	height: 273px;
-	margin: 30px auto;
-	float: left;
+	width: 50%;
+	/*width: 250px;*/
+	height: 300px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.imagen-mvo{
-	width: auto;
-	height: 100%;
-	display: block;
-	margin: auto;
+.contenedor-img-mvo img{
+	/*width: 100%;*/
+	height: 100%;/***Hacer Responsivo***/
 	object-fit: cover;
-    object-position: center;
-    overflow: hidden; 
-}
-
-.contenedor-img-mvo2{
-	width: 45%;
-	height: 273px;
-	margin: 30px auto;
-	float: right;
+	object-position: center;
 }
 
 .contenedor-titulo-mvo{
-	width:50%;
-	height:max-content;
-	float: right;
-}
-
-
-.contenedor-titulo-mvo p{
-	color: #f1592a;
 	padding: 10px;
-	padding-bottom: 10px;
-	font-size: 28pt;
-	line-height: 1.42857143;
-	text-align: left;
-}
-
-.contenedor-titulo-mvo-2{
-	width:50%;
-	height:max-content;
-	float: left;
 }
 
 
-.contenedor-titulo-mvo-2 p{
-	color: #f1592a;
-	padding: 10px;
-	padding-bottom: 10px;
-	font-size: 28pt;
-	line-height: 1.42857143;
-	text-align: left;
+.contenedor-titulo-mvo h3{
+	color: var(--naranja);
+	font-size: 36px;
+	font-weight: 300;
 }
 
 .info-mvo{
-	display: block;
 	width:100%;
-	/*height:200px;*/
+	line-height: 2;
+	padding: 10px;
 }
 
 .info-mvo p{
 	text-align: justify;
-	font-size: 18pt;
-	color:#000;
+	font-size: 24px;
 }
-
-
-/************************************************************************************************FIN SECCIÓN MVO***********************************************************************/
 
 /************************************************************************************************SECCIÓN CONOCENOS PERFIL-CAMPO***********************************************************************/
 
-.contenedor-perfil-campo{
+
+.contenedor-componentes-info-perfiles{
 	width: 100%;
 	margin: auto;
-	contain: content;
-}
-
-
-.contenedor-componentes-info-carrera-ingreso{
-width: 100%;
-margin: auto;
-display: block;
-float: left;
-
-}
-
-.contenedor-componentes-info-carrera-egreso{
-width: 100%;
-margin: auto;
-display: block;
-float: right;
-text-align: end;
-}
-
-.contenedor-apartado{
-	width: 100%;
-	margin: auto;
-	padding: 20px;
 	display: flex;
-	background-color: #ffffffe0
+	margin-bottom: 25px;
+
 }
 
-.contenedor-componentes-info-carrera-egreso:nth-child(even){
-background: url(../img/textura3.jpg);
+.contenedor-componentes-info-perfiles:nth-child(even){
+background: url(../img/t1.jpg);
     background-attachment: fixed;
     background-position: center;
-    background-size: cover;
+    /*background-size: cover;*/
 }	
 
 .contenedor-titulo-perfil{
-	/*background-color: #bae4dac7;*/
-	background-color: #ff8d00bf;
-	padding: 10px 15px;
-    border-bottom: 1px solid transparent;
+	background-color: var(--titulos-perfiles);
+	padding: 10px;
     border-radius: 5px;
-
 }
 
 
-.contenedor-titulo-perfil p{
-    color: white;
-    font-weight: normal;
-    font-size: 28pt;
+.contenedor-titulo-perfil{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	border-radius: 5px 0px 0px 5px;
+	-moz-border-radius: 5px 0px 0px 5px;
+	-webkit-border-radius: 5px 0px 0px 5px;
+}
+
+.contenedor-titulo-perfil h3{
+	color: var(--blanco);
+    font-weight: 400;
+    font-size: 36px;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 1.1;
-}
-
-
-.contenedor-titulo-campo h3{
-    color: white;
-    font-weight: normal;
-    font-size: 27px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 1.1;
-}
-
-.contenedor-perfil{
-	width: 100%;
-	min-height: 302.44px;
-	margin: auto;
-	display: block;
-	padding: 15px;
-	border: 1px solid #f4f4f4;
-
-}
-
-.contenedor-perfil1{
-	width: 100%;
-	min-height: 302.44px;
-	margin: auto;
-	display: block;
-	padding: 15px;
-	border: 1px solid #fff;
-
+    line-height: 1.5;
 }
 
 .imagen-perfil-campo{
-	width: 200px;
-    display: block;
-    position: relative;
+	width: 250px;
+	padding: 10px;
 }
 
-.imagen-ingre-egre{
-	width: 300px;
-}
-
-ol.round{
-	list-style-type: none;
-    padding-left: 0px;
-
-}
-
-ol.round li{
-	margin: 10px 0;
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: lighter;
-}
-
-ol.round p{
-	width: 97%;
-	line-height: 1.5;
-	display: inline-block;
-	padding-left: 10px;
-	text-align: justify;
-}
-.viñeta{
-	display: inline-block;
-	vertical-align: top;
-	width: 8.63px;
-}
-
-
-.contenedor-componentes-info-carrera{
+.imagen-perfil-campo img{
 	width: 100%;
-	margin:auto;
-	display: flex;
+	height: 100%;
 }
 
-
-
-.contenedor-titulo-campo{
-	background-color: #bcc696;
-	padding: 10px 15px;
-    border-bottom: 1px solid transparent;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.contenedor-apartado-campo{
+.contenedor-txt-perfil{
 	width: 100%;
-	margin: auto;
-	padding: 20px;
+	min-height: 250px;
+	padding: 10px;
+	border: 1px solid var(--gris-tipo1);
+	background: var(--fondo-txt-perfiles);
+	line-height: 2;	
 }
 
 /*******************************************************SECCIONES ACORDEON******************************************/
-.contenedor-texto-completo-acordeon{
+.contenedor-completo-acordeon{
 	width: 100%;
 	min-height: 500px; 
     padding: 10px;
 }
 
-.contenedor-acordeon{
-	display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    text-align: -webkit-center;
-    text-align: -moz-center;
-}
 .contenedor-acordeon-subapartado{
-	width:80%;
 	min-height:50px;
-	-webkit-transiton: height 0.3s;
+	-webkit-transiton: height 0.5s;
+	padding: 5px;
+	background: var(--gris-tipo1);
 	border-radius: 5px;
-	margin-bottom: 1em;
-	cursor: pointer;
+	margin-bottom: 25px;
+	
 }
 
 .contenedor-titulo-acordeon{
-	font-family: 'Roboto', sans-serif;
+	border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	cursor: pointer;
+	background-color: var(--verde-con);
+	padding: 10px;
+	overflow: hidden;
+
 }
 
-.contenedor-titulo-acordeon p{
-	background-color: #81ca97;
-    padding: 10px 15px;
-    border-bottom: 1px solid transparent;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 28pt;
-    line-height: 1.42857143;
+.contenedor-titulo-acordeon h3{
+    color: var(--blanco);
+    font-size: 28px;
+    line-height: 1.5;
     text-align: center;
+    font-weight: 300;
     text-transform: capitalize;
 }
 
-.contenedor-titulo-acordeon p:hover{
-transition: .9s;
-background-color: #1b396a;
+.contenedor-titulo-acordeon:hover{
+	transition: .9s;
+	background-color: var(--hover-verde-con);
 }
 
 
 .info-acordeon-centrado{
-	display: block;
 	width:100%;
-	height:auto;
-	background-color: #f5f5f5;
-	opacity: 0.9;
+	display: block;
+	background-color: var(--gris-tipo1);
 	overflow: hidden;
 }
 
 .info-acordeon-centrado p{
-	margin:20px;
+	margin:20px auto;
 	text-align: center;
-	font-size: 18pt;
-	color:#000;
+	font-size: 18px;
+	line-height: 2;
 }
 
 .icono-aco-derecha {
 	float: right;
 	font-size: xx-large;
 }
+
+.border-abajo{
+	border-bottom: 2px solid var(--naranja);
+}
+
 /*******************************************************SECCIÓN ORGANIGRAMA******************************************/
 .skew-abajo-org{
 	
@@ -1097,709 +711,190 @@ figure .trasera p {
     font-size: 12pt;
 }
 
+/************************************************************************************************RESPONSIVO********************************************************************************/
+/*****************************************************************************************************************************************************************************************/
 
 
-/*******************************************************SECCIÓN LINEAS CUERPOS******************************************/
-.titulo-linea-cuerpo p{
-	color: #f1592a;
-    padding-top: 20px;
-    font-size: 28pt;
-    line-height: 1.42857143;
-    text-align: -webkit-center;
-    text-align: center;
-}
-
-
-
-
-.advertencia{
-	align-items: center;
-	justify-content: center;
-	padding: 10px;
-	border-radius: 4px;
-	background: #E74C3C;
-	color: var(--blanco);
-	display: none;
-}
-/*******************************************************SECCIÓN RESPONSIVA******************************************/
-
-/*******************************************************SECCIÓN PRINCIPAL******************************************/
-
-/*******************************************************SECCIÓN INFO-MVO-CON******************************************/
-
-@media screen and (max-width: 1000px){/************************1000PX***********************************/
-
-.titulo-linea-cuerpo p{
-    padding-top: 20px;
-    font-size: 25pt;
-}
-
-.contenedor-titulo-mvo-con,
-.contenedor-titulo-mvo-con2{
-	width:48%;
-	margin: 0px;
-}
-
-.contenedor-titulo-mvo-con p,
-.contenedor-titulo-mvo-con2 p{
-	padding: 5px 15px;
-	font-size: 24pt;
-}
-
-.info-mvo-con p {
-    font-size: 16pt;
-}
-
-ol.round p {
-    width: 96%;
-}
-
-}
-
-@media screen and (max-width: 700px){/************************700PX***********************************/
-
-.titulo-linea-cuerpo p{
-    padding-top: 20px;
-    font-size: 25pt;
-}
-
-.contenedor-titulo-mvo-con,
-.contenedor-titulo-mvo-con2{
-	width:48%;
-	margin: 0px;
-}
-
-.contenedor-titulo-mvo-con p,
-.contenedor-titulo-mvo-con2 p{
-	padding: 5px 15px;
-	font-size: 24pt;
-}
-
-.info-mvo-con p {
-    font-size: 16pt;
-}
-
-/*******************************************************SECCIÓN PERFIL-CARRERA-CON******************************************/
-
-
-.contenedor-titulo-perfil-con p,
-.contenedor-titulo-perfil-con2 p{
-    padding: 5px 15px;
-    font-size: 24pt;
- }
-
-.contenedor-apartado-con {
-	padding: 10PX;
-	height: 350px;
-}
-
- .contenedor-perfil-con {
-    padding: 10px;
-}
-
-ol.round p {
-    width: 94%;
-}
-/*******************************************************SECCIÓN LINEAS-CUERPOS-CON******************************************/
-
-.contenedor-titulo-seccion-con p {
-    padding: 5px 15px;
-    font-size: 24pt;
-    margin-bottom: 15px;
-}
-/*******************************************************SECCIÓN RETICULA-CON******************************************/
-.contenedor-acordeon-subapartado-con {
-    width: 100%;
-}
-
-.contenedor-titulo-acordeon-con p {
-    height: 49px;
-    font-size: 24pt;
-}
-
-.contenedor-acordeon-con p{
-    line-height: 1.5;
-}
-
-.contenedor-enlaces-con a {
-	font-size: 9pt;
-	margin: 0;
-}
-
-/*******************************************************SECCIÓN ORGANIGRAMA-CON******************************************/
-
-.contenedor-texto-completo-org-con{
-   /* min-height: 280px;
-    margin-top: -82%; */
-}
-
-.contenedor-org-con{
-	/*width: 90%;*/
-	height: 260px;
-}
-.contenedor-org-subapartado-con{
-	width:100%;
-}
-
-.contenedor-titulo-org-con p{
-	height:49px;
-	font-size: 24pt;
-	line-height: 1.5;
-}
-
-.info-org-con{
-	padding-top: 5px;
-}
-
-.info-org p{
-	margin:10px;
-}
-
-.imagen-ingre-egre{
-	width: 220px;
-}
-
-}	
-@media screen and (max-width: 450px){/************************450PX***********************************/
-.contenedor-mvo-con{
-	height: 670px;
-	padding-bottom: 25px;
-
-}
-
-.titulo-linea-cuerpo p{
-    padding-top: 10px;
-    font-size: 17pt;
-    padding-bottom: 10px;
-}
-
-.contenedor-mvo-subapartado-con {
-    width: 100%;
-    padding: 10px 0;
-}
-
-.contenedor-titulo-mvo-con,
-.contenedor-titulo-mvo-con2{
-	width:95%;
-	margin: auto;
-	float: none;
-}
-
-.contenedor-titulo-mvo-con p,
-.contenedor-titulo-mvo-con2 p{
-	padding: 1px 15px;
-	font-size: 22pt;
-}
-.info-mvo-con{
-	height: 250px;
-}
-
-.info-mvo-con p {
-    font-size: 14pt;
-    padding: 10px;
-}
-
-/*******************************************************SECCIÓN PERFIL-CARRERA-CON******************************************/
-.contenedor-componentes-info-carrera-egreso-con,
-.contenedor-componentes-info-carrera-ingreso-con{
-    width: 100%;
-    padding: 10px 0;
-}
-
-.contenedor-mvo-subaartado-con{
-	padding-bottom: 20px;
-}
-
-.contenedor-titulo-perfil-con p,
-.contenedor-titulo-perfil-con2 p{
-    padding: 1px 15px;
-    font-size: 24pt;
- }
-
-.contenedor-apartado-con {
-	padding: 10PX;
-	height: 350px;
-}
-
- .contenedor-perfil-con {
-    height: 280px;
-}
-
-ol.round p {
-    width: 94%;
-    font-size: 12pt;
-}
-/*******************************************************SECCIÓN LINEAS-CUERPOS-CON******************************************/
-
-.contenedor-lineas-cuerpos {
-    width: 95%;
-    margin: auto;
-    display: block;
-}
-
-.contenedor-titulo-seccion-con p {
-    padding: 5px 15px;
-    font-size: 22pt;
-    margin-bottom: 15px;
-}
-/*******************************************************SECCIÓN RETICULA-CON******************************************/
-.contenedor-texto-completo-acordeon-con {
-    min-height: 350px;
-    display: contents;
-}
-
-.contenedor-acordeon-subapartado-con {
-    width: 100%;
-}
-
-.contenedor-titulo-acordeon-con p {
-    height: 49px;
-    font-size: 24pt;
-}
-
-.contenedor-acordeon-con {
-    /*width: 47%;
-    height: auto;
-    display: block;
-    margin-left: 10px;
-    text-align: center;*/
-}
-
-.info-acordeon-con p{
-	font-size: 8pt;
-    line-height: 1.5;
-}
-
-.contenedor-enlaces-con a {
-	font-size: 8pt;
-	margin: 0;
-}
-
-/*******************************************************SECCIÓN ORGANIGRAMA-CON******************************************/
-
-.contenedor-texto-completo-org-con {
-   /* min-height: 200px;
-    margin-top: -222px;
-    margin-right: 10px;
-    float: right;
-    width: 46%;*/
-}
-.contenedor-org-con{
-	width: 100%;
-	height: 200px;
-}
-
-
-.contenedor-titulo-org-con p{
-	height:49px;
-	font-size: 22pt;
-	line-height: 1.5;
-}
-
-.info-org-con{
-	padding-top: 5px;
-}
-
-.info-org p{
-	margin:10px;
-}
-
-.imagen-ingre-egre{
-	width: 	160px;
-}
-
-}
-
-@media screen and (max-width: 375px){/************************375PX***********************************/
-/*******************************************************SECCIÓN PERFIL-CARRERA-CON******************************************/
-
-.contenedor-apartado-con {
-    height: 270px;
-}
-/*******************************************************SECCIÓN LINEAS-CUERPOS-CON******************************************/
-
-
-/*******************************************************SECCIÓN ORGANIGRAMA-CON******************************************/
-.contenedor-texto-completo-org-con {
-    margin-top: -254px;
-}
-.contenedor-titulo-org-con p  {
-    font-size: 18pt;
-    padding-top: 5px;
-}
-
-}
-
-@media screen and (max-width: 360px){/************************360PX***********************************/
-.contenedor-mvo-con {
-    height: 710px;
-}
-
-.titulo-linea-cuerpo p {
-    font-size: 15pt;
-}
-
-.info-mvo-con p {
-    font-size: 13pt;
-    padding: 10px;
-}
-
-.contenedor-mvo-con {
-    height: 750px;
-}
-
-.contenedor-perfil-con {
-    height: 220px;
-    margin-bottom: 10px;
-}
-
-.contenedor-titulo-seccion-con p {
-    padding: 5px 15px;
-    font-size: 19pt;
-    margin-bottom: 15px;
-}
-
-.contenedor-texto-completo-org-con {
-    margin-top: -218px;
-}
-
-.info-acordeon-con p {
-    font-size: 7pt;
-}
-
-.imagen-ingre-egre {
-    width: 146px;
-}
-
-}
-/*******************************************************SECCIÓN MVO******************************************/
-
-
-@media screen and (max-width: 1000px){/************************1000PX***********************************/
-
-/*.contenedor-mvo{
-	height: 550px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-}*/
-
-.contenedor-img-mvo{
-	height: 220px;
-	margin: 1% auto;
-	width: 100%;
-}
-
-.contenedor-img-mvo2{
-	height: 220px;
-	margin: 1% auto;
-	width: 100%;
-}
-
-.contenedor-titulo-mvo,
-.contenedor-titulo-mvo-2{
-	width: 100%
-}
-
-.contenedor-titulo-mvo p{
-	padding: 5px;
-	padding-bottom: 10px;
-	font-size: 28pt;
-}
-
-.contenedor-titulo-mvo-2 p{
-	padding: 5px;
-	padding-bottom: 10px;
-	font-size: 28pt;
-}
-
-.info-mvo{
-	display: block;
-	width:100%;
-	/*height:200px;*/
-}
-
-.info-mvo p{
-	font-size: 16pt;
-}
-
-}
-
-
-@media screen and (max-width: 450px){/**************************450PX*******************************/
-
-/*.contenedor-mvo{
-	height: 490px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-}*/
-
-.contenedor-img-mvo{
-	height: 160px;
-	margin: 1% auto;
-	width: 100%;
-}
-
-.contenedor-img-mvo2{
-	height: 160px;
-	margin: 1% auto;
-	width: 100%;
-}
-
-.contenedor-titulo-mvo,
-.contenedor-titulo-mvo-2{
-	width: 100%
-}
-
-.contenedor-titulo-mvo p{
-	padding: 5px;
-	padding-bottom: 10px;
-	font-size: 25pt;
-}
-
-.contenedor-titulo-mvo-2 p{
-	padding: 5px;
-	padding-bottom: 10px;
-	font-size: 25pt;
-}
-
-.info-mvo{
-	display: block;
-	width:100%;
-	/*height:200px;*/
-}
-
-.info-mvo p{
-	font-size: 13pt;
-}
-
-}
-
-@media screen and (max-width: 360px){/**************************375PX*******************************/
-
-.info-mvo p {
-    font-size: 12pt;
-}
-
-}
-
-
-/*******************************************************SECCIÓN ACORDEON******************************************/
-
-
-
-@media screen and (max-width: 700px){/************************700PX***********************************/
-
-.contenedor-titulo-acordeon p{
-    font-size: 20pt;
-}
-
-.info-acordeon-centrado p{
-	margin:10px;
-	font-size: 15pt;
-}
-
-.contenedor-enlaces-con a{
-	font-size: 11pt;
-}
-
-}
-
-@media screen and (max-width: 450px){/**************************450PX*******************************/
-
-.contenedor-titulo-acordeon p{
-    font-size: 16pt;
-}
-
-.info-acordeon-centrado p{
-	margin:10px;
-	font-size: 10pt;
-}
-
-.contenedor-enlaces-con a{
-	font-size: 7pt;
-}
-
-}
-
-@media screen and (max-width: 375px){/**************************375PX*******************************/
-
-.contenedor-titulo-acordeon p{
-    font-size: 14pt;
-}
-
-.info-acordeon-centrado p{
-	margin:10px;
-	font-size: 9pt;
-}
-
-.contenedor-enlaces-con a{
-	font-size: 6pt;
-}
-
-}
-
-/*******************************************************SECCIÓN PERFIL-CAMPO-ISC******************************************/
-
-
-
-@media screen and (max-width: 800px){/************************800PX***********************************/
-
-.contenedor-titulo-perfil p {
-    font-size: 25pt;
-}
-
-.imagen-perfil-campo {
-    width: 150px;
-    margin: auto;
-}
-
-ol.round p {
-    line-height: 1.4;
-}
-
-}
-
-@media screen and (max-width: 450px){/**************************450PX*******************************/
-
-.contenedor-apartado {
-    padding: 10px;
-    display: block;
-}
-
-.contenedor-titulo-perfil p {
-    font-size: 24pt;
-    margin: 5px;
-}
-
-.imagen-perfil-campo {
-    display: none;
-}
-
-
-}
-
-@media screen and (max-width: 375px){/**************************375PX*******************************/
-
-ol.round p {
-    font-size: 11pt;
-}
-.viñeta {
-    font-size: 11pt;
-}
-
-}
-
-/*******************************************************SECCIÓN LINEAS-CUERPOS******************************************/
-
-@media screen and (max-width: 1150px){
+@media screen and (max-width: 1100px){
 	
+}
 
-	.tabla-informacion-escolar thead{
-		font-size: 20pt;
+@media screen and (max-width: 950px){
+
+	.info-mvo-con p{
+		font-size: 16px;
 	}
 
-	.t-con  thead{
-	    font-size: 16px;
+/************************************************************************************************MOV********************************************************************************/
+
+	.info-mvo p{
+		font-size: 18px;
 	}
 
-	.tabla-informacion-escolar th, td{
-		padding: 15px;
+/************************************************************************************************PERFILES********************************************************************************/
+
+	.contenedor-titulo-perfil h3{
+		font-size: 28px;
 	}
 }
 
-@media screen and (max-width: 650px){/************************700PX***********************************/
-
-	.tabla-informacion-escolar thead{
-		font-size: 15pt;
-	}
-
-	.t-con  thead{
-	    font-size: 16px;
-	}
-
-}
-
-@media screen and (max-width: 480px){/**************************450PX*******************************/
+@media screen and (max-width: 800px){
 	
-	/***********************************TABLAS*****************************************/
+	.partido-li{
+		flex-direction: column;
+	}
+
+	.seccion1-li{
+		width: 100%
+	}
+
+	.seccion2-li{
+		width: 100%;
+	}
+
+/************************************************************************************************PRINCIPAL CONOCENOS********************************************************************************/
+
+	.contenedor-seccion-mov-cuerpo-dividido{
+		flex-direction: column;
+	}
+
+	.contenedor-mvo-subapartado-con{
+		width: 100%;
+	}
+
+/************************************************************************************************MOV********************************************************************************/
+
+	.contenedor-mvo-subapartado{
+		flex-direction: column;
+	}
+
+	.contenedor-mov-contenido{
+		width: 100%;
+	}
+
+	.contenedor-img-mvo{
+		width: 100%;
+	}
+
+/************************************************************************************************PERFILES********************************************************************************/
+
+	.contenedor-componentes-info-perfiles{
+		flex-direction: column;
+	}
+
+	.imagen-perfil-campo{
+		display: none;
+	}
+
+/************************************************************************************************LI Y CA********************************************************************************/
+
 
 	.tabla-informacion-escolar thead{
-		font-size: 12pt;
+		font-size: 20px;
+	}
+
+	.tabla-informacion-escolar td{
+		font-size: 16px;
 	}
 
 	.t-con  thead{
 	    font-size: 16px;
 	}
 
-	.tabla-informacion-escolar{
-		font-size: 9pt;
+/************************************************************************************************RETICULAS********************************************************************************/
+
+	.contenedor-titulo-acordeon h3{
+		font-size: 24px;
 	}
 
-	.tabla-informacion-escolar p{
-		font-size: 9pt;
+/**************************************************************************************************SECCIÓN ORGANIGRAMA********************************************************************/
+	
+	.titulo-org1-dir1 hr {
+	    margin: 0 180px;
+	}
+	.titulo-org1-dir hr {
+	    margin: 0 180px;
+	}
+
+	.titulo-org2 hr, .titulo-org1 hr, .titulo-org3 hr {
+	    margin: 0 40px;
 	}
 
 }
 
+@media screen and (max-width: 650px){
 
-/*******************************************************SECCIÓN ORGANIGRAMA******************************************/
+/************************************************************************************************PERFILES********************************************************************************/
 
-@media screen and (max-width: 800px){/************************700PX***********************************/
+	.contenedor-titulo-perfil h3{
+		font-size: 24px;
+	}
 
-.titulo-org1-dir1 hr {
-    margin: 0 180px;
-}
-.titulo-org1-dir hr {
-    margin: 0 180px;
-}
+	ol.round li{
+		font-size: 16px;
+	}
 
-.titulo-org2 hr, .titulo-org1 hr, .titulo-org3 hr {
-    margin: 0 40px;
-}
-}
-@media screen and (max-width: 450px){/**************************450PX*******************************/
+/************************************************************************************************RETICULAS********************************************************************************/
 
-.contenedor-doc,
-.contenedor-lab{
-	float: none;
-}
-.titulo-org1-dir1 hr {
-    height: 0px;
-}
+	.contenedor-titulo-acordeon h3{
+		font-size: 20px;
+	}
 
-.titulo-org1-dir hr {
-	height: 0px;
-}
+	.info-acordeon-centrado p{
+		font-size: 16px;
+	}
 
-.titulo-org1 {
-    float: none;
-}
+/**************************************************************************************************SECCIÓN ORGANIGRAMA********************************************************************/
 
-.titulo-org2 {
-    display: none;
-}
+	.contenedor-doc,
+	.contenedor-lab{
+		float: none;
+	}
 
-.titulo-org3 {
-    width: 100%;
-    display: inline-block;
-}
+	.titulo-org1 {
+	    float: none;
+	}
 
-#titulo-organigrama {
-    font-size: 24pt;
+	.titulo-org2 {
+	    display: none;
+	}
+
+	.titulo-org3 {
+	    width: 100%;
+	    display: inline-block;
+	}
 
 }
 
-.titulo-org2 hr,
-.titulo-org1 hr {
-    height: 0px;
-    margin: 0px;
+@media screen and (max-width: 450px){
+	.imagen-ingre-egre{
+		width: 250px;
+	}
 
-}
-.titulo-org3 hr{
-	height: 0px;
-    margin: 0px;
-    margin-bottom: 40px;
-}
-}
+/**************************************************************************************************SECCIÓN ORGANIGRAMA********************************************************************/
 
+	.titulo-org1-dir1 hr {
+	    height: 0px;
+	}
 
+	.titulo-org1-dir hr {
+		height: 0px;
+	}
+
+	#titulo-organigrama {
+	    font-size: 24pt;
+
+	}
+
+	.titulo-org2 hr,
+	.titulo-org1 hr {
+	    height: 0px;
+	    margin: 0px;
+
+	}
+	.titulo-org3 hr{
+		height: 0px;
+	    margin: 0px;
+	    margin-bottom: 40px;
+	}
+}

@@ -25,118 +25,126 @@
 
           <div class="skew-abajo"></div>
 
-      </div>
-	
-<!-------------------------------------------------------------  PERFIL INGRESO ------------------------------------------------------->
+    </div>
+
+    <div class="contenedor-secciones">
+    	
+	<!-------------------------------------------------------------  PERFIL INGRESO ------------------------------------------------------->
 
 
-<div class="contenedor-perfil-campo">
+		<div class="contenedor-componentes-info-perfiles">
 
-	<div class="contenedor-componentes-info-carrera-ingreso">
+				<div class="contenedor-titulo-perfil">
 
-		
+					<h3>Perfil Ingreso</h3>
 
-		<div class="contenedor-apartado">
-			
-			<div class="contenedor-titulo-perfil">
+					<div class="imagen-perfil-campo">
 
-				<p>Perfil Ingreso</p>
-				<img class="imagen-perfil-campo" src="{{ asset('img/ingreso.png')}}">
+						<img src="{{ asset('img/ingreso.png')}}">
+						
+					</div>
+					
 
-			</div>
-			<div class="contenedor-perfil">
+				</div>
 
-				<ol class="round">
+				<div class="contenedor-txt-perfil">
 
-				@foreach ($perfilingreso as $perfilingres)
+					<ol class="round">
 
-					<li><i class="viñeta">{{$perfilingres->vineta}}</i> <p>{{$perfilingres->elemento}}</p></li>
-				
+					@foreach ($perfilingreso as $perfilingres)
 
-				@endforeach
+						<li><i class="viñeta">{{$perfilingres->vineta}}</i> <p>{{$perfilingres->elemento}}</p></li>
+					
 
-				</ol>
+					@endforeach
 
-
-			</div>
-
-		</div>
+					</ol>
 
 
-	</div>
+				</div>
 
+		</div>	
 
 <!----------------------------------------------------------------- PERFIL EGRESO---------------------------------------------------------->
 
-<div class="contenedor-componentes-info-carrera-egreso">
+		<div class="contenedor-componentes-info-perfiles">
 
-	
+				<div class="contenedor-titulo-perfil">
 
-		<div class="contenedor-apartado">
-			<div class="contenedor-titulo-perfil">
+					<h3>Perfil Egreso</h3>
 
-				<p>Perfil Egreso</p>
+					<div class="imagen-perfil-campo">
 
-				<img class="imagen-perfil-campo" src="{{ asset('img/egreso.png')}}">
+						<img src="{{ asset('img/egreso.png')}}">
+						
+					</div>
+					
 
-			</div>	
+				</div>
 
-			<div class="contenedor-perfil">
-				
-				<ol class="round">
+				<div class="contenedor-txt-perfil">
 
-				@foreach ($perfilegreso as $perfilegres)
-				
+					<ol class="round">
 
-					<li><i class="viñeta">{{$perfilegres->vineta}}</i> <p>{{$perfilegres->elemento}}</p></li>
-					  
-				
-				@endforeach
+					@foreach ($perfilegreso as $perfilegres)
 
-			</ol>
+						<li><i class="viñeta">{{$perfilegres->vineta}}</i> <p>{{$perfilegres->elemento}}</p></li>
+					
 
-			</div>	
+					@endforeach
+
+					</ol>
+
+
+				</div>
+
+
 
 		</div>
-</div>
-
 
 <!----------------------------------------------------------------- CAMPO LABORAL---------------------------------------------------------->
-<div class="contenedor-componentes-info-carrera-egreso">
 
-	
+		<div class="contenedor-componentes-info-perfiles">
 
-		<div class="contenedor-apartado">
+				<div class="contenedor-titulo-perfil">
 
-			<div class="contenedor-titulo-perfil">
+					<h3>Campo Laboral</h3>
 
-				<p>Campo Laboral</p>
+					<div class="imagen-perfil-campo">
 
-				<img class="imagen-perfil-campo" src="{{ asset('img/laboral.png')}}">
+						<img src="{{ asset('img/laboral.png')}}">
+						
+					</div>
+					
 
-			</div>	
+				</div>
 
-			<div class="contenedor-perfil">
-				
-				<ol class="round">
+				<div class="contenedor-txt-perfil">
 
-				@foreach ($campolaboral as $campolabora)
+					<ol class="round">
+
+					@foreach ($campolaboral as $campolabora)
 
 						<li><i class="viñeta">{{$campolabora->vineta}}</i> <p>{{$campolabora->elemento}}</p></li>
-						
-				@endforeach
+					
 
-			</ol>
+					@endforeach
 
-			</div>
+					</ol>
 
-				
+
+				</div>
+
+
 
 		</div>
-</div>
 
 
-</div>
+
+
+
+ 	</div>
+	
 
 </div>
 

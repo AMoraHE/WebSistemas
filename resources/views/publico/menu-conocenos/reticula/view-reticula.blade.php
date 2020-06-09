@@ -38,52 +38,59 @@
 <!----------------------------------------------------------------- CUERPO RETICULA ---------------------------------------------------------->
 
 
-<div class="contenedor-componentes-principales">
+<div class="contenedor-secciones">
+	
+	<div class="contenedor-completo-acordeon">
+					
+			@foreach ($reticulas as $reticula)
 
-	<div class="contenedor-texto-completo-acordeon">
-	<div class="contenedor-acordeon">
-	@foreach ($reticulas as $reticula)
-
-	<div class="contenedor-acordeon-subapartado">
+			<div class="contenedor-acordeon-subapartado">
+				
 				<div class="contenedor-titulo-acordeon">
-
-				<p>{{$reticula->titulo}}<i class="icono-aco-derecha fas fa-caret-down"></i></p>
+					
+					<h3>{{$reticula->titulo}}<i class="icono-aco-derecha fas fa-caret-down"></i></h3>
 
 				</div>
-		<div class="info-acordeon-centrado">
 
-			<p>{{$reticula->programa}}</p>
-			<p>PLAN: {{$reticula->plan}}</p>
-			<p>ESPECIALIDAD: {{$reticula->especialidad}}</p>	
+				<div class="info-acordeon-centrado">
+					
+					<p>{{$reticula->programa}}</p>
+					<p><b>PLAN:</b> {{$reticula->plan}}</p>
+					<p><b>ESPECIALIDAD:</b> {{$reticula->especialidad}}</p>
 
-	<div class="contenedor-enlaces">
-			
-		<a target="_blank" rel="noopener noreferrer" href="/isc-conocenos-reticulaVer/{{$reticula->slug}}">{{$reticula->documento}}</a>
+					<div class="border-abajo"></div>
+
+					<div class="contenedor-enlaces">
+						
+						<a target="_blank" rel="noopener noreferrer" href="/isc-conocenos-reticulaVer/{{$reticula->slug}}">{{$reticula->documento}}</a>
+
+					</div>
+
+					@php
+					$var = $reticula->slug
+					@endphp
+
+<!------------------------------------------------------------------------------------ BOTONES RETICULA ------------------------------------------------------------------------------->
+
+					<div class="contenedor-botones">
+
+						<a href="/isc-conocenos-reticulaDescargar/{{$reticula->slug}}"><button class="icono-izquierda btn ret-verde"><span>Descargar <i class="icono-derecha far fa-save"></i></span></button></a>
+						
+					</div>
+
+				</div>
+
+
+			</div>
+
+			@endforeach
 
 	</div>
 
-
-	@php
-	$var = $reticula->slug
-	@endphp
-
-<!----------------------------------------------------------------- BOTONES RETICULA ---------------------------------------------------------->
-
-	<div class="contenedor-botones">
-			
-		<a href="/isc-conocenos-reticulaDescargar/{{$reticula->slug}}"><button class="btn-ret"><span>Descargar</span></button></a>
-
-	</div>
-	</div>
-</div>	
-
-	@endforeach
-</div>	
-
-</div>
 	<div id="paginas">
 			{{$reticulas->links()}}
 	</div>
+
 </div>
 				
 </div>

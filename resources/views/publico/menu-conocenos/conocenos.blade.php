@@ -29,332 +29,334 @@
           <div class="skew-abajo"></div>
 
       </div>
-		
-	<div class="fondo-mvo-con">
-		
 
-		<div class="contenedor-mvo-con">
-			<div class="titulo-linea-cuerpo">
-		 <p>INFORMACIÓN DE LA CARRERA</p>
-		</div>
+    <!------------------------------------------------------------- CONOCENOS ----------------------------------------------------------->
+		
+	<div class="contenedor-secciones">
+		
+			
+			<div class="contenedor-seccion-titulos-grande">
+		 		<h1>INFORMACIÓN DE LA CARRERA</h1>
+			</div>
 
 			
+			<div class="contenedor-seccion-mov-cuerpo-dividido">
+					
+				@foreach($informaciones as $informacion)
 
-			@foreach($informaciones as $informacion)
+					
+				@if($informacion->categoria == 'Misión')
+					
 
-				
-			@if($informacion->categoria == 'Misión')
-				
+					<div class="contenedor-mvo-subapartado-con">
 
-						 <div class="contenedor-mvo-subapartado-con">
+						<div class="contenedor-titulo-mvo-con">
 
-							<div class="contenedor-titulo-mvo-con">
-								<a href="/isc-conocenos-MVO" class="titulo-con">
-								<p>{{$informacion->categoria}}</p>			
-								</a>
-							<div class="info-mvo-con">
-										<p>{{$informacion->descripcion}}</p>
-							</div>
-
-							</div>
-							
+							<a href="/isc-conocenos-MVO"><h3>{{$informacion->categoria}}</h3></a>
 
 						</div>
-				
-				
-			@endif	
 
-			@if($informacion->categoria == 'Visión')
-				
+						<div class="info-mvo-con">
+								
+							<p>{{$informacion->descripcion}}</p>
+								
+						</div>
+								
 
-						<div class="contenedor-mvo-subapartado-con">
+					</div>
+					
+					
+				@endif	
 
-							<div class="contenedor-titulo-mvo-con2">
-								<a href="/isc-conocenos-MVO" class="titulo-con">
-								<p>{{$informacion->categoria}}</p>			
-								</a>
-							<div class="info-mvo-con">
-										<p>{{$informacion->descripcion}}</p>
-							</div>
+				@if($informacion->categoria == 'Visión')
+					
 
-							</div>
+					<div class="contenedor-mvo-subapartado-con">
+
+						<div class="contenedor-titulo-mvo-con">
+
+							<a href="/isc-conocenos-MVO"><h3>{{$informacion->categoria}}</h3></a>
 
 						</div>
+
+						<div class="info-mvo-con">
+
+							<p>{{$informacion->descripcion}}</p>
+
+						</div>
+
+
+					</div>
+					
 				
-			
-			@endif	
+				@endif
 
 			
+				@endforeach
 
-			@endforeach
+			</div>
 
-		</div>
 	</div>
 
-		
 
-		<!----------------------------------------------------------------- CUERPO PERFIL-CAMPO_ISC --------------------------------->
 
 <!-------------------------------------------------------------  PERFIL INGRESO ------------------------------------------------------->
 
 <div class="separador"></div>
-<div class="contenedor-perfil-campo-con">
 
-	<div class="titulo-linea-cuerpo">
-		 <p>PERFIL DE LA CARRERA</p>
-		</div>
+<div class="contenedor-secciones-mov">
 
-	<div class="contenedor-componentes-info-carrera-ingreso-con">
+	<div class="contenedor-secciones">
 
-		<div class="contenedor-apartado-con">
+				<div class="contenedor-seccion-titulos-grande">
 
-			<a href="/isc-conocenos-perfil_campo_ISC" class="contenedor-titulo-perfil-con">
+					 <h1>PERFIL DE LA CARRERA</h1>
 
-				<p>Perfil Ingreso</p>
+				</div>
 
-			</a>
+				<div class="contenedor-seccion-mov-cuerpo-dividido">
+					
+										
 
-			<div class="contenedor-perfil-con">
+					<div class="contenedor-mvo-subapartado-con">
 
-				<ol class="round">
+						<div class="contenedor-titulo-mvo-con">
 
-				@foreach ($perfilingreso as $perfilingres)
+							<a href="/isc-conocenos-MVO"><h3>Perfil Ingreso</h3></a>
 
-					<li><i class="viñeta">{{$perfilingres->vineta}}</i> <p>{{$perfilingres->elemento}}</p></li>
+						</div>
 
-				@endforeach
+						<div class="info-mvo-con">
 
-				</ol>
+							<ol class="round">
+								
 
-			</div>
+							@foreach ($perfilingreso as $perfilingres)
 
-		</div>
+								<li><i class="viñeta">{{$perfilingres->vineta}}</i> <p>{{$perfilingres->elemento}}</p></li>
 
+							@endforeach
 
-	</div>
+							</ol>
 
+								
+						</div>
+								
 
-<!----------------------------------------------------------------- PERFIL EGRESO---------------------------------------------------------->
-
-<div class="contenedor-componentes-info-carrera-egreso-con">
-
-		<div class="contenedor-apartado-con">
-
-			<a href="/isc-conocenos-perfil_campo_ISC" class="contenedor-titulo-perfil-con2">
-
-				<p>Perfil Egreso</p>
-
-			</a>
-
-			<div class="contenedor-perfil-con">
-				
-				<ol class="round">
-
-				@foreach ($perfilegreso as $perfilegres)
-				
-
-					<li><i class="viñeta">{{$perfilegres->vineta}}</i> <p>{{$perfilegres->elemento}}</p></li>
-					  
-				
-				@endforeach
-
-			</ol>
-
-			</div>
+					</div>
+					
 					
 
-		</div>
+					
 
-</div>
+					<div class="contenedor-mvo-subapartado-con">
 
+						<div class="contenedor-titulo-mvo-con">
 
-<!----------------------------------------------------------------- CAMPO LABORAL---------------------------------------------------------->
+							<a href="/isc-conocenos-MVO"><h3>Perfil Egreso</h3></a>
 
-<div class="contenedor-componentes-info-carrera">
+						</div>
 
-	
+						<div class="info-mvo-con">
 
-		
+							<ol class="round">
 
-</div>
+							@foreach ($perfilegreso as $perfilegres)
 
-<div class="separador2"></div>
-</div>
+								<li><i class="viñeta">{{$perfilingres->vineta}}</i> <p>{{$perfilegres->elemento}}</p></li>
 
-<!----------------------------------------------------------------- TABLA LINEAS INVESTIGACIÓN---------------------------------------->
+							@endforeach
 
-<div class="partido-li">
-
-	<div class="seccion1-li">
-
-
-		<div class="contenedor-lineas-cuerpos-reticula">
-
-<div class="contenedor-lineas-cuerpos">
-
-	<div class="contenedor-lineas-cuerpos-ind">
-
-	<a href="/isc-conocenos-lineasInv_cuerposAcad" class="contenedor-titulo-seccion-con">
-
-		<p>Líneas de Investigación</p>
-
-	</a>
-
-	<div class="contenedor-tabla">
-
-		<div class="tabla-informacion-escolar t-con">
-
-				<table>
-									
-					<thead>
-						<tr>
-							<th>Programa</th>
-							<th>Líneas de Investigación</th>
-						</tr>
-					</thead>
-
-					@foreach ($lineainvestigacion as $lineainvestigacio)
-
-						<tr>
-							<td>{{$lineainvestigacio->programa}}</td>
-							<td>{{$lineainvestigacio->linea}}</td>
-							
-						</tr>
-
-					@endforeach
-
-				</table>		
-				
-		</div>
-	</div>
-	</div>
-
-	<!----------------------------------------------------------------- CUERPO ACADÉMICO -------------------------------------------------->
-	<div class="contenedor-lineas-cuerpos-ind">
-	<a href="/isc-conocenos-lineasInv_cuerposAcad" class="contenedor-titulo-seccion-con">
-
-		<p>Cuerpos Académicos</p>
-
-	</a>
-
-		<div class="contenedor-tabla">
-			<div class="tabla-informacion-escolar t-con">
-
-				<table>
-							
-					<thead>
-						<tr>
-							<th>Nombre del CA</th>
-							<th>Grado del CA</th>
-							<th>Integrantes</th>
-						</tr>
-					</thead>
-
-					@foreach($cuerpos as $cuerpo)
-
-					<tr>
-						<td>{{$cuerpo->nombre}}</td>
-						<td>{{$cuerpo->grado}}</td>
-						<td>
-							<ol>
-								@foreach (explode(',', $cuerpo->integrantes) as $integrantes)
-
-								@php
-								$integrante = ltrim($integrantes);
-								@endphp
-
-								<li>{{$integrante}}</li>
-								@endforeach
 							</ol>
-						</td>
 
-					</tr>
+						</div>
 
-					@endforeach
 
-				</table>		
-		
+					</div>
+			
 			</div>
+
 		</div>
 
-</div>
-</div>
+		<div class="separador-abajo"></div>
 
+	</div>
 
-</div>
+<!----------------------------------------------------------------- TABLAS-------------------------------------------------->
 
+<div class="contenedor-secciones">
 
+	<div class="partido-li">
 		
-	</div>
+		<div class="seccion1-li">
+				
+			<div class="contenedor-lineas-cuerpos-ind">
 
-	<div class="seccion2-li">
+				<div class="contenedor-titulo-mvo-con ti-padding">
+						
+					<a href="/isc-conocenos-lineasInv_cuerposAcad"><h3>Líneas de Investigación</h3></a>
 
-				<!-------------------------------------------------------------- RETICULA ---------------------------------------------------------->
+				</div>
+
+				<div class="contenedor-tabla">
+							
+					<div class="tabla-informacion-escolar t-con">
+								
+						<table>
+										
+							<thead>
+								<tr>
+									<th>Programa</th>
+									<th>Líneas de Investigación</th>
+								</tr>
+							</thead>
+
+							@foreach ($lineainvestigacion as $lineainvestigacio)
+
+								<tr>
+									<td>{{$lineainvestigacio->programa}}</td>
+									<td>{{$lineainvestigacio->linea}}</td>
+											
+								</tr>
+
+							@endforeach
+
+						</table>	
+
+					</div>
+
+				</div>
+
+			</div>
+
+<!----------------------------------------------------------------- CUERPO ACADÉMICO -------------------------------------------------->
+			<div class="contenedor-lineas-cuerpos-ind">
+
+				<div class="contenedor-titulo-mvo-con ti-padding">
+						
+					<a href="/isc-conocenos-lineasInv_cuerposAcad"><h3>Cuerpos Académicos</h3></a>
+
+				</div>
+								
+				<div class="contenedor-tabla">
+					
+					<div class="tabla-informacion-escolar t-con">
+						
+						<table>
+							
+							<thead>
+								<tr>
+									<th>Nombre del CA</th>
+									<th>Grado del CA</th>
+									<th>Integrantes</th>
+								</tr>
+							</thead>
+
+							@foreach($cuerpos as $cuerpo)
+
+							<tr>
+								<td>{{$cuerpo->nombre}}</td>
+								<td>{{$cuerpo->grado}}</td>
+								<td>
+										@foreach (explode(',', $cuerpo->integrantes) as $integrantes)
+
+										@php
+										$integrante = ltrim($integrantes);
+										@endphp
+
+										<p><i class="icono-izquierda far fa-user-circle"></i>{{$integrante}}</p>
+
+										@endforeach
+								</td>
+
+							</tr>
+
+							@endforeach
+
+						</table>	
+
+					</div>
 
 
-	<div class="contenedor-texto-completo-acordeon-con">
-	<div class="contenedor-acordeon-con">
-	@foreach ($reticulas as $reticula)
+				</div>
 
-	<div class="contenedor-acordeon-subapartado-con">
-				<a href="/isc-conocenos-reticula" class="contenedor-titulo-acordeon-con">
+			</div>
 
-				<p>Retícula</p>
-
-				</a>
-
-				<div class="info-acordeon-con">
-			<p>{{$reticula->titulo}}</p>
-			<p>{{$reticula->programa}}</p>
-			<p>PLAN: {{$reticula->plan}}</p>
-			<p>ESPECIALIDAD: {{$reticula->especialidad}}</p>	
-
-	<div class="contenedor-enlaces-con">
 			
-		<a target="_blank" rel="noopener noreferrer" href="/isc-conocenos-reticulaVer/{{$reticula->slug}}">{{$reticula->documento}}</a>
+		</div>
 
-	</div>
+		<!-------------------------------------------------------------- RETICULA ---------------------------------------------------------->
 
-	</div>
+		<div class="seccion2-li">
+			
+				
+				<div class="contenedor-acordeon-con">
+					
+				@foreach ($reticulas as $reticula)
 
-	</div>
+					<div class="contenedor-acordeon-subapartado-con">
 
-	@endforeach
-	</div>
-	</div>
+						<div class="contenedor-titulo-mvo-con">
+								
+							<a href="/isc-conocenos-reticula"><h3>Retícula</h3></a>
+
+						</div>
+						
+						<div class="info-acordeon-con">
+
+							<p><b>{{$reticula->titulo}}</b></p>
+							<p>{{$reticula->programa}}</p>
+							<p><b>PLAN:</b> {{$reticula->plan}}</p>
+							<p><b>ESPECIALIDAD:</b> {{$reticula->especialidad}}</p>
+
+							<div class="border-abajo"></div>
+
+							<div class="contenedor-enlaces">
+								
+								<a target="_blank" rel="noopener noreferrer" href="/isc-conocenos-reticulaVer/{{$reticula->slug}}">{{$reticula->documento}}</a>
+
+							</div>
+
+						</div>
+
+
+					</div>
+
+				@endforeach
+
+				</div>
+
 
 <!-------------------------------------------------------------- organigrama ---------------------------------------------------------->
-	<div class="contenedor-texto-completo-org-con">
-		<div class="contenedor-org-con">
 
-		<div class="contenedor-org-subapartado-con">
+			<div class="contenedor-texto-completo-org-con">
+				
+				<div class="contenedor-org-con">
+					
+					<div class="contenedor-org-subapartado-con">
+						
+						<div class="contenedor-titulo-mvo-con ti-padding">
+										
+							<a href="/isc-conocenos-organigrama"><h3>Organigrama</h3></a>
 
-					<a href="/isc-conocenos-organigrama" class="contenedor-titulo-org-con">
+						</div>
 
-					<p>Organigrama</p>
+						<div class="info-org-con">
+							
+							<img class="imagen-ingre-egre" src="{{ asset('img/org2.jpg')}}">
 
-					</a>
+						</div>
 
-					<div class="info-org-con">
+					</div>
 
-						<img class="imagen-ingre-egre" src="{{ asset('img/org2.jpg')}}">
-		
+				</div>
+
+
+			</div>
+
 		</div>
 
-		</div>
-
-		</div>
 	</div>
-
-
-
-
-
-		
-	</div>
-
-
-
 	
 </div>
 
@@ -362,7 +364,8 @@
 
 
 
-
+	
+		
 </div>
 
 @endsection

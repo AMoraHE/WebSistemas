@@ -18,6 +18,14 @@
 
   --azul-bajo: #79bad6;
 
+  --fondo-color-mvo: #d9dfffe0;
+
+  --titulos-perfiles: #ff8d00; /*bf*/
+  --fondo-txt-perfiles: #ffffffe0;
+
+  --verde-con: #81ca97;
+  --hover-verde-con: #1b396a;
+
   font-family: 'Roboto', sans-serif;
 
 }
@@ -1578,38 +1586,6 @@
 }
 
 /*** BOTONES GENERAL ***/
-
-.btn-ret{
-	max-width: 250px;
-	padding: 10px;
-	margin:10px 0px 10px 0px;
-	background: #7ab98e;
-	border: none;
-	outline-style: none;
-	border-radius: 5px;
-	transition: all .7s;
-	cursor: pointer;
-	float: right;
-}
-
-.btn-ret span{
-	color: var(--blanco);
-	font-size: 18px;
-	transition: .7s;
-	text-align: center;
-}
-
-.btn-ret span::after{
-	opacity: 0;
-	content: "\00bb";
-	transition: .7s;
-}
-
-.btn-ret:hover span::after{
-	opacity: 1;
-	margin-left: 5px;
-}
-
 .btn {
 	max-width: 250px;
 	padding: 10px;
@@ -1869,7 +1845,7 @@
 
 /** Skew **/
 .skew-abajo{
-    position: absolute;
+  position: absolute;
 	bottom: 0;
 	left: 0;
 	border-width: 0 0 10vh 100vw;
@@ -1877,7 +1853,7 @@
 	border-color: transparent transparent #fff transparent;
 }
 .skew-arriba{
-    position: absolute;
+  position: absolute;
 	top: 0;
 	left: 0;
 	border-width: 10vh 100vw 0 0;
@@ -1925,6 +1901,10 @@
 
 .t-azul{
 	background: #1B396A;
+}
+
+.ret-verde{
+  background: #7ab98e;
 }
 
 /************************************************************************************************PAGINACIÓN**************************************************************************/

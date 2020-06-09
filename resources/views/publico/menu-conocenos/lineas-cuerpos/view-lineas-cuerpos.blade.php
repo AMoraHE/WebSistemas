@@ -29,8 +29,10 @@
 
 <div class="contenedor-secciones">
 
-	<div class="titulo-linea-cuerpo">
-		 <p>Líneas de investigación</p>
+	<div class="contenedor-seccion-titulos-grande">
+		
+		<h1>Líneas de investigación</h1>
+	
 	</div>
  	
  	<div class="tabla-informacion-escolar">
@@ -63,9 +65,10 @@
 <!----------------------------------------------------------------- TABLA CUERPOS ACÁDEMICOS---------------------------------------->
 	<div class="seccion-divisor-seccion"></div>
 
-
-		<div class="titulo-linea-cuerpo">
-		 	<p>Cuerpos Académicos</p>
+		<div class="contenedor-seccion-titulos-grande">
+			
+			<h1>Cuerpos Académicos</h1>
+		
 		</div>
 
 			<div class="tabla-informacion-escolar">
