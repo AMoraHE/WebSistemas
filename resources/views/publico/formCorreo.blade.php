@@ -96,7 +96,7 @@
 	   <div class="formulario">
 
 			<label>Nombre</label>
-			<input type="text" name="nombre" placeholder="Ingrese su nombre" required>{{old('nombre')}}</input>
+			<input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" value="{{old('nombre')}}" required></input>
 
 			@if ($errors->has('nombre'))
 

@@ -519,7 +519,7 @@ class PublicController extends Controller
 
       if ($validator->fails())
       {
-        return redirect('/isc-inicio-formContacto/{{$request->destinatario}}')->withErrors($validator)->withInput($request->all());
+        return redirect('/isc-inicio-formContacto/'.$request->destinatario)->withErrors($validator)->withInput($request->all());
       }
 
       else
@@ -532,7 +532,7 @@ class PublicController extends Controller
         );
 
         Mail::to($request->destinatario)->send(new SendMail($data));
-        return redirect('/isc-inicio-contactos')->with('status','Su correo fue enviado, gracias por ponerse en contacto');
+        return redirect('/isc-inicio-contactos')->with('status','Su correo a: '.$request->destinatario.' fue enviado, gracias por ponerse en contacto');
       }
   }
 }
