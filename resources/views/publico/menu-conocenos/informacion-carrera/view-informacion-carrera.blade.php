@@ -41,8 +41,7 @@
 							
 							<div class="contenedor-img-mvo">
 								
-								<!--<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">-->
-								<img src="/img/Isc.jpg">
+								<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
 
 							</div>
 
@@ -80,9 +79,7 @@
 							
 							<div class="contenedor-img-mvo">
 
-								<!--<img src="/images/informacion/{{$informacion->img}}">-->
-								<img src="/img/mision.png">
-
+								<img src="/images/informacion/{{$informacion->img}}">
 							</div>
 
 							<div class="contenedor-mov-contenido">
@@ -119,8 +116,7 @@
 							
 							<div class="contenedor-img-mvo">
 
-								<!--<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">-->
-								<img src="/img/mision.png">
+								<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
 
 							</div>
 
@@ -159,9 +155,7 @@
 							
 							<div class="contenedor-img-mvo">
 
-								<!--<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">-->
-								<img src="/img/vision.png">
-
+								<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
 							</div>
 
 							<div class="contenedor-mov-contenido">
