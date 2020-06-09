@@ -475,6 +475,7 @@ footer{
  .logo-menu{
     width: 100%;
     text-align: center;
+    padding-top: 15px;
  }
 
  .menu-nav{
@@ -513,6 +514,7 @@ footer{
 
     .logo-menu{
         width: auto;
+        padding-top: 0px;
     }
 
     .menu-nav{
