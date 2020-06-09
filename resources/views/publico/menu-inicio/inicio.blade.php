@@ -63,8 +63,8 @@
 
 		<div class="contenedor-descripcion-txt">
 			
-			<h3 class="wow slideInLeft">{{$informaciones->categoria}}</h3>
-			<p class="wow slideInRight">{{$informaciones->descripcion}}</p>
+			<h3>{{$informaciones->categoria}}</h3>
+			<p>{{$informaciones->descripcion}}</p>
 
 		</div>
 		
@@ -167,9 +167,9 @@
 
 	<div class="contenedor-previsualizar-seccion">
 
-		<div class="contenedor-titulo-seccion-mas wow bounceInRight">
+		<div class="contenedor-titulo-seccion-mas">
 
-			<h3>Noticias Recientes</h3>
+			<h3 class="wow bounceInRight">Noticias Recientes</h3>
 
 		</div>			
 
@@ -255,7 +255,7 @@
 
           	@foreach($proyectos as $proyecto)
 
-          	<div class="contenedor-img-proyecto wow fadeInRightBig">
+          	<div class="contenedor-img-proyecto wow fadeInLeftBig">
           		
           	
 

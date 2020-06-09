@@ -156,6 +156,7 @@
 							<div class="contenedor-img-mvo">
 
 								<img class="imagen-mvo" src="/images/informacion/{{$informacion->img}}">
+								
 							</div>
 
 							<div class="contenedor-mov-contenido">
