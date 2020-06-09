@@ -93,16 +93,15 @@
 						<td>{{$cuerpo->idCA}}</td>
 						<td>{{$cuerpo->clave}}</td>
 						<td>
-							<ol>
 								@foreach (explode(',', $cuerpo->integrantes) as $integrantes)
 
 								@php
 								$integrante = ltrim($integrantes);
 								@endphp
 
-								<li>{{$integrante}}</li>
+								<p><i class="icono-izquierda far fa-user-circle"></i>{{$integrante}}</p>
+								
 								@endforeach
-							</ol>
 						</td>
 
 					</tr>
