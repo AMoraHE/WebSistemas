@@ -45,15 +45,27 @@ class CalendarioController extends Controller
     public function store(Request $request)
     {
           $evento = new Evento();
+
           $evento->title = $request->input('title');
           $evento->descripcion = $request->input('descripcion');
           $evento->color = $request->input('color');
           $evento->textColor = $request->input('textColor');
           $evento->start = $request->input('start');
           $evento->end = $request->input('end');
-          $evento->save();
 
-          return $evento;
+          $inicio = strtotime($request->start);
+          $fin = strtotime($request->end);
+
+          if($inicio > $fin)
+          {
+            return 'Error. La fecha de inicio es menor a la fecha de cierre';
+          }
+
+          else
+          {
+            $evento->save();
+            return $evento;
+          }
 
     }
 
@@ -88,20 +100,31 @@ class CalendarioController extends Controller
      */
     public function update(Request $request)
     {
-    //    $evento = new Evento();
-    $id = $request->input('id');
-    $title = $request->input('title');
-    $descripcion = $request->input('descripcion');
-    $color = $request->input('color');
-    $textColor = $request->input('textColor');
-    $start = $request->input('start');
-    $end = $request->input('end');
+      //    $evento = new Evento();
+      $id = $request->input('id');
+      $title = $request->input('title');
+      $descripcion = $request->input('descripcion');
+      $color = $request->input('color');
+      $textColor = $request->input('textColor');
+      $start = $request->input('start');
+      $end = $request->input('end');
 
-   $datos = array('title'=>$title,'descripcion'=>$descripcion,
-   'color'=>$color,'textColor'=>$textColor,'start'=>$start,'end'=>$end);
-   $evento = Evento::updateData($id, $datos);
-         echo 'Update successfully.';
-    return   $evento;
+      $inicio = strtotime($request->start);
+      $fin = strtotime($request->end);
+
+      if($inicio > $fin)
+      {
+        return 'Error. La fecha de inicio es menor a la fecha de cierre';
+      }
+
+      else
+      {
+       $datos = array('title'=>$title,'descripcion'=>$descripcion,
+       'color'=>$color,'textColor'=>$textColor,'start'=>$start,'end'=>$end);
+       $evento = Evento::updateData($id, $datos);
+             echo 'Update successfully.';
+        return   $evento;
+      }
     }
 
     /**
@@ -137,9 +160,24 @@ class CalendarioController extends Controller
       $evento->textColor = $request->input('textColor');
       $evento->start = $request->input('start');
       $evento->end = $request->input('end');
-      $evento->save();
 
-      return $evento;
+      $inicio = strtotime($request->start);
+      $fin = strtotime($request->end);
+
+      if($inicio > $fin)
+      {
+        return 'Error. La fecha de inicio es menor a la fecha de cierre';
+      }
+
+      else
+      {
+        $evento->save();
+        return $evento;
+      }
+      
+      /*$evento->save();
+
+      return $evento;*/
 
         break;
 
