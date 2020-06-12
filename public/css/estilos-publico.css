@@ -605,3 +605,9 @@ footer{
   }
 
 }
+
+@media(max-width: 350px){
+    .contactos-footer label{
+        overflow-x: auto;
+    }
+}
