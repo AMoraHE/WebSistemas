@@ -125,33 +125,13 @@
     	@endif
 
 
-    <!-----------------------------------OBJETIVO----------------------
-
-    <div class="formulario">
-
-		<label>Objetivo</label>
-		<textarea name="objetivo" placeholder="objetivo" required>{{old('objetivo')}}</textarea>
-
-		@if ($errors->has('objetivo'))
-
-      		<span class="invalid-feedback" role="alert">
-
-        		<strong>{{ $errors->first('objetivo') }}</strong>
-
-      		</span>
-
-    	@endif
-
-	</div>	
-
---------->
     <!------------------------------DESCRIPCION-------------------------->
 
 
     <div class="formulario">
 
 		<label>Descripción</label>
-		<textarea name="descripcion" placeholder="descripcion" required>{{old('descripcion')}}</textarea>
+		<textarea class="RichText" name="descripcion" placeholder="descripcion" required>{{old('descripcion')}}</textarea>
 
 	</div>
 
@@ -165,28 +145,6 @@
 
     	@endif
 
-
-    <!--------------------------------RESULTADOS--------------------
-
-
-    <div class="formulario">
-
-		<label>Resultados</label>
-		<textarea name="resultados" placeholder="resultados" required>{{old('resultados')}}</textarea>
-
-		@if ($errors->has('resultados'))
-
-      		<span class="invalid-feedback" role="alert">
-
-        		<strong>{{ $errors->first('resultados') }}</strong>
-
-      		</span>
-
-    	@endif
-
-	</div>	
-
-	--------->
 
 <!----------------------------------------------------------------- BOTONES PROYECTOS ---------------------------------------------------------->
 

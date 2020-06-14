@@ -103,9 +103,7 @@
 
 				<div class="contenedor-txt-N1">
 
-					@foreach(explode(PHP_EOL, $noticia->redaccion) as $parrafo)
-					<p>{{$parrafo}}</p>
-					@endforeach
+					{!! $noticia->redaccion !!}
 
 				</div>
 				<!-- <p>{{$noticia->redaccion}}</p> -->

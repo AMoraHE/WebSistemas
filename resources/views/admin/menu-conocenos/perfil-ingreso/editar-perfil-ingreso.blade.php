@@ -44,7 +44,7 @@
 
 					<tr>
 						<td>{{$perfilingres->vineta}}</td>
-						<td>{{$perfilingres->elemento}}</td>
+						<td>{!! $perfilingres->elemento !!}</td>
 						<td><a class="msj" mesanje="eliminar este elemento?" href="Perfil-Ingreso-Eliminar/{{$perfilingres->slug}}"><button class="btn-tabla eliminar"><i class="far fa-trash-alt"></i></button></a></td>
 						<td><a class="msj" mesanje="editar este elemento?" href="/PerfilIngreso/{{$perfilingres->slug}}/edit"><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a></td>	
 					</tr>

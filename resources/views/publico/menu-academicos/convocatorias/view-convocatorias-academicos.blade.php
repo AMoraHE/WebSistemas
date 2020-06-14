@@ -56,7 +56,7 @@
 
 				<div class="c-descripcion">
 
-					<p>{{$convocatoria->descripcion}}</p>
+					<div class="txt">{!! $convocatoria->descripcion !!}</div>
 					
 				</div>
 

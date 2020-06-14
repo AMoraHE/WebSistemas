@@ -41,9 +41,9 @@
 		<div class="formulario"> 
 		    <label>Información</label>
 		    @if ($errors->any())
-		    <textarea type="text" name="elemento" id ="informacion-perfil" placeholder="Ingrese Información Deseada" class="form-control" required>{{old('elemento')}}</textarea>
+		    <textarea class="RichText"  type="text" name="elemento" id ="informacion-perfil" placeholder="Ingrese Información Deseada" required>{{old('elemento')}}</textarea>
 		    @else
-		    <textarea type="text" name="elemento" id ="informacion-perfil" placeholder="Ingrese Información Deseada" class="form-control" required>{{$perfilingreso->elemento}}</textarea>
+		    <textarea class="RichText"  type="text" name="elemento" id ="informacion-perfil" placeholder="Ingrese Información Deseada" required>{{$perfilingreso->elemento}}</textarea>
 		    @endif
 		</div>
 

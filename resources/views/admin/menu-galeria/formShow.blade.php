@@ -14,7 +14,9 @@
 	<div class="formulario">
 
 		<label>Descripción</label>
-		<textarea style="height: 250px;" name="descripcion" readonly>{{$album->descripcion}}</textarea>
+		<div class="descripcion-infra">
+			{!! $album->descripcion !!}
+		</div>
 
 	</div>
 

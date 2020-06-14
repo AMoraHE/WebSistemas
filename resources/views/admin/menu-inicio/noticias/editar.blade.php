@@ -84,9 +84,10 @@
 
 		<label for="">Descripción Noticia</label>
 		@if ($errors->any())
-		<textarea style="height: 500px;" placeholder="Inserte Descripción Deseada..." name="redaccion" required>{{old('redaccion')}}</textarea>
+		<textarea class="RichText"  style="height: 500px;" name="redaccion" placeholder="Inserte Descripción Deseada ... " required>{{$noticia->redaccion}}</textarea>
+
 		@else
-		<textarea style="height: 500px;" placeholder="Inserte Descripción Deseada..." name="redaccion" required>{{$noticia->redaccion}}</textarea>
+		<textarea class="RichText"  style="height: 500px;" name="redaccion" placeholder="Inserte Descripción Deseada ... " required>{{$noticia->redaccion}}</textarea>
 		@endif
 
 	</div>

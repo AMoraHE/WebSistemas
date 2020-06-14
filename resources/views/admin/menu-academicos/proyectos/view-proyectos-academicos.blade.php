@@ -79,19 +79,10 @@
 
 							</td>
 
-							<td>{{$proyecto->descripcion}}</td><!--Comentar-->
-							<!----<td>{{$proyecto->resultados}}</td>---->
+							<td>{!! $proyecto->descripcion !!}</td>
+
 						</tr>
 
-<!--					<thead>
-						<tr>
-							<th colspan="4">Descripción</th>
-						</tr>
-					</thead>
-
-						<tr>
-							<td colspan="4">{{$proyecto->descripcion}}</td>
-						</tr>	-->
 
 				</table>
 

@@ -47,12 +47,10 @@
 	padding: 10px;
 	border: 1px solid var(--gris-tipo1);
 	overflow: hidden;
-}
-
-.info-mvo-con p{
 	text-align: justify;
 	font-size: 18px;
 }
+
 
 .contenedor-seccion-mov-cuerpo-dividido{
 	width: 100%;
@@ -290,9 +288,6 @@ ol.round p{
 	width:100%;
 	line-height: 2;
 	padding: 10px;
-}
-
-.info-mvo p{
 	text-align: justify;
 	font-size: 24px;
 }
@@ -716,13 +711,13 @@ figure .trasera p {
 
 @media screen and (max-width: 950px){
 
-	.info-mvo-con p{
+	.info-mvo-con{
 		font-size: 16px;
 	}
 
 /************************************************************************************************MOV********************************************************************************/
 
-	.info-mvo p{
+	.info-mvo{
 		font-size: 18px;
 	}
 

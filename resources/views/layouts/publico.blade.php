@@ -200,7 +200,7 @@
                 <div class="columna1">
                     <h1>{{$infoF->titulo}}</h1>
 
-                    <p>{{$infoF->descripcion}}</p>
+                    <p>{!! $infoF->descripcion !!}</p>
 
                     <div class="footer-logo-contenedor">                  	
                    

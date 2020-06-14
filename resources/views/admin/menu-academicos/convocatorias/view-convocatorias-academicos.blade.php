@@ -70,7 +70,10 @@
 			<div class="formulario">
 
 				<label>Descripción</label>
-				<textarea readonly>{{$convocatoria->descripcion}}</textarea>
+				<div class="descripcion-infra">
+					{!! $convocatoria->descripcion !!}
+				</div>
+				
 				
 			</div>
 

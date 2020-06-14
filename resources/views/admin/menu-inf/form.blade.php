@@ -69,7 +69,7 @@
 <div class="formulario">
 
   <label>Descripción</label>
-  <textarea name="descripcion" placeholder="Descripcion">{{old('descripcion')}}</textarea>
+  <textarea class="RichText"  name="descripcion" placeholder="Descripcion">{{old('descripcion')}}</textarea>
 
 </div>
 

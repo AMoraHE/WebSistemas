@@ -26,7 +26,7 @@
 	<div class="formulario-infra">
 
 	<div class="formulario-infra-hijo">
-		{{$infra->descripcion}}
+		{!! $infra->descripcion !!}
 	</div>
 
 	</div>

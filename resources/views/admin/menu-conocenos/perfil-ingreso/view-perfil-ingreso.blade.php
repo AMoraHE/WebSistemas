@@ -24,7 +24,7 @@
 
 				@foreach ($perfilingreso as $perfilingres)
 
-				<li>{{$perfilingres->elemento}}</li>
+				<li>{!! $perfilingres->elemento !!}</li>
 
 				@endforeach
 

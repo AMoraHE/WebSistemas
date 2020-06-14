@@ -67,7 +67,7 @@
                   </div>
                 </td>
           	<td>
-              <p>{{$informacion->descripcion}} </p>
+              {!! $informacion->descripcion !!}
             </td>
           </tr>
 

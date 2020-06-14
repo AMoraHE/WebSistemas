@@ -55,7 +55,7 @@
 
 								<div class="info-mvo">
 
-									<p>{{$informacion->descripcion}}</p>
+									{!! $informacion->descripcion !!}
 
 								</div>
 								
@@ -92,7 +92,7 @@
 
 								<div class="info-mvo">
 
-									<p>{{$informacion->descripcion}}</p>
+									{!! $informacion->descripcion !!}
 
 								</div>
 								
@@ -130,7 +130,7 @@
 
 								<div class="info-mvo">
 
-									<p>{{$informacion->descripcion}}</p>
+									{!! $informacion->descripcion !!}
 
 								</div>
 								
@@ -169,7 +169,7 @@
 
 								<div class="info-mvo">
 
-									<p>{{$informacion->descripcion}}</p>
+									{!! $informacion->descripcion !!}
 
 								</div>
 								

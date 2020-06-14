@@ -58,7 +58,7 @@
 
 				<div class="c-descripcion">
 
-					<p>{{$evento->descripcion}}</p>
+					<div class="txt">{!! $evento->descripcion !!}</div>
 					
 				</div>
 

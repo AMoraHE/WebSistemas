@@ -66,5 +66,11 @@ $(document).ready(function(){
     	$("#contenedor-loader").fadeOut("slow");
 	});
 
+	/********************************************Editor*****************************/
+
+	$(document).ready(function(){
+		$('.RichText').richText();
+	});
+
 });
 

@@ -64,7 +64,7 @@
 		<div class="contenedor-descripcion-txt">
 			
 			<h3>{{$informaciones->categoria}}</h3>
-			<p>{{$informaciones->descripcion}}</p>
+			<div class="des-txt">{!! $informaciones->descripcion !!}</div>
 
 		</div>
 		
@@ -100,10 +100,8 @@
 				<div class="contenedor-cuerpo-txt">
 
 					<div class="contenedor-txt-N1">
-					
-						@foreach(explode(PHP_EOL, $FNoticia->redaccion) as $parrafo)
-						<p>{{$parrafo}}</p>
-						@endforeach
+
+						{!! $FNoticia->redaccion !!}
 
 					</div>
 

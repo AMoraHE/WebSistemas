@@ -58,7 +58,7 @@
 
 						<div class="info-mvo-con">
 								
-							<p>{{$informacion->descripcion}}</p>
+							<p>{!! $informacion->descripcion !!}</p>
 								
 						</div>
 								
@@ -81,7 +81,7 @@
 
 						<div class="info-mvo-con">
 
-							<p>{{$informacion->descripcion}}</p>
+							{!! $informacion->descripcion !!}
 
 						</div>
 
@@ -133,7 +133,7 @@
 
 							@foreach ($perfilingreso as $perfilingres)
 
-								<li><i class="viñeta">{{$perfilingres->vineta}}</i> <p>{{$perfilingres->elemento}}</p></li>
+								<li><i class="viñeta">{{$perfilingres->vineta}}</i> <p>{!! $perfilingres->elemento !!}</p></li>
 
 							@endforeach
 
@@ -163,7 +163,7 @@
 
 							@foreach ($perfilegreso as $perfilegres)
 
-								<li><i class="viñeta">{{$perfilingres->vineta}}</i> <p>{{$perfilegres->elemento}}</p></li>
+								<li><i class="viñeta">{{$perfilingres->vineta}}</i> <p>{!! $perfilegres->elemento !!}</p></li>
 
 							@endforeach
 

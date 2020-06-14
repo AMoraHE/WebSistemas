@@ -53,7 +53,7 @@
 
 					@foreach ($perfilingreso as $perfilingres)
 
-						<li><i class="viñeta">{{$perfilingres->vineta}}</i> <p>{{$perfilingres->elemento}}</p></li>
+						<li><i class="viñeta">{{$perfilingres->vineta}}</i> <p>{!! $perfilingres->elemento !!}</p></li>
 					
 
 					@endforeach
@@ -88,7 +88,7 @@
 
 					@foreach ($perfilegreso as $perfilegres)
 
-						<li><i class="viñeta">{{$perfilegres->vineta}}</i> <p>{{$perfilegres->elemento}}</p></li>
+						<li><i class="viñeta">{{$perfilegres->vineta}}</i> <p>{!! $perfilegres->elemento !!}</p></li>
 					
 
 					@endforeach
@@ -125,7 +125,7 @@
 
 					@foreach ($campolaboral as $campolabora)
 
-						<li><i class="viñeta">{{$campolabora->vineta}}</i> <p>{{$campolabora->elemento}}</p></li>
+						<li><i class="viñeta">{{$campolabora->vineta}}</i> <p>{!! $campolabora->elemento !!}</p></li>
 					
 
 					@endforeach

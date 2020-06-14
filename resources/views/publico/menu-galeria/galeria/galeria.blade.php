@@ -25,7 +25,7 @@
 			<div class="contenedor-descripcion-txt">
 
 				<h3>{{$albums->titulo}}</h3>
-				<p>{{$albums->descripcion}}</p>
+				<div class="des-txt">{!! $albums->descripcion !!}</div>
 				
 			</div>
 		

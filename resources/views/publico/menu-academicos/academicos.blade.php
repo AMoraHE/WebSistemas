@@ -83,7 +83,7 @@
 
 							<h3>Descripción</h3>
 
-							<p>{{$proyecto->descripcion}}</p>
+							{!! $proyecto->descripcion !!}
 
 						</div>
 
@@ -136,13 +136,13 @@
 
 					<div class="descripcion-ecp">
 
-						<p>{{$evento->descripcion}}</p>
+						<div class="txt">{!! $evento->descripcion !!}</div>
 						
 					</div>
 
 					<div class="contenedor-enlaces">
 					
-						<a target="_blank" rel="" href="/isc-academicos-eventosVer/{{$evento->slug}}">{{$evento->documento}}</a>
+						<a target="_blank" rel="" href="/isc-academicos-eventosVer/{{$evento->slug}}">{$evento->documento}}</a>
 
 					</div>
 
@@ -189,7 +189,7 @@
 
 					<div class="descripcion-ecp">
 
-						<p>{{$convocatoria->descripcion}}</p>
+						<div class="txt">{!! $convocatoria->descripcion !!}</div>
 						
 					</div>
 
@@ -251,7 +251,7 @@
 
 					<div class="descripcion-ecp">
 
-						<p>{{$programa->descripcion}}</p>
+						<div class="txt">{!! $programa->descripcion !!}</div>
 						
 					</div>
 

@@ -76,9 +76,9 @@
 				
 			<label>Información general</label>
 			@if ($errors->any())
-			<textarea type="text" name="descripcion" placeholder="Insete La Decripción Deseada" required>{{old('descripcion')}}</textarea> 
+			<textarea class="RichText" type="text" name="descripcion" placeholder="Insete La Decripción Deseada" required>{{old('descripcion')}}</textarea> 
 			@else
-			<textarea type="text" name="descripcion" placeholder="Insete La Decripción Deseada" required>{{$infoFooter->descripcion}}</textarea> 
+			<textarea class="RichText" type="text" name="descripcion" placeholder="Insete La Decripción Deseada" required>{{$infoFooter->descripcion}}</textarea> 
 			@endif
 				
 		</div>

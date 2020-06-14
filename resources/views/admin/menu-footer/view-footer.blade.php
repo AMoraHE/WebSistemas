@@ -68,7 +68,7 @@
 
       <div class="contenedor-texto-dividido">
 
-        <p>{{$infoF->descripcion}}</p>
+        <p>{!! $infoF->descripcion !!}</p>
 
       </div>
 

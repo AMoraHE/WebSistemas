@@ -73,9 +73,9 @@
   <label>Descripción</label>
 
   @if ($errors->any())
-  <textarea name="descripcion" placeholder="Inserte Descripción de la galería ... " required>{{old('descripcion')}}</textarea>
+  <textarea class="RichText" name="descripcion" placeholder="Inserte Descripción de la galería ... " required>{{old('descripcion')}}</textarea>
   @else
-  <textarea name="descripcion" placeholder="Inserte Descripción de la galería ... " required>{{$album->descripcion}}</textarea>
+  <textarea class="RichText" name="descripcion" placeholder="Inserte Descripción de la galería ... " required>{{$album->descripcion}}</textarea>
   @endif
 
 </div>

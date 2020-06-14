@@ -72,7 +72,7 @@
 
 			<h3>Descripción</h3>
 
-			<p>{{$proyecto->descripcion}}</p>
+			{!! $proyecto->descripcion !!}
 
 		</div>
 

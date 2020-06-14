@@ -64,30 +64,6 @@
 
 <!----------------------------------------------------------------- FORMULARIO PROYECTOS ---------------------------------------------------------->
 
-<!--------------------APLICACION----------------------------
-  <div class="formulario">
-
-    <label>Aplicacion</label>
-    @if ($errors->any())
-    <input type="text" name="aplicacion" id="aplicacion" value="{{old('aplicacion')}}" placeholder="Reescriba la aplicación seleccionada" class="form-control" required>
-    @else
-    <input type="text" name="aplicacion" id="aplicacion" value="{{$proyecto->aplicacion}}" placeholder="Reescriba la aplicación seleccionada" class="form-control" required>
-    @endif
-
-  </div>
-
-  @if ($errors->has('aplicacion'))
-
-    <span class="invalid-feedback" role="alert">
-
-      <strong>{{ $errors->first('aplicacion') }}</strong>
-
-    </span>
-
-  @endif
-
-  ---->
-
 <!--------------------------PROYECTO---------------------------->
   <div class="formulario">
 
@@ -131,38 +107,15 @@
     </span>
 
   @endif
-<!--------------------------------OBEJTIVO-------------------------
 
-  <div class="formulario">
-
-    <label>Objetivo</label>
-    @if ($errors->any())
-    <textarea placeholder="Reescriba los objetivos seleccionados" name="objetivo" required>{{old('objetivo')}}</textarea>
-    @else
-    <textarea placeholder="Reescriba los objetivos seleccionados" name="objetivo" required>{{$proyecto->objetivo}}</textarea>
-    @endif
-
-  </div>
-
-  @if ($errors->has('objetivo'))
-
-    <span class="invalid-feedback" role="alert">
-
-      <strong>{{ $errors->first('objetivo') }}</strong>
-
-    </span>
-
-  @endif
-
-  ---->
 <!---------------------------DESCRIPCION---------------------------------------------------->
   <div class="formulario">
 
     <label>Descripción</label>
     @if ($errors->any())
-    <textarea placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{old('descripcion')}}</textarea>
+    <textarea class="RichText" placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{old('descripcion')}}</textarea>
     @else
-    <textarea placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{$proyecto->descripcion}}</textarea>
+    <textarea class="RichText" placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{$proyecto->descripcion}}</textarea>
     @endif
 
   </div>
@@ -176,30 +129,7 @@
     </span>
 
   @endif
-<!------------------------------RESULTADOS---------------------------------
-  <div class="formulario">
 
-    <label>Resultados</label>
-    @if ($errors->any())
-    <textarea placeholder="Reescriba los resultados seleccionados" name="resultados" required>{{old('resultados')}}</textarea>
-    @else
-    <textarea placeholder="Reescriba los resultados seleccionados" name="resultados" required>{{$proyecto->resultados}}</textarea>
-    @endif
-
-  </div>
-
-  @if ($errors->has('resultados'))
-
-    <span class="invalid-feedback" role="alert">
-
-      <strong>{{ $errors->first('resultados') }}</strong>
-
-    </span>
-
-  @endif
-
-
-  ----->
 <!----------------------------------------------------------------- BOTONES PROYECTOS ---------------------------------------------------------->
 
 	<div class="contenedor-botones">

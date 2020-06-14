@@ -66,9 +66,7 @@
 
 				<div class="redaccion-noticia-ind">
 
-					@foreach(explode(PHP_EOL, $noticias->redaccion) as $parrafo)
-					<p>{{$parrafo}}</p>
-					@endforeach
+					{!! $noticias->redaccion !!}
 
 				</div>
 

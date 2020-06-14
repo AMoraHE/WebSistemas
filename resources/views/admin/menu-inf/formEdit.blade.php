@@ -115,9 +115,9 @@
   <label>Descripción</label>
 
   @if ($errors->any())
-  <textarea name="descripcion" placeholder="Inserte Descripción del Laboratorio ... " required>{{old('descripcion')}}</textarea>
+  <textarea class="RichText" name="descripcion" placeholder="Inserte Descripción del Laboratorio ... " required>{{old('descripcion')}}</textarea>
   @else
-  <textarea name="descripcion" placeholder="Inserte Descripción del Laboratorio ... " required>{{$infra->descripcion}}</textarea>
+  <textarea class="RichText" name="descripcion" placeholder="Inserte Descripción del Laboratorio ... " required>{{$infra->descripcion}}</textarea>
   @endif
 
 </div>

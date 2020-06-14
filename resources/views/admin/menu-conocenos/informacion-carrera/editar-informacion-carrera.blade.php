@@ -59,9 +59,9 @@
 				
 			<label>Información</label>
 			@if ($errors->any())
-			<textarea type="text" name="descripcion" required>{{old('descripcion')}}</textarea> 
+			<textarea class="RichText" type="text" name="descripcion" required>{{old('descripcion')}}</textarea> 
 			@else
-			<textarea type="text" name="descripcion" required>{{$informacion->descripcion}}</textarea> 
+			<textarea class="RichText" type="text" name="descripcion" required>{{$informacion->descripcion}}</textarea> 
 			@endif
 				
 		</div>

@@ -45,7 +45,7 @@
 
 					<tr>
 						<td>{{$perfilegres->vineta}}</td>
-						<td>{{$perfilegres->elemento}}</td>
+						<td>{!! $perfilegres->elemento !!}</td>
 						<td><a class="msj" mesanje="eliminar este elemento?" href="Perfil-Egreso-Eliminar/{{$perfilegres->slug}}"><button class="btn-tabla eliminar"><i class="far fa-trash-alt"></i></button></a></td>
 						<td><a class="msj" mesanje="editar este elemento?" href="/PerfilEgreso/{{$perfilegres->slug}}/edit"><button class="btn-tabla editar"><i class="fas fa-pencil-alt"></i></button></a></td>	
 					</tr>

@@ -109,9 +109,9 @@
 
     <label>Descripción</label>
     @if ($errors->any())
-    <textarea placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{old('descripcion')}}</textarea>
+    <textarea class="RichText"  placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{old('descripcion')}}</textarea>
     @else
-    <textarea placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{$convocatorias->descripcion}}</textarea>
+    <textarea class="RichText"  placeholder="Reescriba la descripción seleccionada" name="descripcion" required>{{$convocatorias->descripcion}}</textarea>
     @endif
 
   </div>

@@ -79,7 +79,7 @@
 	<div class="formulario">
 
 		<label>Descripción Noticia</label>
-		<textarea style="height: 500px;" name="redaccion" placeholder="Inserte Descripción Deseada ... " required>{{old('redaccion')}}</textarea>
+		<textarea class="RichText"  style="height: 500px;" name="redaccion" placeholder="Inserte Descripción Deseada ... " required>{{old('redaccion')}}</textarea>
 
 	</div>
 

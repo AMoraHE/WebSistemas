@@ -10,7 +10,6 @@
 
 }
 
-
 /************************************************************************************************SECCIÓN ALERTAS********************************************************************************/
 
 .glyphicon-alert:before {
@@ -210,15 +209,8 @@
 	width: calc(100% - 250px); /****Restamos los 250px del ancho de la img****/
 	height: 250px;
 	overflow: auto;
-
-}
-
-.contenedor-texto-dividido p{
-	margin: 10px;
-	font-family: 'Roboto', sans-serif;
-    text-align: justify;
-    line-height: 20px;
-
+	padding: 10px;
+	line-height: 1.5;
 }
 
 /****************************************SECCIONES PRINCIPALES TITULOS*************************************************/
@@ -472,6 +464,23 @@
 .buscador form{
 	width: 100%;
 }
+/************************************************************************************************SECCIÓN INFRA***********************************************************************/
+
+.descripcion-infra{
+	display: block;
+    width: 100%;
+    height: 350px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: var(--blanco);
+    background-clip: padding-box;
+    border: 1px solid var(--verde);
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    overflow: auto;
+}
 
 /************************************************************************************************SECCIÓN FORMULARIOS***********************************************************************/
 
@@ -612,9 +621,9 @@
 	color: var(--blanco);
 }
 
-.tabla-informacion-escolar p{
+/*.tabla-informacion-escolar p{
 	text-align: center;
-}
+}*/
 
 /***********************************IMG ORGANIGRAMA TABLA*****************************************/
 
@@ -1115,9 +1124,6 @@ body::-webkit-scrollbar-thumb{
 	.contenedor-texto-dividido{
 		width: calc(100% - 200px); /*Restamos los 200px del ancho de la img*/
 		height: 200px;
-	}
-
-	.contenedor-texto-dividido p{
 		font-size: 15px;
 	}
 
@@ -1299,7 +1305,7 @@ body::-webkit-scrollbar-thumb{
 
 /******************************SECCIONES CUERPO PARTIDO EN 2 COLUMNAS************************************/
 
-	.contenedor-texto-dividido p{
+	.contenedor-texto-dividido{
 		font-size: 14px;
 	}
 
@@ -1486,9 +1492,6 @@ body::-webkit-scrollbar-thumb{
 	.contenedor-texto-dividido{
 		width: calc(100% - 150px); /*Restamos los 200px del ancho de la img*/
 		height: 200px;
-	}
-
-	.contenedor-texto-dividido p{
 		font-size: 14px;
 	}
 
@@ -1674,7 +1677,7 @@ body::-webkit-scrollbar-thumb{
 		font-size: 12px;
 	}
 
-	.contenedor-texto-dividido p{
+	.contenedor-texto-dividido{
 		font-size: 12px;
 	}
 

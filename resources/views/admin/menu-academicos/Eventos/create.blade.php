@@ -40,7 +40,7 @@
 		    	<div class="formulario">
 
 			        <label>Fecha Inicio</label>
-			        <input  class="fecha" data-date-format="l j, F, Y" id="FInicio" name="FInicio" value="{{old('FInicio')}}" required />
+			        <input placeholder="DD/MM/AAAA" class="fecha" data-date-format="l j, F, Y" id="FInicio" name="FInicio" value="{{old('FInicio')}}" required />
 
 		      	</div>
 
@@ -57,7 +57,7 @@
 		     	<div class="formulario">
 
 			        <label>Fecha Cierre</label>
-			        <input  class="fecha" data-date-format="l j, F, Y" id="FCierre" name="FCierre" value="{{old('FCierre')}}" required />
+			        <input  placeholder="DD/MM/AAAA" class="fecha" data-date-format="l j, F, Y" id="FCierre" name="FCierre" value="{{old('FCierre')}}" required />
 
 		     	</div>
 
@@ -74,7 +74,7 @@
 	    <div class="formulario">
 				
 			<label>Descripción</label>
-			<textarea name="descripcion" placeholder="Descripcion" required>{{old('descripcion')}}</textarea>
+			<textarea class="RichText"  name="descripcion" placeholder="Descripcion" required>{{old('descripcion')}}</textarea>
 
 		</div>
 

@@ -35,7 +35,7 @@
 		<div class="formulario"> 
 
 		   <label>Información</label>
-		    <textarea type="text" name="elemento" id ="informacion-perfil" placeholder="Ingrese Información Deseada" class="form-control" required>{{old('elemento')}}</textarea>
+		    <textarea class="RichText"  type="text" name="elemento" id ="informacion-perfil" placeholder="Ingrese Información Deseada" required>{{old('elemento')}}</textarea>
 
 		</div>
 
