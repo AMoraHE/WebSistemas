@@ -40,8 +40,8 @@
             justify: true,
 
             // lists
-            ol: true,
-            ul: true,
+            ol: false,
+            ul: false,
 
             // title
             heading: false,
