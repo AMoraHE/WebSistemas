@@ -72,7 +72,7 @@
             videoEmbed: false,
 
             // link
-            urls: true,
+            urls: false,
 
             // tables
             table: false,
