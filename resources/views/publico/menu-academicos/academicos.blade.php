@@ -142,7 +142,7 @@
 
 					<div class="contenedor-enlaces">
 					
-						<a target="_blank" rel="" href="/isc-academicos-eventosVer/{{$evento->slug}}">{$evento->documento}}</a>
+						<a target="_blank" rel="" href="/isc-academicos-eventosVer/{{$evento->slug}}">{{$evento->documento}}</a>
 
 					</div>
 
