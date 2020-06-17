@@ -148,7 +148,7 @@
     animation: flipInY 1.5s ease-in
 }
 .contenedor-descripcion-txt .des-txt{
-	text-align: center;
+	 text-align: center;
     font-size: 17px;
     color: var(--black);
     line-height: 35px;
@@ -776,6 +776,11 @@
 	height: 50%;
 	padding: 10px;
 	overflow: auto;	
+}
+
+.contenedor-descripcion-proyecto-1 .txt-des{
+  font-size: 18px;
+  text-align: justify;
 }
 
 
@@ -2111,6 +2116,10 @@ body::-webkit-scrollbar-thumb{
 	font-size: 16px;
 }
 
+.contenedor-descripcion-proyecto-1 .txt-des{
+  font-size: 16px;
+}
+
 .contenedor-desarrolladores-1{
 	padding: 5px;
 }
@@ -2341,7 +2350,7 @@ body::-webkit-scrollbar-thumb{
       font-size: 35px;
     }
 
-    .contenedor-descripcion-txt p{
+    .contenedor-descripcion-txt .des-txt{
       font-size: 14px;
     }
 
@@ -2570,7 +2579,7 @@ body::-webkit-scrollbar-thumb{
       font-size: 28px;
   }
 
-  .contenedor-descripcion-txt p{
+  .contenedor-descripcion-txt .des-txt{
     text-align: justify;
   }
 

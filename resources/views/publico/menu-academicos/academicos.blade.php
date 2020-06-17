@@ -83,7 +83,11 @@
 
 							<h3>Descripción</h3>
 
-							{!! $proyecto->descripcion !!}
+							<div class="txt-des">
+
+								{!! $proyecto->descripcion !!}
+
+							</div>
 
 						</div>
 

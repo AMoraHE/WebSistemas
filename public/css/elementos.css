@@ -211,6 +211,7 @@
 	overflow: auto;
 	padding: 10px;
 	line-height: 1.5;
+	text-align: justify;
 }
 
 /****************************************SECCIONES PRINCIPALES TITULOS*************************************************/
@@ -480,6 +481,7 @@
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     overflow: auto;
+    text-align: justify;
 }
 
 /************************************************************************************************SECCIÓN FORMULARIOS***********************************************************************/
@@ -1164,6 +1166,10 @@ body::-webkit-scrollbar-thumb{
 
 /************************************************************************************************SECCIÓN FORMULARIOS***********************************************************************/
 
+	.descripcion-infra{
+		font-size: 15px;
+	}
+
 	.formulario input{
 	  
 	    font-size: 15px;
@@ -1345,6 +1351,10 @@ body::-webkit-scrollbar-thumb{
 
 
 /************************************************************************************************SECCIÓN FORMULARIOS***********************************************************************/
+
+	.descripcion-infra{
+		font-size: 14px;
+	}
 
 	.formulario input{
 	  
@@ -1531,6 +1541,9 @@ body::-webkit-scrollbar-thumb{
 
 
 /************************************************************************************************SECCIÓN FORMULARIOS***********************************************************************/
+	.descripcion-infra{
+		font-size: 14px;
+	}
 
 	.formulario input{
 	  
@@ -1717,6 +1730,10 @@ body::-webkit-scrollbar-thumb{
 
 
 /************************************************************************************************SECCIÓN FORMULARIOS***********************************************************************/
+
+	.descripcion-infra{
+		font-size: 12px;
+	}
 
 	.formulario input{
 	  
